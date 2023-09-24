@@ -1,5 +1,4 @@
 from random import sample
-from time import sleep
 tipos = ['Sports Cars', 'SUVs & Pickup', 'Lowriders', 'Tuners', 'Vans', 'Industrial', 'Coupes & Hatchbacks', 'Sedans & Station Wagons', 'Public Service', 'Novelty', 'Government']
 
 carros = [['Alpha', 'Banshee', 'Buffalo', 'Bullet', 'Cheetah', 'Comet', 'Euros', 'Hotknife', 'Infernus', 'Phoenix', 'Super', 'GT', 'Turismo', 'Windsor', 'ZR-350'], #Sports Cars

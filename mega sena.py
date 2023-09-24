@@ -15,5 +15,5 @@ while True:
         per = str(input("Quer continuar ?")).lower().strip()
     if per in "n":
         break
-    print("-=-"*15)
+    print("-=-" * 15)
 print("FIM")
