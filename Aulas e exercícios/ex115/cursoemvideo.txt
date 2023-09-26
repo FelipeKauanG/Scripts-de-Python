@@ -1,5 +1,0 @@
-José;35 anos
-Gustavo;41 anos
-Felipe;19 anos
-Giovana;18 anos
-Maria;85 anos
