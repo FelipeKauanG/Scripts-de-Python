@@ -4,10 +4,11 @@ try:
     from selenium.webdriver.support.ui import WebDriverWait
     from selenium.webdriver.support import expected_conditions as EC
     import numpy as np
+    
     # Dados do aluno
-    ra = int(input("Insira aqui seu RA"))
-    data = str(input("Suda data de nascimentos '01/02/1234'"))
-    digito = int(input("Seu dígito"))
+    ra = int(input("Insira aqui seu RA: "))
+    data = str(input("Sua data de nascimentos '01/02/1234: '"))
+    digito = int(input("Seu dígito: "))
 
     # configurando o Driver
     driver = webdriver.Chrome()
