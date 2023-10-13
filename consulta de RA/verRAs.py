@@ -5,9 +5,9 @@ try:
     from selenium.webdriver.support import expected_conditions as EC
     import numpy as np
     # Dados do aluno
-    ra = '107058875'
-    data = "23/06/2003"
-    digito = '1'
+    ra = int(input("Insira aqui seu RA"))
+    data = str(input("Suda data de nascimentos '01/02/1234'"))
+    digito = int(input("Seu dígito"))
 
     # configurando o Driver
     driver = webdriver.Chrome()
