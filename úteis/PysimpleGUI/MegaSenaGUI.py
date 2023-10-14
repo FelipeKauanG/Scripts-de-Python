@@ -20,5 +20,5 @@ while True:
         valores = []
         for i in range(1, 61):
             valores.append(i)
-        sg.popup_ok(f"Valores sorteados {sample(valores, 6)}", text_color="#eeeeee", image=r"úteis\PysimpleGUI\title.png", title="MEGA SENA")
+        sg.popup_ok(f"Valores sorteados {sample(valores, 6)}", text_color="#eeeeee", image=r"úteis/PysimpleGUI/title.png", title="MEGA SENA")
 janela.close()
