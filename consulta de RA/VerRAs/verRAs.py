@@ -75,11 +75,17 @@ while True:
         num = []
         driver.get(f"https://sed.educacao.sp.gov.br/Boletim/GerarBoletimUnificadoExterno?nrRa={'000'+ra}&nrDigRa={digito}&dsUfRa=SP&dtNascimento={data}&nrAnoLetivo={int(data[6:])+iniAno-2}")
         
-        nome = wait.until(EC.presence_of_all_elements_located((By.XPATH, f"/html/body/div/div/div[2]/div/div/div[2]")))[0].text
+        nome = str(wait.until(EC.presence_of_all_elements_located((By.XPATH, f"/html/body/div/div/div[2]/div/div/div[2]")))[0].text).title()
         
+        documento = "consulta de RA/VerRAs/tabela.txt"
+        
+        with open(documento, "+a", encoding="utf-8") as tabela:
+            tabela.write(f"{nome}\n\n\n")
+        tabela.close()
         print(str(nome).title())
         #with open("consulta de RA/VerRAs/tabela.txt", "a+", encoding="utf-8") as texto:
         #    texto.write("")
+        
         for ano in range(int(data[6:])+iniAno-6, int(data[6:])+iniAno+1):
             try:
                 try:
@@ -87,11 +93,19 @@ while True:
                     driver.get(
                         f"https://sed.educacao.sp.gov.br/Boletim/GerarBoletimUnificadoExterno?nrRa={'000'+ra}&nrDigRa={digito}&dsUfRa=SP&dtNascimento={data}&nrAnoLetivo={ano}"),
                     print("\n")
-        
+
+                    tabelaNotas = wait.until(EC.presence_of_all_elements_located((By.XPATH, f"/html/body/div/div/div[4]/table")))[0].text
+                    
+                    
+                    
+                    with open(documento, "a+", encoding="utf-8") as tabela:
+                        tabela.write(f"Ano: {ano}\n{tabelaNotas}\n\n")
+                    
+                    
+                    
                     for notn in range(1, 13):
                         for bim in range(2, 15, 4):
-                            bimnot = wait.until(EC.presence_of_all_elements_located(
-                            (By.XPATH, f'/html/body/div/div/div[4]/table/tbody/tr[{notn}]/td[{bim}]')))[0].text
+                            bimnot = wait.until(EC.presence_of_all_elements_located((By.XPATH, f'/html/body/div/div/div[4]/table/tbody/tr[{notn}]/td[{bim}]')))[0].text
                             if bimnot.isdigit():
                                 pontos += int(bimnot)
                                 num.append(bimnot)
