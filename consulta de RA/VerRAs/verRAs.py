@@ -60,39 +60,38 @@ while True:
         else:
             window["data_validacao"].Update("")
             
+            
         if valida_ra(ra) and valida_data(data):
             print("RA:", ra)
             print("DAta e nascimento", data)
             print("Dígito", digito)
             
             
-            
-        iniAno = int(input("Qual idade você tinha no 5º ano ? ")) 
+        iniAno = int(input("Quantos anos você completou ou vai completar o ensino médio? "))
+        
         driver = webdriver.Chrome()
         wait = WebDriverWait(driver, 7) # Tempo de espera do webdriver
         pontos = 0 # Pontos totais
         num = []
-
-        for ano in range(int(data[6:])+iniAno, int(data[6:])+iniAno+7):
-            try:
-                try:
-                    print(f"Ano de \033[34m{ano}\033[m")
-                    driver.get(
-                        f"https://sed.educacao.sp.gov.br/Boletim/GerarBoletimUnificadoExterno?nrRa={'000'+ra}&nrDigRa={digito}&dsUfRa=SP&dtNascimento={data}&nrAnoLetivo={000+ano}"),
-                    print("\n")
+        driver.get(f"https://sed.educacao.sp.gov.br/Boletim/GerarBoletimUnificadoExterno?nrRa={'000'+ra}&nrDigRa={digito}&dsUfRa=SP&dtNascimento={data}&nrAnoLetivo={int(data[6:])+iniAno-2}")
         
-                    for notn in range(1, 13):
-                        for bim in range(2, 15, 4):
-                            bimnot = wait.until(EC.presence_of_all_elements_located(
-                            (By.XPATH, f'/html/body/div/div/div[4]/table/tbody/tr[{notn}]/td[{bim}]')))[0].text
-                            if bimnot.isdigit():
-                                pontos += int(bimnot)
-                                num.append(bimnot)
-                                print(f"{bimnot}", end=" ")
-                        print()
-                except:
-                    print("\n\n\n")
-            except:
-                print(f"\033[34m\033Não consegui ver este boletim![m")
-        driver.quit()
-        print(f"A média total do aluno é de : \033[31m{pontos/len(num):.2f}\033[m com {len(num)} notas totais, {pontos} pontos.")
+        nome = wait.until(EC.presence_of_all_elements_located((By.XPATH, f"/html/body/div/div/div[2]/div/div/div[2]")))[0].text
+        
+        print(nome)
+        #with open("consulta de RA/VerRAs/tabela.txt", "a+", encoding="utf-8") as texto:
+        #    texto.write("")
+        for ano in range((int(data[6:])+iniAno-6), (int(data[6:])+iniAno+1)):
+            print(f"Ano de \033[34m{ano}\033[m")
+            print("\n")
+            driver.get(f"https://sed.educacao.sp.gov.br/Boletim/GerarBoletimUnificadoExterno?nrRa={'000'+ra}&nrDigRa={digito}&dsUfRa=SP&dtNascimento={data}&nrAnoLetivo={000+ano}")
+            
+            for notn in range(1, 13):
+                for bim in range(2, 15, 4):
+                    bimnot = wait.until(EC.presence_of_all_elements_located((By.XPATH, f'/html/body/div/div/div[4]/table/tbody/tr[{notn}]/td[{bim}]')))[0].text
+                    if bimnot in "1234567890" or bimnot in "10":
+                        pontos += int(bimnot)
+                        num.append(bimnot)
+                        print(f"{bimnot}", end=" ")
+                print()
+            print(f"A média total do aluno é de : \033[31m{pontos/len(num):.2f}\033[m com {len(num)} notas totais, {pontos} pontos.")
+driver.close()
