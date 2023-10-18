@@ -91,7 +91,7 @@ while True:
                                     if bimnot.isdigit():
                                         pontos += int(bimnot)
                                         num.append(bimnot)
-                                        print(f"{bimnot}", end=" ")
+                                        print(f"\033[36m{bimnot}\033[m", end=" ")
                                 print()
                         except Exception:
                             print("\n\n\n")
