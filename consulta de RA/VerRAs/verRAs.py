@@ -1,9 +1,9 @@
+# Importações
 from selenium import webdriver # pip install selenium
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import PySimpleGUI as sg # pip install PySimpleGUI
-# DarkTeal12
 import re # importe o módulo re para expressões regulares
 from time import sleep #pip install time
 
@@ -13,6 +13,8 @@ def valida_ra(ra):
 def valida_data(data):
     return re.match(r"^\d{2}/\d{2}/\d{4}$", data) is not None
 sg.theme("DarkTeal12")
+
+
 # Faz o layout do programa
 layout = [
     [sg.Text("Insira seu RA")],
@@ -32,6 +34,7 @@ while True:
         ra = values["ra"]
         data = values["data"]
         digito = values["digito"]
+        
         if not ra or not data or not digito:
             sg.popup_error("Preencha todos os campos antes de continuar.")
         elif not valida_ra(ra) or not valida_data(data):
@@ -49,30 +52,34 @@ while True:
         if valida_ra(ra) and valida_data(data):
             print("RA:", ra)
             print("DAta e nascimento", data)
-            print("Dígito", digito) 
+            print("Dígito", digito)
+            
         iniAno = int(input("Quantos anos você completou ou vai completar o ensino médio? "))
         driver = webdriver.Chrome()
         wait = WebDriverWait(driver, 7) # Tempo de espera do webdriver
         pontos = 0 # Pontos totais
         num = []
-        driver.get(f"https://sed.educacao.sp.gov.br/Boletim/GerarBoletimUnificadoExterno?nrRa={'000'+ra}&nrDigRa={digito}&dsUfRa=SP&dtNascimento={data}&nrAnoLetivo={int(data[6:])+iniAno-2}")
+        driver.get(f"https://sed.educacao.sp.gov.br/Boletim/GerarBoletimUnificadoExterno?nrRa={'000'+ra}&nrDigRa={digito}&dsUfRa=SP&dtNascimento={data}&nrAnoLetivo={int(data[6:])+iniAno-2}") # Direciona para o site da SED com a data e ano específico dentro do laço 
+        
         nome = str(wait.until(EC.presence_of_all_elements_located((By.XPATH, "/html/body/div/div/div[2]/div/div/div[2]")))[0].text).title()
         documento = "consulta de RA/VerRAs/tabela.txt"
         
         
-        with open(documento, "r+", encoding="utf-8") as tabela:
+        with open(documento, "r+", encoding="utf-8") as tabela: # Abre o arquivo de texto como leitura para análise
             if nome in tabela.read():
-                print("\033[32mBoletim já cadastrado\033[m")
+                print("\033[32m\n\nBoletim já cadastrado\033[m")
                 driver.close()
                 break
             else:
                 print("\033[35mFazendo o boletim\033[m")
+                
                 for sec in range(1, 4):
-                    sleep(0.3)
+                    sleep(0.5)
                     print("\033[35m.\033[m", end="")
-                with open(documento,"w+", encoding="utf-8") as tabela:
+
+                with open(documento,"w+", encoding="utf-8") as tabela: # Abre o arquivo de texto como sobescrever
                     tabela.write("")
-                with open(documento, "+a", encoding="utf-8") as tabela:
+                with open(documento, "+a", encoding="utf-8") as tabela: # Abre o arquivo de texto como append("acrescentar")
                     tabela.write(f"{nome}\n\n\n")
                     print(f"\n\n\n\n{str(nome).title()}")
                 for ano in range(int(data[6:])+iniAno-6, int(data[6:])+iniAno+1):
@@ -81,16 +88,16 @@ while True:
                             print(f"Ano de \033[34m{ano}\033[m")
                             driver.get(f"https://sed.educacao.sp.gov.br/Boletim/GerarBoletimUnificadoExterno?nrRa={'000'+ra}&nrDigRa={digito}&dsUfRa=SP&dtNascimento={data}&nrAnoLetivo={ano}")
                             print("\n")
-                            tabelaNotas = wait.until(EC.presence_of_all_elements_located((By.XPATH, "/html/body/div/div/div[4]/table")))[0].text
+                            tabelaNotas = wait.until(EC.presence_of_all_elements_located((By.XPATH, "/html/body/div/div/div[4]/table")))[0].text # Pega a tabela real do boletim
                             tabelaTratada = []
                             with open(documento, "a+", encoding="utf-8") as tabela:
                                 tabela.write(f"Ano: {ano}\n{tabelaNotas}\n\n")
                             for notn in range(1, 13):
                                 for bim in range(2, 15, 4):
-                                    bimnot = wait.until(EC.presence_of_all_elements_located((By.XPATH, f'/html/body/div/div/div[4]/table/tbody/tr[{notn}]/td[{bim}]')))[0].text
-                                    if bimnot.isdigit():
+                                    bimnot = wait.until(EC.presence_of_all_elements_located((By.XPATH, f'/html/body/div/div/div[4]/table/tbody/tr[{notn}]/td[{bim}]')))[0].text # Cada nota de cada bimestre
+                                    if bimnot in "123456789" or bimnot in "10": # caso seja um número, faça ações abaixo
                                         pontos += int(bimnot)
-                                        num.append(bimnot)
+                                        num.append(bimnot) # Adiciona para a lista num os bimnots
                                         print(f"\033[36m{bimnot}\033[m", end=" ")
                                 print()
                         except Exception:
@@ -98,6 +105,5 @@ while True:
                     except Exception:
                         print("\033[34m\033Não consegui ver este boletim![m")
                 driver.quit()
-                print(f"A média total do aluno é de : \033[31m{pontos/len(num):.2f}\033[m com {len(num)} notas totais, {pontos} pontos.")
-
+                print(f"A média total do aluno é de : \033[31m{pontos/len(num):.2f}\033[m com {len(num)} notas totais, {pontos} pontos.") # Calcula a média de todos os alunos
 print("Fim do programa")
