@@ -49,7 +49,7 @@ LINGUA ESTRANGEIRA INGLES 9 - - 100% 7 3 - 83% 9 2 - 89% 8 1 - 94% 8 6 -
 LINGUA PORTUGUESA 9 2 - 96% 8 12 - 78% 8 2 - 96% 9 2 - 96% 9 18 -
 MATEMATICA 10 - - 100% 9 - - 100% 8 - - 100% 7 - - 100% 8 - -
 
-Ano: 2019
+Ano: 2019 
 Disciplina 1º Bimestre 2º Bimestre 3º Bimestre 4º Bimestre CF
 N F AC %Freq N F AC %Freq N F AC %Freq N F AC %Freq N F AC
 ARTE 10 - - 100% 10 - - 100% 10 - - 100% 8 - - 100% 10 - -
