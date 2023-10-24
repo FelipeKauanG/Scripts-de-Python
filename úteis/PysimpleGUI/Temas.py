@@ -16,14 +16,11 @@ layout = [[sg.Text('List of InBuilt Themes')],
 window = sg.Window('Theme List', layout)
   
 # This is an Event Loop
-while True:  
+while True:
     event, values = window.read()
-      
     if event in (None, 'Exit'):
         break
-          
     sg.theme(values['-LIST-'][0])
     sg.popup_get_text('This is {}'.format(values['-LIST-'][0]))
-      
 # Close
 window.close()
