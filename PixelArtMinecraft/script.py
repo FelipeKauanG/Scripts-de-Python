@@ -59,7 +59,6 @@ def open_image():
     cores = np.rot90(cores, k=3)
     plt.axis("off")
     plt.imshow(cores)
-    plt.imshow(cores)   Certifique-se de descomentar esta linha para exibir a imagem
     plt.show()  # Certifique-se de descomentar esta linha para exibir a imagem
     
 if __name__ == "__main__":
