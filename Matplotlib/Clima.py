@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import flask
 clima = [24.7, 24.9, 24.3, 23.5, 21, 20.4, 20.6, 22.5, 24.5, 25.5, 24.6, 24.8]
 meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
 
