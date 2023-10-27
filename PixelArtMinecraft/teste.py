@@ -15,7 +15,7 @@ data = ["#646464",
 "#191919"]
 
 colors_rgb = [tuple(int(color[i:i+2], 16) / 255 for i in (1, 3, 5)) for color in data]
-
+print(colors_rgb)
 data = np.array(colors_rgb).reshape(1, len(data), 3)
 
 plt.imshow(data, cmap="viridis")
