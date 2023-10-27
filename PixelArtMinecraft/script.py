@@ -52,15 +52,17 @@ def open_image():
         lines = textoImagem.readlines()
         for line in range(0, len(lines)):
             cor = lines[line].split()
+            #print(line)
             cores.append(tuple(int(cor[0][1:3], 16) / 255 for i in (0, 2, 4)))
-            
+            #print(cor)
+            print(tuple(int(cor[0][1:3], 16) / 255 for i in (0, 2, 4)))        
+    #print(cores)
     cores = np.array(cores).reshape(largura, altura, 3)
     cores = np.flipud(cores)
     cores = np.rot90(cores, k=3)
     plt.axis("off")
     plt.imshow(cores)
     plt.show()  # Certifique-se de descomentar esta linha para exibir a imagem
-    
 if __name__ == "__main__":
     open_image()
     
