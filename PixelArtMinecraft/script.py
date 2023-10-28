@@ -49,10 +49,6 @@ def open_image():
                                     str(melhor_cor).split(", ")
                             textoImagem.write(f"#{melhor_cor[0][0]:02x}{melhor_cor[0][1]:02x}{melhor_cor[0][2]:02x}\n{melhor_cor[1]}\n")
     cores = []
-    blocks = r"PixelArtMinecraft/blocos"
-    block_itens = os.listdir(blocks)
-    
-    
     with open(arquivo, "r", encoding="utf-8") as textoImagem:
         
         lines = textoImagem.readlines()
@@ -67,7 +63,7 @@ def open_image():
     cores = np.rot90(cores, k=3)
     plt.axis("off")
     plt.imshow(cores)
-    #plt.show()
+    plt.show()
     
 if __name__ == "__main__":
     open_image()
