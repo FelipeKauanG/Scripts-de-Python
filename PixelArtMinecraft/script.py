@@ -14,7 +14,6 @@ def open_image():
         [sg.Button("Abrir Imagem"), sg.Button("Sair")],
     ]
     window = sg.Window("Abrir imagem", layout, finalize=True)
-
     while True:
         event, values = window.read()
         if event == sg.WINDOW_CLOSED or event == "Sair":
@@ -61,10 +60,8 @@ def open_image():
     cores = np.rot90(cores, k=3)
     plt.axis("off")
     plt.imshow(cores)
-    
     plt.show()
     with open(arquivo, "w+",encoding="utf-8") as textoImagem:
         textoImagem.write("")
 if __name__ == "__main__":
     open_image()
-    
