@@ -12,6 +12,7 @@ for k, item in enumerate(enumered_pasta):
     caminho_imagem = os.path.join(pasta, item)
     imagem = Image.open(caminho_imagem)
     imagem_aumentada = imagem.resize((8, 8))
+    print(imagem_aumentada, (x, y))
     imagem_inicial.paste(imagem_aumentada, (x, y))
     x += 8
-imagem_inicial.show()
+#imagem_inicial.show()

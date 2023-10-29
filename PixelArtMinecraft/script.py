@@ -45,23 +45,42 @@ def open_image():
                                     menor_diferença = diferenca
                                     melhor_cor = (valor_rgb, nome)
                                     str(melhor_cor).split(", ")
-                            textoImagem.write(f"#{melhor_cor[0][0]:02x}{melhor_cor[0][1]:02x}{melhor_cor[0][2]:02x}\n{melhor_cor[1]}\n")
+                            textoImagem.write(f"#{melhor_cor[0][0]:02x}{melhor_cor[0][1]:02x}{melhor_cor[0][2]:02x}\n{melhor_cor[1]}.png\n")
+                            
     cores = []
+    
+    blocks = r"PixelArtMinecraft/blocos"
+    blocks_itens = os.listdir(blocks)
+    imagem_inicial = Image.new("RGB", (largura*16, altura*16), (255, 255, 255))
+    x, y = 0, 0
     with open(arquivo, "r", encoding="utf-8") as textoImagem:
         lines = textoImagem.readlines()
         for line in range(0, len(lines), 2):
             cor = lines[line].split()
             r = int(cor[0][1:3], 16) / 255
-            g  = int(cor[0][3:5], 16) / 255
+            g = int(cor[0][3:5], 16) / 255
             b = int(cor[0][5:7], 16) / 255
             cores.append((r,g,b))
+            
+            if lines[line+1].strip() in blocks_itens:
+                bloco = Image.open(os.path.join(blocks, f"{lines[line+1].strip()}"))
+                for _ in range(largura):
+                    imagem_inicial.paste(bloco, (x, y))
+                x += 16
+                if x >= largura * 16:
+                    x = 0
+                    y += 16
     cores = np.array(cores).reshape(largura, altura, 3)
     cores = np.flipud(cores)
     cores = np.rot90(cores, k=3)
     plt.axis("off")
     plt.imshow(cores)
-    plt.show()
-    with open(arquivo, "w+",encoding="utf-8") as textoImagem:
-        textoImagem.write("")
+    #plt.show()
+    
+
+    imagem_inicial.show()
+    
+    #with open(arquivo, "w+",encoding="utf-8") as textoImagem:
+        #textoImagem.write("")
 if __name__ == "__main__":
     open_image()
