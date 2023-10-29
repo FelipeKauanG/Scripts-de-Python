@@ -41,6 +41,7 @@ def open_image():
                             for nome, valor in colors.items():
                                 valor_rgb = [int(x) for x in valor.split(", ")]
                                 diferenca = sum(abs(a - b) for a, b in zip(pixel, valor_rgb))
+                                
                                 if diferenca < menor_diferença:
                                     menor_diferença = diferenca
                                     melhor_cor = (valor_rgb, nome)
@@ -64,20 +65,23 @@ def open_image():
             
             if lines[line+1].strip() in blocks_itens:
                 bloco = Image.open(os.path.join(blocks, f"{lines[line+1].strip()}"))
+                bloco = bloco.rotate(90, expand=True)
                 for _ in range(largura):
                     imagem_inicial.paste(bloco, (x, y))
                 x += 16
                 if x >= largura * 16:
                     x = 0
                     y += 16
+                    
     cores = np.array(cores).reshape(largura, altura, 3)
     cores = np.flipud(cores)
     cores = np.rot90(cores, k=3)
     plt.axis("off")
     plt.imshow(cores)
-    #plt.show()
+    plt.show()
     
-
+    imagem_inicial = imagem_inicial.transpose(Image.ROTATE_270)
+    imagem_inicial = imagem_inicial.transpose(Image.FLIP_LEFT_RIGHT)
     imagem_inicial.show()
     
     #with open(arquivo, "w+",encoding="utf-8") as textoImagem:
