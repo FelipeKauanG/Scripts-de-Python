@@ -1,4 +1,4 @@
-import PySimpleGUI as sg #pip install PySimpleGUIQt
+import PySimpleGUIQt as sg #pip install PySimpleGUIQt
 import numpy as np #pip install numpy
 import matplotlib.pyplot as plt # pip install matplotlib
 from time import sleep
@@ -13,11 +13,11 @@ def open_image():
     layout = [
         [sg.Text("Selecione uma imagem em formato PNG:")],
         [sg.InputText(key="image_path"), sg.FileBrowse(file_types=(("Imagens PNG", "*.png"),("Imagens JPG", "*.jpg"), ("Imagens JPEG" "*.jpeg")))],
-        [sg.Button("Abrir Imagem"), sg.Button("Sair")]
+        [sg.Button("Abrir Imagem"), sg.Button("Sair"), sg.Checkbox("Mostrar gráfico", default=False, key="toggle_button")]
     ]
     
     
-    window = sg.Window("Abrir imagem", layout, finalize=True, size=(400, 200), element_justification='c')
+    window = sg.Window("Abrir imagem", layout, finalize=True, size=(400, 200), auto_size_buttons=True, grab_anywhere=True,element_justification="c", icon=r"PixelArtMinecraft/imagem/Icon.png")
 
     while True:
         event, values = window.Read()
@@ -30,7 +30,7 @@ def open_image():
                 from PIL import Image
                 img = Image.open(imagem_path)
                 largura, altura = img.size
-                print()
+                toggle = values["toggle_button"]
                 print(f"Largura: {largura}px\nAltura: {altura}px")
                 window.close()
                 print("criando a imagem", end="", flush=True)
@@ -46,15 +46,13 @@ def open_image():
                             for nome, valor in colors.items():
                                 valor_rgb = [int(x) for x in valor.split(", ")]
                                 diferenca = sum(abs(a - b) for a, b in zip(pixel, valor_rgb))
-                                print(diferenca)
                                 if diferenca < menor_diferença:
                                     menor_diferença = diferenca
                                     melhor_cor = (valor_rgb, nome)
                                     str(melhor_cor).split(", ")
                             textoImagem.write(f"#{melhor_cor[0][0]:02x}{melhor_cor[0][1]:02x}{melhor_cor[0][2]:02x}\n{melhor_cor[1]}.png\n")
-                            
+            break          
     cores = []
-    
     blocks = r"PixelArtMinecraft/blocos"
     blocks_itens = os.listdir(blocks)
     imagem_inicial = Image.new("RGB", (largura*16, altura*16), (255, 255, 255))
@@ -78,10 +76,13 @@ def open_image():
                     y += 16
     cores = np.array(cores).reshape(altura, largura, 3)
     plt.axis("off")
+    plt.autoscale(enable=True)
     plt.imshow(cores)
-    #plt.show()
+    if toggle == True:
+        plt.show()
     
     imagem_inicial.show()
 if __name__ == "__main__":
     open_image()
-print("Finalizado")
+    input("\nPressiona enter para finalizar")
+print("\033[34mFinalizado\033[m")
