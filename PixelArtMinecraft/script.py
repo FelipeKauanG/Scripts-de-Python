@@ -1,4 +1,4 @@
-import PySimpleGUI as sg #pip install PySimpleGUI
+import PySimpleGUI as sg #pip install PySimpleGUIQt
 import numpy as np #pip install numpy
 import matplotlib.pyplot as plt # pip install matplotlib
 from time import sleep
@@ -17,7 +17,8 @@ def open_image():
     ]
     
     
-    window = sg.Window("Abrir imagem", layout, finalize=True, size=(400,200), icon="PixelArtMinecraft/blocos/acacia_planks.png")
+    window = sg.Window("Abrir imagem", layout, finalize=True, size=(400, 200), element_justification='c')
+
     while True:
         event, values = window.Read()
         if event == sg.WINDOW_CLOSED or event == "Sair":
@@ -45,6 +46,7 @@ def open_image():
                             for nome, valor in colors.items():
                                 valor_rgb = [int(x) for x in valor.split(", ")]
                                 diferenca = sum(abs(a - b) for a, b in zip(pixel, valor_rgb))
+                                print(diferenca)
                                 if diferenca < menor_diferença:
                                     menor_diferença = diferenca
                                     melhor_cor = (valor_rgb, nome)
@@ -77,11 +79,9 @@ def open_image():
     cores = np.array(cores).reshape(altura, largura, 3)
     plt.axis("off")
     plt.imshow(cores)
-    plt.show()
+    #plt.show()
     
     imagem_inicial.show()
-    
-    #with open(arquivo, "w+",encoding="utf-8") as textoImagem:
-        #textoImagem.write("")
 if __name__ == "__main__":
     open_image()
+print("Finalizado")
