@@ -1,6 +1,0 @@
-RA: 106190323, Digito 1, Data do boletim: 22/06/2004 Tempo: 2023-10-02 10:51:16
-RA: 106190324, Digito 1, Data do boletim: 22/06/2004 Tempo: 2023-10-02 10:52:02
-RA: 106190325, Digito 1, Data do boletim: 22/06/2004 Tempo: 2023-10-02 10:52:14
-RA: 106190326, Digito 1, Data do boletim: 22/06/2004 Tempo: 2023-10-02 10:52:32
-RA: 106190323, Digito 1, Data do boletim: 22/06/2004 Tempo: 2023-10-14 01:07:59
-RA: 106190324, Digito 1, Data do boletim: 22/06/2004 Tempo: 2023-10-14 01:08:06
