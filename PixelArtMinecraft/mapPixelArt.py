@@ -21,7 +21,7 @@ def open_image():
     sg.theme("Dark")
     layout = [
         [sg.Text("Selecione uma imagem em formato PNG:", justification="Center")],
-        [sg.InputText(key="image_path"), sg.FileBrowse(file_types=(("Imagens PNG", "*.png"),("Imagens JPG", "*.jpg"), ("Imagens JPEG" "*.jpeg")))],
+        [sg.InputText(key="image_path"), sg.FileBrowse(file_types=(("Imagens PNG", "*.png"),("Imagens JPG", "*.jpg")))],
         [sg.Button("Abrir Imagem"), sg.Button("Sair"), sg.Checkbox("Mostrar gráfico", default=False, key="toggle_button")]
     ]
     
