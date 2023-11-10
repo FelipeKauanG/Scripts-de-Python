@@ -35,8 +35,10 @@ def open_image():
             imagem_path = values["image_path"]
             if imagem_path:
                 arquivo = r"PixelArtMinecraft/imagem.txt"
+                
                 from PIL import Image
                 img = Image.open(imagem_path)
+                img = img.convert("RGB")
                 largura, altura = img.size
                 toggle = values["toggle_button"]
                 print(f"Largura: {largura}px\nAltura: {altura}px")
@@ -48,16 +50,21 @@ def open_image():
                 with open(arquivo, "w+", encoding="utf-8") as textoImagem:
                     for altu in range(0, altura):
                         for larg in range(0, largura):
+                            
                             pixel = img.getpixel((larg, altu))
                             melhor_cor = None
                             menor_diferença = float("inf")
+                            
                             for nome, valor in colors.items():
                                 valor_rgb = [int(x) for x in valor.split(", ")]
+                                #print(pixel)
                                 diferenca = sum(abs(a - b) for a, b in zip(pixel, valor_rgb))
+                                
                                 if diferenca < menor_diferença:
                                     menor_diferença = diferenca
                                     melhor_cor = (valor_rgb, nome)
                                     str(melhor_cor).split(", ")
+                                    
                             textoImagem.write(f"#{melhor_cor[0][0]:02x}{melhor_cor[0][1]:02x}{melhor_cor[0][2]:02x}\n{melhor_cor[1]}.png\n")
             break
     cores = []

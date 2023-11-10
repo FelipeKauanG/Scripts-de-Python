@@ -102,4 +102,5 @@ while True:
             except:
                 print(f"\033[34m\033Não consegui ver este boletim![m")
         driver.quit()
-        print(f"A média total do aluno é de : \033[31m{pontos/len(num):.2f}\033[m com {len(num)} notas totais, {pontos} pontos.")
+        print(f"A média total de {nome} é de : \033[31m{pontos/len(num):.2f}\033[m com {len(num)} notas totais, {pontos} pontos.")
+        
