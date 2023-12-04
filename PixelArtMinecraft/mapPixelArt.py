@@ -1,6 +1,6 @@
-import PySimpleGUIQt as sg #pip install PySimpleGUIQt
+import PySimpleGUI as sg #pip install PySimpleGUIQ
 import numpy as np #pip install numpy
-import matplotlib.pyplot as plt # pip install matplotlib
+from matplotlib import pyplot as plt # pip install matplotlib
 from time import sleep
 import os
 from tkinter import *
@@ -53,6 +53,7 @@ def open_image():
                 for i in range(1, 4):
                     print(".",end="", flush=True)
                     sleep(1)
+
                 with open(arquivo, "w+", encoding="utf-8") as textoImagem:
                     for altu in range(0, altura):
                         for larg in range(0, largura):
