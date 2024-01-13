@@ -36,7 +36,6 @@ def open_image():
             imagem_path = values["image_path"]
             if imagem_path:
                 arquivo = r"PixelArtMinecraft/imagem.txt"
-                
                 from PIL import Image
                 img = Image.open(imagem_path)
                 img = img.convert("RGB")
