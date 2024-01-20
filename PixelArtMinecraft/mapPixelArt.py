@@ -45,8 +45,7 @@ def open_image():
                     print(f"Largura: {largura}px\nAltura: {altura}px")
                 else:
                     print(f"Proporção {Fraction(largura,altura)}, Largura: {largura}px Altura: {altura}px")
-                toggle = values["toggle_button"]
-                
+                toggle = values["toggle_button"] 
                 window.close()
                 print("criando a imagem", end="", flush=True)
                 for i in range(1, 4):
@@ -102,7 +101,7 @@ def open_image():
     plt.imshow(cores)
     if toggle == True:
         plt.show()
-    
+    print(cores)   
     imagem_inicial.show()
 if __name__ == "__main__":
     open_image()
