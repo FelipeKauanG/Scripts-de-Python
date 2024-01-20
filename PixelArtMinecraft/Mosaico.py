@@ -53,12 +53,9 @@ for cor in cores:
         corG = int(cor[1])
         corB = int(cor[2])
         media = True
-        palR = int(str(pal).split(";")[1].split(",")[
-                   0].replace("(", "").replace(")", ""))
-        palG = int(str(pal).split(";")[1].split(",")[
-                   1].replace("(", "").replace(")", ""))
-        palB = int(str(pal).split(";")[1].split(",")[
-                   2].replace("(", "").replace(")", ""))
+        palR = int(str(pal).split(";")[1].split(",")[0].replace("(", "").replace(")", ""))
+        palG = int(str(pal).split(";")[1].split(",")[1].replace("(", "").replace(")", ""))
+        palB = int(str(pal).split(";")[1].split(",")[2].replace("(", "").replace(")", ""))
 
         correspondencia = True
 
