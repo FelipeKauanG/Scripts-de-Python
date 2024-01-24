@@ -45,7 +45,7 @@ def open_image():
                     print(f"Largura: {largura}px\nAltura: {altura}px")
                 else:
                     print(f"Proporção {Fraction(largura,altura)}, Largura: {largura}px Altura: {altura}px")
-                toggle = values["toggle_button"] 
+                toggle = values["toggle_button"]
                 window.close()
                 print("criando a imagem", end="", flush=True)
                 for i in range(1, 4):
@@ -55,7 +55,6 @@ def open_image():
                 with open(arquivo, "w+", encoding="utf-8") as textoImagem:
                     for altu in range(0, altura):
                         for larg in range(0, largura):
-                            
                             pixel = img.getpixel((larg, altu))
                             melhor_cor = None
                             menor_diferença = float("inf")
@@ -72,7 +71,6 @@ def open_image():
                                     
                             textoImagem.write(f"#{melhor_cor[0][0]:02x}{melhor_cor[0][1]:02x}{melhor_cor[0][2]:02x}\n{melhor_cor[1]}.png\n")
             break
-    
     cores = []
     blocks = r"PixelArtMinecraft/blocos"
     blocks_itens = os.listdir(blocks)
@@ -101,7 +99,7 @@ def open_image():
     plt.imshow(cores)
     if toggle == True:
         plt.show()
-    print(cores)   
+    print(cores)
     imagem_inicial.show()
 if __name__ == "__main__":
     open_image()

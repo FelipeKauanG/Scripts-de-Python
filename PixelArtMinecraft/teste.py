@@ -1,23 +1,21 @@
-import PySimpleGUI as sg
+import os
 from PIL import Image
+import numpy as np
+from PIL import Image
+from time import sleep
+from matplotlib import pyplot as plt
 
-layout = [
-    [sg.Text("Selecione uma imagem em formato PNG:", justification="Center")],
-    [sg.InputText(key="image_path"), sg.FileBrowse(file_types=(("Imagens PNG", "*.png"), ("Imagens JPG", "*.jpg")))],
-    [sg.Button("Abrir Imagem"), sg.Button("Sair"), sg.Checkbox("Mostrar gráfico", default=False, key="toggle_button")]
-]
 
-window = sg.Window("Abrir imagem", layout, element_justification='c', finalize=True)
-
-while True:
-    event, values = window.Read()
-
-    if event == sg.WINDOW_CLOSED or event == "Sair":
-        break
-    elif event == "Abrir Imagem":
-        imagem_path = values["image_path"]
-        if imagem_path:
-            img = Image.open(imagem_path)
-            img.show()
-
-window.close()
+pasta = os.listdir(r"PixelArtMinecraft\blocos")
+transparente = []
+for bloco in pasta:
+    imagem = Image.open(f"PixelArtMinecraft/blocos/{bloco}")
+    imagem = imagem.convert("RGBA")
+    for x in range(0, 16):
+        for y in range(0, 16):
+            cor = imagem.getpixel((x, y))
+    if cor[3] != 255 and bloco not in "glass":
+        transparente.append(bloco)
+        
+    #sleep(100)
+print(transparente)

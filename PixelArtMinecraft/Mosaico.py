@@ -1,13 +1,16 @@
 import os
 from PIL import Image
-from matplotlib import pyplot as plt
 import numpy as np
+from PIL import Image
 from time import sleep
+from matplotlib import pyplot as plt
 
 
+areaDeTrabalho = os.path.join(os.path.expanduser("~"), "Desktop")
+nomeImagem = "Teste 9"
 pasta = os.listdir(r"PixelArtMinecraft\blocos")
 cores = []
-novaImagem = Image.open(r"PixelArtMinecraft\imagem\PixelArt.png")
+novaImagem = Image.open(f"PixelArtMinecraft\imagem\{nomeImagem}.png")
 largura, altura = novaImagem.size
 novaImagem.convert("RGBA")
 totalPixels = novaImagem.size[0] * novaImagem.size[1]
@@ -36,7 +39,6 @@ for bloco in pasta:
         R += imagem.getpixel((X, Y))[0]//16
         G += imagem.getpixel((X, Y))[1]//16
         B += imagem.getpixel((X, Y))[2]//16
-
         conjunto = (f"{bloco};{R, G, B}")
         if Y > ALTURA:
             Y = 0
@@ -44,28 +46,56 @@ for bloco in pasta:
     paleta.append(conjunto)
 
 grafico = []
-
-
 for cor in cores:
+    melhorBloco = []
     for pal in paleta:
-        melhorBloco = []
         corR = int(cor[0])
         corG = int(cor[1])
         corB = int(cor[2])
-        media = True
         palR = int(str(pal).split(";")[1].split(",")[0].replace("(", "").replace(")", ""))
         palG = int(str(pal).split(";")[1].split(",")[1].replace("(", "").replace(")", ""))
         palB = int(str(pal).split(";")[1].split(",")[2].replace("(", "").replace(")", ""))
+        mediaR = abs((corR - palR))
+        mediaG = abs((corG - palG))
+        mediaB = abs((corB - palB))
+        mediaGeral = (mediaR + mediaG + mediaB) // 3
+        correspondencia = (f"{mediaGeral} {str(pal).split(";")[0]}")
+        melhorBloco.append(correspondencia)
+        # print(f"{mediaR}%, {mediaG}%, {mediaB}%")
+    # sleep(1000)
 
-        correspondencia = True
+    def extrairCor(cor):
+        return float(cor.split()[0])
 
-        print(f"\033[31m{palR, palG, palB} - {str(pal).split(";")[0]}\033[m")
-        print(f"\033[34m{corR, corG, corB} \033[m")
-        sleep(1)
+    melhorBloco = sorted(melhorBloco, key=extrairCor)
+    grafico.append(f"{str(melhorBloco[0]).split(" ")[1]}")
+    # print(grafico)
+    # sleep(1000)
+foto = []
+imagemBranco = Image.new("RGB", (largura*16, altura*16), color="white")
+x = 0
+y = 0
+
+for bloco in grafico:
+    ImagemBloco = Image.open(os.path.join(r"PixelArtMinecraft\blocos", bloco))
+    imagemBranco.paste(ImagemBloco, (x, y))
+    x += 16
+    if x >= largura*16:
+        x = 0
+        y += 16
+cores = np.array(cores).reshape(largura, altura, 3)
 
 
-def mostrarFoto():
-    cores = np.array(cores).reshape(altura, largura, 3)
-    plt.imshow(cores)
-    plt.axis("off")
+def mostrarGrafico():
     plt.show()
+    plt.imshow(cores)
+
+
+def mostrarImagem():
+    imagemBranco.show()
+
+    imagemBranco.save(os.path.join(areaDeTrabalho, f"{nomeImagem}.png"))
+
+
+mostrarImagem()
+
