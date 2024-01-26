@@ -1,21 +1,24 @@
-import os
-from PIL import Image
-import numpy as np
-from PIL import Image
-from time import sleep
-from matplotlib import pyplot as plt
+import PySimpleGUI as sg
+import time
 
+def mostrar_barra_progresso():
+    layout = [[sg.Text("Processando:")],
+              [sg.ProgressBar(100, orientation='h', size=(20, 20), key='progressbar')],
+              [sg.Button("Iniciar"), sg.Button("Cancelar")]]
 
-pasta = os.listdir(r"PixelArtMinecraft\blocos")
-transparente = []
-for bloco in pasta:
-    imagem = Image.open(f"PixelArtMinecraft/blocos/{bloco}")
-    imagem = imagem.convert("RGBA")
-    for x in range(0, 16):
-        for y in range(0, 16):
-            cor = imagem.getpixel((x, y))
-    if cor[3] != 255 and bloco not in "glass":
-        transparente.append(bloco)
-        
-    #sleep(100)
-print(transparente)
+    window = sg.Window("Barra de Progresso", layout)
+
+    while True:
+        event, values = window.read(timeout=100)  # tempo de atualização em milissegundos
+
+        if event == sg.WINDOW_CLOSED or event == "Cancelar":
+            break
+
+        if event == "Iniciar":
+            for i in range(100):
+                window['progressbar'].update_bar(i + 0.5)
+                time.sleep(0.2)  # Simulação de uma operação demorada
+
+    window.close()
+
+mostrar_barra_progresso()

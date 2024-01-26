@@ -1,18 +1,41 @@
 import os
 from PIL import Image
 import numpy as np
-from PIL import Image
-from time import sleep
 from matplotlib import pyplot as plt
+import PySimpleGUI as sg
 
 
-areaDeTrabalho = os.path.join(os.path.expanduser("~"), "Desktop")
-nomeImagem = "Teste 9"
+(r"PixelArtMinecraft\Logo\Logo.png")
+
+sg.theme("Darkblue")
+choiceIMG = [
+    [sg.FileBrowse("Procurar arquivo")],
+    [sg.Button("OK"), sg.Button("Cancelar")],
+    [sg.Check("Mostrar Imagem"), sg.Check("Salvar Imagem")],
+    [sg.ProgressBar(100, orientation="h", size=(20, 20), key="progressbar")]
+]
+
+choice = sg.Window("Escolher imagem", choiceIMG)
+
+while True:
+    event, values = choice.read()
+    if event == sg.WIN_CLOSED or event == "Cancelar":
+        break
+    novaImagem = Image.open(values["Procurar arquivo"])
+    nomeImagem = str(values["Procurar arquivo"]).split("/")[-1]
+    mostra = values[0]
+    salvar = values[1]
+    break
+choice.close()
+
+
+
+del(values, choice, choiceIMG, event)
 pasta = os.listdir(r"PixelArtMinecraft\blocos")
 cores = []
-novaImagem = Image.open(f"PixelArtMinecraft\imagem\{nomeImagem}.png")
-largura, altura = novaImagem.size
 novaImagem.convert("RGBA")
+largura, altura = novaImagem.size
+
 totalPixels = novaImagem.size[0] * novaImagem.size[1]
 
 for x in range(0, altura):
@@ -92,9 +115,22 @@ def mostrarGrafico():
 
 
 def mostrarImagem():
-    imagemBranco.show()
-
-    imagemBranco.save(os.path.join(areaDeTrabalho, f"{nomeImagem}.png"))
+    if mostra == True:
+        imagemBranco.show()
+    if salvar == True:
+        saveIMG = [
+            [sg.FolderBrowse("Salvar Imagem")],
+            [sg.Button("OK"), sg.Button("Cancelar")]
+        ]
+        save = sg.Window("Salvar Imagem", saveIMG)
+        while True:
+            event, values = save.read()
+            if event == sg.WIN_CLOSED or event == "Cancelar":
+                break
+            imagemBranco.save(f"{values['Salvar Imagem']}/{nomeImagem}")
+            
+            break
+        save.close()
 
 
 mostrarImagem()
