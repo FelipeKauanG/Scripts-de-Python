@@ -5,7 +5,6 @@ from matplotlib import pyplot as plt
 import PySimpleGUI as sg
 
 
-(r"PixelArtMinecraft\Logo\Logo.png")
 
 sg.theme("Darkblue")
 choiceIMG = [
