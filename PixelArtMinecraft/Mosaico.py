@@ -30,9 +30,13 @@ choice.close()
 
 
 del(values, choice, choiceIMG, event)
-pasta = os.listdir(r"PixelArtMinecraft\blocos")
+try:
+    pasta = os.listdir(r"PixelArtMinecraft\blocos")
+except FileNotFoundError:
+    pasta = os.listdir(r"blocos")
+
 cores = []
-novaImagem.convert("RGBA")
+novaImagem = novaImagem.convert("RGBA")
 largura, altura = novaImagem.size
 
 totalPixels = novaImagem.size[0] * novaImagem.size[1]
@@ -40,14 +44,18 @@ totalPixels = novaImagem.size[0] * novaImagem.size[1]
 for x in range(0, altura):
     for y in range(0, largura):
         cor = novaImagem.getpixel((y, x))
-        r = int(cor[0])
-        g = int(cor[1])
-        b = int(cor[2])
+        r = cor[0]
+        g = cor[1]
+        b = cor[2]
         hexColor = r, g, b
         cores.append(hexColor)
 paleta = []
 for bloco in pasta:
-    imagem = Image.open(f"PixelArtMinecraft/blocos/{bloco}")
+    try:
+        imagem = Image.open(f"PixelArtMinecraft/blocos/{bloco}")
+    except FileNotFoundError:
+        imagem = Image.open(f"blocos/{bloco}")
+
     imagem = imagem.convert("RGBA")
     LARGURA, ALTURA = imagem.size
     R = 0
@@ -65,7 +73,7 @@ for bloco in pasta:
         if Y > ALTURA:
             Y = 0
 
-    paleta.append(conjunto)
+        paleta.append(conjunto)
 
 grafico = []
 for cor in cores:
@@ -94,12 +102,17 @@ for cor in cores:
     # print(grafico)
     # sleep(1000)
 foto = []
-imagemBranco = Image.new("RGB", (largura*16, altura*16), color="white")
+imagemBranco = Image.new("RGBA", (largura*16, altura*16), color="white")
 x = 0
 y = 0
 
 for bloco in grafico:
-    ImagemBloco = Image.open(os.path.join(r"PixelArtMinecraft\blocos", bloco))
+    try:
+        ImagemBloco = Image.open(os.path.join(r"PixelArtMinecraft/blocos", bloco))
+    except FileNotFoundError:
+        ImagemBloco = Image.open(os.path.join(r"blocos", bloco))
+    
+
     imagemBranco.paste(ImagemBloco, (x, y))
     x += 16
     if x >= largura*16:
@@ -107,7 +120,7 @@ for bloco in grafico:
         y += 16
 cores = np.array(cores).reshape(largura, altura, 3)
 
-
+z
 def mostrarGrafico():
     plt.show()
     plt.imshow(cores)
