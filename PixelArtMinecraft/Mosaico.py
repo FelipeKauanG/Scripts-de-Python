@@ -1,8 +1,8 @@
 import os
-from PIL import Image
-import numpy as np
-from matplotlib import pyplot as plt
-import PySimpleGUI as sg
+from PIL import Image #pip install Pillow
+import numpy as np #pip install numpy
+from matplotlib import pyplot as plt #pip install matplotlib
+import PySimpleGUI as sg #pip install PySimpleGUI
 
 
 
@@ -11,7 +11,7 @@ choiceIMG = [
     [sg.FileBrowse("Procurar arquivo")],
     [sg.Button("OK"), sg.Button("Cancelar")],
     [sg.Check("Mostrar Imagem"), sg.Check("Salvar Imagem")],
-    [sg.ProgressBar(100, orientation="h", size=(20, 20), key="progressbar")]
+    [sg.ProgressBar(100, orientation="h", size=(20, 20), key="progressBar")]
 ]
 
 choice = sg.Window("Escolher imagem", choiceIMG)
@@ -28,16 +28,16 @@ while True:
 choice.close()
 
 
-
 del(values, choice, choiceIMG, event)
 try:
-    pasta = os.listdir(r"PixelArtMinecraft\blocos")
+    pasta = os.listdir(r"PixelArtMinecraft/blocos")
 except FileNotFoundError:
     pasta = os.listdir(r"blocos")
 
 cores = []
 novaImagem = novaImagem.convert("RGBA")
 largura, altura = novaImagem.size
+print(largura, altura)
 
 totalPixels = novaImagem.size[0] * novaImagem.size[1]
 
@@ -120,7 +120,6 @@ for bloco in grafico:
         y += 16
 cores = np.array(cores).reshape(largura, altura, 3)
 
-z
 def mostrarGrafico():
     plt.show()
     plt.imshow(cores)
