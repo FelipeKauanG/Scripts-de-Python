@@ -17,21 +17,16 @@
 ---
 
 ## Para automatização de navegadores ##
-*``from selenium import webdriver``*
-
-*``from selenium.webdriver.common.by import By``*
-
-*``from selenium.webdriver.support.ui import ``*
-
-*``WebDriverWait``*
-
-*``from selenium.webdriver.support import ``*
-
-*``expected_conditions as EC``*
-
-*``from webdriver_manager.chrome import ``*
-
-*``ChromeDriverManager``*
+```
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import 
+WebDriverWait
+from selenium.webdriver.support import 
+expected_conditions as EC
+from webdriver_manager.chrome import 
+ChromeDriverManager
+```
 
 
 <br>
@@ -39,24 +34,23 @@
 ---
 
 ## Para visualização de dados ##
-*``import matplotlib.pyplot as plt``*
-
-*``import seaborn as sns``*
+```
+import matplotlib.pyplot as plt
+import seaborn as sns
+```
 
 <br>
 
 ---
 
 ## Para aprendizado de máquina ##
-*``from sklearn.model_selection import ``*
-
-*``train_test_split``*
-
-*``from sklearn.ensemble import ``*
-
-*``RandomForestClassifier``*
-
-*``import tensorflow as tf``*
+```
+from sklearn.model_selection import 
+train_test_split
+from sklearn.ensemble import 
+RandomForestClassifier
+import tensorflow as tf
+```
 
 
 <br>
@@ -64,9 +58,10 @@
 ---
 
 ## Para desenvolvimento web ##
-``from flask import Flask``
-
-``from django import setup``
+```
+from flask import Flask
+from django import setup
+```
 
 <br>
 
