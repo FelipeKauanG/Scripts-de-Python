@@ -1,16 +1,18 @@
 ## Para manipulação de dados ## 
-*``import pandas as pd``*
-
-*``import numpy as np``*
+```
+import pandas as pd
+import numpy as np
+```
 
 <br>
 
 ---
 
 ## Para web scraping ##
-*``import requests``*
-
-*``from bs4 import BeautifulSoup``*
+```
+import requests
+from bs4 import BeautifulSoup
+```
 
 <br>
 
@@ -64,7 +66,9 @@ from django import setup
 ---
 
 ## Para processamento de imagem ##
-``import cv2``
+```
+import cv2
+```
 
 <br>
 
