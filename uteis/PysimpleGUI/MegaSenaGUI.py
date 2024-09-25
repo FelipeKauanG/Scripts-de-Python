@@ -22,3 +22,5 @@ while True:
             valores.append(i)
         sg.popup_ok(f"Valores sorteados {sample(valores, 6)}", text_color="#eeeeee", image=r"úteis/PysimpleGUI/title.png", title="MEGA SENA")
 janela.close()
+
+
