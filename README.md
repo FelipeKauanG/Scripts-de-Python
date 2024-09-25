@@ -73,18 +73,33 @@ from django import setup
 ## Instalando Bibliotecas ##
 
 
-*`pip install requests`*
+```
+pip install requests
+```
 
-*`pip install beautifulsoup4`*
+```
+pip install beautifulsoup4
+```
 
-*`pip install pandas`*
+```
+pip install pandas
+```
 
-*`pip install matplotlib`*
+```
+pip install matplotlib
+```
 
-*`pip install seaborn`*
+```
+pip install seaborn
+```
 
-*`pip install selenium`*
+```
+pip install selenium
+```
 
-*`pip install webdriver-manager`*
+```
+pip install webdriver-manager
+```
+
 
 
