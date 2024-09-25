@@ -20,12 +20,9 @@
 ```
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import 
-WebDriverWait
-from selenium.webdriver.support import 
-expected_conditions as EC
-from webdriver_manager.chrome import 
-ChromeDriverManager
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
 ```
 
 
@@ -45,10 +42,9 @@ import seaborn as sns
 
 ## Para aprendizado de máquina ##
 ```
-from sklearn.model_selection import 
-train_test_split
-from sklearn.ensemble import 
-RandomForestClassifier
+from sklearn.model_selection import train_test_split 
+from sklearn.ensemble 
+import RandomForestClassifier 
 import tensorflow as tf
 ```
 
