@@ -84,20 +84,17 @@ def copiarDffs():
 
     for arquivo in range(0, len(listaNova)):
         
-        indexPasta += 1
-        atual = 0
 
         pastaAtual = f"{pastaDestino} {indexPasta}"
 
+
         os.makedirs(pastaAtual, exist_ok=True)
 
-        caminho_origem = os.path.join(pasta_origem, arquivo[arquivo][0])
+        caminho_origem = os.path.join(pasta_origem, listaNova[arquivo][0])
 
-        caminho_destino = os.path.join(pastaAtual, arquivo)
+        caminho_destino = os.path.join(pastaAtual, listaNova[arquivo][0])
 
-        print(atual)
-
-        #shutil.copy(caminho_origem, caminho_destino)
+        shutil.copy(caminho_origem, caminho_destino)
 
         if atual == quantArquivos:
             atual = 0
