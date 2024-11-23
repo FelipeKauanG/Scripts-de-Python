@@ -22,3 +22,4 @@ while True:
         break
 
 print(f"\n\033[31mFim do programa\033[m")
+    
