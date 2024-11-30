@@ -37,7 +37,7 @@ except FileNotFoundError:
 cores = []
 novaImagem = novaImagem.convert("RGBA")
 largura, altura = novaImagem.size
-print(largura, altura)
+print(f"\033[32m{largura}px x {altura}px")
 
 totalPixels = novaImagem.size[0] * novaImagem.size[1]
 
@@ -139,6 +139,7 @@ def mostrarImagem():
             if event == sg.WIN_CLOSED or event == "Cancelar":
                 break
             imagemBranco.save(f"{values['Salvar Imagem']}/{nomeImagem}")
+            #imagemBranco.save(r"C:\Users\Felipe Kauan\Desktop")
             
             break
         save.close()
