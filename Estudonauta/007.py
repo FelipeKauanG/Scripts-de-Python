@@ -2,6 +2,7 @@ import PySimpleGUIQt as sg #pip install PySimpleGUIQ →
 #pip install PySide6
 import keyboard #pip install keyboard
 import threading
+from matplotlib import pyplot as plt
 
 #Define o tema do PySimpleGUI
 sg.theme("DarkPurple2")
@@ -23,6 +24,9 @@ layout = [
 
 #Declaraçã da janela e o título
 window = sg.Window("Média aritmética", layout)
+
+
+  
 
 #Executção geral da janela
 while True:
@@ -77,8 +81,19 @@ while True:
                 #Função de mudar a cor do texto da média calculada
                 def colorText(color):
 
+                    #Função de criar um gráfico das notas
+                    def mostrarGrafico():
+                        plt.grid()
+                        plt.style.use("fivethirtyeight")
+                        plt.plot(valores)
+                        plt.title(f'Média: {mediaFormat}')
+                        plt.xlabel("Bimestres")
+                        plt.ylabel("Notas")
+                        plt.show()  
+
                     #Mostra o valor da média
                     [sg.popup(f"A média total foi {str(mediaFormat).replace('.', ",")}", text_color=f"{color}")]
+                    mostrarGrafico()
                     
                 
                 #Se a média for entre 0 e 5
@@ -101,11 +116,15 @@ while True:
                 [sg.popup("Por favor, digite apenas números!")]
 
 
+        
+
+
     #Se caso não tiver elementos suficientes
     except ZeroDivisionError:
         sg.popup("Programa encerrado com sucesso, pois não tenho elementos suficientes")
         window.close()
         break
+
 
 
 #Fechar janelas

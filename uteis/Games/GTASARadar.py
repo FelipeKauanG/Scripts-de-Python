@@ -2,8 +2,11 @@ import PIL as pil
 import os
 from PIL import Image
 
+
+usuario = "Shadic"
+desktop_Caminho = f"C:\\Users\\{usuario}\\Desktop\\Radar"
 # Listando arquivos na pasta
-pasta = os.listdir("../../../../../Desktop/Radar")
+pasta = os.listdir(desktop_Caminho)
 novaPasta = []
 for img in range(0, len(pasta)):
     if img < 10:
@@ -14,7 +17,6 @@ for img in range(0, len(pasta)):
 
 def mostrarIMG():
     # Lista de imagens
-    images = []
     tamanho = (512, 512)  # Tamanho de cada imagem
 
     # Criando uma imagem grande para colar as imagens menores
@@ -24,7 +26,7 @@ def mostrarIMG():
     coluna = 0
 
     for bloco in range(0, len(novaPasta)):
-        img_path = f"../../../../../Desktop/Radar/{novaPasta[bloco]}"
+        img_path = f"{desktop_Caminho}/{novaPasta[bloco]}"
 
         # Certificando-se de que o arquivo existe
         if os.path.exists(img_path):
@@ -43,7 +45,7 @@ def mostrarIMG():
     # Exibindo a imagem final
     res.show()
     # Salvando a imagem final com um nome específico
-    res.save("../../../../../Desktop/Radar/imagem_final.png")
+    res.save(f"{desktop_Caminho}/imagem_final.png")
 
 
 mostrarIMG()
