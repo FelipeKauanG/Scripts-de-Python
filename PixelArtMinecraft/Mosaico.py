@@ -5,7 +5,6 @@ from matplotlib import pyplot as plt #pip install matplotlib
 import PySimpleGUI as sg #pip install PySimpleGUI
 
 
-
 sg.theme("Darkblue")
 choiceIMG = [
     [sg.FileBrowse("Procurar arquivo")],
@@ -102,7 +101,7 @@ for cor in cores:
     # print(grafico)
     # sleep(1000)
 foto = []
-imagemBranco = Image.new("RGBA", (largura*16, altura*16), color="white")
+imagemBranco = Image.new("RGBA", (largura*16, altura*16), color=(0,0,0,0))
 x = 0
 y = 0
 

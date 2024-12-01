@@ -1,4 +1,4 @@
-import PySimpleGUI as sg
+import PySimpleGUIQt as sg
 
 sg.theme("DarkPurple2")
 
