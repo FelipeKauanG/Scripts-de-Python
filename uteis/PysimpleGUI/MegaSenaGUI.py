@@ -1,4 +1,4 @@
-import PySimpleGUI as sg
+import PySimpleGUIQt as sg
 from random import sample
 
 
