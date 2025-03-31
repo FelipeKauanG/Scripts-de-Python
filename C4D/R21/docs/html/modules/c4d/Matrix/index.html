@@ -1,0 +1,576 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.Matrix &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="c4d.Quaternion" href="../Quaternion/index.html" />
+    <link rel="prev" title="c4d.Vector4d" href="../Vector4d/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../Quaternion/index.html" title="c4d.Quaternion"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../Vector4d/index.html" title="c4d.Vector4d"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">c4d</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-matrix">
+<h1>c4d.Matrix<a class="headerlink" href="#c4d-matrix" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.Matrix">
+<em class="property">class </em><code class="descclassname">c4d.</code><code class="descname">Matrix</code><a class="headerlink" href="#c4d.Matrix" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../../../manuals/data_algorithms/classic_api/matrix.html#matrix-fundamental"><span class="std std-ref">Matrix Fundamentals</span></a></p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>The <a class="reference internal" href="#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a> type does not support the function <cite>copy.copy()</cite>.</p>
+<p>Instead use the <a class="reference internal" href="#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a> constructor</p>
+<div class="last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">c4d</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">op</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span>
+
+    <span class="n">mat</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">GetMg</span><span class="p">()</span>
+    <span class="nb">print</span> <span class="s2">&quot;Matrix:&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">mat</span><span class="p">),</span> <span class="n">mat</span>
+
+    <span class="n">ref</span> <span class="o">=</span> <span class="n">mat</span>
+    <span class="nb">print</span> <span class="s2">&quot;Reference:&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">ref</span><span class="p">),</span> <span class="n">ref</span>
+
+    <span class="n">copy</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="s2">&quot;Copy:&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">copy</span><span class="p">),</span> <span class="n">copy</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+<p class="rubric">Attributes</p>
+<p><blockquote>
+<div><dl class="attribute">
+<dt id="Matrix.v1">
+<code class="descclassname">Matrix.</code><code class="descname">v1</code><a class="headerlink" href="#Matrix.v1" title="Permalink to this definition">¶</a></dt>
+<dd><p>The X axis of a left-handed coordinate system.</p>
+<p><strong>Type:</strong> <a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Matrix.v2">
+<code class="descclassname">Matrix.</code><code class="descname">v2</code><a class="headerlink" href="#Matrix.v2" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Y axis of a left-handed coordinate system.</p>
+<p><strong>Type:</strong> <a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Matrix.v3">
+<code class="descclassname">Matrix.</code><code class="descname">v3</code><a class="headerlink" href="#Matrix.v3" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Z axis of a left-handed coordinate system.</p>
+<p><strong>Type:</strong> <a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Matrix.off">
+<code class="descclassname">Matrix.</code><code class="descname">off</code><a class="headerlink" href="#Matrix.off" title="Permalink to this definition">¶</a></dt>
+<dd><p>The translation vector.</p>
+<p><strong>Type:</strong> <a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
+</dd></dl>
+
+</div></blockquote>
+</p>
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#Matrix.__init__" title="Matrix.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Matrix.__init__(self[,</span> <span class="pre">off,</span> <span class="pre">v1,</span> <span class="pre">v2,</span> <span class="pre">v3])</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Initializes a new <a class="reference internal" href="#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a>.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Matrix.__str__" title="Matrix.__str__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Matrix.__str__(self)</span></code></a></td>
+<td>Returns the Matrix as string. Called if <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str">str()</a> is wrapped around an instance of <a class="reference internal" href="#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a>. (See <a class="reference external" href="https://docs.python.org/2.7/reference/datamodel.html?highlight=__str__#object.__str__">__str__</a>)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Matrix.__add__" title="Matrix.__add__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Matrix.__add__(self,</span> <span class="pre">other)</span></code></a></td>
+<td>Adds two matrices.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Matrix.__sub__" title="Matrix.__sub__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Matrix.__sub__(self,</span> <span class="pre">other)</span></code></a></td>
+<td>Subtracts two matrices.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Matrix.__mul__" title="Matrix.__mul__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Matrix.__mul__(self,</span> <span class="pre">other)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Multiplies a matrix or vector by the matrix. Can also scale each vector of the matrix by a scalar.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Matrix.__div__" title="Matrix.__div__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Matrix.__div__(self,</span> <span class="pre">other)</span></code></a></td>
+<td>Divides each element in the matrix by a scalar.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Matrix.__invert__" title="Matrix.__invert__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Matrix.__invert__(self)</span></code></a></td>
+<td>Inverts the matrix.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Matrix.__eq__" title="Matrix.__eq__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Matrix.__eq__(self,</span> <span class="pre">other)</span></code></a></td>
+<td>Checks if two matrices are equal.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Matrix.__ne__" title="Matrix.__ne__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Matrix.__ne__(self,</span> <span class="pre">other)</span></code></a></td>
+<td>Checks if two matrices are not equal.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Matrix.__ge__" title="Matrix.__ge__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Matrix.__ge__(self,</span> <span class="pre">other)</span></code></a></td>
+<td>raise NotImplemented.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Matrix.__gt__" title="Matrix.__gt__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Matrix.__gt__(self,</span> <span class="pre">other)</span></code></a></td>
+<td>raise NotImplemented.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Matrix.__le__" title="Matrix.__le__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Matrix.__le__(self,</span> <span class="pre">other)</span></code></a></td>
+<td>raise NotImplemented.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Matrix.__lt__" title="Matrix.__lt__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Matrix.__lt__(self,</span> <span class="pre">other)</span></code></a></td>
+<td>raise NotImplemented.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#Matrix.Normalize" title="Matrix.Normalize"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Matrix.Normalize(self)</span></code></a></td>
+<td>Normalizes the matrix.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Matrix.GetNormalized" title="Matrix.GetNormalized"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Matrix.GetNormalized(self)</span></code></a></td>
+<td>Calculates the normalized matrix.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Matrix.Mul" title="Matrix.Mul"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Matrix.Mul(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Multiply the vector by the matrix, this includes any translation in the matrix.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Matrix.MulV" title="Matrix.MulV"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Matrix.MulV(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Multiply the vector by the matrix, this does not include any translation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Matrix.GetTensorMatrix" title="Matrix.GetTensorMatrix"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Matrix.GetTensorMatrix(self)</span></code></a></td>
+<td>Returns the matrix’ tensor.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Matrix.Scale" title="Matrix.Scale"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Matrix.Scale(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Performs uniform matrix scaling (float) or non-uniform matrix scaling (vector).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Matrix.GetScale" title="Matrix.GetScale"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Matrix.GetScale(self)</span></code></a></td>
+<td>Returns the scale stored by the matrix.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="Matrix.__init__">
+<code class="descclassname">Matrix.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>off=Vector(0)</em>, <em>v1=Vector(1</em>, <em>0</em>, <em>0)</em>, <em>v2=Vector(0</em>, <em>1</em>, <em>0)</em>, <em>v3=Vector(0</em>, <em>0</em>, <em>1)</em><span class="sig-paren">)</span><a class="headerlink" href="#Matrix.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Initializes a new <a class="reference internal" href="#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a>.</div>
+<div class="line">All arguments are optional so it is possible to create a new matrix without any arguments. All components are simply set to:</div>
+</div>
+<ul class="simple">
+<li>off = Vector(0)</li>
+<li>v1 = Vector(1,0,0)</li>
+<li>v2 = Vector(0,1,0)</li>
+<li>v3 = Vector(0,0,1)</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mat</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Matrix</span><span class="p">()</span>
+<span class="c1"># =&gt; Matrix(v1: (1, 0, 0); v2: (0, 1, 0); v3: (0, 0, 1); off: (0, 0, 0))</span>
+
+<span class="n">mat</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Matrix</span><span class="p">()</span>
+<span class="n">mat</span><span class="o">.</span><span class="n">off</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">v1</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">v2</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mf">9.3</span><span class="p">)</span>
+<span class="n">v3</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">off</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="n">v1</span><span class="o">+</span><span class="n">v2</span><span class="p">)</span>
+<span class="n">mat</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="n">off</span><span class="p">,</span><span class="n">v1</span><span class="p">,</span><span class="n">v2</span><span class="p">,</span><span class="n">v3</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>off</strong> (<a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The translation vector.</li>
+<li><strong>v1</strong> (<a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The X axis of a left-handed coordinate system.</li>
+<li><strong>v2</strong> (<a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The Y axis of a left-handed coordinate system.</li>
+<li><strong>v3</strong> (<a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The Z axis of a left-handed coordinate system.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="#c4d.Matrix" title="c4d.Matrix">c4d.Matrix</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A new matrix.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Matrix.__str__">
+<code class="descclassname">Matrix.</code><code class="descname">__str__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#Matrix.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the Matrix as string. Called if <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str">str()</a> is wrapped around an instance of <a class="reference internal" href="#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a>. (See <a class="reference external" href="https://docs.python.org/2.7/reference/datamodel.html?highlight=__str__#object.__str__">__str__</a>)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">v1</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">v2</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mf">9.3</span><span class="p">)</span>
+<span class="n">v3</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">off</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="n">v1</span><span class="o">+</span><span class="n">v2</span><span class="p">)</span>
+<span class="n">mat</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="n">off</span><span class="p">,</span><span class="n">v1</span><span class="p">,</span><span class="n">v2</span><span class="p">,</span><span class="n">v3</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">mat</span>
+<span class="c1"># =&gt; Matrix(v1: (3, 3, 3); v2: (12, 4, 9.3); v3: (12, 4, 9.3); off: (15, 7, 12.3))</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The Vector as string.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Matrix.__add__">
+<code class="descclassname">Matrix.</code><code class="descname">__add__</code><span class="sig-paren">(</span><em>self</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Matrix.__add__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds two matrices.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other</strong> (<a class="reference internal" href="#c4d.Matrix" title="c4d.Matrix"><em>c4d.Matrix</em></a>) – The other matrix.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.Matrix" title="c4d.Matrix">c4d.Matrix</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The result matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Matrix.__sub__">
+<code class="descclassname">Matrix.</code><code class="descname">__sub__</code><span class="sig-paren">(</span><em>self</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Matrix.__sub__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subtracts two matrices.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other</strong> (<a class="reference internal" href="#c4d.Matrix" title="c4d.Matrix"><em>c4d.Matrix</em></a>) – The other matrix.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.Matrix" title="c4d.Matrix">c4d.Matrix</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The result matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Matrix.__mul__">
+<code class="descclassname">Matrix.</code><code class="descname">__mul__</code><span class="sig-paren">(</span><em>self</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Matrix.__mul__" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Multiplies a matrix or vector by the matrix. Can also scale each vector of the matrix by a scalar.</div>
+<div class="line"><br /></div>
+<div class="line">If both objects are of type <a class="reference internal" href="#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a>,  multiplies the left hand matrix by the right hand matrix.</div>
+<div class="line">If the left object is of type <a class="reference internal" href="#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a> and the right one of type <a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>, multiplies the vector by the matrix including any translation in the matrix.</div>
+<div class="line">If the left object is of type <a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a> and the right one of type <a class="reference internal" href="#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a>, multiplies the vector by the matrix including any translation in the matrix.</div>
+<div class="line">If the right object is a number, multiplies each vector of the matrix by it.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other</strong> (<em>Union</em><em>[</em><a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a><em>, </em><em>int</em><em>, </em><em>float</em><em>]</em>) – The other argument.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The result matrix or vector.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Matrix.__div__">
+<code class="descclassname">Matrix.</code><code class="descname">__div__</code><span class="sig-paren">(</span><em>self</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Matrix.__div__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Divides each element in the matrix by a scalar.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other</strong> (<em>float</em>) – The scalar.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.Matrix" title="c4d.Matrix">c4d.Matrix</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The result matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Matrix.__invert__">
+<code class="descclassname">Matrix.</code><code class="descname">__invert__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#Matrix.__invert__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inverts the matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.Matrix" title="c4d.Matrix">c4d.Matrix</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The inverted matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Matrix.__eq__">
+<code class="descclassname">Matrix.</code><code class="descname">__eq__</code><span class="sig-paren">(</span><em>self</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Matrix.__eq__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if two matrices are equal.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other</strong> (<a class="reference internal" href="#c4d.Matrix" title="c4d.Matrix"><em>c4d.Matrix</em></a>) – The other matrix.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if matrices are equal.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Matrix.__ne__">
+<code class="descclassname">Matrix.</code><code class="descname">__ne__</code><span class="sig-paren">(</span><em>self</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Matrix.__ne__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if two matrices are not equal.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other</strong> (<a class="reference internal" href="#c4d.Matrix" title="c4d.Matrix"><em>c4d.Matrix</em></a>) – The other matrix.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if matrices are not equal.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Matrix.__ge__">
+<code class="descclassname">Matrix.</code><code class="descname">__ge__</code><span class="sig-paren">(</span><em>self</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Matrix.__ge__" title="Permalink to this definition">¶</a></dt>
+<dd><p>raise NotImplemented.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Matrix.__gt__">
+<code class="descclassname">Matrix.</code><code class="descname">__gt__</code><span class="sig-paren">(</span><em>self</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Matrix.__gt__" title="Permalink to this definition">¶</a></dt>
+<dd><p>raise NotImplemented.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Matrix.__le__">
+<code class="descclassname">Matrix.</code><code class="descname">__le__</code><span class="sig-paren">(</span><em>self</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Matrix.__le__" title="Permalink to this definition">¶</a></dt>
+<dd><p>raise NotImplemented.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Matrix.__lt__">
+<code class="descclassname">Matrix.</code><code class="descname">__lt__</code><span class="sig-paren">(</span><em>self</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Matrix.__lt__" title="Permalink to this definition">¶</a></dt>
+<dd><p>raise NotImplemented.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Matrix.Normalize">
+<code class="descclassname">Matrix.</code><code class="descname">Normalize</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#Matrix.Normalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normalizes the matrix.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Matrix.GetNormalized">
+<code class="descclassname">Matrix.</code><code class="descname">GetNormalized</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#Matrix.GetNormalized" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the normalized matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.Matrix" title="c4d.Matrix">c4d.Matrix</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The normalized matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Matrix.Mul">
+<code class="descclassname">Matrix.</code><code class="descname">Mul</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#Matrix.Mul" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiply the vector by the matrix, this includes any translation in the matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The vector to multiply.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The result vector.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Matrix.MulV">
+<code class="descclassname">Matrix.</code><code class="descname">MulV</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#Matrix.MulV" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiply the vector by the matrix, this does not include any translation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The vector to multiply.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The result vector.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Matrix.GetTensorMatrix">
+<code class="descclassname">Matrix.</code><code class="descname">GetTensorMatrix</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#Matrix.GetTensorMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the matrix’ tensor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.Matrix" title="c4d.Matrix">c4d.Matrix</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The tensor matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Matrix.Scale">
+<code class="descclassname">Matrix.</code><code class="descname">Scale</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#Matrix.Scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs uniform matrix scaling (float) or non-uniform matrix scaling (vector).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<em>Union</em><em>[</em><a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a><em>, </em><em>float</em><em>]</em>) – The scaling scalar.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Matrix.GetScale">
+<code class="descclassname">Matrix.</code><code class="descname">GetScale</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#Matrix.GetScale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the scale stored by the matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The scale.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../Quaternion/index.html" title="c4d.Quaternion"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../Vector4d/index.html" title="c4d.Vector4d"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >c4d</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

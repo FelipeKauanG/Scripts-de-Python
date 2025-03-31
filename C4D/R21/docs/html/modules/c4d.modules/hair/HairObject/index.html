@@ -1,0 +1,357 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.hair.HairObject &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.modules.hair.HairSelectionTag" href="../HairSelectionTag/index.html" />
+    <link rel="prev" title="c4d.modules.hair.HairLibrary" href="../HairLibrary/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../HairSelectionTag/index.html" title="c4d.modules.hair.HairSelectionTag"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../HairLibrary/index.html" title="c4d.modules.hair.HairLibrary"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.modules.hair</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-hair-hairobject">
+<h1>c4d.modules.hair.HairObject<a class="headerlink" href="#c4d-modules-hair-hairobject" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.hair.HairObject">
+<em class="property">class </em><code class="descclassname">c4d.modules.hair.</code><code class="descname">HairObject</code><a class="headerlink" href="#c4d.modules.hair.HairObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>The hair object.</p>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#HairObject.Lock" title="HairObject.Lock"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HairObject.Lock(self,</span> <span class="pre">pDoc,</span> <span class="pre">pThread[,</span> <span class="pre">...])</span></code></a></td>
+<td>Locks the hair object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HairObject.IsLocked" title="HairObject.IsLocked"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HairObject.IsLocked(self)</span></code></a></td>
+<td>Checks if the hair object is locked.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HairObject.Unlock" title="HairObject.Unlock"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HairObject.Unlock(self)</span></code></a></td>
+<td>Unlocks the hair object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HairObject.GetGuides" title="HairObject.GetGuides"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HairObject.GetGuides(self)</span></code></a></td>
+<td>Gets the guides of this hair object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HairObject.GetDynamicGuides" title="HairObject.GetDynamicGuides"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HairObject.GetDynamicGuides(self)</span></code></a></td>
+<td>Gets the dynamic guides of this hair object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HairObject.GenerateHair" title="HairObject.GenerateHair"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HairObject.GenerateHair(self,</span> <span class="pre">flags,</span> <span class="pre">count,</span> <span class="pre">...)</span></code></a></td>
+<td>Generates hair for the hair object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HairObject.RemoveGuides" title="HairObject.RemoveGuides"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HairObject.RemoveGuides(self)</span></code></a></td>
+<td>Removes the guides of this hair object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HairObject.GetRootObject" title="HairObject.GetRootObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HairObject.GetRootObject(self)</span></code></a></td>
+<td>Gets the root object and tag!</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HairObject.Update" title="HairObject.Update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HairObject.Update(self)</span></code></a></td>
+<td>Updates this hair object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HairObject.SetGuides" title="HairObject.SetGuides"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HairObject.SetGuides(self,</span> <span class="pre">guides,</span> <span class="pre">clone)</span></code></a></td>
+<td>Sets guides for this hair object.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseObject</span></code></a></li>
+</ul>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="HairObject.Lock">
+<code class="descclassname">HairObject.</code><code class="descname">Lock</code><span class="sig-paren">(</span><em>self</em>, <em>pDoc</em>, <em>pThread</em>, <em>bValidate=True</em>, <em>flags=0</em><span class="sig-paren">)</span><a class="headerlink" href="#HairObject.Lock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Locks the hair object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pDoc</strong> (<a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document.</li>
+<li><strong>pThread</strong> (<a class="reference internal" href="../../../c4d.threading/BaseThread/index.html#c4d.threading.BaseThread" title="c4d.threading.BaseThread"><em>c4d.threading.BaseThread</em></a>) – The thread.</li>
+<li><strong>bValidate</strong> (<em>bool</em>) – Validate the lock.</li>
+<li><strong>flags</strong> (<em>int</em>) – <p>Lock flags</p>
+<table border="1" class="colwidths-auto docutils align-left">
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Symbol ID</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>HAIR_LOCK_FLAGS_ANIMATING</td>
+<td>Animating.</td>
+</tr>
+<tr class="row-odd"><td>HAIR_LOCK_FLAGS_FULL_UPDATE</td>
+<td>Full update.</td>
+</tr>
+<tr class="row-even"><td>HAIR_LOCK_FLAGS_NO_TRANSFORM</td>
+<td>No transformation.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if successful, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HairObject.IsLocked">
+<code class="descclassname">HairObject.</code><code class="descname">IsLocked</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HairObject.IsLocked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the hair object is locked.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the hair object is locked, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HairObject.Unlock">
+<code class="descclassname">HairObject.</code><code class="descname">Unlock</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HairObject.Unlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unlocks the hair object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="HairObject.GetGuides">
+<code class="descclassname">HairObject.</code><code class="descname">GetGuides</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HairObject.GetGuides" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the guides of this hair object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../HairGuides/index.html#c4d.modules.hair.HairGuides" title="c4d.modules.hair.HairGuides">c4d.modules.hair.HairGuides</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The guides.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HairObject.GetDynamicGuides">
+<code class="descclassname">HairObject.</code><code class="descname">GetDynamicGuides</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HairObject.GetDynamicGuides" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the dynamic guides of this hair object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../HairGuides/index.html#c4d.modules.hair.HairGuides" title="c4d.modules.hair.HairGuides">c4d.modules.hair.HairGuides</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The dynamic guides.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HairObject.GenerateHair">
+<code class="descclassname">HairObject.</code><code class="descname">GenerateHair</code><span class="sig-paren">(</span><em>self</em>, <em>flags</em>, <em>count</em>, <em>segments</em><span class="sig-paren">)</span><a class="headerlink" href="#HairObject.GenerateHair" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates hair for the hair object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>flags</strong> (<em>int</em>) – <p>The generate flags:</p>
+<table border="1" class="colwidths-auto docutils align-left">
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Symbol ID</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>HAIR_GENERATE_FLAGS_NONE</td>
+<td>None</td>
+</tr>
+<tr class="row-odd"><td>HAIR_GENERATE_FLAGS_NO_MATERIAL</td>
+<td>No material.</td>
+</tr>
+<tr class="row-even"><td>HAIR_GENERATE_FLAGS_NO_DYNAMICS</td>
+<td>No dynamics.</td>
+</tr>
+<tr class="row-odd"><td>HAIR_GENERATE_FLAGS_NO_TRANSFORM</td>
+<td>No transformation.</td>
+</tr>
+<tr class="row-even"><td>HAIR_GENERATE_FLAGS_NO_DEFORMERS</td>
+<td>No deformers.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>count</strong> (<em>int</em>) – The hair count.</li>
+<li><strong>segments</strong> (<em>int</em>) – The segments.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HairObject.RemoveGuides">
+<code class="descclassname">HairObject.</code><code class="descname">RemoveGuides</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HairObject.RemoveGuides" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the guides of this hair object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="HairObject.GetRootObject">
+<code class="descclassname">HairObject.</code><code class="descname">GetRootObject</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HairObject.GetRootObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the root object and tag!</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">root</span> <span class="o">=</span> <span class="n">ho</span><span class="o">.</span><span class="n">GetRootObject</span><span class="p">()</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">root</span><span class="p">:</span> <span class="k">return</span>
+
+<span class="nb">print</span> <span class="n">root</span><span class="p">[</span><span class="s2">&quot;pObject&quot;</span><span class="p">],</span> <span class="n">root</span><span class="p">[</span><span class="s2">&quot;pTag&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">dict{“pObject”: c4d.BaseObject, “pTag”: c4d.BaseTag}</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The root object and tag or <strong>None</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HairObject.Update">
+<code class="descclassname">HairObject.</code><code class="descname">Update</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HairObject.Update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates this hair object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HairObject.SetGuides">
+<code class="descclassname">HairObject.</code><code class="descname">SetGuides</code><span class="sig-paren">(</span><em>self</em>, <em>guides</em>, <em>clone</em><span class="sig-paren">)</span><a class="headerlink" href="#HairObject.SetGuides" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets guides for this hair object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>guides</strong> (<a class="reference internal" href="../HairGuides/index.html#c4d.modules.hair.HairGuides" title="c4d.modules.hair.HairGuides"><em>c4d.modules.hair.HairGuides</em></a>) – Guides to set.</li>
+<li><strong>clone</strong> (<em>bool</em>) – Clone the supplied guides.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../HairSelectionTag/index.html" title="c4d.modules.hair.HairSelectionTag"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../HairLibrary/index.html" title="c4d.modules.hair.HairLibrary"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.modules.hair</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

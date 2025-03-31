@@ -1,0 +1,305 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.motiontracker.MtFootageData &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.modules.motiontracker.MtTrkGid" href="../MtTrkGid/index.html" />
+    <link rel="prev" title="c4d.modules.motiontracker.MtData" href="../MtData/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../MtTrkGid/index.html" title="c4d.modules.motiontracker.MtTrkGid"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../MtData/index.html" title="c4d.modules.motiontracker.MtData"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.modules.motiontracker</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-motiontracker-mtfootagedata">
+<h1>c4d.modules.motiontracker.MtFootageData<a class="headerlink" href="#c4d-modules-motiontracker-mtfootagedata" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.motiontracker.MtFootageData">
+<em class="property">class </em><code class="descclassname">c4d.modules.motiontracker.</code><code class="descname">MtFootageData</code><a class="headerlink" href="#c4d.modules.motiontracker.MtFootageData" title="Permalink to this definition">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified">New in version R18.020.</span></p>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#MtFootageData.GetFootageName" title="MtFootageData.GetFootageName"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MtFootageData.GetFootageName(self)</span></code></a></td>
+<td>Retrieves the filename of the footage (the first frame if an image sequence).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#MtFootageData.GetFirstFrameNumber" title="MtFootageData.GetFirstFrameNumber"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MtFootageData.GetFirstFrameNumber(self)</span></code></a></td>
+<td>Retrieves the frame number of the first frame in the footage. <cite>-1</cite> if no footage loaded.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#MtFootageData.GetLastFrameNumber" title="MtFootageData.GetLastFrameNumber"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MtFootageData.GetLastFrameNumber(self)</span></code></a></td>
+<td>Retrieves the last number of the first frame in the footage. <cite>-1</cite> if no footage loaded.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#MtFootageData.GetResolutionWidthPix" title="MtFootageData.GetResolutionWidthPix"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MtFootageData.GetResolutionWidthPix(self,</span> <span class="pre">originalRes)</span></code></a></td>
+<td>Retrieves the width in pixels of the footage.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#MtFootageData.GetResolutionHeightPix" title="MtFootageData.GetResolutionHeightPix"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MtFootageData.GetResolutionHeightPix(self,</span> <span class="pre">originalRes)</span></code></a></td>
+<td>Retrieves the height in pixels of the footage.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#MtFootageData.GetResolutionAspectRatio" title="MtFootageData.GetResolutionAspectRatio"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MtFootageData.GetResolutionAspectRatio(self)</span></code></a></td>
+<td>Retrieves the ratio of the horizontal to vertical resolution. Ignores pixel aspect ratio.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#MtFootageData.GetImageAspectRatio" title="MtFootageData.GetImageAspectRatio"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MtFootageData.GetImageAspectRatio(self)</span></code></a></td>
+<td>Retrieves the aspect ratio of the footage including effects of pixel aspect ratio.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#MtFootageData.GetPixelAspectRatio" title="MtFootageData.GetPixelAspectRatio"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MtFootageData.GetPixelAspectRatio(self)</span></code></a></td>
+<td>Retrieves the pixel aspect ratio of the footage.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#MtFootageData.GetDownsamplingFactor" title="MtFootageData.GetDownsamplingFactor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MtFootageData.GetDownsamplingFactor(self)</span></code></a></td>
+<td>Retrieves the downsampling factor used for the footage.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="MtFootageData.GetFootageName">
+<code class="descclassname">MtFootageData.</code><code class="descname">GetFootageName</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#MtFootageData.GetFootageName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the filename of the footage (the first frame if an image sequence).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The filename.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MtFootageData.GetFirstFrameNumber">
+<code class="descclassname">MtFootageData.</code><code class="descname">GetFirstFrameNumber</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#MtFootageData.GetFirstFrameNumber" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the frame number of the first frame in the footage. <cite>-1</cite> if no footage loaded.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The first frame number.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MtFootageData.GetLastFrameNumber">
+<code class="descclassname">MtFootageData.</code><code class="descname">GetLastFrameNumber</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#MtFootageData.GetLastFrameNumber" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the last number of the first frame in the footage. <cite>-1</cite> if no footage loaded.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The last frame number.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MtFootageData.GetResolutionWidthPix">
+<code class="descclassname">MtFootageData.</code><code class="descname">GetResolutionWidthPix</code><span class="sig-paren">(</span><em>self</em>, <em>originalRes</em><span class="sig-paren">)</span><a class="headerlink" href="#MtFootageData.GetResolutionWidthPix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the width in pixels of the footage.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>originalRes</strong> (<em>int</em>) – <div class="line-block">
+<div class="line">If <strong>True</strong>, returns the original resolution of the footage.</div>
+<div class="line">If <strong>False</strong>, returns the downsampled resolution.</div>
+</div>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The width of footage in pixels.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MtFootageData.GetResolutionHeightPix">
+<code class="descclassname">MtFootageData.</code><code class="descname">GetResolutionHeightPix</code><span class="sig-paren">(</span><em>self</em>, <em>originalRes</em><span class="sig-paren">)</span><a class="headerlink" href="#MtFootageData.GetResolutionHeightPix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the height in pixels of the footage.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>originalRes</strong> (<em>int</em>) – <div class="line-block">
+<div class="line">If <strong>True</strong>, returns the original resolution of the footage.</div>
+<div class="line">If <strong>False</strong>, returns the downsampled resolution.</div>
+</div>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The height of footage in pixels.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MtFootageData.GetResolutionAspectRatio">
+<code class="descclassname">MtFootageData.</code><code class="descname">GetResolutionAspectRatio</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#MtFootageData.GetResolutionAspectRatio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the ratio of the horizontal to vertical resolution. Ignores pixel aspect ratio.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The aspect ratio from resolution.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MtFootageData.GetImageAspectRatio">
+<code class="descclassname">MtFootageData.</code><code class="descname">GetImageAspectRatio</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#MtFootageData.GetImageAspectRatio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the aspect ratio of the footage including effects of pixel aspect ratio.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><a class="reference internal" href="#MtFootageData.GetImageAspectRatio" title="MtFootageData.GetImageAspectRatio"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetImageAspectRatio()</span></code></a> == <a class="reference internal" href="#MtFootageData.GetResolutionAspectRatio" title="MtFootageData.GetResolutionAspectRatio"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetResolutionAspectRatio()</span></code></a> * <a class="reference internal" href="#MtFootageData.GetPixelAspectRatio" title="MtFootageData.GetPixelAspectRatio"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPixelAspectRatio()</span></code></a></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The image aspect ratio.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MtFootageData.GetPixelAspectRatio">
+<code class="descclassname">MtFootageData.</code><code class="descname">GetPixelAspectRatio</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#MtFootageData.GetPixelAspectRatio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the pixel aspect ratio of the footage.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The pixel aspect ratio.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MtFootageData.GetDownsamplingFactor">
+<code class="descclassname">MtFootageData.</code><code class="descname">GetDownsamplingFactor</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#MtFootageData.GetDownsamplingFactor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the downsampling factor used for the footage.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The downsampling factor.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../MtTrkGid/index.html" title="c4d.modules.motiontracker.MtTrkGid"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../MtData/index.html" title="c4d.modules.motiontracker.MtData"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.modules.motiontracker</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

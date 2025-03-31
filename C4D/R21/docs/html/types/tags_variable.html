@@ -1,0 +1,152 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Variable Tag Types &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Track Types" href="tracks.html" />
+    <link rel="prev" title="Selection Tag Types" href="tags_selection.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tracks.html" title="Track Types"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="tags_selection.html" title="Selection Tag Types"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Types and Symbols List</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="variable-tag-types">
+<h1>Variable Tag Types<a class="headerlink" href="#variable-tag-types" title="Permalink to this headline">¶</a></h1>
+<p>The table lists the supported variable tags by <a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseTag/VariableTag/index.html#VariableTag.GetAllHighlevelData" title="VariableTag.GetAllHighlevelData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VariableTag.GetAllHighlevelData()</span></code></a>/<a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseTag/VariableTag/index.html#VariableTag.SetAllHighlevelData" title="VariableTag.SetAllHighlevelData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetAllHighlevelData()</span></code></a> and their corresponding data.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="32%" />
+<col width="58%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Tag</th>
+<th class="head">Data</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>Tpoint</em></td>
+<td>list of <a class="reference internal" href="../modules/c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a></td>
+<td>The points.</td>
+</tr>
+<tr class="row-odd"><td><em>Tpolygon</em></td>
+<td>list of <a class="reference internal" href="../modules/c4d/CPolygon/index.html#c4d.CPolygon" title="c4d.CPolygon"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.CPolygon</span></code></a></td>
+<td>The polygons.</td>
+</tr>
+<tr class="row-even"><td><em>Ttangent</em></td>
+<td>list of (<a class="reference internal" href="../modules/c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>, <a class="reference internal" href="../modules/c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>)</td>
+<td>The tangents left and right interpolation.</td>
+</tr>
+<tr class="row-odd"><td><em>Tsegment</em></td>
+<td>list of dict{<cite>cnt</cite>: int, <cite>closed</cite>: bool}</td>
+<td>The segments number of points and closed state.</td>
+</tr>
+<tr class="row-even"><td><em>Tline</em></td>
+<td>list of dict{<cite>pos</cite>: float, <cite>t</cite>: float}</td>
+<td>The line points percentage position and original spline point.</td>
+</tr>
+<tr class="row-odd"><td><em>Tvertexmap</em></td>
+<td>list of float</td>
+<td>The vertex map values.</td>
+</tr>
+<tr class="row-even"><td><em>Tnormal</em></td>
+<td>List[int]eger</td>
+<td>The normals. Note: Contains <cite>12</cite> times more elements than <a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseTag/VariableTag/index.html#VariableTag.GetDataCount" title="VariableTag.GetDataCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VariableTag.GetDataCount()</span></code></a> returns.</td>
+</tr>
+<tr class="row-odd"><td><em>Tvertexcolor</em></td>
+<td>list of dict{<cite>a</cite>, <cite>b</cite>, <cite>c</cite>, <cite>d</cite>: <a class="reference internal" href="../modules/c4d/Vector4d/index.html#c4d.Vector4d" title="c4d.Vector4d"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector4d</span></code></a>}</td>
+<td>The vertex colors for a polygon.</td>
+</tr>
+<tr class="row-even"><td><em>Tsoftselection</em></td>
+<td>list of float</td>
+<td>The soft selection values.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tracks.html" title="Track Types"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="tags_selection.html" title="Selection Tag Types"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Types and Symbols List</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

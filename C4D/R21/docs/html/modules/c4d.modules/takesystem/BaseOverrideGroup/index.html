@@ -1,0 +1,472 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.takesystem.BaseOverrideGroup &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.modules.takesystem.BaseTake" href="../BaseTake/index.html" />
+    <link rel="prev" title="c4d.modules.takesystem.BaseOverride" href="../BaseOverride/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../BaseTake/index.html" title="c4d.modules.takesystem.BaseTake"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../BaseOverride/index.html" title="c4d.modules.takesystem.BaseOverride"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.modules.takesystem</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-takesystem-baseoverridegroup">
+<h1>c4d.modules.takesystem.BaseOverrideGroup<a class="headerlink" href="#c4d-modules-takesystem-baseoverridegroup" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.takesystem.BaseOverrideGroup">
+<em class="property">class </em><code class="descclassname">c4d.modules.takesystem.</code><code class="descname">BaseOverrideGroup</code><a class="headerlink" href="#c4d.modules.takesystem.BaseOverrideGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>An Override Group manages the values of multiple objects in a Take.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This type cannot be instantiated.</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R17.032.</span></p>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BaseOverrideGroup.GetObjectsInGroup" title="BaseOverrideGroup.GetObjectsInGroup"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseOverrideGroup.GetObjectsInGroup(self)</span></code></a></td>
+<td>Retrieves all the objects in the group.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseOverrideGroup.AddToGroup" title="BaseOverrideGroup.AddToGroup"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseOverrideGroup.AddToGroup(self,</span> <span class="pre">takeData,</span> <span class="pre">node)</span></code></a></td>
+<td>Adds <em>node</em> to the Override Group. If <em>node</em> is already part of another group it will be automatically removed first.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseOverrideGroup.RemoveFromGroup" title="BaseOverrideGroup.RemoveFromGroup"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseOverrideGroup.RemoveFromGroup(self,</span> <span class="pre">takeData,</span> <span class="pre">node)</span></code></a></td>
+<td>Removes <em>node</em> from the Override Group.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseOverrideGroup.AddTag" title="BaseOverrideGroup.AddTag"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseOverrideGroup.AddTag(self,</span> <span class="pre">takeData,</span> <span class="pre">type,</span> <span class="pre">mat)</span></code></a></td>
+<td>Adds a new tag of the given <em>type</em> to the Override Group if it is not already there.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseOverrideGroup.RemoveTag" title="BaseOverrideGroup.RemoveTag"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseOverrideGroup.RemoveTag(self,</span> <span class="pre">takeData,</span> <span class="pre">type)</span></code></a></td>
+<td>Removes the tag of the given <em>type</em> from the Override Group.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseOverrideGroup.GetEditorMode" title="BaseOverrideGroup.GetEditorMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseOverrideGroup.GetEditorMode(self)</span></code></a></td>
+<td>Returns the editor visibility mode for the Override Group.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseOverrideGroup.GetRenderMode" title="BaseOverrideGroup.GetRenderMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseOverrideGroup.GetRenderMode(self)</span></code></a></td>
+<td>Returns the render visibility mode for the Override Group.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseOverrideGroup.SetEditorMode" title="BaseOverrideGroup.SetEditorMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseOverrideGroup.SetEditorMode(self,</span> <span class="pre">mode)</span></code></a></td>
+<td>Sets the editor visibility mode for the Override Group.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseOverrideGroup.SetRenderMode" title="BaseOverrideGroup.SetRenderMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseOverrideGroup.SetRenderMode(self,</span> <span class="pre">mode)</span></code></a></td>
+<td>Sets the render visibility mode for the Override Group.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseOverrideGroup.GetTag" title="BaseOverrideGroup.GetTag"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseOverrideGroup.GetTag(self,</span> <span class="pre">type)</span></code></a></td>
+<td>Searches for a tag of the given <em>type</em> attached to the Override Group.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseOverrideGroup.GetTake" title="BaseOverrideGroup.GetTake"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseOverrideGroup.GetTake(self)</span></code></a></td>
+<td>Returns the Take that owns the Override Group.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseOverrideGroup.Find" title="BaseOverrideGroup.Find"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseOverrideGroup.Find(self,</span> <span class="pre">takeData,</span> <span class="pre">op)</span></code></a></td>
+<td>Checks if an object is included in the Override Group.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseList2D</span></code></a></li>
+</ul>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="BaseOverrideGroup.GetObjectsInGroup">
+<code class="descclassname">BaseOverrideGroup.</code><code class="descname">GetObjectsInGroup</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseOverrideGroup.GetObjectsInGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves all the objects in the group.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list of <a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseList2D</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The objects in the group.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseOverrideGroup.AddToGroup">
+<code class="descclassname">BaseOverrideGroup.</code><code class="descname">AddToGroup</code><span class="sig-paren">(</span><em>self</em>, <em>takeData</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseOverrideGroup.AddToGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds <em>node</em> to the Override Group. If <em>node</em> is already part of another group it will be automatically removed first.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The node to add must be a real scene node. Adding BaseOverride nodes is forbidden.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">An undo step is added automatically if the call is added from the main (GUI) thread and global undo is allowed (see <a class="reference internal" href="../TakeData/index.html#TakeData.GetUndoState" title="TakeData.GetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.GetUndoState()</span></code></a>/<a class="reference internal" href="../TakeData/index.html#TakeData.SetUndoState" title="TakeData.SetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.SetUndoState()</span></code></a>).</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>takeData</strong> (<a class="reference internal" href="../TakeData/index.html#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><em>c4d.modules.takesystem.TakeData</em></a>) – The Take System context.</li>
+<li><strong>node</strong> (<a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><em>c4d.BaseList2D</em></a>) – The node to add.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseOverrideGroup.RemoveFromGroup">
+<code class="descclassname">BaseOverrideGroup.</code><code class="descname">RemoveFromGroup</code><span class="sig-paren">(</span><em>self</em>, <em>takeData</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseOverrideGroup.RemoveFromGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes <em>node</em> from the Override Group.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">An undo step is added automatically if the call is added from the main (GUI) thread and global undo is allowed (see <a class="reference internal" href="../TakeData/index.html#TakeData.GetUndoState" title="TakeData.GetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.GetUndoState()</span></code></a>/<a class="reference internal" href="../TakeData/index.html#TakeData.SetUndoState" title="TakeData.SetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.SetUndoState()</span></code></a>).</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>takeData</strong> (<a class="reference internal" href="../TakeData/index.html#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><em>c4d.modules.takesystem.TakeData</em></a>) – The Take System context.</li>
+<li><strong>node</strong> (<a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><em>c4d.BaseList2D</em></a>) – The node to remove. If it is not part of the group the function returns.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseOverrideGroup.AddTag">
+<code class="descclassname">BaseOverrideGroup.</code><code class="descname">AddTag</code><span class="sig-paren">(</span><em>self</em>, <em>takeData</em>, <em>type</em>, <em>mat</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseOverrideGroup.AddTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a new tag of the given <em>type</em> to the Override Group if it is not already there.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Only tags registered with the flag <strong>TAG_ADDTOTAKEGROUP</strong> are accepted by the group.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">An undo step is added automatically if the call is added from the main (GUI) thread and global undo is allowed (see <a class="reference internal" href="../TakeData/index.html#TakeData.GetUndoState" title="TakeData.GetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.GetUndoState()</span></code></a>/<a class="reference internal" href="../TakeData/index.html#TakeData.SetUndoState" title="TakeData.SetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.SetUndoState()</span></code></a>).</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>takeData</strong> (<a class="reference internal" href="../TakeData/index.html#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><em>c4d.modules.takesystem.TakeData</em></a>) – The Take System context.</li>
+<li><strong>type</strong> (<em>int</em>) – <div class="line-block">
+<div class="line">The tag type to be added. If the tag is already in the group the function returns.</div>
+<div class="line">If <strong>Ttexture</strong> the material can be assigned to <em>mat</em>.</div>
+</div>
+</li>
+<li><strong>mat</strong> (<a class="reference internal" href="../TakeData/index.html#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><em>c4d.modules.takesystem.TakeData</em></a>) – The optional material (can be <strong>None</strong>) if passed type is <strong>Ttexture</strong>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseTag/index.html#c4d.BaseTag" title="c4d.BaseTag">c4d.BaseTag</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The tag. The added one if created by the function or the one already in the group.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseOverrideGroup.RemoveTag">
+<code class="descclassname">BaseOverrideGroup.</code><code class="descname">RemoveTag</code><span class="sig-paren">(</span><em>self</em>, <em>takeData</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseOverrideGroup.RemoveTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the tag of the given <em>type</em> from the Override Group.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>takeData</strong> (<a class="reference internal" href="../TakeData/index.html#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><em>c4d.modules.takesystem.TakeData</em></a>) – The Take System context.</li>
+<li><strong>type</strong> (<em>int</em>) – The tag type to be removed. If it is not in the Group the function returns.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseOverrideGroup.GetEditorMode">
+<code class="descclassname">BaseOverrideGroup.</code><code class="descname">GetEditorMode</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseOverrideGroup.GetEditorMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the editor visibility mode for the Override Group.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The editor mode:<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>MODE_ON</em></td>
+<td>The object is enabled regardless of the state of any parent object.</td>
+</tr>
+<tr class="row-even"><td><em>MODE_OFF</em></td>
+<td>The object is disabled regardless of the state of any parent object.</td>
+</tr>
+<tr class="row-odd"><td><em>MODE_UNDEF</em></td>
+<td>The object is enabled by default, but the state of any parent object is used if it is enabled or disabled.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseOverrideGroup.GetRenderMode">
+<code class="descclassname">BaseOverrideGroup.</code><code class="descname">GetRenderMode</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseOverrideGroup.GetRenderMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the render visibility mode for the Override Group.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The render mode:<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>MODE_ON</em></td>
+<td>The object is enabled regardless of the state of any parent object.</td>
+</tr>
+<tr class="row-even"><td><em>MODE_OFF</em></td>
+<td>The object is disabled regardless of the state of any parent object.</td>
+</tr>
+<tr class="row-odd"><td><em>MODE_UNDEF</em></td>
+<td>The object is enabled by default, but the state of any parent object is used if it is enabled or disabled.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseOverrideGroup.SetEditorMode">
+<code class="descclassname">BaseOverrideGroup.</code><code class="descname">SetEditorMode</code><span class="sig-paren">(</span><em>self</em>, <em>mode</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseOverrideGroup.SetEditorMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the editor visibility mode for the Override Group.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>int</em>) – <p>The editor mode to set:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>MODE_ON</em></td>
+<td>The object is enabled regardless of the state of any parent object.</td>
+</tr>
+<tr class="row-even"><td><em>MODE_OFF</em></td>
+<td>The object is disabled regardless of the state of any parent object.</td>
+</tr>
+<tr class="row-odd"><td><em>MODE_UNDEF</em></td>
+<td>The object is enabled by default, but the state of any parent object is used if it is enabled or disabled.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseOverrideGroup.SetRenderMode">
+<code class="descclassname">BaseOverrideGroup.</code><code class="descname">SetRenderMode</code><span class="sig-paren">(</span><em>self</em>, <em>mode</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseOverrideGroup.SetRenderMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the render visibility mode for the Override Group.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>int</em>) – <p>The render mode to set:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>MODE_ON</em></td>
+<td>The object is enabled regardless of the state of any parent object.</td>
+</tr>
+<tr class="row-even"><td><em>MODE_OFF</em></td>
+<td>The object is disabled regardless of the state of any parent object.</td>
+</tr>
+<tr class="row-odd"><td><em>MODE_UNDEF</em></td>
+<td>The object is enabled by default, but the state of any parent object is used if it is enabled or disabled.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseOverrideGroup.GetTag">
+<code class="descclassname">BaseOverrideGroup.</code><code class="descname">GetTag</code><span class="sig-paren">(</span><em>self</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseOverrideGroup.GetTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Searches for a tag of the given <em>type</em> attached to the Override Group.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>int</em>) – The tag type to search for.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseTag/index.html#c4d.BaseTag" title="c4d.BaseTag">c4d.BaseTag</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The tag if found, otherwise <strong>None</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseOverrideGroup.GetTake">
+<code class="descclassname">BaseOverrideGroup.</code><code class="descname">GetTake</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseOverrideGroup.GetTake" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the Take that owns the Override Group.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../BaseTake/index.html#c4d.modules.takesystem.BaseTake" title="c4d.modules.takesystem.BaseTake">c4d.modules.takesystem.BaseTake</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The Take for the Override Group.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseOverrideGroup.Find">
+<code class="descclassname">BaseOverrideGroup.</code><code class="descname">Find</code><span class="sig-paren">(</span><em>self</em>, <em>takeData</em>, <em>op</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseOverrideGroup.Find" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if an object is included in the Override Group.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>takeData</strong> (<a class="reference internal" href="../TakeData/index.html#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><em>c4d.modules.takesystem.TakeData</em></a>) – The Take System context.</li>
+<li><strong>op</strong> (<a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><em>c4d.BaseObject</em></a>) – The object to check.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the object is included in the Override Group, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../BaseTake/index.html" title="c4d.modules.takesystem.BaseTake"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../BaseOverride/index.html" title="c4d.modules.takesystem.BaseOverride"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.modules.takesystem</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

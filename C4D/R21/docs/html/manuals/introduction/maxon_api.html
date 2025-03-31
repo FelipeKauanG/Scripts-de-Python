@@ -1,0 +1,276 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MAXON API Introduction &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="MAXON API - Data Types" href="../../modules/maxon/datatypes.html" />
+    <link rel="prev" title="c4d.utils.noise.C4DNoise" href="../../modules/c4d.utils/noise/C4DNoise/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../modules/maxon/datatypes.html" title="MAXON API - Data Types"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../../modules/c4d.utils/noise/C4DNoise/index.html" title="c4d.utils.noise.C4DNoise"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="maxon-api-introduction">
+<span id="id1"></span><h1>MAXON API Introduction<a class="headerlink" href="#maxon-api-introduction" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line">The MAXON API is a brand new API for Cinema 4D with a different paradigm, with more power and flexibility.</div>
+<div class="line"><br /></div>
+<div class="line">This API is the one used for the Cinema 4D development itself. Meaning that our internal developers use and develop this API.</div>
+<div class="line"><br /></div>
+<div class="line">Previously the CLASSIC API was internally an extra layer in Cinema 4D ecosystem, which become costly to maintain or even sometime too limiting to implement a specific features.</div>
+<div class="line">In the long term (when everything will be ported to it) 3rd party developers will have the same amount of customization over Cinema 4D than Maxon developers.</div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference external" href="https://www.maxon.net/en/news/maxon-blog/article/foundations-for-the-future/">Foundations for the Future</a></p>
+</div>
+<div class="line-block">
+<div class="line">Finally, the MAXON API provides nice few features:</div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li>Clear and consistent naming convention.</li>
+<li>Modularity concept.</li>
+<li>Consistent object creation.</li>
+<li>Error handling; in Python, a exception is raised when something went wrong.</li>
+</ul>
+</div></blockquote>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Currently the Python MAXON API, does not support named parameters. It’s a know issue.
+So all parameters need to be filled.</p>
+</div>
+<div class="section" id="basics">
+<h2>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h2>
+<p>The MAXON API is made from these components:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="#maxon-api-introduction-frameworks"><span class="std std-ref">Frameworks</span></a></li>
+<li><a class="reference internal" href="#maxon-api-introduction-interfaces"><span class="std std-ref">Interfaces</span></a></li>
+<li><a class="reference internal" href="#maxon-api-introduction-references"><span class="std std-ref">References</span></a></li>
+<li><a class="reference internal" href="#maxon-api-introduction-datatypes"><span class="std std-ref">Data Types</span></a></li>
+<li><a class="reference internal" href="#maxon-api-introduction-registries"><span class="std std-ref">Registries</span></a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="frameworks">
+<span id="maxon-api-introduction-frameworks"></span><h2>Frameworks<a class="headerlink" href="#frameworks" title="Permalink to this headline">¶</a></h2>
+<p>A framework includes MAXON API components (interfaces, references, data types, etc…) for a specific feature e.g. the volume framework for the usage of OpenVDB based volume data.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="line-block">
+<div class="line">In Python, frameworks are exposed as a module under the <cite>maxon.frameworks</cite> module.</div>
+<div class="line">By default, they are not imported in the Cinema 4D eco-system. To use a framework, you first need to import it e.g. for the volume framework</div>
+</div>
+<div class="last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">maxon</span>
+<span class="kn">from</span> <span class="nn">maxon.frameworks</span> <span class="kn">import</span> <span class="n">volume</span>
+
+<span class="c1"># Access classes exposed by the volume framework</span>
+<span class="n">volume</span><span class="o">.</span><span class="n">VolumeInterface</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../../modules/maxon/frameworks.html"><span class="doc">MAXON API - Frameworks</span></a></p>
+</div>
+</div>
+<div class="section" id="interfaces">
+<span id="maxon-api-introduction-interfaces"></span><h2>Interfaces<a class="headerlink" href="#interfaces" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In the MAXON API, interface classes end with the suffix <cite>Interface</cite> e.g. <cite>VolumeInterface</cite>.</p>
+</div>
+<div class="line-block">
+<div class="line">The interface system of the MAXON API is a powerful toolset to define public APIs and to hide implementation details.</div>
+<div class="line"><br /></div>
+<div class="line">An interface defines a class that is the base for both the implementation and the reference class.</div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<div class="last line-block">
+<div class="line">Currently the Python MAXON API doesn’t support the creation of a completely new implementation (the logic) for an interface, but only one that already exists in C++.</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<div class="last line-block">
+<div class="line">In the Python MAXON API, an interface should not be used directly. Instead, create a new instance of the reference class of the interface. See <a class="reference internal" href="#maxon-api-introduction-references"><span class="std std-ref">References</span></a>.</div>
+</div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../../modules/maxon/interfaces.html"><span class="doc">MAXON API - Interfaces</span></a></p>
+</div>
+</div>
+<div class="section" id="references">
+<span id="maxon-api-introduction-references"></span><h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">In the MAXON API, References classes ends with the suffix <cite>Ref</cite> e.g. <cite>VolumeRef</cite>.</div>
+<div class="line"><br /></div>
+<div class="line">In some case a Reference class can be named as the Interface without the Interface suffix e.g. <cite>Object</cite> is the reference class of <cite>ObjectInterface</cite>.</div>
+<div class="line">This means that the reference is a COW-Reference (Copy-On-Write), meaning until you modify something in the reference this is the same object used in the memory.</div>
+<div class="line">As a python developer you don’t have to deal with it, just be aware that sometime the <cite>Ref</cite> suffix might be not there.</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">A reference is nothing more than an instance of an interface (class). In Python, this is not as important, since Python is already based on references.</div>
+<div class="line">In C++, this ensures that no memory leaks will occur.</div>
+<div class="line"><br /></div>
+<div class="line">To create a new instance of an interface, you retrieve a reference instance to this interface.</div>
+<div class="line">VolumeRef() creates an instance of the reference of a VolumeInterface.</div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../../modules/maxon/references.html"><span class="doc">MAXON API - References</span></a></p>
+</div>
+</div>
+<div class="section" id="data-types">
+<span id="maxon-api-introduction-datatypes"></span><h2>Data Types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">The MAXON API provides new data types. They are optimised to work with the MAXON API and match the MAXON API C++ data types.</div>
+<div class="line">Almost all builtin Python Type have an equivalent Python Type available as a Python Maxon API Type here a no-exhaustive list:</div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../../modules/maxon_generated/datatypes/simple/maxon.Int32.html#module-maxon.Int32" title="maxon.Int32"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Int32</span></code></a>, <a class="reference internal" href="../../modules/maxon_generated/datatypes/simple/maxon.Int64.html#module-maxon.Int64" title="maxon.Int64"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Int64</span></code></a>, <a class="reference internal" href="../../modules/maxon_generated/datatypes/simple/maxon.Int.html#module-maxon.Int" title="maxon.Int"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Int</span></code></a> for int</li>
+<li><a class="reference internal" href="../../modules/maxon_generated/datatypes/simple/maxon.Float32.html#module-maxon.Float32" title="maxon.Float32"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Float32</span></code></a>, <a class="reference internal" href="../../modules/maxon_generated/datatypes/simple/maxon.Float64.html#module-maxon.Float64" title="maxon.Float64"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Float64</span></code></a>, <a class="reference internal" href="../../modules/maxon_generated/datatypes/simple/maxon.Float.html#module-maxon.Float" title="maxon.Float"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Float</span></code></a> for float</li>
+<li><a class="reference internal" href="../../modules/maxon_generated/datatypes/collection/maxon.BaseArray.html#module-maxon.BaseArray" title="maxon.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.BaseArray</span></code></a> for list</li>
+<li><a class="reference internal" href="../../modules/maxon_generated/datatypes/collection/maxon.Tuple.html#module-maxon.Tuple" title="maxon.Tuple"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Tuple</span></code></a> for tuple</li>
+</ul>
+</div></blockquote>
+<div class="line-block">
+<div class="line">With that’s said, it’s sometimes useful to convert a Maxon data type to Python built-in data type. This can be done with <a class="reference internal" href="../../modules/maxon_generated/functions/maxon.MaxonConvert.html#maxon.MaxonConvert" title="maxon.MaxonConvert"><code class="xref py py-func docutils literal notranslate"><span class="pre">maxon.MaxonConvert()</span></code></a>.</div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../../modules/maxon/datatypes.html"><span class="doc">MAXON API - Data Types</span></a></p>
+</div>
+</div>
+<div class="section" id="registries">
+<span id="maxon-api-introduction-registries"></span><h2>Registries<a class="headerlink" href="#registries" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">MAXON API relies on registries. Theas means that each MAXON API component (interfaces, daty types, etc…) is inserted in a registry.</div>
+<div class="line">Registries are also a MAXON API component, meaning they are also present in a registry.</div>
+<div class="line"><br /></div>
+<div class="line">A registry is a dictionary where the key is a <a class="reference internal" href="../../modules/maxon_generated/datatypes/id/maxon.Id.html#module-maxon.Id" title="maxon.Id"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Id</span></code></a> and the entry can be anything e.g. a class (Interface,Reference, refistry, etc…), an attribute, a constant value, etc…</div>
+<div class="line"><br /></div>
+<div class="line">The main purpose of a registry is to store a anything related to a given category with the possibility to be dynamic.</div>
+<div class="line">For example <a class="reference internal" href="../../modules/maxon_generated/registries/maxon.Loggers.html#module-maxon.Loggers" title="maxon.Loggers"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Loggers</span></code></a> is a registry that store all the different loggers available.</div>
+<div class="line">Adding a new entry of the correct type with the correct option to this dictionary, will automatically expose this logger to the Cinema 4D Console.</div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<div class="last line-block">
+<div class="line">Currently the MAXON Python API doesn’t support the creation of a completely new implementation (the logic) for an interface. Only existing implementations (created in C++) can be used.</div>
+<div class="line">This means that Python users can use registries only to receive a list of implementations.</div>
+<div class="line"><br /></div>
+<div class="line">With the C++ API, it is possible to add new implementation to any registry.</div>
+<div class="line">This allows 3rd party developers to add new components in a more modular way, as registry are widely used in Cinema 4D and will be used more and more.</div>
+<div class="line">Previously, only a few areas where possible to extend.</div>
+</div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../../modules/maxon/registry_enums.html"><span class="doc">MAXON API - Registries and Enums</span></a></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">MAXON API Introduction</a><ul>
+<li><a class="reference internal" href="#basics">Basics</a></li>
+<li><a class="reference internal" href="#frameworks">Frameworks</a></li>
+<li><a class="reference internal" href="#interfaces">Interfaces</a></li>
+<li><a class="reference internal" href="#references">References</a></li>
+<li><a class="reference internal" href="#data-types">Data Types</a></li>
+<li><a class="reference internal" href="#registries">Registries</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../modules/maxon/datatypes.html" title="MAXON API - Data Types"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../../modules/c4d.utils/noise/C4DNoise/index.html" title="c4d.utils.noise.C4DNoise"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

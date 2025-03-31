@@ -1,0 +1,316 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>maxon.BaseStreamInterface &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="maxon.BaseStreamInterface.softspace" href="maxon.BaseStreamInterface.softspace.html" />
+    <link rel="prev" title="maxon.IoBrowseInterface" href="maxon.IoBrowseInterface.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="maxon.BaseStreamInterface.softspace.html" title="maxon.BaseStreamInterface.softspace"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="maxon.IoBrowseInterface.html" title="maxon.IoBrowseInterface"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../maxon/interfaces.html" accesskey="U">MAXON API - Interfaces</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="maxon-basestreaminterface">
+<h1>maxon.BaseStreamInterface<a class="headerlink" href="#maxon-basestreaminterface" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-maxon.BaseStreamInterface">
+<span id="description"></span><h2>Description<a class="headerlink" href="#module-maxon.BaseStreamInterface" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">Interface is the base interface for all stream interfaces.</div>
+<div class="line">It contains the general functions to work with streams (e.g. error handling).</div>
+</div>
+</div>
+<div class="section" id="inheritance-diagram">
+<h2>Inheritance diagram<a class="headerlink" href="#inheritance-diagram" title="Permalink to this headline">¶</a></h2>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../core/maxon.DataDictionaryObjectInterface.html#module-maxon.DataDictionaryObjectInterface" title="maxon.DataDictionaryObjectInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DataDictionaryObjectInterface</span></code></a></li>
+</ul>
+<p>Children Classes:</p>
+<ul class="simple">
+<li><a class="reference internal" href="maxon.InputStreamInterface.html#module-maxon.InputStreamInterface" title="maxon.InputStreamInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.InputStreamInterface</span></code></a></li>
+<li><a class="reference internal" href="maxon.OutputStreamInterface.html#module-maxon.OutputStreamInterface" title="maxon.OutputStreamInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.OutputStreamInterface</span></code></a></li>
+</ul>
+</div>
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="maxon.BaseStreamInterface.softspace.html#maxon.BaseStreamInterface.softspace" title="maxon.BaseStreamInterface.softspace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">maxon.BaseStreamInterface.softspace</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="methods-signature">
+<h2>Methods Signature<a class="headerlink" href="#methods-signature" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.BaseStreamInterface.Close" title="maxon.BaseStreamInterface.Close"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Close</span></code></a>()</td>
+<td>Closes the stream.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.BaseStreamInterface.DisableBuffering" title="maxon.BaseStreamInterface.DisableBuffering"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DisableBuffering</span></code></a>()</td>
+<td><div class="line-block">
+<div class="line">The stream may disable buffering when this routine is called (if it supports it).</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.BaseStreamInterface.GetPosition" title="maxon.BaseStreamInterface.GetPosition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetPosition</span></code></a>()</td>
+<td><div class="line-block">
+<div class="line">Returns the current stream position.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.BaseStreamInterface.GetStreamLength" title="maxon.BaseStreamInterface.GetStreamLength"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetStreamLength</span></code></a>()</td>
+<td><div class="line-block">
+<div class="line">Returns the length of the stream/file.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.BaseStreamInterface.Seek" title="maxon.BaseStreamInterface.Seek"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Seek</span></code></a>(position)</td>
+<td>Sets the read/write position to this absolute position from the beginning of the stream.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.BaseStreamInterface.SeekSupported" title="maxon.BaseStreamInterface.SeekSupported"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SeekSupported</span></code></a>()</td>
+<td>Returns if the stream supports <code class="xref py py-func docutils literal notranslate"><span class="pre">BaseStreamInterface.Seek()</span></code>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.BaseStreamInterface.close" title="maxon.BaseStreamInterface.close"><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.BaseStreamInterface.seek" title="maxon.BaseStreamInterface.seek"><code class="xref py py-obj docutils literal notranslate"><span class="pre">seek</span></code></a>(offset[,&nbsp;whence])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.BaseStreamInterface.seekable" title="maxon.BaseStreamInterface.seekable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">seekable</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.BaseStreamInterface.tell" title="maxon.BaseStreamInterface.tell"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tell</span></code></a>()</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="methods-definition">
+<h2>Methods Definition<a class="headerlink" href="#methods-definition" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="maxon.BaseStreamInterface.Close">
+<code class="descclassname">BaseStreamInterface.</code><code class="descname">Close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.BaseStreamInterface.Close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closes the stream.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.BaseStreamInterface.DisableBuffering">
+<code class="descclassname">BaseStreamInterface.</code><code class="descname">DisableBuffering</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.BaseStreamInterface.DisableBuffering" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The stream may disable buffering when this routine is called (if it supports it).</div>
+<div class="line">This method is typically used when the buffering is done from the outside.</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.BaseStreamInterface.GetPosition">
+<code class="descclassname">BaseStreamInterface.</code><code class="descname">GetPosition</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.BaseStreamInterface.GetPosition" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns the current stream position.</div>
+<div class="line">This is the position where the next bytes will be read to or written from.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The current stream position.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.BaseStreamInterface.GetStreamLength">
+<code class="descclassname">BaseStreamInterface.</code><code class="descname">GetStreamLength</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.BaseStreamInterface.GetStreamLength" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns the length of the stream/file.</div>
+<div class="line">Be aware that some streams cannot return the file size
+(e.g. http streams with gzip+chunked transfer encoding).</div>
+<div class="line"><br /></div>
+<div class="line">With this example code you can handle both cases correctly.</div>
+<div class="line">In most cases it’s better to not use <a class="reference internal" href="#maxon.BaseStreamInterface.GetStreamLength" title="maxon.BaseStreamInterface.GetStreamLength"><code class="xref py py-func docutils literal notranslate"><span class="pre">maxon.BaseStreamInterface.GetStreamLength()</span></code></a> and better use
+<a class="reference internal" href="maxon.InputStreamInterface.html#maxon.InputStreamInterface.ReadEOS" title="maxon.InputStreamInterface.ReadEOS"><code class="xref py py-func docutils literal notranslate"><span class="pre">maxon.InputStreamInterface.ReadEOS()</span></code></a> to read as much as available.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Returns the length in bytes.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.BaseStreamInterface.Seek">
+<code class="descclassname">BaseStreamInterface.</code><code class="descname">Seek</code><span class="sig-paren">(</span><em>position</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.BaseStreamInterface.Seek" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the read/write position to this absolute position from the beginning of the stream.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For <a class="reference internal" href="maxon.InputStreamInterface.html#module-maxon.InputStreamInterface" title="maxon.InputStreamInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.InputStreamInterface</span></code></a>: If you want to <a class="reference internal" href="#maxon.BaseStreamInterface.Seek" title="maxon.BaseStreamInterface.Seek"><code class="xref py py-func docutils literal notranslate"><span class="pre">BaseStreamInterface.Seek()</span></code></a>
+forward <a class="reference internal" href="maxon.InputStreamInterface.html#maxon.InputStreamInterface.Skip" title="maxon.InputStreamInterface.Skip"><code class="xref py py-func docutils literal notranslate"><span class="pre">InputStreamInterface.Skip()</span></code></a> is the preferred method to call from the performance perspective.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>position</strong> (<em>int</em>) – Position to jump to within the stream.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.BaseStreamInterface.SeekSupported">
+<code class="descclassname">BaseStreamInterface.</code><code class="descname">SeekSupported</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.BaseStreamInterface.SeekSupported" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns if the stream supports <a class="reference internal" href="#maxon.BaseStreamInterface.Seek" title="maxon.BaseStreamInterface.Seek"><code class="xref py py-func docutils literal notranslate"><span class="pre">BaseStreamInterface.Seek()</span></code></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Seeking in stream may effect performance because the caches will be flushed.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if the output stream supports <a class="reference internal" href="#maxon.BaseStreamInterface.Seek" title="maxon.BaseStreamInterface.Seek"><code class="xref py py-func docutils literal notranslate"><span class="pre">BaseStreamInterface.Seek()</span></code></a>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.BaseStreamInterface.close">
+<code class="descclassname">BaseStreamInterface.</code><code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.BaseStreamInterface.close" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="maxon.BaseStreamInterface.seek">
+<code class="descclassname">BaseStreamInterface.</code><code class="descname">seek</code><span class="sig-paren">(</span><em>offset</em>, <em>whence=0</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.BaseStreamInterface.seek" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="maxon.BaseStreamInterface.seekable">
+<code class="descclassname">BaseStreamInterface.</code><code class="descname">seekable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.BaseStreamInterface.seekable" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="maxon.BaseStreamInterface.tell">
+<code class="descclassname">BaseStreamInterface.</code><code class="descname">tell</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.BaseStreamInterface.tell" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">maxon.BaseStreamInterface</a><ul>
+<li><a class="reference internal" href="#module-maxon.BaseStreamInterface">Description</a></li>
+<li><a class="reference internal" href="#inheritance-diagram">Inheritance diagram</a></li>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#methods-signature">Methods Signature</a></li>
+<li><a class="reference internal" href="#methods-definition">Methods Definition</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="maxon.BaseStreamInterface.softspace.html" title="maxon.BaseStreamInterface.softspace"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="maxon.IoBrowseInterface.html" title="maxon.IoBrowseInterface"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../maxon/interfaces.html" >MAXON API - Interfaces</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

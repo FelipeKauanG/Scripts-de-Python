@@ -1,0 +1,1063 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.BaseView &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title="c4d.BaseDraw" href="BaseDraw/index.html" />
+    <link rel="prev" title="c4d.VertexColorTag" href="../BaseTag/VariableTag/VertexColorTag/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="BaseDraw/index.html" title="c4d.BaseDraw"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../BaseTag/VariableTag/VertexColorTag/index.html" title="c4d.VertexColorTag"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../../index.html" >c4d</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../../index.html" >c4d.C4DAtom</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../../index.html" >c4d.GeListNode</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="../index.html" accesskey="U">c4d.BaseList2D</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-baseview">
+<h1>c4d.BaseView<a class="headerlink" href="#c4d-baseview" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.BaseView">
+<em class="property">class </em><code class="descclassname">c4d.</code><code class="descname">BaseView</code><a class="headerlink" href="#c4d.BaseView" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">BaseView represents an editor view.</div>
+<div class="line">In most cases the sub-class BaseDraw is used. It adds functions for drawing into the view.</div>
+</div>
+<p>See the <code class="docutils literal notranslate"><span class="pre">dbasedraw.h</span></code> description file for container IDs.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This type cannot be instantiated.</p>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BaseView.GetFrame" title="BaseView.GetFrame"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.GetFrame(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">The dimension in pixels of the view window.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseView.GetSafeFrame" title="BaseView.GetSafeFrame"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.GetSafeFrame(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">The dimension in pixels of the render lines.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseView.GetViewParameter" title="BaseView.GetViewParameter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.GetViewParameter(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Retrieves the parameters for the current projection. See <code class="docutils literal notranslate"><span class="pre">Ocamera.h</span></code> for projection types.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseView.GetMg" title="BaseView.GetMg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.GetMg(self)</span></code></a></td>
+<td>Returns the camera matrix, i.e. the global object matrix of the current camera object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseView.GetMi" title="BaseView.GetMi"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.GetMi(self)</span></code></a></td>
+<td>Returns the inverse of the camera matrix.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseView.GetBaseMatrix" title="BaseView.GetBaseMatrix"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.GetBaseMatrix(self)</span></code></a></td>
+<td>Gets the base matrix.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseView.SetBaseMatrix" title="BaseView.SetBaseMatrix"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.SetBaseMatrix(self,</span> <span class="pre">mg)</span></code></a></td>
+<td>Sets the base matrix.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseView.GetPlanarRotation" title="BaseView.GetPlanarRotation"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.GetPlanarRotation(self)</span></code></a></td>
+<td>Gets the rotation of the planar views.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseView.SetPlanarRotation" title="BaseView.SetPlanarRotation"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.SetPlanarRotation(self,</span> <span class="pre">r)</span></code></a></td>
+<td>Sets the rotation of the planar views.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseView.GetProjection" title="BaseView.GetProjection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.GetProjection(self)</span></code></a></td>
+<td>Returns the projection used by the view. See <code class="docutils literal notranslate"><span class="pre">Ocamera.h</span></code> for values.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseView.TestPoint" title="BaseView.TestPoint"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.TestPoint(self,</span> <span class="pre">x,</span> <span class="pre">y)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Returns <strong>True</strong> if the point is within the boundary returned by <code class="xref py py-meth docutils literal notranslate"><span class="pre">GetFrame()</span></code>.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseView.TestPointZ" title="BaseView.TestPointZ"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.TestPointZ(self,</span> <span class="pre">p)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Tests if the point is visible in the view according to the current projection.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseView.TestClipping3D" title="BaseView.TestClipping3D"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.TestClipping3D(self,</span> <span class="pre">mp,</span> <span class="pre">rad,</span> <span class="pre">mg)</span></code></a></td>
+<td>Tests if a bounding box is visible in the view according to the current projection.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseView.WS" title="BaseView.WS"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.WS(self,</span> <span class="pre">p)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">World to screen conversion.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseView.SW" title="BaseView.SW"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.SW(self,</span> <span class="pre">p)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Screen to world conversion.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseView.WC" title="BaseView.WC"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.WC(self,</span> <span class="pre">p)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">World to camera conversion.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseView.CW" title="BaseView.CW"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.CW(self,</span> <span class="pre">p)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Camera to world conversion.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseView.SC" title="BaseView.SC"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.SC(self,</span> <span class="pre">p)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Screen to camera conversion.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseView.CS" title="BaseView.CS"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.CS(self,</span> <span class="pre">p,</span> <span class="pre">z_inverse)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Camera to screen conversion.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseView.WC_V" title="BaseView.WC_V"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.WC_V(self,</span> <span class="pre">v)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">World to camera vector conversion.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseView.CW_V" title="BaseView.CW_V"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.CW_V(self,</span> <span class="pre">v)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Camera to world vector conversion.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseView.PW_S" title="BaseView.PW_S"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.PW_S(self,</span> <span class="pre">z,</span> <span class="pre">horizontal)</span></code></a></td>
+<td>Returns the size in world units for a single pixel at the given Z-depth <em>z</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseView.WP_S" title="BaseView.WP_S"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.WP_S(self,</span> <span class="pre">z,</span> <span class="pre">horizontal)</span></code></a></td>
+<td>Returns the size in pixels for a single world unit at the given Z-depth <em>z</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseView.PW_W" title="BaseView.PW_W"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.PW_W(self,</span> <span class="pre">p,</span> <span class="pre">horizontal)</span></code></a></td>
+<td>Returns the size in world units for a single pixel at screen space vector <em>p</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseView.WP_W" title="BaseView.WP_W"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.WP_W(self,</span> <span class="pre">p,</span> <span class="pre">horizontal)</span></code></a></td>
+<td>Returns the size in screen space pixels for a single world unit at world position <em>p</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseView.BackfaceCulling" title="BaseView.BackfaceCulling"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.BackfaceCulling(self,</span> <span class="pre">n,</span> <span class="pre">p)</span></code></a></td>
+<td>Tests the face with center <em>p</em> and normal <em>n</em> for backface culling.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseView.ZSensitiveNear" title="BaseView.ZSensitiveNear"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.ZSensitiveNear(self)</span></code></a></td>
+<td>Indicates if the view has Z near clipping.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseView.ZSensitiveNearClipping" title="BaseView.ZSensitiveNearClipping"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.ZSensitiveNearClipping(self)</span></code></a></td>
+<td>Returns the near clipping of Z sensitive view.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseView.ZSensitiveFar" title="BaseView.ZSensitiveFar"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.ZSensitiveFar(self)</span></code></a></td>
+<td>Indicates if the view has Z far clipping.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseView.ZSensitiveFarClipping" title="BaseView.ZSensitiveFarClipping"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.ZSensitiveFarClipping(self)</span></code></a></td>
+<td>Returns the far clipping of Z sensitive view.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseView.ProjectPointOnLine" title="BaseView.ProjectPointOnLine"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.ProjectPointOnLine(self,</span> <span class="pre">p,</span> <span class="pre">v,</span> <span class="pre">mouse_x,</span> <span class="pre">...)</span></code></a></td>
+<td>Calculates the nearest point on the line defined by <em>p</em> and <em>v</em> for a given mouse coordinate.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseView.ProjectPointOnPlane" title="BaseView.ProjectPointOnPlane"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.ProjectPointOnPlane(self,</span> <span class="pre">p,</span> <span class="pre">v,</span> <span class="pre">mouse_x,</span> <span class="pre">...)</span></code></a></td>
+<td>Calculates the nearest point on the plane defined by <em>p</em> and <em>v</em> for a given mouse coordinate.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../index.html#c4d.BaseList2D" title="c4d.BaseList2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseList2D</span></code></a></li>
+</ul>
+<p>Child Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="BaseDraw/index.html#c4d.BaseDraw" title="c4d.BaseDraw"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseDraw</span></code></a></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="BaseView.GetFrame">
+<code class="descclassname">BaseView.</code><code class="descname">GetFrame</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.GetFrame" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The dimension in pixels of the view window.</div>
+<div class="line">The coordinates are relative to the upper left corner of the view, and specify visible pixels. (I.e. the border is not included.).</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dimension</span> <span class="o">=</span> <span class="n">bv</span><span class="o">.</span><span class="n">GetFrame</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dimension</span><span class="p">[</span><span class="s2">&quot;cl&quot;</span><span class="p">],</span> <span class="n">dimension</span><span class="p">[</span><span class="s2">&quot;ct&quot;</span><span class="p">],</span> <span class="n">dimension</span><span class="p">[</span><span class="s2">&quot;cr&quot;</span><span class="p">],</span> <span class="n">dimension</span><span class="p">[</span><span class="s2">&quot;cb&quot;</span><span class="p">])</span>
+<span class="c1"># (left, top, right, bottom)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Dict[int, int, int, int]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.GetSafeFrame">
+<code class="descclassname">BaseView.</code><code class="descname">GetSafeFrame</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.GetSafeFrame" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The dimension in pixels of the render lines.</div>
+<div class="line">The render lines show what part of the view is included in the rendered picture.</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">position</span> <span class="o">=</span> <span class="n">bv</span><span class="o">.</span><span class="n">GetSafeFrame</span><span class="p">()</span>
+<span class="nb">print</span> <span class="n">position</span><span class="p">[</span><span class="s2">&quot;cl&quot;</span><span class="p">],</span> <span class="n">position</span><span class="p">[</span><span class="s2">&quot;ct&quot;</span><span class="p">],</span> <span class="n">position</span><span class="p">[</span><span class="s2">&quot;cr&quot;</span><span class="p">],</span> <span class="n">position</span><span class="p">[</span><span class="s2">&quot;cb&quot;</span><span class="p">]</span>
+<span class="c1"># (left, top, right, bottom)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Dict[int, int, int, int]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.GetViewParameter">
+<code class="descclassname">BaseView.</code><code class="descname">GetViewParameter</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.GetViewParameter" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Retrieves the parameters for the current projection. See <code class="docutils literal notranslate"><span class="pre">Ocamera.h</span></code> for projection types.</div>
+<div class="line">The following is the code used internally to project points.</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">CAMDIST</span> <span class="o">=</span> <span class="mf">0.05</span>
+
+<span class="k">def</span> <span class="nf">WorldToCamera</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">camera_matrix</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">p</span><span class="o">*</span><span class="p">(</span><span class="o">~</span><span class="n">inverse_camera_matrix</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">CameraToWorld</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">camera_matrix</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">p</span><span class="o">*</span><span class="n">camera_matrix</span>
+
+
+<span class="k">def</span> <span class="nf">CameraToScreen</span><span class="p">(</span><span class="n">pp</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="n">pp</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">projection</span><span class="o">==</span><span class="n">c4d</span><span class="o">.</span><span class="n">Pperspective</span><span class="p">:</span>
+        <span class="n">nz</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">/</span><span class="n">CAMDIST</span> <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">z</span><span class="o">&lt;=</span><span class="mi">00</span> <span class="k">else</span> <span class="mf">1.0</span><span class="o">/</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="n">CAMDIST</span><span class="p">)</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">x</span><span class="o">*</span><span class="n">scale</span><span class="o">.</span><span class="n">x</span><span class="o">*</span><span class="n">nz</span><span class="o">+</span><span class="n">off</span><span class="o">.</span><span class="n">x</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">y</span><span class="o">*</span><span class="n">scale</span><span class="o">.</span><span class="n">y</span><span class="o">*</span><span class="n">nz</span><span class="o">+</span><span class="n">off</span><span class="o">.</span><span class="n">y</span>
+        <span class="k">return</span> <span class="n">p</span>
+
+    <span class="n">p</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">x</span><span class="o">*</span><span class="n">scale</span><span class="o">.</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="n">off</span><span class="o">.</span><span class="n">x</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">y</span><span class="o">*</span><span class="n">scale</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="o">+</span><span class="n">off</span><span class="o">.</span><span class="n">y</span>
+
+    <span class="k">if</span> <span class="n">projection</span><span class="o">==</span><span class="n">c4d</span><span class="o">.</span><span class="n">Pmilitary</span> <span class="ow">or</span> <span class="n">projection</span><span class="o">==</span><span class="n">c4d</span><span class="o">.</span><span class="n">Pfrog</span> <span class="ow">or</span> <span class="n">projection</span><span class="o">==</span><span class="n">c4d</span><span class="o">.</span><span class="n">Pgentleman</span><span class="p">:</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">p</span><span class="o">.</span><span class="n">z</span><span class="o">*</span><span class="n">scale</span><span class="o">.</span><span class="n">x</span><span class="o">*</span><span class="n">sclaez</span><span class="o">.</span><span class="n">x</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">p</span><span class="o">.</span><span class="n">z</span><span class="o">*</span><span class="n">scale</span><span class="o">.</span><span class="n">y</span><span class="o">*</span><span class="n">scalez</span><span class="o">.</span><span class="n">y</span>
+    <span class="k">return</span> <span class="n">p</span>
+
+
+<span class="k">def</span> <span class="nf">ScreenToCamera</span><span class="p">(</span><span class="n">pp</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="n">pp</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">projection</span><span class="o">==</span><span class="n">c4d</span><span class="o">.</span><span class="n">Pmilitary</span> <span class="ow">or</span> <span class="n">projection</span><span class="o">==</span><span class="n">c4d</span><span class="o">.</span><span class="n">Pfrog</span> <span class="ow">or</span> <span class="n">projection</span><span class="o">==</span><span class="n">c4d</span><span class="o">.</span><span class="n">Pgentleman</span><span class="p">:</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="n">p</span><span class="o">.</span><span class="n">z</span><span class="o">*</span><span class="n">scale</span><span class="o">.</span><span class="n">x</span><span class="o">*</span><span class="n">scalez</span><span class="o">.</span><span class="n">x</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">p</span><span class="o">.</span><span class="n">z</span><span class="o">*</span><span class="n">scale</span><span class="o">.</span><span class="n">y</span><span class="o">*</span><span class="n">scalez</span><span class="o">.</span><span class="n">y</span>
+
+    <span class="n">p</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">x</span><span class="o">-</span><span class="n">off</span><span class="o">.</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">scale</span><span class="o">.</span><span class="n">x</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">y</span><span class="o">-</span><span class="n">off</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="o">/</span><span class="n">scale</span><span class="o">.</span><span class="n">y</span>
+
+    <span class="k">if</span> <span class="n">projection</span><span class="o">==</span><span class="n">c4d</span><span class="o">.</span><span class="n">Pperspective</span><span class="p">:</span>
+        <span class="n">nz</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="n">CAMDIST</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">x</span> <span class="o">*=</span> <span class="n">nz</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">y</span> <span class="o">*=</span> <span class="n">nz</span>
+    <span class="k">return</span> <span class="n">p</span>
+</pre></div>
+</div>
+<p>For non-axometric projection here’s the code how to calculate off/scale.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">InitView</span><span class="p">(</span><span class="n">camera</span><span class="p">,</span> <span class="n">xres</span><span class="p">,</span> <span class="n">yres</span><span class="p">,</span> <span class="n">pix_x</span><span class="p">,</span> <span class="n">pix_y</span><span class="p">):</span>
+
+    <span class="n">opm</span> <span class="o">=</span> <span class="n">camera</span><span class="o">.</span><span class="n">GetMg</span><span class="p">()</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">camera</span><span class="o">.</span><span class="n">GetDataInstance</span><span class="p">()</span>
+    <span class="n">project</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">GetInt</span><span class="p">(</span><span class="n">CAMERA_PROJECTION</span><span class="p">,</span> <span class="n">Pperspective</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">projection</span><span class="o">!=</span><span class="n">Pperspective</span> <span class="ow">and</span> <span class="n">projection</span><span class="o">!=</span><span class="n">Pparallel</span><span class="p">:</span>
+        <span class="n">opm</span><span class="o">.</span><span class="n">v1</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">)</span>
+        <span class="n">opm</span><span class="o">.</span><span class="n">v2</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">)</span>
+        <span class="n">opm</span><span class="o">.</span><span class="n">v3</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">)</span>
+
+    <span class="n">off</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">xres</span><span class="o">*</span><span class="mf">0.5</span>
+    <span class="n">off</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">yres</span><span class="o">*</span><span class="mf">0.5</span>
+
+    <span class="k">if</span> <span class="n">b_ab</span> <span class="o">==</span> <span class="n">Pperspective</span><span class="p">:</span>
+        <span class="n">ap</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">GetFloat</span><span class="p">(</span><span class="n">CAMERAOBJECT_APERTURE</span><span class="p">,</span> <span class="mf">36.0</span><span class="p">)</span>
+        <span class="n">scale</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">GetFloat</span><span class="p">(</span><span class="n">CAMERA_FOCUS</span><span class="p">,</span> <span class="mf">36.0</span><span class="p">)</span> <span class="o">/</span> <span class="n">ap</span> <span class="o">*</span> <span class="n">xres</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">scale</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">xres</span><span class="o">/</span><span class="mf">1024.0</span><span class="o">*</span><span class="n">data</span><span class="o">.</span><span class="n">GetFloat</span><span class="p">(</span><span class="n">CAMERA_ZOOM</span><span class="p">,</span><span class="mf">1.0</span><span class="p">)</span>
+
+    <span class="n">scale</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="n">scale</span><span class="o">.</span><span class="n">x</span><span class="o">*</span><span class="n">pix_x</span><span class="o">/</span><span class="n">pix_y</span>
+    <span class="c1"># ... calculated here</span>
+
+<span class="c1">#example how to use GetViewParameter</span>
+<span class="n">params</span> <span class="o">=</span> <span class="n">bv</span><span class="o">.</span><span class="n">GetViewParameter</span><span class="p">()</span>
+<span class="c1">#params[&quot;offset&quot;], params[&quot;scale&quot;], params[&quot;scale_z&quot;]</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Dict[<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a>, <a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a>, <a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a>]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The dimension, is never <strong>None</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.GetMg">
+<code class="descclassname">BaseView.</code><code class="descname">GetMg</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.GetMg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the camera matrix, i.e. the global object matrix of the current camera object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Matrix/index.html#c4d.Matrix" title="c4d.Matrix">c4d.Matrix</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The camera matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.GetMi">
+<code class="descclassname">BaseView.</code><code class="descname">GetMi</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.GetMi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the inverse of the camera matrix.</p>
+<p>Equivalent to <a class="reference internal" href="#BaseView.GetMg" title="BaseView.GetMg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetMg()</span></code></a>, but faster.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Matrix/index.html#c4d.Matrix" title="c4d.Matrix">c4d.Matrix</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The inverted camera matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.GetBaseMatrix">
+<code class="descclassname">BaseView.</code><code class="descname">GetBaseMatrix</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.GetBaseMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the base matrix.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R14.014.</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The base matrix is multiplied with the camera matrix so that it is possible to have e.g. a frontal view into another direction than +Z.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Matrix/index.html#c4d.Matrix" title="c4d.Matrix">c4d.Matrix</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The base matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.SetBaseMatrix">
+<code class="descclassname">BaseView.</code><code class="descname">SetBaseMatrix</code><span class="sig-paren">(</span><em>self</em>, <em>mg</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.SetBaseMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the base matrix.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R14.014.</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The base matrix is multiplied with the camera matrix so that it is possible to have e.g. a frontal view into another direction than +Z.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mg</strong> (<a class="reference internal" href="../../../../Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><em>c4d.Matrix</em></a>) – The new base matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.GetPlanarRotation">
+<code class="descclassname">BaseView.</code><code class="descname">GetPlanarRotation</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.GetPlanarRotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the rotation of the planar views.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R14.014.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The planar rotation.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.SetPlanarRotation">
+<code class="descclassname">BaseView.</code><code class="descname">SetPlanarRotation</code><span class="sig-paren">(</span><em>self</em>, <em>r</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.SetPlanarRotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the rotation of the planar views.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R14.014.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mg</strong> (<em>float</em>) – The new planar rotation.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.GetProjection">
+<code class="descclassname">BaseView.</code><code class="descname">GetProjection</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.GetProjection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the projection used by the view. See <code class="docutils literal notranslate"><span class="pre">Ocamera.h</span></code> for values.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The projection type.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.TestPoint">
+<code class="descclassname">BaseView.</code><code class="descname">TestPoint</code><span class="sig-paren">(</span><em>self</em>, <em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.TestPoint" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns <strong>True</strong> if the point is within the boundary returned by <a class="reference internal" href="#BaseView.GetFrame" title="BaseView.GetFrame"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetFrame()</span></code></a>.</div>
+<div class="line">The point coordinates must be in screen space.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> (<em>int</em>) – X coordinate</li>
+<li><strong>y</strong> (<em>int</em>) – Y coordinate</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the point is inside, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.TestPointZ">
+<code class="descclassname">BaseView.</code><code class="descname">TestPointZ</code><span class="sig-paren">(</span><em>self</em>, <em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.TestPointZ" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Tests if the point is visible in the view according to the current projection.</div>
+<div class="line">The point must be in camera space.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>p</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The point to check.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the point is visible in the view, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.TestClipping3D">
+<code class="descclassname">BaseView.</code><code class="descname">TestClipping3D</code><span class="sig-paren">(</span><em>self</em>, <em>mp</em>, <em>rad</em>, <em>mg</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.TestClipping3D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests if a bounding box is visible in the view according to the current projection.</p>
+<p>The box is defined with passed <em>mp</em>, <em>rad</em> and <em>mg</em> by these eight corner coordinates</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p0</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="n">mp</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">rad</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">mp</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">rad</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">mp</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="n">rad</span><span class="o">.</span><span class="n">z</span><span class="p">)</span> <span class="o">*</span> <span class="n">mg</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="n">mp</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">rad</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">mp</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">rad</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">mp</span><span class="o">.</span><span class="n">z</span> <span class="o">-</span> <span class="n">rad</span><span class="o">.</span><span class="n">z</span><span class="p">)</span> <span class="o">*</span> <span class="n">mg</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="n">mp</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">rad</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">mp</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">rad</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">mp</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="n">rad</span><span class="o">.</span><span class="n">z</span><span class="p">)</span> <span class="o">*</span> <span class="n">mg</span>
+<span class="n">p3</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="n">mp</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">rad</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">mp</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">rad</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">mp</span><span class="o">.</span><span class="n">z</span> <span class="o">-</span> <span class="n">rad</span><span class="o">.</span><span class="n">z</span><span class="p">)</span> <span class="o">*</span> <span class="n">mg</span>
+<span class="n">p4</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="n">mp</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">rad</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">mp</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">rad</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">mp</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="n">rad</span><span class="o">.</span><span class="n">z</span><span class="p">)</span> <span class="o">*</span> <span class="n">mg</span>
+<span class="n">p5</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="n">mp</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">rad</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">mp</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">rad</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">mp</span><span class="o">.</span><span class="n">z</span> <span class="o">-</span> <span class="n">rad</span><span class="o">.</span><span class="n">z</span><span class="p">)</span> <span class="o">*</span> <span class="n">mg</span>
+<span class="n">p6</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="n">mp</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">rad</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">mp</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">rad</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">mp</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="n">rad</span><span class="o">.</span><span class="n">z</span><span class="p">)</span> <span class="o">*</span> <span class="n">mg</span>
+<span class="n">p7</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="n">mp</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">rad</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">mp</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">rad</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">mp</span><span class="o">.</span><span class="n">z</span> <span class="o">-</span> <span class="n">rad</span><span class="o">.</span><span class="n">z</span><span class="p">)</span> <span class="o">*</span> <span class="n">mg</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>mp</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The center of the box.</li>
+<li><strong>rad</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The radius of the box.</li>
+<li><strong>mg</strong> (<a class="reference internal" href="../../../../Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><em>c4d.Matrix</em></a>) – The transformation to world space from <em>mp</em>/<em>rad</em> space.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">Dict[bool, bool, bool]</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>A dictionary with the following information:</p>
+<div class="line-block">
+<div class="line">’visible’: <strong>True</strong> if the box is visible, otherwise <strong>False</strong>.</div>
+<div class="line">’clip2d’: <strong>True</strong> if the box needs 2D clipping, i.e. if any part of it is outside of the view boundaries. Otherwise <strong>False</strong>.</div>
+<div class="line">’clipz’: <strong>True</strong> if the box needs Z clipping, i.e. if any part of it is too close to or behind the camera. Otherwise <strong>False</strong>.</div>
+</div>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.WS">
+<code class="descclassname">BaseView.</code><code class="descname">WS</code><span class="sig-paren">(</span><em>self</em>, <em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.WS" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">World to screen conversion.</div>
+<div class="line">Converts <em>p</em> from world space to screen space (pixels relative to the view), and returns the conversion.</div>
+<div class="line">The orthogonal distance to the world point is stored in world units in the Z axis of the result.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>p</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – A point in world space.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The point in screen space.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.SW">
+<code class="descclassname">BaseView.</code><code class="descname">SW</code><span class="sig-paren">(</span><em>self</em>, <em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.SW" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Screen to world conversion.</div>
+<div class="line">Converts <em>p</em> from screen space (pixels relative to the view) to world space.</div>
+<div class="line"><br /></div>
+<div class="line">The X and Y coordinates of the point are given in screen space; the Z coordinate is the orthogonal distance in world units to the point from the view plane. The result of the conversion is returned.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>p</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – A point in screenspace.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The point in worldspace.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.WC">
+<code class="descclassname">BaseView.</code><code class="descname">WC</code><span class="sig-paren">(</span><em>self</em>, <em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.WC" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">World to camera conversion.</div>
+<div class="line">Converts <em>p</em> from world space to camera space and returns the result.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>p</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – A point in world space.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The point in camera space.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.CW">
+<code class="descclassname">BaseView.</code><code class="descname">CW</code><span class="sig-paren">(</span><em>self</em>, <em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.CW" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Camera to world conversion.</div>
+<div class="line">Converts <em>p</em> from camera space to world space and returns the result.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>p</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – A point in camera space.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The point in world space.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.SC">
+<code class="descclassname">BaseView.</code><code class="descname">SC</code><span class="sig-paren">(</span><em>self</em>, <em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.SC" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Screen to camera conversion.</div>
+<div class="line">Converts <em>p</em> from screen space (pixels relative to the view) to camera space and returns the result.</div>
+<div class="line"><br /></div>
+<div class="line">The X and Y coordinates of the point are given in screen space; the Z coordinate is the orthogonal distance in world units to the point from the view plane.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>p</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – A point in screen space.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The point in camera space.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.CS">
+<code class="descclassname">BaseView.</code><code class="descname">CS</code><span class="sig-paren">(</span><em>self</em>, <em>p</em>, <em>z_inverse</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.CS" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Camera to screen conversion.</div>
+<div class="line">Converts <em>p</em> from camera space to screen space (pixels relative to the view) and returns the result.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>p</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – A point in camera space.</li>
+<li><strong>z_inverse</strong> (<em>bool</em>) – <div class="line-block">
+<div class="line">If <strong>True</strong> the Z coordinate of the converted point is inverted.</div>
+<div class="line">This is used by the Z-buffer.</div>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A point in screen space.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.WC_V">
+<code class="descclassname">BaseView.</code><code class="descname">WC_V</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.WC_V" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">World to camera vector conversion.</div>
+<div class="line">Converts the world vector <em>v</em> to camera space and returns the result.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – A vector in world space.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The vector in camera space.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.CW_V">
+<code class="descclassname">BaseView.</code><code class="descname">CW_V</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.CW_V" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Camera to world vector conversion.</div>
+<div class="line">Converts the camera vector <em>v</em> to world space and returns the result.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – A vector in camera space.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The vector in world space.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.PW_S">
+<code class="descclassname">BaseView.</code><code class="descname">PW_S</code><span class="sig-paren">(</span><em>self</em>, <em>z</em>, <em>horizontal</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.PW_S" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the size in world units for a single pixel at the given Z-depth <em>z</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>z</strong> (<em>float</em>) – The Z-depth.</li>
+<li><strong>horizontal</strong> (<em>bool</em>) – <div class="line-block">
+<div class="line"><strong>True</strong> if the size is measured horizontally, <strong>False</strong> for vertical measurement.</div>
+<div class="line">This is useful for non-square pixel aspect ratios.</div>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">float</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The size in world units.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.WP_S">
+<code class="descclassname">BaseView.</code><code class="descname">WP_S</code><span class="sig-paren">(</span><em>self</em>, <em>z</em>, <em>horizontal</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.WP_S" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the size in pixels for a single world unit at the given Z-depth <em>z</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>z</strong> (<em>float</em>) – The Z-depth.</li>
+<li><strong>horizontal</strong> (<em>bool</em>) – <div class="line-block">
+<div class="line"><strong>True</strong> if the size is measured horizontally, <strong>False</strong> for vertical measurement.</div>
+<div class="line">This is useful for non-square pixel aspect ratios.</div>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">float</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The size in pixels.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.PW_W">
+<code class="descclassname">BaseView.</code><code class="descname">PW_W</code><span class="sig-paren">(</span><em>self</em>, <em>p</em>, <em>horizontal</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.PW_W" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the size in world units for a single pixel at screen space vector <em>p</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>p</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The pixel in screen space.</li>
+<li><strong>horizontal</strong> (<em>bool</em>) – <div class="line-block">
+<div class="line"><strong>True</strong> if the size is measured horizontally, <strong>False</strong> for vertical measurement.</div>
+<div class="line">This is useful for non-square pixel aspect ratios.</div>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">float</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Size in world units.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.WP_W">
+<code class="descclassname">BaseView.</code><code class="descname">WP_W</code><span class="sig-paren">(</span><em>self</em>, <em>p</em>, <em>horizontal</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.WP_W" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the size in screen space pixels for a single world unit at world position <em>p</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>p</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The world unit in world space.</li>
+<li><strong>horizontal</strong> (<em>bool</em>) – <div class="line-block">
+<div class="line"><strong>True</strong> if the size is measured horizontally, <strong>False</strong> for vertical measurement.</div>
+<div class="line">This is useful for non-square pixel aspect ratios.</div>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">float</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Size in screen space pixels.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.BackfaceCulling">
+<code class="descclassname">BaseView.</code><code class="descname">BackfaceCulling</code><span class="sig-paren">(</span><em>self</em>, <em>n</em>, <em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.BackfaceCulling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the face with center <em>p</em> and normal <em>n</em> for backface culling.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>n</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The face normal.</li>
+<li><strong>p</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The face center.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the face should be visible, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.ZSensitiveNear">
+<code class="descclassname">BaseView.</code><code class="descname">ZSensitiveNear</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.ZSensitiveNear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if the view has Z near clipping.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the view has Z clipping near, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.ZSensitiveNearClipping">
+<code class="descclassname">BaseView.</code><code class="descname">ZSensitiveNearClipping</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.ZSensitiveNearClipping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the near clipping of Z sensitive view.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.ZSensitiveFar">
+<code class="descclassname">BaseView.</code><code class="descname">ZSensitiveFar</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.ZSensitiveFar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if the view has Z far clipping.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the view has Z clipping far, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.ZSensitiveFarClipping">
+<code class="descclassname">BaseView.</code><code class="descname">ZSensitiveFarClipping</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.ZSensitiveFarClipping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the far clipping of Z sensitive view.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Far clipping distance.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.ProjectPointOnLine">
+<code class="descclassname">BaseView.</code><code class="descname">ProjectPointOnLine</code><span class="sig-paren">(</span><em>self</em>, <em>p</em>, <em>v</em>, <em>mouse_x</em>, <em>mouse_y</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.ProjectPointOnLine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the nearest point on the line defined by <em>p</em> and <em>v</em> for a given mouse coordinate.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>p</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – Start position of the line in world space.</li>
+<li><strong>v</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – Direction of the line. The length of this vector determines the scaling of the returned offset.</li>
+<li><strong>mouse_x</strong> (<em>float</em>) – Mouse X-coordinate.</li>
+<li><strong>mouse_y</strong> (<em>float</em>) – Mouse Y-coordinate.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">tuple(<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>, float, int)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>The <cite>nearest point</cite> on the line, the <cite>distance</cite> from <em>p</em> scaled by the length of <em>v</em> (<cite>offset</cite> = distance to p / length of v) and an <cite>error code</cite>:</p>
+<ul class="simple">
+<li>1 = Failed to find nearest point correctly, lines may be beyond horizon, behind camera, or ray line and line may be parallel.</li>
+<li>2 = Point is either beyond the start or end of the described segment (but a point will still be returned for the line/ray).</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseView.ProjectPointOnPlane">
+<code class="descclassname">BaseView.</code><code class="descname">ProjectPointOnPlane</code><span class="sig-paren">(</span><em>self</em>, <em>p</em>, <em>v</em>, <em>mouse_x</em>, <em>mouse_y</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseView.ProjectPointOnPlane" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the nearest point on the plane defined by <em>p</em> and <em>v</em> for a given mouse coordinate.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>p</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The plane’s position in world space.</li>
+<li><strong>v</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The plane’s normal in world space.</li>
+<li><strong>mouse_x</strong> (<em>float</em>) – Mouse X-coordinate.</li>
+<li><strong>mouse_y</strong> (<em>float</em>) – Mouse Y-coordinate.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">tuple(<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>, int)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>The <cite>nearest point</cite> on the plane and an <cite>error code</cite>:</p>
+<ul class="simple">
+<li>1 = Failed to find nearest point correctly, lines may be beyond horizon, behind camera, or ray line and line may be parallel.</li>
+<li>2 = Point is either beyond the start or end of the described segment (but a point will still be returned for the line/ray).</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="BaseDraw/index.html" title="c4d.BaseDraw"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../BaseTag/VariableTag/VertexColorTag/index.html" title="c4d.VertexColorTag"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../../index.html" >c4d</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../../index.html" >c4d.C4DAtom</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../../index.html" >c4d.GeListNode</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="../index.html" >c4d.BaseList2D</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

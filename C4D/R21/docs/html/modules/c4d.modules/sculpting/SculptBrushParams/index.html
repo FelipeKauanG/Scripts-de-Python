@@ -1,0 +1,643 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.sculpting.SculptBrushParams &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.modules.sculpting.SculptModifierInterface" href="../SculptModifierInterface/index.html" />
+    <link rel="prev" title="c4d.modules.sculpting.BrushDabData" href="../BrushDabData/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../SculptModifierInterface/index.html" title="c4d.modules.sculpting.SculptModifierInterface"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../BrushDabData/index.html" title="c4d.modules.sculpting.BrushDabData"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.modules.sculpting</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-sculpting-sculptbrushparams">
+<h1>c4d.modules.sculpting.SculptBrushParams<a class="headerlink" href="#c4d-modules-sculpting-sculptbrushparams" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.sculpting.SculptBrushParams">
+<em class="property">class </em><code class="descclassname">c4d.modules.sculpting.</code><code class="descname">SculptBrushParams</code><a class="headerlink" href="#c4d.modules.sculpting.SculptBrushParams" title="Permalink to this definition">¶</a></dt>
+<dd><p>The parameters to pass in when registering a Sculpting Brush.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#SculptBrushParams.EnableStencil" title="SculptBrushParams.EnableStencil"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushParams.EnableStencil(self,</span> <span class="pre">enable)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Does the brush use stencils?</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SculptBrushParams.EnableStamp" title="SculptBrushParams.EnableStamp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushParams.EnableStamp(self,</span> <span class="pre">enable)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Does the brush use stamps?</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SculptBrushParams.EnableInvertCheckbox" title="SculptBrushParams.EnableInvertCheckbox"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushParams.EnableInvertCheckbox(self,</span> <span class="pre">enable)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Does the brush use the invert checkbox?</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SculptBrushParams.EnableBuildup" title="SculptBrushParams.EnableBuildup"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushParams.EnableBuildup(self,</span> <span class="pre">enable)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Does the brush use the buildup slider?</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SculptBrushParams.EnableNonModelPickMode" title="SculptBrushParams.EnableNonModelPickMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushParams.EnableNonModelPickMode(self,</span> <span class="pre">enable)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Does the brush do anything if the user clicks off of a model?</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SculptBrushParams.EnableFlood" title="SculptBrushParams.EnableFlood"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushParams.EnableFlood(self,</span> <span class="pre">enable)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Does the brush have a Flood function?</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SculptBrushParams.EnableToolSpecificSmooth" title="SculptBrushParams.EnableToolSpecificSmooth"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushParams.EnableToolSpecificSmooth(self,</span> <span class="pre">enable)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Does the brush have its own smooth operation that gets used when you press the shift key?</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SculptBrushParams.EnableModifier" title="SculptBrushParams.EnableModifier"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushParams.EnableModifier(self,</span> <span class="pre">enable)</span></code></a></td>
+<td>Tells the system that this brush can use modifiers from other brushes (display the modifiers tab).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SculptBrushParams.EnableDrawDirection" title="SculptBrushParams.EnableDrawDirection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushParams.EnableDrawDirection(self,</span> <span class="pre">enable)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">When enabled the Draw Direction UI will appear in the settings tab.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SculptBrushParams.EnableRespectSelections" title="SculptBrushParams.EnableRespectSelections"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushParams.EnableRespectSelections(self,</span> <span class="pre">enable)</span></code></a></td>
+<td>When enabled will tell the brush to respect Point and Polygon selections when in Point or Polygon mode respectively.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SculptBrushParams.EnableFillToolIsolatedPointRemover" title="SculptBrushParams.EnableFillToolIsolatedPointRemover"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushParams.EnableFillToolIsolatedPointRemover(self,</span> <span class="pre">enable)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">When this is enabled it will tell the Fill algorithm to remove any isolated points. That is any points that are selected but have no neighboring selections.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SculptBrushParams.EnablePressureHUD" title="SculptBrushParams.EnablePressureHUD"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushParams.EnablePressureHUD(self,</span> <span class="pre">enable)</span></code></a></td>
+<td>When enabled will display the pressure value in the sculpting size/pressure HUD.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SculptBrushParams.EnableBackfaceSculpting" title="SculptBrushParams.EnableBackfaceSculpting"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushParams.EnableBackfaceSculpting(self,</span> <span class="pre">enable)</span></code></a></td>
+<td>Tells the system that this brush supports backface sculpting and that the backface option should be displayed in the brushes settings.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SculptBrushParams.EnableMouseData" title="SculptBrushParams.EnableMouseData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushParams.EnableMouseData(self,</span> <span class="pre">enable)</span></code></a></td>
+<td>Enables/disables the callback for the <a class="reference internal" href="../../../c4d.plugins/BaseData/SculptBrushToolData/index.html#SculptBrushToolData.MouseData" title="SculptBrushToolData.MouseData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushToolData.MouseData()</span></code></a> method.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SculptBrushParams.SetFloodType" title="SculptBrushParams.SetFloodType"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushParams.SetFloodType(self,</span> <span class="pre">type)</span></code></a></td>
+<td>Specifies what kind of data the flood operation will change (points or mask).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SculptBrushParams.SetBrushMode" title="SculptBrushParams.SetBrushMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushParams.SetBrushMode(self,</span> <span class="pre">mode)</span></code></a></td>
+<td>Specifies what type of brush this is (grab or normal).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SculptBrushParams.SetFirstHitPointType" title="SculptBrushParams.SetFirstHitPointType"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushParams.SetFirstHitPointType(self,</span> <span class="pre">type)</span></code></a></td>
+<td>Specifies what should happen when the user first clicks on model before dragging.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SculptBrushParams.SetUndoType" title="SculptBrushParams.SetUndoType"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushParams.SetUndoType(self,</span> <span class="pre">type)</span></code></a></td>
+<td>Specifies what kind of data the brush will be changing and storing in the undo system (point or mask).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SculptBrushParams.SetPolygonObjectDirtyFlags" title="SculptBrushParams.SetPolygonObjectDirtyFlags"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushParams.SetPolygonObjectDirtyFlags(self,</span> <span class="pre">type)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Sets which flags should be checked to do a rebuild of the collision structure for a <a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/PointObject/PolygonObject/index.html#c4d.PolygonObject" title="c4d.PolygonObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PolygonObject</span></code></a>.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="SculptBrushParams.EnableStencil">
+<code class="descclassname">SculptBrushParams.</code><code class="descname">EnableStencil</code><span class="sig-paren">(</span><em>self</em>, <em>enable</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptBrushParams.EnableStencil" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Does the brush use stencils?</div>
+<div class="line">Settings this to <strong>False</strong> will let the brush know that you are not going to be using stencils. This will free up some resource and computation time.</div>
+<div class="line">Note that setting to <strong>False</strong> will also remove the tab from the brush interface.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>enable</strong> (<em>bool</em>) – <div class="line-block">
+<div class="line"><strong>True</strong> if the brush uses stencils, otherwise <strong>False</strong>.</div>
+<div class="line">Default is <strong>True</strong>.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptBrushParams.EnableStamp">
+<code class="descclassname">SculptBrushParams.</code><code class="descname">EnableStamp</code><span class="sig-paren">(</span><em>self</em>, <em>enable</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptBrushParams.EnableStamp" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Does the brush use stamps?</div>
+<div class="line">Setting this to <strong>False</strong> will let the brush know that you are not going to be using stamps. This will free up some resource and computation time.</div>
+<div class="line">Note that setting to <strong>False</strong> will also remove the tab from the brush interface.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>enable</strong> (<em>bool</em>) – <strong>True</strong> if the brush uses stamps, otherwise <strong>False</strong>. Default is <strong>True</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptBrushParams.EnableInvertCheckbox">
+<code class="descclassname">SculptBrushParams.</code><code class="descname">EnableInvertCheckbox</code><span class="sig-paren">(</span><em>self</em>, <em>enable</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptBrushParams.EnableInvertCheckbox" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Does the brush use the invert checkbox?</div>
+<div class="line">Lets the system know if you are using the invert checkbox or not.</div>
+</div>
+<div class="line-block">
+<div class="line">Note that by default the invert checkbox is not part of the base <cite>.res</cite> file so you will need to add it yourself to your own brushes <cite>.res</cite> file.</div>
+<div class="line">To do this just add the following data to your .res file exactly as shown:</div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">GROUP</span> <span class="n">MDATA_SCULPTBRUSH_SETTINGS_GROUP</span>
+<span class="p">{</span>
+    <span class="n">COLUMNS</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="n">BOOL</span> <span class="n">MDATA_SCULPTBRUSH_SETTINGS_INVERT</span> <span class="p">{</span> <span class="p">}</span>
+    <span class="n">STATICTEXT</span> <span class="p">{</span> <span class="n">DUMMY</span><span class="p">;</span> <span class="p">}</span>
+    <span class="n">STATICTEXT</span> <span class="p">{</span> <span class="n">DUMMY</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>enable</strong> (<em>bool</em>) – <div class="line-block">
+<div class="line"><strong>True</strong> if the brush uses the invert checkbox, otherwise <strong>False</strong>.</div>
+<div class="line">Default is <strong>False</strong>.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptBrushParams.EnableBuildup">
+<code class="descclassname">SculptBrushParams.</code><code class="descname">EnableBuildup</code><span class="sig-paren">(</span><em>self</em>, <em>enable</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptBrushParams.EnableBuildup" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Does the brush use the buildup slider?</div>
+<div class="line">Lets the system know if you are using the buildup slider or not.</div>
+</div>
+<div class="line-block">
+<div class="line">Note that by default the buildup slider is not part of the base <cite>.res</cite> file so you will need to add it yourself to your own brushes <cite>.res</cite> file.</div>
+<div class="line">To do this just add the following data to your .res file exactly as shown:</div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">GROUP</span> <span class="n">MDATA_SCULPTBRUSH_SETTINGS_GROUP</span>
+<span class="p">{</span>
+    <span class="n">COLUMNS</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="n">REAL</span> <span class="n">MDATA_SCULPTBRUSH_SETTINGS_BUILDUP</span> <span class="p">{</span> <span class="n">MIN</span> <span class="mi">1</span><span class="p">;</span> <span class="n">MAX</span> <span class="mi">100</span><span class="p">;</span> <span class="n">MINSLIDER</span> <span class="mi">1</span><span class="p">;</span> <span class="n">MAXSLIDER</span> <span class="mi">100</span><span class="p">;</span> <span class="n">CUSTOMGUI</span> <span class="n">REALSLIDER</span><span class="p">;</span> <span class="n">FIT_H</span><span class="p">;</span> <span class="n">SCALE_H</span><span class="p">;</span> <span class="p">}</span>
+    <span class="n">STATICTEXT</span> <span class="p">{</span> <span class="n">JOINENDSCALE</span><span class="p">;</span> <span class="p">}</span>
+    <span class="n">STATICTEXT</span> <span class="p">{</span> <span class="n">JOINEND</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>enable</strong> (<em>bool</em>) – <div class="line-block">
+<div class="line"><strong>True</strong> if the brush uses the buildup slider, otherwise <strong>False</strong>.</div>
+<div class="line">Default is <strong>False</strong>.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptBrushParams.EnableNonModelPickMode">
+<code class="descclassname">SculptBrushParams.</code><code class="descname">EnableNonModelPickMode</code><span class="sig-paren">(</span><em>self</em>, <em>enable</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptBrushParams.EnableNonModelPickMode" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Does the brush do anything if the user clicks off of a model?</div>
+<div class="line">I.e. have you implemented <code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushToolData.HandleNonModelPickMode</span> <span class="pre">and</span> <span class="pre">:meth:`SculptBrushToolData.DrawNonModelPickMode()</span></code>?</div>
+<div class="line">Private.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>enable</strong> (<em>bool</em>) – <div class="line-block">
+<div class="line"><strong>True</strong> if the brush has implemented <a class="reference internal" href="../../../c4d.plugins/BaseData/SculptBrushToolData/index.html#SculptBrushToolData.HandleNonModelPickMode" title="SculptBrushToolData.HandleNonModelPickMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushToolData.HandleNonModelPickMode()</span></code></a> and <a class="reference internal" href="../../../c4d.plugins/BaseData/SculptBrushToolData/index.html#SculptBrushToolData.DrawNonModelPickMode" title="SculptBrushToolData.DrawNonModelPickMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushToolData.DrawNonModelPickMode()</span></code></a>, otherwise <strong>False</strong>.</div>
+<div class="line">Default is <strong>False</strong>.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptBrushParams.EnableFlood">
+<code class="descclassname">SculptBrushParams.</code><code class="descname">EnableFlood</code><span class="sig-paren">(</span><em>self</em>, <em>enable</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptBrushParams.EnableFlood" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Does the brush have a Flood function?</div>
+<div class="line">I.e. have you implemented FloodSelectedLayer.</div>
+</div>
+<div class="line-block">
+<div class="line">Note that by default the Flood button is not part of the base <cite>.res</cite> file so you will need to add it yourself to your own brushes <cite>.res</cite> file.</div>
+<div class="line">To do this just add the following data to your .res file exactly as shown:</div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">GROUP</span> <span class="n">MDATA_SCULPTBRUSH_SETTINGS_GROUP</span>
+<span class="p">{</span>
+    <span class="n">COLUMNS</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="n">BUTTON</span> <span class="n">MDATA_SCULPTBRUSH_SETTINGS_FLOOD</span><span class="p">{</span> <span class="p">}</span>
+    <span class="n">STATICTEXT</span> <span class="p">{</span> <span class="n">JOINENDSCALE</span><span class="p">;</span> <span class="p">}</span>
+    <span class="n">STATICTEXT</span> <span class="p">{</span> <span class="n">JOINEND</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>enable</strong> (<em>bool</em>) – <div class="line-block">
+<div class="line"><strong>True</strong> if the brush has implemented a Flood function, otherwise <strong>False</strong>.</div>
+<div class="line">Default is <strong>False</strong>.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptBrushParams.EnableToolSpecificSmooth">
+<code class="descclassname">SculptBrushParams.</code><code class="descname">EnableToolSpecificSmooth</code><span class="sig-paren">(</span><em>self</em>, <em>enable</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptBrushParams.EnableToolSpecificSmooth" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Does the brush have its own smooth operation that gets used when you press the shift key?</div>
+<div class="line">You can check for this in the <a class="reference internal" href="../../../c4d.plugins/BaseData/SculptBrushToolData/index.html#SculptBrushToolData.ApplyDab" title="SculptBrushToolData.ApplyDab"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushToolData.ApplyDab()</span></code></a> method by checking if (GetBrushOverride() &amp; <em>OVERRIDE_SMOOTHTOOL</em>) is <strong>True</strong> and then you can implement your own smooth method.</div>
+<div class="line">Otherwise it will use the Smooth Brush for smoothing.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>enable</strong> (<em>bool</em>) – <strong>True</strong> if you are handling smoothing yourself, otherwise <strong>False</strong>. Default is <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptBrushParams.EnableModifier">
+<code class="descclassname">SculptBrushParams.</code><code class="descname">EnableModifier</code><span class="sig-paren">(</span><em>self</em>, <em>enable</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptBrushParams.EnableModifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tells the system that this brush can use modifiers from other brushes (display the modifiers tab).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>enable</strong> (<em>bool</em>) – Set to <strong>True</strong> if you want this brush to be able to use modifiers from other brushes.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptBrushParams.EnableDrawDirection">
+<code class="descclassname">SculptBrushParams.</code><code class="descname">EnableDrawDirection</code><span class="sig-paren">(</span><em>self</em>, <em>enable</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptBrushParams.EnableDrawDirection" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">When enabled the Draw Direction UI will appear in the settings tab.</div>
+<div class="line">Calls can then be made to <a class="reference internal" href="../BrushDabData/index.html#BrushDabData.GetDrawDirectionNormal" title="BrushDabData.GetDrawDirectionNormal"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetDrawDirectionNormal()</span></code></a> to get the direction of the normal based on the currently selected Draw Direction.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>enable</strong> (<em>bool</em>) – Set to <strong>True</strong> to display the Draw Direction UI. Disabled by default.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptBrushParams.EnableRespectSelections">
+<code class="descclassname">SculptBrushParams.</code><code class="descname">EnableRespectSelections</code><span class="sig-paren">(</span><em>self</em>, <em>enable</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptBrushParams.EnableRespectSelections" title="Permalink to this definition">¶</a></dt>
+<dd><p>When enabled will tell the brush to respect Point and Polygon selections when in Point or Polygon mode respectively.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>enable</strong> (<em>bool</em>) – <div class="line-block">
+<div class="line"><strong>True</strong> if the brush should respect selections, otherwise <strong>False</strong>.</div>
+<div class="line">Default is <strong>False</strong>.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptBrushParams.EnableFillToolIsolatedPointRemover">
+<code class="descclassname">SculptBrushParams.</code><code class="descname">EnableFillToolIsolatedPointRemover</code><span class="sig-paren">(</span><em>self</em>, <em>enable</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptBrushParams.EnableFillToolIsolatedPointRemover" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">When this is enabled it will tell the Fill algorithm to remove any isolated points. That is any points that are selected but have no neighboring selections.</div>
+<div class="line"><br /></div>
+<div class="line">This can happen on high resolution meshes due to the nature of the hit detection against screen space pixels defined by the fill tools.</div>
+<div class="line">By setting this to <strong>False</strong> it will keep any isolated points that are selected.</div>
+<div class="line">This is set to <strong>True</strong> by default so isolated points are removed before being sent to the <a class="reference internal" href="../../../c4d.plugins/BaseData/SculptBrushToolData/index.html#SculptBrushToolData.ApplyDab" title="SculptBrushToolData.ApplyDab"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushToolData.ApplyDab()</span></code></a> function.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>enable</strong> (<em>bool</em>) – <div class="line-block">
+<div class="line"><strong>True</strong> if the brush should remove isolated points, <strong>False</strong> if it should keep them.</div>
+<div class="line">Default is <strong>True</strong>.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptBrushParams.EnablePressureHUD">
+<code class="descclassname">SculptBrushParams.</code><code class="descname">EnablePressureHUD</code><span class="sig-paren">(</span><em>self</em>, <em>enable</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptBrushParams.EnablePressureHUD" title="Permalink to this definition">¶</a></dt>
+<dd><p>When enabled will display the pressure value in the sculpting size/pressure HUD.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>enable</strong> (<em>bool</em>) – <div class="line-block">
+<div class="line"><strong>True</strong> if the brush should dispay the pressure value, otherwise <strong>False</strong>.</div>
+<div class="line">Default is <strong>True</strong>.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptBrushParams.EnableBackfaceSculpting">
+<code class="descclassname">SculptBrushParams.</code><code class="descname">EnableBackfaceSculpting</code><span class="sig-paren">(</span><em>self</em>, <em>enable</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptBrushParams.EnableBackfaceSculpting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tells the system that this brush supports backface sculpting and that the backface option should be displayed in the brushes settings.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R17.032.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>enable</strong> (<em>bool</em>) – <div class="line-block">
+<div class="line"><strong>True</strong> if the brush supports backface sculpting, otherwise <strong>False</strong>.</div>
+<div class="line">Default is <strong>False</strong>.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptBrushParams.EnableMouseData">
+<code class="descclassname">SculptBrushParams.</code><code class="descname">EnableMouseData</code><span class="sig-paren">(</span><em>self</em>, <em>enable</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptBrushParams.EnableMouseData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables/disables the callback for the <a class="reference internal" href="../../../c4d.plugins/BaseData/SculptBrushToolData/index.html#SculptBrushToolData.MouseData" title="SculptBrushToolData.MouseData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushToolData.MouseData()</span></code></a> method.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R17.048.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>enable</strong> (<em>bool</em>) – <div class="line-block">
+<div class="line"><strong>True</strong> if the brush needs the <a class="reference internal" href="../../../c4d.plugins/BaseData/SculptBrushToolData/index.html#SculptBrushToolData.MouseData" title="SculptBrushToolData.MouseData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushToolData.MouseData()</span></code></a> callback, otherwise <strong>False</strong>.</div>
+<div class="line">Default is <strong>True</strong>.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptBrushParams.SetFloodType">
+<code class="descclassname">SculptBrushParams.</code><code class="descname">SetFloodType</code><span class="sig-paren">(</span><em>self</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptBrushParams.SetFloodType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies what kind of data the flood operation will change (points or mask).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>int</em>) – The flood data type. Default is <em>SCULPTBRUSHDATATYPE_POINT</em>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptBrushParams.SetBrushMode">
+<code class="descclassname">SculptBrushParams.</code><code class="descname">SetBrushMode</code><span class="sig-paren">(</span><em>self</em>, <em>mode</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptBrushParams.SetBrushMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies what type of brush this is (grab or normal).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mode</strong> (<em>int</em>) – The brush mode. Default is <em>SCULPTBRUSHMODE_NORMAL</em>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptBrushParams.SetFirstHitPointType">
+<code class="descclassname">SculptBrushParams.</code><code class="descname">SetFirstHitPointType</code><span class="sig-paren">(</span><em>self</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptBrushParams.SetFirstHitPointType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies what should happen when the user first clicks on model before dragging.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>int</em>) – The first hitpoint type. Default is <em>FIRSTHITPPOINTTYPE_SELECTED</em>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptBrushParams.SetUndoType">
+<code class="descclassname">SculptBrushParams.</code><code class="descname">SetUndoType</code><span class="sig-paren">(</span><em>self</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptBrushParams.SetUndoType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies what kind of data the brush will be changing and storing in the undo system (point or mask).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>int</em>) – The brush data type. Default is <em>SCULPTBRUSHDATATYPE_POINT</em>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptBrushParams.SetPolygonObjectDirtyFlags">
+<code class="descclassname">SculptBrushParams.</code><code class="descname">SetPolygonObjectDirtyFlags</code><span class="sig-paren">(</span><em>self</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptBrushParams.SetPolygonObjectDirtyFlags" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Sets which flags should be checked to do a rebuild of the collision structure for a <a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/PointObject/PolygonObject/index.html#c4d.PolygonObject" title="c4d.PolygonObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PolygonObject</span></code></a>.</div>
+<div class="line">These flags are used to check against the PolygonObjects dirty flags when a stroke is about to be done on a <a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/PointObject/PolygonObject/index.html#c4d.PolygonObject" title="c4d.PolygonObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PolygonObject</span></code></a>.</div>
+<div class="line">If the flags being checked are dirty since the last check then the collision cache structure for the object will be rebuilt.</div>
+<div class="line">This can be used in cases such as the Select Brush where you are not directly moving the points of the model during a stroke.</div>
+<div class="line">So you can set all the flags except the <strong>DIRTYFLAGS_SELECT</strong> - using something like <strong>DIRTYFLAGS_ALL &amp; ~DIRTYFLAGS_SELECT</strong> - to ensure that the object is not recalculated when just the select flags are changed.</div>
+<div class="line">In all other cases the object will be rebuilt.</div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R17.032.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>int</em>) – <p>The dirty flags to check:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="26%" />
+<col width="74%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>DIRTYFLAGS_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>DIRTYFLAGS_MATRIX</em></td>
+<td>Matrix changed.</td>
+</tr>
+<tr class="row-odd"><td><em>DIRTYFLAGS_DATA</em></td>
+<td>Container changed.</td>
+</tr>
+<tr class="row-even"><td><em>DIRTYFLAGS_SELECT</em></td>
+<td>Checks all valid selections of the object, e.g. points, edge, polys.</td>
+</tr>
+<tr class="row-odd"><td><em>DIRTYFLAGS_CACHE</em></td>
+<td>Checks if the cache of an object has been changed (rebuilt).</td>
+</tr>
+<tr class="row-even"><td><em>DIRTYFLAGS_CHILDREN</em></td>
+<td>Checks if the children are dirty.</td>
+</tr>
+<tr class="row-odd"><td><em>DIRTYFLAGS_DESCRIPTION</em></td>
+<td>Description changed.</td>
+</tr>
+<tr class="row-even"><td><em>DIRTYFLAGS_SELECTION_OBJECTS</em></td>
+<td>For <a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDocument</span></code></a>, object selections have changed.</td>
+</tr>
+<tr class="row-odd"><td><em>DIRTYFLAGS_SELECTION_TAGS</em></td>
+<td>For <a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDocument</span></code></a>, tag selections have changed.</td>
+</tr>
+<tr class="row-even"><td><em>DIRTYFLAGS_SELECTION_MATERIALS</em></td>
+<td>For <a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDocument</span></code></a>, material selections have changed.</td>
+</tr>
+<tr class="row-odd"><td><em>DIRTYFLAGS_ALL</em></td>
+<td>Check all dirty flags.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../SculptModifierInterface/index.html" title="c4d.modules.sculpting.SculptModifierInterface"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../BrushDabData/index.html" title="c4d.modules.sculpting.BrushDabData"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.modules.sculpting</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

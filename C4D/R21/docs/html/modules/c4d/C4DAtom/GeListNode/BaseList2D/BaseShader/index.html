@@ -1,0 +1,475 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.BaseShader &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title="c4d.LayerShader" href="LayerShader/index.html" />
+    <link rel="prev" title="c4d.VoronoiFracture" href="../BaseObject/VoronoiFracture/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="LayerShader/index.html" title="c4d.LayerShader"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../BaseObject/VoronoiFracture/index.html" title="c4d.VoronoiFracture"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../../index.html" >c4d</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../../index.html" >c4d.C4DAtom</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../../index.html" >c4d.GeListNode</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="../index.html" accesskey="U">c4d.BaseList2D</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-baseshader">
+<h1>c4d.BaseShader<a class="headerlink" href="#c4d-baseshader" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.BaseShader">
+<em class="property">class </em><code class="descclassname">c4d.</code><code class="descname">BaseShader</code><a class="headerlink" href="#c4d.BaseShader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a shader in the shader tree of a channel.</p>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BaseShader.__init__" title="BaseShader.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseShader.__init__(self,</span> <span class="pre">type)</span></code></a></td>
+<td>Initialize a new <a class="reference internal" href="#c4d.BaseShader" title="c4d.BaseShader"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseShader</span></code></a> in memory.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BaseShader.Sample" title="BaseShader.Sample"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseShader.Sample(self,</span> <span class="pre">cd)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Calls <a class="reference internal" href="../../../../../c4d.plugins/BaseData/NodeData/ShaderData/index.html#ShaderData.Output" title="ShaderData.Output"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ShaderData.Output()</span></code></a> for the corresponding shader plugin.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseShader.SampleBump" title="BaseShader.SampleBump"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseShader.SampleBump(self,</span> <span class="pre">cd,</span> <span class="pre">bumpflags)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">This function allows you to calculate bump mapping for a shader (and its children) with the same algorithm as Cinema 4D does.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseShader.GetBitmap" title="BaseShader.GetBitmap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseShader.GetBitmap(self)</span></code></a></td>
+<td>Returns the bitmap of shaders of type <em>Xbitmap</em>, otherwise None.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseShader.GetRenderInfo" title="BaseShader.GetRenderInfo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseShader.GetRenderInfo(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Calls <cite>ShaderData.GetRenderInfo()</cite> for the corresponding shader plugin.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseShader.InitRender" title="BaseShader.InitRender"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseShader.InitRender(self,</span> <span class="pre">is_)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Calls <a class="reference internal" href="../../../../../c4d.plugins/BaseData/NodeData/ShaderData/index.html#ShaderData.InitRender" title="ShaderData.InitRender"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ShaderData.InitRender()</span></code></a> for the corresponding shader plugin.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseShader.FreeRender" title="BaseShader.FreeRender"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseShader.FreeRender(self)</span></code></a></td>
+<td>Frees all resources used by this shader, allocated by calling <code class="xref py py-meth docutils literal notranslate"><span class="pre">InitRender()</span></code>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseShader.IsColorManagementOff" title="BaseShader.IsColorManagementOff"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseShader.IsColorManagementOff(self,</span> <span class="pre">doc)</span></code></a></td>
+<td>It checks if color management is disabled for shaders within bump, alpha, displacement or normal channels when linear workflow is enabled.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseShader.Compare" title="BaseShader.Compare"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseShader.Compare(self,</span> <span class="pre">dst)</span></code></a></td>
+<td>Checks if this shader is similar to <em>dst</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseShader.HasGPURendererSupport" title="BaseShader.HasGPURendererSupport"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseShader.HasGPURendererSupport(self)</span></code></a></td>
+<td>Checks if the shader is supported by the GPU Renderer.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../index.html#c4d.BaseList2D" title="c4d.BaseList2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseList2D</span></code></a></li>
+</ul>
+<p>Child Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="LayerShader/index.html#c4d.LayerShader" title="c4d.LayerShader"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.LayerShader</span></code></a></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="BaseShader.__init__">
+<code class="descclassname">BaseShader.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseShader.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize a new <a class="reference internal" href="#c4d.BaseShader" title="c4d.BaseShader"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseShader</span></code></a> in memory.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>int</em>) – The shader type : <a class="reference internal" href="../../../../../../types/shaders.html"><span class="doc">Shader Types</span></a>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.BaseShader" title="c4d.BaseShader">c4d.BaseShader</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The new shader.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseShader.Sample">
+<code class="descclassname">BaseShader.</code><code class="descname">Sample</code><span class="sig-paren">(</span><em>self</em>, <em>cd</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseShader.Sample" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Calls <a class="reference internal" href="../../../../../c4d.plugins/BaseData/NodeData/ShaderData/index.html#ShaderData.Output" title="ShaderData.Output"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ShaderData.Output()</span></code></a> for the corresponding shader plugin.</div>
+<div class="line">The channel color for the point cd.p is calculated.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This has to be done within a pair of <a class="reference internal" href="#BaseShader.InitRender" title="BaseShader.InitRender"><code class="xref py py-meth docutils literal notranslate"><span class="pre">InitRender()</span></code></a> / <a class="reference internal" href="#BaseShader.FreeRender" title="BaseShader.FreeRender"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FreeRender()</span></code></a> calls.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cd</strong> (<a class="reference internal" href="../../../../../c4d.modules/render/ChannelData/index.html#c4d.modules.render.ChannelData" title="c4d.modules.render.ChannelData"><em>c4d.modules.render.ChannelData</em></a>) – The channel data to use.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The calculated color.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseShader.SampleBump">
+<code class="descclassname">BaseShader.</code><code class="descname">SampleBump</code><span class="sig-paren">(</span><em>self</em>, <em>cd</em>, <em>bumpflags</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseShader.SampleBump" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">This function allows you to calculate bump mapping for a shader (and its children) with the same algorithm as Cinema 4D does.</div>
+<div class="line">The function returns the delta vector that is added to the normal.</div>
+<div class="line">The resulting normal is calculated by:</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n_dst</span> <span class="o">=</span>  <span class="ow">not</span> <span class="p">(</span><span class="n">n_src</span> <span class="o">+</span> <span class="n">SampleBump</span><span class="p">(</span><span class="n">SAMPLEBUMP_NONE</span><span class="p">))</span> <span class="c1"># normalize result</span>
+</pre></div>
+</div>
+<p>where <strong>n_src</strong> is the original normal and <strong>n_dst</strong> is the bumped normal.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">This has to be done within a pair of <a class="reference internal" href="#BaseShader.InitRender" title="BaseShader.InitRender"><code class="xref py py-meth docutils literal notranslate"><span class="pre">InitRender()</span></code></a> / <a class="reference internal" href="#BaseShader.FreeRender" title="BaseShader.FreeRender"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FreeRender()</span></code></a> calls.</div>
+<div class="line">Also the <a class="reference internal" href="../../../../../c4d.modules/render/BaseVolumeData/index.html#BaseVolumeData.ddu" title="BaseVolumeData.ddu"><code class="xref py py-attr docutils literal notranslate"><span class="pre">BaseVolumeData.ddu</span></code></a> and <a class="reference internal" href="../../../../../c4d.modules/render/BaseVolumeData/index.html#BaseVolumeData.ddv" title="BaseVolumeData.ddv"><code class="xref py py-attr docutils literal notranslate"><span class="pre">BaseVolumeData.ddv</span></code></a> vectors have to be initialized.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>cd</strong> (<a class="reference internal" href="../../../../../c4d.modules/render/ChannelData/index.html#c4d.modules.render.ChannelData" title="c4d.modules.render.ChannelData"><em>c4d.modules.render.ChannelData</em></a>) – The channel data to use.</li>
+<li><strong>bumpflags</strong> (<em>int</em>) – <p>Flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="69%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>SAMPLEBUMP_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>SAMPLEBUMP_MIPFALLOFF</em></td>
+<td>Additional bump change over distance is considered.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The delta normal.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseShader.GetBitmap">
+<code class="descclassname">BaseShader.</code><code class="descname">GetBitmap</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseShader.GetBitmap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the bitmap of shaders of type <em>Xbitmap</em>, otherwise None.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This has to be done within a pair of <a class="reference internal" href="#BaseShader.InitRender" title="BaseShader.InitRender"><code class="xref py py-meth docutils literal notranslate"><span class="pre">InitRender()</span></code></a> / <a class="reference internal" href="#BaseShader.FreeRender" title="BaseShader.FreeRender"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FreeRender()</span></code></a> calls.</p>
+</div>
+<p>Here is an example.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">material</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">GetFirstMaterial</span><span class="p">()</span>
+
+<span class="n">shader</span> <span class="o">=</span> <span class="n">material</span><span class="p">[</span><span class="n">c4d</span><span class="o">.</span><span class="n">MATERIAL_COLOR_SHADER</span><span class="p">]</span>
+
+<span class="n">irs</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">InitRenderStruct</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">shader</span><span class="o">.</span><span class="n">InitRender</span><span class="p">(</span><span class="n">irs</span><span class="p">)</span> <span class="o">==</span> <span class="n">c4d</span><span class="o">.</span><span class="n">INITRENDERRESULT_OK</span><span class="p">:</span>
+    <span class="n">bitmap</span> <span class="o">=</span> <span class="n">shader</span><span class="o">.</span><span class="n">GetBitmap</span><span class="p">()</span>
+    <span class="n">shader</span><span class="o">.</span><span class="n">FreeRender</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">bitmap</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">bitmaps</span><span class="o">.</span><span class="n">ShowBitmap</span><span class="p">(</span><span class="n">bitmap</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../../c4d.bitmaps/BaseBitmap/index.html#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap">c4d.bitmaps.BaseBitmap</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The bitmap.<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The returned bitmap must be accessed as read-only.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseShader.GetRenderInfo">
+<code class="descclassname">BaseShader.</code><code class="descname">GetRenderInfo</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseShader.GetRenderInfo" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Calls <cite>ShaderData.GetRenderInfo()</cite> for the corresponding shader plugin.</div>
+<div class="line">This retrieves information about what the plugin requires from the raytracer and what it will return.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The return values are:<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>SHADERINFO_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>SHADERINFO_TRANSFORM</em></td>
+<td>Channel needs back-transformed data. (Required for <a class="reference internal" href="../../../../../c4d.modules/render/BaseVolumeData/index.html#BaseVolumeData.back_p" title="BaseVolumeData.back_p"><code class="xref py py-data docutils literal notranslate"><span class="pre">BaseVolumeData.back_p</span></code></a>.)</td>
+</tr>
+<tr class="row-odd"><td><em>SHADERINFO_BUMP_SUPPORT</em></td>
+<td>Channel shader supports bump. This is strongly recommended for all shaders except simple 2D (UV) samplers.</td>
+</tr>
+<tr class="row-even"><td><em>SHADERINFO_ALPHA_SUPPORT</em></td>
+<td>Channel shader supports alpha output.</td>
+</tr>
+<tr class="row-odd"><td><em>SHADERINFO_REFLECTIONS</em></td>
+<td>Channel shader computes reflections.</td>
+</tr>
+<tr class="row-even"><td><em>SHADERINFO_DUDVREQUIRED</em></td>
+<td>Channel shader needs du/dv bump mapping data. See <a class="reference internal" href="../../../../../c4d.modules/render/BaseVolumeData/index.html#BaseVolumeData.ddu" title="BaseVolumeData.ddu"><code class="xref py py-data docutils literal notranslate"><span class="pre">BaseVolumeData.ddu</span></code></a> and <a class="reference internal" href="../../../../../c4d.modules/render/BaseVolumeData/index.html#BaseVolumeData.ddv" title="BaseVolumeData.ddv"><code class="xref py py-data docutils literal notranslate"><span class="pre">BaseVolumeData.ddv</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>SHADERINFO_DYNAMICSUBSHADERS</em></td>
+<td>Channel shader has a dynamic list of sub-shaders in its description.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseShader.InitRender">
+<code class="descclassname">BaseShader.</code><code class="descname">InitRender</code><span class="sig-paren">(</span><em>self</em>, <em>is_</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseShader.InitRender" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Calls <a class="reference internal" href="../../../../../c4d.plugins/BaseData/NodeData/ShaderData/index.html#ShaderData.InitRender" title="ShaderData.InitRender"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ShaderData.InitRender()</span></code></a> for the corresponding shader plugin.</div>
+<div class="line">You have to do this before you can use the <a class="reference internal" href="#BaseShader.Sample" title="BaseShader.Sample"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Sample()</span></code></a>, <a class="reference internal" href="#BaseShader.SampleBump" title="BaseShader.SampleBump"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SampleBump()</span></code></a> or <a class="reference internal" href="#BaseShader.GetBitmap" title="BaseShader.GetBitmap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetBitmap()</span></code></a> functions.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">Remember to call <a class="reference internal" href="#BaseShader.FreeRender" title="BaseShader.FreeRender"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FreeRender()</span></code></a> afterwards.</div>
+<div class="line">You aren’t allowed to call <a class="reference internal" href="#BaseShader.InitRender" title="BaseShader.InitRender"><code class="xref py py-meth docutils literal notranslate"><span class="pre">InitRender()</span></code></a> multiple times without calling <a class="reference internal" href="#BaseShader.FreeRender" title="BaseShader.FreeRender"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FreeRender()</span></code></a> in between, even from multiple threads!</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>is</strong> (<a class="reference internal" href="../../../../../c4d.modules/render/InitRenderStruct/index.html#c4d.modules.render.InitRenderStruct" title="c4d.modules.render.InitRenderStruct"><em>c4d.modules.render.InitRenderStruct</em></a>) – Information about the upcoming rendering.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Result of the initialisation:<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="67%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>INITRENDERRESULT_OK</em></td>
+<td>Everything is OK, there was no error.</td>
+</tr>
+<tr class="row-even"><td><em>INITRENDERRESULT_OUTOFMEMORY</em></td>
+<td>Not enough memory.</td>
+</tr>
+<tr class="row-odd"><td><em>INITRENDERRESULT_ASSETMISSING</em></td>
+<td>Assets (textures etc.) are missing.</td>
+</tr>
+<tr class="row-even"><td><em>INITRENDERRESULT_UNKNOWNERROR</em></td>
+<td>Unknown error.</td>
+</tr>
+<tr class="row-odd"><td><em>INITRENDERRESULT_USERBREAK</em></td>
+<td><div class="first last versionchanged">
+<p><span class="versionmodified">Changed in version R17.032: </span>Was <em>INITRENDERRESULT_THREADEDLOCK</em>.
+Thread has been canceled.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseShader.FreeRender">
+<code class="descclassname">BaseShader.</code><code class="descname">FreeRender</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseShader.FreeRender" title="Permalink to this definition">¶</a></dt>
+<dd><p>Frees all resources used by this shader, allocated by calling <a class="reference internal" href="#BaseShader.InitRender" title="BaseShader.InitRender"><code class="xref py py-meth docutils literal notranslate"><span class="pre">InitRender()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseShader.IsColorManagementOff">
+<code class="descclassname">BaseShader.</code><code class="descname">IsColorManagementOff</code><span class="sig-paren">(</span><em>self</em>, <em>doc</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseShader.IsColorManagementOff" title="Permalink to this definition">¶</a></dt>
+<dd><p>It checks if color management is disabled for shaders within bump, alpha, displacement or normal channels when linear workflow is enabled.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>doc</strong> (<a class="reference internal" href="../../../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document containing the shader to check if linear workflow is disabled in it.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if color managment is disabled, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseShader.Compare">
+<code class="descclassname">BaseShader.</code><code class="descname">Compare</code><span class="sig-paren">(</span><em>self</em>, <em>dst</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseShader.Compare" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if this shader is similar to <em>dst</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dst</strong> (<a class="reference internal" href="#c4d.BaseShader" title="c4d.BaseShader"><em>c4d.BaseShader</em></a>) – The shader to compare to.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the plugin shaders are the same, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseShader.HasGPURendererSupport">
+<code class="descclassname">BaseShader.</code><code class="descname">HasGPURendererSupport</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseShader.HasGPURendererSupport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the shader is supported by the GPU Renderer.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.024.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the shader is natively supported by the GPU Renderer, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="LayerShader/index.html" title="c4d.LayerShader"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../BaseObject/VoronoiFracture/index.html" title="c4d.VoronoiFracture"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../../index.html" >c4d</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../../index.html" >c4d.C4DAtom</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../../index.html" >c4d.GeListNode</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="../index.html" >c4d.BaseList2D</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

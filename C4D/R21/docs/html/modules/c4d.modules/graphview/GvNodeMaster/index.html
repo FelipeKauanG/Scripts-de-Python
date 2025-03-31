@@ -1,0 +1,432 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.graphview.GvNodeMaster &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.modules.graphview.GvPort" href="../GvPort/index.html" />
+    <link rel="prev" title="c4d.modules.graphview.GvNode" href="../GvNode/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../GvPort/index.html" title="c4d.modules.graphview.GvPort"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../GvNode/index.html" title="c4d.modules.graphview.GvNode"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.modules.graphview</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-graphview-gvnodemaster">
+<h1>c4d.modules.graphview.GvNodeMaster<a class="headerlink" href="#c4d-modules-graphview-gvnodemaster" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.graphview.GvNodeMaster">
+<em class="property">class </em><code class="descclassname">c4d.modules.graphview.</code><code class="descname">GvNodeMaster</code><a class="headerlink" href="#c4d.modules.graphview.GvNodeMaster" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <a class="reference internal" href="#c4d.modules.graphview.GvNodeMaster" title="c4d.modules.graphview.GvNodeMaster"><code class="xref py py-class docutils literal notranslate"><span class="pre">GvNodeMaster</span></code></a> stores a collection of <a class="reference internal" href="../GvNode/index.html#c4d.modules.graphview.GvNode" title="c4d.modules.graphview.GvNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">GvNode</span></code></a>.</p>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#GvNodeMaster.__init__" title="GvNodeMaster.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvNodeMaster.__init__(self,</span> <span class="pre">host)</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#GvNodeMaster.AllocNode" title="GvNodeMaster.AllocNode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvNodeMaster.AllocNode(self,</span> <span class="pre">id)</span></code></a></td>
+<td>Allocates a node without inserting it.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#GvNodeMaster.CreateNode" title="GvNodeMaster.CreateNode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvNodeMaster.CreateNode(self,</span> <span class="pre">parent,</span> <span class="pre">id[,</span> <span class="pre">...])</span></code></a></td>
+<td>Creates a node and inserts it.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#GvNodeMaster.GetRoot" title="GvNodeMaster.GetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvNodeMaster.GetRoot(self)</span></code></a></td>
+<td>Retrieves the root node.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#GvNodeMaster.GetOwner" title="GvNodeMaster.GetOwner"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvNodeMaster.GetOwner(self)</span></code></a></td>
+<td>Retrieves the owner.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#GvNodeMaster.InsertFirst" title="GvNodeMaster.InsertFirst"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvNodeMaster.InsertFirst(self,</span> <span class="pre">parent,</span> <span class="pre">node)</span></code></a></td>
+<td>Inserts a node first in the node list of an Xgroup.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#GvNodeMaster.InsertLast" title="GvNodeMaster.InsertLast"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvNodeMaster.InsertLast(self,</span> <span class="pre">parent,</span> <span class="pre">node)</span></code></a></td>
+<td>Inserts a node last in the node list of an Xgroup.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#GvNodeMaster.SetHierarchy" title="GvNodeMaster.SetHierarchy"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvNodeMaster.SetHierarchy(self,</span> <span class="pre">insert,</span> <span class="pre">node[,</span> <span class="pre">mode])</span></code></a></td>
+<td>Perform a hierarchy operation. Pass the arguments as a dictionary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#GvNodeMaster.IsEnabled" title="GvNodeMaster.IsEnabled"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvNodeMaster.IsEnabled(self)</span></code></a></td>
+<td>Checks if the node master is enabled.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#GvNodeMaster.GetPrefs" title="GvNodeMaster.GetPrefs"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvNodeMaster.GetPrefs(self)</span></code></a></td>
+<td>Returns the settings container.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#GvNodeMaster.SetPrefs" title="GvNodeMaster.SetPrefs"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvNodeMaster.SetPrefs(self,</span> <span class="pre">bc)</span></code></a></td>
+<td>Set the settings container.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#GvNodeMaster.AddUndo" title="GvNodeMaster.AddUndo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvNodeMaster.AddUndo(self)</span></code></a></td>
+<td>Call this function if you manipulated something with a node master, and you want it to be undoable.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#GvNodeMaster.Execute" title="GvNodeMaster.Execute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvNodeMaster.Execute(self)</span></code></a></td>
+<td>Calculates the <a class="reference internal" href="#c4d.modules.graphview.GvNodeMaster" title="c4d.modules.graphview.GvNodeMaster"><code class="xref py py-class docutils literal notranslate"><span class="pre">GvNodeMaster</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseList2D</span></code></a></li>
+</ul>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="GvNodeMaster.__init__">
+<code class="descclassname">GvNodeMaster.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>host</em><span class="sig-paren">)</span><a class="headerlink" href="#GvNodeMaster.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>host</strong> (<a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><em>BaseList2D</em></a>) – Attaches a <a class="reference internal" href="#c4d.modules.graphview.GvNodeMaster" title="c4d.modules.graphview.GvNodeMaster"><code class="xref py py-class docutils literal notranslate"><span class="pre">GvNodeMaster</span></code></a> to a BaseList2D object.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.modules.graphview.GvNodeMaster" title="c4d.modules.graphview.GvNodeMaster">c4d.modules.graphview.GvNodeMaster</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The new nodemaster.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvNodeMaster.AllocNode">
+<code class="descclassname">GvNodeMaster.</code><code class="descname">AllocNode</code><span class="sig-paren">(</span><em>self</em>, <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#GvNodeMaster.AllocNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allocates a node without inserting it.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id</strong> (<em>int</em>) – The id. See <a class="reference internal" href="../../../../types/gvnodes.html"><span class="doc">Graph View Node Types</span></a>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../GvNode/index.html#c4d.modules.graphview.GvNode" title="c4d.modules.graphview.GvNode">c4d.modules.graphview.GvNode</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The new node.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvNodeMaster.CreateNode">
+<code class="descclassname">GvNodeMaster.</code><code class="descname">CreateNode</code><span class="sig-paren">(</span><em>self</em>, <em>parent</em>, <em>id</em>, <em>insert=None</em>, <em>x=-1</em>, <em>y=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#GvNodeMaster.CreateNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a node and inserts it.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>parent</strong> (<a class="reference internal" href="../GvNode/index.html#c4d.modules.graphview.GvNode" title="c4d.modules.graphview.GvNode"><em>c4d.modules.graphview.GvNode</em></a>) – Parent node, can be <a class="reference internal" href="#GvNodeMaster.GetRoot" title="GvNodeMaster.GetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetRoot()</span></code></a>.</li>
+<li><strong>id</strong> (<em>int</em>) – The id. See <a class="reference internal" href="../../../../types/gvnodes.html"><span class="doc">Graph View Node Types</span></a>.</li>
+<li><strong>insert</strong> (<a class="reference internal" href="../GvNode/index.html#c4d.modules.graphview.GvNode" title="c4d.modules.graphview.GvNode"><em>c4d.modules.graphview.GvNode</em></a>) – The insertion point.</li>
+<li><strong>x</strong> (<em>int</em>) – X position</li>
+<li><strong>y</strong> (<em>int</em>) – Y position.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../GvNode/index.html#c4d.modules.graphview.GvNode" title="c4d.modules.graphview.GvNode">c4d.modules.graphview.GvNode</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The created node.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvNodeMaster.GetRoot">
+<code class="descclassname">GvNodeMaster.</code><code class="descname">GetRoot</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#GvNodeMaster.GetRoot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the root node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../GvNode/index.html#c4d.modules.graphview.GvNode" title="c4d.modules.graphview.GvNode">c4d.modules.graphview.GvNode</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The root node or <strong>None</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvNodeMaster.GetOwner">
+<code class="descclassname">GvNodeMaster.</code><code class="descname">GetOwner</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#GvNodeMaster.GetOwner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the owner.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D">c4d.BaseList2D</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The owner of the <a class="reference internal" href="#c4d.modules.graphview.GvNodeMaster" title="c4d.modules.graphview.GvNodeMaster"><code class="xref py py-class docutils literal notranslate"><span class="pre">GvNodeMaster</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvNodeMaster.InsertFirst">
+<code class="descclassname">GvNodeMaster.</code><code class="descname">InsertFirst</code><span class="sig-paren">(</span><em>self</em>, <em>parent</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#GvNodeMaster.InsertFirst" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserts a node first in the node list of an Xgroup.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Equivalent to <a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/index.html#GeListNode.InsertUnder" title="GeListNode.InsertUnder"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeListNode.InsertUnder()</span></code></a>, but with additional checks that parent is a group node, and that node is removed.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>parent</strong> (<a class="reference internal" href="../GvNode/index.html#c4d.modules.graphview.GvNode" title="c4d.modules.graphview.GvNode"><em>c4d.modules.graphview.GvNode</em></a>) – Parent node. Must be in the same node master.</li>
+<li><strong>node</strong> (<a class="reference internal" href="../GvNode/index.html#c4d.modules.graphview.GvNode" title="c4d.modules.graphview.GvNode"><em>c4d.modules.graphview.GvNode</em></a>) – Node to insert.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the node was inserted, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvNodeMaster.InsertLast">
+<code class="descclassname">GvNodeMaster.</code><code class="descname">InsertLast</code><span class="sig-paren">(</span><em>self</em>, <em>parent</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#GvNodeMaster.InsertLast" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserts a node last in the node list of an Xgroup.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Equivalent to <a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/index.html#GeListNode.InsertUnderLast" title="GeListNode.InsertUnderLast"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeListNode.InsertUnderLast()</span></code></a>, but with additional checks that parent is a group node, and that node is removed.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>parent</strong> (<a class="reference internal" href="../GvNode/index.html#c4d.modules.graphview.GvNode" title="c4d.modules.graphview.GvNode"><em>c4d.modules.graphview.GvNode</em></a>) – Parent node. Must be in the same node master.</li>
+<li><strong>node</strong> (<a class="reference internal" href="../GvNode/index.html#c4d.modules.graphview.GvNode" title="c4d.modules.graphview.GvNode"><em>c4d.modules.graphview.GvNode</em></a>) – Node to insert.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the node was inserted, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvNodeMaster.SetHierarchy">
+<code class="descclassname">GvNodeMaster.</code><code class="descname">SetHierarchy</code><span class="sig-paren">(</span><em>self</em>, <em>insert</em>, <em>node</em>, <em>mode=GV_INSERT_AFTER</em><span class="sig-paren">)</span><a class="headerlink" href="#GvNodeMaster.SetHierarchy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform a hierarchy operation. Pass the arguments as a dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>insert</strong> (<a class="reference internal" href="../GvNode/index.html#c4d.modules.graphview.GvNode" title="c4d.modules.graphview.GvNode"><em>c4d.modules.graphview.GvNode</em></a>) – Insertion point.</li>
+<li><strong>node</strong> (<a class="reference internal" href="../GvNode/index.html#c4d.modules.graphview.GvNode" title="c4d.modules.graphview.GvNode"><em>c4d.modules.graphview.GvNode</em></a>) – The node to perform the operation on.</li>
+<li><strong>mode</strong> (<em>int</em>) – <p>The insertion mode:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="46%" />
+<col width="54%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>GV_INSERT_UNDER</em></td>
+<td>Input port.</td>
+</tr>
+<tr class="row-even"><td><em>GV_INSERT_UNDER_LAST</em></td>
+<td>Insert under as last item.</td>
+</tr>
+<tr class="row-odd"><td><em>GV_INSERT_BEFORE</em></td>
+<td>Insert before.</td>
+</tr>
+<tr class="row-even"><td><em>GV_INSERT_AFTER</em></td>
+<td>Insert after.</td>
+</tr>
+<tr class="row-odd"><td><em>GV_INSERT_NONE</em></td>
+<td>Not used.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the hierarchy was set, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvNodeMaster.IsEnabled">
+<code class="descclassname">GvNodeMaster.</code><code class="descname">IsEnabled</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#GvNodeMaster.IsEnabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the node master is enabled.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.modules.graphview.GvNodeMaster" title="c4d.modules.graphview.GvNodeMaster">c4d.modules.graphview.GvNodeMaster</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the node master is enabled.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvNodeMaster.GetPrefs">
+<code class="descclassname">GvNodeMaster.</code><code class="descname">GetPrefs</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#GvNodeMaster.GetPrefs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the settings container.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer">c4d.BaseContainer</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A copy of the settings container.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvNodeMaster.SetPrefs">
+<code class="descclassname">GvNodeMaster.</code><code class="descname">SetPrefs</code><span class="sig-paren">(</span><em>self</em>, <em>bc</em><span class="sig-paren">)</span><a class="headerlink" href="#GvNodeMaster.SetPrefs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the settings container.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>bc</strong> (<a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The settings container.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvNodeMaster.AddUndo">
+<code class="descclassname">GvNodeMaster.</code><code class="descname">AddUndo</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#GvNodeMaster.AddUndo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call this function if you manipulated something with a node master, and you want it to be undoable.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvNodeMaster.Execute">
+<code class="descclassname">GvNodeMaster.</code><code class="descname">Execute</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#GvNodeMaster.Execute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the <a class="reference internal" href="#c4d.modules.graphview.GvNodeMaster" title="c4d.modules.graphview.GvNodeMaster"><code class="xref py py-class docutils literal notranslate"><span class="pre">GvNodeMaster</span></code></a>.</p>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../GvPort/index.html" title="c4d.modules.graphview.GvPort"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../GvNode/index.html" title="c4d.modules.graphview.GvNode"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.modules.graphview</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

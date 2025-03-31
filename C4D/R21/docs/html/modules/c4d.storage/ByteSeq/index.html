@@ -1,0 +1,436 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.storage.ByteSeq &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="c4d.storage.HyperFile" href="../HyperFile/index.html" />
+    <link rel="prev" title="c4d.storage" href="../index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../HyperFile/index.html" title="c4d.storage.HyperFile"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="c4d.storage"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">c4d.storage</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-storage-byteseq">
+<h1>c4d.storage.ByteSeq<a class="headerlink" href="#c4d-storage-byteseq" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.storage.ByteSeq">
+<em class="property">class </em><code class="descclassname">c4d.storage.</code><code class="descname">ByteSeq</code><a class="headerlink" href="#c4d.storage.ByteSeq" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Several objects and hooks in Cinema 4D allow Python to access the internal data on low-level.</div>
+<div class="line">These functions can be used to handle raw data.</div>
+<div class="line"><a class="reference internal" href="#c4d.storage.ByteSeq" title="c4d.storage.ByteSeq"><code class="xref py py-class docutils literal notranslate"><span class="pre">ByteSeq</span></code></a> is similar to the built-in <cite>Buffer Object</cite> but is optimized to work with Cinema 4D.</div>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#ByteSeq.__init__" title="ByteSeq.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ByteSeq.__init__(self,</span> <span class="pre">buf,</span> <span class="pre">len[,</span> <span class="pre">readonly])</span></code></a></td>
+<td>Allocates a byte sequence.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ByteSeq.__str__" title="ByteSeq.__str__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ByteSeq.__str__(self)</span></code></a></td>
+<td>Creates a string object from the byte sequence.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ByteSeq.__add__" title="ByteSeq.__add__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ByteSeq.__add__(self,</span> <span class="pre">other)</span></code></a></td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">type other:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ByteSeq.__compare__" title="ByteSeq.__compare__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ByteSeq.__compare__(self,</span> <span class="pre">other)</span></code></a></td>
+<td>Compares two byte sequences.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ByteSeq.__iter__" title="ByteSeq.__iter__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ByteSeq.__iter__(self)</span></code></a></td>
+<td>Iterates over the bytes of the object, interpreted as one-element string.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ByteSeq.__hash__" title="ByteSeq.__hash__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ByteSeq.__hash__(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Returns a hash of the byte sequence.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ByteSeq.__len__" title="ByteSeq.__len__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ByteSeq.__len__(self)</span></code></a></td>
+<td>Returns the length of the byte sequence.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ByteSeq.__setitem__" title="ByteSeq.__setitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ByteSeq.__setitem__(self,</span> <span class="pre">key,</span> <span class="pre">value)</span></code></a></td>
+<td>Replaces a byte at position <em>key</em> with the new <em>value</em>:</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ByteSeq.__getitem__" title="ByteSeq.__getitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ByteSeq.__getitem__(self,</span> <span class="pre">key)</span></code></a></td>
+<td>Gets the bytes at position key:</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#ByteSeq.GetClone" title="ByteSeq.GetClone"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ByteSeq.GetClone(self)</span></code></a></td>
+<td>Clones a byte sequence.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ByteSeq.GetOffset" title="ByteSeq.GetOffset"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ByteSeq.GetOffset(self,</span> <span class="pre">o)</span></code></a></td>
+<td>Returns buffer at offset <em>o</em> in this byte sequence.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="ByteSeq.__init__">
+<code class="descclassname">ByteSeq.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>buf</em>, <em>len</em>, <em>readonly=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ByteSeq.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allocates a byte sequence.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>buf</strong> (<em>PyCObject</em><em> or </em><em>None</em>) – PyCObject address or <strong>None</strong> to allocate a new pool of memory.</li>
+<li><strong>len</strong> (<em>int</em>) – The length of the new byte sequence.</li>
+<li><strong>readonly</strong> (<em>bool</em>) – Set to <strong>True</strong> if the byte sequence should be flagged as read-only, otherwise <strong>False</strong>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="#c4d.storage.ByteSeq" title="c4d.storage.ByteSeq">c4d.storage.ByteSeq</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The byte sequence object.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ByteSeq.__str__">
+<code class="descclassname">ByteSeq.</code><code class="descname">__str__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#ByteSeq.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a string object from the byte sequence.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The byte-sequence returned as a string.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ByteSeq.__add__">
+<code class="descclassname">ByteSeq.</code><code class="descname">__add__</code><span class="sig-paren">(</span><em>self</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#ByteSeq.__add__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other</strong> (<em>int</em>) – The offset value.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.storage.ByteSeq" title="c4d.storage.ByteSeq">c4d.storage.ByteSeq</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">New <a class="reference internal" href="#c4d.storage.ByteSeq" title="c4d.storage.ByteSeq"><code class="xref py py-class docutils literal notranslate"><span class="pre">ByteSeq</span></code></a> object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ByteSeq.__compare__">
+<code class="descclassname">ByteSeq.</code><code class="descname">__compare__</code><span class="sig-paren">(</span><em>self</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#ByteSeq.__compare__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compares two byte sequences.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other</strong> (<a class="reference internal" href="#c4d.storage.ByteSeq" title="c4d.storage.ByteSeq"><em>c4d.storage.ByteSeq</em></a>) – The other byte sequence.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the byte sequences are equal, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ByteSeq.__iter__">
+<code class="descclassname">ByteSeq.</code><code class="descname">__iter__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#ByteSeq.__iter__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterates over the bytes of the object, interpreted as one-element string.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">c4d</span>
+
+
+
+<span class="n">bs</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">ByteSeq</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">101</span><span class="p">)</span>
+
+
+
+<span class="n">bs</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">bs</span><span class="p">)]</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">bs</span><span class="p">)</span>
+
+
+
+<span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">bs</span><span class="p">:</span>
+
+    <span class="nb">print</span> <span class="n">b</span>
+
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">iter for str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The iterator.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ByteSeq.__hash__">
+<code class="descclassname">ByteSeq.</code><code class="descname">__hash__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#ByteSeq.__hash__" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns a hash of the byte sequence.</div>
+<div class="line">The hash value is cached if the object owns the byte sequence and it is flagged as read-only.</div>
+</div>
+<blockquote>
+<div>print hash(bs)</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The hash.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ByteSeq.__len__">
+<code class="descclassname">ByteSeq.</code><code class="descname">__len__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#ByteSeq.__len__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the length of the byte sequence.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The length.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ByteSeq.__setitem__">
+<code class="descclassname">ByteSeq.</code><code class="descname">__setitem__</code><span class="sig-paren">(</span><em>self</em>, <em>key</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#ByteSeq.__setitem__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replaces a byte at position <em>key</em> with the new <em>value</em>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">c4d</span>
+
+
+
+<span class="n">bs</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">ByteSeq</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">101</span><span class="p">)</span>
+
+
+
+<span class="n">bs</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">bs</span><span class="p">)]</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">bs</span><span class="p">)</span>
+
+<span class="n">bs</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ab&quot;</span>
+
+<span class="n">bs</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span>
+
+<span class="n">bs</span><span class="p">[</span><span class="mi">10</span><span class="p">:</span><span class="mi">90</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span> <span class="o">*</span> <span class="mi">80</span>
+
+
+
+<span class="nb">print</span> <span class="n">bs</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span>  <span class="c1"># output: &quot;ab&quot;</span>
+
+<span class="nb">print</span> <span class="n">bs</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span>  <span class="c1"># output &quot;a&quot;</span>
+
+<span class="nb">print</span> <span class="n">bs</span><span class="p">[:</span><span class="mi">100</span><span class="p">]</span>  <span class="c1"># output &quot;00000ab0001111...&quot;</span>
+
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><strong>TypeError</strong> – If byte sequence is flagged as read-only.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>key</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>Slice</em><em>[</em><em>Any</em><em>]</em><em>]</em>) – The index.</li>
+<li><strong>value</strong> (<em>int</em>) – The new value, must be between <cite>0-255</cite>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ByteSeq.__getitem__">
+<code class="descclassname">ByteSeq.</code><code class="descname">__getitem__</code><span class="sig-paren">(</span><em>self</em>, <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#ByteSeq.__getitem__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the bytes at position key:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">c4d</span>
+
+
+
+<span class="n">bs</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">ByteSeq</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">101</span><span class="p">)</span>
+
+
+
+<span class="n">bs</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">bs</span><span class="p">)]</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">bs</span><span class="p">)</span>
+
+<span class="n">bs</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ab&quot;</span>
+
+<span class="n">bs</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span>
+
+<span class="n">bs</span><span class="p">[</span><span class="mi">10</span><span class="p">:</span><span class="mi">90</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span> <span class="o">*</span> <span class="mi">80</span>
+
+
+
+<span class="nb">print</span> <span class="n">bs</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span>  <span class="c1"># output: &quot;ab&quot;</span>
+
+<span class="nb">print</span> <span class="n">bs</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span>  <span class="c1"># output &quot;a&quot;</span>
+
+<span class="nb">print</span> <span class="n">bs</span><span class="p">[:</span><span class="mi">100</span><span class="p">]</span>  <span class="c1"># output &quot;00000ab0001111...&quot;</span>
+
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>Slice</em><em>[</em><em>Any</em><em>]</em><em>]</em>) – The index</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The bytes at the requested position.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ByteSeq.GetClone">
+<code class="descclassname">ByteSeq.</code><code class="descname">GetClone</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#ByteSeq.GetClone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clones a byte sequence.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.storage.ByteSeq" title="c4d.storage.ByteSeq">c4d.storage.ByteSeq</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The clone.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ByteSeq.GetOffset">
+<code class="descclassname">ByteSeq.</code><code class="descname">GetOffset</code><span class="sig-paren">(</span><em>self</em>, <em>o</em><span class="sig-paren">)</span><a class="headerlink" href="#ByteSeq.GetOffset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns buffer at offset <em>o</em> in this byte sequence.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>o</strong> (<em>int</em>) – The offset.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The buffer object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../HyperFile/index.html" title="c4d.storage.HyperFile"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="c4d.storage"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >c4d.storage</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

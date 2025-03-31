@@ -1,0 +1,1450 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.documents &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="c4d.documents.BaseDocument" href="BaseDocument/index.html" />
+    <link rel="prev" title="c4d.bitmaps.MovieSaver" href="../c4d.bitmaps/MovieSaver/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="BaseDocument/index.html" title="c4d.documents.BaseDocument"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../c4d.bitmaps/MovieSaver/index.html" title="c4d.bitmaps.MovieSaver"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-documents">
+<h1>c4d.documents<a class="headerlink" href="#c4d-documents" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.documents">
+<em class="property">class </em><code class="descclassname">c4d.</code><code class="descname">documents</code><a class="headerlink" href="#c4d.documents" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="types">
+<h1>Types<a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="BaseDocument/index.html">c4d.documents.BaseDocument</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BaseVideoPost/index.html">c4d.documents.BaseVideoPost</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BatchRender/index.html">c4d.documents.BatchRender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LayerObject/index.html">c4d.documents.LayerObject</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RenderData/index.html">c4d.documents.RenderData</a></li>
+</ul>
+</div>
+<p class="rubric">Functions Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.documents.GetRecentDocumentsList" title="c4d.documents.GetRecentDocumentsList"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.documents.GetRecentDocumentsList([isBodyPaint])</span></code></a></td>
+<td>Retrieves the recent documents list.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.documents.GetActiveDocument" title="c4d.documents.GetActiveDocument"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.documents.GetActiveDocument()</span></code></a></td>
+<td>Returns the active document of Cinema 4D.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.documents.GetFirstDocument" title="c4d.documents.GetFirstDocument"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.documents.GetFirstDocument()</span></code></a></td>
+<td>Returns the first document in the list of documents within Cinema 4D.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.documents.SetActiveDocument" title="c4d.documents.SetActiveDocument"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.documents.SetActiveDocument(doc)</span></code></a></td>
+<td>Sets <em>doc</em> as active document in Cinema 4D.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.documents.SaveDocument" title="c4d.documents.SaveDocument"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.documents.SaveDocument(doc,</span> <span class="pre">name,</span> <span class="pre">saveflags,</span> <span class="pre">...)</span></code></a></td>
+<td>Saves the document to a file.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.documents.RenderDocument" title="c4d.documents.RenderDocument"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.documents.RenderDocument(doc,</span> <span class="pre">rdata,</span> <span class="pre">bmp[,</span> <span class="pre">...])</span></code></a></td>
+<td>Renders the document to a bitmap. You need to initialize the image with the size of the render data</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.documents.MergeDocument" title="c4d.documents.MergeDocument"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.documents.MergeDocument(doc,</span> <span class="pre">name,</span> <span class="pre">loadflags,</span> <span class="pre">...)</span></code></a></td>
+<td>Merges the file <em>name</em> into the document <em>doc</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.documents.LoadFile" title="c4d.documents.LoadFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.documents.LoadFile(name)</span></code></a></td>
+<td>Loads a file into Cinema 4D and opens it.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.documents.KillDocument" title="c4d.documents.KillDocument"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.documents.KillDocument(doc)</span></code></a></td>
+<td>Removes and free all resources of this document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.documents.InsertBaseDocument" title="c4d.documents.InsertBaseDocument"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.documents.InsertBaseDocument(doc)</span></code></a></td>
+<td>Inserts a document into the Cinema 4D editor list of documents.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.documents.LoadDocument" title="c4d.documents.LoadDocument"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.documents.LoadDocument(name,</span> <span class="pre">loadflags,</span> <span class="pre">thread)</span></code></a></td>
+<td>Similar to <code class="xref py py-func docutils literal notranslate"><span class="pre">LoadFile()</span></code> but this time the document is not put into the editors list of documents and it gives control over the loaded document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.documents.CloseAllDocuments" title="c4d.documents.CloseAllDocuments"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.documents.CloseAllDocuments()</span></code></a></td>
+<td>Closes all open documents in Cinema 4D.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.documents.SetDocumentTime" title="c4d.documents.SetDocumentTime"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.documents.SetDocumentTime(doc,</span> <span class="pre">time)</span></code></a></td>
+<td>Controls the time of the active document doc.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.documents.RunAnimation" title="c4d.documents.RunAnimation"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.documents.RunAnimation(doc,</span> <span class="pre">stop,</span> <span class="pre">forward)</span></code></a></td>
+<td>Controls the animation in the active document <em>doc</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.documents.InteractiveModeling_Restart" title="c4d.documents.InteractiveModeling_Restart"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.documents.InteractiveModeling_Restart(doc)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Used for modeling tools with GUI input.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.documents.IsolateObjects" title="c4d.documents.IsolateObjects"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.documents.IsolateObjects(doc,</span> <span class="pre">t_objects)</span></code></a></td>
+<td>A helper routine to copy the objects <em>t_objects</em> of document <em>doc</em> to a new document (returned).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.documents.StopExternalRenderer" title="c4d.documents.StopExternalRenderer"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.documents.StopExternalRenderer()</span></code></a></td>
+<td>Stop the external renderer.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.documents.GetBatchRender" title="c4d.documents.GetBatchRender"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.documents.GetBatchRender()</span></code></a></td>
+<td>Get the batch render instance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.documents.GetAllAssets" title="c4d.documents.GetAllAssets"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.documents.GetAllAssets(doc,</span> <span class="pre">allowDialogs,</span> <span class="pre">lastPath)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Get all assets from a document.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.documents.SaveProject" title="c4d.documents.SaveProject"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.documents.SaveProject(doc,</span> <span class="pre">flags,</span> <span class="pre">targetPath,</span> <span class="pre">...)</span></code></a></td>
+<td>Save the document as a project (menu <cite>“Save Project with Assets”</cite>).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.documents.GetFirstMarker" title="c4d.documents.GetFirstMarker"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.documents.GetFirstMarker(doc)</span></code></a></td>
+<td>Returns the first timeline marker of the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.documents.AddMarker" title="c4d.documents.AddMarker"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.documents.AddMarker(doc,</span> <span class="pre">pPred,</span> <span class="pre">time,</span> <span class="pre">name)</span></code></a></td>
+<td>Inserts a timeline marker into the document at a given time. Optionally an insertion point <em>pPred</em> in the timeline marker list can be specified, giving the marker before the wanted insertion point.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Functions Documentation</p>
+<p><dl class="function">
+<dt id="c4d.documents.GetRecentDocumentsList">
+<code class="descclassname">c4d.documents.</code><code class="descname">GetRecentDocumentsList</code><span class="sig-paren">(</span><em>isBodyPaint=False</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.documents.GetRecentDocumentsList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the recent documents list.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R21.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>isBodyPaint</strong> (<em>bool</em>) – <strong>True</strong> to retrieve BodyPaint’s list.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../maxon_generated/datatypes/collection/maxon.BaseArray.html#module-maxon.BaseArray" title="maxon.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.BaseArray</span></code></a> (<a class="reference internal" href="../maxon_generated/references/core/maxon.Url.html#module-maxon.Url" title="maxon.Url"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Url</span></code></a>)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The recent documents list.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.documents.GetActiveDocument">
+<code class="descclassname">c4d.documents.</code><code class="descname">GetActiveDocument</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c4d.documents.GetActiveDocument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the active document of Cinema 4D.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument">c4d.documents.BaseDocument</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The active document.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.documents.GetFirstDocument">
+<code class="descclassname">c4d.documents.</code><code class="descname">GetFirstDocument</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c4d.documents.GetFirstDocument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the first document in the list of documents within Cinema 4D.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument">c4d.documents.BaseDocument</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The first document.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.documents.SetActiveDocument">
+<code class="descclassname">c4d.documents.</code><code class="descname">SetActiveDocument</code><span class="sig-paren">(</span><em>doc</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.documents.SetActiveDocument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets <em>doc</em> as active document in Cinema 4D.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>doc</strong> (<a class="reference internal" href="BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.documents.SaveDocument">
+<code class="descclassname">c4d.documents.</code><code class="descname">SaveDocument</code><span class="sig-paren">(</span><em>doc</em>, <em>name</em>, <em>saveflags</em>, <em>format</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.documents.SaveDocument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the document to a file.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">The <a class="reference external" href="https://github.com/PluginCafe/cinema4d_py_sdk_extended/tree/master/scripts/03_application_development/files_media/export_alembic_r14.py">script</a> that shows how to effectively access and change the settings of an importer/exporter.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Warning note in <a class="reference internal" href="../c4d.plugins/BaseData/NodeData/SceneSaverData/index.html#SceneSaverData.Save" title="SceneSaverData.Save"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SceneSaverData.Save()</span></code></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>doc</strong> (<a class="reference internal" href="BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – Command ID</li>
+<li><strong>name</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><a class="reference internal" href="../c4d.storage/MemoryFileStruct/index.html#c4d.storage.MemoryFileStruct" title="c4d.storage.MemoryFileStruct"><em>c4d.storage.MemoryFileStruct</em></a><em>]</em>) – File to save the document to.</li>
+<li><strong>saveflags</strong> (<em>int</em>) – <p>The flags</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>SAVEDOCUMENTFLAGS_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEDOCUMENTFLAGS_DIALOGSALLOWED</em></td>
+<td>Flag to inform that a dialog can be displayed. If this flag is not set then no dialogs must be opened.</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEDOCUMENTFLAGS_SAVEAS</em></td>
+<td>Forces a “Save As” and opens the file dialog.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEDOCUMENTFLAGS_DONTADDTORECENTLIST</em></td>
+<td>Do not add the saved document to the recent file list.</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEDOCUMENTFLAGS_AUTOSAVE</em></td>
+<td>Sets the “Auto Save” mode. Files are not added to the recent file list and the document change star will not be reset.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEDOCUMENTFLAGS_SAVECACHES</em></td>
+<td>For <cite>melange</cite> export only. Caches of objects will also be written (only supported by Cinema 4D file format).</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEDOCUMENTFLAGS_EXPORTDIALOG</em></td>
+<td>Opens the Export dialog.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEDOCUMENTFLAGS_CRASHSITUATION</em></td>
+<td>This flag is passed to Cinema 4D if a crash occurred.</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEDOCUMENTFLAGS_NO_SHADERCACHE</em></td>
+<td>Disables the <em>SCENEFILTER_SAVE_BINARYCACHE</em> flag.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>format</strong> (<em>int</em>) – <p>The file format to save the document as.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="38%" />
+<col width="62%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>FORMAT_PREF</em></td>
+<td>Preferences.</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_WAV</em></td>
+<td>WAV sound.</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_L4D</em></td>
+<td>Layout.</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_P4D</em></td>
+<td>Layout.</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_C4DIMPORT</em></td>
+<td><cite>Cinema 4D</cite> import.</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_C4DEXPORT</em></td>
+<td><cite>Cinema 4D</cite> export.</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_VRML1IMPORT</em></td>
+<td>VRML 1 import.</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_VRML1EXPORT</em></td>
+<td>VRML 1 export.</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_VRML2IMPORT</em></td>
+<td>VRML 2 import.</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_VRML2EXPORT</em></td>
+<td>VRML 2 export.</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_DXFIMPORT</em></td>
+<td>DXF import.</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_DXFEXPORT</em></td>
+<td>DXF export.</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_3DSIMPORT</em></td>
+<td>3DS import.</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_3DSEXPORT</em></td>
+<td>3DS export.</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_OBJIMPORT</em></td>
+<td>Old OBJ import (R16 and older).</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_OBJEXPORT</em></td>
+<td>Old OBJ export (R16 and older).</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_Q3DIMPORT</em></td>
+<td>QuickDraw 3D import.</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_Q3DEXPORT</em></td>
+<td>QuickDraw 3D export.</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_AIIMPORT</em></td>
+<td>AI import.</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_DEMIMPORT</em></td>
+<td>DEM import.</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_D3DEXPORT</em></td>
+<td><cite>Direct3D</cite> export.</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_OBJ2IMPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R17.048: </span>New OBJ import (R17 and newer).</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_OBJ2EXPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R17.048: </span>New OBJ export (R17 and newer).</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_SKPIMPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R17.048: </span>SketchUp import.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_STEPIMPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.026: </span>Step import.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_CATIAIMPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.026: </span>Catia V5 import.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_IGESIMPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.026: </span>Iges  import.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_JTIMPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.026: </span>Jt import.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_SOLIDWORKSIMPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.026: </span>Solidworks  import.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_ABCIMPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.041: </span>Alembic import (R20.041 and newer).</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_ABCEXPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.041: </span>Alembic export (R20.041 and newer).</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_DAE14IMPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.041: </span>Collada 14 import (R20.041 and newer).</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_DAE14EXPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.041: </span>Collada 14 export (R20.041 and newer).</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_DAE15IMPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.041: </span>Collada 15 import (R20.041 and newer).</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_DAE15EXPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.041: </span>Collada 15 export (R20.041 and newer).</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if successful, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.documents.RenderDocument">
+<code class="descclassname">c4d.documents.</code><code class="descname">RenderDocument</code><span class="sig-paren">(</span><em>doc</em>, <em>rdata</em>, <em>bmp</em>, <em>renderflags=0</em>, <em>th=None</em>, <em>prog=None</em>, <em>wprog=None</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.documents.RenderDocument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Renders the document to a bitmap. You need to initialize the image with the size of the render data</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>A <a class="reference internal" href="../c4d.bitmaps/BaseBitmap/MultipassBitmap/index.html#c4d.bitmaps.MultipassBitmap" title="c4d.bitmaps.MultipassBitmap"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultipassBitmap</span></code></a> must be passed to render the image with an alpha channel.</p>
+<div class="last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Copyright: MAXON Computer GmbH</span>
+<span class="sd">Author: Maxime Adam</span>
+
+<span class="sd">Description:</span>
+<span class="sd">    - Render the current document with a progress hook to get notified about the current rendering progress.</span>
+
+<span class="sd">Class/method highlighted:</span>
+<span class="sd">    - c4d.bitmaps.MultipassBitmap</span>
+<span class="sd">    - c4d.documents.RenderDocument()</span>
+
+<span class="sd">Compatible:</span>
+<span class="sd">    - Win / Mac</span>
+<span class="sd">    - R21</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">c4d</span>
+
+
+<span class="k">def</span> <span class="nf">PythonCallBack</span><span class="p">(</span><span class="n">progress</span><span class="p">,</span> <span class="n">progress_type</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function passed in RenderDocument. It will be called automatically by Cinema 4D with the current render progress.</span>
+
+<span class="sd">    :param progress: The percent of the progress for the current step</span>
+<span class="sd">    :type progress: float</span>
+<span class="sd">    :param progress_type: The Main part of the current rendering step</span>
+<span class="sd">    :type progress_type: c4d.RENDERPROGRESSTYPE</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">progress_type</span> <span class="o">==</span> <span class="n">c4d</span><span class="o">.</span><span class="n">RENDERPROGRESSTYPE_BEFORERENDERING</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Before Rendering&quot;</span>
+
+    <span class="k">elif</span> <span class="n">progress_type</span> <span class="o">==</span> <span class="n">c4d</span><span class="o">.</span><span class="n">RENDERPROGRESSTYPE_DURINGRENDERING</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;During Rendering&quot;</span>
+
+    <span class="k">elif</span> <span class="n">progress_type</span> <span class="o">==</span> <span class="n">c4d</span><span class="o">.</span><span class="n">RENDERPROGRESSTYPE_AFTERRENDERING</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;After Rendering&quot;</span>
+
+    <span class="k">elif</span> <span class="n">progress_type</span> <span class="o">==</span> <span class="n">c4d</span><span class="o">.</span><span class="n">RENDERPROGRESSTYPE_GLOBALILLUMINATION</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;GI&quot;</span>
+
+    <span class="k">elif</span> <span class="n">progress_type</span> <span class="o">==</span> <span class="n">c4d</span><span class="o">.</span><span class="n">RENDERPROGRESSTYPE_QUICK_PREVIEW</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Quick Preview&quot;</span>
+
+    <span class="k">elif</span> <span class="n">progress_type</span> <span class="o">==</span> <span class="n">c4d</span><span class="o">.</span><span class="n">RENDERPROGRESSTYPE_AMBIENTOCCLUSION</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;AO&quot;</span>
+
+    <span class="c1"># Prints to the console the current progress</span>
+    <span class="nb">print</span> <span class="s2">&quot;ProgressHook called [</span><span class="si">{0}</span><span class="s2"> / p: </span><span class="si">{1}</span><span class="s2">]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">progress</span> <span class="o">*</span> <span class="mf">100.0</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">PythonWriteCallBack</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span> <span class="n">bmp</span><span class="p">,</span> <span class="n">fn</span><span class="p">,</span> <span class="n">mainImage</span><span class="p">,</span> <span class="n">frame</span><span class="p">,</span> <span class="n">renderTime</span><span class="p">,</span> <span class="n">streamnum</span><span class="p">,</span> <span class="n">streamname</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function passed in RenderDocument.</span>
+<span class="sd">    It will be called automatically by Cinema 4D when the file rendered file should be saved.</span>
+
+<span class="sd">    :param mode: The write mode.</span>
+<span class="sd">    :type mode: c4d.WRITEMODE</span>
+<span class="sd">    :param bmp: The bitmap written to.</span>
+<span class="sd">    :type bmp: c4d.bitmaps.BaseBitmap</span>
+<span class="sd">    :param fn: The path where the file should be saved.</span>
+<span class="sd">    :type fn: str</span>
+<span class="sd">    :param mainImage: True for main image, otherwise False.</span>
+<span class="sd">    :type mainImage: bool</span>
+<span class="sd">    :param frame: The frame number.</span>
+<span class="sd">    :type frame: int</span>
+<span class="sd">    :param renderTime: The bitmap frame time.</span>
+<span class="sd">    :type renderTime: int</span>
+<span class="sd">    :param streamnum: The stream number.</span>
+<span class="sd">    :type streamnum: int</span>
+<span class="sd">    :param streamname: The stream name.</span>
+<span class="sd">    :type streamname: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="n">c4d</span><span class="o">.</span><span class="n">WRITEMODE_STANDARD</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Standard&quot;</span>
+
+    <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="n">c4d</span><span class="o">.</span><span class="n">WRITEMODE_ASSEMBLE_MOVIE</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Assemble Movie&quot;</span>
+
+    <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="n">c4d</span><span class="o">.</span><span class="n">WRITEMODE_ASSEMBLE_SINGLEIMAGE</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Assemble single image&quot;</span>
+
+    <span class="nb">print</span> <span class="s2">&quot;ProgressWriteHook called [</span><span class="si">{0}</span><span class="s2"> / p: </span><span class="si">{1}</span><span class="s2">]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">renderTime</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Retrieves the current active render settings</span>
+    <span class="n">rd</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">GetActiveRenderData</span><span class="p">()</span>
+
+    <span class="c1"># Creates a Multi Pass Bitmaps that will store the render result</span>
+    <span class="n">bmp</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">bitmaps</span><span class="o">.</span><span class="n">MultipassBitmap</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">rd</span><span class="p">[</span><span class="n">c4d</span><span class="o">.</span><span class="n">RDATA_XRES</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">rd</span><span class="p">[</span><span class="n">c4d</span><span class="o">.</span><span class="n">RDATA_YRES</span><span class="p">]),</span> <span class="n">c4d</span><span class="o">.</span><span class="n">COLORMODE_RGB</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">bmp</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Failed to create the bitmap.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Adds an alpha channel</span>
+    <span class="n">bmp</span><span class="o">.</span><span class="n">AddChannel</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Renders the document</span>
+    <span class="k">if</span> <span class="n">c4d</span><span class="o">.</span><span class="n">documents</span><span class="o">.</span><span class="n">RenderDocument</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">rd</span><span class="o">.</span><span class="n">GetData</span><span class="p">(),</span> <span class="n">bmp</span><span class="p">,</span> <span class="n">c4d</span><span class="o">.</span><span class="n">RENDERFLAGS_EXTERNAL</span><span class="p">,</span> <span class="n">prog</span><span class="o">=</span><span class="n">PythonCallBack</span><span class="p">,</span>
+                                    <span class="n">wprog</span><span class="o">=</span><span class="n">PythonWriteCallBack</span><span class="p">)</span> <span class="o">!=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">RENDERRESULT_OK</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Failed to render the temporary document.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Displays the render in the Picture Viewer</span>
+    <span class="n">c4d</span><span class="o">.</span><span class="n">bitmaps</span><span class="o">.</span><span class="n">ShowBitmap</span><span class="p">(</span><span class="n">bmp</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>doc</strong> (<a class="reference internal" href="BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document you want to render.</li>
+<li><strong>rdata</strong> (<a class="reference internal" href="../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The render data.</li>
+<li><strong>bmp</strong> (<a class="reference internal" href="../c4d.bitmaps/BaseBitmap/index.html#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap"><em>c4d.bitmaps.BaseBitmap</em></a>) – The bitmap where the rendered picture will be saved in. Initialize the image with the size of the render data.</li>
+<li><strong>renderflags</strong> (<em>int</em>) – <p>Some renderflags.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>RENDERFLAGS_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERFLAGS_EXTERNAL</em></td>
+<td>External render.</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERFLAGS_NODOCUMENTCLONE</em></td>
+<td>Set to avoid an automatic clone of the scene sent to <a class="reference internal" href="#c4d.documents.RenderDocument" title="c4d.documents.RenderDocument"><code class="xref py py-func docutils literal notranslate"><span class="pre">RenderDocument()</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERFLAGS_SHOWERRORS</em></td>
+<td>Show error messages.</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERFLAGS_PREVIEWRENDER</em></td>
+<td>Preview render.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERFLAGS_IRR</em></td>
+<td>Interactive region render.</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERFLAGS_CREATE_PICTUREVIEWER</em></td>
+<td>Render in a new Picture Viewer.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERFLAGS_OPEN_PICTUREVIEWER</em></td>
+<td>Open the Picture Viewer.</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERFLAGS_KEEP_CONTEXT</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERFLAGS_BATCHRENDER</em></td>
+<td>Render in Batch Render. Private.</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERFLAGS_NET</em></td>
+<td>Use NET System for rendering.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERFLAGS_DONTANIMATE</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R17.032: </span>Do not animate document before rendering. This should only be used in combination with <em>RENDERFLAGS_PREVIEWRENDER</em>.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERFLAGS_PREVIEWSETTINGS</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R19: </span>Use preview settings.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><em>RENDERFLAGS_RENDERQUEUEERRORS</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R21.108: </span>Cancel Render Queue rendering if scene has missing assets.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you are in a safe context you might use <em>RENDERFLAG_NODOCUMENTCLONE</em> to speed up the render process especially on big scenes.</p>
+</div>
+</li>
+<li><strong>th</strong> (<a class="reference internal" href="../c4d.threading/BaseThread/index.html#c4d.threading.BaseThread" title="c4d.threading.BaseThread"><em>c4d.threading.BaseThread</em></a>) – The thread to test for a break or <strong>None</strong>.</li>
+<li><strong>prog</strong> (<em>function</em>) – <div class="versionadded">
+<p><span class="versionmodified">New in version R21.</span></p>
+</div>
+<p>A function that will be called during the rendering with information about the current progress.</p>
+<p>The expected function signature is <cite>functionName(p, progress_type)</cite> and parameters correspond to:</p>
+<blockquote>
+<div><ul>
+<li>p (float): The progress, between 0.0 and 1.0.</li>
+<li>progress_type: The render Progress type:<blockquote>
+<div><div class="versionadded">
+<p><span class="versionmodified">New in version R21.</span></p>
+</div>
+<table border="1" class="colwidths-auto docutils align-left">
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Symbol ID</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>RENDERPROGRESSTYPE_BEFORERENDERING</td>
+<td>Before rendering.</td>
+</tr>
+<tr class="row-odd"><td>RENDERPROGRESSTYPE_DURINGRENDERING</td>
+<td>During rendering.</td>
+</tr>
+<tr class="row-even"><td>RENDERPROGRESSTYPE_AFTERRENDERING</td>
+<td>After rendering.</td>
+</tr>
+<tr class="row-odd"><td>RENDERPROGRESSTYPE_GLOBALILLUMINATION</td>
+<td>GI prepass.</td>
+</tr>
+<tr class="row-even"><td>RENDERPROGRESSTYPE_QUICK_PREVIEW</td>
+<td>Quick Preview rendering.</td>
+</tr>
+<tr class="row-odd"><td>RENDERPROGRESSTYPE_AMBIENTOCCLUSION</td>
+<td>AO prepass.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><strong>wprog</strong> (<em>function</em>) – <div class="versionadded">
+<p><span class="versionmodified">New in version R21.</span></p>
+</div>
+<p>The write progress hook for the render operation.</p>
+<p>The expected function signature is <cite>functionName(mode, bmp, fn, mainImage, frame, renderTime, streamnum, streamname)</cite> and parameters correspond to:</p>
+<blockquote>
+<div><ul>
+<li>mode: the write mode type:<blockquote>
+<div><table border="1" class="colwidths-auto docutils align-left">
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Symbol ID</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>WRITEMODE_STANDARD</td>
+<td>Standard.</td>
+</tr>
+<tr class="row-odd"><td>WRITEMODE_ASSEMBLE_MOVIE</td>
+<td>Assemble movie.</td>
+</tr>
+<tr class="row-even"><td>WRITEMODE_ASSEMBLE_SINGLEIMAGE</td>
+<td>Assemble single image.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li>bmp (<a class="reference internal" href="../c4d.bitmaps/BaseBitmap/index.html#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.bitmaps.BaseBitmap</span></code></a>): The bitmap written to. Can be <strong>None</strong>.</li>
+<li>fn (str): The filename where the file is going to be written to.</li>
+<li>mainImage (bool): <strong>True</strong> for main image, otherwise <strong>False</strong>.</li>
+<li>frame (int): The frame number.</li>
+<li>renderTime (int): The bitmap frame time.</li>
+<li>streamnum (int): The stream number.</li>
+<li>streamname (str): The stream name.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>The result:</p>
+<p><em>RENDERRESULT_OUTOFMEMORY</em>         Not enough memory.
+<em>RENDERRESULT_ASSETMISSING</em>        Assets (textures etc.) are missing.
+<em>RENDERRESULT_SAVINGFAILED</em>        Failed to save.
+<em>RENDERRESULT_USERBREAK</em>           User stopped the processing.
+<em>RENDERRESULT_GICACHEMISSING</em>      GI cache is missing.
+<em>RENDERRESULT_NOMACHINE</em>           Machine was not found. Can only happen during Team Rendering.
+<em>RENDERRESULT_PROJECTNOTFOUND</em>     Project was not found. Can only be returned by Cinema 4D during command line rendering.
+<em>RENDERRESULT_ERRORLOADINGPROJECT</em> There was an error while loading the project. Can only be returned by Cinema 4D during command line rendering.
+<em>RENDERRESULT_NOOUTPUTSPECIFIED</em>   Output was not specified. Can only be returned by Cinema 4D during command line rendering.
+================================== ==============================================================================================================</p>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.documents.MergeDocument">
+<code class="descclassname">c4d.documents.</code><code class="descname">MergeDocument</code><span class="sig-paren">(</span><em>doc</em>, <em>name</em>, <em>loadflags</em>, <em>thread</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.documents.MergeDocument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merges the file <em>name</em> into the document <em>doc</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>doc</strong> (<a class="reference internal" href="BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document to merge the loaded document <em>name</em> into.</li>
+<li><strong>name</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><a class="reference internal" href="../c4d.storage/MemoryFileStruct/index.html#c4d.storage.MemoryFileStruct" title="c4d.storage.MemoryFileStruct"><em>c4d.storage.MemoryFileStruct</em></a><em>]</em>) – The file to merge into <em>doc</em>.</li>
+<li><strong>loadflags</strong> (<em>int</em>) – <p>The scene filter flags for the loader:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>SCENEFILTER_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_OBJECTS</em></td>
+<td>Load/save objects.</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_MATERIALS</em></td>
+<td>Load/save materials.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_DIALOGSALLOWED</em></td>
+<td>Flag to inform a plugin that a dialog can be displayed. If this flag is not set then no dialogs must be opened.</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_PROGRESSALLOWED</em></td>
+<td>Flag to inform a plugin that a progress bar can be displayed. The progress bar can be set by calling <a class="reference internal" href="../c4d/index.html#c4d.StatusSetBar" title="c4d.StatusSetBar"><code class="xref py py-func docutils literal notranslate"><span class="pre">StatusSetBar()</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_MERGESCENE</em></td>
+<td>Flag to inform a plugin that this is a merge operation, i.e. the document that is inserted to is an existing scene.</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_NONEWMARKERS</em></td>
+<td>Objects loaded from disk will keep their markers.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_SAVECACHES</em></td>
+<td>For <cite>melange</cite> export only. Caches of objects will also be written (only supported by Cinema 4D format). This is the same as the global option “Save Polygon Objects for Melange Exchange”.</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_NOUNDO</em></td>
+<td>Use together with <em>SCENEFILTER_MERGESCENE</em> to avoid that undos are created for the merge operation.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_SAVE_BINARYCACHE</em></td>
+<td>Save the binary compiled shaders with the scene (only for Cinema 4D format).</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_IDENTIFY_ONLY</em></td>
+<td>Do not load the whole document, identify it only.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_ONLY_RENDERDATA</em></td>
+<td>Only load render settings. If this flag is set, <em>SCENEFILTER_OBJECTS</em> and <em>SCENEFILTER_MATERIALS</em> are ignored.</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_IGNOREMISSINGPLUGINSINNONACTIVERENDERDATA</em></td>
+<td>Ignore all missing plugins which are part of a non-active render data.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_IGNOREXREFS</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R16.038: </span>Avoid that included X-Refs will be loaded.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_DONTCORRECTOUTPUTFORMAT</em></td>
+<td>Do not change unknown output formats in render settings.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>thread</strong> (<a class="reference internal" href="../c4d.threading/BaseThread/index.html#c4d.threading.BaseThread" title="c4d.threading.BaseThread"><em>c4d.threading.BaseThread</em></a>) – The current thread, or <strong>None</strong> for the main Cinema 4D thread.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if successful, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.documents.LoadFile">
+<code class="descclassname">c4d.documents.</code><code class="descname">LoadFile</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.documents.LoadFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads a file into Cinema 4D and opens it.</p>
+<div class="admonition note" id="loadfile-note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function can be used to open any kind of file Cinema 4D handles i.e. a document, an image, a layout or a lib4d/cat4d file.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – The file to load.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.documents.KillDocument">
+<code class="descclassname">c4d.documents.</code><code class="descname">KillDocument</code><span class="sig-paren">(</span><em>doc</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.documents.KillDocument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes and free all resources of this document.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>doc</strong> (<a class="reference internal" href="BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document to free.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.documents.InsertBaseDocument">
+<code class="descclassname">c4d.documents.</code><code class="descname">InsertBaseDocument</code><span class="sig-paren">(</span><em>doc</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.documents.InsertBaseDocument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserts a document into the Cinema 4D editor list of documents.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>doc</strong> (<a class="reference internal" href="BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document to insert.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.documents.LoadDocument">
+<code class="descclassname">c4d.documents.</code><code class="descname">LoadDocument</code><span class="sig-paren">(</span><em>name</em>, <em>loadflags</em>, <em>thread</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.documents.LoadDocument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to <a class="reference internal" href="#c4d.documents.LoadFile" title="c4d.documents.LoadFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">LoadFile()</span></code></a> but this time the document is not put into the editors list of documents and it gives control over the loaded document.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><a class="reference internal" href="../c4d.storage/MemoryFileStruct/index.html#c4d.storage.MemoryFileStruct" title="c4d.storage.MemoryFileStruct"><em>c4d.storage.MemoryFileStruct</em></a><em>]</em>) – The name of the file to load the document from.</li>
+<li><strong>loadflags</strong> (<em>int</em>) – <p>The scene filter flags for the loader:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>SCENEFILTER_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_OBJECTS</em></td>
+<td>Load/save objects.</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_MATERIALS</em></td>
+<td>Load/save materials.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_DIALOGSALLOWED</em></td>
+<td>Flag to inform a plugin that a dialog can be displayed. If this flag is not set then no dialogs must be opened.</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_PROGRESSALLOWED</em></td>
+<td>Flag to inform a plugin that a progress bar can be displayed. The progress bar can be set by calling <a class="reference internal" href="../c4d/index.html#c4d.StatusSetBar" title="c4d.StatusSetBar"><code class="xref py py-func docutils literal notranslate"><span class="pre">StatusSetBar()</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_MERGESCENE</em></td>
+<td>Flag to inform a plugin that this is a merge operation, i.e. the document that is inserted to is an existing scene.</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_NONEWMARKERS</em></td>
+<td>Objects loaded from disk will keep their markers.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_SAVECACHES</em></td>
+<td>For <cite>melange</cite> export only. Caches of objects will also be written (only supported by Cinema 4D format). This is the same as the global option “Save Polygon Objects for Melange Exchange”.</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_NOUNDO</em></td>
+<td>Use together with <em>SCENEFILTER_MERGESCENE</em> to avoid that undos are created for the merge operation.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_SAVE_BINARYCACHE</em></td>
+<td>Save the binary compiled shaders with the scene (only for Cinema 4D format).</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_IDENTIFY_ONLY</em></td>
+<td>Do not load the whole document, identify it only.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_ONLY_RENDERDATA</em></td>
+<td>Only load render settings. If this flag is set, <em>SCENEFILTER_OBJECTS</em> and <em>SCENEFILTER_MATERIALS</em> are ignored.</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_IGNOREMISSINGPLUGINSINNONACTIVERENDERDATA</em></td>
+<td>Ignore all missing plugins which are part of a non-active render data.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_IGNOREXREFS</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R16.038: </span>Avoid that included X-Refs will be loaded.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_DONTCORRECTOUTPUTFORMAT</em></td>
+<td>Do not change unknown output formats in render settings.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>thread</strong> (<a class="reference internal" href="../c4d.threading/BaseThread/index.html#c4d.threading.BaseThread" title="c4d.threading.BaseThread"><em>c4d.threading.BaseThread</em></a>) – The current thread, or <strong>None</strong> for the main Cinema 4D thread.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument">c4d.documents.BaseDocument</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The document that was loaded, or <strong>None</strong> if it failed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.documents.CloseAllDocuments">
+<code class="descclassname">c4d.documents.</code><code class="descname">CloseAllDocuments</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c4d.documents.CloseAllDocuments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closes all open documents in Cinema 4D.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> on success, otherwise <strong>False</strong></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.documents.SetDocumentTime">
+<code class="descclassname">c4d.documents.</code><code class="descname">SetDocumentTime</code><span class="sig-paren">(</span><em>doc</em>, <em>time</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.documents.SetDocumentTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Controls the time of the active document doc.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Unlike <a class="reference internal" href="BaseDocument/index.html#BaseDocument.SetTime" title="BaseDocument.SetTime"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetTime()</span></code></a> it handles running animation.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>doc</strong> (<a class="reference internal" href="BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document to control.</li>
+<li><strong>time</strong> (<a class="reference internal" href="../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><em>c4d.BaseTime</em></a>) – The time to set.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> on success, otherwise <strong>False</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.documents.RunAnimation">
+<code class="descclassname">c4d.documents.</code><code class="descname">RunAnimation</code><span class="sig-paren">(</span><em>doc</em>, <em>stop</em>, <em>forward</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.documents.RunAnimation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Controls the animation in the active document <em>doc</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>doc</strong> (<a class="reference internal" href="BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document to control. Usually <a class="reference internal" href="#c4d.documents.GetActiveDocument" title="c4d.documents.GetActiveDocument"><code class="xref py py-func docutils literal notranslate"><span class="pre">GetActiveDocument()</span></code></a></li>
+<li><strong>stop</strong> (<em>bool</em>) – If this is <strong>True</strong> the animation is stopped, otherwise it is running.</li>
+<li><strong>forward</strong> (<em>bool</em>) – If this is <strong>True</strong> the direction is set to forward, otherwise it is set to backward.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> on success, otherwise <strong>False</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.documents.InteractiveModeling_Restart">
+<code class="descclassname">c4d.documents.</code><code class="descname">InteractiveModeling_Restart</code><span class="sig-paren">(</span><em>doc</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.documents.InteractiveModeling_Restart" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Used for modeling tools with GUI input.</div>
+<div class="line">Applies the last modeling undo so that new values of the modeling tool can be applied.</div>
+</div>
+<p>An example from the edge cut code.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">c4d</span>
+
+<span class="k">class</span> <span class="nc">TestTool</span><span class="p">(</span><span class="n">c4d</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">ToolData</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">MouseInput</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">doc</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">draw</span><span class="p">,</span> <span class="n">win</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">doc</span><span class="p">:</span> <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">if</span> <span class="n">doc</span><span class="o">.</span><span class="n">GetMode</span><span class="p">()</span> <span class="o">==</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Medges</span><span class="p">:</span>
+            <span class="n">active</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">GetActiveObjects</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1">#undo step before</span>
+        <span class="n">c4d</span><span class="o">.</span><span class="n">documents</span><span class="o">.</span><span class="n">InteractiveModeling_Restart</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">ModelingEdgeCut</span><span class="p">(</span><span class="n">active</span><span class="p">,</span> <span class="n">c4d</span><span class="o">.</span><span class="n">MODIFY_EDGESELECTION</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">doc</span><span class="p">,</span> <span class="n">win</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">c4d</span><span class="o">.</span><span class="n">EventAdd</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>doc</strong> (<a class="reference internal" href="BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.documents.IsolateObjects">
+<code class="descclassname">c4d.documents.</code><code class="descname">IsolateObjects</code><span class="sig-paren">(</span><em>doc</em>, <em>t_objects</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.documents.IsolateObjects" title="Permalink to this definition">¶</a></dt>
+<dd><p>A helper routine to copy the objects <em>t_objects</em> of document <em>doc</em> to a new document (returned).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All materials associated are also copied over and the links are corrected.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>doc</strong> (<a class="reference internal" href="BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document that contains the objects in <em>t_objects</em>.</li>
+<li><strong>t_objects</strong> (<em>List</em><em>[</em><a class="reference internal" href="../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><em>c4d.BaseObject</em></a><em>]</em>) – The objects to isolate.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument">c4d.documents.BaseDocument</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The document containing the isolated objects.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.documents.StopExternalRenderer">
+<code class="descclassname">c4d.documents.</code><code class="descname">StopExternalRenderer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c4d.documents.StopExternalRenderer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop the external renderer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the rendering has been canceled, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.documents.GetBatchRender">
+<code class="descclassname">c4d.documents.</code><code class="descname">GetBatchRender</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c4d.documents.GetBatchRender" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the batch render instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BatchRender/index.html#c4d.documents.BatchRender" title="c4d.documents.BatchRender">c4d.documents.BatchRender</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The batch render.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.documents.GetAllAssets">
+<code class="descclassname">c4d.documents.</code><code class="descname">GetAllAssets</code><span class="sig-paren">(</span><em>doc</em>, <em>allowDialogs</em>, <em>lastPath</em>, <em>flags=ASSETDATA_FLAG_NONE</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.documents.GetAllAssets" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Get all assets from a document.</div>
+<div class="line">It is e.g. used by <cite>“Save Project with Assets”</cite> menu and <a class="reference internal" href="#c4d.documents.SaveProject" title="c4d.documents.SaveProject"><code class="xref py py-func docutils literal notranslate"><span class="pre">SaveProject()</span></code></a>.</div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.057.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>doc</strong> (<a class="reference internal" href="BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document to save as project.</li>
+<li><strong>allowDialogs</strong> (<em>bool</em>) – If <strong>True</strong> the function can open dialogs. For example a file select dialog is opened if a node of the scene points to a file which does not exist anymore.</li>
+<li><strong>lastPath</strong> (<em>str</em>) – <div class="line-block">
+<div class="line">Pass an empty string, that will be filled with the last path used.</div>
+<div class="line">If a file dialog is opened and the user selects the missing file on the harddisk, the folder of this asset is assigned to <em>lastPath</em>.</div>
+<div class="line">The developer can store this value somewhere and pass it next time so Cinema 4D knows where to look first before asking the user again.</div>
+</div>
+</li>
+<li><strong>flags</strong> (<em>int</em>) – <div class="versionadded">
+<p><span class="versionmodified">New in version R20: </span>The flags to decide which assets should be collected:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>ASSETDATA_FLAG_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>ASSETDATA_FLAG_CURRENTFRAMEONLY</em></td>
+<td>Only return current frame assets.</td>
+</tr>
+<tr class="row-odd"><td><em>ASSETDATA_FLAG_TEXTURESONLY</em></td>
+<td>Only return texture assets. Since R17.048 (was <cite>ASSETDATA_FLAG_TEXTURES</cite>).</td>
+</tr>
+<tr class="row-even"><td><em>ASSETDATA_FLAG_NET</em></td>
+<td>Set if NET is collecting assets to distribute them to the clients.</td>
+</tr>
+<tr class="row-odd"><td><em>ASSETDATA_FLAG_CURRENTTAKEONLY</em></td>
+<td><dl class="first last docutils">
+<dt>Only return current take assets.</dt>
+<dd><div class="first last versionadded">
+<p><span class="versionmodified">New in version R17.</span></p>
+</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-even"><td><em>ASSETDATA_FLAG_WITHCACHES</em></td>
+<td><dl class="first last docutils">
+<dt>Also return caches (Global Illumination / Ambient Occlusion).</dt>
+<dd><div class="first last versionadded">
+<p><span class="versionmodified">New in version R17.048.</span></p>
+</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td><em>ASSETDATA_FLAG_NOSUBSTANCES</em></td>
+<td><dl class="first last docutils">
+<dt>Normally Substance assets are included with <cite>ASSETDATA_FLAG_TEXTURESONLY</cite> but with this flag they are not.</dt>
+<dd><div class="first last versionadded">
+<p><span class="versionmodified">New in version R18.</span></p>
+</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-even"><td><em>ASSETDATA_FLAG_MULTIPLEUSE</em></td>
+<td><dl class="first last docutils">
+<dt>Adds the same asset again for every usage.</dt>
+<dd><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.</span></p>
+</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td><em>ASSETDATA_FLAG_MISSING</em></td>
+<td><dl class="first last docutils">
+<dt>Adds missing assets to the list too.</dt>
+<dd><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.</span></p>
+</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-even"><td><em>ASSETDATA_FLAG_NODOCUMENT</em></td>
+<td><dl class="first last docutils">
+<dt>Exclude the document itself from the asset list.</dt>
+<dd><div class="first last versionadded">
+<p><span class="versionmodified">New in version R21.</span></p>
+</div>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">List[Dict]</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>The assets in the document, or <strong>None</strong> if there was an error.</p>
+<p>The dictionary for each returned asset is:</p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>filename</cite>: str: The asset filename.</li>
+<li><cite>assetname</cite>: str: The asset name.</li>
+<li><cite>channelId</cite>: int: The asset channel ID.</li>
+<li><cite>netRequestOnDemand</cite>: bool: NET request on demand.</li>
+<li><cite>owner</cite>: <a class="reference internal" href="../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseList2D</span></code></a>: The owner object. Since R20.</li>
+<li><cite>exists</cite>: bool: Tells if the asset could be found. Since R20.</li>
+<li><cite>paramId</cite>: int: The parameter ID. Since R20.</li>
+<li><cite>nodePath</cite>: str: The node path of the port the asset is assigned to in case of a nimbus material. Since R20.</li>
+<li><cite>nodeSpace</cite>: str: The node space id in case of a nimbus material. Since R21.</li>
+</ul>
+</div></blockquote>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.documents.SaveProject">
+<code class="descclassname">c4d.documents.</code><code class="descname">SaveProject</code><span class="sig-paren">(</span><em>doc</em>, <em>flags</em>, <em>targetPath</em>, <em>assets</em>, <em>missingAssets</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.documents.SaveProject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the document as a project (menu <cite>“Save Project with Assets”</cite>).</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.057.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>doc</strong> (<a class="reference internal" href="BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document to save as project.</li>
+<li><strong>flags</strong> (<em>int</em>) – <p>Flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>SAVEPROJECT_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEPROJECT_ASSETS</em></td>
+<td>Pass if the assets will be taken into account.</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEPROJECT_SCENEFILE</em></td>
+<td>Pass if the scene will be taken into account.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEPROJECT_DIALOGSALLOWED</em></td>
+<td>Show dialogs like error messages, a file selection for missing assets or alerts if necessary.</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEPROJECT_SHOWMISSINGASSETDIALOG</em></td>
+<td>If an asset is missing show a warning dialog. Flag can be set without <em>SAVEPROJECT_DIALOGSALLOWED</em>.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEPROJECT_ADDTORECENTLIST</em></td>
+<td>Add document to the recent list.</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEPROJECT_DONTCOPYFILES</em></td>
+<td>Does the same as without this flag but does not copy the files to the destination. Flag used to simulate the function.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEPROJECT_PROGRESSALLOWED</em></td>
+<td>Show the progress bar in the main window.</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEPROJECT_DONTTOUCHDOCUMENT</em></td>
+<td>Document will be in the same state as before the call was made.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEPROJECT_DONTFAILONMISSINGASSETS</em></td>
+<td>If this flag is passed, the function does not fail anymore when assets are missing.</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEPROJECT_ISNET</em></td>
+<td>Private. Set only if NET module is collecting assets.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEPROJECT_USEDOCUMENTNAMEASFILENAME</em></td>
+<td>Use the document name as the file name to save as project.</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEPROJECT_DONTCLEARSUGGESTEDFOLDER</em></td>
+<td>Do not change asset paths of nodes.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEPROJECT_WITHCACHES</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R17.048: </span>Save the project assets with Global Illumination / Ambient Occlusion caches. See also <em>ASSETDATA_FLAG_WITHCACHES</em>.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEPROJECT_DONTGENERATEPAINTTEX</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R17.053: </span>Does the same as without this flag but does not generate the textures from painted materials.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>targetPath</strong> (<em>str</em>) – The path to save the project to.</li>
+<li><strong>assets</strong> (list of dict{<strong>filename</strong>: str, <strong>assetname</strong>: str, <strong>channelId</strong>: int, <strong>netRequestOnDemand</strong>: bool}) – Pass an empty list that will be filled with the found assets.</li>
+<li><strong>missingAssets</strong> (list of dict{<strong>filename</strong>: str, <strong>assetname</strong>: str, <strong>channelId</strong>: int, <strong>netRequestOnDemand</strong>: bool}) – Pass an empty list that will be filled with the missing assets.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the document was successfully saved as a project, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">missingAssets</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">assets</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">targetPath</span> <span class="o">=</span> <span class="s2">&quot;some path&quot;</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">documents</span><span class="o">.</span><span class="n">SaveProject</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">c4d</span><span class="o">.</span><span class="n">SAVEPROJECT_ASSETS</span> <span class="o">|</span> <span class="n">c4d</span><span class="o">.</span><span class="n">SAVEPROJECT_SCENEFILE</span><span class="p">,</span> <span class="n">targetPath</span><span class="p">,</span> <span class="n">assets</span><span class="p">,</span> <span class="n">missingAssets</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.documents.GetFirstMarker">
+<code class="descclassname">c4d.documents.</code><code class="descname">GetFirstMarker</code><span class="sig-paren">(</span><em>doc</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.documents.GetFirstMarker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the first timeline marker of the document.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>doc</strong> (<a class="reference internal" href="BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D">c4d.BaseList2D</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first timeline marker.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.documents.AddMarker">
+<code class="descclassname">c4d.documents.</code><code class="descname">AddMarker</code><span class="sig-paren">(</span><em>doc</em>, <em>pPred</em>, <em>time</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.documents.AddMarker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserts a timeline marker into the document at a given time. Optionally an insertion point <em>pPred</em> in the timeline marker list can be specified, giving the marker before the wanted insertion point.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>doc</strong> (<a class="reference internal" href="BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document in which to insert.</li>
+<li><strong>pPred</strong> (<a class="reference internal" href="../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><em>c4d.BaseList2D</em></a>) – The optional timeline marker to use as list insertion point.</li>
+<li><strong>time</strong> (<a class="reference internal" href="../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><em>c4d.BaseTime</em></a>) – The time position of the timeline marker.</li>
+<li><strong>name</strong> (<em>str</em>) – The name of the timeline marker.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D">c4d.BaseList2D</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The added timeline marker, or <strong>None</strong> if insertion failed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">c4d.documents</a></li>
+<li><a class="reference internal" href="#types">Types</a></li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="BaseDocument/index.html" title="c4d.documents.BaseDocument"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../c4d.bitmaps/MovieSaver/index.html" title="c4d.bitmaps.MovieSaver"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

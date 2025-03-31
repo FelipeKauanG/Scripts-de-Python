@@ -1,0 +1,777 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.Description &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="c4d.AliasTrans" href="../AliasTrans/index.html" />
+    <link rel="prev" title="c4d.DescLevel" href="../DescLevel/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../AliasTrans/index.html" title="c4d.AliasTrans"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../DescLevel/index.html" title="c4d.DescLevel"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">c4d</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-description">
+<h1>c4d.Description<a class="headerlink" href="#c4d-description" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.Description">
+<em class="property">class </em><code class="descclassname">c4d.</code><code class="descname">Description</code><a class="headerlink" href="#c4d.Description" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The description class contains information for all description IDs of an object.</div>
+<div class="line">For example it stores a <a class="reference internal" href="../BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseContainer</span></code></a> for <cite>ID_BASEOBJECT_POSITION</cite> that describes that this value is a <a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>, has minimum and maximum values XYZ etc.</div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<p>The information about each description parameter is stored in a <a class="reference internal" href="../BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseContainer</span></code></a> with the following values:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="15%" />
+<col width="68%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>DESC_NAME</em></td>
+<td>str</td>
+<td>Name for standalone use.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_SHORT_NAME</em></td>
+<td>str</td>
+<td>Short name, for attributes dialog.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_VERSION</em></td>
+<td>int</td>
+<td>Show in versions:</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><em>DESC_VERSION_DEMO</em></td>
+<td>Demo versions.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><em>DESC_VERSION_XL</em></td>
+<td>XL Versions.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><em>DESC_VERSION_ALL</em></td>
+<td>All versions.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_CHILDREN</em></td>
+<td><a class="reference internal" href="../BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseContainer</span></code></a></td>
+<td>Internal.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_MIN</em></td>
+<td>int/float/<a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a></td>
+<td>Minimum value.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_MAX</em></td>
+<td>int/float/<a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a></td>
+<td>Maximum value.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_MINEX</em></td>
+<td>bool</td>
+<td><strong>True</strong> if <em>DESC_MIN</em> is exclusive, otherwise it is inclusive.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_MAXEX</em></td>
+<td>bool</td>
+<td><strong>True</strong> if <em>DESC_MAX</em> is exclusive, otherwise it is inclusive.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_STEP</em></td>
+<td>int/float/<a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a></td>
+<td>The step for the edit field arrows.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_ANIMATE</em></td>
+<td>int</td>
+<td>Animation mode:</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><em>DESC_ANIMATE_OFF</em></td>
+<td>Parameter is not animatable.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><em>DESC_ANIMATE_ON</em></td>
+<td>Parameter is animatable.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><em>DESC_ANIMATE_MIX</em></td>
+<td>Parameter is animatable, but needs to know the left and right data element.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_ASKOBJECT</em></td>
+<td>bool</td>
+<td><strong>True</strong> means ask object for the parameter, <strong>False</strong> means look in container.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_UNIT</em></td>
+<td>int</td>
+<td>Unit for <em>DTYPE_REAL</em>/<em>DTYPE_VECTOR</em>:</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><em>DESC_UNIT_FLOAT</em></td>
+<td><em>FORMAT_FLOAT</em></td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><em>DESC_UNIT_INT</em></td>
+<td><em>FORMAT_INT</em></td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><em>DESC_UNIT_PERCENT</em></td>
+<td><em>FORMAT_PERCENT</em></td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><em>DESC_UNIT_DEGREE</em></td>
+<td><em>FORMAT_DEGREE</em></td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><em>DESC_UNIT_METER</em></td>
+<td><em>FORMAT_METER</em></td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><em>DESC_UNIT_TIME</em></td>
+<td><em>FORMAT_FRAMES</em></td>
+</tr>
+<tr class="row-even"><td><em>DESC_PARENTGROUP</em></td>
+<td>int/<a class="reference internal" href="../DescID/index.html#c4d.DescID" title="c4d.DescID"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.DescID</span></code></a></td>
+<td>Parent ID.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_CYCLE</em></td>
+<td><a class="reference internal" href="../BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseContainer</span></code></a></td>
+<td>Contains members of cycle as string, e.g. <cite>GetString(10041)</cite> == ‘-X’.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_HIDE</em></td>
+<td>bool</td>
+<td>Indicates whether the property is hidden or not.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_DEFAULT</em></td>
+<td>int/float/<a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a></td>
+<td>Default numeric value.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_ACCEPT</em></td>
+<td><a class="reference internal" href="../BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseContainer</span></code></a></td>
+<td>Contains the accepted IDs as strings. For <a class="reference internal" href="../C4DAtom/index.html#C4DAtom.IsInstanceOf" title="C4DAtom.IsInstanceOf"><code class="xref py py-meth docutils literal notranslate"><span class="pre">C4DAtom.IsInstanceOf()</span></code></a> checks, e.g. <cite>GetString(5155)</cite> == ‘Obase’.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_SEPARATORLINE</em></td>
+<td>bool</td>
+<td><strong>True</strong> if separators should have a visible line.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_REFUSE</em></td>
+<td><a class="reference internal" href="../BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseContainer</span></code></a></td>
+<td>Contains the refused IDs as strings. For <a class="reference internal" href="../C4DAtom/index.html#C4DAtom.IsInstanceOf" title="C4DAtom.IsInstanceOf"><code class="xref py py-meth docutils literal notranslate"><span class="pre">C4DAtom.IsInstanceOf()</span></code></a> checks, e.g. <cite>GetString(5155)</cite> == ‘Obase’.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_PARENTID</em></td>
+<td>int</td>
+<td>The ID of the parent parameter used for indentation and animation track.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_CUSTOMGUI</em></td>
+<td>int</td>
+<td>The ID of the custom GUI for the parameter. Either a 3rd party plugin ID or a <em>CUSTOMGUI</em>.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_COLUMNS</em></td>
+<td>int</td>
+<td>Number of columns for layout groups (<em>DTYPE_GROUP</em>).</td>
+</tr>
+<tr class="row-even"><td><em>DESC_LAYOUTGROUP</em></td>
+<td>bool</td>
+<td><strong>True</strong> for layout groups (<cite>LAYOUTGROUP</cite>).</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_REMOVEABLE</em></td>
+<td>bool</td>
+<td><strong>True</strong> if entry is removable.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_GUIOPEN</em></td>
+<td>bool</td>
+<td><strong>True</strong> if the maximized GUI is shown by default.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_EDITABLE</em></td>
+<td>bool</td>
+<td><strong>True</strong> if entry is editable.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_MINSLIDER</em></td>
+<td>int/float/<a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a></td>
+<td>Minimum value for slider.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_MAXSLIDER</em></td>
+<td>int/float/<a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a></td>
+<td>Maximum value for slider.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_GROUPSCALEV</em></td>
+<td>bool</td>
+<td>Allow the group height to be scaled.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_SCALEH</em></td>
+<td>bool</td>
+<td>Scale element horizontally.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_LAYOUTVERSION</em></td>
+<td>int</td>
+<td>Layout version.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_ALIGNLEFT</em></td>
+<td>bool</td>
+<td>Align element left.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_FITH</em></td>
+<td>bool</td>
+<td>Fit element.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_NEWLINE</em></td>
+<td>bool</td>
+<td>Line break.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_TITLEBAR</em></td>
+<td>bool</td>
+<td>Main group title bar.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_CYCLEICONS</em></td>
+<td><a class="reference internal" href="../BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseContainer</span></code></a></td>
+<td>Icon IDs for cycle.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_CYCLESYMBOLS</em></td>
+<td><a class="reference internal" href="../BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseContainer</span></code></a></td>
+<td>String identifiers for help symbol export.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_PARENT_COLLAPSE</em></td>
+<td>int</td>
+<td>Parent collapse ID.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_FORBID_INLINE_FOLDING</em></td>
+<td>bool</td>
+<td>Instructs the Attribute Manager to not allow expanding inline objects for entry.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_FORBID_SCALING</em></td>
+<td>bool</td>
+<td>Prevents auto-scaling of the parameter with the scale tool (for <em>DESC_UNIT_METER</em>).</td>
+</tr>
+<tr class="row-even"><td><em>DESC_ANGULAR_XYZ</em></td>
+<td>bool</td>
+<td><strong>True</strong> for XYZ as angular representation, or <strong>False</strong> for HPB.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_INPORT</em></td>
+<td>bool</td>
+<td>GV in port.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_OUTPORT</em></td>
+<td>bool</td>
+<td>GV out port.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_STATICPORT</em></td>
+<td>bool</td>
+<td>GV static port.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_NEEDCONNECTION</em></td>
+<td>bool</td>
+<td>GV needs connection.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_MULTIPLE</em></td>
+<td>bool</td>
+<td>GV multiple ports allowed.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_PORTONLY</em></td>
+<td>bool</td>
+<td>GV port only.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_CREATEPORT</em></td>
+<td>bool</td>
+<td>GV create port.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_PORTSMIN</em></td>
+<td>int</td>
+<td>GV minimum number of ports.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_PORTSMAX</em></td>
+<td>int</td>
+<td>GV maximum number of ports.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_NOTMOVABLE</em></td>
+<td>bool</td>
+<td>GV not movable.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_EDITPORT</em></td>
+<td>bool</td>
+<td>GV editable.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_ITERATOR</em></td>
+<td>bool</td>
+<td>GV iterator port.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_PARENTMSG</em></td>
+<td>int</td>
+<td>Used in the Material Editor on the boolean tabs to specify which section to open.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_MATEDNOTEXT</em></td>
+<td>bool</td>
+<td>No text in Material Editor window.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_COLUMNSMATED</em></td>
+<td>int</td>
+<td>Number of columns in left Material Editor window.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_SHADERLINKFLAG</em></td>
+<td>bool</td>
+<td>Specifies that the parameter is a shader link. Only if data type is <em>DTYPE_BASELISTLINK</em>.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_NOGUISWITCH</em></td>
+<td>bool</td>
+<td>Disables GUI switching for this description element.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_COLORALWAYSLINEAR</em></td>
+<td>bool</td>
+<td>Treats color field always as linear input.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_HIDE_WHEN_INLINE</em></td>
+<td>bool</td>
+<td><strong>True</strong> to hide this attribute in inline descriptions.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_MATERIALEDITOR_LEFTSIDE</em></td>
+<td>bool</td>
+<td><strong>True</strong> if the property should appear on the left side of the material editor.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_CHANGED</em></td>
+<td>bool</td>
+<td><strong>True</strong> if entry is changed.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_HIDEINFIELDS</em></td>
+<td>bool</td>
+<td><strong>True</strong> if group is visible in fields UI.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_SHOWINFIELDS</em></td>
+<td>bool</td>
+<td><strong>True</strong> if group is shown in fields UI even though group may be hidden.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_FIELDCOLORCHANNEL</em></td>
+<td>bool</td>
+<td><strong>True</strong> if the group belongs only to the color channel in the fields list (so will be hidden when the channel is disabled in the UI).</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_FIELDDIRECTIONCHANNEL</em></td>
+<td>bool</td>
+<td><strong>True</strong> if the group belongs only to the direction channel in the fields list (so will be hidden when the channel is disabled in the UI).</td>
+</tr>
+<tr class="row-even"><td><em>DESC_FIELDVALUECHANNEL</em></td>
+<td>bool</td>
+<td><strong>True</strong> if the group belongs only to the value channel in the fields list (so will be hidden when the channel is disabled in the UI).</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_FIELDROTATIONCHANNEL</em></td>
+<td>bool</td>
+<td><strong>True</strong> if the group belongs only to the rotation channel in the fields list (so will be hidden when the channel is disabled in the UI).</td>
+</tr>
+<tr class="row-even"><td><em>DESC_NODEPORT</em></td>
+<td>bool</td>
+<td><strong>True</strong> to indicate a nodeport.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_REPLACECOMPLEXUI</em></td>
+<td>bool</td>
+<td>class::<cite>c4d.BaseContainer</cite> filled with descids of props to replace.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_REPLACE_HIDE</em></td>
+<td>bool</td>
+<td><strong>True</strong> if the property is hidden because it’s remplaced by a complex ui.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_RESOURCEPATH</em></td>
+<td>bool</td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20: </span>Private.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><em>DESC_RESOURCELINE</em></td>
+<td>bool</td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20: </span>Private.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_TEMPDESCID</em></td>
+<td><a class="reference internal" href="../DescID/index.html#c4d.DescID" title="c4d.DescID"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.DescID</span></code></a></td>
+<td>Internal. Used internally to store the preferred description ID.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_IDENT</em></td>
+<td>str</td>
+<td>Resource identifier, e.g. ‘ID_BASEOBJECT_REL_POSITION’.</td>
+</tr>
+<tr class="row-odd"><td><em>DESC_IDENT_ORIGIN</em></td>
+<td>str</td>
+<td>Origin Resource identifier, e.g. ‘ID_BASEOBJECT_REL_POSITION’.</td>
+</tr>
+<tr class="row-even"><td><em>DESC_DISABLELAYOUTSWITCH</em></td>
+<td>bool</td>
+<td>Hides the Layout Switch arrow displayed on CUSTOMGUI elements.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#Description.__iter__" title="Description.__iter__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Description.__iter__(self,</span> <span class="pre">bc,</span> <span class="pre">id,</span> <span class="pre">groupid)</span></code></a></td>
+<td>Iterate over the parameters of an object’s description.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#Description.LoadDescription" title="Description.LoadDescription"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Description.LoadDescription(self,</span> <span class="pre">id)</span></code></a></td>
+<td>Loads a description by name or ID.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Description.GetParameter" title="Description.GetParameter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Description.GetParameter(self,</span> <span class="pre">id[,</span> <span class="pre">ar])</span></code></a></td>
+<td>Retrieves the information container for a parameter.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Description.GetParameterI" title="Description.GetParameterI"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Description.GetParameterI(self,</span> <span class="pre">id[,</span> <span class="pre">ar])</span></code></a></td>
+<td>Retrieves the information container instance for a parameter.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Description.SetParameter" title="Description.SetParameter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Description.SetParameter(self,</span> <span class="pre">id,</span> <span class="pre">param,</span> <span class="pre">groupid)</span></code></a></td>
+<td>Inserts a description parameter into the collection.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Description.CreatePopupMenu" title="Description.CreatePopupMenu"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Description.CreatePopupMenu(self)</span></code></a></td>
+<td>Builds a popup menu for choosing a parameter in the description.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Description.CheckDescID" title="Description.CheckDescID"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Description.CheckDescID(self,</span> <span class="pre">searchid,</span> <span class="pre">ops)</span></code></a></td>
+<td>Checks if a description ID <em>searchid</em> exists for the given objects <em>ops</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Description.GetSubDescriptionWithData" title="Description.GetSubDescriptionWithData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Description.GetSubDescriptionWithData(self,</span> <span class="pre">did,</span> <span class="pre">op,</span> <span class="pre">bc,</span> <span class="pre">...)</span></code></a></td>
+<td>Retrieves dynamic sub-description data (e.g. the gradient data type).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Description.GetSingleDescID" title="Description.GetSingleDescID"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Description.GetSingleDescID(self)</span></code></a></td>
+<td>Retrieves the single description ID.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="Description.__iter__">
+<code class="descclassname">Description.</code><code class="descname">__iter__</code><span class="sig-paren">(</span><em>self</em>, <em>bc</em>, <em>id</em>, <em>groupid</em><span class="sig-paren">)</span><a class="headerlink" href="#Description.__iter__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterate over the parameters of an object’s description.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>bc</strong> (<a class="reference internal" href="../BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The container that holds the information for the current description parameter.</li>
+<li><strong>id</strong> (<a class="reference internal" href="../DescID/index.html#c4d.DescID" title="c4d.DescID"><em>c4d.DescID</em></a>) – The ID of the current description parameter.</li>
+<li><strong>groupid</strong> (<a class="reference internal" href="../DescID/index.html#c4d.DescID" title="c4d.DescID"><em>c4d.DescID</em></a>) – The group ID of the current description parameter.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here is how to print the name of all the parameters of an object</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">c4d</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">op</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="n">description</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">GetDescription</span><span class="p">(</span><span class="n">c4d</span><span class="o">.</span><span class="n">DESCFLAGS_DESC_NONE</span><span class="p">)</span>    <span class="c1"># Get the description of the active object</span>
+        <span class="k">for</span> <span class="n">bc</span><span class="p">,</span> <span class="n">paramid</span><span class="p">,</span> <span class="n">groupid</span> <span class="ow">in</span> <span class="n">description</span><span class="p">:</span>                    <span class="c1"># Iterate over the parameters of the description</span>
+            <span class="nb">print</span> <span class="n">bc</span><span class="p">[</span><span class="n">c4d</span><span class="o">.</span><span class="n">DESC_NAME</span><span class="p">]</span>                                 <span class="c1"># Print the current parameter name</span>
+
+<span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+        <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="Description.LoadDescription">
+<code class="descclassname">Description.</code><code class="descname">LoadDescription</code><span class="sig-paren">(</span><em>self</em>, <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#Description.LoadDescription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads a description by name or ID.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.011.</span></p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Existing description parameters are lost.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>str</em><em>]</em>) – The description name (e.g. “Obase”) or ID (e.g. <em>c4d.Obase</em>).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the description was loaded, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Description.GetParameter">
+<code class="descclassname">Description.</code><code class="descname">GetParameter</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>ar=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Description.GetParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the information container for a parameter.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.011.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<a class="reference internal" href="../DescID/index.html#c4d.DescID" title="c4d.DescID"><em>c4d.DescID</em></a>) – The description ID.</li>
+<li><strong>ar</strong> (list of <a class="reference internal" href="../C4DAtom/index.html#c4d.C4DAtom" title="c4d.C4DAtom"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.C4DAtom</span></code></a>) – <div class="versionadded">
+<p><span class="versionmodified">New in version R18.039.</span></p>
+</div>
+<p>Optional array for dynamic descriptions, e.g. sub-descriptions of a gradient or dynamic XPresso node, that need an array of elements the parameter is assigned to.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer">c4d.BaseContainer</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>The information container.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version R18.057.</span></p>
+</div>
+<p>Returns only one information container.</p>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Description.GetParameterI">
+<code class="descclassname">Description.</code><code class="descname">GetParameterI</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>ar=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Description.GetParameterI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the information container instance for a parameter.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.011.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<a class="reference internal" href="../DescID/index.html#c4d.DescID" title="c4d.DescID"><em>c4d.DescID</em></a>) – The description ID.</li>
+<li><strong>ar</strong> (list of <a class="reference internal" href="../C4DAtom/index.html#c4d.C4DAtom" title="c4d.C4DAtom"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.C4DAtom</span></code></a>) – Optional array for dynamic descriptions, e.g. sub-descriptions of a gradient or dynamic XPresso node, that need an array of elements the parameter is assigned to.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseContainer</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The information container instance or <strong>None</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Description.SetParameter">
+<code class="descclassname">Description.</code><code class="descname">SetParameter</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>param</em>, <em>groupid</em><span class="sig-paren">)</span><a class="headerlink" href="#Description.SetParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserts a description parameter into the collection.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.011.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<a class="reference internal" href="../DescID/index.html#c4d.DescID" title="c4d.DescID"><em>c4d.DescID</em></a>) – The description ID.</li>
+<li><strong>param</strong> (<a class="reference internal" href="../BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The settings for the new parameter.</li>
+<li><strong>groupid</strong> (<a class="reference internal" href="../DescID/index.html#c4d.DescID" title="c4d.DescID"><em>c4d.DescID</em></a>) – The ID of the parameter’s group, or <a class="reference internal" href="../DescID/index.html#c4d.DESCID_ROOT" title="c4d.DESCID_ROOT"><code class="xref py py-data docutils literal notranslate"><span class="pre">c4d.DESCID_ROOT</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the parameter was inserted, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Description.CreatePopupMenu">
+<code class="descclassname">Description.</code><code class="descname">CreatePopupMenu</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#Description.CreatePopupMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds a popup menu for choosing a parameter in the description.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.011.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer">c4d.BaseContainer</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The menu container.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Description.CheckDescID">
+<code class="descclassname">Description.</code><code class="descname">CheckDescID</code><span class="sig-paren">(</span><em>self</em>, <em>searchid</em>, <em>ops</em><span class="sig-paren">)</span><a class="headerlink" href="#Description.CheckDescID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if a description ID <em>searchid</em> exists for the given objects <em>ops</em>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">usually only one single object is passed as otherwise the smallest common nominator is returned.</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.011.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>searchid</strong> (<a class="reference internal" href="../DescID/index.html#c4d.DescID" title="c4d.DescID"><em>c4d.DescID</em></a>) – The partial ID.</li>
+<li><strong>ops</strong> (list of <a class="reference internal" href="../C4DAtom/index.html#c4d.C4DAtom" title="c4d.C4DAtom"><code class="xref py py-class docutils literal notranslate"><span class="pre">C4DAtom</span></code></a>) – A list of atom objects for dynamic descriptions. Usually <strong>None</strong>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../DescID/index.html#c4d.DescID" title="c4d.DescID">c4d.DescID</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The complete ID.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Description.GetSubDescriptionWithData">
+<code class="descclassname">Description.</code><code class="descname">GetSubDescriptionWithData</code><span class="sig-paren">(</span><em>self</em>, <em>did</em>, <em>op</em>, <em>bc</em>, <em>singledescid</em><span class="sig-paren">)</span><a class="headerlink" href="#Description.GetSubDescriptionWithData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves dynamic sub-description data (e.g. the gradient data type).</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.011.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>did</strong> (<a class="reference internal" href="../DescID/index.html#c4d.DescID" title="c4d.DescID"><em>c4d.DescID</em></a>) – The description ID.</li>
+<li><strong>op</strong> (list of <a class="reference internal" href="../C4DAtom/index.html#c4d.C4DAtom" title="c4d.C4DAtom"><code class="xref py py-class docutils literal notranslate"><span class="pre">C4DAtom</span></code></a>) – A list of atom objects.</li>
+<li><strong>bc</strong> (<a class="reference internal" href="../BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The existing container for the data type. Can be just <a class="reference internal" href="../BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseContainer()</span></code></a>.</li>
+<li><strong>singledescid</strong> (<a class="reference internal" href="../DescID/index.html#c4d.DescID" title="c4d.DescID"><em>c4d.DescID</em></a>) – Should be <strong>None</strong>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if successful, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Description.GetSingleDescID">
+<code class="descclassname">Description.</code><code class="descname">GetSingleDescID</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#Description.GetSingleDescID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the single description ID.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.011.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../DescID/index.html#c4d.DescID" title="c4d.DescID">c4d.DescID</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The single description ID.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../AliasTrans/index.html" title="c4d.AliasTrans"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../DescLevel/index.html" title="c4d.DescLevel"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >c4d</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

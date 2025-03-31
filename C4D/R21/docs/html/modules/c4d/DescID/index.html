@@ -1,0 +1,417 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.DescID &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="c4d.DescLevel" href="../DescLevel/index.html" />
+    <link rel="prev" title="c4d.BaseContainer" href="../BaseContainer/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../DescLevel/index.html" title="c4d.DescLevel"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../BaseContainer/index.html" title="c4d.BaseContainer"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">c4d</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-descid">
+<h1>c4d.DescID<a class="headerlink" href="#c4d-descid" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.DescID">
+<em class="property">class </em><code class="descclassname">c4d.</code><code class="descname">DescID</code><a class="headerlink" href="#c4d.DescID" title="Permalink to this definition">¶</a></dt>
+<dd><p>An ID class for description elements. Contains a stack of <a class="reference internal" href="../DescLevel/index.html#c4d.DescLevel" title="c4d.DescLevel"><code class="xref py py-class docutils literal notranslate"><span class="pre">DescLevel</span></code></a> objects.</p>
+<p>The description ID is used to exactly identify a parameter value.</p>
+</dd></dl>
+
+</div>
+<p class="rubric">Constants</p>
+<dl class="data">
+<dt id="c4d.DESCID_ROOT">
+<code class="descclassname">c4d.</code><code class="descname">DESCID_ROOT</code><a class="headerlink" href="#c4d.DESCID_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Root description ID.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="c4d.ID_USERDATA">
+<code class="descclassname">c4d.</code><code class="descname">ID_USERDATA</code><a class="headerlink" href="#c4d.ID_USERDATA" title="Permalink to this definition">¶</a></dt>
+<dd><p>User data ID.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="c4d.DESCID_DYNAMICSUB">
+<code class="descclassname">c4d.</code><code class="descname">DESCID_DYNAMICSUB</code><a class="headerlink" href="#c4d.DESCID_DYNAMICSUB" title="Permalink to this definition">¶</a></dt>
+<dd><p>User data/dynamic parameters description level.</p>
+</dd></dl>
+
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#DescID.__init__" title="DescID.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">DescID.__init__(self[,</span> <span class="pre">id1,</span> <span class="pre">id2,</span> <span class="pre">id3])</span></code></a></td>
+<td>Create a DescID instance up to three levels</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#DescID.__str__" title="DescID.__str__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">DescID.__str__(self)</span></code></a></td>
+<td>Returns the DescID as string. Called if <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str">str()</a> is wrapped around an instance of <a class="reference internal" href="#c4d.DescID" title="c4d.DescID"><code class="xref py py-class docutils literal notranslate"><span class="pre">DescID</span></code></a>. (See <a class="reference external" href="https://docs.python.org/2.7/reference/datamodel.html?highlight=__str__#object.__str__">__str__</a>)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#DescID.__lshift__" title="DescID.__lshift__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">DescID.__lshift__(self,</span> <span class="pre">other)</span></code></a></td>
+<td>Returns the result of popping <em>shift</em> levels from the <strong>bottom</strong> of the stack</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#DescID.__getitem__" title="DescID.__getitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">DescID.__getitem__(self,</span> <span class="pre">key)</span></code></a></td>
+<td>Returns the level at position <em>key</em> in the stack</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#DescID.__eq__" title="DescID.__eq__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">DescID.__eq__(self,</span> <span class="pre">other)</span></code></a></td>
+<td>Checks if all levels are equal.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#DescID.__ne__" title="DescID.__ne__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">DescID.__ne__(self,</span> <span class="pre">other)</span></code></a></td>
+<td>The reverse of <a class="reference internal" href="#DescID.__eq__" title="DescID.__eq__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__eq__</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#DescID.SetId" title="DescID.SetId"><code class="xref py py-meth docutils literal notranslate"><span class="pre">DescID.SetId(self,</span> <span class="pre">subid)</span></code></a></td>
+<td>Set the highest level to <em>subid</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#DescID.PushId" title="DescID.PushId"><code class="xref py py-meth docutils literal notranslate"><span class="pre">DescID.PushId(self,</span> <span class="pre">subid)</span></code></a></td>
+<td>Push a new level onto the stack.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#DescID.PopId" title="DescID.PopId"><code class="xref py py-meth docutils literal notranslate"><span class="pre">DescID.PopId(self)</span></code></a></td>
+<td>Pops the highest level from the stack.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#DescID.GetDepth" title="DescID.GetDepth"><code class="xref py py-meth docutils literal notranslate"><span class="pre">DescID.GetDepth(self)</span></code></a></td>
+<td>Return the depth.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#DescID.Write" title="DescID.Write"><code class="xref py py-meth docutils literal notranslate"><span class="pre">DescID.Write(self,</span> <span class="pre">hf)</span></code></a></td>
+<td>Writes the description to a file.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#DescID.Read" title="DescID.Read"><code class="xref py py-meth docutils literal notranslate"><span class="pre">DescID.Read(self,</span> <span class="pre">hf)</span></code></a></td>
+<td>Reads the description from a file.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#DescID.GetHashCode" title="DescID.GetHashCode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">DescID.GetHashCode(self)</span></code></a></td>
+<td>Gets a hash code for the description ID.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#DescID.IsPartOf" title="DescID.IsPartOf"><code class="xref py py-meth docutils literal notranslate"><span class="pre">DescID.IsPartOf(self,</span> <span class="pre">cmp)</span></code></a></td>
+<td>Checks if the description ID is part of <em>cmp</em> and returns the length of the match.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="DescID.__init__">
+<code class="descclassname">DescID.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>id1=0</em>, <em>id2=0</em>, <em>id3=0</em><span class="sig-paren">)</span><a class="headerlink" href="#DescID.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a DescID instance up to three levels</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dId</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">DescID</span><span class="p">()</span>
+<span class="n">dId</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">DescID</span><span class="p">(</span><span class="n">dId</span><span class="p">)</span> <span class="c1">#copy constructor</span>
+<span class="n">dId</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">DescID</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1">#first level with given ID</span>
+<span class="n">dId</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">DescID</span><span class="p">(</span><span class="n">DescLevel</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">DescLevel</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span> <span class="n">DescLevel</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span> <span class="c1">#set three levels</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id1</strong> (<a class="reference internal" href="../DescLevel/index.html#c4d.DescLevel" title="c4d.DescLevel"><em>c4d.DescLevel</em></a>) – First level.</li>
+<li><strong>id2</strong> (<a class="reference internal" href="../DescLevel/index.html#c4d.DescLevel" title="c4d.DescLevel"><em>c4d.DescLevel</em></a>) – Second level.</li>
+<li><strong>id3</strong> (<a class="reference internal" href="../DescLevel/index.html#c4d.DescLevel" title="c4d.DescLevel"><em>c4d.DescLevel</em></a>) – Third level.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DescID.__str__">
+<code class="descclassname">DescID.</code><code class="descname">__str__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#DescID.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the DescID as string. Called if <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str">str()</a> is wrapped around an instance of <a class="reference internal" href="#c4d.DescID" title="c4d.DescID"><code class="xref py py-class docutils literal notranslate"><span class="pre">DescID</span></code></a>. (See <a class="reference external" href="https://docs.python.org/2.7/reference/datamodel.html?highlight=__str__#object.__str__">__str__</a>)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dId</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">DescID</span><span class="p">(</span><span class="n">c4d</span><span class="o">.</span><span class="n">DescLevel</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span>
+<span class="nb">print</span> <span class="n">dId</span>                <span class="c1"># output &#39;(30, 0, 0)&#39;</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The DescID as string.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DescID.__lshift__">
+<code class="descclassname">DescID.</code><code class="descname">__lshift__</code><span class="sig-paren">(</span><em>self</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#DescID.__lshift__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the result of popping <em>shift</em> levels from the <strong>bottom</strong> of the stack</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dId</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">DescID</span><span class="p">(</span><span class="n">c4d</span><span class="o">.</span><span class="n">DescLevel</span><span class="p">(</span><span class="mi">30</span><span class="p">),</span> <span class="n">c4d</span><span class="o">.</span><span class="n">DescLevel</span><span class="p">(</span><span class="mi">40</span><span class="p">),</span> <span class="n">c4d</span><span class="o">.</span><span class="n">DescLevel</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
+<span class="n">dId</span><span class="o">&lt;&lt;</span><span class="mi">2</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other</strong> (<em>int</em>) – Number of levels to pop.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If <em>other</em> is out of range : <em>0&lt;=other&lt;</em><a class="reference internal" href="#DescID.GetDepth" title="DescID.GetDepth"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetDepth()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.DescID" title="c4d.DescID">c4d.DescID</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Result.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DescID.__getitem__">
+<code class="descclassname">DescID.</code><code class="descname">__getitem__</code><span class="sig-paren">(</span><em>self</em>, <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#DescID.__getitem__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the level at position <em>key</em> in the stack</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dId</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">DescID</span><span class="p">(</span><span class="n">c4d</span><span class="o">.</span><span class="n">DescLevel</span><span class="p">(</span><span class="mi">30</span><span class="p">),</span> <span class="n">c4d</span><span class="o">.</span><span class="n">DescLevel</span><span class="p">(</span><span class="mi">40</span><span class="p">),</span> <span class="n">c4d</span><span class="o">.</span><span class="n">DescLevel</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
+<span class="n">diD</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<em>int</em>) – The position.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If <em>other</em> is out of range : <em>0&lt;=key&lt;</em><a class="reference internal" href="#DescID.GetDepth" title="DescID.GetDepth"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetDepth()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../DescLevel/index.html#c4d.DescLevel" title="c4d.DescLevel">c4d.DescLevel</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The level at the specified position.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DescID.__eq__">
+<code class="descclassname">DescID.</code><code class="descname">__eq__</code><span class="sig-paren">(</span><em>self</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#DescID.__eq__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if all levels are equal.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DescID.__ne__">
+<code class="descclassname">DescID.</code><code class="descname">__ne__</code><span class="sig-paren">(</span><em>self</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#DescID.__ne__" title="Permalink to this definition">¶</a></dt>
+<dd><p>The reverse of <a class="reference internal" href="#DescID.__eq__" title="DescID.__eq__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__eq__</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DescID.SetId">
+<code class="descclassname">DescID.</code><code class="descname">SetId</code><span class="sig-paren">(</span><em>self</em>, <em>subid</em><span class="sig-paren">)</span><a class="headerlink" href="#DescID.SetId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the highest level to <em>subid</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>subid</strong> (<a class="reference internal" href="../DescLevel/index.html#c4d.DescLevel" title="c4d.DescLevel"><em>c4d.DescLevel</em></a>) – New toplevel.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DescID.PushId">
+<code class="descclassname">DescID.</code><code class="descname">PushId</code><span class="sig-paren">(</span><em>self</em>, <em>subid</em><span class="sig-paren">)</span><a class="headerlink" href="#DescID.PushId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Push a new level onto the stack.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>subid</strong> (<a class="reference internal" href="../DescLevel/index.html#c4d.DescLevel" title="c4d.DescLevel"><em>c4d.DescLevel</em></a>) – Level to push.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DescID.PopId">
+<code class="descclassname">DescID.</code><code class="descname">PopId</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#DescID.PopId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pops the highest level from the stack.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="DescID.GetDepth">
+<code class="descclassname">DescID.</code><code class="descname">GetDepth</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#DescID.GetDepth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the depth.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The depth.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DescID.Write">
+<code class="descclassname">DescID.</code><code class="descname">Write</code><span class="sig-paren">(</span><em>self</em>, <em>hf</em><span class="sig-paren">)</span><a class="headerlink" href="#DescID.Write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes the description to a file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>hf</strong> (<a class="reference internal" href="../../c4d.storage/HyperFile/index.html#c4d.storage.HyperFile" title="c4d.storage.HyperFile"><em>c4d.storage.HyperFile</em></a>) – The hyperfile to write to.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DescID.Read">
+<code class="descclassname">DescID.</code><code class="descname">Read</code><span class="sig-paren">(</span><em>self</em>, <em>hf</em><span class="sig-paren">)</span><a class="headerlink" href="#DescID.Read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads the description from a file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>hf</strong> (<a class="reference internal" href="../../c4d.storage/HyperFile/index.html#c4d.storage.HyperFile" title="c4d.storage.HyperFile"><em>c4d.storage.HyperFile</em></a>) – The hyperfile to read from.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if successful, otherwise False.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DescID.GetHashCode">
+<code class="descclassname">DescID.</code><code class="descname">GetHashCode</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#DescID.GetHashCode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a hash code for the description ID.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R17.048.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The hash code.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DescID.IsPartOf">
+<code class="descclassname">DescID.</code><code class="descname">IsPartOf</code><span class="sig-paren">(</span><em>self</em>, <em>cmp</em><span class="sig-paren">)</span><a class="headerlink" href="#DescID.IsPartOf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the description ID is part of <em>cmp</em> and returns the length of the match.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.020.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cmp</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>list</em><em>, </em><a class="reference internal" href="#c4d.DescID" title="c4d.DescID"><em>c4d.DescID</em></a><em>]</em>) – <p>The super description ID.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version R18.057.</span></p>
+</div>
+<p>Can be a int, list or <a class="reference internal" href="#c4d.DescID" title="c4d.DescID"><code class="xref py py-class docutils literal notranslate"><span class="pre">DescID</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Tuple[bool, int]</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A tuple with the following information:<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">bool: <strong>True</strong> if the description ID matches a lowest part of <em>cmp</em>, otherwise <strong>False</strong>.</div>
+<div class="line">int: The length of the match.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../DescLevel/index.html" title="c4d.DescLevel"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../BaseContainer/index.html" title="c4d.BaseContainer"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >c4d</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,677 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MSG PLUGINS &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="MULTIMSG_ROUTE" href="MULTIMSG_ROUTE.html" />
+    <link rel="prev" title="MSG_DOCUMENTINFO_TYPE_BEFOREMERGE_RESULT" href="MSG_DOCUMENTINFO_TYPE_BEFOREMERGE_RESULT.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="MULTIMSG_ROUTE.html" title="MULTIMSG_ROUTE"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="MSG_DOCUMENTINFO_TYPE_BEFOREMERGE_RESULT.html" title="MSG_DOCUMENTINFO_TYPE_BEFOREMERGE_RESULT"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../types/index.html" accesskey="U">Types and Symbols List</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="msg-plugins">
+<h1>MSG PLUGINS<a class="headerlink" href="#msg-plugins" title="Permalink to this headline">¶</a></h1>
+<p>This page provides information on the messages sent to plugins data <cite>Message()</cite>.</p>
+<ul class="simple">
+<li><a class="reference internal" href="#msg-update-plugins"><span class="std std-ref">MSG_UPDATE</span></a></li>
+<li><a class="reference internal" href="#msg-smallupdate-plugins"><span class="std std-ref">MSG_SMALLUPDATE</span></a></li>
+<li><a class="reference internal" href="#msg-change-plugins"><span class="std std-ref">MSG_CHANGE</span></a></li>
+<li><a class="reference internal" href="#msg-commandinformation-plugins"><span class="std std-ref">MSG_COMMANDINFORMATION</span></a></li>
+<li><a class="reference internal" href="#msg-getallassets-plugins"><span class="std std-ref">MSG_GETALLASSETS</span></a></li>
+<li><a class="reference internal" href="#msg-segments-changed-plugins"><span class="std std-ref">MSG_SEGMENTS_CHANGED</span></a></li>
+<li><a class="reference internal" href="#msg-polygons-changed-plugins"><span class="std std-ref">MSG_POLYGONS_CHANGED</span></a></li>
+<li><a class="reference internal" href="#msg-points-changed-plugins"><span class="std std-ref">MSG_POINTS_CHANGED</span></a></li>
+<li><a class="reference internal" href="#msg-getcustomicon-plugins"><span class="std std-ref">MSG_GETCUSTOMICON</span></a></li>
+<li><a class="reference internal" href="#msg-getcustomicon-settings-plugins"><span class="std std-ref">MSG_GETCUSTOMICON_SETTINGS</span></a></li>
+<li><a class="reference internal" href="#msg-edit-plugins"><span class="std std-ref">MSG_EDIT</span></a></li>
+<li><a class="reference internal" href="#msg-filter-plugins"><span class="std std-ref">MSG_FILTER</span></a></li>
+<li><a class="reference internal" href="#msg-description-checkupdate-plugins"><span class="std std-ref">MSG_DESCRIPTION_CHECKUPDATE</span></a></li>
+<li><a class="reference internal" href="#msg-description-initundo-plugins"><span class="std std-ref">MSG_DESCRIPTION_INITUNDO</span></a></li>
+<li><a class="reference internal" href="#msg-description-checkdraganddrop-plugins"><span class="std std-ref">MSG_DESCRIPTION_CHECKDRAGANDDROP</span></a></li>
+<li><a class="reference internal" href="#msg-description-validate-plugins"><span class="std std-ref">MSG_DESCRIPTION_VALIDATE</span></a></li>
+<li><a class="reference internal" href="#msg-description-command-plugins"><span class="std std-ref">MSG_DESCRIPTION_COMMAND</span></a></li>
+<li><a class="reference internal" href="#msg-description-remove-entry-plugins"><span class="std std-ref">MSG_DESCRIPTION_REMOVE_ENTRY</span></a></li>
+<li><a class="reference internal" href="#msg-description-edit-entry-plugins"><span class="std std-ref">MSG_DESCRIPTION_EDIT_ENTRY</span></a></li>
+<li><a class="reference internal" href="#msg-description-popup-plugins"><span class="std std-ref">MSG_DESCRIPTION_POPUP</span></a></li>
+<li><a class="reference internal" href="#msg-description-postsetparameter-plugins"><span class="std std-ref">MSG_DESCRIPTION_POSTSETPARAMETER</span></a></li>
+<li><a class="reference internal" href="#msg-description-getbitmap-plugins"><span class="std std-ref">MSG_DESCRIPTION_GETBITMAP</span></a></li>
+<li><a class="reference internal" href="#msg-description-allowoverride-plugins"><span class="std std-ref">MSG_DESCRIPTION_ALLOWOVERRIDE</span></a></li>
+<li><a class="reference internal" href="#msg-draganddrop-plugins"><span class="std std-ref">MSG_DRAGANDDROP</span></a></li>
+<li><a class="reference internal" href="#msg-documentinfo-plugins"><span class="std std-ref">MSG_DOCUMENTINFO</span></a></li>
+<li><a class="reference internal" href="#msg-multi-rendernotification-plugins"><span class="std std-ref">MSG_MULTI_RENDERNOTIFICATION</span></a></li>
+<li><a class="reference internal" href="#msg-multi-documentcloned-plugins"><span class="std std-ref">MSG_MULTI_DOCUMENTCLONED</span></a></li>
+<li><a class="reference internal" href="#msg-multi-clearsuggestedfolder-plugins"><span class="std std-ref">MSG_MULTI_CLEARSUGGESTEDFOLDER</span></a></li>
+<li><a class="reference internal" href="#msg-basecontainer-plugins"><span class="std std-ref">MSG_BASECONTAINER</span></a></li>
+<li><a class="reference internal" href="#msg-menuprepare-plugins"><span class="std std-ref">MSG_MENUPREPARE</span></a></li>
+<li><a class="reference internal" href="#msg-scaledocument-plugins"><span class="std std-ref">MSG_SCALEDOCUMENT</span></a></li>
+<li><a class="reference internal" href="#msg-getrealcameradata-plugins"><span class="std std-ref">MSG_GETREALCAMERADATA</span></a></li>
+<li><a class="reference internal" href="#msg-description-customgui-notification-plugins"><span class="std std-ref">MSG_DESCRIPTION_CUSTOMGUI_NOTIFICATION</span></a></li>
+<li><a class="reference internal" href="#msg-collectc4dfalloff-plugins"><span class="std std-ref">MSG_COLLECTC4DFALLOFF</span></a></li>
+<li><a class="reference internal" href="#msg-document-mode-changed-plugins"><span class="std std-ref">MSG_DOCUMENT_MODE_CHANGED</span></a></li>
+<li><a class="reference internal" href="#msg-animate-plugins"><span class="std std-ref">MSG_ANIMATE</span></a></li>
+</ul>
+<ul id="msg-update-plugins">
+<li><p class="first"><strong>MSG_UPDATE</strong></p>
+<p>Sent if the bounding box has to be recalculated. (Otherwise use <strong>MSG_CHANGE</strong>.)</p>
+</li>
+</ul>
+<ul id="msg-smallupdate-plugins">
+<li><p class="first"><strong>MSG_SMALLUPDATE</strong></p>
+<p>Sent if the object has changed and it does not need cache rebuilding.</p>
+</li>
+</ul>
+<ul id="msg-change-plugins">
+<li><p class="first"><strong>MSG_CHANGE</strong></p>
+<p>Sent if any data (except for the matrix) has been changed.</p>
+</li>
+</ul>
+<ul id="msg-commandinformation-plugins">
+<li><p class="first"><strong>MSG_COMMANDINFORMATION</strong></p>
+<p>Sent to retrieve command information.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">Allows to restict shortcuts to a dialog. To do so, <cite>managergroup</cite> has to be set to a dialog ID. <cite>parentid</cite> can be set to a command ID to get its shortcut, icon, tooltip etc.</div>
+<div class="line">For instance, if <strong>IDM_SELECTALL</strong> is set for <cite>parentid</cite>, then <cite>command_id</cite> inherits Cinema “Select All” standard command.</div>
+</div>
+</div>
+<ul class="simple">
+<li>Input: {<cite>command_id</cite>: int, <cite>managergroup</cite>: int, <cite>parentid</cite>: int}</li>
+<li>Output: {<cite>managergroup</cite>: int, <cite>parentid</cite>: int}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>command_id</cite>: Command ID.</li>
+<li><cite>managergroup</cite>: Manager group.</li>
+<li><cite>parentid</cite>: Parent ID.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul id="msg-getallassets-plugins">
+<li><p class="first"><strong>MSG_GETALLASSETS</strong></p>
+<p>Sent to retrieve all assets from an object.</p>
+<ul class="simple">
+<li>Input: {<cite>doc</cite>: <a class="reference internal" href="../modules/c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.documents.BaseDocument</span></code></a>, <cite>flags</cite>: int, <cite>assets</cite>: list}</li>
+<li>Output: {<cite>assets</cite>: list of {<cite>filename</cite>: str, <cite>bl</cite>: <a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseList2D</span></code></a>, <cite>netRequestOnDemand</cite>: bool}}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>assets</cite>: List of assets:</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>filename</cite>: Filename of the asset.</li>
+<li><cite>bl</cite>: Base list reporting the missing name.</li>
+<li><cite>netRequestOnDemand</cite>: Net request on demand.</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</li>
+</ul>
+<ul id="msg-segments-changed-plugins">
+<li><p class="first"><strong>MSG_SEGMENTS_CHANGED</strong></p>
+<p>Sent to notify an object its segments have changed.</p>
+<ul class="simple">
+<li>Input: {<cite>old_cnt</cite>: int, <cite>new_cnt</cite>: int, <cite>vc_flags</cite>: int, <cite>map</cite>: list of int}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>old_cnt</cite>: Number of elements before the change.</li>
+<li><cite>new_cnt</cite>: Number of elements after the change.</li>
+<li><cite>vc_flags</cite>: Flags. See <a class="reference internal" href="VC_FLAGS.html"><span class="doc">VC_FLAGS</span></a>.</li>
+<li><cite>map</cite>: Optional translation map.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul id="msg-polygons-changed-plugins">
+<li><p class="first"><strong>MSG_POLYGONS_CHANGED</strong></p>
+<p>Sent to notify an object its polygons have changed.</p>
+<ul class="simple">
+<li>Input: {<cite>old_cnt</cite>: int, <cite>new_cnt</cite>: int, <cite>vc_flags</cite>: int, <cite>map</cite>: list of int}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>old_cnt</cite>: Number of elements before the change.</li>
+<li><cite>new_cnt</cite>: Number of elements after the change.</li>
+<li><cite>vc_flags</cite>: Flags. See <a class="reference internal" href="VC_FLAGS.html"><span class="doc">VC_FLAGS</span></a>.</li>
+<li><cite>map</cite>: Optional translation map.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul id="msg-points-changed-plugins">
+<li><p class="first"><strong>MSG_POINTS_CHANGED</strong></p>
+<p>Sent to notify an object its points have changed.</p>
+<ul class="simple">
+<li>Input: {<cite>old_cnt</cite>: int, <cite>new_cnt</cite>: int, <cite>vc_flags</cite>: int, <cite>map</cite>: list of int}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>old_cnt</cite>: Number of elements before the change.</li>
+<li><cite>new_cnt</cite>: Number of elements after the change.</li>
+<li><cite>vc_flags</cite>: Flags. See <a class="reference internal" href="VC_FLAGS.html"><span class="doc">VC_FLAGS</span></a>.</li>
+<li><cite>map</cite>: Optional translation map.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul id="msg-getcustomicon-plugins">
+<li><p class="first"><strong>MSG_GETCUSTOMICON</strong></p>
+<p>Sent to retrieve a custom icon.</p>
+<ul class="simple">
+<li>Input: {}</li>
+<li>Output: {<cite>filled</cite>: bool, <cite>bmp</cite>: <a class="reference internal" href="../modules/c4d.bitmaps/BaseBitmap/index.html#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.bitmaps.BaseBitmap</span></code></a>, <cite>x</cite>: int, <cite>y</cite>: int, <cite>w</cite>: int, <cite>h</cite>: int, <cite>flags</cite>: int}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>filled</cite>: <strong>True</strong> if the icon was set.</li>
+<li><cite>bmp</cite>: Icon’s bitmap. Can be <strong>None</strong>.</li>
+<li><cite>x</cite>: X coordinate of the upper-left corner of the icon.</li>
+<li><cite>y</cite>: Y coordinate of the upper-left corner of the icon.</li>
+<li><cite>w</cite>: Width of the icon.</li>
+<li><cite>h</cite>: Height of the icon.</li>
+<li><cite>flags</cite>: Flags. See <a class="reference internal" href="ICONDATAFLAGS.html"><span class="doc">ICONDATAFLAGS</span></a>.</li>
+</ul>
+</div></blockquote>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version R21: </span>In R21 two additional fields, are present so instead of filling previously bmp, x,y, w,h, flags in a plugin implementation it’s possible to directly feed a <a class="reference internal" href="../modules/c4d/IconData/index.html#c4d.IconData" title="c4d.IconData"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.IconData</span></code></a> instance.</p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>useDat</cite>: bool, sets to True if you want to use Dat instead of the other values.</li>
+<li><cite>dat</cite>: <a class="reference internal" href="../modules/c4d/IconData/index.html#c4d.IconData" title="c4d.IconData"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.IconData</span></code></a>, the IconData to represents.</li>
+</ul>
+</div></blockquote>
+</div>
+</li>
+</ul>
+<ul id="msg-getcustomicon-settings-plugins">
+<li><p class="first"><strong>MSG_GETCUSTOMICON_SETTINGS</strong></p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R21.</span></p>
+</div>
+<p>Sent to retrieve the custom icon settings of an object.</p>
+<ul class="simple">
+<li>Input: {<cite>setting</cite>: <a class="reference internal" href="../modules/c4d/CustomIconSettings/index.html#c4d.CustomIconSettings" title="c4d.CustomIconSettings"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.CustomIconSettings</span></code></a>}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>setting</cite>: The custom icon settings to modify.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul id="msg-edit-plugins">
+<li><p class="first"><strong>MSG_EDIT</strong></p>
+<p>Allows to perform some action when element is edited, e.g. if the user edits an object double-clicking it in the Object Manager.</p>
+</li>
+</ul>
+<ul id="msg-filter-plugins">
+<li><p class="first"><strong>MSG_FILTER</strong></p>
+<p>Sent to allow or block <a class="reference internal" href="../modules/c4d/C4DAtom/index.html#C4DAtom.MultiMessage" title="C4DAtom.MultiMessage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">C4DAtom.MultiMessage()</span></code></a> calls.</p>
+<ul class="simple">
+<li>Input: {<cite>type</cite>: int, <cite>route</cite>: int, <cite>data</cite>: PyCObject}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>type</cite>: Message type.</li>
+<li><cite>route</cite>: Flags. See <a class="reference internal" href="MULTIMSG_ROUTE.html"><span class="doc">MULTIMSG_ROUTE</span></a>.</li>
+<li><cite>data</cite>: Message data. Depends on the message <cite>type</cite>.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul id="msg-description-checkupdate-plugins">
+<li><p class="first"><strong>MSG_DESCRIPTION_CHECKUPDATE</strong></p>
+<p>Allows elements to determine the type of refresh after a parameter change. This is automatically handled for keys, tags, objects etc.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This message is completely handled by all base data classes.</p>
+</div>
+<ul class="simple">
+<li>Input: {<cite>doc</cite>: <a class="reference internal" href="../modules/c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.documents.BaseDocument</span></code></a>, <cite>drawflags</cite>: int, <cite>descid</cite> <a class="reference internal" href="../modules/c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.DescID</span></code></a>}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>doc</cite>: Current document.</li>
+<li><cite>drawflags</cite>: Draw flags.</li>
+<li><cite>descid</cite>: Description ID.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul id="msg-description-initundo-plugins">
+<li><p class="first"><strong>MSG_DESCRIPTION_INITUNDO</strong></p>
+<p>Allows elements to create undo actions for the following parameter changes.</p>
+<ul class="simple">
+<li>Input: {<cite>doc</cite>: <a class="reference internal" href="../modules/c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.documents.BaseDocument</span></code></a>, <cite>descid</cite>: <a class="reference internal" href="../modules/c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.DescID</span></code></a>}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>doc</cite>: Current document.</li>
+<li><cite>descid</cite>: Description ID.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul id="msg-description-checkdraganddrop-plugins">
+<li><p class="first"><strong>MSG_DESCRIPTION_CHECKDRAGANDDROP</strong></p>
+<p>Asks an atom if a drag and drop operation is accepted.</p>
+<ul class="simple">
+<li>Input: {<cite>id</cite>: <a class="reference internal" href="../modules/c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.DescID</span></code></a>, <cite>element</cite>: <a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseList2D</span></code></a>}</li>
+<li>Output: {<cite>result</cite>: bool}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>id</cite>: ID of the drop field.</li>
+<li><cite>element</cite>: Element to drop.</li>
+<li><cite>result</cite>: Set to <strong>True</strong> if the drop is acceptable, otherwise <strong>False</strong>.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul id="msg-description-validate-plugins">
+<li><p class="first"><strong>MSG_DESCRIPTION_VALIDATE</strong></p>
+<p>Sent to update dependencies or to check for invalid values after a parameter change.</p>
+<p>For example the light’s inner radius always must be smaller than the light’s outer radius. The light object uses this message to perform such check.</p>
+<ul class="simple">
+<li>Input: {<cite>flags</cite>: int}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>flags</cite>: Not used.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul id="msg-description-command-plugins">
+<li><p class="first"><strong>MSG_DESCRIPTION_COMMAND</strong></p>
+<p>Sent by button description elements. See example <a class="reference internal" href="../modules/c4d.plugins/BaseData/NodeData/index.html#msg-description-command-example"><span class="std std-ref">here</span></a>.</p>
+<ul class="simple">
+<li>Input: {<cite>id</cite>: <a class="reference internal" href="../modules/c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.DescID</span></code></a>}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>id</cite>: Description ID of the parameter that triggered the command.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul id="msg-description-remove-entry-plugins">
+<li><p class="first"><strong>MSG_DESCRIPTION_REMOVE_ENTRY</strong></p>
+<p>Sent to tell an atom to remove a description entry.</p>
+<ul class="simple">
+<li>Input: {<cite>id</cite>: <a class="reference internal" href="../modules/c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.DescID</span></code></a>}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>id</cite>: Description ID of the parameter that triggered the command.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul id="msg-description-edit-entry-plugins">
+<li><p class="first"><strong>MSG_DESCRIPTION_EDIT_ENTRY</strong></p>
+<p>Sent to tell an atom to edit a description entry.</p>
+<ul class="simple">
+<li>Input: {<cite>id</cite>: <a class="reference internal" href="../modules/c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.DescID</span></code></a>}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>id</cite>: Description ID of the parameter that triggered the command.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul id="msg-description-popup-plugins">
+<li><p class="first"><strong>MSG_DESCRIPTION_POPUP</strong></p>
+<p>Sent to handle description popup menus in the Attribute Manager.</p>
+<ul class="simple">
+<li>Input: {<cite>id</cite>: <a class="reference internal" href="../modules/c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.DescID</span></code></a>, <cite>chosen</cite>: int, <cite>popup</cite>: <a class="reference internal" href="../modules/c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseContainer</span></code></a>}</li>
+<li>Output: {<cite>id</cite>: <a class="reference internal" href="../modules/c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.DescID</span></code></a>, <cite>chosen</cite>: int, <cite>popup</cite>: <a class="reference internal" href="../modules/c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseContainer</span></code></a>}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>id</cite>: Description ID of the parameter that triggered the command.</li>
+<li><cite>chosen</cite>: Selected element of the popup.</li>
+<li><cite>popup</cite>: Popup menu container.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul id="msg-description-postsetparameter-plugins">
+<li><p class="first"><strong>MSG_DESCRIPTION_POSTSETPARAMETER</strong></p>
+<p>Sent after a <a class="reference internal" href="../modules/c4d/C4DAtom/index.html#C4DAtom.SetParameter" title="C4DAtom.SetParameter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">C4DAtom.SetParameter()</span></code></a> call.</p>
+<ul class="simple">
+<li>Input: {<cite>descid</cite>: <a class="reference internal" href="../modules/c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.DescID</span></code></a>}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>descid</cite>: The description ID of the parameter that was set.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul id="msg-description-getbitmap-plugins">
+<li><p class="first"><strong>MSG_DESCRIPTION_GETBITMAP</strong></p>
+<p>Queries a <a class="reference internal" href="../modules/c4d.gui/BaseCustomGui/BitmapButtonCustomGui/index.html#c4d.gui.BitmapButtonCustomGui" title="c4d.gui.BitmapButtonCustomGui"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.gui.BitmapButtonCustomGui</span></code></a> bitmap.</p>
+<ul class="simple">
+<li>Input: {<cite>id</cite>: <a class="reference internal" href="../modules/c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.DescID</span></code></a>}</li>
+<li>Output: {<cite>bmp</cite>: <a class="reference internal" href="../modules/c4d.bitmaps/BaseBitmap/index.html#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.bitmaps.BaseBitmap</span></code></a>, <cite>bmpflags</cite>: int}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>id</cite>: Description ID of the bitmap button.</li>
+<li><cite>bmp</cite>: Bitmap for the button.</li>
+<li><cite>bmpflags</cite>: Flags. See <a class="reference internal" href="ICONDATAFLAGS.html"><span class="doc">ICONDATAFLAGS</span></a>.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul id="msg-description-allowoverride-plugins">
+<li><p class="first"><strong>MSG_DESCRIPTION_ALLOWOVERRIDE</strong></p>
+<p>Sent to check if take override operation is allowed.</p>
+<ul class="simple">
+<li>Input: {<cite>_takeData</cite>: <a class="reference internal" href="../modules/c4d.modules/takesystem/TakeData/index.html#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.takesystem.TakeData</span></code></a>, <cite>_overrideTake</cite>: <a class="reference internal" href="../modules/c4d.modules/takesystem/BaseTake/index.html#c4d.modules.takesystem.BaseTake" title="c4d.modules.takesystem.BaseTake"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.takesystem.BaseTake</span></code></a>, <cite>_descid</cite>: <a class="reference internal" href="../modules/c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.DescID</span></code></a>}</li>
+<li>Output: {<cite>_parent</cite>: <a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseList2D</span></code></a>, <cite>_parentId</cite>: <a class="reference internal" href="../modules/c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.DescID</span></code></a>, <cite>_allow</cite>: bool, <cite>_overrideEnabled</cite>: bool}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>_takeData</cite>: Take system context.</li>
+<li><cite>_overrideTake</cite>: The take asking for the override.</li>
+<li><cite>_descid</cite>: Description ID to be overridden.</li>
+<li><cite>_parent</cite>: Parent node if the override must be assigned to it and not to the original node. Especially useful in case of branched structures.</li>
+<li><cite>_parentId</cite>: If <cite>parent</cite> is set also a translated parameter ID needs to be set.</li>
+<li><cite>_allow</cite>: <strong>True</strong> if the parameter can be overridden, otherwise <strong>False</strong>.</li>
+<li><cite>_overrideEnabled</cite>: <strong>True</strong> if the global switch allow the override, otherwise <strong>False</strong>.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul id="msg-draganddrop-plugins">
+<li><p class="first"><strong>MSG_DRAGANDDROP</strong></p>
+<p>Received by an element in the Object Manager when something is dropped on it.</p>
+<ul class="simple">
+<li>Input: {<cite>doc</cite>: <a class="reference internal" href="../modules/c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.documents.BaseDocument</span></code></a>, <cite>sender</cite>: <a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseList2D</span></code></a>, <cite>flags</cite>: int, <cite>type</cite>: int, <cite>data</cite>: PyCObject, <cite>x</cite>: int, <cite>y</cite>: int, <cite>msg</cite>: <a class="reference internal" href="../modules/c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseContainer</span></code></a>,}</li>
+<li>Output: {<cite>flags</cite>: int, <cite>type</cite>: int, <cite>data</cite>: PyCObject, <cite>result</cite>: int}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>doc</cite>: Current document.</li>
+<li><cite>sender</cite>: Sender of the drag operation.</li>
+<li><cite>flags</cite>: Flags.</li>
+<li><cite>type</cite>: The drag type.</li>
+<li><cite>data</cite>: Dragged data.</li>
+<li><cite>x</cite>: X position where the drag was released.</li>
+<li><cite>y</cite>: Y position where the drag was released.</li>
+<li><cite>msg</cite>: Valid if <em>DRAGANDDROP_FLAG_MSGVALID</em> is set so items like <em>BFM_INPUT_QUALIFIER</em> are available.</li>
+<li><cite>result</cite>: Unused.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul id="msg-documentinfo-plugins">
+<li><p class="first"><strong>MSG_DOCUMENTINFO</strong></p>
+<p>Sent as broadcast message by the document when it is loaded, saved, merged etc.</p>
+<ul class="simple">
+<li>Input: {<cite>type</cite>: int, <cite>fileformat</cite>: int, <cite>filename</cite>: str, <cite>doc</cite>: <a class="reference internal" href="../modules/c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.documents.BaseDocument</span></code></a>, <cite>bl</cite>: <a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseList2D</span></code></a>}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>type</cite>: The message type. See <a class="reference internal" href="MSG_DOCUMENTINFO_TYPE.html"><span class="doc">MSG_DOCUMENTINFO_TYPE</span></a>.</li>
+<li><cite>fileformat</cite>: The file format. See <a class="reference internal" href="FORMAT_export.html"><span class="doc">FORMAT Export</span></a>.</li>
+<li><cite>filename</cite>: The document filename.</li>
+<li><cite>doc</cite>: The current document.</li>
+<li><cite>bl</cite>: The object/tag/material that got inserted. It is set if <cite>type</cite> is of one of the following values:</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>MSG_DOCUMENTINFO_TYPE_OBJECT_INSERT</cite></li>
+<li><cite>MSG_DOCUMENTINFO_TYPE_TAG_INSERT</cite></li>
+<li><cite>MSG_DOCUMENTINFO_TYPE_MATERIAL_INSERT</cite></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</li>
+</ul>
+<ul id="msg-multi-rendernotification-plugins">
+<li><p class="first"><strong>MSG_MULTI_RENDERNOTIFICATION</strong></p>
+<p>Sent to a document and all of its elements before a render starts.</p>
+<ul class="simple">
+<li>Input: {<cite>doc</cite>: <a class="reference internal" href="../modules/c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.documents.BaseDocument</span></code></a>, <cite>external</cite>: bool, <cite>start</cite>: bool, <cite>animated</cite>: bool}</li>
+<li>Output: {<cite>external</cite>: bool, <cite>start</cite>: bool, <cite>animated</cite>: bool}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>doc</cite>: Current document.</li>
+<li><cite>external</cite>: <strong>True</strong> if the rendering is not in the editor view, otherwise <strong>False</strong>.</li>
+<li><cite>start</cite>: Determines if it is a start (<strong>True</strong>) or stop (<strong>False</strong>) notification. Stop notifications are only sent if the document will not be deleted, which only should happen if it is an editor render.</li>
+<li><cite>animated</cite>: Determines if it is an animation sequence being rendered.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul id="msg-multi-documentcloned-plugins">
+<li><p class="first"><strong>MSG_MULTI_DOCUMENTCLONED</strong></p>
+<p>Sent when document is cloned.</p>
+</li>
+</ul>
+<ul id="msg-multi-clearsuggestedfolder-plugins">
+<li><p class="first"><strong>MSG_MULTI_CLEARSUGGESTEDFOLDER</strong></p>
+<div class="line-block">
+<div class="line">Objects have to remove absolute paths (only if <strong>MSG_GETALLASSETS</strong> is supported).</div>
+<div class="line"><br /></div>
+<div class="line">When “Save Project with Assets” is invoked, everything is moved to the new target directory.</div>
+<div class="line">In this case all absolute paths must be converted to just filenames because the files are next to the document and the absolute paths are not needed anymore.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Both <strong>MSG_GETALLASSETS</strong> and <strong>MSG_MULTI_CLEARSUGGESTEDFOLDER</strong> are important for “Save Project” to work and to collect all items.</p>
+</div>
+</li>
+</ul>
+<ul id="msg-basecontainer-plugins">
+<li><p class="first"><strong>MSG_BASECONTAINER</strong></p>
+<p>Message that carries a container.</p>
+<ul class="simple">
+<li>Input: <a class="reference internal" href="../modules/c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseContainer</span></code></a></li>
+</ul>
+<p></p>
+</li>
+</ul>
+<ul id="msg-menuprepare-plugins">
+<li><p class="first"><strong>MSG_MENUPREPARE</strong></p>
+<p>Sent to allow tags, objects, shaders etc. to do some setup work when called from the menu.</p>
+<ul class="simple">
+<li>Input: <a class="reference internal" href="../modules/c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.documents.BaseDocument</span></code></a> or <strong>None</strong></li>
+</ul>
+<p></p>
+</li>
+</ul>
+<ul id="msg-scaledocument-plugins">
+<li><p class="first"><strong>MSG_SCALEDOCUMENT</strong></p>
+<p>Sent to tell that another document with different scale has been merged.</p>
+<ul class="simple">
+<li>Input: {<cite>scale</cite>: float}</li>
+<li>Output: {}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>scale</cite>: Merged document’s scale.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul id="msg-getrealcameradata-plugins">
+<li><p class="first"><strong>MSG_GETREALCAMERADATA</strong></p>
+<p>Sent to get a real camera object from a generator.</p>
+<ul class="simple">
+<li>Input: {}</li>
+<li>Output: {<cite>res</cite>: <a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseObject</span></code></a>}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>res</cite>: Real camera.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul id="msg-description-customgui-notification-plugins">
+<li><p class="first"><strong>MSG_DESCRIPTION_CUSTOMGUI_NOTIFICATION</strong></p>
+<p>Sent by a custom GUI to its parent node.</p>
+<ul class="simple">
+<li>Input: {<cite>_descId</cite>: <a class="reference internal" href="../modules/c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.DescID</span></code></a>, <cite>_customGuiId</cite>: int, <cite>_subId</cite>: int, <cite>_data</cite>: <a class="reference internal" href="../modules/c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseContainer</span></code></a>}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>_descId</cite>: Description ID.</li>
+<li><cite>_customGuiId</cite>: Custom GUI plugin ID.</li>
+<li><cite>_subId</cite>: Message type sub-ID. Depending on the custom GUI implementation a different sub-ID can be passed with different data.</li>
+<li><cite>_data</cite>: Data for the message.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul id="msg-collectc4dfalloff-plugins">
+<li><p class="first"><strong>MSG_COLLECTC4DFALLOFF</strong></p>
+<p>Sent to atoms that might contain a falloff.</p>
+<ul class="simple">
+<li>Output: {<cite>falloff</cite>: <a class="reference internal" href="../modules/c4d.modules/mograph/C4D_Falloff/index.html#c4d.modules.mograph.C4D_Falloff" title="c4d.modules.mograph.C4D_Falloff"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.mograph.C4D_Falloff</span></code></a>}</li>
+</ul>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>falloff</cite>: Falloff to be set if any.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul id="msg-document-mode-changed-plugins">
+<li><p class="first"><strong>MSG_DOCUMENT_MODE_CHANGED</strong></p>
+<p>Sent to the active tool plugin when document mode is changed.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../modules/c4d.documents/BaseDocument/index.html#BaseDocument.SetMode" title="BaseDocument.SetMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetMode()</span></code></a></p>
+</div>
+</li>
+</ul>
+<ul id="msg-animate-plugins">
+<li><p class="first"><strong>MSG_ANIMATE</strong></p>
+<p>Sent to objects after they have been animated.</p>
+</li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="MULTIMSG_ROUTE.html" title="MULTIMSG_ROUTE"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="MSG_DOCUMENTINFO_TYPE_BEFOREMERGE_RESULT.html" title="MSG_DOCUMENTINFO_TYPE_BEFOREMERGE_RESULT"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../types/index.html" >Types and Symbols List</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

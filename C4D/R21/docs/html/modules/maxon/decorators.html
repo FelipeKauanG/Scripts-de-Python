@@ -1,0 +1,213 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MAXON API - Decorators &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="maxon.MAXON_INTERFACE" href="../maxon_generated/decorators/interface/maxon.MAXON_INTERFACE.html" />
+    <link rel="prev" title="maxon.ObjectDefinition" href="../maxon_generated/datatypes/base_core/maxon.ObjectDefinition.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../maxon_generated/decorators/interface/maxon.MAXON_INTERFACE.html" title="maxon.MAXON_INTERFACE"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../maxon_generated/datatypes/base_core/maxon.ObjectDefinition.html" title="maxon.ObjectDefinition"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="maxon-api-decorators">
+<h1>MAXON API - Decorators<a class="headerlink" href="#maxon-api-decorators" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line">As a 3rd party developer you normally don’t have to deal with decorators.</div>
+<div class="line">This is used only to exposes C++ MAXON API Component to Python.</div>
+</div>
+<div class="section" id="decorators">
+<h2>Decorators<a class="headerlink" href="#decorators" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="interface-decorator">
+<h3>Interface Decorator<a class="headerlink" href="#interface-decorator" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../maxon_generated/decorators/interface/maxon.MAXON_INTERFACE.html#maxon.MAXON_INTERFACE" title="maxon.MAXON_INTERFACE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MAXON_INTERFACE</span></code></a>(REFKIND,&nbsp;ID[,&nbsp;doObjectCheck])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../maxon_generated/decorators/interface/maxon.MAXON_INTERFACE_REFERENCE.html#maxon.MAXON_INTERFACE_REFERENCE" title="maxon.MAXON_INTERFACE_REFERENCE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MAXON_INTERFACE_REFERENCE</span></code></a>()</td>
+<td>Decorator to defines an Interface that can be treated as Reference at the same time.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../maxon_generated/decorators/interface/maxon.MAXON_INTERFACE_NONVIRTUAL.html#maxon.MAXON_INTERFACE_NONVIRTUAL" title="maxon.MAXON_INTERFACE_NONVIRTUAL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MAXON_INTERFACE_NONVIRTUAL</span></code></a>(REFKIND,&nbsp;ID)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../maxon_generated/decorators/interface/maxon.MAXON_STATICMETHOD.html#maxon.MAXON_STATICMETHOD" title="maxon.MAXON_STATICMETHOD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MAXON_STATICMETHOD</span></code></a>(identifier[,&nbsp;returnType,&nbsp;…])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../maxon_generated/decorators/interface/maxon.MAXON_METHOD.html#maxon.MAXON_METHOD" title="maxon.MAXON_METHOD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MAXON_METHOD</span></code></a>([identifier,&nbsp;returnType,&nbsp;…])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../maxon_generated/decorators/interface/maxon.MAXON_FUNCTION.html#maxon.MAXON_FUNCTION" title="maxon.MAXON_FUNCTION"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MAXON_FUNCTION</span></code></a>(identifier)</td>
+<td>At the moment MAXON_FUNCTION is just a dummy function to mark the function that it is trampolin code to another function.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../maxon_generated/decorators/interface/maxon.MAXON_STATICFUNCTION.html#maxon.MAXON_STATICFUNCTION" title="maxon.MAXON_STATICFUNCTION"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MAXON_STATICFUNCTION</span></code></a>(identifier)</td>
+<td>At the moment MAXON_STATICFUNCTION is just a dummy function to mark the function that it is trampolin code to another function.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../maxon_generated/decorators/interface/maxon.MAXON_OVERLOAD.html#maxon.MAXON_OVERLOAD" title="maxon.MAXON_OVERLOAD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MAXON_OVERLOAD</span></code></a>()</td>
+<td>At the moment MAXON_OVERLOAD is just a dummy function to mark a function being overloaded</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../maxon_generated/decorators/interface/maxon.MAXON_FUNCTION_EXTEND.html#maxon.MAXON_FUNCTION_EXTEND" title="maxon.MAXON_FUNCTION_EXTEND"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MAXON_FUNCTION_EXTEND</span></code></a>(identifier)</td>
+<td>At the moment MAXON_FUNCTION_EXTEND is just a dummy function to mark the function that it is trampolin code to another function.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../maxon_generated/decorators/interface/maxon.MAXON_REFERENCE.html#maxon.MAXON_REFERENCE" title="maxon.MAXON_REFERENCE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MAXON_REFERENCE</span></code></a>(SUPERCLASS)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="enum-decorator">
+<h3>Enum Decorator<a class="headerlink" href="#enum-decorator" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../maxon_generated/decorators/enum/maxon.MAXON_ENUM_FLAGS.html#maxon.MAXON_ENUM_FLAGS" title="maxon.MAXON_ENUM_FLAGS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MAXON_ENUM_FLAGS</span></code></a>(id)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../maxon_generated/decorators/enum/maxon.MAXON_ENUM_LIST.html#maxon.MAXON_ENUM_LIST" title="maxon.MAXON_ENUM_LIST"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MAXON_ENUM_LIST</span></code></a>(id)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="registration-decorator">
+<h3>Registration Decorator<a class="headerlink" href="#registration-decorator" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../maxon_generated/decorators/registry/maxon.MAXON_COMPONENT.html#maxon.MAXON_COMPONENT" title="maxon.MAXON_COMPONENT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MAXON_COMPONENT</span></code></a>([kind])</td>
+<td>Decorator to mark an element as a maxon API component (available from a registry)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../maxon_generated/decorators/registry/maxon.MAXON_COMPONENT_OBJECT_REGISTER.html#maxon.MAXON_COMPONENT_OBJECT_REGISTER" title="maxon.MAXON_COMPONENT_OBJECT_REGISTER"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MAXON_COMPONENT_OBJECT_REGISTER</span></code></a>(impl,&nbsp;…[,&nbsp;…])</td>
+<td><div class="line-block">
+<div class="line">MAXON_COMPONENT_OBJECT_REGISTER registers a component, creates an object class which uses the component and</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../maxon_generated/decorators/registry/maxon.MAXON_COMPONENT_CLASS_REGISTER.html#maxon.MAXON_COMPONENT_CLASS_REGISTER" title="maxon.MAXON_COMPONENT_CLASS_REGISTER"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MAXON_COMPONENT_CLASS_REGISTER</span></code></a>(impl,&nbsp;…[,&nbsp;…])</td>
+<td><div class="line-block">
+<div class="line">MAXON_COMPONENT_OBJECT_REGISTER registers a component, creates an object class which uses the component and</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../maxon_generated/decorators/registry/maxon.MAXON_REGISTRY.html#maxon.MAXON_REGISTRY" title="maxon.MAXON_REGISTRY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MAXON_REGISTRY</span></code></a>(ids[,&nbsp;returnType])</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="../../genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="../../py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">MAXON API - Decorators</a><ul>
+<li><a class="reference internal" href="#decorators">Decorators</a><ul>
+<li><a class="reference internal" href="#interface-decorator">Interface Decorator</a></li>
+<li><a class="reference internal" href="#enum-decorator">Enum Decorator</a></li>
+<li><a class="reference internal" href="#registration-decorator">Registration Decorator</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../maxon_generated/decorators/interface/maxon.MAXON_INTERFACE.html" title="maxon.MAXON_INTERFACE"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../maxon_generated/datatypes/base_core/maxon.ObjectDefinition.html" title="maxon.ObjectDefinition"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

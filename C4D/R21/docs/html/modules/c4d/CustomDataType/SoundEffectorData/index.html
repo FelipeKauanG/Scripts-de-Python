@@ -1,0 +1,694 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.SoundEffectorData &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.SplineData" href="../SplineData/index.html" />
+    <link rel="prev" title="c4d.RangeData" href="../RangeData/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../SplineData/index.html" title="c4d.SplineData"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../RangeData/index.html" title="c4d.RangeData"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.CustomDataType</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-soundeffectordata">
+<h1>c4d.SoundEffectorData<a class="headerlink" href="#c4d-soundeffectordata" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.SoundEffectorData">
+<em class="property">class </em><code class="descclassname">c4d.</code><code class="descname">SoundEffectorData</code><a class="headerlink" href="#c4d.SoundEffectorData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sound effector data type (<em>CUSTOMDATATYPE_SOUNDEFFECTOR</em>) for <a class="reference internal" href="../../../c4d.gui/BaseCustomGui/SoundEffectorCustomGui/index.html#c4d.gui.SoundEffectorCustomGui" title="c4d.gui.SoundEffectorCustomGui"><code class="xref py py-class docutils literal notranslate"><span class="pre">SoundEffectorCustomGui</span></code></a>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#SoundEffectorData.__init__" title="SoundEffectorData.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SoundEffectorData.__init__(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Creates a <a class="reference internal" href="#c4d.SoundEffectorData" title="c4d.SoundEffectorData"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.SoundEffectorData</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#SoundEffectorData.CreateProbe" title="SoundEffectorData.CreateProbe"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SoundEffectorData.CreateProbe(self,</span> <span class="pre">left,</span> <span class="pre">right,</span> <span class="pre">top,</span> <span class="pre">...)</span></code></a></td>
+<td>Creates a probe.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SoundEffectorData.GetProbeCount" title="SoundEffectorData.GetProbeCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SoundEffectorData.GetProbeCount(self)</span></code></a></td>
+<td>Retrieves the number of probes owned by the sound effector data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SoundEffectorData.GetProbe" title="SoundEffectorData.GetProbe"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SoundEffectorData.GetProbe(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Retrieves the probe at the specified <em>index</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SoundEffectorData.SetProbe" title="SoundEffectorData.SetProbe"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SoundEffectorData.SetProbe(self,</span> <span class="pre">index,</span> <span class="pre">probe)</span></code></a></td>
+<td>Sets the probe at the specified <em>index</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SoundEffectorData.DeleteProbe" title="SoundEffectorData.DeleteProbe"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SoundEffectorData.DeleteProbe(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Deletes the probe at the specified <em>index</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SoundEffectorData.UpdateProbeOrder" title="SoundEffectorData.UpdateProbeOrder"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SoundEffectorData.UpdateProbeOrder(self)</span></code></a></td>
+<td>Updates the probes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SoundEffectorData.GetRange" title="SoundEffectorData.GetRange"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SoundEffectorData.GetRange(self)</span></code></a></td>
+<td>Retrieves the range of the sound effector data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SoundEffectorData.SetRange" title="SoundEffectorData.SetRange"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SoundEffectorData.SetRange(self,</span> <span class="pre">left,</span> <span class="pre">right,</span> <span class="pre">top,</span> <span class="pre">...)</span></code></a></td>
+<td>Sets the range of the sound effector data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SoundEffectorData.GetLinLog" title="SoundEffectorData.GetLinLog"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SoundEffectorData.GetLinLog(self)</span></code></a></td>
+<td>Retrieves the blend value for the linear/logarithmic slider.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SoundEffectorData.SetLinLog" title="SoundEffectorData.SetLinLog"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SoundEffectorData.SetLinLog(self,</span> <span class="pre">value)</span></code></a></td>
+<td>Sets the the blend value for the linear/logarithmic slider.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SoundEffectorData.GetFreeze" title="SoundEffectorData.GetFreeze"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SoundEffectorData.GetFreeze(self)</span></code></a></td>
+<td>Retrieves the freeze state.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SoundEffectorData.SetFreeze" title="SoundEffectorData.SetFreeze"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SoundEffectorData.SetFreeze(self,</span> <span class="pre">freeze)</span></code></a></td>
+<td>Sets the freeze state.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SoundEffectorData.GetGradient" title="SoundEffectorData.GetGradient"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SoundEffectorData.GetGradient(self)</span></code></a></td>
+<td>Retrieves the global gradient.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SoundEffectorData.GetGradientDirection" title="SoundEffectorData.GetGradientDirection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SoundEffectorData.GetGradientDirection(self)</span></code></a></td>
+<td>Retrieves the global gradient direction.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SoundEffectorData.SetGradientDirection" title="SoundEffectorData.SetGradientDirection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SoundEffectorData.SetGradientDirection(self,</span> <span class="pre">direction)</span></code></a></td>
+<td>Sets the global gradient direction.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SoundEffectorData.InitSampling" title="SoundEffectorData.InitSampling"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SoundEffectorData.InitSampling(self,</span> <span class="pre">doc)</span></code></a></td>
+<td>Initializes the sampling functionality of the sound effector data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SoundEffectorData.FreeSampling" title="SoundEffectorData.FreeSampling"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SoundEffectorData.FreeSampling(self)</span></code></a></td>
+<td>Frees the memory used for sampling.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SoundEffectorData.Sample" title="SoundEffectorData.Sample"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SoundEffectorData.Sample(self,</span> <span class="pre">index,</span> <span class="pre">count)</span></code></a></td>
+<td>Samples the sound file using the probes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SoundEffectorData.SetActiveSoundTrack" title="SoundEffectorData.SetActiveSoundTrack"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SoundEffectorData.SetActiveSoundTrack(self,</span> <span class="pre">track,</span> <span class="pre">doc)</span></code></a></td>
+<td>Sets the active sound track.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SoundEffectorData.GetActiveSoundTrack" title="SoundEffectorData.GetActiveSoundTrack"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SoundEffectorData.GetActiveSoundTrack(self,</span> <span class="pre">doc)</span></code></a></td>
+<td>Retrieves the active sound track.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SoundEffectorData.CopyTo" title="SoundEffectorData.CopyTo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SoundEffectorData.CopyTo(self,</span> <span class="pre">dest)</span></code></a></td>
+<td>Copies the sound effector data.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../index.html#c4d.CustomDataType" title="c4d.CustomDataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.CustomDataType</span></code></a></li>
+</ul>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="SoundEffectorData.__init__">
+<code class="descclassname">SoundEffectorData.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#SoundEffectorData.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a <a class="reference internal" href="#c4d.SoundEffectorData" title="c4d.SoundEffectorData"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.SoundEffectorData</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="#c4d.SoundEffectorData" title="c4d.SoundEffectorData"><em>c4d.SoundEffectorData</em></a>) – An optional <a class="reference internal" href="#c4d.SoundEffectorData" title="c4d.SoundEffectorData"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.SoundEffectorData</span></code></a> to copy.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.SoundEffectorData" title="c4d.SoundEffectorData">c4d.SoundEffectorData</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The new <a class="reference internal" href="#c4d.SoundEffectorData" title="c4d.SoundEffectorData"><code class="xref py py-class docutils literal notranslate"><span class="pre">SoundEffectorData</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SoundEffectorData.CreateProbe">
+<code class="descclassname">SoundEffectorData.</code><code class="descname">CreateProbe</code><span class="sig-paren">(</span><em>self</em>, <em>left</em>, <em>right</em>, <em>top</em>, <em>bottom</em>, <em>selected=False</em><span class="sig-paren">)</span><a class="headerlink" href="#SoundEffectorData.CreateProbe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a probe.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>left</strong> (<em>float</em>) – The left side of the probe in Hertz <cite>[1,22050]</cite>.</li>
+<li><strong>right</strong> (<em>float</em>) – The right side of the probe in Hertz <cite>[1,22050]</cite>.</li>
+<li><strong>top</strong> (<em>float</em>) – The top edge of the probe in the range <cite>[0,1]</cite>.</li>
+<li><strong>bottom</strong> (<em>float</em>) – The bottom edge of the probe in the range <cite>[0,1]</cite>.</li>
+<li><strong>selected</strong> (<em>bool</em>) – <strong>True</strong> to select the created probe. Other probes are not deselected in the operation.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The created probe’s index.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SoundEffectorData.GetProbeCount">
+<code class="descclassname">SoundEffectorData.</code><code class="descname">GetProbeCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#SoundEffectorData.GetProbeCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the number of probes owned by the sound effector data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The probe count.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SoundEffectorData.GetProbe">
+<code class="descclassname">SoundEffectorData.</code><code class="descname">GetProbe</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#SoundEffectorData.GetProbe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the probe at the specified <em>index</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The probe index.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The probe, or <strong>None</strong> if the function fails. The dictionary contains the following data:<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="11%" />
+<col width="81%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><cite>left</cite></td>
+<td>float</td>
+<td>The left value of probe in Hertz.</td>
+</tr>
+<tr class="row-even"><td><cite>right</cite></td>
+<td>float</td>
+<td>The right value of probe in Hertz.</td>
+</tr>
+<tr class="row-odd"><td><cite>top</cite></td>
+<td>float</td>
+<td>The top value of probe in Hertz.</td>
+</tr>
+<tr class="row-even"><td><cite>bottom</cite></td>
+<td>float</td>
+<td>The bottom value of probe in Hertz.</td>
+</tr>
+<tr class="row-odd"><td><cite>strength</cite></td>
+<td>float</td>
+<td>The overall strength multiplier for the probe.</td>
+</tr>
+<tr class="row-even"><td><cite>clamp</cite></td>
+<td>bool</td>
+<td><strong>True</strong> limits the output of the probe from <cite>0.0</cite> to <cite>1.0</cite> and ignores values outside of the range.</td>
+</tr>
+<tr class="row-odd"><td><cite>samplingMode</cite></td>
+<td>int</td>
+<td>The probe mode.</td>
+</tr>
+<tr class="row-even"><td><cite>colorMode</cite></td>
+<td>int</td>
+<td>The color mode.</td>
+</tr>
+<tr class="row-odd"><td><cite>color</cite></td>
+<td><a class="reference internal" href="../../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a></td>
+<td>The color of the probe used when <cite>colorMode</cite> is Custom Color.</td>
+</tr>
+<tr class="row-even"><td><cite>gradient</cite></td>
+<td><a class="reference internal" href="../Gradient/index.html#c4d.Gradient" title="c4d.Gradient"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Gradient</span></code></a></td>
+<td>The gradient of the probe used when <cite>colorMode</cite> is Custom Gradient.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SoundEffectorData.SetProbe">
+<code class="descclassname">SoundEffectorData.</code><code class="descname">SetProbe</code><span class="sig-paren">(</span><em>self</em>, <em>index</em>, <em>probe</em><span class="sig-paren">)</span><a class="headerlink" href="#SoundEffectorData.SetProbe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the probe at the specified <em>index</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>index</strong> (<em>int</em>) – The index of the probe to set.</li>
+<li><strong>probe</strong> (<em>dict</em>) – <p>The probe data to set:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="7%" />
+<col width="10%" />
+<col width="83%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><cite>left</cite></td>
+<td>float</td>
+<td>The left value of probe in Hertz.</td>
+</tr>
+<tr class="row-even"><td><cite>right</cite></td>
+<td>float</td>
+<td>The right value of probe in Hertz.</td>
+</tr>
+<tr class="row-odd"><td><cite>top</cite></td>
+<td>float</td>
+<td>The top value of probe in Hertz.</td>
+</tr>
+<tr class="row-even"><td><cite>bottom</cite></td>
+<td>float</td>
+<td>The bottom value of probe in Hertz.</td>
+</tr>
+<tr class="row-odd"><td><cite>strength</cite></td>
+<td>float</td>
+<td>The overall strength multiplier for the probe.</td>
+</tr>
+<tr class="row-even"><td><cite>clamp</cite></td>
+<td>bool</td>
+<td>Set to <strong>True</strong> to limit the output of the probe from <cite>0.0</cite> to <cite>1.0</cite> and to ignore values outside of the range.</td>
+</tr>
+<tr class="row-odd"><td><cite>samplingMode</cite></td>
+<td>int</td>
+<td>The probe mode.</td>
+</tr>
+<tr class="row-even"><td><cite>colorMode</cite></td>
+<td>int</td>
+<td>The color mode.</td>
+</tr>
+<tr class="row-odd"><td><cite>color</cite></td>
+<td><a class="reference internal" href="../../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a></td>
+<td>The color of the probe used when <cite>colorMode</cite> is Custom Color.</td>
+</tr>
+<tr class="row-even"><td><cite>gradient</cite></td>
+<td><a class="reference internal" href="../Gradient/index.html#c4d.Gradient" title="c4d.Gradient"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Gradient</span></code></a></td>
+<td>The gradient of the probe used when <cite>colorMode</cite> is Custom Gradient.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SoundEffectorData.DeleteProbe">
+<code class="descclassname">SoundEffectorData.</code><code class="descname">DeleteProbe</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#SoundEffectorData.DeleteProbe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the probe at the specified <em>index</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index of the probe to delete.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SoundEffectorData.UpdateProbeOrder">
+<code class="descclassname">SoundEffectorData.</code><code class="descname">UpdateProbeOrder</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#SoundEffectorData.UpdateProbeOrder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the probes.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Must be called after adjusting any probes left or right values to update the order that the probes are calculated in.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="SoundEffectorData.GetRange">
+<code class="descclassname">SoundEffectorData.</code><code class="descname">GetRange</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#SoundEffectorData.GetRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the range of the sound effector data.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Only valid if the data is shown in the sound sound effector GUI.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">tuple(float, float, float, float)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A tuple with the left, right, top and bottom values.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SoundEffectorData.SetRange">
+<code class="descclassname">SoundEffectorData.</code><code class="descname">SetRange</code><span class="sig-paren">(</span><em>self</em>, <em>left</em>, <em>right</em>, <em>top</em>, <em>bottom</em><span class="sig-paren">)</span><a class="headerlink" href="#SoundEffectorData.SetRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the range of the sound effector data.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Only valid if the data is shown in the sound effector GUI.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>left</strong> (<em>float</em>) – The left value to set.</li>
+<li><strong>right</strong> (<em>float</em>) – The right value to set.</li>
+<li><strong>top</strong> (<em>float</em>) – The top value to set.</li>
+<li><strong>bottom</strong> (<em>float</em>) – The bottom value to set.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SoundEffectorData.GetLinLog">
+<code class="descclassname">SoundEffectorData.</code><code class="descname">GetLinLog</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#SoundEffectorData.GetLinLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the blend value for the linear/logarithmic slider.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The blend percentage: <cite>0%</cite> = linear, <cite>100%</cite> = log10.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SoundEffectorData.SetLinLog">
+<code class="descclassname">SoundEffectorData.</code><code class="descname">SetLinLog</code><span class="sig-paren">(</span><em>self</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#SoundEffectorData.SetLinLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the the blend value for the linear/logarithmic slider.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>value</strong> (<em>float</em>) – The blend percentage to set: <cite>0%</cite> = linear, <cite>100%</cite> = log10.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SoundEffectorData.GetFreeze">
+<code class="descclassname">SoundEffectorData.</code><code class="descname">GetFreeze</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#SoundEffectorData.GetFreeze" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the freeze state.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if freeze is enabled, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SoundEffectorData.SetFreeze">
+<code class="descclassname">SoundEffectorData.</code><code class="descname">SetFreeze</code><span class="sig-paren">(</span><em>self</em>, <em>freeze</em><span class="sig-paren">)</span><a class="headerlink" href="#SoundEffectorData.SetFreeze" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the freeze state.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>freeze</strong> (<em>bool</em>) – <strong>True</strong> to enable freeze, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SoundEffectorData.GetGradient">
+<code class="descclassname">SoundEffectorData.</code><code class="descname">GetGradient</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#SoundEffectorData.GetGradient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the global gradient.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../Gradient/index.html#c4d.Gradient" title="c4d.Gradient">c4d.Gradient</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The global gradient, or <strong>None</strong> if the function fails.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SoundEffectorData.GetGradientDirection">
+<code class="descclassname">SoundEffectorData.</code><code class="descname">GetGradientDirection</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#SoundEffectorData.GetGradientDirection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the global gradient direction.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The global gradient direction: <cite>0</cite> for vertical (volume), <cite>1</cite> for horizontal (frequency).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SoundEffectorData.SetGradientDirection">
+<code class="descclassname">SoundEffectorData.</code><code class="descname">SetGradientDirection</code><span class="sig-paren">(</span><em>self</em>, <em>direction</em><span class="sig-paren">)</span><a class="headerlink" href="#SoundEffectorData.SetGradientDirection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the global gradient direction.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>direction</strong> (<em>int</em>) – The global gradient direction to set: <cite>0</cite> for vertical (volume), <cite>1</cite> for horizontal (frequency).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SoundEffectorData.InitSampling">
+<code class="descclassname">SoundEffectorData.</code><code class="descname">InitSampling</code><span class="sig-paren">(</span><em>self</em>, <em>doc</em><span class="sig-paren">)</span><a class="headerlink" href="#SoundEffectorData.InitSampling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes the sampling functionality of the sound effector data.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Must be called before <a class="reference internal" href="#SoundEffectorData.Sample" title="SoundEffectorData.Sample"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Sample()</span></code></a>. <a class="reference internal" href="#SoundEffectorData.FreeSampling" title="SoundEffectorData.FreeSampling"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FreeSampling()</span></code></a> must be invoked afterwards.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>doc</strong> (<a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document for the operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SoundEffectorData.FreeSampling">
+<code class="descclassname">SoundEffectorData.</code><code class="descname">FreeSampling</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#SoundEffectorData.FreeSampling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Frees the memory used for sampling.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Must be invoked after <a class="reference internal" href="#SoundEffectorData.InitSampling" title="SoundEffectorData.InitSampling"><code class="xref py py-meth docutils literal notranslate"><span class="pre">InitSampling()</span></code></a> has been called.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SoundEffectorData.Sample">
+<code class="descclassname">SoundEffectorData.</code><code class="descname">Sample</code><span class="sig-paren">(</span><em>self</em>, <em>index</em>, <em>count</em><span class="sig-paren">)</span><a class="headerlink" href="#SoundEffectorData.Sample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Samples the sound file using the probes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<em>int</em>) – The index of the element to sample.</li>
+<li><strong>count</strong> (<em>int</em>) – The number of elements in the array being sampled.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">tuple(float, <a class="reference internal" href="../../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A tuple with the output value and color (both <strong>None</strong> if the function failed).</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SoundEffectorData.SetActiveSoundTrack">
+<code class="descclassname">SoundEffectorData.</code><code class="descname">SetActiveSoundTrack</code><span class="sig-paren">(</span><em>self</em>, <em>track</em>, <em>doc</em><span class="sig-paren">)</span><a class="headerlink" href="#SoundEffectorData.SetActiveSoundTrack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the active sound track.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>track</strong> (<a class="reference internal" href="../../C4DAtom/GeListNode/BaseList2D/CTrack/index.html#c4d.CTrack" title="c4d.CTrack"><em>c4d.CTrack</em></a>) – The sound track to set.</li>
+<li><strong>doc</strong> (<a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document for the operation.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if successful, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SoundEffectorData.GetActiveSoundTrack">
+<code class="descclassname">SoundEffectorData.</code><code class="descname">GetActiveSoundTrack</code><span class="sig-paren">(</span><em>self</em>, <em>doc</em><span class="sig-paren">)</span><a class="headerlink" href="#SoundEffectorData.GetActiveSoundTrack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the active sound track.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>doc</strong> (<a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document for the operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../C4DAtom/GeListNode/BaseList2D/CTrack/index.html#c4d.CTrack" title="c4d.CTrack">c4d.CTrack</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The active sound track, or <strong>None</strong> if the function fails.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SoundEffectorData.CopyTo">
+<code class="descclassname">SoundEffectorData.</code><code class="descname">CopyTo</code><span class="sig-paren">(</span><em>self</em>, <em>dest</em><span class="sig-paren">)</span><a class="headerlink" href="#SoundEffectorData.CopyTo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies the sound effector data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dest</strong> (<a class="reference internal" href="#c4d.SoundEffectorData" title="c4d.SoundEffectorData"><em>c4d.SoundEffectorData</em></a>) – The destination sound effector data.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../SplineData/index.html" title="c4d.SplineData"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../RangeData/index.html" title="c4d.RangeData"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.CustomDataType</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MPBTYPE &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="MPB_GETLAYERS" href="MPB_GETLAYERS.html" />
+    <link rel="prev" title="MOUSEINFO_BUTTON" href="MOUSEINFO_BUTTON.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="MPB_GETLAYERS.html" title="MPB_GETLAYERS"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="MOUSEINFO_BUTTON.html" title="MOUSEINFO_BUTTON"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../types/index.html" accesskey="U">Types and Symbols List</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="mpbtype">
+<h1>MPBTYPE<a class="headerlink" href="#mpbtype" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="3%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>MPBTYPE_SHOW</em></td>
+<td>bool</td>
+<td>Determines if the layer will be shown in the external render window. (The Cinema 4D renderer modifies this value itself.)</td>
+</tr>
+<tr class="row-even"><td><em>MPBTYPE_SAVE</em></td>
+<td>bool</td>
+<td>Determines if the layer is saved with the image or not if <em>SAVEBIT_USESELECTEDLAYERS</em> is used.</td>
+</tr>
+<tr class="row-odd"><td><em>MPBTYPE_PERCENT</em></td>
+<td>float</td>
+<td>The blend parameter, between <cite>0.0</cite> and <cite>1.0</cite>.</td>
+</tr>
+<tr class="row-even"><td><em>MPBTYPE_BLENDMODE</em></td>
+<td>int</td>
+<td>The blend mode. (<cite>LAYER_NORMAL</cite>, <cite>LAYER_DISSOLVE</cite> etc. from  from <cite>bplayer.h.</cite>)</td>
+</tr>
+<tr class="row-odd"><td><em>MPBTYPE_COLORMODE</em></td>
+<td>int</td>
+<td>The color mode: See <a class="reference internal" href="COLORMODE.html"><span class="doc">COLORMODE</span></a>.</td>
+</tr>
+<tr class="row-even"><td><em>MPBTYPE_BITMAPTYPE</em></td>
+<td>int</td>
+<td>The bitmap type. Cannot be set with <a class="reference internal" href="../modules/c4d.bitmaps/BaseBitmap/MultipassBitmap/index.html#MultipassBitmap.SetParameter" title="MultipassBitmap.SetParameter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MultipassBitmap.SetParameter()</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>MPBTYPE_NAME</em></td>
+<td>str</td>
+<td>The layer name. Only a <a class="reference internal" href="../modules/c4d.modules/bodypaint/PaintBitmap/PaintLayer/PaintLayerBmp/index.html#c4d.modules.bodypaint.PaintLayerBmp" title="c4d.modules.bodypaint.PaintLayerBmp"><code class="xref py py-class docutils literal notranslate"><span class="pre">PaintLayerBmp</span></code></a> or <a class="reference internal" href="../modules/c4d.modules/bodypaint/PaintBitmap/PaintLayer/PaintLayerFolder/index.html#c4d.modules.bodypaint.PaintLayerFolder" title="c4d.modules.bodypaint.PaintLayerFolder"><code class="xref py py-class docutils literal notranslate"><span class="pre">PaintLayerFolder</span></code></a> can have a name.</td>
+</tr>
+<tr class="row-even"><td><em>MPBTYPE_DPI</em></td>
+<td>int</td>
+<td>The resolution in DPI. <strong>Private.</strong></td>
+</tr>
+<tr class="row-odd"><td><em>MPBTYPE_USERID</em></td>
+<td>int</td>
+<td>The user ID for the layer. In the renderer this is <cite>VPBUFFER_xxx</cite>.</td>
+</tr>
+<tr class="row-even"><td><em>MPBTYPE_USERSUBID</em></td>
+<td>int</td>
+<td>The user sub-ID for the layer. In the renderer this is used for blend channels for instance.</td>
+</tr>
+<tr class="row-odd"><td><em>MPBTYPE_FORCEBLEND</em></td>
+<td>int</td>
+<td>The special mode used to force blend layers.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="MPB_GETLAYERS.html" title="MPB_GETLAYERS"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="MOUSEINFO_BUTTON.html" title="MOUSEINFO_BUTTON"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../types/index.html" >Types and Symbols List</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

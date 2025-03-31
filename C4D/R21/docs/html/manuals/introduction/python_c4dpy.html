@@ -1,0 +1,281 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4dpy &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Python Resources" href="python_resources.html" />
+    <link rel="prev" title="What is New in R21" href="../../misc/whatisnew.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="python_resources.html" title="Python Resources"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../../misc/whatisnew.html" title="What is New in R21"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4dpy">
+<span id="id1"></span><h1>c4dpy<a class="headerlink" href="#c4dpy" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line"><cite>c4dpy.exe/app</cite> is an executable that runs Cinema 4D in Python command-line mode.</div>
+<div class="line">It is not only an interpreter, it brings extra features for daily Python development with external code editors/IDEs: auto-completion and debugging.</div>
+</div>
+<div class="section" id="install">
+<h2>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last"><em>c4dpy</em> needs a valid installation of Cinema 4D it’s not a standalone.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><em>c4dpy</em> should have the same version than the folder is in it.</p>
+</div>
+<p>R21:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">With R21 <em>c4dpy</em> is part of the normal installation process so you don’t need to install anything.</div>
+<div class="line">However due to the new licensing system, before any usage of it, launch it at least one time in order to license <em>c4dpy</em> otherwise you can pass these argument while executing <em>c4dpy</em>:</div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li>g_licenseUsername=”[username]”// inform Cinema 4D about the username to authenticate on <a class="reference external" href="https://id.maxon.net">https://id.maxon.net</a>.</li>
+<li>g_licensePassword=”[password]” // inform Cinema 4D about the password to authenticate on <a class="reference external" href="https://id.maxon.net">https://id.maxon.net</a>.</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>R20:</p>
+<ol class="arabic simple">
+<li>Download the <a class="reference external" href="https://developers.maxon.net/?page_id=1118">c4dpy version</a> which match your Cinema 4D version.</li>
+<li>Extract the <em>c4dpy</em> executable according to the target operating system.</li>
+<li>Copy the extracted <em>c4dpy</em> executable to the Cinema 4D installation directory along with the other executable files:</li>
+</ol>
+<blockquote>
+<div><img alt="../../_images/c4dpy_installdirectory.png" src="../../_images/c4dpy_installdirectory.png" />
+</div></blockquote>
+</div>
+<div class="section" id="verify-install">
+<h2>Verify Install<a class="headerlink" href="#verify-install" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Open Command Prompt.</li>
+<li>Drag <em>c4dpy.exe</em> executable into the Command Prompt and press enter.</li>
+<li><em>c4dpy</em> should run without error and ask your MyMaxon account. Next start you will not need to login again.</li>
+<li>Python interactive interpreter <cite>&gt;&gt;&gt;</cite> is now available.</li>
+</ol>
+</div>
+<div class="section" id="mac">
+<h3>Mac<a class="headerlink" href="#mac" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Open Terminal.</li>
+<li>Right-click on <em>c4dpy.app</em> and select <cite>Show Package Contents</cite>.</li>
+<li>Navigate to the <cite>Contents/MacOS</cite> directory.</li>
+<li>Drag the <em>c4dpy</em> file into the Terminal window and press return.</li>
+<li><em>c4dpy</em> should run without error and ask your MyMaxon account. Next start you will not need to login again.</li>
+<li>Python interactive interpreter <cite>&gt;&gt;&gt;</cite> is now available.</li>
+</ol>
+</div>
+<p></p>
+</div>
+<div class="section" id="editor-ide-setup">
+<h2>Editor/IDE Setup<a class="headerlink" href="#editor-ide-setup" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">This section shows how to add <em>c4dpy</em> interpreter to code editor and IDE softwares.</div>
+<div class="line">The screenshots may not reflect changes in future versions of these programs but the steps should remain the same.</div>
+</div>
+</div>
+<div class="section" id="visual-studio-code">
+<h3>Visual Studio Code<a class="headerlink" href="#visual-studio-code" title="Permalink to this headline">¶</a></h3>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference external" href="https://code.visualstudio.com/docs">Documentation for Visual Studio Code</a></p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<div class="last line-block">
+<div class="line">Due to a bug, Visual Studio Code, is not anymore supported for <cite>c4dpy</cite> R21.</div>
+<div class="line">For more information see <a class="reference external" href="https://plugincafe.maxon.net/topic/12089/c4dpy-exe-and-vs-code-on-windows/8">c4dpy.exe and VS Code</a>.</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h4>Windows<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li>Install the Python extension for Visual Studio Code.</li>
+<li>Select the <cite>File</cite> &gt; <cite>Preferences</cite> &gt; <cite>Settings</cite> command (or <cite>Ctrl + ,</cite> shortcut).</li>
+<li>Search the settings for <cite>python.pythonPath</cite> and set it to point to the full path of the <em>c4dpy.exe</em> file. For example:</li>
+</ol>
+<blockquote>
+<div><img alt="../../_images/c4dpy_vscode_win.png" src="../../_images/c4dpy_vscode_win.png" />
+<p>The Python Path is set in the <cite>User Settings</cite> so <em>c4dpy.exe</em> interpreter is used globally by Visual Studio Code.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Settings can be specified by user, workspace or folder.</p>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li>Restart Visual Studio Code.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">With <em>c4dpy</em> version R20 SP1, debugging fails because <cite>ptvsd</cite> module cannot be found. The Python extension for Visual Studio Code uses this module to debug.</div>
+<div class="line">The workaround is to copy the <cite>ptvsd</cite> module folder from the Visual Studio Code user preferences to <cite>C:Users{username}AppDataRoamingMAXON{cinemaversion}python27libs</cite>.</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h4>Mac<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li>Install the Python extension for Visual Studio Code.</li>
+<li>Select the <cite>Code</cite> &gt; <cite>Preferences</cite> &gt; <cite>Settings</cite> command (or <cite>Cmd + ,</cite> shortcut).</li>
+<li>Search the settings for <cite>python.pythonPath</cite> and set it to point to the full path of the <em>c4dpy</em> Terminal file. For example:</li>
+</ol>
+<blockquote>
+<div><img alt="../../_images/c4dpy_vscode_mac.png" src="../../_images/c4dpy_vscode_mac.png" />
+<p>The Python Path is set in the <cite>User Settings</cite> so <em>c4dpy</em> interpreter is used globally by Visual Studio Code.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Settings can be specified by user, workspace or folder.</p>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li>Restart Visual Studio Code.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">With <em>c4dpy</em> version R20 SP1, debugging fails because <cite>ptvsd</cite> module cannot be found. The Python extension for Visual Studio Code uses this module to debug.</div>
+<div class="line">The workaround is to copy the <cite>ptvsd</cite> module folder from the Visual Studio Code user preferences to <cite>/Users/{username}/Library/Preferences/MAXON/{cinemaversion}/python27/libs</cite>.</div>
+</div>
+</div>
+</div>
+<p></p>
+</div>
+</div>
+<div class="section" id="command-line">
+<h2>Command-Line<a class="headerlink" href="#command-line" title="Permalink to this headline">¶</a></h2>
+<p><em>c4dpy</em> runs a script with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">c4dpy</span> <span class="n">script</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>The following command invokes <cite>script.py</cite> and passes <cite>arg</cite> argument:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">c4dpy</span> <span class="n">script</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">arg</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Arguments can be accessed by <cite>sys.argv</cite>.</p>
+</div>
+<p>The command below loads the module in <cite>file.py</cite> and passes <cite>arg</cite> argument:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">c4dpy</span> <span class="o">-</span><span class="n">m</span> <span class="n">file</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">arg</span>
+</pre></div>
+</div>
+<p><em>c4dpy</em> also executes Python code in a string:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">c4dpy</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;print(&#39;Hello&#39;)&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">c4dpy</a><ul>
+<li><a class="reference internal" href="#install">Install</a></li>
+<li><a class="reference internal" href="#verify-install">Verify Install</a><ul>
+<li><a class="reference internal" href="#windows">Windows</a></li>
+<li><a class="reference internal" href="#mac">Mac</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#editor-ide-setup">Editor/IDE Setup</a><ul>
+<li><a class="reference internal" href="#visual-studio-code">Visual Studio Code</a><ul>
+<li><a class="reference internal" href="#id2">Windows</a></li>
+<li><a class="reference internal" href="#id3">Mac</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#command-line">Command-Line</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="python_resources.html" title="Python Resources"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../../misc/whatisnew.html" title="What is New in R21"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,2093 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.storage.HyperFile &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="c4d.storage.MemoryFileStruct" href="../MemoryFileStruct/index.html" />
+    <link rel="prev" title="c4d.storage.ByteSeq" href="../ByteSeq/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../MemoryFileStruct/index.html" title="c4d.storage.MemoryFileStruct"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../ByteSeq/index.html" title="c4d.storage.ByteSeq"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">c4d.storage</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-storage-hyperfile">
+<h1>c4d.storage.HyperFile<a class="headerlink" href="#c4d-storage-hyperfile" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.storage.HyperFile">
+<em class="property">class </em><code class="descclassname">c4d.storage.</code><code class="descname">HyperFile</code><a class="headerlink" href="#c4d.storage.HyperFile" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Hyper files are used to store data in a file.</div>
+<div class="line">The HyperFile works with the ‘FIFO’ concept.</div>
+<div class="line">The values will be written and read in the same order.</div>
+<div class="line"><br /></div>
+<div class="line">The following source code is a simple example showing how to use the <a class="reference internal" href="#c4d.storage.HyperFile" title="c4d.storage.HyperFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">HyperFile</span></code></a> class.</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">c4d</span><span class="o">,</span> <span class="nn">os</span>
+<span class="n">YOUR_IDENT</span> <span class="o">=</span> <span class="mi">49545</span> <span class="c1"># Choose a custom ident</span>
+<span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;/Users&quot;</span><span class="p">,</span> <span class="s2">&quot;Dev&quot;</span><span class="p">,</span> <span class="s2">&quot;Desktop&quot;</span><span class="p">,</span> <span class="s2">&quot;test.file&quot;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">path</span>
+
+<span class="k">def</span> <span class="nf">Write</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+    <span class="c1">#write</span>
+    <span class="nb">print</span> <span class="n">path</span>
+    <span class="n">hf</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">HyperFile</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">hf</span><span class="o">.</span><span class="n">Open</span><span class="p">(</span><span class="n">ident</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">c4d</span><span class="o">.</span><span class="n">FILEOPEN_WRITE</span><span class="p">,</span> <span class="n">error_dialog</span><span class="o">=</span><span class="n">c4d</span><span class="o">.</span><span class="n">FILEDIALOG_NONE</span><span class="p">):</span>
+        <span class="n">bc</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">BaseContainer</span><span class="p">()</span>
+        <span class="n">bc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;test&quot;</span>
+        <span class="n">bc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;3&quot;</span>
+        <span class="n">hf</span><span class="o">.</span><span class="n">WriteContainer</span><span class="p">(</span><span class="n">bc</span><span class="p">)</span>
+        <span class="n">hf</span><span class="o">.</span><span class="n">Close</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">c4d</span><span class="o">.</span><span class="n">gui</span><span class="o">.</span><span class="n">MessageDialog</span><span class="p">(</span><span class="s2">&quot;Cannot open file to write.&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">Read</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+    <span class="c1">#read</span>
+    <span class="n">hf</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">HyperFile</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">hf</span><span class="o">.</span><span class="n">Open</span><span class="p">(</span><span class="n">ident</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">c4d</span><span class="o">.</span><span class="n">FILEOPEN_READ</span><span class="p">,</span> <span class="n">error_dialog</span><span class="o">=</span><span class="n">c4d</span><span class="o">.</span><span class="n">FILEDIALOG_NONE</span><span class="p">):</span>
+        <span class="n">bc</span> <span class="o">=</span> <span class="n">hf</span><span class="o">.</span><span class="n">ReadContainer</span><span class="p">()</span>
+        <span class="n">hf</span><span class="o">.</span><span class="n">Close</span><span class="p">()</span>
+        <span class="nb">print</span> <span class="n">bc</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">bc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1">#output: test 3</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">c4d</span><span class="o">.</span><span class="n">gui</span><span class="o">.</span><span class="n">MessageDialog</span><span class="p">(</span><span class="s2">&quot;Cannot open file to read.&quot;</span><span class="p">)</span>
+
+<span class="n">Write</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">YOUR_IDENT</span><span class="p">)</span>
+<span class="n">Read</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">YOUR_IDENT</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.__init__" title="HyperFile.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.__init__(self)</span></code></a></td>
+<td>Allocates a hyper file.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.Open" title="HyperFile.Open"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.Open(self,</span> <span class="pre">ident,</span> <span class="pre">filename,</span> <span class="pre">...)</span></code></a></td>
+<td>Opens the hyper file.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.Close" title="HyperFile.Close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.Close(self)</span></code></a></td>
+<td>Closes the hyper file.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.WriteChar" title="HyperFile.WriteChar"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteChar(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Write a character to the hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.WriteUChar" title="HyperFile.WriteUChar"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteUChar(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Write a very short int to the hyperfile.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.WriteInt16" title="HyperFile.WriteInt16"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteInt16(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Write a signed short int to the hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.WriteUInt16" title="HyperFile.WriteUInt16"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteUInt16(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Write an unsigned short int to the hyperfile.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.WriteInt32" title="HyperFile.WriteInt32"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteInt32(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Write an int to the hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.WriteUInt32" title="HyperFile.WriteUInt32"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteUInt32(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Write an unsigned int to the hyperfile.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.WriteInt64" title="HyperFile.WriteInt64"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteInt64(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Write a double precision int value to the hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.WriteUInt64" title="HyperFile.WriteUInt64"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteUInt64(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Write a double precision unsigned int value to the hyperfile.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.WriteFloat32" title="HyperFile.WriteFloat32"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteFloat32(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Write a float value to the hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.WriteFloat64" title="HyperFile.WriteFloat64"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteFloat64(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Write a double precision float value to the hyperfile.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.WriteVector" title="HyperFile.WriteVector"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteVector(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Write a <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a> to the hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.WriteVector32" title="HyperFile.WriteVector32"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteVector32(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Write a <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a> to the hyperfile.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.WriteVector64" title="HyperFile.WriteVector64"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteVector64(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Write a double precision <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a> to the hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.WriteMatrix" title="HyperFile.WriteMatrix"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteMatrix(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Write a <a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a> to the hyperfile.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.WriteMatrix32" title="HyperFile.WriteMatrix32"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteMatrix32(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Write a <a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a> to the hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.WriteMatrix64" title="HyperFile.WriteMatrix64"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteMatrix64(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Write a double precision <a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a> to the hyperfile.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.WriteBool" title="HyperFile.WriteBool"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteBool(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Write a bool to the hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.WriteTime" title="HyperFile.WriteTime"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteTime(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Write a <a class="reference internal" href="../../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTime</span></code></a> to the hyperfile.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.WriteString" title="HyperFile.WriteString"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteString(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Write a string to the hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.WriteFilename" title="HyperFile.WriteFilename"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteFilename(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Write a path to the hyperfile.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.WriteImage" title="HyperFile.WriteImage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteImage(self,</span> <span class="pre">v,</span> <span class="pre">format,</span> <span class="pre">data)</span></code></a></td>
+<td>Write an image to the hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.WriteContainer" title="HyperFile.WriteContainer"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteContainer(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Write the settings in a <a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseContainer</span></code></a> to the hyperfile.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.WriteMemory" title="HyperFile.WriteMemory"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteMemory(self,</span> <span class="pre">data)</span></code></a></td>
+<td>Write a block of memory to the hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.WriteData" title="HyperFile.WriteData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteData(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Write data to the container.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.ReadChar" title="HyperFile.ReadChar"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadChar(self)</span></code></a></td>
+<td>Read a character from the hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.ReadUChar" title="HyperFile.ReadUChar"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadUChar(self)</span></code></a></td>
+<td>Read an unsigned character from the hyperfile.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.ReadInt16" title="HyperFile.ReadInt16"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadInt16(self)</span></code></a></td>
+<td>Read a signed word from the hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.ReadUInt16" title="HyperFile.ReadUInt16"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadUInt16(self)</span></code></a></td>
+<td>Read an unsigned word from the hyperfile.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.ReadInt32" title="HyperFile.ReadInt32"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadInt32(self)</span></code></a></td>
+<td>Read an int from the hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.ReadUInt32" title="HyperFile.ReadUInt32"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadUInt32(self)</span></code></a></td>
+<td>Read an unsigned int from the hyperfile.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.ReadInt64" title="HyperFile.ReadInt64"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadInt64(self)</span></code></a></td>
+<td>Read a double precision int from the hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.ReadUInt64" title="HyperFile.ReadUInt64"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadUInt64(self)</span></code></a></td>
+<td>Read a double precision unsigned int from the hyperfile.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.ReadFloat" title="HyperFile.ReadFloat"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadFloat(self)</span></code></a></td>
+<td>Read a float from the hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.ReadFloat32" title="HyperFile.ReadFloat32"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadFloat32(self)</span></code></a></td>
+<td>Read a float from the hyperfile.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.ReadFloat64" title="HyperFile.ReadFloat64"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadFloat64(self)</span></code></a></td>
+<td>Read a double precision float from the hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.ReadVector" title="HyperFile.ReadVector"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadVector(self)</span></code></a></td>
+<td>Read a <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a> from the hyperfile.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.ReadVector32" title="HyperFile.ReadVector32"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadVector32(self)</span></code></a></td>
+<td>Read a <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a> from the hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.ReadVector64" title="HyperFile.ReadVector64"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadVector64(self)</span></code></a></td>
+<td>Read a double precision <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a> from the hyperfile.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.ReadMatrix" title="HyperFile.ReadMatrix"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadMatrix(self)</span></code></a></td>
+<td>Read a <a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a> from the hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.ReadMatrix32" title="HyperFile.ReadMatrix32"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadMatrix32(self)</span></code></a></td>
+<td>Read a <a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a> from the hyperfile.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.ReadMatrix64" title="HyperFile.ReadMatrix64"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadMatrix64(self)</span></code></a></td>
+<td>Read a double precision <a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a> from the hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.ReadBool" title="HyperFile.ReadBool"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadBool(self)</span></code></a></td>
+<td>Read a bool from the hyperfile.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.ReadTime" title="HyperFile.ReadTime"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadTime(self)</span></code></a></td>
+<td>Read a <a class="reference internal" href="../../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTime</span></code></a> from the hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.ReadString" title="HyperFile.ReadString"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadString(self)</span></code></a></td>
+<td>Read a string from the hyperfile.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.ReadFilename" title="HyperFile.ReadFilename"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadFilename(self)</span></code></a></td>
+<td>Read a path from the hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.ReadImage" title="HyperFile.ReadImage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadImage(self)</span></code></a></td>
+<td>Read a bitmap from the hyperfile.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.ReadContainer" title="HyperFile.ReadContainer"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadContainer(self)</span></code></a></td>
+<td>Read a container from the hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.ReadMemory" title="HyperFile.ReadMemory"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadMemory(self)</span></code></a></td>
+<td>Read a block of memory from the hyperfile.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.ReadData" title="HyperFile.ReadData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadData(self)</span></code></a></td>
+<td>Read a data from the hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.GetError" title="HyperFile.GetError"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.GetError(self)</span></code></a></td>
+<td>Get the error from the last hyperfile operation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.SetError" title="HyperFile.SetError"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.SetError(self,</span> <span class="pre">err)</span></code></a></td>
+<td>Set the error value for this hyperfile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.ReadValueHeader" title="HyperFile.ReadValueHeader"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadValueHeader(self)</span></code></a></td>
+<td>Read the value header from the file. This is only necessary in combination with loops.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.SkipValue" title="HyperFile.SkipValue"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.SkipValue(self,</span> <span class="pre">h)</span></code></a></td>
+<td>Skip a given type of value.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.WriteChunkStart" title="HyperFile.WriteChunkStart"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteChunkStart(self,</span> <span class="pre">id,</span> <span class="pre">level)</span></code></a></td>
+<td>Write a chunk marker into the file indicating the beginning of a new chunk of data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.WriteChunkEnd" title="HyperFile.WriteChunkEnd"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteChunkEnd(self)</span></code></a></td>
+<td>Write a chunk ending marker into the file.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.ReadChunkStart" title="HyperFile.ReadChunkStart"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadChunkStart(self)</span></code></a></td>
+<td>Read a chunks identification from the file.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.ReadChunkEnd" title="HyperFile.ReadChunkEnd"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadChunkEnd(self)</span></code></a></td>
+<td>Read a chunks end marker from the file.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.SkipToEndChunk" title="HyperFile.SkipToEndChunk"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.SkipToEndChunk(self)</span></code></a></td>
+<td>Move the file pointer to the end of the chunk.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.GetDocument" title="HyperFile.GetDocument"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.GetDocument(self)</span></code></a></td>
+<td>Gets the active document for the hyper file operation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#HyperFile.GetFileVersion" title="HyperFile.GetFileVersion"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.GetFileVersion(self)</span></code></a></td>
+<td>Get the version of Cinema 4D that wrote the file.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#HyperFile.GetFilterFlags" title="HyperFile.GetFilterFlags"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.GetFilterFlags(self)</span></code></a></td>
+<td>Gets the filter flags, the value is valid only during a Load or a Merge.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="HyperFile.__init__">
+<code class="descclassname">HyperFile.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allocates a hyper file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.storage.HyperFile" title="c4d.storage.HyperFile">c4d.storage.HyperFile</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The hyper file.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.Open">
+<code class="descclassname">HyperFile.</code><code class="descname">Open</code><span class="sig-paren">(</span><em>self</em>, <em>ident</em>, <em>filename</em>, <em>mode</em>, <em>error_dialog</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.Open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opens the hyper file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ident</strong> (<em>int</em>) – File identification.</li>
+<li><strong>filename</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><a class="reference internal" href="../MemoryFileStruct/index.html#c4d.storage.MemoryFileStruct" title="c4d.storage.MemoryFileStruct"><em>c4d.storage.MemoryFileStruct</em></a><em>]</em>) – File to open.</li>
+<li><strong>mode</strong> (<em>int</em>) – <p>File mode:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="81%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>FILEOPEN_APPEND</em></td>
+<td>Open an existing file for writing and set the position to the end of that file.</td>
+</tr>
+<tr class="row-even"><td><em>FILEOPEN_READ</em></td>
+<td>Open the file for reading.</td>
+</tr>
+<tr class="row-odd"><td><em>FILEOPEN_WRITE</em></td>
+<td>Create a new file for writing. <strong>Warning:</strong> If the file name points to an existing file, it will be overwritten.</td>
+</tr>
+<tr class="row-even"><td><em>FILEOPEN_READWRITE</em></td>
+<td>Open the file for both reading and writing.</td>
+</tr>
+<tr class="row-odd"><td><em>FILEOPEN_READ_NOCACHE</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-even"><td><em>FILEOPEN_SHAREDREAD</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-odd"><td><em>FILEOPEN_SHAREDWRITE</em></td>
+<td>Private.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>error_dialog</strong> (<em>int</em>) – <p>File error dialog:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="79%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>FILEDIALOG_NONE</em></td>
+<td>Never show an error dialog.</td>
+</tr>
+<tr class="row-even"><td><em>FILEDIALOG_ANY</em></td>
+<td>Show an error dialog for any error.</td>
+</tr>
+<tr class="row-odd"><td><em>FILEDIALOG_IGNOREOPEN</em></td>
+<td>Do not show an error dialog if the file does not exist, otherwise like <em>FILEDIALOG_ANY</em>.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the hyper file could be opened, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.Close">
+<code class="descclassname">HyperFile.</code><code class="descname">Close</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.Close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closes the hyper file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> on success.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteChar">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteChar</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteChar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a character to the hyperfile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<em>int</em>) – A char to write to the hyperfile.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Success of writing the value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteUChar">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteUChar</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteUChar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a very short int to the hyperfile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<em>int</em>) – The value to write to the hyperfile.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Success of writing the value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteInt16">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteInt16</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteInt16" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a signed short int to the hyperfile.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<em>int</em>) – The value to write to the hyperfile.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Success of writing the value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteUInt16">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteUInt16</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteUInt16" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write an unsigned short int to the hyperfile.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<em>int</em>) – The value to write to the hyperfile.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Success of writing the value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteInt32">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteInt32</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteInt32" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write an int to the hyperfile.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<em>int</em>) – The value to write to the hyperfile.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Success of writing the value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteUInt32">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteUInt32</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteUInt32" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write an unsigned int to the hyperfile.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<em>int</em>) – The value to write to the hyperfile.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Success of writing the value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteInt64">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteInt64</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteInt64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a double precision int value to the hyperfile.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<em>int</em>) – The integer to write to the hyperfile.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Success of writing the value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteUInt64">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteUInt64</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteUInt64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a double precision unsigned int value to the hyperfile.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<em>int</em>) – The integer to write to the hyperfile.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Success of writing the value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteFloat32">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteFloat32</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteFloat32" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a float value to the hyperfile.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<em>float</em>) – The value to write to the hyperfile.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Success of writing the value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteFloat64">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteFloat64</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteFloat64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a double precision float value to the hyperfile.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<em>float</em>) – The value to write to the hyperfile.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Success of writing the value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteVector">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteVector</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a> to the hyperfile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The value to write to the hyperfile.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Success of writing the value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteVector32">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteVector32</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteVector32" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a> to the hyperfile.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The value to write to the hyperfile.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Success of writing the value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteVector64">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteVector64</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteVector64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a double precision <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a> to the hyperfile.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The value to write to the hyperfile.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Success of writing the value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteMatrix">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteMatrix</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a <a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a> to the hyperfile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><em>c4d.Matrix</em></a>) – The value to write to the hyperfile.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Success of writing the value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteMatrix32">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteMatrix32</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteMatrix32" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a <a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a> to the hyperfile.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><em>c4d.Matrix</em></a>) – The value to write to the hyperfile.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Success of writing the value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteMatrix64">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteMatrix64</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteMatrix64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a double precision <a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a> to the hyperfile.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><em>c4d.Matrix</em></a>) – The value to write to the hyperfile.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Success of writing the value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteBool">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteBool</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteBool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a bool to the hyperfile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<em>bool</em>) – The value to write to the hyperfile.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Success of writing the value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteTime">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteTime</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a <a class="reference internal" href="../../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTime</span></code></a> to the hyperfile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="../../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><em>c4d.BaseTime</em></a>) – The value to write to the hyperfile.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Success of writing the value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteString">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteString</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a string to the hyperfile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<em>str</em>) – The value to write to the hyperfile.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Success of writing the value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteFilename">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteFilename</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteFilename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a path to the hyperfile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<em>str</em>) – The path to write to the hyperfile.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Success of writing the value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteImage">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteImage</code><span class="sig-paren">(</span><em>self</em>, <em>v</em>, <em>format</em>, <em>data</em>, <em>savebits=SAVEBIT_ALPHA</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write an image to the hyperfile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>v</strong> (<a class="reference internal" href="../../c4d.bitmaps/BaseBitmap/index.html#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap"><em>c4d.bitmaps.BaseBitmap</em></a>) – The bitmap to write to the hyperfile.</li>
+<li><strong>format</strong> (<em>int</em>) – <p>The image format:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="47%" />
+<col width="53%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>FILTER_TIF</em></td>
+<td>TIFF.</td>
+</tr>
+<tr class="row-even"><td><em>FILTER_TGA</em></td>
+<td>TGA.</td>
+</tr>
+<tr class="row-odd"><td><em>FILTER_BMP</em></td>
+<td>BMP.</td>
+</tr>
+<tr class="row-even"><td><em>FILTER_IFF</em></td>
+<td>IFF.</td>
+</tr>
+<tr class="row-odd"><td><em>FILTER_JPG</em></td>
+<td>JPEG.</td>
+</tr>
+<tr class="row-even"><td><em>FILTER_PICT</em></td>
+<td>PICT.</td>
+</tr>
+<tr class="row-odd"><td><em>FILTER_PSD</em></td>
+<td>PSD.</td>
+</tr>
+<tr class="row-even"><td><em>FILTER_RLA</em></td>
+<td>RLA.</td>
+</tr>
+<tr class="row-odd"><td><em>FILTER_RPF</em></td>
+<td>RPF.</td>
+</tr>
+<tr class="row-even"><td><em>FILTER_B3D</em></td>
+<td><cite>BodyPaint 3D</cite>.</td>
+</tr>
+<tr class="row-odd"><td><em>FILTER_TIF_B3D</em></td>
+<td>TIFF <cite>BodyPaint 3D</cite>.</td>
+</tr>
+<tr class="row-even"><td><em>FILTER_PSB</em></td>
+<td>PSB.</td>
+</tr>
+<tr class="row-odd"><td><em>FILTER_AVI</em></td>
+<td>AVI Movie.</td>
+</tr>
+<tr class="row-even"><td><em>FILTER_MOVIE</em></td>
+<td>Quicktime Movie.</td>
+</tr>
+<tr class="row-odd"><td><em>FILTER_QTVRSAVER_PANORAMA</em></td>
+<td>QTVR Panorama.</td>
+</tr>
+<tr class="row-even"><td><em>FILTER_QTVRSAVER_OBJECT</em></td>
+<td>QTVR Object.</td>
+</tr>
+<tr class="row-odd"><td><em>FILTER_HDR</em></td>
+<td>HDR.</td>
+</tr>
+<tr class="row-even"><td><em>FILTER_EXR_LOAD</em></td>
+<td>EXR (Load).</td>
+</tr>
+<tr class="row-odd"><td><em>FILTER_EXR</em></td>
+<td>EXR.</td>
+</tr>
+<tr class="row-even"><td><em>FILTER_PNG</em></td>
+<td>PNG.</td>
+</tr>
+<tr class="row-odd"><td><em>FILTER_IES</em></td>
+<td>IES.</td>
+</tr>
+<tr class="row-even"><td><em>FILTER_B3DNET</em></td>
+<td><cite>BodyPaint 3D</cite> NET. Private.</td>
+</tr>
+<tr class="row-odd"><td><em>FILTER_DPX</em></td>
+<td>DPX.</td>
+</tr>
+<tr class="row-even"><td><em>FILTER_DDS</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R19: </span>DDS.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>data</strong> (<a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – <p>A container with additional format settings, or <strong>None</strong>.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>SAVEBIT_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEBIT_ALPHA</em></td>
+<td>Save the alpha channel(s) in the file. (For filter plugins, do not save an alpha channel if this is not set.)</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEBIT_MULTILAYER</em></td>
+<td>Save multiple layers.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEBIT_USESELECTEDLAYERS</em></td>
+<td>Use selected layers.</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEBIT_16BITCHANNELS</em></td>
+<td>Use <cite>16</cite>-bit channels.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEBIT_GREYSCALE</em></td>
+<td>Save in grayscale mode.</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEBIT_INTERNALNET</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEBIT_DONTMERGE</em></td>
+<td>Avoid merging of layers in BodyPaint 3D files.</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEBIT_32BITCHANNELS</em></td>
+<td>Use <cite>32</cite>-bit channels.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEBIT_SAVERENDERRESULT</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEBIT_FIRSTALPHA_ONLY</em></td>
+<td>Private.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>savebits</strong> (<em>int</em>) – <p>The save bits:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>SAVEBIT_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEBIT_ALPHA</em></td>
+<td>Save the alpha channel(s) in the file. (For filter plugins, do not save an alpha channel if this is not set.)</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEBIT_MULTILAYER</em></td>
+<td>Save multiple layers.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEBIT_USESELECTEDLAYERS</em></td>
+<td>Use selected layers.</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEBIT_16BITCHANNELS</em></td>
+<td>Use <cite>16</cite>-bit channels.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEBIT_GREYSCALE</em></td>
+<td>Save in grayscale mode.</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEBIT_INTERNALNET</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEBIT_DONTMERGE</em></td>
+<td>Avoid merging of layers in BodyPaint 3D files.</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEBIT_32BITCHANNELS</em></td>
+<td>Use <cite>32</cite>-bit channels.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEBIT_SAVERENDERRESULT</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEBIT_FIRSTALPHA_ONLY</em></td>
+<td>Private.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Success of writing the image.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteContainer">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteContainer</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteContainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write the settings in a <a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseContainer</span></code></a> to the hyperfile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The container to write to the hyperfile.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Success of writing the value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteMemory">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteMemory</code><span class="sig-paren">(</span><em>self</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteMemory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a block of memory to the hyperfile.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only use this when you need to, be aware that the byte sequences will not be platform independent.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<a class="reference internal" href="../ByteSeq/index.html#c4d.storage.ByteSeq" title="c4d.storage.ByteSeq"><em>c4d.storage.ByteSeq</em></a>) – The data to write to the hyperfile.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Success of writing the data.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteData">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteData</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write data to the container.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Please check the constructor of <strong>GeData</strong> in the C++ SDK to see what type this method accepts.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<em>any</em>) – The data.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Success of writing the value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadChar">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadChar</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadChar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a character from the hyperfile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The character or <strong>None</strong> if reading failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadUChar">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadUChar</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadUChar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read an unsigned character from the hyperfile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The unsigned character or <strong>None</strong> if reading failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadInt16">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadInt16</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadInt16" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a signed word from the hyperfile.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The unsigned word or <strong>None</strong> if reading failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadUInt16">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadUInt16</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadUInt16" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read an unsigned word from the hyperfile.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The unsigned word or <strong>None</strong> if reading failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadInt32">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadInt32</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadInt32" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read an int from the hyperfile.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The unsigned int or <strong>None</strong> if reading failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadUInt32">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadUInt32</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadUInt32" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read an unsigned int from the hyperfile.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The unsigned int or <strong>None</strong> if reading failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadInt64">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadInt64</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadInt64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a double precision int from the hyperfile.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The value or <strong>None</strong> if reading failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadUInt64">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadUInt64</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadUInt64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a double precision unsigned int from the hyperfile.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The value or <strong>None</strong> if reading failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadFloat">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadFloat</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadFloat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a float from the hyperfile.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The float or <strong>None</strong> if reading failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadFloat32">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadFloat32</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadFloat32" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a float from the hyperfile.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The float or <strong>None</strong> if reading failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadFloat64">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadFloat64</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadFloat64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a double precision float from the hyperfile.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The float or <strong>None</strong> if reading failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadVector">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadVector</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a> from the hyperfile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The vector or <strong>None</strong> if reading failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadVector32">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadVector32</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadVector32" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a> from the hyperfile.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The vector or <strong>None</strong> if reading failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadVector64">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadVector64</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadVector64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a double precision <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a> from the hyperfile.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The vector or <strong>None</strong> if reading failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadMatrix">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadMatrix</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a <a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a> from the hyperfile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix">c4d.Matrix</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The matrix or <strong>None</strong> if reading failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadMatrix32">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadMatrix32</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadMatrix32" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a <a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a> from the hyperfile.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix">c4d.Matrix</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The matrix or <strong>None</strong> if reading failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadMatrix64">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadMatrix64</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadMatrix64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a double precision <a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a> from the hyperfile.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix">c4d.Matrix</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The matrix or <strong>None</strong> if reading failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadBool">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadBool</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadBool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a bool from the hyperfile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The bool or <strong>None</strong> if reading failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadTime">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadTime</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a <a class="reference internal" href="../../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTime</span></code></a> from the hyperfile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime">c4d.BaseTime</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The time or <strong>None</strong> if reading failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadString">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadString</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a string from the hyperfile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The string or <strong>None</strong> if reading failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadFilename">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadFilename</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadFilename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a path from the hyperfile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The path or <strong>None</strong> if reading failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadImage">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadImage</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a bitmap from the hyperfile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d.bitmaps/BaseBitmap/index.html#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap">c4d.bitmaps.BaseBitmap</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The bitmap or <strong>None</strong> if reading failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadContainer">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadContainer</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadContainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a container from the hyperfile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d.bitmaps/BaseBitmap/index.html#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap">c4d.bitmaps.BaseBitmap</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The container or <strong>None</strong> if reading failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadMemory">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadMemory</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadMemory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a block of memory from the hyperfile.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only use this when you need to, be aware that the byte sequences will not be platform independent.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../ByteSeq/index.html#c4d.storage.ByteSeq" title="c4d.storage.ByteSeq">c4d.storage.ByteSeq</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The value or <strong>None</strong> if reading failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadData">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadData</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a data from the hyperfile.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Please check the constructor of <strong>GeData</strong> in the C++ SDK to see what type this method accepts.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Any</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The value or <strong>None</strong> if reading failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.GetError">
+<code class="descclassname">HyperFile.</code><code class="descname">GetError</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.GetError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the error from the last hyperfile operation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The error number.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.SetError">
+<code class="descclassname">HyperFile.</code><code class="descname">SetError</code><span class="sig-paren">(</span><em>self</em>, <em>err</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.SetError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the error value for this hyperfile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>err</strong> (<em>int</em>) – The error number.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadValueHeader">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadValueHeader</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadValueHeader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the value header from the file. This is only necessary in combination with loops.</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">c4d</span>
+
+
+
+<span class="k">def</span> <span class="nf">ReadSettings</span><span class="p">(</span><span class="n">op</span><span class="p">,</span> <span class="n">hf</span><span class="p">,</span> <span class="n">level</span><span class="p">):</span>
+
+    <span class="k">while</span> <span class="n">hf</span><span class="o">.</span><span class="n">ReadValueHeader</span><span class="p">()</span> <span class="o">==</span> <span class="n">c4d</span><span class="o">.</span><span class="n">HYPERFILEVALUE_START</span><span class="p">:</span>
+
+        <span class="n">chunk</span> <span class="o">=</span> <span class="n">hf</span><span class="o">.</span><span class="n">ReadChunkStart</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">chunk</span><span class="p">:</span>
+
+            <span class="k">return</span> <span class="kc">False</span>
+
+
+
+        <span class="nb">id</span> <span class="o">=</span> <span class="n">chunk</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="nb">id</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+
+            <span class="n">i1</span> <span class="o">=</span> <span class="n">hf</span><span class="o">.</span><span class="n">ReadInt32</span><span class="p">()</span>
+
+            <span class="n">i2</span> <span class="o">=</span> <span class="n">hf</span><span class="o">.</span><span class="n">ReadInt32</span><span class="p">()</span>
+
+            <span class="c1"># do_here</span>
+
+        <span class="k">elif</span> <span class="nb">id</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+
+            <span class="n">i1</span> <span class="o">=</span> <span class="n">hf</span><span class="o">.</span><span class="n">ReadInt32</span><span class="p">()</span>
+
+            <span class="n">i2</span> <span class="o">=</span> <span class="n">hf</span><span class="o">.</span><span class="n">ReadInt32</span><span class="p">()</span>
+
+            <span class="n">i3</span> <span class="o">=</span> <span class="n">hf</span><span class="o">.</span><span class="n">ReadInt32</span><span class="p">()</span>
+
+            <span class="c1"># do_here</span>
+
+
+
+        <span class="n">hf</span><span class="o">.</span><span class="n">SkipToEndChunk</span><span class="p">()</span>  <span class="c1"># never forget this at the end</span>
+
+        <span class="k">if</span> <span class="nb">id</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+
+            <span class="k">break</span>
+
+
+
+    <span class="n">test</span> <span class="o">=</span> <span class="n">hf</span><span class="o">.</span><span class="n">ReadString</span><span class="p">()</span>
+
+    <span class="c1"># do here</span>
+
+    <span class="k">return</span> <span class="kc">True</span>
+
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The header value or <strong>None</strong>:<table border="1" class="docutils">
+<colgroup>
+<col width="38%" />
+<col width="62%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>HYPERFILEVALUE_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_START</em></td>
+<td>Marks the start of a chunk.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_STOP</em></td>
+<td>Marks the end of a chunk.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_CSTOP</em></td>
+<td>Marks the end of a container. Internal.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_CHAR</em></td>
+<td>Integer.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_UCHAR</em></td>
+<td>Integer.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_INT16</em></td>
+<td>Integer.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_UINT16</em></td>
+<td>Integer.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_INT32</em></td>
+<td>Integer.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_UINT32</em></td>
+<td>Integer.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_INT64</em></td>
+<td>Integer.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_UINT64</em></td>
+<td>Integer.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_FLOAT</em></td>
+<td>Float.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_FLOAT32</em></td>
+<td>Float.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_FLOAT64</em></td>
+<td>Float.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_TIME</em></td>
+<td><a class="reference internal" href="../../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTime</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_VECTOR</em></td>
+<td><a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_VECTOR32</em></td>
+<td><a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_VECTOR64</em></td>
+<td><a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_MATRIX</em></td>
+<td><a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_MATRIX32</em></td>
+<td><a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_MATRIX64</em></td>
+<td><a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_MEMORY</em></td>
+<td>Memory.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_IMAGE</em></td>
+<td>Image.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_STRING</em></td>
+<td>String.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_FILENAME</em></td>
+<td>String.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_CONTAINER</em></td>
+<td><a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseContainer</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_ALIASLINK</em></td>
+<td><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseList2D</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.SkipValue">
+<code class="descclassname">HyperFile.</code><code class="descname">SkipValue</code><span class="sig-paren">(</span><em>self</em>, <em>h</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.SkipValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skip a given type of value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>h</strong> (<em>int</em>) – <p>The hyper file value to skip:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="38%" />
+<col width="62%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>HYPERFILEVALUE_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_START</em></td>
+<td>Marks the start of a chunk.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_STOP</em></td>
+<td>Marks the end of a chunk.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_CSTOP</em></td>
+<td>Marks the end of a container. Internal.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_CHAR</em></td>
+<td>Integer.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_UCHAR</em></td>
+<td>Integer.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_INT16</em></td>
+<td>Integer.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_UINT16</em></td>
+<td>Integer.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_INT32</em></td>
+<td>Integer.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_UINT32</em></td>
+<td>Integer.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_INT64</em></td>
+<td>Integer.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_UINT64</em></td>
+<td>Integer.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_FLOAT</em></td>
+<td>Float.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_FLOAT32</em></td>
+<td>Float.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_FLOAT64</em></td>
+<td>Float.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_TIME</em></td>
+<td><a class="reference internal" href="../../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTime</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_VECTOR</em></td>
+<td><a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_VECTOR32</em></td>
+<td><a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_VECTOR64</em></td>
+<td><a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_MATRIX</em></td>
+<td><a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_MATRIX32</em></td>
+<td><a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_MATRIX64</em></td>
+<td><a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_MEMORY</em></td>
+<td>Memory.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_IMAGE</em></td>
+<td>Image.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_STRING</em></td>
+<td>String.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_FILENAME</em></td>
+<td>String.</td>
+</tr>
+<tr class="row-odd"><td><em>HYPERFILEVALUE_CONTAINER</em></td>
+<td><a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseContainer</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>HYPERFILEVALUE_ALIASLINK</em></td>
+<td><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseList2D</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the value was of the given header type and it was skipped, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteChunkStart">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteChunkStart</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>level</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteChunkStart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a chunk marker into the file indicating the beginning of a new chunk of data.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">Chunks should only be used if absolutely necessary.</div>
+<div class="line">If a plugin uses chunks badly then the file structure can become corrupted.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>int</em>) – The ID for the chunk.</li>
+<li><strong>level</strong> (<em>int</em>) – If you want to write additional information you can increase the level this allows you to easily save/read new values.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Success of writing the chunk identification.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.WriteChunkEnd">
+<code class="descclassname">HyperFile.</code><code class="descname">WriteChunkEnd</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.WriteChunkEnd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a chunk ending marker into the file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Success of writing the chunk end.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadChunkStart">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadChunkStart</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadChunkStart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a chunks identification from the file.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">c4d</span>
+
+
+
+<span class="n">hf</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">HyperFile</span><span class="p">()</span>
+
+
+
+<span class="n">chunk</span> <span class="o">=</span> <span class="n">hf</span><span class="o">.</span><span class="n">ReadChunkStart</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">chunk</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+
+    <span class="k">return</span>
+
+
+
+<span class="nb">id</span> <span class="o">=</span> <span class="n">chunk</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span>  <span class="c1"># Chunk ID, int</span>
+
+<span class="n">level</span> <span class="o">=</span> <span class="n">chunk</span><span class="p">[</span><span class="s2">&quot;level&quot;</span><span class="p">]</span>  <span class="c1"># Chunk Level, int</span>
+
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">dict{<strong>id</strong>: int, <strong>level</strong>: int}</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The identification or <strong>None</strong> on failure.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.ReadChunkEnd">
+<code class="descclassname">HyperFile.</code><code class="descname">ReadChunkEnd</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.ReadChunkEnd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a chunks end marker from the file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Success of reading the chunk end.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.SkipToEndChunk">
+<code class="descclassname">HyperFile.</code><code class="descname">SkipToEndChunk</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.SkipToEndChunk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move the file pointer to the end of the chunk.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This should always be called after finishing reading your values from this chunk.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Success of finding the end of the chunk.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.GetDocument">
+<code class="descclassname">HyperFile.</code><code class="descname">GetDocument</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.GetDocument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the active document for the hyper file operation.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Can be <strong>None</strong>, for example when saving layouts.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument">c4d.documents.BaseDocument</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The document or <strong>None</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.GetFileVersion">
+<code class="descclassname">HyperFile.</code><code class="descname">GetFileVersion</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.GetFileVersion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the version of Cinema 4D that wrote the file.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only valid during reading a Cinema 4D scene, object, material etc.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The file version.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HyperFile.GetFilterFlags">
+<code class="descclassname">HyperFile.</code><code class="descname">GetFilterFlags</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HyperFile.GetFilterFlags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the filter flags, the value is valid only during a Load or a Merge.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R21.108.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The filter flags:<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>SCENEFILTER_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_OBJECTS</em></td>
+<td>Load/save objects.</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_MATERIALS</em></td>
+<td>Load/save materials.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_DIALOGSALLOWED</em></td>
+<td>Flag to inform a plugin that a dialog can be displayed. If this flag is not set then no dialogs must be opened.</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_PROGRESSALLOWED</em></td>
+<td>Flag to inform a plugin that a progress bar can be displayed. The progress bar can be set by calling <a class="reference internal" href="../../c4d/index.html#c4d.StatusSetBar" title="c4d.StatusSetBar"><code class="xref py py-func docutils literal notranslate"><span class="pre">StatusSetBar()</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_MERGESCENE</em></td>
+<td>Flag to inform a plugin that this is a merge operation, i.e. the document that is inserted to is an existing scene.</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_NONEWMARKERS</em></td>
+<td>Objects loaded from disk will keep their markers.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_SAVECACHES</em></td>
+<td>For <cite>melange</cite> export only. Caches of objects will also be written (only supported by Cinema 4D format). This is the same as the global option “Save Polygon Objects for Melange Exchange”.</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_NOUNDO</em></td>
+<td>Use together with <em>SCENEFILTER_MERGESCENE</em> to avoid that undos are created for the merge operation.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_SAVE_BINARYCACHE</em></td>
+<td>Save the binary compiled shaders with the scene (only for Cinema 4D format).</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_IDENTIFY_ONLY</em></td>
+<td>Do not load the whole document, identify it only.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_ONLY_RENDERDATA</em></td>
+<td>Only load render settings. If this flag is set, <em>SCENEFILTER_OBJECTS</em> and <em>SCENEFILTER_MATERIALS</em> are ignored.</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_IGNOREMISSINGPLUGINSINNONACTIVERENDERDATA</em></td>
+<td>Ignore all missing plugins which are part of a non-active render data.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_IGNOREXREFS</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R16.038: </span>Avoid that included X-Refs will be loaded.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_DONTCORRECTOUTPUTFORMAT</em></td>
+<td>Do not change unknown output formats in render settings.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../MemoryFileStruct/index.html" title="c4d.storage.MemoryFileStruct"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../ByteSeq/index.html" title="c4d.storage.ByteSeq"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >c4d.storage</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

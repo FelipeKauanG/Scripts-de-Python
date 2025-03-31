@@ -1,0 +1,287 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>What was New in R18 &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="What was New in R17" href="whatwasnew_R17.html" />
+    <link rel="prev" title="What was New in R19" href="whatwasnew_R19.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="whatwasnew_R17.html" title="What was New in R17"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="whatwasnew_R19.html" title="What was New in R19"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="what-was-new-in-r18">
+<h1>What was New in R18<a class="headerlink" href="#what-was-new-in-r18" title="Permalink to this headline">¶</a></h1>
+<p>The Python API in R18 brings important additions and more C++ API coverage. It also carries some API changes and fixes several issues.</p>
+<div class="section" id="in-r18-020">
+<h2>In R18.020<a class="headerlink" href="#in-r18-020" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="new-features-support">
+<h3>New Features Support<a class="headerlink" href="#new-features-support" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>MoGraph Weight Paintbrush: The new function <a class="reference internal" href="../modules/c4d.modules/mograph/index.html#c4d.modules.mograph.GeGetMoDataWeights" title="c4d.modules.mograph.GeGetMoDataWeights"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.mograph.GeGetMoDataWeights()</span></code></a> supports the weights workflow</li>
+<li>Vertex Colors: The new <a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseTag/VariableTag/VertexColorTag/index.html#c4d.VertexColorTag" title="c4d.VertexColorTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.VertexColorTag</span></code></a> class allows to access the Vertex Color tag and its data</li>
+<li>Color Chooser: The new module <a class="reference internal" href="../modules/c4d.modules/colorchooser/index.html#c4d.modules.colorchooser" title="c4d.modules.colorchooser"><code class="xref py py-mod docutils literal notranslate"><span class="pre">c4d.modules.colorchooser</span></code></a> is a new API for the Color Chooser swatches</li>
+<li>Substance Engine: The new module <a class="reference internal" href="../modules/c4d.modules/substance/index.html#c4d.modules.substance" title="c4d.modules.substance"><code class="xref py py-mod docutils literal notranslate"><span class="pre">c4d.modules.substance</span></code></a> provides functions to handle Substance shaders and graphs</li>
+<li>Object Tracker: The new module <a class="reference internal" href="../modules/c4d.modules/motiontracker/index.html#c4d.modules.motiontracker" title="c4d.modules.motiontracker"><code class="xref py py-mod docutils literal notranslate"><span class="pre">c4d.modules.motiontracker</span></code></a> allows to retrieve object tracking data</li>
+<li>Animation: Quaternion Rotation Mode new methods/parameters in <a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseObject</span></code></a>, <a class="reference internal" href="../modules/c4d/C4DAtom/CKey/index.html#c4d.CKey" title="c4d.CKey"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.CKey</span></code></a>, <a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/CCurve/index.html#c4d.CCurve" title="c4d.CCurve"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.CCurve</span></code></a> and <a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/CTrack/index.html#c4d.CTrack" title="c4d.CTrack"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.CTrack</span></code></a></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d/Vector4d/index.html#c4d.Vector4d" title="c4d.Vector4d"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector4d</span></code></a> class allows to manipulate four-dimensional vectors (e.g. RGB colors with alpha value for Vertex Colors)</li>
+<li>Draw HUD text to the viewport with the new methods <a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#BaseDraw.DrawHUDText" title="BaseDraw.DrawHUDText"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDraw.DrawHUDText()</span></code></a> and <a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#BaseDraw.DrawMultipleHUDText" title="BaseDraw.DrawMultipleHUDText"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDraw.DrawMultipleHUDText()</span></code></a></li>
+</ul>
+</div>
+<div class="section" id="api-parity">
+<h3>API Parity<a class="headerlink" href="#api-parity" title="Permalink to this headline">¶</a></h3>
+<p>Here are the additions in R18 for the ongoing effort on parity with the C++ API:</p>
+<ul class="simple">
+<li>Dynamic Descriptions: <a class="reference internal" href="../modules/c4d.plugins/BaseData/NodeData/index.html#NodeData.GetDDescription" title="NodeData.GetDDescription"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NodeData.GetDDescription()</span></code></a>/<a class="reference internal" href="../modules/c4d.plugins/BaseData/NodeData/index.html#NodeData.GetDParameter" title="NodeData.GetDParameter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NodeData.GetDParameter()</span></code></a>/<a class="reference internal" href="../modules/c4d.plugins/BaseData/NodeData/index.html#NodeData.SetDParameter" title="NodeData.SetDParameter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NodeData.SetDParameter()</span></code></a> and enhanced <a class="reference internal" href="../modules/c4d/Description/index.html#c4d.Description" title="c4d.Description"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Description</span></code></a> class</li>
+<li>BodyPaint 3D UV commands: <a class="reference internal" href="../modules/c4d.modules/bodypaint/index.html#c4d.modules.bodypaint.CallUVCommand" title="c4d.modules.bodypaint.CallUVCommand"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.bodypaint.CallUVCommand()</span></code></a> and <a class="reference internal" href="../modules/c4d.modules/bodypaint/index.html#c4d.modules.bodypaint.GetActiveUVSet" title="c4d.modules.bodypaint.GetActiveUVSet"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.bodypaint.GetActiveUVSet()</span></code></a>/<a class="reference internal" href="../modules/c4d.modules/bodypaint/index.html#c4d.modules.bodypaint.FreeActiveUVSet" title="c4d.modules.bodypaint.FreeActiveUVSet"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.bodypaint.FreeActiveUVSet()</span></code></a></li>
+<li>Texture Baking: <a class="reference internal" href="../modules/c4d.utils/index.html#c4d.utils.InitBakeTexture" title="c4d.utils.InitBakeTexture"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.utils.InitBakeTexture()</span></code></a>/<a class="reference internal" href="../modules/c4d.utils/index.html#c4d.utils.BakeTexture" title="c4d.utils.BakeTexture"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.utils.BakeTexture()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.plugins/BaseData/NodeData/ObjectData/index.html#c4d.plugins.ObjectData" title="c4d.plugins.ObjectData"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.plugins.ObjectData</span></code></a> Automated Handle Interface: <a class="reference internal" href="../modules/c4d.plugins/BaseData/NodeData/ObjectData/index.html#ObjectData.GetHandle" title="ObjectData.GetHandle"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetHandle()</span></code></a>/<a class="reference internal" href="../modules/c4d.plugins/BaseData/NodeData/ObjectData/index.html#ObjectData.SetHandle" title="ObjectData.SetHandle"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetHandle()</span></code></a>/<a class="reference internal" href="../modules/c4d.plugins/BaseData/NodeData/ObjectData/index.html#ObjectData.GetHandleCount" title="ObjectData.GetHandleCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetHandleCount()</span></code></a></li>
+<li>Custom GUIs: <a class="reference internal" href="../modules/c4d.gui/BaseCustomGui/index.html#c4d.gui.BaseCustomGui" title="c4d.gui.BaseCustomGui"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.gui.BaseCustomGui</span></code></a> class is no longer empty and now provides the same methods as in C++ (e.g. <a class="reference internal" href="../modules/c4d.gui/BaseCustomGui/index.html#BaseCustomGui.GetData" title="BaseCustomGui.GetData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseCustomGui.GetData()</span></code></a>/<a class="reference internal" href="../modules/c4d.gui/BaseCustomGui/index.html#BaseCustomGui.SetData" title="BaseCustomGui.SetData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseCustomGui.SetData()</span></code></a>)</li>
+<li>Miscellaneous: <a class="reference internal" href="../modules/c4d/CustomDataType/InExcludeData/index.html#c4d.InExcludeData" title="c4d.InExcludeData"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.InExcludeData</span></code></a> missing methods, <a class="reference internal" href="../modules/c4d.modules/mograph/index.html#c4d.modules.mograph.GeGetMoDataSelection" title="c4d.modules.mograph.GeGetMoDataSelection"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.mograph.GeGetMoDataSelection()</span></code></a></li>
+</ul>
+</div>
+<div class="section" id="new-plugins-and-scripts-examples">
+<h3>New Plugins and Scripts Examples<a class="headerlink" href="#new-plugins-and-scripts-examples" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Plugins:<ul>
+<li>Dynamic Description Parameters: <cite>Py-DynamicParametersObject</cite></li>
+<li>Texture Baking and Threads: <cite>Py-TextureBaker</cite></li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul class="simple">
+<li>Scripts:<ul>
+<li>MoGraph Weights and Selection: <cite>GeGetMoDataSelection.py</cite>, <cite>GeGetMoDataWeights.py</cite></li>
+<li>Vertex Colors: <cite>VertexColorTag_PointMode.py</cite> and <cite>VertexColorTag_PolygonMode.py</cite></li>
+<li>BodyPaint 3D UV Commands: <cite>CallUVCommand.py</cite></li>
+<li>Descriptions: <cite>CheckDescID.py</cite>, <cite>CreatePopupMenu.py</cite>, <cite>GetSubDescriptionWithData.py</cite></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="api-changes">
+<h3>API Changes<a class="headerlink" href="#api-changes" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><div class="first line-block">
+<div class="line">Removed <cite>ReflectionLayer.name</cite>, <cite>ReflectionLayer.layerID</cite> and <cite>ReflectionLayer.flags</cite> attributes</div>
+<div class="line">Instead use new methods <a class="reference internal" href="../modules/c4d/ReflectionLayer/index.html#ReflectionLayer.GetName" title="ReflectionLayer.GetName"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ReflectionLayer.GetName()</span></code></a>/<a class="reference internal" href="../modules/c4d/ReflectionLayer/index.html#ReflectionLayer.SetName" title="ReflectionLayer.SetName"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetName()</span></code></a>, <a class="reference internal" href="../modules/c4d/ReflectionLayer/index.html#ReflectionLayer.GetLayerID" title="ReflectionLayer.GetLayerID"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ReflectionLayer.GetLayerID()</span></code></a> and <a class="reference internal" href="../modules/c4d/ReflectionLayer/index.html#ReflectionLayer.GetFlags" title="ReflectionLayer.GetFlags"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ReflectionLayer.GetFlags()</span></code></a>/<a class="reference internal" href="../modules/c4d/ReflectionLayer/index.html#ReflectionLayer.SetFlags" title="ReflectionLayer.SetFlags"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetFlags()</span></code></a></div>
+</div>
+</li>
+<li><p class="first"><a class="reference internal" href="../modules/c4d.plugins/BaseData/FalloffData/index.html#FalloffData.Draw" title="FalloffData.Draw"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FalloffData.Draw()</span></code></a> return value changed from bool to <em>DRAWRESULT</em>. Returning a bool is still supported for backward compatibility</p>
+</li>
+<li><p class="first"><em>ID_MODELING_KNIFE_TOOL</em> was removed</p>
+</li>
+</ul>
+</div>
+<div class="section" id="fixes">
+<h3>Fixes<a class="headerlink" href="#fixes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d.storage/HyperFile/index.html#HyperFile.WriteFloat32" title="HyperFile.WriteFloat32"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteFloat32()</span></code></a> writes wrong value and corrupts stack</li>
+<li><a class="reference internal" href="../modules/c4d.modules/render/InitRenderStruct/index.html#c4d.modules.render.InitRenderStruct" title="c4d.modules.render.InitRenderStruct"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.render.InitRenderStruct</span></code></a> not correctly initialized with a document</li>
+<li><a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/index.html#BaseList2D.SetLayerObject" title="BaseList2D.SetLayerObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseList2D.SetLayerObject()</span></code></a> parameter <cite>layer</cite> can be <strong>None</strong></li>
+<li><a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseTag/TextureTag/index.html#TextureTag.GetMaterial" title="TextureTag.GetMaterial"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TextureTag.GetMaterial()</span></code></a> can now be passed parameter <cite>ignoredoc</cite>. The parameter is optional and by default <strong>True</strong> for backward compatibility</li>
+<li>Freeze after raised AttributeError in <a class="reference internal" href="../modules/c4d.gui/GeDialog/index.html#GeDialog.Message" title="GeDialog.Message"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeDialog.Message()</span></code></a> when message <strong>BFM_WEIGHTS_CHANGED</strong> was received</li>
+<li><a class="reference internal" href="../modules/c4d.utils/SplineHelp/index.html#SplineHelp.GetLineObject" title="SplineHelp.GetLineObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SplineHelp.GetLineObject()</span></code></a> crashes if not initialized with <strong>SPLINEHELPFLAGS_RETAINLINEOBJECT</strong></li>
+</ul>
+</div>
+</div>
+<div class="section" id="in-r18-039">
+<h2>In R18.039<a class="headerlink" href="#in-r18-039" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="api-additions">
+<h3>API Additions<a class="headerlink" href="#api-additions" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>The new class <a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/VoronoiFracture/index.html#c4d.VoronoiFracture" title="c4d.VoronoiFracture"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.VoronoiFracture</span></code></a> allows to access and create Voronoi fracture objects</li>
+<li><a class="reference internal" href="../modules/c4d.modules/mograph/index.html#c4d.modules.mograph.GeSetMoDataSelection" title="c4d.modules.mograph.GeSetMoDataSelection"><code class="xref py py-func docutils literal notranslate"><span class="pre">GeSetMoDataSelection()</span></code></a> and <a class="reference internal" href="../modules/c4d.modules/mograph/index.html#c4d.modules.mograph.GeSetMoDataWeights" title="c4d.modules.mograph.GeSetMoDataWeights"><code class="xref py py-func docutils literal notranslate"><span class="pre">GeSetMoDataWeights()</span></code></a> set <a class="reference internal" href="../modules/c4d.modules/mograph/index.html#c4d.modules.mograph" title="c4d.modules.mograph"><code class="xref py py-mod docutils literal notranslate"><span class="pre">MoGraph</span></code></a> clones selection and weights</li>
+<li><a class="reference internal" href="../modules/c4d.utils/index.html#c4d.utils.RadToDeg" title="c4d.utils.RadToDeg"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.utils.RadToDeg()</span></code></a> and <a class="reference internal" href="../modules/c4d.utils/index.html#c4d.utils.DegToRad" title="c4d.utils.DegToRad"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.utils.DegToRad()</span></code></a> functions have been added. These functions should be used instead of <a class="reference internal" href="../modules/c4d.utils/index.html#c4d.utils.Deg" title="c4d.utils.Deg"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.utils.Deg()</span></code></a> and <a class="reference internal" href="../modules/c4d.utils/index.html#c4d.utils.Rad" title="c4d.utils.Rad"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.utils.Rad()</span></code></a></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h3>Fixes<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>XPresso Python node Activation port not working</li>
+<li><a class="reference internal" href="../modules/c4d.modules/bodypaint/index.html#c4d.modules.bodypaint.CallUVCommand" title="c4d.modules.bodypaint.CallUVCommand"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.bodypaint.CallUVCommand()</span></code></a> does not change UV data</li>
+<li>Drag&amp;Drop in dialogs and user areas does not handle commands</li>
+<li><a class="reference internal" href="../modules/c4d.modules/takesystem/TakeData/index.html#TakeData.GetTakeSelection" title="TakeData.GetTakeSelection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.GetTakeSelection()</span></code></a> is broken</li>
+</ul>
+</div>
+<div class="section" id="new-scripts-examples">
+<h3>New Scripts Examples<a class="headerlink" href="#new-scripts-examples" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>MoGraph Weights and Selection: <cite>GeSetMoDataSelection.py</cite>, <cite>GeSetMoDataWeights.py</cite></li>
+<li><a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/VoronoiFracture/index.html#c4d.VoronoiFracture" title="c4d.VoronoiFracture"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.VoronoiFracture</span></code></a>: <cite>VoronoiFracture.py</cite></li>
+</ul>
+</div>
+<div class="section" id="documentation-changes">
+<h3>Documentation Changes<a class="headerlink" href="#documentation-changes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Added missing documentation for the following class, functions and methods:<ul>
+<li><a class="reference internal" href="../modules/c4d.gui/TreeViewFunctions/index.html#c4d.gui.TreeViewFunctions" title="c4d.gui.TreeViewFunctions"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.gui.TreeViewFunctions</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.utils/index.html#c4d.utils" title="c4d.utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">c4d.utils</span></code></a>: <a class="reference internal" href="../modules/c4d.utils/index.html#c4d.utils.DisjointMesh" title="c4d.utils.DisjointMesh"><code class="xref py py-func docutils literal notranslate"><span class="pre">DisjointMesh()</span></code></a>, <a class="reference internal" href="../modules/c4d.utils/index.html#c4d.utils.FitCurve" title="c4d.utils.FitCurve"><code class="xref py py-func docutils literal notranslate"><span class="pre">FitCurve()</span></code></a>, <a class="reference internal" href="../modules/c4d.utils/index.html#c4d.utils.CheckDisplayFilter" title="c4d.utils.CheckDisplayFilter"><code class="xref py py-func docutils literal notranslate"><span class="pre">CheckDisplayFilter()</span></code></a>, <a class="reference internal" href="../modules/c4d.utils/index.html#c4d.utils.CalculateVisiblePoints" title="c4d.utils.CalculateVisiblePoints"><code class="xref py py-func docutils literal notranslate"><span class="pre">CalculateVisiblePoints()</span></code></a>, <a class="reference internal" href="../modules/c4d.utils/index.html#c4d.utils.GenerateUVW" title="c4d.utils.GenerateUVW"><code class="xref py py-func docutils literal notranslate"><span class="pre">GenerateUVW()</span></code></a>, <a class="reference internal" href="../modules/c4d.utils/index.html#c4d.utils.GetBBox" title="c4d.utils.GetBBox"><code class="xref py py-func docutils literal notranslate"><span class="pre">GetBBox()</span></code></a>, <a class="reference internal" href="../modules/c4d.utils/index.html#c4d.utils.FormatNumber" title="c4d.utils.FormatNumber"><code class="xref py py-func docutils literal notranslate"><span class="pre">FormatNumber()</span></code></a>, <a class="reference internal" href="../modules/c4d.utils/index.html#c4d.utils.StringToNumber" title="c4d.utils.StringToNumber"><code class="xref py py-func docutils literal notranslate"><span class="pre">StringToNumber()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.plugins/BaseDrawHelp/index.html#BaseDrawHelp.GetDisplay" title="BaseDrawHelp.GetDisplay"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDrawHelp.GetDisplay()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.gui/GeDialog/index.html#GeDialog.GetItemDim" title="GeDialog.GetItemDim"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeDialog.GetItemDim()</span></code></a></li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul class="simple">
+<li>Updated information for <a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/PointObject/PolygonObject/index.html#PolygonObject.GetNgonEdgesCompact" title="PolygonObject.GetNgonEdgesCompact"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.GetNgonEdgesCompact()</span></code></a></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><cite>Py-DoubleCircle</cite> and <cite>Py-RoundedTube</cite> examples:<ul>
+<li>Removed implementation of <cite>MoveHandle()</cite> and <cite>DetectHandle()</cite></li>
+<li>Fixed to use the <a class="reference internal" href="../modules/c4d.plugins/BaseData/NodeData/ObjectData/index.html#c4d.plugins.ObjectData" title="c4d.plugins.ObjectData"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.plugins.ObjectData</span></code></a> Automated Handle Interface functions <a class="reference internal" href="../modules/c4d.plugins/BaseData/NodeData/ObjectData/index.html#ObjectData.GetHandle" title="ObjectData.GetHandle"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetHandle()</span></code></a>/<a class="reference internal" href="../modules/c4d.plugins/BaseData/NodeData/ObjectData/index.html#ObjectData.SetHandle" title="ObjectData.SetHandle"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetHandle()</span></code></a>/<a class="reference internal" href="../modules/c4d.plugins/BaseData/NodeData/ObjectData/index.html#ObjectData.GetHandleCount" title="ObjectData.GetHandleCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetHandleCount()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="in-r18-057">
+<h2>In R18.057<a class="headerlink" href="#in-r18-057" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>API Additions<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">The addition of <a class="reference internal" href="../modules/c4d.modules/graphview/GvNode/index.html#GvNode.OperatorSetData" title="GvNode.OperatorSetData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvNode.OperatorSetData()</span></code></a> allows to simulate dragging onto an XPresso node</p>
+</li>
+<li><div class="first line-block">
+<div class="line">The parameters <cite>dirty</cite> and <cite>trans</cite> have been added to <a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#BaseObject.GetHierarchyClone" title="BaseObject.GetHierarchyClone"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetHierarchyClone()</span></code></a>/<a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#BaseObject.GetAndCheckHierarchyClone" title="BaseObject.GetAndCheckHierarchyClone"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetAndCheckHierarchyClone()</span></code></a></div>
+<div class="line">Also the functions no longer return only <strong>None</strong> when the cloned object is <strong>None</strong>. It has been changed to always return a dictionary with <cite>clone</cite> and <cite>dirty</cite> keys</div>
+<div class="line">With these changes <a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#BaseObject.GetHierarchyClone" title="BaseObject.GetHierarchyClone"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetHierarchyClone()</span></code></a>/<a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#BaseObject.GetAndCheckHierarchyClone" title="BaseObject.GetAndCheckHierarchyClone"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetAndCheckHierarchyClone()</span></code></a> have the same behavior as their C++ API counterparts</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h3>Fixes<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d.plugins/BaseData/MessageData/index.html#c4d.plugins.MessageData" title="c4d.plugins.MessageData"><code class="xref py py-class docutils literal notranslate"><span class="pre">MessageData</span></code></a> timer fires too often</li>
+<li><a class="reference internal" href="../modules/c4d/index.html#c4d.Cast" title="c4d.Cast"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.Cast()</span></code></a> returns a copy of a <a class="reference internal" href="../modules/c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseContainer</span></code></a> instead of a reference</li>
+<li>Cannot set <strong>RELAXUV_EDGESEL_POINTER</strong> for <a class="reference internal" href="../modules/c4d.modules/bodypaint/index.html#c4d.modules.bodypaint.CallUVCommand" title="c4d.modules.bodypaint.CallUVCommand"><code class="xref py py-func docutils literal notranslate"><span class="pre">CallUVCommand()</span></code></a> settings</li>
+<li><a class="reference internal" href="../modules/c4d/index.html#c4d.GenerateTexturePath" title="c4d.GenerateTexturePath"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.GenerateTexturePath()</span></code></a> freezes if called with a <a class="reference internal" href="../modules/c4d.modules/net/NetRenderService/index.html#c4d.modules.net.NetRenderService" title="c4d.modules.net.NetRenderService"><code class="xref py py-class docutils literal notranslate"><span class="pre">NetRenderService</span></code></a> and/or a <a class="reference internal" href="../modules/c4d.threading/BaseThread/index.html#c4d.threading.BaseThread" title="c4d.threading.BaseThread"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseThread</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#BaseDraw.DrawPoints" title="BaseDraw.DrawPoints"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDraw.DrawPoints()</span></code></a> <cite>vc</cite> and <cite>vn</cite> optional parameters can be <strong>None</strong></li>
+<li><a class="reference internal" href="../modules/c4d/DescID/index.html#DescID.IsPartOf" title="DescID.IsPartOf"><code class="xref py py-meth docutils literal notranslate"><span class="pre">DescID.IsPartOf()</span></code></a> <cite>cmp</cite> parameter cannot be None</li>
+<li>Wrong index range check in <a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseTag/VariableTag/UVWTag/index.html#UVWTag.CpySlow" title="UVWTag.CpySlow"><code class="xref py py-meth docutils literal notranslate"><span class="pre">UVWTag.CpySlow()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d/Description/index.html#Description.GetParameterI" title="Description.GetParameterI"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Description.GetParameterI()</span></code></a> crashes</li>
+</ul>
+</div>
+</div>
+<div class="section" id="api-changelist">
+<h2>API Changelist<a class="headerlink" href="#api-changelist" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference internal" href="api_changelist_R18.html"><span class="doc">API Changelist R18</span></a> page.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">What was New in R18</a><ul>
+<li><a class="reference internal" href="#in-r18-020">In R18.020</a><ul>
+<li><a class="reference internal" href="#new-features-support">New Features Support</a></li>
+<li><a class="reference internal" href="#api-parity">API Parity</a></li>
+<li><a class="reference internal" href="#new-plugins-and-scripts-examples">New Plugins and Scripts Examples</a></li>
+<li><a class="reference internal" href="#api-changes">API Changes</a></li>
+<li><a class="reference internal" href="#fixes">Fixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#in-r18-039">In R18.039</a><ul>
+<li><a class="reference internal" href="#api-additions">API Additions</a></li>
+<li><a class="reference internal" href="#id1">Fixes</a></li>
+<li><a class="reference internal" href="#new-scripts-examples">New Scripts Examples</a></li>
+<li><a class="reference internal" href="#documentation-changes">Documentation Changes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#in-r18-057">In R18.057</a><ul>
+<li><a class="reference internal" href="#id2">API Additions</a></li>
+<li><a class="reference internal" href="#id3">Fixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#api-changelist">API Changelist</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="whatwasnew_R17.html" title="What was New in R17"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="whatwasnew_R19.html" title="What was New in R19"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1064 @@
+/**
+ * Sphinx Doc Design
+ */
+
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    background-color: white;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    line-height: 150%;
+    padding: 0;
+    margin: 0;
+}
+
+/* :::: RAW HTML TABLE :::: */
+
+blockquote td 
+{background-color: #f3f3f3}
+
+blockquote blockquote td 
+{background-color: #f6f6f6;}
+
+blockquote blockquote blockquote td 
+{background-color: #f8f8f8;}
+
+blockquote blockquote blockquote blockquote td 
+{background-color: #f9f9f9;}
+
+.subtable
+{background-color: #fcfcfc;}
+
+img {
+    border: 0px;
+}
+
+/* :::: LAYOUT :::: */
+
+div.document {
+    background-color: white;
+    font-size: 12px;
+}
+
+/* logo div */
+.logo {
+    position: relative;
+    top: 15px;
+    background-image: url(c_bottom.png);
+    margin: 0px;
+    height: 40px;
+    width: 229px;
+    padding-top: 20px;
+}
+
+.method em,
+.staticmethod em,
+.classmethod em,
+.function em {
+    letter-spacing: 3px;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.method em a,
+.staticmethod em a,
+.classmethod em a,
+.function em a {
+    color: #370552;
+}
+
+div.documentwrapper {
+    margin-left: 4px;
+    margin-bottom: 4px;
+    float: left;
+    width: 99%;
+}
+
+div.bodywrapper {
+    margin: 0 0 0 230px;
+}
+
+div.body {
+    background-color: white;
+    padding: 0 20px 30px 20px;
+    border-left: solid 1px #bbb;
+}
+
+/*
+div.body #top_content {
+    background-image: url(maxon_logo.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+ */
+ 
+.sphinxsidebarwrapper {
+    padding: 12px;
+    text-indent: 12px;
+    position:fixed; 
+    width: 225px;
+    left: -8px;
+}
+
+div.sphinxsidebar {
+    float: left;
+    width: 230px;
+    margin-left: -100%;
+    font-size: 11px;
+}
+
+div.clearer {
+    clear: both;
+}
+
+div.footer {
+    color: black;
+    background-color: white;
+    width: 100%;
+    padding: 9px 0 9px 0;
+    text-align: center;
+    font-size: 100%;
+}
+
+div.footer a {
+    color: black;
+    text-decoration: underline;
+}
+
+div.related {
+    color: black;
+    width: 99%;
+    height: 30px;
+    line-height: 30px;
+    background-color: #EEE;
+    border: solid 1px #bbb;
+}
+
+div.related h3 {
+    display: none;
+}
+
+div.related ul {
+    margin: 0;
+    padding: 0 0 0 10px;
+    list-style: none;
+}
+
+div.related li {
+    display: inline;
+}
+
+div.related li.right {
+    float: right;
+    margin-right: 5px;
+    color: black;
+}
+
+.reference {
+    font-size: 11px;
+}
+
+/* ::: TOC :::: */
+div.sphinxsidebar h3 {
+    color: black;
+    font-size: 11px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+div.sphinxsidebar h4 {
+    color: black;
+    font-size: 11px;
+    font-weight: normal;
+    margin: 5px 0 0 0;
+    padding: 0;
+}
+
+div.sphinxsidebar p {
+    color: black;
+}
+
+div.sphinxsidebar p.topless {
+    margin: 5px 10px 10px 10px;
+}
+
+div.sphinxsidebar ul {
+    margin: 10px;
+    padding: 0;
+    list-style: none;
+    color: black;
+}
+
+div.sphinxsidebar ul ul,
+div.sphinxsidebar ul.want-points {
+    margin-left: 20px;
+    list-style: square;
+}
+
+div.sphinxsidebar ul ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+div.sphinxsidebar a {
+    color: black;
+}
+
+div.sphinxsidebar form {
+    margin-top: 10px;
+}
+
+div.sphinxsidebar input {
+    border: 1px solid #bbb;
+}
+
+/* :::: MODULE CLOUD :::: */
+div.modulecloud {
+    margin: -5px 10px 5px 10px;
+    padding: 10px;
+    line-height: 160%;
+    border: 1px solid #cbe7e5;
+    background-color: #f2fbfd;
+}
+
+div.modulecloud a {
+    padding: 0 5px 0 5px;
+}
+
+/* :::: SEARCH :::: */
+
+/* search textfield */
+form.search {
+    background-image: none;
+    margin: 0px;
+    width: 229px;
+    height: 40px;
+    padding-top: 20px;
+}
+
+
+div.linkbox{
+    background-color: white;
+    margin: 5px 0px 0px 0px;
+    width: 229px;
+    padding: 10px 0px 5px 0px;
+}
+
+div.linkbox ul {
+    list-style: square !important;
+    list-style-position: inside !important; 
+    color: #444;
+}
+
+div.linkbox a, div.linkbox span{
+    color: #370552;
+    font-family: monospace;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+ul.search {
+    margin: 10px 0 0 20px;
+    padding: 0;
+}
+
+ul.search li {
+    padding: 5px 0 5px 20px;
+    background-image: url(file.png);
+    background-repeat: no-repeat;
+    background-position: 0 7px;
+}
+
+ul.search li a {
+    font-weight: bold;
+}
+
+ul.search li div.context {
+    color: #888;
+    margin: 2px 0 0 30px;
+    text-align: left;
+}
+
+ul.keywordmatches li.goodmatch a {
+    font-weight: bold;
+}
+
+/* :::: COMMON FORM STYLES :::: */
+
+div.actions {
+    padding: 5px 10px 5px 10px;
+    border-top: 1px solid #cbe7e5;
+    border-bottom: 1px solid #cbe7e5;
+    background-color: #e0f6f4;
+}
+
+form dl {
+    color: #333;
+}
+
+form dt {
+    clear: both;
+    float: left;
+    min-width: 110px;
+    margin-right: 10px;
+    padding-top: 2px;
+}
+
+input#homepage {
+    display: none;
+}
+
+div.error {
+    margin: 5px 20px 0 0;
+    padding: 5px;
+    border: 1px solid #d00;
+    font-weight: bold;
+}
+
+/* :::: INLINE COMMENTS :::: */
+
+div.inlinecomments {
+    position: absolute;
+    right: 20px;
+}
+
+div.inlinecomments a.bubble {
+    display: block;
+    float: right;
+    background-image: url(comment.png);
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    padding-top: 3px;
+    line-height: 14px;
+    font-weight: bold;
+    color: black;
+}
+
+div.inlinecomments a.bubble span {
+    display: none;
+}
+
+div.inlinecomments a.emptybubble {
+    background-image: url(nocomment.png);
+}
+
+div.inlinecomments a.bubble:hover {
+    background-image: url(hovercomment.png);
+    text-decoration: none;
+    color: #3ca0a4;
+}
+
+div.inlinecomments div.comments {
+    float: right;
+    margin: 25px 5px 0 0;
+    max-width: 50em;
+    min-width: 30em;
+    border: 1px solid #2eabb0;
+    background-color: #f2fbfd;
+    z-index: 150;
+}
+
+div#comments {
+    border: 1px solid #2eabb0;
+    margin-top: 20px;
+}
+
+div#comments div.nocomments {
+    padding: 10px;
+    font-weight: bold;
+}
+
+div.inlinecomments div.comments h3,
+div#comments h3 {
+    margin: 0;
+    padding: 0;
+    background-color: #2eabb0;
+    color: white;
+    border: none;
+    padding: 3px;
+}
+
+div.inlinecomments div.comments div.actions {
+    padding: 4px;
+    margin: 0;
+    border-top: none;
+}
+
+div#comments div.comment {
+    margin: 10px;
+    border: 1px solid #2eabb0;
+}
+
+div.inlinecomments div.comment h4,
+div.commentwindow div.comment h4,
+div#comments div.comment h4 {
+    margin: 10px 0 0 0;
+    background-color: #2eabb0;
+    color: white;
+    border: none;
+    padding: 1px 4px 1px 4px;
+}
+
+div#comments div.comment h4 {
+    margin: 0;
+}
+
+div#comments div.comment h4 a {
+    color: #d5f4f4;
+}
+
+div.inlinecomments div.comment div.text,
+div.commentwindow div.comment div.text,
+div#comments div.comment div.text {
+    margin: -5px 0 -5px 0;
+    padding: 0 10px 0 10px;
+}
+
+div.inlinecomments div.comment div.meta,
+div.commentwindow div.comment div.meta,
+div#comments div.comment div.meta {
+    text-align: right;
+    padding: 2px 10px 2px 0;
+    color: #538893;
+    border-top: 1px solid #cbe7e5;
+    background-color: #e0f6f4;
+}
+
+div.commentwindow {
+    position: absolute;
+    width: 500px;
+    border: 1px solid #cbe7e5;
+    background-color: #f2fbfd;
+    display: none;
+    z-index: 130;
+}
+
+div.commentwindow h3 {
+    margin: 0;
+    background-color: #2eabb0;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+div.commentwindow div.actions {
+    margin: 10px -10px 0 -10px;
+    padding: 4px 10px 4px 10px;
+    color: #538893;
+}
+
+div.commentwindow div.actions input {
+    border: 1px solid #2eabb0;
+    background-color: white;
+    color: #135355;
+    cursor: pointer;
+}
+
+div.commentwindow div.form {
+    padding: 0 10px 0 10px;
+}
+
+div.commentwindow div.form input,
+div.commentwindow div.form textarea {
+    border: 1px solid #3c9ea2;
+    background-color: white;
+    color: black;
+}
+
+div.commentwindow div.error {
+    margin: 10px 5px 10px 5px;
+    background-color: #fbe5dc;
+    display: none;
+}
+
+div.commentwindow div.form textarea {
+    width: 99%;
+}
+
+div.commentwindow div.preview {
+    margin: 10px 0 10px 0;
+    background-color: #70d0d4;
+    padding: 0 1px 1px 25px;
+}
+
+div.commentwindow div.preview h4 {
+    margin: 0 0 -5px -20px;
+    padding: 4px 0 0 4px;
+    color: white;
+}
+
+div.commentwindow div.preview div.comment {
+    background-color: #f2fbfd;
+}
+
+div.commentwindow div.preview div.comment h4 {
+    margin: 10px 0 0 0!important;
+    padding: 1px 4px 1px 4px!important;
+}
+
+/* :::: SUGGEST CHANGES :::: */
+div#suggest-changes-box input, div#suggest-changes-box textarea {
+    border: 1px solid #ccc;
+    background-color: white;
+    color: black;
+}
+
+div#suggest-changes-box textarea {
+    width: 99%;
+    height: 400px;
+}
+
+
+/* :::: PREVIEW :::: */
+div.preview {
+    background-image: url(preview.png);
+    padding: 0 20px 20px 20px;
+    margin-bottom: 30px;
+}
+
+
+/* :::: INDEX PAGE :::: */
+
+table.contentstable {
+    width: 900px;
+}
+
+table.contentstable p.biglink {
+    line-height: 150%;
+}
+
+a.biglink {
+    font-style: bold;
+    font-size: 17px;
+}
+
+span.linkdescr {
+    padding-top: 5px;
+    color: #777;
+    font-size: 10px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+/* :::: INDEX STYLES :::: */
+
+
+table.indextable td {
+    text-align: left;
+    vertical-align: top;
+}
+
+table.indextable dl, table.indextable dd {
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: white;
+}
+
+table.indextable tr.pcap {
+    height: 10px;
+}
+
+table.indextable tr.cap {
+    margin-top: 10px;
+    background-color: #f2f2f2;
+}
+
+img.toggler {
+    margin-right: 3px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+form.pfform {
+    margin: 10px 0 20px 0;
+}
+
+/* :::: GLOBAL STYLES :::: */
+
+.docwarning {
+    background-color: #ffe4e4;
+    padding: 10px;
+    margin: 0 -20px 0 -20px;
+}
+
+p.subhead {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+a {
+    color: #370552;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+	color: #370552;
+}
+
+div.body h1,
+div.body h2,
+div.body h3,
+div.body h4,
+div.body h5,
+div.body h6 {
+    font-weight: normal;
+    color: black;
+    background-color: #EEE;
+    margin: 20px -20px 10px -20px;
+    padding: 3px 0 3px 10px;
+}
+
+div.body h2,
+div.body h3,
+div.body h4,
+div.body h5,
+div.body h6 {
+    background-color: #EEE;
+}
+
+div.body h1 { margin-top: 0; font-size: 19px; font-weight: bold; }
+div.body h2 { font-size: 18px; }
+div.body h3 { font-size: 14px; }
+div.body h4 { font-size: 13px; }
+div.body h5 { font-size: 12px; }
+div.body h6 { font-size: 11px; }
+
+div.body h1 a { color: black; }
+
+a.headerlink {
+    color: #370552;
+    padding: 0 4px 0 4px;
+    text-decoration: none;
+    visibility: hidden;
+}
+
+h1:hover > a.headerlink,
+h2:hover > a.headerlink,
+h3:hover > a.headerlink,
+h4:hover > a.headerlink,
+h5:hover > a.headerlink,
+h6:hover > a.headerlink,
+dt:hover > a.headerlink {
+    visibility: visible;
+}
+
+a.headerlink:hover {
+    background-color: #370552;
+    color: white;
+}
+
+div.body p, div.body dd, div.body li {
+    text-align: justify;
+    line-height: 130%;
+}
+
+div.body p.caption {
+    text-align: inherit;
+}
+
+div.body td {
+    text-align: left;
+}
+
+ul.fakelist {
+    list-style: none;
+    margin: 10px 0 10px 20px;
+    padding: 0;
+}
+
+.field-list ul {
+    padding-left: 1em;
+}
+
+.first {
+    margin-top: 0 !important;
+    background-color: transparent;
+}
+
+/* "Footnotes" heading */
+p.rubric {
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+/* "Topics" */
+
+div.topic {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 0 7px 0 7px;
+    margin: 10px 0 10px 0;
+}
+
+p.topic-title {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Admonitions */
+
+div.admonition {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 7px;
+}
+
+div.admonition dt {
+    font-weight: bold;
+}
+
+div.admonition dl {
+    margin-bottom: 0;
+}
+
+div.admonition p {
+    display: inline;
+}
+
+div.seealso {
+    background-color: #999;
+}
+
+div.warning {
+    background-color: #ffe4e4;
+}
+
+div.note {
+    background-color: #999;
+}
+
+p.admonition-title {
+    margin: 0px 10px 5px 0px;
+    font-weight: bold;
+    display: inline;
+}
+
+p.admonition-title:after {
+    content: ":";
+}
+
+div.body p.centered {
+    text-align: center;
+    margin-top: 25px;
+}
+
+table.docutils {
+    border: 0;
+}
+
+table.docutils table {
+    margin-left: 55px;
+    width: auto;
+    border-spacing: 4px;
+}
+
+/**
+ * symbol table for c4d flags
+ */
+
+table.docutils td tr{
+    margin: 15px;
+    vertical-align: middle;
+    position: relative;
+    left: 150px;
+    background-color: #E5E5E5;
+}
+
+table.docutils td, table.docutils th {
+    padding: 1px 8px 1px 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: none;
+}
+
+table.field-list td, table.field-list th {
+    border: 0 !important;
+}
+
+table.field-list {
+    margin: 5px;
+}
+
+.field-name {
+    width: 100px;
+}
+
+table.footnote td, table.footnote th {
+    border: 0 !important;
+}
+
+.field-list ul {
+    margin: 0;
+    padding-left: 1em;
+}
+
+.field-list p {
+    margin: 0;
+}
+
+dl {
+    margin-bottom: 15px;
+    clear: both;
+}
+
+ul {
+    padding-left: 12px;
+    list-style: circle;
+}
+
+ul {
+    padding-left: 12px;
+    list-style: circle;
+}
+
+dd p {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul dd, ul dt, table ul {
+    background-color: white;
+    margin-bottom: 0px;
+}
+
+table ul {
+    background-color: #E5E5E5;
+}
+
+.align-right {
+    float: right;
+}
+
+.align-center {
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.class ul, .class dt {
+    margin-left: 0px;
+    line-height: 100%
+    padding: 0px;
+    background-color: #444;
+    color: white;
+}
+
+.function dt {
+    background-color: #444;
+    color: white;
+}
+
+.method dt {
+    background-color: #444;
+    color: white;
+}
+
+.staticmethod dt {
+    background-color: #444;
+    color: white;
+}
+
+
+.classmethod dt {
+    background-color: #444;
+    color: white;
+}
+
+
+.attribute dt {
+    background-color: #444;
+    color: white;
+}
+
+dd {
+    clear: both;
+    overflow: hidden;
+    display: inline-block;
+    background-color: #F8F8F8;
+    margin-top: 3px;
+    width: 100%;
+    margin-bottom: 10px;
+    text-indent: 0px;
+    padding-left: 10px;
+    margin-left: 0px;
+    font-size: 11px;
+}
+
+.refcount {
+    color: #060;
+}
+
+dt:target,
+.highlight {
+    background-color: #370552;
+    color: white;
+}
+
+.highlight-python {
+    text-indent: 0px;
+    background-color: #370552;
+    font-size: 11px;
+}
+
+dl.glossary dt {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+th {
+    text-align: left;
+    padding-right: 5px;
+}
+
+.mrow {
+    background-color: #eee;
+}
+
+.hd {
+    background-color: #ccc;
+}
+
+pre {
+    padding: 5px;
+    color: #333;
+    font-size: 11px;
+    border: 1px solid #999;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    overflow: auto;
+}
+
+td.linenos pre {
+    padding: 5px 0px;
+    border: 0;
+    background-color: transparent;
+    color: #aaa;
+}
+
+table.highlighttable {
+    margin-left: 0.5em;
+}
+
+table.highlighttable td {
+    padding: 0 0.5em 0 0.5em;
+}
+
+tt {
+    margin-left: 3px;
+    background-color: #ecf0f3;
+    padding: 0 1px 0 1px;
+    font-size: 12px;
+    font-style: normal;
+}
+
+tt.descname {
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+tt.descclassname {
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: normal;
+    background-color: transparent;
+}
+
+tt.xref, a tt {
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.footnote:target  { background-color: #ffa }
+
+h1 tt, h2 tt, h3 tt, h4 tt, h5 tt, h6 tt {
+    background-color: transparent;
+}
+
+.optional {
+    font-size: 1.3em;
+}
+
+.versionmodified {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+form.comment {
+    margin: 0;
+    padding: 10px 30px 10px 30px;
+    background-color: #eee;
+}
+
+form.comment h3 {
+    background-color: #326591;
+    color: white;
+    margin: -10px -30px 10px -30px;
+    padding: 5px;
+    font-size: 1.4em;
+}
+
+form.comment input,
+form.comment textarea {
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 100%;
+}
+
+form.comment input[type="text"] {
+    width: 240px;
+}
+
+form.comment textarea {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.system-message {
+    background-color: #fda;
+    padding: 5px;
+    border: 3px solid red;
+}
+
+/* :::: PRINT :::: */
+@media print {
+    div.document,
+    div.documentwrapper,
+    div.bodywrapper {
+        margin: 0;
+        width : 90%;    }
+
+    div.sphinxsidebar,
+    div.footer,
+    div#comments div.new-comment-box,
+    #top-link {
+        display: none;
+    }
+}
+
+/* Added by Sebastian Rath (c) 2009 */
+
+/* Topic Title */
+.cto {
+    padding: 5px;
+    background-color: #cbccbc;
+    color: #333;
+    border-left: none;
+    border-right: none;
+    overflow: hidden;
+}

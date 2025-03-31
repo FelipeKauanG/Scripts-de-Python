@@ -1,0 +1,167 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>C4DPL &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="C4D_MEMORY_STAT" href="C4D_MEMORY_STAT.html" />
+    <link rel="prev" title="BakeProgressHook" href="BakeProgressHook.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="C4D_MEMORY_STAT.html" title="C4D_MEMORY_STAT"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="BakeProgressHook.html" title="BakeProgressHook"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../types/index.html" accesskey="U">Types and Symbols List</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4dpl">
+<h1>C4DPL<a class="headerlink" href="#c4dpl" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>C4DPL_INIT_SYS</em></td>
+<td>Initialize system.</td>
+</tr>
+<tr class="row-even"><td><em>C4DPL_INIT</em></td>
+<td>Initialize the plugin, calling <cite>PluginStart</cite>.</td>
+</tr>
+<tr class="row-odd"><td><em>C4DPL_END</em></td>
+<td>End the plugin, calling <cite>PluginEnd</cite>.</td>
+</tr>
+<tr class="row-even"><td><em>C4DPL_MESSAGE</em></td>
+<td>Receive plugin message, calling <cite>PluginMessage</cite>.</td>
+</tr>
+<tr class="row-odd"><td><em>C4DPL_BUILDMENU</em></td>
+<td>Called when the menus are built during startup. Use <a class="reference internal" href="../modules/c4d.gui/index.html#c4d.gui.GetMenuResource" title="c4d.gui.GetMenuResource"><code class="xref py py-func docutils literal notranslate"><span class="pre">GetMenuResource()</span></code></a> etc. to add own menus here if necessary.
+See the <a class="reference internal" href="../misc/pluginstructure.html#enhancing-main-menu"><span class="std std-ref">example</span></a>.</td>
+</tr>
+<tr class="row-even"><td><em>C4DPL_STARTACTIVITY</em></td>
+<td>Sent to all plugins after all <cite>PluginStart</cite> have been called.</td>
+</tr>
+<tr class="row-odd"><td><em>C4DPL_ENDACTIVITY</em></td>
+<td>Sent to all plugins before any <cite>PluginEnd</cite> has been called. This allows to close dialogs, end threads, delete temporary/undo buffers etc.</td>
+</tr>
+<tr class="row-even"><td><em>C4DPL_CHANGEDSECURITYTOKEN</em></td>
+<td>Sent to all plugins if the Security Token of Team Render was changed.</td>
+</tr>
+<tr class="row-odd"><td><em>C4DPL_SHUTDOWNTHREADS</em></td>
+<td>Sent to all plugins before the threading system of Cinema 4D is shutdown. After that no threads should be started.</td>
+</tr>
+<tr class="row-even"><td><em>C4DPL_LAYOUTCHANGED</em></td>
+<td>Sent to all plugins after the layout has been switched.</td>
+</tr>
+<tr class="row-odd"><td><em>C4DPL_RELOADPYTHONPLUGINS</em></td>
+<td>Sent when Python plugins are to be reloaded. See <a class="reference internal" href="../misc/pluginstructure.html#pythonplugins-reloading"><span class="std std-ref">Python Plugins Reloading</span></a>.</td>
+</tr>
+<tr class="row-even"><td><em>C4DPL_COMMANDLINEARGS</em></td>
+<td>Sent to let plugins parse the command line arguments used when starting Cinema 4D.
+Retrieve the arguments by calling <a class="reference external" href="https://docs.python.org/2.7/library/sys.html#sys.argv">sys.argv</a>. See <a class="reference internal" href="../misc/pluginstructure.html#commandline-args"><span class="std std-ref">Command Line Arguments</span></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>C4DPL_EDITIMAGE</em></td>
+<td>Sent to allow plugins to start any other actions when Cinema 4D tries to show an image (e.g. in the shader popup). <em>data</em> is dict{‘imagefn’: str, filename of the image that triggered the message}</td>
+</tr>
+<tr class="row-even"><td><em>C4DPL_ENDPROGRAM</em></td>
+<td>Sent when Cinema 4D is about to close. <em>data</em> is dict{‘cancel’: bool, set to <strong>True</strong> to cancel close of Cinema 4D}</td>
+</tr>
+<tr class="row-odd"><td><em>C4DPL_DEVICECHANGE</em></td>
+<td>Sent when a device has changed. <em>data</em> is dict{‘name’: str, name of the device, ‘eject’: bool Eject, state of the device}</td>
+</tr>
+<tr class="row-even"><td><em>C4DPL_NETWORK_CHANGE</em></td>
+<td>Sent to all plugins if the network configuration on the system changed.</td>
+</tr>
+<tr class="row-odd"><td><em>C4DPL_SYSTEM_SLEEP</em></td>
+<td>Sent to all plugins if the system goes to sleep.</td>
+</tr>
+<tr class="row-even"><td><em>C4DPL_SYSTEM_WAKE</em></td>
+<td>Sent to all plugins if the system wakes up.</td>
+</tr>
+<tr class="row-odd"><td><em>C4DPL_PROGRAM_STARTED</em></td>
+<td>Sent when the application has been started.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="C4D_MEMORY_STAT.html" title="C4D_MEMORY_STAT"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="BakeProgressHook.html" title="BakeProgressHook"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../types/index.html" >Types and Symbols List</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

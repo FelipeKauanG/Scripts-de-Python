@@ -1,0 +1,2691 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.BaseObject &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title="c4d.CameraObject" href="CameraObject/index.html" />
+    <link rel="prev" title="c4d.Material" href="../BaseMaterial/Material/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="CameraObject/index.html" title="c4d.CameraObject"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../BaseMaterial/Material/index.html" title="c4d.Material"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../../index.html" >c4d</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../../index.html" >c4d.C4DAtom</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../../index.html" >c4d.GeListNode</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="../index.html" accesskey="U">c4d.BaseList2D</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-baseobject">
+<h1>c4d.BaseObject<a class="headerlink" href="#c4d-baseobject" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.BaseObject">
+<em class="property">class </em><code class="descclassname">c4d.</code><code class="descname">BaseObject</code><a class="headerlink" href="#c4d.BaseObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>The base class of objects.</p>
+<p>Here is an example how to create and edit objects.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">c4d</span>
+
+<span class="n">obj</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">BaseObject</span><span class="p">(</span><span class="n">c4d</span><span class="o">.</span><span class="n">Ocube</span><span class="p">)</span> <span class="c1"># Create new cube</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">SetRelPos</span><span class="p">(</span><span class="n">c4d</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>   <span class="c1"># Set position of cube</span>
+<span class="n">doc</span><span class="o">.</span><span class="n">InsertObject</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>           <span class="c1"># Insert object in document</span>
+<span class="n">c4d</span><span class="o">.</span><span class="n">EventAdd</span><span class="p">()</span>                  <span class="c1"># Send global event message</span>
+</pre></div>
+</div>
+<img alt="../../../../../../_images/baseobject_main.png" src="../../../../../../_images/baseobject_main.png" />
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.__init__" title="BaseObject.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.__init__(self,</span> <span class="pre">type)</span></code></a></td>
+<td>Initialize a new <a class="reference internal" href="#c4d.BaseObject" title="c4d.BaseObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseObject</span></code></a> in memory.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetAbsPos" title="BaseObject.GetAbsPos"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetAbsPos(self)</span></code></a></td>
+<td>Returns the absolute position of the object. These will be absolute local coordinates within its parent object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.SetAbsPos" title="BaseObject.SetAbsPos"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetAbsPos(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Sets the absolute local position of the object within its parent. If the object has no parent then these will be world coordinates.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetAbsScale" title="BaseObject.GetAbsScale"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetAbsScale(self)</span></code></a></td>
+<td>Returns the absolute scale of the object. These will be relative to the objects parent if it has one.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.SetAbsScale" title="BaseObject.SetAbsScale"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetAbsScale(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Sets the absolute scale of the object relative to its parent object if it has one.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetAbsRot" title="BaseObject.GetAbsRot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetAbsRot(self)</span></code></a></td>
+<td>Returns the absolute HPB rotation of the object relative to any parent object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.SetAbsRot" title="BaseObject.SetAbsRot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetAbsRot(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Sets the absolute HPB rotation of the object relative to any parent object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetFrozenPos" title="BaseObject.GetFrozenPos"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetFrozenPos(self)</span></code></a></td>
+<td>Returns the frozen position of the object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.SetFrozenPos" title="BaseObject.SetFrozenPos"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetFrozenPos(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Sets the frozen position of the object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetFrozenScale" title="BaseObject.GetFrozenScale"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetFrozenScale(self)</span></code></a></td>
+<td>Returns the frozen scale of the object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.SetFrozenScale" title="BaseObject.SetFrozenScale"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetFrozenScale(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Sets the frozen scale of the object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetFrozenRot" title="BaseObject.GetFrozenRot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetFrozenRot(self)</span></code></a></td>
+<td>Returns the frozen HPB rotation of the object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.SetFrozenRot" title="BaseObject.SetFrozenRot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetFrozenRot(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Sets the frozen HPB rotation of the object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetRelPos" title="BaseObject.GetRelPos"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetRelPos(self)</span></code></a></td>
+<td>Returns the relative position of the object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.SetRelPos" title="BaseObject.SetRelPos"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetRelPos(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Set the relative position of the object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetRelScale" title="BaseObject.GetRelScale"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetRelScale(self)</span></code></a></td>
+<td>Returns the relative scale of the object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.SetRelScale" title="BaseObject.SetRelScale"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetRelScale(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Sets the relative scale of the object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetRelRot" title="BaseObject.GetRelRot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetRelRot(self)</span></code></a></td>
+<td>Returns the relative HPB rotation of the object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.SetRelRot" title="BaseObject.SetRelRot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetRelRot(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Sets the relative HPB rotation of the object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetMl" title="BaseObject.GetMl"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetMl(self)</span></code></a></td>
+<td>Get the local matrix that represents the objects position, scale and rotation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.SetMl" title="BaseObject.SetMl"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetMl(self,</span> <span class="pre">m)</span></code></a></td>
+<td>Set the local matrix that represents the objects position, scale and rotation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetFrozenMln" title="BaseObject.GetFrozenMln"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetFrozenMln(self,</span> <span class="pre">m)</span></code></a></td>
+<td>Returns the frozen and normalized matrix of the object. See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.GetRelMln" title="BaseObject.GetRelMln"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetRelMln(self)</span></code></a></td>
+<td>Returns the relative and normalized matrix of the object. See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetRelMl" title="BaseObject.GetRelMl"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetRelMl(self)</span></code></a></td>
+<td>Returns the relative matrix of the object. See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.SetRelMl" title="BaseObject.SetRelMl"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetRelMl(self,</span> <span class="pre">m)</span></code></a></td>
+<td>Sets the relative matrix of the object. See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetMg" title="BaseObject.GetMg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetMg(self)</span></code></a></td>
+<td>Get the world (global) matrix that represents the objects position, scale and rotation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.SetMg" title="BaseObject.SetMg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetMg(self,</span> <span class="pre">m)</span></code></a></td>
+<td>Set the world (global) matrix that represents the objects position, scale and rotation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetMln" title="BaseObject.GetMln"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetMln(self)</span></code></a></td>
+<td>Get the local normalized matrix that represents the objects position, scale and rotation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.GetMgn" title="BaseObject.GetMgn"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetMgn(self)</span></code></a></td>
+<td>Get the global normalized matrix that represents the objects position, scale and rotation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetUpMg" title="BaseObject.GetUpMg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetUpMg(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Get the global matrix of the parent object that represents the objects position, scale and rotation.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.CopyMatrixTo" title="BaseObject.CopyMatrixTo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.CopyMatrixTo(self,</span> <span class="pre">dst)</span></code></a></td>
+<td>Copy the matrix to another object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetMp" title="BaseObject.GetMp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetMp(self)</span></code></a></td>
+<td>Bounding box center (vector), in local space.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.GetRad" title="BaseObject.GetRad"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetRad(self)</span></code></a></td>
+<td>This is the bounding box radius (x/y/z) of the object, this works for all objects and is faster than manually finding the bounds of even polygon objects, the radius is internally cached.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetEditorMode" title="BaseObject.GetEditorMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetEditorMode(self)</span></code></a></td>
+<td>Returns the state of the editor dot for this object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.SetEditorMode" title="BaseObject.SetEditorMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetEditorMode(self,</span> <span class="pre">mode)</span></code></a></td>
+<td>Set the state of the editor dot for this object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetRenderMode" title="BaseObject.GetRenderMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetRenderMode(self)</span></code></a></td>
+<td>Returns the state of the render dot for this object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.SetRenderMode" title="BaseObject.SetRenderMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetRenderMode(self,</span> <span class="pre">mode)</span></code></a></td>
+<td>Set the render state for this object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetTag" title="BaseObject.GetTag"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetTag(self,</span> <span class="pre">type[,</span> <span class="pre">nr])</span></code></a></td>
+<td>Get a tag of a certain type associated with this object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.KillTag" title="BaseObject.KillTag"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.KillTag(self,</span> <span class="pre">type[,</span> <span class="pre">nr])</span></code></a></td>
+<td>Removes a tag from the object and free its resources.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetRealSpline" title="BaseObject.GetRealSpline"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetRealSpline(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Get a real spline representation of a primitive spline object.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.GetVisibility" title="BaseObject.GetVisibility"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetVisibility(self,</span> <span class="pre">parent)</span></code></a></td>
+<td>The object’s visibility depends upon its parent, if it has no visibility track this will return the parent’s visibility which is passed.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.SetDeformMode" title="BaseObject.SetDeformMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetDeformMode(self,</span> <span class="pre">mode)</span></code></a></td>
+<td>Set the state of the deformation/generator tick.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.GetDeformMode" title="BaseObject.GetDeformMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetDeformMode(self)</span></code></a></td>
+<td>Returns the state of the deformation/generator tick.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetUniqueIP" title="BaseObject.GetUniqueIP"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetUniqueIP(self)</span></code></a></td>
+<td>Get the ip of the object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.SetUniqueIP" title="BaseObject.SetUniqueIP"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetUniqueIP(self,</span> <span class="pre">ip)</span></code></a></td>
+<td>Set the ip of the object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.CopyTagsTo" title="BaseObject.CopyTagsTo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.CopyTagsTo(self,</span> <span class="pre">dest,</span> <span class="pre">visible,</span> <span class="pre">...)</span></code></a></td>
+<td>Copy the tags of the object to another object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.GetFirstTag" title="BaseObject.GetFirstTag"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetFirstTag(self)</span></code></a></td>
+<td>Returns the first tag of the object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetLastTag" title="BaseObject.GetLastTag"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetLastTag(self)</span></code></a></td>
+<td>Returns the last tag of the object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.GetTags" title="BaseObject.GetTags"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetTags(self)</span></code></a></td>
+<td>Returns all tags in a list.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.MakeTag" title="BaseObject.MakeTag"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.MakeTag(self,</span> <span class="pre">x,</span> <span class="pre">pred)</span></code></a></td>
+<td>Create and insert a tag for this object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.MakeVariableTag" title="BaseObject.MakeVariableTag"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.MakeVariableTag(self,</span> <span class="pre">x,</span> <span class="pre">count,</span> <span class="pre">pred)</span></code></a></td>
+<td>Create a variable tag for this object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.InsertTag" title="BaseObject.InsertTag"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.InsertTag(self,</span> <span class="pre">tp[,</span> <span class="pre">pred])</span></code></a></td>
+<td>Attach a <a class="reference internal" href="../BaseTag/index.html#c4d.BaseTag" title="c4d.BaseTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTag</span></code></a> to <a class="reference internal" href="#c4d.BaseObject" title="c4d.BaseObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseObject</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.GetTagDataCount" title="BaseObject.GetTagDataCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetTagDataCount(self,</span> <span class="pre">type)</span></code></a></td>
+<td>Get the variable tag data count.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.IsDirty" title="BaseObject.IsDirty"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.IsDirty(self,</span> <span class="pre">flags)</span></code></a></td>
+<td>Check if the object has been changed since the last time the object was touched.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.SetDirty" title="BaseObject.SetDirty"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetDirty(self,</span> <span class="pre">flags)</span></code></a></td>
+<td>Check if the object has been changed since the last time the object was touched.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.Touch" title="BaseObject.Touch"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.Touch(self)</span></code></a></td>
+<td>Mark object to be used by a generator; automatically resets ‘dirty’.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.SetPhong" title="BaseObject.SetPhong"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetPhong(self,</span> <span class="pre">on,</span> <span class="pre">anglelimit,</span> <span class="pre">angle)</span></code></a></td>
+<td>Set the phong smoothing for the object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetIsoparm" title="BaseObject.GetIsoparm"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetIsoparm(self)</span></code></a></td>
+<td>Gets the previously built isoparm representation of the object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.SetIsoparm" title="BaseObject.SetIsoparm"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetIsoparm(self,</span> <span class="pre">l)</span></code></a></td>
+<td>Sets the isoparm representation of the object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetDeformCache" title="BaseObject.GetDeformCache"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetDeformCache(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Gets the previously built cache that has been deformed by an active deformer.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.GetCache" title="BaseObject.GetCache"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetCache(self[,</span> <span class="pre">hh])</span></code></a></td>
+<td>Get the object from the previously built cache.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetCacheParent" title="BaseObject.GetCacheParent"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetCacheParent(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">A cache/deform object has no <a class="reference internal" href="../../index.html#GeListNode.GetUp" title="GeListNode.GetUp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetUp</span></code></a> link.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.CheckCache" title="BaseObject.CheckCache"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.CheckCache(self,</span> <span class="pre">hh)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Check if cache is built, if it matches the requirements (polygonized/isoparm, level of detail etc.).</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetHighlightHandle" title="BaseObject.GetHighlightHandle"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetHighlightHandle(self,</span> <span class="pre">bd)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Checks if a highlight handle has been hit, by returning the ID previously returned by <a class="reference internal" href="../../../../../c4d.plugins/BaseData/NodeData/ObjectData/index.html#ObjectData.DetectHandle" title="ObjectData.DetectHandle"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ObjectData.DetectHandle()</span></code></a>.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.NewDependenceList" title="BaseObject.NewDependenceList"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.NewDependenceList(self)</span></code></a></td>
+<td>Start a new dependence list. These enable you to keep track of changes made to any children.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.CompareDependenceList" title="BaseObject.CompareDependenceList"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.CompareDependenceList(self)</span></code></a></td>
+<td>Compares if anything in the dependence list has changed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.AddDependence" title="BaseObject.AddDependence"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.AddDependence(self,</span> <span class="pre">hh,</span> <span class="pre">op[,</span> <span class="pre">dirtyflags])</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Add a child object to the dependence list.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.TouchDependenceList" title="BaseObject.TouchDependenceList"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.TouchDependenceList(self)</span></code></a></td>
+<td>Mark all the objects in the dependence list that they will be replaced by the generator.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.SearchHierarchy" title="BaseObject.SearchHierarchy"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SearchHierarchy(self,</span> <span class="pre">op)</span></code></a></td>
+<td>Check if the object is a child of <em>op</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetAndCheckHierarchyClone" title="BaseObject.GetAndCheckHierarchyClone"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetAndCheckHierarchyClone(self,</span> <span class="pre">hh,</span> <span class="pre">op,</span> <span class="pre">flags,</span> <span class="pre">...)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Check and generate a clone of the child objects of a parent generator.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.GetHierarchyClone" title="BaseObject.GetHierarchyClone"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetHierarchyClone(self,</span> <span class="pre">hh,</span> <span class="pre">op,</span> <span class="pre">flags[,</span> <span class="pre">...])</span></code></a></td>
+<td>Generate a clone of the child objects of a parent generator.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.SetRotationOrder" title="BaseObject.SetRotationOrder"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetRotationOrder(self,</span> <span class="pre">order)</span></code></a></td>
+<td>Sets the rotation order of the object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.GetRotationOrder" title="BaseObject.GetRotationOrder"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetRotationOrder(self)</span></code></a></td>
+<td>Gets the rotation order of the object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetGUID" title="BaseObject.GetGUID"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetGUID(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Returns a unique ID for any object in a document.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.SetQuaternionRotationMode" title="BaseObject.SetQuaternionRotationMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetQuaternionRotationMode(self,</span> <span class="pre">active,</span> <span class="pre">undo)</span></code></a></td>
+<td>Sets the quaternion rotation mode of the object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.IsQuaternionRotationMode" title="BaseObject.IsQuaternionRotationMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.IsQuaternionRotationMode(self)</span></code></a></td>
+<td>Checks if object rotation is interpolated in quaternion mode.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.SynchronizeVectorTrackKeys" title="BaseObject.SynchronizeVectorTrackKeys"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SynchronizeVectorTrackKeys(self,</span> <span class="pre">vectorTrackID,</span> <span class="pre">bUndo)</span></code></a></td>
+<td>Makes sure that the track Curves components are synchronized (keys on each component).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.FindBestEulerAngle" title="BaseObject.FindBestEulerAngle"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.FindBestEulerAngle(self,</span> <span class="pre">rotationTrackID,</span> <span class="pre">...)</span></code></a></td>
+<td>Tries to find the best Euler angle according to the previous key.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.EvaluateSynchronizedRotation" title="BaseObject.EvaluateSynchronizedRotation"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.EvaluateSynchronizedRotation(self,</span> <span class="pre">time,</span> <span class="pre">flags[,</span> <span class="pre">...])</span></code></a></td>
+<td>Forces an evaluation of all rotation tracks and considers quaternion interpolation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetVectorTracks" title="BaseObject.GetVectorTracks"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetVectorTracks(self,</span> <span class="pre">id)</span></code></a></td>
+<td>Returns each component track for the given <em>id</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.GetVectorCurves" title="BaseObject.GetVectorCurves"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetVectorCurves(self,</span> <span class="pre">curveToSearch)</span></code></a></td>
+<td>Returns each component curve for the given curve.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseObject.GetModelingAxis" title="BaseObject.GetModelingAxis"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetModelingAxis(self,</span> <span class="pre">doc)</span></code></a></td>
+<td>Gets the internal matrix for the modeling axis.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseObject.SetModelingAxis" title="BaseObject.SetModelingAxis"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetModelingAxis(self,</span> <span class="pre">m)</span></code></a></td>
+<td>Sets the internal matrix for the modeling axis.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../index.html#c4d.BaseList2D" title="c4d.BaseList2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseList2D</span></code></a></li>
+</ul>
+<p>Children Classes:</p>
+<ul class="simple">
+<li><a class="reference internal" href="CameraObject/index.html#c4d.CameraObject" title="c4d.CameraObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.CameraObject</span></code></a></li>
+<li><a class="reference internal" href="PointObject/index.html#c4d.PointObject" title="c4d.PointObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.PointObject</span></code></a></li>
+<li><a class="reference internal" href="VoronoiFracture/index.html#c4d.VoronoiFracture" title="c4d.VoronoiFracture"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.VoronoiFracture</span></code></a></li>
+<li><a class="reference internal" href="LodObject/index.html#c4d.LodObject" title="c4d.LodObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.LodObject</span></code></a></li>
+<li><a class="reference internal" href="InstanceObject/index.html#c4d.InstanceObject" title="c4d.InstanceObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.InstanceObject</span></code></a></li>
+<li><a class="reference internal" href="../../../../../c4d.modules/character/CAJointObject/index.html#c4d.modules.character.CAJointObject" title="c4d.modules.character.CAJointObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.character.CAJointObject</span></code></a></li>
+<li><a class="reference internal" href="../../../../../c4d.modules/mograph/FieldObject/index.html#c4d.modules.mograph.FieldObject" title="c4d.modules.mograph.FieldObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.mograph.FieldObject</span></code></a></li>
+<li><a class="reference internal" href="../../../../../c4d.modules/hair/HairObject/index.html#c4d.modules.hair.HairObject" title="c4d.modules.hair.HairObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.hair.HairObject</span></code></a></li>
+<li><a class="reference internal" href="../../../../../c4d.modules/sculpting/SculptObject/index.html#c4d.modules.sculpting.SculptObject" title="c4d.modules.sculpting.SculptObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.sculpting.SculptObject</span></code></a></li>
+<li><a class="reference internal" href="../../../../../c4d.modules/sculpting/SculptLayerBase/index.html#c4d.modules.sculpting.SculptLayerBase" title="c4d.modules.sculpting.SculptLayerBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.sculpting.SculptLayerBase</span></code></a></li>
+<li><a class="reference internal" href="../../../../../c4d.modules/motiontracker/MotionTrackerObject/index.html#c4d.modules.motiontracker.MotionTrackerObject" title="c4d.modules.motiontracker.MotionTrackerObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.motiontracker.MotionTrackerObject</span></code></a></li>
+<li><a class="reference internal" href="../../../../../c4d.modules/volume/VolumeObject/index.html#c4d.modules.volume.VolumeObject" title="c4d.modules.volume.VolumeObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.volume.VolumeObject</span></code></a></li>
+<li><a class="reference internal" href="../../../../../c4d.modules/volume/VolumeBuilder/index.html#c4d.modules.volume.VolumeBuilder" title="c4d.modules.volume.VolumeBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.volume.VolumeBuilder</span></code></a></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="BaseObject.__init__">
+<code class="descclassname">BaseObject.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize a new <a class="reference internal" href="#c4d.BaseObject" title="c4d.BaseObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseObject</span></code></a> in memory.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>int</em>) – The object type : <a class="reference internal" href="../../../../../../types/objects.html"><span class="doc">Object Types</span></a>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.BaseObject" title="c4d.BaseObject">c4d.BaseObject</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The new base object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetAbsPos">
+<code class="descclassname">BaseObject.</code><code class="descname">GetAbsPos</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetAbsPos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the absolute position of the object. These will be absolute local coordinates within its parent object.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The absolute object position.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.SetAbsPos">
+<code class="descclassname">BaseObject.</code><code class="descname">SetAbsPos</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.SetAbsPos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the absolute local position of the object within its parent. If the object has no parent then these will be world coordinates.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The absolute object position.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetAbsScale">
+<code class="descclassname">BaseObject.</code><code class="descname">GetAbsScale</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetAbsScale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the absolute scale of the object. These will be relative to the objects parent if it has one.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The absolute object scale.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.SetAbsScale">
+<code class="descclassname">BaseObject.</code><code class="descname">SetAbsScale</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.SetAbsScale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the absolute scale of the object relative to its parent object if it has one.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The absolute object scale.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetAbsRot">
+<code class="descclassname">BaseObject.</code><code class="descname">GetAbsRot</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetAbsRot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the absolute HPB rotation of the object relative to any parent object.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The absolute object rotation.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.SetAbsRot">
+<code class="descclassname">BaseObject.</code><code class="descname">SetAbsRot</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.SetAbsRot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the absolute HPB rotation of the object relative to any parent object.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The absolute object rotation.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetFrozenPos">
+<code class="descclassname">BaseObject.</code><code class="descname">GetFrozenPos</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetFrozenPos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the frozen position of the object.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The frozen object position.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.SetFrozenPos">
+<code class="descclassname">BaseObject.</code><code class="descname">SetFrozenPos</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.SetFrozenPos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the frozen position of the object.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The frozen object position.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetFrozenScale">
+<code class="descclassname">BaseObject.</code><code class="descname">GetFrozenScale</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetFrozenScale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the frozen scale of the object.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The frozen object scale.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.SetFrozenScale">
+<code class="descclassname">BaseObject.</code><code class="descname">SetFrozenScale</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.SetFrozenScale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the frozen scale of the object.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The frozen object scale.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetFrozenRot">
+<code class="descclassname">BaseObject.</code><code class="descname">GetFrozenRot</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetFrozenRot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the frozen HPB rotation of the object.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The frozen object rotation.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.SetFrozenRot">
+<code class="descclassname">BaseObject.</code><code class="descname">SetFrozenRot</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.SetFrozenRot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the frozen HPB rotation of the object.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The frozen object rotation.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetRelPos">
+<code class="descclassname">BaseObject.</code><code class="descname">GetRelPos</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetRelPos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the relative position of the object.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The relative object position.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.SetRelPos">
+<code class="descclassname">BaseObject.</code><code class="descname">SetRelPos</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.SetRelPos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the relative position of the object.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The relative object position.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetRelScale">
+<code class="descclassname">BaseObject.</code><code class="descname">GetRelScale</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetRelScale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the relative scale of the object.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The relative object scale.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.SetRelScale">
+<code class="descclassname">BaseObject.</code><code class="descname">SetRelScale</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.SetRelScale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the relative scale of the object.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The relative object scale.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetRelRot">
+<code class="descclassname">BaseObject.</code><code class="descname">GetRelRot</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetRelRot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the relative HPB rotation of the object.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The relative object rotation.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.SetRelRot">
+<code class="descclassname">BaseObject.</code><code class="descname">SetRelRot</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.SetRelRot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the relative HPB rotation of the object.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The relative object rotation.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetMl">
+<code class="descclassname">BaseObject.</code><code class="descname">GetMl</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetMl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the local matrix that represents the objects position, scale and rotation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Matrix/index.html#c4d.Matrix" title="c4d.Matrix">c4d.Matrix</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The object’s local matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.SetMl">
+<code class="descclassname">BaseObject.</code><code class="descname">SetMl</code><span class="sig-paren">(</span><em>self</em>, <em>m</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.SetMl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the local matrix that represents the objects position, scale and rotation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>m</strong> (<a class="reference internal" href="../../../../Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><em>c4d.Matrix</em></a>) – The object’s new local matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetFrozenMln">
+<code class="descclassname">BaseObject.</code><code class="descname">GetFrozenMln</code><span class="sig-paren">(</span><em>self</em>, <em>m</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetFrozenMln" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the frozen and normalized matrix of the object. See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>m</strong> (<a class="reference internal" href="../../../../Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><em>c4d.Matrix</em></a>) – The object’s frozen and normalized matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetRelMln">
+<code class="descclassname">BaseObject.</code><code class="descname">GetRelMln</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetRelMln" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the relative and normalized matrix of the object. See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Matrix/index.html#c4d.Matrix" title="c4d.Matrix">c4d.Matrix</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The object’s relative and normalized matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetRelMl">
+<code class="descclassname">BaseObject.</code><code class="descname">GetRelMl</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetRelMl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the relative matrix of the object. See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Matrix/index.html#c4d.Matrix" title="c4d.Matrix">c4d.Matrix</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The object’s relative matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.SetRelMl">
+<code class="descclassname">BaseObject.</code><code class="descname">SetRelMl</code><span class="sig-paren">(</span><em>self</em>, <em>m</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.SetRelMl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the relative matrix of the object. See also <a class="reference internal" href="../../../../../../manuals/data_algorithms/classic_api/matrix.html#freeze-transformations"><span class="std std-ref">Freeze Transformations</span></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>m</strong> (<a class="reference internal" href="../../../../Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><em>c4d.Matrix</em></a>) – The object’s new relative matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetMg">
+<code class="descclassname">BaseObject.</code><code class="descname">GetMg</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetMg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the world (global) matrix that represents the objects position, scale and rotation.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">This will only work if the object is attached to a document.</div>
+<div class="line">Virtual objects in caches and deform caches are not attached to a document, so this function cannot be used for those objects.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Matrix/index.html#c4d.Matrix" title="c4d.Matrix">c4d.Matrix</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The object’s world matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.SetMg">
+<code class="descclassname">BaseObject.</code><code class="descname">SetMg</code><span class="sig-paren">(</span><em>self</em>, <em>m</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.SetMg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the world (global) matrix that represents the objects position, scale and rotation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>m</strong> (<a class="reference internal" href="../../../../Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><em>c4d.Matrix</em></a>) – The object’s new world matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetMln">
+<code class="descclassname">BaseObject.</code><code class="descname">GetMln</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetMln" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the local normalized matrix that represents the objects position, scale and rotation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Matrix/index.html#c4d.Matrix" title="c4d.Matrix">c4d.Matrix</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The object’s normalized local matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetMgn">
+<code class="descclassname">BaseObject.</code><code class="descname">GetMgn</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetMgn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the global normalized matrix that represents the objects position, scale and rotation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Matrix/index.html#c4d.Matrix" title="c4d.Matrix">c4d.Matrix</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The object’s normalized world matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetUpMg">
+<code class="descclassname">BaseObject.</code><code class="descname">GetUpMg</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetUpMg" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Get the global matrix of the parent object that represents the objects position, scale and rotation.</div>
+<div class="line">If the object has no parent object then this matrix will be a unit matrix.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Matrix/index.html#c4d.Matrix" title="c4d.Matrix">c4d.Matrix</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The parent object’s world matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.CopyMatrixTo">
+<code class="descclassname">BaseObject.</code><code class="descname">CopyMatrixTo</code><span class="sig-paren">(</span><em>self</em>, <em>dst</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.CopyMatrixTo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy the matrix to another object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dst</strong> (<a class="reference internal" href="#c4d.BaseObject" title="c4d.BaseObject"><em>c4d.BaseObject</em></a>) – The destintation object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetMp">
+<code class="descclassname">BaseObject.</code><code class="descname">GetMp</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetMp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bounding box center (vector), in local space.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The bounding box center.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetRad">
+<code class="descclassname">BaseObject.</code><code class="descname">GetRad</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetRad" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the bounding box radius (x/y/z) of the object, this works for all objects and is faster than manually finding the bounds of even polygon objects, the radius is internally cached.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The bounding box width, height and depth.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetEditorMode">
+<code class="descclassname">BaseObject.</code><code class="descname">GetEditorMode</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetEditorMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the state of the editor dot for this object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The editor mode:<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>MODE_ON</em></td>
+<td>The object is enabled regardless of the state of any parent object.</td>
+</tr>
+<tr class="row-even"><td><em>MODE_OFF</em></td>
+<td>The object is disabled regardless of the state of any parent object.</td>
+</tr>
+<tr class="row-odd"><td><em>MODE_UNDEF</em></td>
+<td>The object is enabled by default, but the state of any parent object is used if it is enabled or disabled.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.SetEditorMode">
+<code class="descclassname">BaseObject.</code><code class="descname">SetEditorMode</code><span class="sig-paren">(</span><em>self</em>, <em>mode</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.SetEditorMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the state of the editor dot for this object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mode</strong> (<em>int</em>) – <p>The editor mode:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>MODE_ON</em></td>
+<td>The object is enabled regardless of the state of any parent object.</td>
+</tr>
+<tr class="row-even"><td><em>MODE_OFF</em></td>
+<td>The object is disabled regardless of the state of any parent object.</td>
+</tr>
+<tr class="row-odd"><td><em>MODE_UNDEF</em></td>
+<td>The object is enabled by default, but the state of any parent object is used if it is enabled or disabled.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetRenderMode">
+<code class="descclassname">BaseObject.</code><code class="descname">GetRenderMode</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetRenderMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the state of the render dot for this object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The render mode:<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>MODE_ON</em></td>
+<td>The object is enabled regardless of the state of any parent object.</td>
+</tr>
+<tr class="row-even"><td><em>MODE_OFF</em></td>
+<td>The object is disabled regardless of the state of any parent object.</td>
+</tr>
+<tr class="row-odd"><td><em>MODE_UNDEF</em></td>
+<td>The object is enabled by default, but the state of any parent object is used if it is enabled or disabled.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.SetRenderMode">
+<code class="descclassname">BaseObject.</code><code class="descname">SetRenderMode</code><span class="sig-paren">(</span><em>self</em>, <em>mode</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.SetRenderMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the render state for this object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mode</strong> (<em>int</em>) – <p>The render mode:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>MODE_ON</em></td>
+<td>The object is enabled regardless of the state of any parent object.</td>
+</tr>
+<tr class="row-even"><td><em>MODE_OFF</em></td>
+<td>The object is disabled regardless of the state of any parent object.</td>
+</tr>
+<tr class="row-odd"><td><em>MODE_UNDEF</em></td>
+<td>The object is enabled by default, but the state of any parent object is used if it is enabled or disabled.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetTag">
+<code class="descclassname">BaseObject.</code><code class="descname">GetTag</code><span class="sig-paren">(</span><em>self</em>, <em>type</em>, <em>nr=0</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a tag of a certain type associated with this object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>type</strong> (<em>int</em>) – The type of tag to fetch from the object. See <a class="reference internal" href="../../../../../../types/tags.html"><span class="doc">Tag Types</span></a>.</li>
+<li><strong>nr</strong> (<em>int</em>) – The starting tag index to find of this type.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../BaseTag/index.html#c4d.BaseTag" title="c4d.BaseTag">c4d.BaseTag</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>The requested tag, or <strong>None</strong> if no tags of the requested type are available.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you request a specific number that is not available then <strong>None</strong> will be returned even if there is a tag of that type with a different index.</p>
+</div>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.KillTag">
+<code class="descclassname">BaseObject.</code><code class="descname">KillTag</code><span class="sig-paren">(</span><em>self</em>, <em>type</em>, <em>nr=0</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.KillTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes a tag from the object and free its resources.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>type</strong> (<em>int</em>) – The type of tag to fetch from the object. See <a class="reference internal" href="../../../../../../types/tags.html"><span class="doc">Tag Types</span></a>.</li>
+<li><strong>nr</strong> (<em>int</em>) – The starting tag index to find of this type.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetRealSpline">
+<code class="descclassname">BaseObject.</code><code class="descname">GetRealSpline</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetRealSpline" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Get a real spline representation of a primitive spline object.</div>
+<div class="line">This can for example be used to calculate the length of the spline.</div>
+<div class="line">If the object is a real spline it returns this. Otherwise <strong>None</strong>.</div>
+</div>
+<blockquote>
+<div><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">The matrix of the returned object must not be used.</div>
+<div class="line">Use the matrix of the original primitive spline object instead.</div>
+</div>
+</div>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="PointObject/SplineObject/index.html#c4d.SplineObject" title="c4d.SplineObject">c4d.SplineObject</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The created spline object.<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<div class="last line-block">
+<div class="line">The returned object is owned by the host object and therefore should be cloned when inserted somewhere else.</div>
+<div class="line">Ignoring this would lead to a crash if the original object is deleted.</div>
+</div>
+</div>
+<p>Here is how to safely insert the real spline representation of a primitive spline object.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">c4d</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">realSpline</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">GetRealSpline</span><span class="p">()</span>               <span class="c1"># Active object is a primitive spline object</span>
+    <span class="k">if</span> <span class="n">realSpline</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">doc</span><span class="o">.</span><span class="n">InsertObject</span><span class="p">(</span><span class="n">realSpline</span><span class="o">.</span><span class="n">GetClone</span><span class="p">())</span>     <span class="c1"># Insert the clone of the created spline object in the document</span>
+        <span class="n">c4d</span><span class="o">.</span><span class="n">EventAdd</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetVisibility">
+<code class="descclassname">BaseObject.</code><code class="descname">GetVisibility</code><span class="sig-paren">(</span><em>self</em>, <em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetVisibility" title="Permalink to this definition">¶</a></dt>
+<dd><p>The object’s visibility depends upon its parent, if it has no visibility track this will return the parent’s visibility which is passed.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The range of values are <em>0.0&lt;=visibility&lt;=1.0</em>.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In the editor only a visibility of <em>0.0</em> can be noticed but all other intermediate values are visualized in the renderer only.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>float</strong> – The parent objects visibility.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The visibility.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.SetDeformMode">
+<code class="descclassname">BaseObject.</code><code class="descname">SetDeformMode</code><span class="sig-paren">(</span><em>self</em>, <em>mode</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.SetDeformMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the state of the deformation/generator tick.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mode</strong> (<em>bool</em>) – <strong>True</strong> to enable the generator/deformer object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetDeformMode">
+<code class="descclassname">BaseObject.</code><code class="descname">GetDeformMode</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetDeformMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the state of the deformation/generator tick.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the generator/deformer object is enabled.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetUniqueIP">
+<code class="descclassname">BaseObject.</code><code class="descname">GetUniqueIP</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetUniqueIP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the ip of the object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The object IP number.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.SetUniqueIP">
+<code class="descclassname">BaseObject.</code><code class="descname">SetUniqueIP</code><span class="sig-paren">(</span><em>self</em>, <em>ip</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.SetUniqueIP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the ip of the object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ip</strong> (<em>int</em>) – The object IP number.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.CopyTagsTo">
+<code class="descclassname">BaseObject.</code><code class="descname">CopyTagsTo</code><span class="sig-paren">(</span><em>self</em>, <em>dest</em>, <em>visible</em>, <em>variable</em>, <em>hierarchical</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.CopyTagsTo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy the tags of the object to another object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>dest</strong> (<a class="reference internal" href="#c4d.BaseObject" title="c4d.BaseObject"><em>c4d.BaseObject</em></a>) – The destination object.</li>
+<li><strong>visible</strong> (<em>bool</em>) – <strong>True</strong> if the tags must be visible, <strong>False</strong> if it must not be visible or <strong>NOTOK</strong> if it can be either (if this property does not need to be checked).</li>
+<li><strong>variable</strong> (<em>bool</em>) – <strong>True</strong> if the tags must be variable, <strong>False</strong> if it must not be variable or <strong>NOTOK</strong> if it can be either (if this property does not need to be checked).</li>
+<li><strong>hierarchical</strong> (<em>bool</em>) – <strong>True</strong> if the tags must be hierarchical, <strong>False</strong> if it must not be hierarchical or <strong>NOTOK</strong> if it can be either (if this property does not need to be checked).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the object’s tags were copied successfully, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetFirstTag">
+<code class="descclassname">BaseObject.</code><code class="descname">GetFirstTag</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetFirstTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the first tag of the object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../BaseTag/index.html#c4d.BaseTag" title="c4d.BaseTag">c4d.BaseTag</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The first tag of the object, or <strong>None</strong> if the object has no tags.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetLastTag">
+<code class="descclassname">BaseObject.</code><code class="descname">GetLastTag</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetLastTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the last tag of the object.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.024.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../BaseTag/index.html#c4d.BaseTag" title="c4d.BaseTag">c4d.BaseTag</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The last tag of the object, or <strong>None</strong> if the object has no tags.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetTags">
+<code class="descclassname">BaseObject.</code><code class="descname">GetTags</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetTags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all tags in a list.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list of type <a class="reference internal" href="../BaseTag/index.html#c4d.BaseTag" title="c4d.BaseTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTag</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The list of all tags.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.MakeTag">
+<code class="descclassname">BaseObject.</code><code class="descname">MakeTag</code><span class="sig-paren">(</span><em>self</em>, <em>x</em>, <em>pred</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.MakeTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create and insert a tag for this object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> (<em>int</em>) – The type of tag to create. See <a class="reference internal" href="../../../../../../types/tags.html"><span class="doc">Tag Types</span></a>.</li>
+<li><strong>pred</strong> (<a class="reference internal" href="../BaseTag/index.html#c4d.BaseTag" title="c4d.BaseTag"><em>c4d.BaseTag</em></a>) – The tag will insert after <em>pred</em>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../BaseTag/index.html#c4d.BaseTag" title="c4d.BaseTag">c4d.BaseTag</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The new tag.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.MakeVariableTag">
+<code class="descclassname">BaseObject.</code><code class="descname">MakeVariableTag</code><span class="sig-paren">(</span><em>self</em>, <em>x</em>, <em>count</em>, <em>pred</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.MakeVariableTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a variable tag for this object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> (<em>int</em>) – <p>The type of tag to create:</p>
+<p>The table lists the supported variable tags by <a class="reference internal" href="../BaseTag/VariableTag/index.html#VariableTag.GetAllHighlevelData" title="VariableTag.GetAllHighlevelData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VariableTag.GetAllHighlevelData()</span></code></a>/<a class="reference internal" href="../BaseTag/VariableTag/index.html#VariableTag.SetAllHighlevelData" title="VariableTag.SetAllHighlevelData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetAllHighlevelData()</span></code></a> and their corresponding data.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="32%" />
+<col width="58%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Tag</th>
+<th class="head">Data</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>Tpoint</em></td>
+<td>list of <a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a></td>
+<td>The points.</td>
+</tr>
+<tr class="row-odd"><td><em>Tpolygon</em></td>
+<td>list of <a class="reference internal" href="../../../../CPolygon/index.html#c4d.CPolygon" title="c4d.CPolygon"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.CPolygon</span></code></a></td>
+<td>The polygons.</td>
+</tr>
+<tr class="row-even"><td><em>Ttangent</em></td>
+<td>list of (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>, <a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>)</td>
+<td>The tangents left and right interpolation.</td>
+</tr>
+<tr class="row-odd"><td><em>Tsegment</em></td>
+<td>list of dict{<cite>cnt</cite>: int, <cite>closed</cite>: bool}</td>
+<td>The segments number of points and closed state.</td>
+</tr>
+<tr class="row-even"><td><em>Tline</em></td>
+<td>list of dict{<cite>pos</cite>: float, <cite>t</cite>: float}</td>
+<td>The line points percentage position and original spline point.</td>
+</tr>
+<tr class="row-odd"><td><em>Tvertexmap</em></td>
+<td>list of float</td>
+<td>The vertex map values.</td>
+</tr>
+<tr class="row-even"><td><em>Tnormal</em></td>
+<td>List[int]eger</td>
+<td>The normals. Note: Contains <cite>12</cite> times more elements than <a class="reference internal" href="../BaseTag/VariableTag/index.html#VariableTag.GetDataCount" title="VariableTag.GetDataCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VariableTag.GetDataCount()</span></code></a> returns.</td>
+</tr>
+<tr class="row-odd"><td><em>Tvertexcolor</em></td>
+<td>list of dict{<cite>a</cite>, <cite>b</cite>, <cite>c</cite>, <cite>d</cite>: <a class="reference internal" href="../../../../Vector4d/index.html#c4d.Vector4d" title="c4d.Vector4d"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector4d</span></code></a>}</td>
+<td>The vertex colors for a polygon.</td>
+</tr>
+<tr class="row-even"><td><em>Tsoftselection</em></td>
+<td>list of float</td>
+<td>The soft selection values.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>count</strong> (<em>int</em>) – The size of the variable tags data.</li>
+<li><strong>pred</strong> (<a class="reference internal" href="../BaseTag/index.html#c4d.BaseTag" title="c4d.BaseTag"><em>c4d.BaseTag</em></a>) – The tag will insert after <em>pred</em>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../BaseTag/index.html#c4d.BaseTag" title="c4d.BaseTag">c4d.BaseTag</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The new tag.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.InsertTag">
+<code class="descclassname">BaseObject.</code><code class="descname">InsertTag</code><span class="sig-paren">(</span><em>self</em>, <em>tp</em>, <em>pred=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.InsertTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attach a <a class="reference internal" href="../BaseTag/index.html#c4d.BaseTag" title="c4d.BaseTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTag</span></code></a> to <a class="reference internal" href="#c4d.BaseObject" title="c4d.BaseObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseObject</span></code></a>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<div class="last line-block">
+<div class="line">If the tag type was not registered with <strong>TAG_MULTIPLE</strong>, any existing old tag of same type will be implicitly removed.</div>
+<div class="line">Any previous reference to the old tag will be invalid afterwards.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>tp</strong> (<a class="reference internal" href="../BaseTag/index.html#c4d.BaseTag" title="c4d.BaseTag"><em>c4d.BaseTag</em></a>) – The tag which will be attached.</li>
+<li><strong>pred</strong> (<a class="reference internal" href="../BaseTag/index.html#c4d.BaseTag" title="c4d.BaseTag"><em>c4d.BaseTag</em></a>) – <em>tp</em> will insert after <em>pred</em>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetTagDataCount">
+<code class="descclassname">BaseObject.</code><code class="descname">GetTagDataCount</code><span class="sig-paren">(</span><em>self</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetTagDataCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the variable tag data count.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>int</em>) – <p>The type of tag:</p>
+<p>The table lists the supported variable tags by <a class="reference internal" href="../BaseTag/VariableTag/index.html#VariableTag.GetAllHighlevelData" title="VariableTag.GetAllHighlevelData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VariableTag.GetAllHighlevelData()</span></code></a>/<a class="reference internal" href="../BaseTag/VariableTag/index.html#VariableTag.SetAllHighlevelData" title="VariableTag.SetAllHighlevelData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetAllHighlevelData()</span></code></a> and their corresponding data.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="32%" />
+<col width="58%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Tag</th>
+<th class="head">Data</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>Tpoint</em></td>
+<td>list of <a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a></td>
+<td>The points.</td>
+</tr>
+<tr class="row-odd"><td><em>Tpolygon</em></td>
+<td>list of <a class="reference internal" href="../../../../CPolygon/index.html#c4d.CPolygon" title="c4d.CPolygon"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.CPolygon</span></code></a></td>
+<td>The polygons.</td>
+</tr>
+<tr class="row-even"><td><em>Ttangent</em></td>
+<td>list of (<a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>, <a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>)</td>
+<td>The tangents left and right interpolation.</td>
+</tr>
+<tr class="row-odd"><td><em>Tsegment</em></td>
+<td>list of dict{<cite>cnt</cite>: int, <cite>closed</cite>: bool}</td>
+<td>The segments number of points and closed state.</td>
+</tr>
+<tr class="row-even"><td><em>Tline</em></td>
+<td>list of dict{<cite>pos</cite>: float, <cite>t</cite>: float}</td>
+<td>The line points percentage position and original spline point.</td>
+</tr>
+<tr class="row-odd"><td><em>Tvertexmap</em></td>
+<td>list of float</td>
+<td>The vertex map values.</td>
+</tr>
+<tr class="row-even"><td><em>Tnormal</em></td>
+<td>List[int]eger</td>
+<td>The normals. Note: Contains <cite>12</cite> times more elements than <a class="reference internal" href="../BaseTag/VariableTag/index.html#VariableTag.GetDataCount" title="VariableTag.GetDataCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VariableTag.GetDataCount()</span></code></a> returns.</td>
+</tr>
+<tr class="row-odd"><td><em>Tvertexcolor</em></td>
+<td>list of dict{<cite>a</cite>, <cite>b</cite>, <cite>c</cite>, <cite>d</cite>: <a class="reference internal" href="../../../../Vector4d/index.html#c4d.Vector4d" title="c4d.Vector4d"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector4d</span></code></a>}</td>
+<td>The vertex colors for a polygon.</td>
+</tr>
+<tr class="row-even"><td><em>Tsoftselection</em></td>
+<td>list of float</td>
+<td>The soft selection values.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The number of elements in the variable tag.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.IsDirty">
+<code class="descclassname">BaseObject.</code><code class="descname">IsDirty</code><span class="sig-paren">(</span><em>self</em>, <em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.IsDirty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the object has been changed since the last time the object was touched.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>flags</strong> (<em>int</em>) – <p>The object part to check:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="26%" />
+<col width="74%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>DIRTYFLAGS_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>DIRTYFLAGS_MATRIX</em></td>
+<td>Matrix changed.</td>
+</tr>
+<tr class="row-odd"><td><em>DIRTYFLAGS_DATA</em></td>
+<td>Container changed.</td>
+</tr>
+<tr class="row-even"><td><em>DIRTYFLAGS_SELECT</em></td>
+<td>Checks all valid selections of the object, e.g. points, edge, polys.</td>
+</tr>
+<tr class="row-odd"><td><em>DIRTYFLAGS_CACHE</em></td>
+<td>Checks if the cache of an object has been changed (rebuilt).</td>
+</tr>
+<tr class="row-even"><td><em>DIRTYFLAGS_CHILDREN</em></td>
+<td>Checks if the children are dirty.</td>
+</tr>
+<tr class="row-odd"><td><em>DIRTYFLAGS_DESCRIPTION</em></td>
+<td>Description changed.</td>
+</tr>
+<tr class="row-even"><td><em>DIRTYFLAGS_SELECTION_OBJECTS</em></td>
+<td>For <a class="reference internal" href="../../../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDocument</span></code></a>, object selections have changed.</td>
+</tr>
+<tr class="row-odd"><td><em>DIRTYFLAGS_SELECTION_TAGS</em></td>
+<td>For <a class="reference internal" href="../../../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDocument</span></code></a>, tag selections have changed.</td>
+</tr>
+<tr class="row-even"><td><em>DIRTYFLAGS_SELECTION_MATERIALS</em></td>
+<td>For <a class="reference internal" href="../../../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDocument</span></code></a>, material selections have changed.</td>
+</tr>
+<tr class="row-odd"><td><em>DIRTYFLAGS_ALL</em></td>
+<td>Check all dirty flags.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the object is dirty, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.SetDirty">
+<code class="descclassname">BaseObject.</code><code class="descname">SetDirty</code><span class="sig-paren">(</span><em>self</em>, <em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.SetDirty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the object has been changed since the last time the object was touched.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>flags</strong> (<em>int</em>) – See parameters at <a class="reference internal" href="#BaseObject.IsDirty" title="BaseObject.IsDirty"><code class="xref py py-meth docutils literal notranslate"><span class="pre">IsDirty()</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.Touch">
+<code class="descclassname">BaseObject.</code><code class="descname">Touch</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.Touch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mark object to be used by a generator; automatically resets ‘dirty’.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.SetPhong">
+<code class="descclassname">BaseObject.</code><code class="descname">SetPhong</code><span class="sig-paren">(</span><em>self</em>, <em>on</em>, <em>anglelimit</em>, <em>angle</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.SetPhong" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the phong smoothing for the object.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">This function will delete any existing Phong tag.</div>
+<div class="line">If <em>on</em> is set to <strong>True</strong> it will create a new Phong tag.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>on</strong> (<em>bool</em>) – <strong>False</strong> removes the phong tag from the object.</li>
+<li><strong>anglelimit</strong> (<em>bool</em>) – <strong>True</strong> if <em>angle</em> should be used.</li>
+<li><strong>angle</strong> (<em>float</em>) – The phong angle.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Success of changing the smoothing.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetIsoparm">
+<code class="descclassname">BaseObject.</code><code class="descname">GetIsoparm</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetIsoparm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the previously built isoparm representation of the object.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">May return None if the isoparm is not available or is not yet built.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="PointObject/LineObject/index.html#c4d.LineObject" title="c4d.LineObject">c4d.LineObject</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The LineObject representing isoparam.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.SetIsoparm">
+<code class="descclassname">BaseObject.</code><code class="descname">SetIsoparm</code><span class="sig-paren">(</span><em>self</em>, <em>l</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.SetIsoparm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the isoparm representation of the object.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Must only be called from within <a class="reference internal" href="../../../../../c4d.plugins/BaseData/NodeData/ObjectData/index.html#ObjectData.GetVirtualObjects" title="ObjectData.GetVirtualObjects"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ObjectData.GetVirtualObjects()</span></code></a> of a generator object.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>l</strong> (<a class="reference internal" href="PointObject/LineObject/index.html#c4d.LineObject" title="c4d.LineObject"><em>c4d.LineObject</em></a>) – The isoparm representation of the object to set.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetDeformCache">
+<code class="descclassname">BaseObject.</code><code class="descname">GetDeformCache</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetDeformCache" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Gets the previously built cache that has been deformed by an active deformer.</div>
+<div class="line">It is important to understand the concept how the deformer cache operates.</div>
+<div class="line">For each object in the hierarchy that generates a polygonal cache a deformer cache could also have been created by an active deformer object.</div>
+</div>
+<p>A simple example will help to see how this works:</p>
+<img alt="../../../../../../_images/baseobject_cache_arraycube1.png" src="../../../../../../_images/baseobject_cache_arraycube1.png" />
+<div class="line-block">
+<div class="line">Take the simple hierarchy shown above, the array generator object creates a virtual hierarchy in the cache, this can be retrieved using <a class="reference internal" href="#BaseObject.GetCache" title="BaseObject.GetCache"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetCache()</span></code></a>.</div>
+<div class="line">This hierarchy is:</div>
+</div>
+<img alt="../../../../../../_images/baseobject_cache_arraycube2.png" src="../../../../../../_images/baseobject_cache_arraycube2.png" />
+<p>From each of the Cube objects a further cache is generated, this time polygonal:</p>
+<img alt="../../../../../../_images/baseobject_cache_arraycube3.png" src="../../../../../../_images/baseobject_cache_arraycube3.png" />
+<p>From these the deformer object generates a deformed polygon cache:</p>
+<img alt="../../../../../../_images/baseobject_cache_arraycube4.png" src="../../../../../../_images/baseobject_cache_arraycube4.png" />
+<p>So the final hierarchy is:</p>
+<img alt="../../../../../../_images/baseobject_cache_arraycube5.png" src="../../../../../../_images/baseobject_cache_arraycube5.png" />
+<div class="line-block">
+<div class="line">When a deformer becomes active every object/cache object gets a deform cache (if it was a polygonal object).</div>
+<div class="line">The deformer cache is always polygonal and is only ever a single object.</div>
+</div>
+<blockquote>
+<div><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">The caches are always built after all plugins and expressions have been called.</div>
+<div class="line">If the virtual objects have to be accessed to obtain a polygonal based object it is generally advised to call <a class="reference internal" href="../../../../../c4d.utils/index.html#c4d.utils.SendModelingCommand" title="c4d.utils.SendModelingCommand"><code class="xref py py-func docutils literal notranslate"><span class="pre">SendModelingCommand()</span></code></a> with <strong>MCOMMAND_CURRENTSTATETOOBJECT</strong>.</div>
+<div class="line">This will rebuild the cache for the passed object if needed, and then clone the polygonal objects.</div>
+</div>
+</div>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.BaseObject" title="c4d.BaseObject">c4d.BaseObject</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The objects previously built deformed cache. May return <strong>None</strong> if the cache is not available or is not yet built.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetCache">
+<code class="descclassname">BaseObject.</code><code class="descname">GetCache</code><span class="sig-paren">(</span><em>self</em>, <em>hh=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetCache" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the object from the previously built cache.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="line-block">
+<div class="line">Situations can be quite complex in Cinema 4D. For instance <a class="reference internal" href="#BaseObject.GetCache" title="BaseObject.GetCache"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetCache()</span></code></a> could return a list of objects.</div>
+<div class="line">For example the default Sweep Generator internally has some built-in caches for the sweep surface and for the caps.</div>
+<div class="line">The following helper routine can be used to make things easier. It browses through this rather complex hierarchy of objects and caches recursively</div>
+</div>
+<div class="last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">DoRecursion</span><span class="p">(</span><span class="n">op</span><span class="p">):</span>
+<span class="n">tp</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">GetDeformCache</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">tp</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">DoRecursion</span><span class="p">(</span><span class="n">tp</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">tp</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">GetCache</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">tp</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">DoRecursion</span><span class="p">(</span><span class="n">tp</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">op</span><span class="o">.</span><span class="n">GetBit</span><span class="p">(</span><span class="n">c4d</span><span class="o">.</span><span class="n">BIT_CONTROLOBJECT</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">op</span><span class="o">.</span><span class="n">IsInstanceOf</span><span class="p">(</span><span class="n">c4d</span><span class="o">.</span><span class="n">Opolygon</span><span class="p">):</span>
+                <span class="o">...</span>
+
+<span class="n">tp</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">GetDown</span><span class="p">()</span>
+<span class="k">while</span> <span class="n">tp</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">DoRecursion</span><span class="p">(</span><span class="n">tp</span><span class="p">)</span>
+    <span class="n">tp</span> <span class="o">=</span> <span class="n">tp</span><span class="o">.</span><span class="n">GetNext</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<div class="last line-block">
+<div class="line">Use the above routine only if the caches are already built.</div>
+<div class="line">It is for instance not safe to use it in a command plugin since the user can have stopped the scene redraw and the building of caches.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>hh</strong> (<em>HierarchyHelp - Not implemented</em>) – <div class="line-block">
+<div class="line">An optional hierarchy helper for the operation. Only for some special cases a hierarchy help must be passed.</div>
+<div class="line">Usually passed through from a calling function, for example from <a class="reference internal" href="../../../../../c4d.plugins/BaseData/NodeData/ObjectData/index.html#ObjectData.GetVirtualObjects" title="ObjectData.GetVirtualObjects"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ObjectData.GetVirtualObjects()</span></code></a> or a Python generator <cite>main()</cite>.</div>
+</div>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.BaseObject" title="c4d.BaseObject">c4d.BaseObject</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The object’s previously built cache. May return <strong>None</strong> if the cache is not available or is not yet built.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetCacheParent">
+<code class="descclassname">BaseObject.</code><code class="descname">GetCacheParent</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetCacheParent" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">A cache/deform object has no <a class="reference internal" href="../../index.html#GeListNode.GetUp" title="GeListNode.GetUp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetUp</span></code></a> link.</div>
+<div class="line">Instead this method can be called to detect the cache building parent.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.BaseObject" title="c4d.BaseObject">c4d.BaseObject</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The cache parent or <strong>None</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.CheckCache">
+<code class="descclassname">BaseObject.</code><code class="descname">CheckCache</code><span class="sig-paren">(</span><em>self</em>, <em>hh</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.CheckCache" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Check if cache is built, if it matches the requirements (polygonized/isoparm, level of detail etc.).</div>
+<div class="line">It returns the dirty status of the cache.</div>
+</div>
+<blockquote>
+<div><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function must only be called from within <a class="reference internal" href="../../../../../c4d.plugins/BaseData/NodeData/ObjectData/index.html#ObjectData.GetVirtualObjects" title="ObjectData.GetVirtualObjects"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ObjectData.GetVirtualObjects()</span></code></a>/<cite>main()</cite> of a generator object.</p>
+</div>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>hh</strong> (<em>HierarchyHelp - Not implemented</em>) – <div class="line-block">
+<div class="line">A hierarchy helper for the operation.</div>
+<div class="line">Usually passed through from a calling function, for example from <a class="reference internal" href="../../../../../c4d.plugins/BaseData/NodeData/ObjectData/index.html#ObjectData.GetVirtualObjects" title="ObjectData.GetVirtualObjects"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ObjectData.GetVirtualObjects()</span></code></a> or a Python generator <cite>main()</cite>.</div>
+</div>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the cache is dirty, <strong>False</strong> if it is valid.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetHighlightHandle">
+<code class="descclassname">BaseObject.</code><code class="descname">GetHighlightHandle</code><span class="sig-paren">(</span><em>self</em>, <em>bd</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetHighlightHandle" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Checks if a highlight handle has been hit, by returning the ID previously returned by <a class="reference internal" href="../../../../../c4d.plugins/BaseData/NodeData/ObjectData/index.html#ObjectData.DetectHandle" title="ObjectData.DetectHandle"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ObjectData.DetectHandle()</span></code></a>.</div>
+<div class="line">The handle can then be drawn in the highlight mode.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>bd</strong> (<a class="reference internal" href="../BaseView/BaseDraw/index.html#c4d.BaseDraw" title="c4d.BaseDraw"><em>c4d.BaseDraw</em></a>) – A base draw.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The handle ID.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.NewDependenceList">
+<code class="descclassname">BaseObject.</code><code class="descname">NewDependenceList</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.NewDependenceList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start a new dependence list. These enable you to keep track of changes made to any children.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The object must be children of your object.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.CompareDependenceList">
+<code class="descclassname">BaseObject.</code><code class="descname">CompareDependenceList</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.CompareDependenceList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compares if anything in the dependence list has changed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the list has not changed (are the same).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.AddDependence">
+<code class="descclassname">BaseObject.</code><code class="descname">AddDependence</code><span class="sig-paren">(</span><em>self</em>, <em>hh</em>, <em>op</em>, <em>dirtyflags=DIRTYFLAGS_DATA | DIRTYFLAGS_MATRIX</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.AddDependence" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Add a child object to the dependence list.</div>
+<div class="line">Usually this will be child objects that are used by a generator object.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>hh</strong> (<em>HierarchyHelp - Not implemented</em>) – <div class="line-block">
+<div class="line">A hierarchy helper for the operation.</div>
+<div class="line">Usually passed through from a calling function, for example from <a class="reference internal" href="../../../../../c4d.plugins/BaseData/NodeData/ObjectData/index.html#ObjectData.GetVirtualObjects" title="ObjectData.GetVirtualObjects"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ObjectData.GetVirtualObjects()</span></code></a> or a Python generator <cite>main()</cite> function.</div>
+</div>
+</li>
+<li><strong>op</strong> (<a class="reference internal" href="#c4d.BaseObject" title="c4d.BaseObject"><em>c4d.BaseObject</em></a>) – The child object to add to the dependence list.</li>
+<li><strong>dirtyflags</strong> (<em>int</em>) – <div class="versionadded">
+<p><span class="versionmodified">New in version R19.024.</span></p>
+</div>
+<p>The dirty flags stored within the dependence list:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="26%" />
+<col width="74%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>DIRTYFLAGS_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>DIRTYFLAGS_MATRIX</em></td>
+<td>Matrix changed.</td>
+</tr>
+<tr class="row-odd"><td><em>DIRTYFLAGS_DATA</em></td>
+<td>Container changed.</td>
+</tr>
+<tr class="row-even"><td><em>DIRTYFLAGS_SELECT</em></td>
+<td>Checks all valid selections of the object, e.g. points, edge, polys.</td>
+</tr>
+<tr class="row-odd"><td><em>DIRTYFLAGS_CACHE</em></td>
+<td>Checks if the cache of an object has been changed (rebuilt).</td>
+</tr>
+<tr class="row-even"><td><em>DIRTYFLAGS_CHILDREN</em></td>
+<td>Checks if the children are dirty.</td>
+</tr>
+<tr class="row-odd"><td><em>DIRTYFLAGS_DESCRIPTION</em></td>
+<td>Description changed.</td>
+</tr>
+<tr class="row-even"><td><em>DIRTYFLAGS_SELECTION_OBJECTS</em></td>
+<td>For <a class="reference internal" href="../../../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDocument</span></code></a>, object selections have changed.</td>
+</tr>
+<tr class="row-odd"><td><em>DIRTYFLAGS_SELECTION_TAGS</em></td>
+<td>For <a class="reference internal" href="../../../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDocument</span></code></a>, tag selections have changed.</td>
+</tr>
+<tr class="row-even"><td><em>DIRTYFLAGS_SELECTION_MATERIALS</em></td>
+<td>For <a class="reference internal" href="../../../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDocument</span></code></a>, material selections have changed.</td>
+</tr>
+<tr class="row-odd"><td><em>DIRTYFLAGS_ALL</em></td>
+<td>Check all dirty flags.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.TouchDependenceList">
+<code class="descclassname">BaseObject.</code><code class="descname">TouchDependenceList</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.TouchDependenceList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mark all the objects in the dependence list that they will be replaced by the generator.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.SearchHierarchy">
+<code class="descclassname">BaseObject.</code><code class="descname">SearchHierarchy</code><span class="sig-paren">(</span><em>self</em>, <em>op</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.SearchHierarchy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the object is a child of <em>op</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>op</strong> (<a class="reference internal" href="#c4d.BaseObject" title="c4d.BaseObject"><em>c4d.BaseObject</em></a>) – Check within this object’s hierarchy.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the object is a child of op, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetAndCheckHierarchyClone">
+<code class="descclassname">BaseObject.</code><code class="descname">GetAndCheckHierarchyClone</code><span class="sig-paren">(</span><em>self</em>, <em>hh</em>, <em>op</em>, <em>flags</em>, <em>allchildren</em>, <em>dirty=None</em>, <em>trans=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetAndCheckHierarchyClone" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Check and generate a clone of the child objects of a parent generator.</div>
+<div class="line">This is similar to <a class="reference internal" href="#BaseObject.GetHierarchyClone" title="BaseObject.GetHierarchyClone"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetHierarchyClone()</span></code></a> except that it will check if the hierarchy is dirty and if not it will not need to generate a new clone.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>hh</strong> (<em>HierarchyHelp - Not implemented</em>) – <div class="line-block">
+<div class="line">A hierarchy helper for the operation.</div>
+<div class="line">Usually passed through from a calling function, for example from <a class="reference internal" href="../../../../../c4d.plugins/BaseData/NodeData/ObjectData/index.html#ObjectData.GetVirtualObjects" title="ObjectData.GetVirtualObjects"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ObjectData.GetVirtualObjects()</span></code></a> or a Python generator <cite>main()</cite> function.</div>
+</div>
+</li>
+<li><strong>op</strong> (<a class="reference internal" href="#c4d.BaseObject" title="c4d.BaseObject"><em>c4d.BaseObject</em></a>) – The object to start the clone from, usually the first child of the parent object.</li>
+<li><strong>flags</strong> (<em>int</em>) – <p>The flags for the generation of the cloned chain, the values are:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="36%" />
+<col width="64%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>HIERARCHYCLONEFLAGS_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>HIERARCHYCLONEFLAGS_ASIS</em></td>
+<td>Objects unchanged. (Used by e.g. <em>Oarray</em>.)</td>
+</tr>
+<tr class="row-odd"><td><em>HIERARCHYCLONEFLAGS_ASPOLY</em></td>
+<td>Objects cloned as polygons. (Used by e.g. HyperNURBS.)</td>
+</tr>
+<tr class="row-even"><td><em>HIERARCHYCLONEFLAGS_ASLINE</em></td>
+<td>Objects cloned as line objects.</td>
+</tr>
+<tr class="row-odd"><td><em>HIERARCHYCLONEFLAGS_ASSPLINE</em></td>
+<td>Objects cloned as splines.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>allchildren</strong> (<em>bool</em>) – <strong>True</strong> if all children should be used in the check.</li>
+<li><strong>dirty</strong> (<em>bool</em>) – <div class="versionadded">
+<p><span class="versionmodified">New in version R18.057.</span></p>
+</div>
+<p>Has to be set to <strong>None</strong> (or left unset) for the cloning to take place. Set to <strong>True</strong> if some part of the child objects in the chain has changed, or <strong>False</strong> if nothing has changed.</p>
+</li>
+<li><strong>trans</strong> (<a class="reference internal" href="../../../../AliasTrans/index.html#c4d.AliasTrans" title="c4d.AliasTrans"><em>c4d.AliasTrans</em></a>) – <div class="versionadded">
+<p><span class="versionmodified">New in version R18.057.</span></p>
+</div>
+<p>An optional alias translator for the operation.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">dict{<strong>clone</strong>: <a class="reference internal" href="#c4d.BaseObject" title="c4d.BaseObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseObject</span></code></a>, <strong>dirty</strong>: bool}</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The cloned object and a dirty flag: <strong>True</strong> if some part of the child objects in the chain has changed, or <strong>False</strong> if nothing has changed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetHierarchyClone">
+<code class="descclassname">BaseObject.</code><code class="descname">GetHierarchyClone</code><span class="sig-paren">(</span><em>self</em>, <em>hh</em>, <em>op</em>, <em>flags</em>, <em>dirty=None</em>, <em>trans=None</em>, <em>dirtyflags=DIRTYFLAGS_DATA | DIRTYFLAGS_MATRIX</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetHierarchyClone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a clone of the child objects of a parent generator.</p>
+<div class="line-block">
+<div class="line">The result returned by <a class="reference internal" href="#BaseObject.GetAndCheckHierarchyClone" title="BaseObject.GetAndCheckHierarchyClone"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetAndCheckHierarchyClone()</span></code></a> will be a chain of objects with various types. Passing <em>HIERARCHYCLONEFLAGS_ASLINE</em> e.g. will force all splines to be converted, but not every object in the chain will be of type <em>Oline</em>.</div>
+<div class="line">Some objects like <a class="reference internal" href="PointObject/PolygonObject/index.html#c4d.PolygonObject" title="c4d.PolygonObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PolygonObject</span></code></a> cannot be converted, also there are <em>Onull</em>.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>hh</strong> (<em>HierarchyHelp - Not implemented</em>) – <div class="line-block">
+<div class="line">A hierarchy helper for the operation.</div>
+<div class="line">Usually passed through from a calling function, for example from <a class="reference internal" href="../../../../../c4d.plugins/BaseData/NodeData/ObjectData/index.html#ObjectData.GetVirtualObjects" title="ObjectData.GetVirtualObjects"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ObjectData.GetVirtualObjects()</span></code></a> or a Python generator <cite>main()</cite> function.</div>
+</div>
+</li>
+<li><strong>op</strong> (<a class="reference internal" href="#c4d.BaseObject" title="c4d.BaseObject"><em>c4d.BaseObject</em></a>) – The object to start the clone from, usually the parent object itself.</li>
+<li><strong>flags</strong> (<em>int</em>) – <p>The flags for the generation of the cloned chain, the values are:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="36%" />
+<col width="64%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>HIERARCHYCLONEFLAGS_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>HIERARCHYCLONEFLAGS_ASIS</em></td>
+<td>Objects unchanged. (Used by e.g. <em>Oarray</em>.)</td>
+</tr>
+<tr class="row-odd"><td><em>HIERARCHYCLONEFLAGS_ASPOLY</em></td>
+<td>Objects cloned as polygons. (Used by e.g. HyperNURBS.)</td>
+</tr>
+<tr class="row-even"><td><em>HIERARCHYCLONEFLAGS_ASLINE</em></td>
+<td>Objects cloned as line objects.</td>
+</tr>
+<tr class="row-odd"><td><em>HIERARCHYCLONEFLAGS_ASSPLINE</em></td>
+<td>Objects cloned as splines.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>dirty</strong> (<em>bool</em>) – <div class="versionadded">
+<p><span class="versionmodified">New in version R18.057.</span></p>
+</div>
+<p>Has to be set to <strong>None</strong> (or left unset) for the cloning to take place. Set to <strong>True</strong> if some part of the child objects in the chain has changed, or <strong>False</strong> if nothing has changed.</p>
+</li>
+<li><strong>trans</strong> (<a class="reference internal" href="../../../../AliasTrans/index.html#c4d.AliasTrans" title="c4d.AliasTrans"><em>c4d.AliasTrans</em></a>) – <div class="versionadded">
+<p><span class="versionmodified">New in version R18.057.</span></p>
+</div>
+<p>An optional alias translator for the operation.</p>
+</li>
+<li><strong>dirtyflags</strong> (<em>int</em>) – <div class="versionadded">
+<p><span class="versionmodified">New in version R19.024.</span></p>
+</div>
+<p>The dirty flags stored within the dependence list:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="26%" />
+<col width="74%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>DIRTYFLAGS_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>DIRTYFLAGS_MATRIX</em></td>
+<td>Matrix changed.</td>
+</tr>
+<tr class="row-odd"><td><em>DIRTYFLAGS_DATA</em></td>
+<td>Container changed.</td>
+</tr>
+<tr class="row-even"><td><em>DIRTYFLAGS_SELECT</em></td>
+<td>Checks all valid selections of the object, e.g. points, edge, polys.</td>
+</tr>
+<tr class="row-odd"><td><em>DIRTYFLAGS_CACHE</em></td>
+<td>Checks if the cache of an object has been changed (rebuilt).</td>
+</tr>
+<tr class="row-even"><td><em>DIRTYFLAGS_CHILDREN</em></td>
+<td>Checks if the children are dirty.</td>
+</tr>
+<tr class="row-odd"><td><em>DIRTYFLAGS_DESCRIPTION</em></td>
+<td>Description changed.</td>
+</tr>
+<tr class="row-even"><td><em>DIRTYFLAGS_SELECTION_OBJECTS</em></td>
+<td>For <a class="reference internal" href="../../../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDocument</span></code></a>, object selections have changed.</td>
+</tr>
+<tr class="row-odd"><td><em>DIRTYFLAGS_SELECTION_TAGS</em></td>
+<td>For <a class="reference internal" href="../../../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDocument</span></code></a>, tag selections have changed.</td>
+</tr>
+<tr class="row-even"><td><em>DIRTYFLAGS_SELECTION_MATERIALS</em></td>
+<td>For <a class="reference internal" href="../../../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDocument</span></code></a>, material selections have changed.</td>
+</tr>
+<tr class="row-odd"><td><em>DIRTYFLAGS_ALL</em></td>
+<td>Check all dirty flags.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">dict{<strong>clone</strong>: <a class="reference internal" href="#c4d.BaseObject" title="c4d.BaseObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseObject</span></code></a>, <strong>dirty</strong>: bool}</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The cloned object and a dirty flag: <strong>True</strong> if some part of the child objects in the chain has changed, or <strong>False</strong> if nothing has changed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.SetRotationOrder">
+<code class="descclassname">BaseObject.</code><code class="descname">SetRotationOrder</code><span class="sig-paren">(</span><em>self</em>, <em>order</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.SetRotationOrder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the rotation order of the object.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R14.014.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>order</strong> (<em>int</em>) – <p>The new rotation order:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="42%" />
+<col width="58%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>ROTATIONORDER_YXZGLOBAL</em></td>
+<td>Global YXZ order.</td>
+</tr>
+<tr class="row-even"><td><em>ROTATIONORDER_YZXGLOBAL</em></td>
+<td>Global YZX order.</td>
+</tr>
+<tr class="row-odd"><td><em>ROTATIONORDER_ZYXGLOBAL</em></td>
+<td>Global ZYX order.</td>
+</tr>
+<tr class="row-even"><td><em>ROTATIONORDER_ZXYGLOBAL</em></td>
+<td>Global ZXY order.</td>
+</tr>
+<tr class="row-odd"><td><em>ROTATIONORDER_XZYGLOBAL</em></td>
+<td>Global XZY order.</td>
+</tr>
+<tr class="row-even"><td><em>ROTATIONORDER_XYZGLOBAL</em></td>
+<td>Global XYZ order.</td>
+</tr>
+<tr class="row-odd"><td><em>ROTATIONORDER_YXZLOCAL</em></td>
+<td>Local YXZ order.</td>
+</tr>
+<tr class="row-even"><td><em>ROTATIONORDER_YZXLOCAL</em></td>
+<td>Local YZX order.</td>
+</tr>
+<tr class="row-odd"><td><em>ROTATIONORDER_ZYXLOCAL</em></td>
+<td>Local ZYX order.</td>
+</tr>
+<tr class="row-even"><td><em>ROTATIONORDER_ZXYLOCAL</em></td>
+<td>Local ZXY order.</td>
+</tr>
+<tr class="row-odd"><td><em>ROTATIONORDER_XZYLOCAL</em></td>
+<td>Local XZY order.</td>
+</tr>
+<tr class="row-even"><td><em>ROTATIONORDER_XYZLOCAL</em></td>
+<td>Local XYZ order.</td>
+</tr>
+<tr class="row-odd"><td><em>ROTATIONORDER_HPB</em></td>
+<td>HPB order.</td>
+</tr>
+<tr class="row-even"><td><em>ROTATIONORDER_DEFAULT</em></td>
+<td>Default order. <em>ROTATIONORDER_HPB</em>.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetRotationOrder">
+<code class="descclassname">BaseObject.</code><code class="descname">GetRotationOrder</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetRotationOrder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the rotation order of the object.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R14.014.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The rotation order:<table border="1" class="docutils">
+<colgroup>
+<col width="42%" />
+<col width="58%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>ROTATIONORDER_YXZGLOBAL</em></td>
+<td>Global YXZ order.</td>
+</tr>
+<tr class="row-even"><td><em>ROTATIONORDER_YZXGLOBAL</em></td>
+<td>Global YZX order.</td>
+</tr>
+<tr class="row-odd"><td><em>ROTATIONORDER_ZYXGLOBAL</em></td>
+<td>Global ZYX order.</td>
+</tr>
+<tr class="row-even"><td><em>ROTATIONORDER_ZXYGLOBAL</em></td>
+<td>Global ZXY order.</td>
+</tr>
+<tr class="row-odd"><td><em>ROTATIONORDER_XZYGLOBAL</em></td>
+<td>Global XZY order.</td>
+</tr>
+<tr class="row-even"><td><em>ROTATIONORDER_XYZGLOBAL</em></td>
+<td>Global XYZ order.</td>
+</tr>
+<tr class="row-odd"><td><em>ROTATIONORDER_YXZLOCAL</em></td>
+<td>Local YXZ order.</td>
+</tr>
+<tr class="row-even"><td><em>ROTATIONORDER_YZXLOCAL</em></td>
+<td>Local YZX order.</td>
+</tr>
+<tr class="row-odd"><td><em>ROTATIONORDER_ZYXLOCAL</em></td>
+<td>Local ZYX order.</td>
+</tr>
+<tr class="row-even"><td><em>ROTATIONORDER_ZXYLOCAL</em></td>
+<td>Local ZXY order.</td>
+</tr>
+<tr class="row-odd"><td><em>ROTATIONORDER_XZYLOCAL</em></td>
+<td>Local XZY order.</td>
+</tr>
+<tr class="row-even"><td><em>ROTATIONORDER_XYZLOCAL</em></td>
+<td>Local XYZ order.</td>
+</tr>
+<tr class="row-odd"><td><em>ROTATIONORDER_HPB</em></td>
+<td>HPB order.</td>
+</tr>
+<tr class="row-even"><td><em>ROTATIONORDER_DEFAULT</em></td>
+<td>Default order. <em>ROTATIONORDER_HPB</em>.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetGUID">
+<code class="descclassname">BaseObject.</code><code class="descname">GetGUID</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetGUID" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns a unique ID for any object in a document.</div>
+<div class="line">This works for generated objects in a cache (e.g. clones generated by a MoGraph cloner) and also for ‘real’ objects in the document (this is special, because <a class="reference internal" href="#BaseObject.GetUniqueIP" title="BaseObject.GetUniqueIP"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetUniqueIP()</span></code></a> does not do this).</div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R14.014.</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The ID generation for cache objects is based on <a class="reference internal" href="#BaseObject.GetUniqueIP" title="BaseObject.GetUniqueIP"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetUniqueIP()</span></code></a>, so if two cache objects have the same IP, they will probably also get the same GUID (unless they are point objects or polygon objects with different point or poly count).</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The ID generation for ‘real’ objects is based on the object’s marker, so if an object has no marker it will not return a GUID.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">long</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A checksum for the object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.SetQuaternionRotationMode">
+<code class="descclassname">BaseObject.</code><code class="descname">SetQuaternionRotationMode</code><span class="sig-paren">(</span><em>self</em>, <em>active</em>, <em>undo</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.SetQuaternionRotationMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the quaternion rotation mode of the object.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.020.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>active</strong> (<em>bool</em>) – Enable/Disable the quaternion rotation mode for the object.</li>
+<li><strong>undo</strong> (<em>bool</em>) – <div class="line-block">
+<div class="line">Add undo for the change of quaternion rotation mode.</div>
+<div class="line">The caller has to to manage start/end of undo actions with <a class="reference internal" href="../../../../../c4d.documents/BaseDocument/index.html#BaseDocument.StartUndo" title="BaseDocument.StartUndo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.StartUndo()</span></code></a>/<a class="reference internal" href="../../../../../c4d.documents/BaseDocument/index.html#BaseDocument.EndUndo" title="BaseDocument.EndUndo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">EndUndo()</span></code></a>.</div>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.IsQuaternionRotationMode">
+<code class="descclassname">BaseObject.</code><code class="descname">IsQuaternionRotationMode</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.IsQuaternionRotationMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if object rotation is interpolated in quaternion mode.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.020.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if rotation interpolation is quaternion, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.SynchronizeVectorTrackKeys">
+<code class="descclassname">BaseObject.</code><code class="descname">SynchronizeVectorTrackKeys</code><span class="sig-paren">(</span><em>self</em>, <em>vectorTrackID</em>, <em>bUndo</em>, <em>startRange=BaseTime(-108000</em>, <em>1)</em>, <em>endRange=BaseTime(108000</em>, <em>1)</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.SynchronizeVectorTrackKeys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes sure that the track Curves components are synchronized (keys on each component).</p>
+<p>If a component track is found, the other track components will be synchronized.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.020.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>vectorTrackID</strong> (<em>int</em>) – ID of the vector track to synchronize.</li>
+<li><strong>undo</strong> (<em>int</em>) – Add undo to value changed (need to manage start and end externally).</li>
+<li><strong>startRange</strong> (<a class="reference internal" href="../../../../BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><em>c4d.BaseTime</em></a>) – Optionally start operation at given time.</li>
+<li><strong>endRange</strong> (<a class="reference internal" href="../../../../BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><em>c4d.BaseTime</em></a>) – Optionally end operation at given time.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if track synchronization was successful, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.FindBestEulerAngle">
+<code class="descclassname">BaseObject.</code><code class="descname">FindBestEulerAngle</code><span class="sig-paren">(</span><em>self</em>, <em>rotationTrackID</em>, <em>adjustTangent</em>, <em>undo</em>, <em>startRange=BaseTime(-108000</em>, <em>1)</em>, <em>endRange=BaseTime(108000</em>, <em>1)</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.FindBestEulerAngle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tries to find the best Euler angle according to the previous key.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The object must have keys on each component.</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.020.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>rotationTrackID</strong> (<em>int</em>) – Rotation Track ID to manage (relative, global, absolute, frozen).</li>
+<li><strong>adjustTangent</strong> (<em>bool</em>) – Try to adjust the tangent with new value, if <strong>False</strong> auto is used.</li>
+<li><strong>undo</strong> (<em>int</em>) – Add undo to value changed (need to manage start and end externally).</li>
+<li><strong>startRange</strong> (<a class="reference internal" href="../../../../BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><em>c4d.BaseTime</em></a>) – Optionally start operation at given time.</li>
+<li><strong>endRange</strong> (<a class="reference internal" href="../../../../BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><em>c4d.BaseTime</em></a>) – Optionally end operation at given time.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if rotation synchronization was successful, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.EvaluateSynchronizedRotation">
+<code class="descclassname">BaseObject.</code><code class="descname">EvaluateSynchronizedRotation</code><span class="sig-paren">(</span><em>self</em>, <em>time</em>, <em>flags</em>, <em>applyRotation=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.EvaluateSynchronizedRotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Forces an evaluation of all rotation tracks and considers quaternion interpolation.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.020.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time</strong> (<a class="reference internal" href="../../../../BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><em>c4d.BaseTime</em></a>) – The evaluation time.</li>
+<li><strong>flags</strong> (<a class="reference internal" href="../../../../BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><em>c4d.BaseTime</em></a>) – <p>The animate flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="53%" />
+<col width="47%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>ANIMATEFLAGS_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>ANIMATEFLAGS_NO_PARTICLES</em></td>
+<td>Ignore particles.</td>
+</tr>
+<tr class="row-odd"><td><em>ANIMATEFLAGS_NO_CHILDREN</em></td>
+<td>Do not animate children.</td>
+</tr>
+<tr class="row-even"><td><em>ANIMATEFLAGS_INRENDER</em></td>
+<td>Prepare to render scene.</td>
+</tr>
+<tr class="row-odd"><td><em>ANIMATEFLAGS_NO_MINMAX</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-even"><td><em>ANIMATEFLAGS_NO_NLA</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-odd"><td><em>ANIMATEFLAGS_NLA_SUM</em></td>
+<td>Private.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>applyRotation</strong> (<em>bool</em>) – <div class="versionadded">
+<p><span class="versionmodified">New in version R18.039.</span></p>
+</div>
+<p>Pass <strong>False</strong> to return rotation result instead of updating attributes.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool or tuple(bool, <a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="line-block">
+<div class="line">If <em>applyRotation</em> is <strong>True</strong>, a bool giving the evaluation result.</div>
+<div class="line">If <em>applyRotation</em> is <strong>False</strong>, a tuple with the following information:</div>
+<div class="line">bool: <strong>True</strong> if evaluation was a success, otherwise <strong>False</strong>.</div>
+<div class="line"><a class="reference internal" href="../../../../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>: The rotation vector result.</div>
+</div>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetVectorTracks">
+<code class="descclassname">BaseObject.</code><code class="descname">GetVectorTracks</code><span class="sig-paren">(</span><em>self</em>, <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetVectorTracks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns each component track for the given <em>id</em>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.020.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id</strong> (<a class="reference internal" href="../../../../DescID/index.html#c4d.DescID" title="c4d.DescID"><em>c4d.DescID</em></a>) – ID of desired vector.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">tuple(bool, <a class="reference internal" href="../CTrack/index.html#c4d.CTrack" title="c4d.CTrack"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.CTrack</span></code></a>, <a class="reference internal" href="../CTrack/index.html#c4d.CTrack" title="c4d.CTrack"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.CTrack</span></code></a>, <a class="reference internal" href="../CTrack/index.html#c4d.CTrack" title="c4d.CTrack"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.CTrack</span></code></a>)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A tuple with the following information:<div class="line-block">
+<div class="line">bool: <strong>True</strong> if successful, otherwise <strong>False</strong>.</div>
+<div class="line"><a class="reference internal" href="../CTrack/index.html#c4d.CTrack" title="c4d.CTrack"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.CTrack</span></code></a>: The X track of vector, or <strong>None</strong> if not found.</div>
+<div class="line"><a class="reference internal" href="../CTrack/index.html#c4d.CTrack" title="c4d.CTrack"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.CTrack</span></code></a>: The Y track of vector, or <strong>None</strong> if not found.</div>
+<div class="line"><a class="reference internal" href="../CTrack/index.html#c4d.CTrack" title="c4d.CTrack"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.CTrack</span></code></a>: The Z track of vector, or <strong>None</strong> if not found.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetVectorCurves">
+<code class="descclassname">BaseObject.</code><code class="descname">GetVectorCurves</code><span class="sig-paren">(</span><em>self</em>, <em>curveToSearch</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetVectorCurves" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns each component curve for the given curve.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.020.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>curveToSearch</strong> (<a class="reference internal" href="../CCurve/index.html#c4d.CCurve" title="c4d.CCurve"><em>c4d.CCurve</em></a>) – The curve component of desired vector.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">tuple(bool, <a class="reference internal" href="../CCurve/index.html#c4d.CCurve" title="c4d.CCurve"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.CCurve</span></code></a>, <a class="reference internal" href="../CCurve/index.html#c4d.CCurve" title="c4d.CCurve"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.CCurve</span></code></a>, <a class="reference internal" href="../CCurve/index.html#c4d.CCurve" title="c4d.CCurve"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.CCurve</span></code></a>)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A tuple with the following information:<div class="line-block">
+<div class="line">bool: <strong>True</strong> if successful, otherwise <strong>False</strong>.</div>
+<div class="line"><a class="reference internal" href="../CCurve/index.html#c4d.CCurve" title="c4d.CCurve"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.CCurve</span></code></a>: The X curve of vector, or <strong>None</strong> if not found.</div>
+<div class="line"><a class="reference internal" href="../CCurve/index.html#c4d.CCurve" title="c4d.CCurve"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.CCurve</span></code></a>: The Y curve of vector, or <strong>None</strong> if not found.</div>
+<div class="line"><a class="reference internal" href="../CCurve/index.html#c4d.CCurve" title="c4d.CCurve"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.CCurve</span></code></a>: The Z curve of vector, or <strong>None</strong> if not found.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.GetModelingAxis">
+<code class="descclassname">BaseObject.</code><code class="descname">GetModelingAxis</code><span class="sig-paren">(</span><em>self</em>, <em>doc</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.GetModelingAxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the internal matrix for the modeling axis.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To access the axis type, and other axis options, use the IDs defined in <cite>toolmodelingaxis.h</cite>.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#BaseObject.SetModelingAxis" title="BaseObject.SetModelingAxis"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetModelingAxis()</span></code></a></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>doc</strong> (<a class="reference internal" href="../../../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document for the operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../Matrix/index.html#c4d.Matrix" title="c4d.Matrix">c4d.Matrix</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The modeling axis.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseObject.SetModelingAxis">
+<code class="descclassname">BaseObject.</code><code class="descname">SetModelingAxis</code><span class="sig-paren">(</span><em>self</em>, <em>m</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseObject.SetModelingAxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the internal matrix for the modeling axis.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="line-block">
+<div class="line">To access the axis type, and other axis options, use the IDs in <cite>toolmodelingaxis.h</cite>.</div>
+<div class="line">Here is a code sample:</div>
+</div>
+<div class="last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">c4d</span>
+
+    <span class="k">def</span> <span class="nf">SetToolData</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">toolID</span><span class="p">,</span> <span class="n">paramID</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="n">plug</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">FindPlugin</span><span class="p">(</span><span class="n">toolID</span><span class="p">,</span> <span class="n">c4d</span><span class="o">.</span><span class="n">PLUGINTYPE_TOOL</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">plug</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span>
+
+    <span class="n">plug</span><span class="p">[</span><span class="n">paramID</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span>
+    <span class="n">SetToolData</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">c4d</span><span class="o">.</span><span class="n">ID_MODELING_LIVESELECTION</span><span class="p">,</span> <span class="n">c4d</span><span class="o">.</span><span class="n">MDATA_AXIS_MODE</span><span class="p">,</span> <span class="n">c4d</span><span class="o">.</span><span class="n">MDATA_AXIS_MODE_FREE</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>m</strong> (<a class="reference internal" href="../../../../Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><em>c4d.Matrix</em></a>) – The new modeling axis to set.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="CameraObject/index.html" title="c4d.CameraObject"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../BaseMaterial/Material/index.html" title="c4d.Material"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../../index.html" >c4d</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../../index.html" >c4d.C4DAtom</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../../index.html" >c4d.GeListNode</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="../index.html" >c4d.BaseList2D</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Python Generator &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Python Effector" href="python_effector.html" />
+    <link rel="prev" title="Tips to switch from C.O.F.F.E.E to Python" href="../manual_coffee_to_python.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="python_effector.html" title="Python Effector"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../manual_coffee_to_python.html" title="Tips to switch from C.O.F.F.E.E to Python"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Manual List</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="python-generator">
+<span id="manual-python-generator"></span><h1>Python Generator<a class="headerlink" href="#python-generator" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>A Python Generator is used to generate object(s) in Python.
+It can be found in the generator menu.</p>
+<img alt="../../_images/Python_generator.jpg" src="../../_images/Python_generator.jpg" />
+<dl class="docutils">
+<dt>A Python Generator is implemented through a <a class="reference internal" href="../../modules/c4d.plugins/BaseData/NodeData/ObjectData/index.html#c4d.plugins.ObjectData" title="c4d.plugins.ObjectData"><code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectData</span></code></a> plugin, registered with the next flags:</dt>
+<dd><ul class="first last simple">
+<li>OBJECT_GENERATOR</li>
+<li>OBJECT_USECACHECOLOR</li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">A Python Generator should not create/modify objects in the scene, instead it should clone the object, modify and return this object.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">The important <a class="reference internal" href="../application_development/threading.html#threading-information"><span class="std std-ref">Threading Information</span></a>.</p>
+</div>
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt>
+<code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Override - It corresponds to the <a class="reference internal" href="../../modules/c4d.plugins/BaseData/NodeData/ObjectData/index.html#ObjectData.GetVirtualObjects" title="ObjectData.GetVirtualObjects"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetVirtualObjects</span></code></a> method of the Python Generator.
+It can be called multiple time per frame.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject">BaseObject</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The BaseObject generated (can be a PolygonObject or None).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you want to return multiple objects, add objects under a null and returns this null object.</p>
+</div>
+<dl class="method">
+<dt>
+<code class="descname">message</code><span class="sig-paren">(</span><em>id</em>, <em>data</em><span class="sig-paren">)</span></dt>
+<dd><p>Override - It corresponds to the <code class="xref py py-meth docutils literal notranslate"><span class="pre">Message</span></code> method of the Python Generator.
+Called when a node receives messages.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>int</em>) – The message type.</li>
+<li><strong>data</strong> (<em>any</em>) – The message data.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Depends on the message type.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Next variables are defined in a Python Generator scope (in all functions even yours):</dt>
+<dd><ul class="first last">
+<li><p class="first"><cite>doc</cite>: <a class="reference internal" href="../../modules/c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDocument</span></code></a> : The document hosting the Python Generator.</p>
+</li>
+<li><p class="first"><cite>op</cite>: <a class="reference internal" href="../../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseObject</span></code></a> : The Python Generator.</p>
+</li>
+<li><dl class="first docutils">
+<dt><cite>hh</cite>: HierarchyHelp - Not implemented <span class="classifier-delimiter">:</span> <span class="classifier">An optional hierarchy helper for the operation.</span></dt>
+<dd><div class="first last line-block">
+<div class="line">Only for some special cases a hierarchy help must be passed.</div>
+<div class="line">Usually passed through a calling function, for example from <a class="reference internal" href="../../modules/c4d.plugins/BaseData/NodeData/ObjectData/index.html#ObjectData.GetVirtualObjects" title="ObjectData.GetVirtualObjects"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ObjectData.GetVirtualObjects()</span></code></a> or a Python Generator <cite>main()</cite>.</div>
+</div>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Python Generator</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#variables">Variables</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="python_effector.html" title="Python Effector"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../manual_coffee_to_python.html" title="Tips to switch from C.O.F.F.E.E to Python"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Manual List</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

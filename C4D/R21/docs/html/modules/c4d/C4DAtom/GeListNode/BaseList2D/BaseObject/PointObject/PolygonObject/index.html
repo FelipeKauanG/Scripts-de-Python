@@ -1,0 +1,888 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.PolygonObject &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../../../" src="../../../../../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../../../search.html" />
+    <link rel="next" title="c4d.SplineObject" href="../SplineObject/index.html" />
+    <link rel="prev" title="c4d.LineObject" href="../LineObject/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../SplineObject/index.html" title="c4d.SplineObject"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../LineObject/index.html" title="c4d.LineObject"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../../../../index.html" >c4d</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../../../../index.html" >c4d.C4DAtom</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../../../../index.html" >c4d.GeListNode</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="../../../index.html" >c4d.BaseList2D</a> &#187;</li>
+          <li class="nav-item nav-item-5"><a href="../../index.html" >c4d.BaseObject</a> &#187;</li>
+          <li class="nav-item nav-item-6"><a href="../index.html" accesskey="U">c4d.PointObject</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-polygonobject">
+<h1>c4d.PolygonObject<a class="headerlink" href="#c4d-polygonobject" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.PolygonObject">
+<em class="property">class </em><code class="descclassname">c4d.</code><code class="descname">PolygonObject</code><a class="headerlink" href="#c4d.PolygonObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a Polygon object.</p>
+<p>The instance object class of type <em>Opolygon</em>.</p>
+</dd></dl>
+
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../../../../../../../../manuals/3d_concept/modeling/polygon_object.html"><span class="doc">Polygon Object in Detail</span></a>.</p>
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#PolygonObject.__init__" title="PolygonObject.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.__init__(self,</span> <span class="pre">pcnt,</span> <span class="pre">vcnt)</span></code></a></td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">type pcnt:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#PolygonObject.GetPolygonS" title="PolygonObject.GetPolygonS"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.GetPolygonS(self)</span></code></a></td>
+<td>Return the selected polygons.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#PolygonObject.GetPolygonH" title="PolygonObject.GetPolygonH"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.GetPolygonH(self)</span></code></a></td>
+<td>Return the hidden polygons.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#PolygonObject.GetEdgeS" title="PolygonObject.GetEdgeS"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.GetEdgeS(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Get the selected edges.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#PolygonObject.GetEdgeH" title="PolygonObject.GetEdgeH"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.GetEdgeH(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Get the hidden edges.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#PolygonObject.SetPolygon" title="PolygonObject.SetPolygon"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.SetPolygon(self,</span> <span class="pre">id,</span> <span class="pre">polygon)</span></code></a></td>
+<td>Set a polygon.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#PolygonObject.GetPolygon" title="PolygonObject.GetPolygon"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.GetPolygon(self,</span> <span class="pre">id)</span></code></a></td>
+<td>Get a polygon.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#PolygonObject.ResizeObject" title="PolygonObject.ResizeObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.ResizeObject(self,</span> <span class="pre">pcnt[,</span> <span class="pre">vcnt])</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Change the number of points and polygons in the object.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#PolygonObject.GetPhongBreak" title="PolygonObject.GetPhongBreak"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.GetPhongBreak(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Get the phong break edges.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#PolygonObject.GetPolygonTranslationMap" title="PolygonObject.GetPolygonTranslationMap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.GetPolygonTranslationMap(self)</span></code></a></td>
+<td>Gets a translation map from polygon indices to N-gon indices.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#PolygonObject.GetNGonTranslationMap" title="PolygonObject.GetNGonTranslationMap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.GetNGonTranslationMap(self,</span> <span class="pre">ngoncnt,</span> <span class="pre">polymap)</span></code></a></td>
+<td>Gets a translation map from N-gon indices to polygon indices.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#PolygonObject.GetAllPolygons" title="PolygonObject.GetAllPolygons"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.GetAllPolygons(self)</span></code></a></td>
+<td>Returns all polygons.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#PolygonObject.CreatePhongNormals" title="PolygonObject.CreatePhongNormals"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.CreatePhongNormals(self)</span></code></a></td>
+<td>Returns a list with the stored phong normals of the object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#PolygonObject.GetPolygonCount" title="PolygonObject.GetPolygonCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.GetPolygonCount(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Returns the count of polygons.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#PolygonObject.GetPolygonR" title="PolygonObject.GetPolygonR"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.GetPolygonR(self)</span></code></a></td>
+<td>Gets the start of the read-only array of polygons.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#PolygonObject.GetPolygonW" title="PolygonObject.GetPolygonW"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.GetPolygonW(self)</span></code></a></td>
+<td>Gets the start of the writable array of polygons.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#PolygonObject.GetSelectedEdges" title="PolygonObject.GetSelectedEdges"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.GetSelectedEdges(self,</span> <span class="pre">e,</span> <span class="pre">ltype)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Get the selected, hidden or phong break edges.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#PolygonObject.SetSelectedEdges" title="PolygonObject.SetSelectedEdges"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.SetSelectedEdges(self,</span> <span class="pre">e,</span> <span class="pre">pSel,</span> <span class="pre">ltype)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Set the selected, hidden or phong break edges.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#PolygonObject.GetNgonCount" title="PolygonObject.GetNgonCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.GetNgonCount(self)</span></code></a></td>
+<td>Get the number of N-gons in the object, i.e. the number of polygons with more points than 4.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#PolygonObject.GetSelectedNgons" title="PolygonObject.GetSelectedNgons"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.GetSelectedNgons(self,</span> <span class="pre">sel)</span></code></a></td>
+<td>Copies the current N-gon selection into sel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#PolygonObject.GetHiddenNgons" title="PolygonObject.GetHiddenNgons"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.GetHiddenNgons(self,</span> <span class="pre">sel)</span></code></a></td>
+<td>Copies the current hidden N-gon selection into <em>sel</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#PolygonObject.ValidateEdgeSelection" title="PolygonObject.ValidateEdgeSelection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.ValidateEdgeSelection(self,</span> <span class="pre">sel)</span></code></a></td>
+<td>Deselects all selected edges in <em>sel</em> that are N-gon edges.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#PolygonObject.GetEdgeSelection" title="PolygonObject.GetEdgeSelection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.GetEdgeSelection(self,</span> <span class="pre">sel,</span> <span class="pre">type)</span></code></a></td>
+<td>Deselects all edges in ‘sel’ that are N-gon edges as specified by type.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#PolygonObject.GetNgonEdgesCompact" title="PolygonObject.GetNgonEdgesCompact"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.GetNgonEdgesCompact(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Retrieves a list that contains N-gon edges information for each polygon.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#PolygonObject.GetShadingBreak" title="PolygonObject.GetShadingBreak"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonObject.GetShadingBreak(self,</span> <span class="pre">...[,</span> <span class="pre">...])</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Gets the shading break edges based on neighbor polygons shading edges and a specified angle limit.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../index.html#c4d.PointObject" title="c4d.PointObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.PointObject</span></code></a></li>
+</ul>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="PolygonObject.__init__">
+<code class="descclassname">PolygonObject.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>pcnt</em>, <em>vcnt</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonObject.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pcnt</strong> (<em>int</em>) – Point count.</li>
+<li><strong>vcnt</strong> (<em>int</em>) – Polygon count.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="#c4d.PolygonObject" title="c4d.PolygonObject">c4d.PolygonObject</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The object.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonObject.GetPolygonS">
+<code class="descclassname">PolygonObject.</code><code class="descname">GetPolygonS</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonObject.GetPolygonS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the selected polygons.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../../../BaseSelect/index.html#c4d.BaseSelect" title="c4d.BaseSelect">c4d.BaseSelect</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A reference to the selected polygon structure.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonObject.GetPolygonH">
+<code class="descclassname">PolygonObject.</code><code class="descname">GetPolygonH</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonObject.GetPolygonH" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the hidden polygons.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../../../BaseSelect/index.html#c4d.BaseSelect" title="c4d.BaseSelect">c4d.BaseSelect</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A reference to the hidden polygon structure.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonObject.GetEdgeS">
+<code class="descclassname">PolygonObject.</code><code class="descname">GetEdgeS</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonObject.GetEdgeS" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Get the selected edges.</div>
+<div class="line">The edges are indexed by <cite>4 * polygon + edge</cite> where polygon is the polygon index and edge is the edge index between <cite>0 and 3</cite>.</div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<div class="last line-block">
+<div class="line">If you change this selection you must make sure that its still valid, so that shared edges have a well-defined selection status.</div>
+<div class="line">It is safer to use <a class="reference internal" href="#PolygonObject.SetSelectedEdges" title="PolygonObject.SetSelectedEdges"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetSelectedEdges()</span></code></a>.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../../../BaseSelect/index.html#c4d.BaseSelect" title="c4d.BaseSelect">c4d.BaseSelect</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A reference to the selection of visible edges.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonObject.GetEdgeH">
+<code class="descclassname">PolygonObject.</code><code class="descname">GetEdgeH</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonObject.GetEdgeH" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Get the hidden edges.</div>
+<div class="line">The edges are indexed by <cite>4 * polygon + edge</cite> where polygon is the polygon index and edge is the edge index between <cite>0 and 3</cite>.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The edges are only hidden within the editor.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<div class="last line-block">
+<div class="line">If you change this selection you must make sure that it is still valid, so that shared edges have a well-defined selection status.</div>
+<div class="line">It is safer to use <a class="reference internal" href="#PolygonObject.SetSelectedEdges" title="PolygonObject.SetSelectedEdges"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetSelectedEdges()</span></code></a>.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../../../BaseSelect/index.html#c4d.BaseSelect" title="c4d.BaseSelect">c4d.BaseSelect</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A reference to the selection of hidden edges.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonObject.SetPolygon">
+<code class="descclassname">PolygonObject.</code><code class="descname">SetPolygon</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>polygon</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonObject.SetPolygon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a polygon.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Call <a class="reference internal" href="../../../../../index.html#C4DAtom.Message" title="C4DAtom.Message"><code class="xref py py-meth docutils literal notranslate"><span class="pre">obj.Message</span></code></a> (<em>c4d.MSG_UPDATE</em>) after you set all your polygons to update the object.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>int</em>) – The index.</li>
+<li><strong>polygon</strong> (<a class="reference internal" href="../../../../../../CPolygon/index.html#c4d.CPolygon" title="c4d.CPolygon"><em>c4d.CPolygon</em></a>) – The polygon to set at index <em>id</em>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><strong>IndexError</strong> – If the polygon index <em>id</em> is out of range : <em>0&lt;=id&lt;</em><a class="reference internal" href="#PolygonObject.GetPolygonCount" title="PolygonObject.GetPolygonCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPolygonCount()</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonObject.GetPolygon">
+<code class="descclassname">PolygonObject.</code><code class="descname">GetPolygon</code><span class="sig-paren">(</span><em>self</em>, <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonObject.GetPolygon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a polygon.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id</strong> (<em>int</em>) – The index.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If the polygon index <em>id</em> is out of range : <em>0&lt;=id&lt;</em><a class="reference internal" href="#PolygonObject.GetPolygonCount" title="PolygonObject.GetPolygonCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPolygonCount()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../../../CPolygon/index.html#c4d.CPolygon" title="c4d.CPolygon">c4d.CPolygon</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The polygon at index <em>id</em>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonObject.ResizeObject">
+<code class="descclassname">PolygonObject.</code><code class="descname">ResizeObject</code><span class="sig-paren">(</span><em>self</em>, <em>pcnt</em>, <em>vcnt=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonObject.ResizeObject" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Change the number of points and polygons in the object.</div>
+<div class="line">If <em>vcnt</em> is -1 or not set, the method of <a class="reference internal" href="../index.html#PointObject.ResizeObject" title="PointObject.ResizeObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PointObject.ResizeObject()</span></code></a> is used.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pcnt</strong> (<em>int</em>) – The new number of points.</li>
+<li><strong>vcnt</strong> (<em>int</em>) – The new number of polygons.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Success of changing the number of points and segments.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonObject.GetPhongBreak">
+<code class="descclassname">PolygonObject.</code><code class="descname">GetPhongBreak</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonObject.GetPhongBreak" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Get the phong break edges.</div>
+<div class="line">The edges are indexed by <cite>4 * polygon + edge</cite> where polygon is the polygon index and edge is the edge index between <cite>0 and 3</cite>.</div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<div class="last line-block">
+<div class="line">If you change this selection you must make sure that its still valid, so that shared edges have a well-defined phong break status.</div>
+<div class="line">it is safer to use <a class="reference internal" href="#PolygonObject.SetSelectedEdges" title="PolygonObject.SetSelectedEdges"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetSelectedEdges()</span></code></a>.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../../../BaseSelect/index.html#c4d.BaseSelect" title="c4d.BaseSelect">c4d.BaseSelect</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The phong break.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonObject.GetPolygonTranslationMap">
+<code class="descclassname">PolygonObject.</code><code class="descname">GetPolygonTranslationMap</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonObject.GetPolygonTranslationMap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a translation map from polygon indices to N-gon indices.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">tuple(int, List[int])</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The number of N-gons (and remaining polygons) and the list of N-gon indices. (<cite>0</cite>, []) if the function failed.<div class="versionchanged">
+<p><span class="versionmodified">Changed in version R19.024: </span>Was only returning the list of N-gon indices.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">The number of n-gon correspond to all N-gons and all remaining polygons which are not part of any N-gons.</div>
+<div class="line">The <cite>list</cite> has an amount of entries corresponding to the Cpolygon count of the Polygon Object.</div>
+<div class="line">Where each number of the <cite>list</cite> correspond to the Cpolygon id and the value to the N-gon this Cpolygon belongs to.</div>
+<div class="line">An Abstract example [0, 4] means the CPolygon 0 belongs to the N-gon 0 and the CPolygon 1 belongs to the N-gon 4.</div>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonObject.GetNGonTranslationMap">
+<code class="descclassname">PolygonObject.</code><code class="descname">GetNGonTranslationMap</code><span class="sig-paren">(</span><em>self</em>, <em>ngoncnt</em>, <em>polymap</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonObject.GetNGonTranslationMap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a translation map from N-gon indices to polygon indices.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.024.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ngoncnt</strong> (<em>int</em>) – The number of N-gons. Pass the length of the list returned by <a class="reference internal" href="#PolygonObject.GetPolygonTranslationMap" title="PolygonObject.GetPolygonTranslationMap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPolygonTranslationMap()</span></code></a>, not the value given by <a class="reference internal" href="#PolygonObject.GetNgonCount" title="PolygonObject.GetNgonCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetNgonCount()</span></code></a>.</li>
+<li><strong>polymap</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) – The polygon map. Pass the list returned by <a class="reference internal" href="#PolygonObject.GetPolygonTranslationMap" title="PolygonObject.GetPolygonTranslationMap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPolygonTranslationMap()</span></code></a>, or a similarly formatted array.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">list of (List[int])</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>The polygon index map if successful, otherwise <strong>None</strong>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">The number of polygons in N-gon <cite>i</cite> is stored in <cite>list[i][0]</cite>.</div>
+<div class="line">Then the polygon indices are stored in <cite>list[i][j]</cite> where <cite>j</cite> goes from <cite>1</cite> to <cite>list[i][0]</cite>.</div>
+</div>
+</div>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonObject.GetAllPolygons">
+<code class="descclassname">PolygonObject.</code><code class="descname">GetAllPolygons</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonObject.GetAllPolygons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all polygons.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list of <a class="reference internal" href="../../../../../../CPolygon/index.html#c4d.CPolygon" title="c4d.CPolygon"><code class="xref py py-class docutils literal notranslate"><span class="pre">CPolygon</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A list of copied polygons.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonObject.CreatePhongNormals">
+<code class="descclassname">PolygonObject.</code><code class="descname">CreatePhongNormals</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonObject.CreatePhongNormals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list with the stored phong normals of the object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list of Vectors or <strong>None</strong></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The list or <strong>None</strong> if the object has no Phong Tag.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonObject.GetPolygonCount">
+<code class="descclassname">PolygonObject.</code><code class="descname">GetPolygonCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonObject.GetPolygonCount" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns the count of polygons.</div>
+<div class="line">Is the fastest way to get the count of polygons.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The count.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonObject.GetPolygonR">
+<code class="descclassname">PolygonObject.</code><code class="descname">GetPolygonR</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonObject.GetPolygonR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the start of the read-only array of polygons.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.011.</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">While this function may sound trivial and cheap, internally it is not.</div>
+<div class="line">For performance reasons, it is not recommended to use this function inside a loop or inside a loop condition.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">PyCObject</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The start of the read-only polygon array.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonObject.GetPolygonW">
+<code class="descclassname">PolygonObject.</code><code class="descname">GetPolygonW</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonObject.GetPolygonW" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the start of the writable array of polygons.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.011.</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">While this function may sound trivial and cheap, internally it is not.</div>
+<div class="line">For performance reasons, it is not recommended to use this function inside a loop or inside a loop condition.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">PyCObject</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The start of the writable polygon array.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonObject.GetSelectedEdges">
+<code class="descclassname">PolygonObject.</code><code class="descname">GetSelectedEdges</code><span class="sig-paren">(</span><em>self</em>, <em>e</em>, <em>ltype</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonObject.GetSelectedEdges" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Get the selected, hidden or phong break edges.</div>
+<div class="line">The edges are indexed uniquely by a <a class="reference internal" href="../../../../../../../c4d.utils/Neighbor/index.html#c4d.utils.Neighbor" title="c4d.utils.Neighbor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Neighbor</span></code></a> object, so each edge has a single index.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is a convenience wrapper around <a class="reference internal" href="#PolygonObject.GetEdgeS" title="PolygonObject.GetEdgeS"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetEdgeS()</span></code></a>, <a class="reference internal" href="#PolygonObject.GetEdgeH" title="PolygonObject.GetEdgeH"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetEdgeH()</span></code></a> and <a class="reference internal" href="#PolygonObject.GetPhongBreak" title="PolygonObject.GetPhongBreak"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPhongBreak()</span></code></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>e</strong> (<a class="reference internal" href="../../../../../../../c4d.utils/Neighbor/index.html#c4d.utils.Neighbor" title="c4d.utils.Neighbor"><em>c4d.utils.Neighbor</em></a>) – The neighbor object with information about the edge topology. Must be initialized with all polygons, i.e. with <a class="reference internal" href="../../../../../../../c4d.utils/Neighbor/index.html#Neighbor.Init" title="Neighbor.Init"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Neighbor.Init()</span></code></a>.</li>
+<li><strong>ltype</strong> (<em>int</em>) – <p>The type of selection to get:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="66%" />
+<col width="34%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>EDGESELECTIONTYPE_SELECTION</em></td>
+<td>Selected edges.</td>
+</tr>
+<tr class="row-even"><td><em>EDGESELECTIONTYPE_HIDDEN</em></td>
+<td>Hidden edges.</td>
+</tr>
+<tr class="row-odd"><td><em>EDGESELECTIONTYPE_PHONG</em></td>
+<td>Phong edges.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../../../../../BaseSelect/index.html#c4d.BaseSelect" title="c4d.BaseSelect">c4d.BaseSelect</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The selected edges.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonObject.SetSelectedEdges">
+<code class="descclassname">PolygonObject.</code><code class="descname">SetSelectedEdges</code><span class="sig-paren">(</span><em>self</em>, <em>e</em>, <em>pSel</em>, <em>ltype</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonObject.SetSelectedEdges" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Set the selected, hidden or phong break edges.</div>
+<div class="line">The edges are indexed uniquely by a <a class="reference internal" href="../../../../../../../c4d.utils/Neighbor/index.html#c4d.utils.Neighbor" title="c4d.utils.Neighbor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Neighbor</span></code></a> object, so each edge has a single index.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is a convenience wrapper around <a class="reference internal" href="#PolygonObject.GetEdgeS" title="PolygonObject.GetEdgeS"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetEdgeS()</span></code></a>, <a class="reference internal" href="#PolygonObject.GetEdgeH" title="PolygonObject.GetEdgeH"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetEdgeH()</span></code></a> and <a class="reference internal" href="#PolygonObject.GetPhongBreak" title="PolygonObject.GetPhongBreak"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPhongBreak()</span></code></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>e</strong> (<a class="reference internal" href="../../../../../../../c4d.utils/Neighbor/index.html#c4d.utils.Neighbor" title="c4d.utils.Neighbor"><em>c4d.utils.Neighbor</em></a>) – The neighbor object with information about the edge topology. Must be initialized with all polygons, i.e. with <a class="reference internal" href="../../../../../../../c4d.utils/Neighbor/index.html#Neighbor.Init" title="Neighbor.Init"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Neighbor.Init()</span></code></a>.</li>
+<li><strong>pSel</strong> (<a class="reference internal" href="../../../../../../BaseSelect/index.html#c4d.BaseSelect" title="c4d.BaseSelect"><em>c4d.BaseSelect</em></a>) – The edge to select.</li>
+<li><strong>ltype</strong> (<em>int</em>) – <p>The type of selection to get:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="66%" />
+<col width="34%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>EDGESELECTIONTYPE_SELECTION</em></td>
+<td>Selected edges.</td>
+</tr>
+<tr class="row-even"><td><em>EDGESELECTIONTYPE_HIDDEN</em></td>
+<td>Hidden edges.</td>
+</tr>
+<tr class="row-odd"><td><em>EDGESELECTIONTYPE_PHONG</em></td>
+<td>Phong edges.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the selection succeeded, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonObject.GetNgonCount">
+<code class="descclassname">PolygonObject.</code><code class="descname">GetNgonCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonObject.GetNgonCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of N-gons in the object, i.e. the number of polygons with more points than 4.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The number of N-gons for this object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonObject.GetSelectedNgons">
+<code class="descclassname">PolygonObject.</code><code class="descname">GetSelectedNgons</code><span class="sig-paren">(</span><em>self</em>, <em>sel</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonObject.GetSelectedNgons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies the current N-gon selection into sel.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sel</strong> (<a class="reference internal" href="../../../../../../BaseSelect/index.html#c4d.BaseSelect" title="c4d.BaseSelect"><em>c4d.BaseSelect</em></a>) – Assigned the current N-gon selection.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonObject.GetHiddenNgons">
+<code class="descclassname">PolygonObject.</code><code class="descname">GetHiddenNgons</code><span class="sig-paren">(</span><em>self</em>, <em>sel</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonObject.GetHiddenNgons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies the current hidden N-gon selection into <em>sel</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sel</strong> (<a class="reference internal" href="../../../../../../BaseSelect/index.html#c4d.BaseSelect" title="c4d.BaseSelect"><em>c4d.BaseSelect</em></a>) – Assigned the current hidden N-gon selection.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonObject.ValidateEdgeSelection">
+<code class="descclassname">PolygonObject.</code><code class="descname">ValidateEdgeSelection</code><span class="sig-paren">(</span><em>self</em>, <em>sel</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonObject.ValidateEdgeSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deselects all selected edges in <em>sel</em> that are N-gon edges.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sel</strong> (<a class="reference internal" href="../../../../../../BaseSelect/index.html#c4d.BaseSelect" title="c4d.BaseSelect"><em>c4d.BaseSelect</em></a>) – The selection to check for N-gon edges.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonObject.GetEdgeSelection">
+<code class="descclassname">PolygonObject.</code><code class="descname">GetEdgeSelection</code><span class="sig-paren">(</span><em>self</em>, <em>sel</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonObject.GetEdgeSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deselects all edges in ‘sel’ that are N-gon edges as specified by type.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>sel</strong> (<a class="reference internal" href="../../../../../../BaseSelect/index.html#c4d.BaseSelect" title="c4d.BaseSelect"><em>c4d.BaseSelect</em></a>) – The selection to check for N-gon edges.</li>
+<li><strong>type</strong> (<em>int</em>) – <p>The type of selection to check:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="66%" />
+<col width="34%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>EDGESELECTIONTYPE_SELECTION</em></td>
+<td>Selected edges.</td>
+</tr>
+<tr class="row-even"><td><em>EDGESELECTIONTYPE_HIDDEN</em></td>
+<td>Hidden edges.</td>
+</tr>
+<tr class="row-odd"><td><em>EDGESELECTIONTYPE_PHONG</em></td>
+<td>Phong edges.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if successful, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonObject.GetNgonEdgesCompact">
+<code class="descclassname">PolygonObject.</code><code class="descname">GetNgonEdgesCompact</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonObject.GetNgonEdgesCompact" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Retrieves a list that contains N-gon edges information for each polygon.</div>
+<div class="line"><br /></div>
+<div class="line">The edge compact value is based on the mask <cite>1 &lt;&lt; edgeIndex</cite> with <cite>edgeIndex</cite> between <cite>0</cite> - <cite>3</cite> for quads, and <cite>0</cite>, <cite>1</cite>, <cite>3</cite> for triangles.</div>
+<div class="line">If the value for a polygon is zero then it has no N-gon edge.</div>
+<div class="line">Otherwise check each edge of the polygon with <cite>edges[polyIndex] &amp; (1 &lt;&lt; edgeIndex) == 0</cite> (with <cite>edges</cite> the list of N-gon edges compact values). If the condition is <strong>True</strong> then the edge is a N-gon edge.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">N-gon edges information list.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonObject.GetShadingBreak">
+<code class="descclassname">PolygonObject.</code><code class="descname">GetShadingBreak</code><span class="sig-paren">(</span><em>self</em>, <em>includeBorderEdges</em>, <em>includeUserBreak</em>, <em>includeUserNormals</em>, <em>userNormalsAngle=0.0872665</em>, <em>autoNormalsAngle=3.14159</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonObject.GetShadingBreak" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Gets the shading break edges based on neighbor polygons shading edges and a specified angle limit.</div>
+<div class="line"><br /></div>
+<div class="line">Border edges can optionally be marked as break edges.</div>
+<div class="line">Current break edges can optionally be included (merged) in the resulting break edges.</div>
+<div class="line">Finally, user normal vectors can optionally be considered using a separate angle limit for this purpose.</div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The edges are indexed by <cite>4 * polygon + edge</cite> where <cite>polygon</cite> is the polygon index and <cite>edge</cite> is the edge index between <cite>0</cite> and <cite>3</cite>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>includeBorderEdges</strong> (<em>bool</em>) – <strong>True</strong> to mark border edges as break edges, otherwise <strong>False</strong>.</li>
+<li><strong>includeUserBreak</strong> (<em>bool</em>) – <strong>True</strong> to include the user break edges (same as obtained with <a class="reference internal" href="#PolygonObject.GetPhongBreak" title="PolygonObject.GetPhongBreak"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPhongBreak()</span></code></a>), otherwise <strong>False</strong>.</li>
+<li><strong>includeUserNormals</strong> (<em>bool</em>) – <strong>True</strong> to consider user normals using the <em>userNormalAngle</em> parameter, otherwise <strong>False</strong>.</li>
+<li><strong>userNormalsAngle</strong> (<em>float</em>) – Optional angle limit, in radians, beyond which polygon vertex normals sharing edge vertices create a break edge.</li>
+<li><strong>autoNormalsAngle</strong> (<em>float</em>) – Optional angle limit, in radians, beyond which polygon normals sharing an edge create a break edge.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../../../../../BaseSelect/index.html#c4d.BaseSelect" title="c4d.BaseSelect">c4d.BaseSelect</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The shading break edges.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../SplineObject/index.html" title="c4d.SplineObject"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../LineObject/index.html" title="c4d.LineObject"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../../../../index.html" >c4d</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../../../../index.html" >c4d.C4DAtom</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../../../../index.html" >c4d.GeListNode</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="../../../index.html" >c4d.BaseList2D</a> &#187;</li>
+          <li class="nav-item nav-item-5"><a href="../../index.html" >c4d.BaseObject</a> &#187;</li>
+          <li class="nav-item nav-item-6"><a href="../index.html" >c4d.PointObject</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

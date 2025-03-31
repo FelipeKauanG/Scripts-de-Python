@@ -1,0 +1,159 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>RENDERFLAGS &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="RENDERJOBCREATOR" href="RENDERJOBCREATOR.html" />
+    <link rel="prev" title="REFLECTION FRESNEL METAL" href="REFLECTION_FRESNEL_METAL.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="RENDERJOBCREATOR.html" title="RENDERJOBCREATOR"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="REFLECTION_FRESNEL_METAL.html" title="REFLECTION FRESNEL METAL"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../types/index.html" accesskey="U">Types and Symbols List</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="renderflags">
+<h1>RENDERFLAGS<a class="headerlink" href="#renderflags" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>RENDERFLAGS_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERFLAGS_EXTERNAL</em></td>
+<td>External render.</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERFLAGS_NODOCUMENTCLONE</em></td>
+<td>Set to avoid an automatic clone of the scene sent to <a class="reference internal" href="../modules/c4d.documents/index.html#c4d.documents.RenderDocument" title="c4d.documents.RenderDocument"><code class="xref py py-func docutils literal notranslate"><span class="pre">RenderDocument()</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERFLAGS_SHOWERRORS</em></td>
+<td>Show error messages.</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERFLAGS_PREVIEWRENDER</em></td>
+<td>Preview render.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERFLAGS_IRR</em></td>
+<td>Interactive region render.</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERFLAGS_CREATE_PICTUREVIEWER</em></td>
+<td>Render in a new Picture Viewer.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERFLAGS_OPEN_PICTUREVIEWER</em></td>
+<td>Open the Picture Viewer.</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERFLAGS_KEEP_CONTEXT</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERFLAGS_BATCHRENDER</em></td>
+<td>Render in Batch Render. Private.</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERFLAGS_NET</em></td>
+<td>Use NET System for rendering.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERFLAGS_DONTANIMATE</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R17.032: </span>Do not animate document before rendering. This should only be used in combination with <em>RENDERFLAGS_PREVIEWRENDER</em>.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERFLAGS_PREVIEWSETTINGS</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R19: </span>Use preview settings.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><em>RENDERFLAGS_RENDERQUEUEERRORS</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R21.108: </span>Cancel Render Queue rendering if scene has missing assets.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="RENDERJOBCREATOR.html" title="RENDERJOBCREATOR"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="REFLECTION_FRESNEL_METAL.html" title="REFLECTION FRESNEL METAL"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../types/index.html" >Types and Symbols List</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,362 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Tips to switch from C.O.F.F.E.E to Python &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Python Generator" href="introduction/python_generator.html" />
+    <link rel="prev" title="Python Script Manager" href="introduction/python_script_manager.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="introduction/python_generator.html" title="Python Generator"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="introduction/python_script_manager.html" title="Python Script Manager"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Manual List</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="tips-to-switch-from-c-o-f-f-e-e-to-python">
+<h1>Tips to switch from C.O.F.F.E.E to Python<a class="headerlink" href="#tips-to-switch-from-c-o-f-f-e-e-to-python" title="Permalink to this headline">¶</a></h1>
+<div id="top_content">
+  <span>Tips to switch from C.O.F.F.E.E to Python</b></span>
+<p>
+As you may know, R20 drop the support of C.O.F.F.E.E, read <a href="https://developers.maxon.net/?p=3089">The End of C.O.F.F.E.E</a> for more information.<br/>
+Even if our role is not to teach you python, we can at least help you to convert C.O.F.F.E.E script to Python by giving you some tips.<br/>
+First of all, you can find some valuable python resource to learn in the following blog post <a href="https://developers.maxon.net/?p=2985">Public Resources for Cinema 4D Plugin Development in Python</a>.<br/><br/>
+This list is not exhaustive and if you find any difficulties you can contact us in the <a href="http://www.plugincafe.com/forum/default.asp">forum</a> or even by mail: <a href="mailto:sdk_support@maxon.net">sdk_support@maxon.net</a>.<br/>
+</p>
+  <!-- START Pred/Prev -->
+  <table class="contentstable">
+    <tr>
+      <td width="50%" valign="top">
+        <h1>C.O.F.F.E.E</h1>
+      </td>
+      <td width="50%">
+        <h1>Python</h1>
+      </td>
+    </tr>
+  </table>
+  <hr>
+  <!-- End Pred/Prev -->
+
+  <!-- START Pred/Prev -->
+  <table class="contentstable">
+    <tr>
+      <td width="50%" valign="top">
+        <a class="biglink" href="https://developers.maxon.net/docs/Cinema4DCOFFEESDK/help/pages/BaseList2D/class_BaseList2D9.html#getprev11">GetPrev</a><br/>
+      </td>
+      <td width="50%">
+        <a class="biglink" href="../modules/c4d/C4DAtom/GeListNode/index.html?highlight=getpred#GeListNode.GetPred">GetPred</a><br/>
+      </td>
+    </tr>
+  </table>
+  <hr>
+  <!-- End Pred/Prev -->
+
+  <!-- START Math Functions -->
+  <table class="contentstable">
+    <tr>
+      <td width="50%" valign="top">
+        <a class="biglink" href="https://developers.maxon.net/docs/Cinema4DCOFFEESDK/help/pages/Mathematical%20functions/global_general_math96.html">Math functions</a>
+      </td>
+      <td width="50%">
+        <a class="biglink" href="https://docs.python.org/2/library/math.html">Math functions</a><br/>
+        <p>In python there is no math class from c4d module.
+          But you can found corresponding functions in <a href="https://docs.python.org/2/library/math.html">standard python math module</a> or in <a href="../modules/c4d.utils/index.html">c4d.utils</a> module</span></p>
+      </td>
+    </tr>
+  </table>
+  <hr>
+  <!-- END Math Functions -->
+
+  <!-- START Sin Cos -->
+  <table class="contentstable">
+    <tr>
+      <td width="50%" valign="top">
+        <a class="biglink" href="https://developers.maxon.net/docs/Cinema4DCOFFEESDK/help/pages/Mathematical%20functions/global_general_math96.html#cos12">Cos</a> <a class="biglink" href="https://developers.maxon.net/docs/Cinema4DCOFFEESDK/help/pages/Mathematical%20functions/global_general_math96.html#sin19">Sin</a><br/>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">println (cos(75));
+println (sin(50));
+</span></pre></div></div>
+      </td>
+      <td width="50%">
+        <a class="biglink" href="../modules/c4d.utils/index.html?highlight=SinCos#c4d.utils.SinCos">Cos Sin</a><br/>
+        <p>There is multiples way to get Sin Con in Python.<br/>
+          First, using the c4d modules get both at once.
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n"># Get Both at once
+sin, cos = c4d.utils.SinCos(90)
+print sin, cos
+</span></pre></div></div>
+
+You can also generate lambda helper 
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cos = lambda x: c4d.utils.SinCos(x)[1]
+sin = lambda x: c4d.utils.SinCos(x)[0]
+     
+print cos(75)
+print sin(50)
+</span></pre></div></div>
+
+Finally, you can use the <a href="https://docs.python.org/2/library/math.html#math.cos">standard python math module</a></span></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">#Using math module
+import math
+
+print math.cos(75)
+print math.sin(50)
+</span></pre></div></div>
+      </td>
+    </tr>
+  </table>
+  <hr>
+    <!-- END Sin Cos -->
+
+  <!-- START Exp Example -->
+  <table class="contentstable">
+    <tr>
+      <td width="50%" valign="top">
+        <a class="biglink" href="https://developers.maxon.net/docs/Cinema4DCOFFEESDK/help/pages/Mathematical%20functions/global_general_math96.html#exp14">exp example</a>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">println(exp(10));
+</span></pre></div></div>
+      </td>
+
+
+      <td width="50%" valign="top">
+        <a class="biglink" href="https://docs.python.org/2/library/math.html#math.exp">exp example</a>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">import math
+print math.exp(10)
+</span></pre></div></div>
+      </td>
+    </tr>
+  </table>
+  <hr>
+  <!-- END Exp Example -->
+
+
+  <!-- START Minimize Angle -->
+  <table class="contentstable">
+    <tr>
+      <td width="50%" valign="top">
+        <a class="biglink" href="https://developers.maxon.net/docs/Cinema4DCOFFEESDK/help/pages/Mathematical%20functions/global_general_math96.html#minimizeangle2">MinimizeAngle</a>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">var v1 = vector(50, 20, 30);
+var v2 = vector(-400, 20, 30);
+println(MinimizeAngle(v1, v2));
+</span></pre></div></div>
+      </td>
+
+      <td width="50%" valign="top">
+        <a class="biglink" href="../modules/c4d.utils/index.html?highlight=getoptimalangle#c4d.utils.GetOptimalAngle">GetOptimalAngle</a>
+        <p>In python, MinimizeAngle is renamed by <a href="../modules/c4d.utils/index.html?highlight=getoptimalangle#c4d.utils.GetOptimalAngle">GetOptimalAngle</a></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">v1 = c4d.Vector(50, 20, 30)
+v2 = c4d.Vector(-400, 20, 30)
+print c4d.utils.GetOptimalAngle(v1, v2, c4d.ROTATIONORDER_DEFAULT)
+</span></pre></div></div>
+      </td>
+    </tr>
+  </table>
+  <hr>
+  <!-- END Minimize Angle -->
+
+  <!-- START Matrix Acces -->
+  <table class="contentstable">
+    <tr>
+      <td width="50%" valign="top">
+        <a class="biglink" href="https://developers.maxon.net/docs/Cinema4DCOFFEESDK/help/pages/Matrix/class_Matrix149.html">Matrix Acces</a>
+          <p><a href="https://developers.maxon.net/docs/Cinema4DCOFFEESDK/help/pages/Matrix/class_Matrix149.html#getv07">GetV0</a>, <a href="https://developers.maxon.net/docs/Cinema4DCOFFEESDK/help/pages/Matrix/class_Matrix149.html#getv18">GetV1</a>, <a href="https://developers.maxon.net/docs/Cinema4DCOFFEESDK/help/pages/Matrix/class_Matrix149.html#getv310">GetV2</a>, <a href="https://developers.maxon.net/docs/Cinema4DCOFFEESDK/help/pages/Matrix/class_Matrix149.html#getv310">GetV3</a></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">var m = op->GetMg();
+var pos = m->GetV0();
+var xAxis = m->GetV1();
+var yAxis = m->GetV2();
+var zAxis = m->GetV3();
+     
+println(pos, xAxis, yAxis, zAxis);
+</span></pre></div></div>
+      </td>
+
+      <td width="50%" valign="top">
+        <a class="biglink" href="../modules/c4d/Matrix/index.html">Matrix Acces</a>
+        <p>I also suggest to read <a href="../misc/matrixfundamental.html#matrix-fundamental">Matrix Fundamentals</a>
+        <a href="../modules/c4d/Matrix/index.html#Matrix.off">off</a>, <a href="../modules/c4d/Matrix/index.html#Matrix.v1">v1</a>, <a href="../modules/c4d/Matrix/index.html#Matrix.v2">v2</a>, <a href="../modules/c4d/Matrix/index.html#Matrix.v3">v3</a></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">m = op.GetMg()
+pos = m.off
+xAxis = m.v1
+yAxis = m.v2
+zAxis = m.v3
+ 
+print pos, xAxis, yAxis, zAxis
+</span></pre></div></div>
+      </td>
+    </tr>
+  </table>
+  <hr>
+  <!-- END Matrix Acces -->
+
+  <!-- START Matrix GetHPB -->
+  <table class="contentstable">
+    <tr>
+      <td width="50%" valign="top">
+        <a class="biglink" href="https://developers.maxon.net/docs/Cinema4DCOFFEESDK/help/pages/Matrix/class_Matrix149.html#gethpb21">GetHPB</a>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">var m = op->GetMg();
+var hpbRot = m->GetHBP();
+ 
+println(hpbRot);
+</span></pre></div></div>
+      </td>
+
+      <td width="50%" valign="top">
+        <a class="biglink" href="../modules/c4d.utils/index.html#c4d.utils.MatrixToHPB">MatrixToHPB</a>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">m = op.GetMg()
+hpbRot = c4d.utils.MatrixToHPB(m)
+ 
+print hpbRot
+</span></pre></div></div>
+      </td>
+    </tr>
+  </table>
+  <hr>
+  <!-- END Matrix GetHPB -->
+
+  <!-- START Noise class -->
+  <table class="contentstable">
+    <tr>
+      <td width="50%" valign="top">
+        <a class="biglink" href="https://developers.maxon.net/docs/Cinema4DCOFFEESDK/help/pages/Noise/class_Noise164.html">Noise class</a>
+        <p><a href="https://developers.maxon.net/docs/Cinema4DCOFFEESDK/help/pages/Noise/class_Noise164.html#turbulence9">Turbulence</a> example</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">var noise = new(Noise);
+var jitter = 10;
+var x = 20;
+var y = 30;
+var z = 40;
+var absolute= FALSE;
+ 
+println(noise->Turbulence(jitter, absolute, x ,y, z));
+</span></pre></div></div>
+      </td>
+
+      <td width="50%" valign="top">
+        <a class="biglink" href="../modules/c4d.utils/noise/C4DNoise/index.html">C4DNoise Class</a>
+        <p><a href="../modules/c4d.utils/noise/C4DNoise/index.html#C4DNoise.Turbulence">Turbulence</a> example</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">noise = c4d.utils.noise.C4DNoise()
+jitter = 10
+x = 20
+y = 30
+z = 40
+absolute= False
+     
+print(noise.Turbulence(c4d.Vector(x, y, z), jitter, absolute))
+</span></pre></div></div>
+      </td>
+    </tr>
+  </table>
+  <hr>
+  <!-- END Noise class -->
+
+  <!-- START Noise class -->
+  <table class="contentstable">
+    <tr>
+      <td width="50%" valign="top">
+        <a class="biglink" href="https://developers.maxon.net/docs/Cinema4DCOFFEESDK/help/pages/Random/class_Random178.html">Random class</a>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">var r = new(Random);
+r->Init(8374946);
+ 
+println(r->Get01());
+println(r->Get11());
+println(r->GetG01());
+println(r->GetG11());
+</span></pre></div></div>
+      </td>
+      <td width="50%" valign="top">
+        <a class="biglink" href="https://docs.python.org/2/library/random.html">Random class</a>
+<p>In python, there is no Random class from c4d module, but you can find the corresponding function in <a href="https://docs.python.org/2/library/random.html">standard python random module</a>.
+<br/>Then keep in mind even using the same seed.<br/>
+<b>Results will be different from C.O.F.F.E.E to Python.</b></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">import random
+r.seed(8374946)
+ 
+print random.uniform(0, 1) # Equals to Get01
+print random.uniform(-1, 1)  # Equals to Get11
+print random.gauss(0.5, 0.09) # Equals to GetG01
+print random.gauss(0.0, 0.18) # Equals to GetG11
+</span></pre></div></div>
+      </td>
+    </tr>
+  </table>
+  <hr>
+</div></div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="introduction/python_generator.html" title="Python Generator"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="introduction/python_script_manager.html" title="Python Script Manager"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Manual List</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

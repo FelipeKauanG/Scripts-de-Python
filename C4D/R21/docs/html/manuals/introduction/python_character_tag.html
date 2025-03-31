@@ -1,0 +1,826 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Python Character Tag &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Python Sketch and Toon Material" href="python_sketch_toon.html" />
+    <link rel="prev" title="Python Visual Selector Tag" href="python_visual_selector_tag.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="python_sketch_toon.html" title="Python Sketch and Toon Material"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="python_visual_selector_tag.html" title="Python Visual Selector Tag"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Manual List</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="python-character-tag">
+<span id="manual-python-character-tag"></span><h1>Python Character Tag<a class="headerlink" href="#python-character-tag" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Python code can be executed in various situations from a character tag.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<div class="last line-block">
+<div class="line">The important <a class="reference internal" href="../application_development/threading.html#threading-information"><span class="std std-ref">Threading Information</span></a>.</div>
+<div class="line"><a class="reference internal" href="../../modules/c4d.modules/character/builder/index.html#c4d.modules.character.builder" title="c4d.modules.character.builder"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.character.builder</span></code></a>.</div>
+<div class="line"><a class="reference internal" href="../../modules/c4d.modules/character/builder/CharacterObject/index.html#c4d.modules.character.builder.CharacterObject" title="c4d.modules.character.builder.CharacterObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.character.builder.CharacterObject</span></code></a>.</div>
+<div class="line"><a class="reference internal" href="../../modules/c4d.modules/character/builder/Component/index.html#c4d.modules.character.builder.Component" title="c4d.modules.character.builder.Component"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.character.builder.Component</span></code></a>.</div>
+<div class="line"><a class="reference internal" href="../../modules/c4d.modules/character/builder/ComponentObject/index.html#c4d.modules.character.builder.ComponentObject" title="c4d.modules.character.builder.ComponentObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.character.builder.ComponentObject</span></code></a>.</div>
+<div class="line"><a class="reference internal" href="../../modules/c4d.modules/character/builder/Template/index.html#c4d.modules.character.builder.Template" title="c4d.modules.character.builder.Template"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.character.builder.Template</span></code></a>.</div>
+</div>
+</div>
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt>
+<code class="descname">BuildTemplate</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><blockquote>
+<div><div class="line-block">
+<div class="line">Override - Called each time a character template is saved using the Save Character Template command.</div>
+<div class="line">Good place to insert objects, to dynamically build a template or modify the template document.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If any components are added, appropriate settings have to be added as well to the Character Component Tag.</p>
+</div>
+<p>The following variables are local to this function:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">type doc:</th><td class="field-body">c4d.documents.BaseDocument</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param doc:</th><td class="field-body">The template document.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type op:</th><td class="field-body">c4d.BaseObject</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param op:</th><td class="field-body">The object with the Component tag.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">GetComponents</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><blockquote>
+<div><div class="line-block">
+<div class="line">Override - Called at every redraw to retrieve a list of available components.</div>
+<div class="line">Good place to specify which component buttons are shown within the Character object.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The standard inclusion rules specified in the Component tags will apply when None is returned.</p>
+</div>
+<p>The following variables are local to this function:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">type doc:</th><td class="field-body">c4d.documents.BaseDocument</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param doc:</th><td class="field-body">The document containing the Character object.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type charop:</th><td class="field-body">c4d.modules.character.builder.CharacterObject</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param charop:</th><td class="field-body">The Character object present in the scene.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type template:</th><td class="field-body">c4d.modules.character.builder.Template</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param template:</th><td class="field-body">The template.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type op:</th><td class="field-body">c4d.BaseObject</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param op:</th><td class="field-body">The parent component’s main object.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type pcomp:</th><td class="field-body">c4d.modules.character.builder.Component</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param pcomp:</th><td class="field-body">The parent component.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type pcompop:</th><td class="field-body">c4d.modules.character.builder.ComponentObject</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param pcompop:</th><td class="field-body">The parent component object.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">c4d.BaseContainer</td>
+</tr>
+<tr class="field-even field"><th class="field-name">return:</th><td class="field-body">Link of available components.</td>
+</tr>
+</tbody>
+</table>
+<p>The next example from the Python tab of the Character object ensures an object with the name “Spine_null” to be present.
+Until a Spine is added, no other components can be added, regardless of the parent.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The FindObject method searches for the object name, not the component name. A BaseContainer is returned in this example only when no Spine exists, so once a Spine is added the inclusion rules in the Component Tags will be used.</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">c4d</span>
+
+<span class="k">def</span> <span class="nf">GetComponents</span><span class="p">():</span>
+    <span class="c1"># Check if there is already no Spine object in the Character Object found in the scene.</span>
+    <span class="k">if</span> <span class="n">charop</span><span class="o">.</span><span class="n">FindObject</span><span class="p">(</span><span class="s2">&quot;Spine_null&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+
+        <span class="c1"># Find the Spine object in the template</span>
+        <span class="n">spineObject</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">FindObject</span><span class="p">(</span><span class="s2">&quot;Spine_null&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">splineObject</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="c1"># If there is a spineObject we store it into a BaseContainer</span>
+        <span class="n">bc</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">BaseContainer</span><span class="p">()</span>
+        <span class="n">bc</span><span class="o">.</span><span class="n">SetLink</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">spineObject</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">bc</span>
+</pre></div>
+</div>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">ModeChanged</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><blockquote>
+<div><div class="line-block">
+<div class="line">Override - Called each time when the mode (Build, Adjust, Bind, Animate) is changed.</div>
+<div class="line">Good place to change the visibility of objects or enable/disable functions like expressions according to a mode.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Modification of the Character object should be done directly within the function.</p>
+</div>
+<p>The following variables are local to this function:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">type doc:</th><td class="field-body"><p class="first">c4d.documents.BaseDocument</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param doc:</th><td class="field-body"><p class="first">The document containing the Character object.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type charop:</th><td class="field-body"><p class="first">c4d.modules.character.builder.CharacterObject</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param charop:</th><td class="field-body"><p class="first">The Character object present in the scene.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type op:</th><td class="field-body"><p class="first">c4d.BaseObject</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param op:</th><td class="field-body"><p class="first">The object attached to the Component tag.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type compop:</th><td class="field-body"><p class="first">c4d.modules.character.builder.ComponentObject</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param compop:</th><td class="field-body"><p class="first">The component object.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type omode:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param omode:</th><td class="field-body"><p class="first">The old mode.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">These constants are defined in the c4d.modules.character.builder module so <strong>c4d.modules.character.builder.COMPONENT_OBJECT_GETOBJECTS_TYPE_ALL</strong> should be used and not <strong>c4d.COMPONENT_OBJECT_GETOBJECTS_TYPE_ALL</strong>.</p>
+</div>
+<table border="1" class="colwidths-auto docutils align-left">
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Symbol ID</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ID_CA_CHARACTER_MODE_BUILD</td>
+<td>Build Mode.</td>
+</tr>
+<tr class="row-odd"><td>ID_CA_CHARACTER_MODE_ADJUST</td>
+<td>Adjust Mode.</td>
+</tr>
+<tr class="row-even"><td>ID_CA_CHARACTER_MODE_BIND</td>
+<td>Bind Mode.</td>
+</tr>
+<tr class="row-odd"><td>ID_CA_CHARACTER_MODE_ANIMATE</td>
+<td>Animate Mode.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type nmode:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param nmode:</th><td class="field-body"><p class="first">The new mode.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">These constants are defined in the c4d.modules.character.builder module so <strong>c4d.modules.character.builder.COMPONENT_OBJECT_GETOBJECTS_TYPE_ALL</strong> should be used and not <strong>c4d.COMPONENT_OBJECT_GETOBJECTS_TYPE_ALL</strong>.</p>
+</div>
+<table border="1" class="colwidths-auto last docutils align-left">
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Symbol ID</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ID_CA_CHARACTER_MODE_BUILD</td>
+<td>Build Mode.</td>
+</tr>
+<tr class="row-odd"><td>ID_CA_CHARACTER_MODE_ADJUST</td>
+<td>Adjust Mode.</td>
+</tr>
+<tr class="row-even"><td>ID_CA_CHARACTER_MODE_BIND</td>
+<td>Bind Mode.</td>
+</tr>
+<tr class="row-odd"><td>ID_CA_CHARACTER_MODE_ANIMATE</td>
+<td>Animate Mode.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">InsertComponent</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><blockquote>
+<div><div class="line-block">
+<div class="line">Override - Used within the Component tag’s Python tab it’s called at each insertion action to override them.</div>
+<div class="line">All objects should be inserted into the document used to create the component, and the main component object that was inserted into the document should be returned.</div>
+<div class="line"><br /></div>
+<div class="line">Override - Used within an Insertion rule on the Insertion tab of the Component tag, it’s called at each insertion to change where and how the object will be inserted.</div>
+<div class="line">The global variable <cite>itype</cite> should be defined to indicates the insertion type (like the Insert drop-down in the rule) and the c4d.BaseObject that corresponds to the Object attribute in the rules should be returned.</div>
+<div class="line"><br /></div>
+<div class="line">The following variables are local to this function:</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">type doc:</th><td class="field-body"><p class="first">c4d.documents.BaseDocument</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param doc:</th><td class="field-body"><p class="first">The document containing the Character object.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type charop:</th><td class="field-body"><p class="first">c4d.modules.character.builder.CharacterObject</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param charop:</th><td class="field-body"><p class="first">The Character object present in the scene.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type template:</th><td class="field-body"><p class="first">c4d.modules.character.builder.Template</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param template:</th><td class="field-body"><p class="first">The template.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type pcompop:</th><td class="field-body"><p class="first">c4d.modules.character.builder.ComponentObject</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param pcompop:</th><td class="field-body"><p class="first">The parent component object.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type pcomp:</th><td class="field-body"><p class="first">c4d.modules.character.builder.Component</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param pcomp:</th><td class="field-body"><p class="first">The parent component.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type comp:</th><td class="field-body"><p class="first">c4d.modules.character.builder.Component</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param comp:</th><td class="field-body"><p class="first">The component to be inserted.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type itype:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param itype:</th><td class="field-body"><p class="first">The insertion type for rule inserts. <strong>Need to be set before return</strong>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">These constants are defined in the c4d.modules.character.builder module so <strong>c4d.modules.character.builder.COMPONENT_INSERT_TYPE_FIRST</strong> should be used and not <strong>c4d.COMPONENT_INSERT_TYPE_FIRST</strong>.</p>
+</div>
+<table border="1" class="colwidths-auto docutils align-left">
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Symbol ID</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>COMPONENT_INSERT_TYPE_FIRST</td>
+<td>Insert as first Child of returned object.</td>
+</tr>
+<tr class="row-odd"><td>COMPONENT_INSERT_TYPE_LAST</td>
+<td>Insert as last Child of returned object.</td>
+</tr>
+<tr class="row-even"><td>COMPONENT_INSERT_TYPE_BEFORE</td>
+<td>Insert before returned object.</td>
+</tr>
+<tr class="row-odd"><td>COMPONENT_INSERT_TYPE_AFTER</td>
+<td>Insert after returned object.</td>
+</tr>
+<tr class="row-even"><td>COMPONENT_INSERT_TYPE_ACTIVE</td>
+<td>Insert From Parent, using the Default Insert object of the Parent component.</td>
+</tr>
+<tr class="row-odd"><td>COMPONENT_INSERT_TYPE_END</td>
+<td>Insert at the end of the returned object’s hierarchy.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body"><p class="first">c4d.BaseObject</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">return:</th><td class="field-body"><p class="first last">The main component object if in the Python tab or the object, the component should be inserted under, if in the Insertion tab.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The next example from the Python Insertion rule of the Character tag defines under which object to insert the component, depending on the parent component already has a child or not.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">c4d</span>
+
+<span class="k">def</span> <span class="nf">InsertComponent</span><span class="p">():</span>
+   <span class="c1"># Check if the parent component already has a child object.</span>
+   <span class="k">if</span> <span class="n">pcompop</span><span class="o">.</span><span class="n">GetDown</span><span class="p">():</span>
+       <span class="c1"># If so, insert as child of Start Cap</span>
+       <span class="c1"># Find the Start Cap object within the parent component</span>
+       <span class="n">iop</span> <span class="o">=</span> <span class="n">pcompop</span><span class="o">.</span><span class="n">FindObject</span><span class="p">(</span><span class="s2">&quot;Start_Cap_con+&quot;</span><span class="p">)</span>
+
+       <span class="c1"># Set itype to insert as First Child</span>
+       <span class="n">itype</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">moules</span><span class="o">.</span><span class="n">character</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">COMPONENT_INSERT_TYPE_FIRST</span>
+
+       <span class="c1"># Return the object to be inserted under</span>
+       <span class="k">return</span> <span class="n">iop</span>
+   <span class="k">else</span><span class="p">:</span>
+       <span class="c1"># Otherwise, insert as child of End Cap.</span>
+       <span class="c1"># Find the End Cap object within the parent component</span>
+       <span class="n">iop</span> <span class="o">=</span> <span class="n">pcompop</span><span class="o">.</span><span class="n">FindObject</span><span class="p">(</span><span class="s2">&quot;End_Cap_con+&quot;</span><span class="p">)</span>
+
+       <span class="c1"># Set itype to insert as First Child</span>
+       <span class="n">itype</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">moules</span><span class="o">.</span><span class="n">character</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">COMPONENT_INSERT_TYPE_FIRST</span>
+
+       <span class="c1"># Return the object to be inserted under</span>
+       <span class="k">return</span> <span class="n">iop</span>
+</pre></div>
+</div>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">PostInsertComponent</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><blockquote>
+<div><div class="line-block">
+<div class="line">Override - Called after a component has been inserted in the Character object and only if InsertComponent is not used.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Change should be done directly to the inserted objects within the function.</p>
+</div>
+<p>The following variables are local to this function:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">type doc:</th><td class="field-body">c4d.documents.BaseDocument</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param doc:</th><td class="field-body">The document containing the Character object.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type charop:</th><td class="field-body">c4d.modules.character.builder.CharacterObject</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param charop:</th><td class="field-body">The Character object present in the scene.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type pcompop:</th><td class="field-body">c4d.modules.character.builder.ComponentObject</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param pcompop:</th><td class="field-body">The parent component object.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type pcomp:</th><td class="field-body">c4d.modules.character.builder.Component</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param pcomp:</th><td class="field-body">The parent component.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type comp:</th><td class="field-body">c4d.modules.character.builder.Component</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param comp:</th><td class="field-body">The component to be inserted.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type op:</th><td class="field-body">c4d.BaseObject</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param op:</th><td class="field-body">The main component object that was inserted.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type compop:</th><td class="field-body">c4d.modules.character.builder.ComponentObject</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param compop:</th><td class="field-body">The inserted component.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">MirrorComponent</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><blockquote>
+<div><div class="line-block">
+<div class="line">Override - Called when a mirrored component is added to the Character object. Mirrored components are automatically generated when multiple components of the same type are added with the same parent, based on the settings in the Component tag’s mirroring tab.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">MirrorComponent is called before PostInsertComponent and the mirrored component can be modified directly within this function.</p>
+</div>
+<p>The following variables are local to this function:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">type doc:</th><td class="field-body">c4d.documents.BaseDocument</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param doc:</th><td class="field-body">The document containing the Character object.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type op:</th><td class="field-body">c4d.BaseObject</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param op:</th><td class="field-body">The main component object that was inserted.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type charop:</th><td class="field-body">c4d.modules.character.builder.CharacterObject</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param charop:</th><td class="field-body">The Character object present in the scene.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type comp:</th><td class="field-body">c4d.modules.character.builder.Component</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param comp:</th><td class="field-body">The component to be inserted.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type compop:</th><td class="field-body">c4d.modules.character.builder.ComponentObject</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param compop:</th><td class="field-body">The inserted component.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type pcomp:</th><td class="field-body">c4d.modules.character.builder.Component</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param pcomp:</th><td class="field-body">The parent component.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type pcompop:</th><td class="field-body">c4d.modules.character.builder.ComponentObject</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param pcompop:</th><td class="field-body">The parent component object.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">return:</th><td class="field-body"><strong>True</strong> if mirroring was done by Python.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">IncludeObjects</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><blockquote>
+<div><div class="line-block">
+<div class="line">Override - Used to include additional objects with the component, similar to the Component tag’s Include tab.</div>
+<div class="line">All objects that will be included should be defined in the global variable <cite>incdata</cite> as a BaseContainer</div>
+</div>
+<p>The following variables are local to this function:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">type doc:</th><td class="field-body"><p class="first">c4d.documents.BaseDocument</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param doc:</th><td class="field-body"><p class="first">The document containing the Character object.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type iop:</th><td class="field-body"><p class="first">c4d.BaseObject</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param iop:</th><td class="field-body"><p class="first">The main component object that was inserted.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type iparent:</th><td class="field-body"><p class="first">c4d.BaseObject</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param iparent:</th><td class="field-body"><p class="first">The parent component object of the inserted object.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type icharop:</th><td class="field-body"><p class="first">c4d.modules.character.builder.CharacterObject</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param icharop:</th><td class="field-body"><p class="first">The Character object present in the scene.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type iincdata:</th><td class="field-body"><p class="first">c4d.BaseContainer</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param iincdata:</th><td class="field-body"><p class="first">All objects that will be included where each entry is a BaseLink to the object and the index is an integer corresponding to the InExcludeData flags:</p>
+<table border="1" class="colwidths-auto docutils align-left">
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Value</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>Hierarchy.</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>Sharing.</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>Self-Sharing.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">return:</th><td class="field-body"><p class="first last"><strong>True</strong> if <cite>incdata</cite> was changed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">AdjustObject</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><blockquote>
+<div><div class="line-block">
+<div class="line">Override - Used in the Adjustments tab in the Code field of a Python type Adjustment rule.</div>
+<div class="line">Called continuously while the related handle is being adjusted.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">All matrices for this function are local to the Character object.</div>
+<div class="line">This function is called after AdjustObject.</div>
+</div>
+</div>
+<p>The following variables are local to this function:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">type doc:</th><td class="field-body">c4d.documents.BaseDocument</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param doc:</th><td class="field-body">The document containing the Character object.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type op:</th><td class="field-body">c4d.BaseObject</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param op:</th><td class="field-body">The object linked to the Adjustment rule.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type targ:</th><td class="field-body">c4d.BaseObject</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param targ:</th><td class="field-body">The object linked in the field of the Adjustment rule.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type cmg:</th><td class="field-body">c4d.Matrix</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param cmg:</th><td class="field-body">The matrix of the Character object.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type m:</th><td class="field-body">c4d.Matrix</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param m:</th><td class="field-body">The object’s current matrix <strong>should not be modified</strong>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type om:</th><td class="field-body">c4d.Matrix</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param om:</th><td class="field-body">The object’s original matrix.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type targm:</th><td class="field-body">c4d.Matrix</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param targm:</th><td class="field-body">The target’s current matrix</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type targom:</th><td class="field-body">c4d.Matrix</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param targom:</th><td class="field-body">The target’s original matrix.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">c4d.Matrix</td>
+</tr>
+<tr class="field-even field"><th class="field-name">return:</th><td class="field-body">The matrix to set for the object.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">GetDependency</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><blockquote>
+<div><div class="line-block">
+<div class="line">Override - Used in the Adjustments tab in the Code field of a Python type Adjustment rule.</div>
+<div class="line">It defines the objects upon which the rule depends (e.g. if an adjustment rule needs to set position based on 3 other objects - such as a pole vector - , it should be returned a c4d.BaseContainer with those 3 objects).</div>
+<div class="line">This allows the Character object to create a dependency tree so that adjustments will be evaluated in the correct order, since one rule could change the object matrix used by another rule.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function is called prior to AdjustObject.</p>
+</div>
+<p>The following variables are local to this function:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">type doc:</th><td class="field-body">c4d.documents.BaseDocument</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param doc:</th><td class="field-body">The document containing the Character object.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type op:</th><td class="field-body">c4d.BaseObject</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param op:</th><td class="field-body">The object linked to the Adjustment rule.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type linkop:</th><td class="field-body">c4d.BaseObject</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param linkop:</th><td class="field-body">The object linked in the field of the Adjustment rule.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">c4d.BaseContainer</td>
+</tr>
+<tr class="field-even field"><th class="field-name">return:</th><td class="field-body">Containing BaseLinks (ID isn’t evaluated) of the dependent objects.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">TransformComponent</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><blockquote>
+<div><div class="line-block">
+<div class="line">Override - Used in the Insertion tab in the Code field of a Python type Insertion rule.</div>
+<div class="line">It defines the coordinates of the component.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">All matrices for this function are local to the Character object.</div>
+</div>
+</div>
+<p>The following variables are local to this function:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">type doc:</th><td class="field-body">c4d.documents.BaseDocument</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param doc:</th><td class="field-body">The document containing the Character object.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type template:</th><td class="field-body">c4d.modules.character.builder.Template</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param template:</th><td class="field-body">The template.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type charop:</th><td class="field-body">c4d.modules.character.builder.CharacterObject</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param charop:</th><td class="field-body">The Character object present in the scene.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type pcompop:</th><td class="field-body">c4d.modules.character.builder.ComponentObject</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param pcompop:</th><td class="field-body">The parent component object.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type pcomp:</th><td class="field-body">c4d.modules.character.builder.Component</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param pcomp:</th><td class="field-body">The parent component.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type op:</th><td class="field-body">c4d.BaseObject</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param op:</th><td class="field-body">The main component object.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">c4d.Matrix</td>
+</tr>
+<tr class="field-even field"><th class="field-name">return:</th><td class="field-body">The new global matrix to set for the main component object.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">AllowComponent</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><blockquote>
+<div><div class="line-block">
+<div class="line">Override - Used in the Insertion tab in the Code field of a Python type Insertion rule.</div>
+<div class="line">It defines if the component is allowed.</div>
+</div>
+<p>The following variables are local to this function:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">type doc:</th><td class="field-body">c4d.documents.BaseDocument</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param doc:</th><td class="field-body">The document containing the Character object.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type charop:</th><td class="field-body">c4d.modules.character.builder.CharacterObject</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param charop:</th><td class="field-body">The Character object present in the scene.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type template:</th><td class="field-body">c4d.modules.character.builder.Template</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param template:</th><td class="field-body">The template.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">return:</th><td class="field-body"><strong>True</strong> if the component is allowed otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Python Character Tag</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="python_sketch_toon.html" title="Python Sketch and Toon Material"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="python_visual_selector_tag.html" title="Python Visual Selector Tag"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Manual List</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,3153 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.documents.RenderData &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="c4d.gui" href="../../c4d.gui/index.html" />
+    <link rel="prev" title="c4d.documents.LayerObject" href="../LayerObject/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../c4d.gui/index.html" title="c4d.gui"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../LayerObject/index.html" title="c4d.documents.LayerObject"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">c4d.documents</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-documents-renderdata">
+<h1>c4d.documents.RenderData<a class="headerlink" href="#c4d-documents-renderdata" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.documents.RenderData">
+<em class="property">class </em><code class="descclassname">c4d.documents.</code><code class="descname">RenderData</code><a class="headerlink" href="#c4d.documents.RenderData" title="Permalink to this definition">¶</a></dt>
+<dd><img alt="../../../_images/renderdata_rendersettings.png" src="../../../_images/renderdata_rendersettings.png" />
+<div class="line-block">
+<div class="line">This class contains a container with all raytracer options.</div>
+<div class="line">One can add multiple render data classes to a document.</div>
+<div class="line">The active one will be used for the raytracing.</div>
+<div class="line">Render settings in Cinema 4D are description based.</div>
+<div class="line">Valid IDs are (open Cinema 4D for detailed information):</div>
+</div>
+<blockquote>
+<table class="subtable" cellspacing="6">
+<TR>
+<TD><B>Container ID</B></TD>
+<TD><B>Type</B></TD>
+<TD><B>Description</B></TD>
+</TR>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_ANTIALIASING</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Anti-Aliasing.</p>
+</td>
+</tr>
+<tr><td colspan="3" class="subtable"><blockquote>
+<blockquote>
+<table cellspacing="6">
+<tr>
+<td valign="top">
+<p><CODE>RDATA_ANTIALIASING_NONE</CODE></p>
+</td>
+<td valign="top">
+<p>None.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_ANTIALIASING_GEOMETRY</CODE></p>
+</td>
+<td valign="top">
+<p>Geometry.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_ANTIALIASING_BEST</CODE></p>
+</td>
+<td valign="top">
+<p>Best.</p>
+</td>
+</tr>
+</table>
+</blockquote>
+</blockquote></td></tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AAFILTER</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Filter.</p>
+</td>
+</tr>
+<tr><td colspan="3" class="subtable"><blockquote>
+<blockquote>
+<table cellspacing="6">
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AAFILTER_STILLIMAGE</CODE></p>
+</td>
+<td valign="top">
+<p>Still Image.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AAFILTER_ANIMATION</CODE></p>
+</td>
+<td valign="top">
+<p>Animation.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AAFILTER_BLEND</CODE></p>
+</td>
+<td valign="top">
+<p>Blend.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AAFILTER_SINC</CODE></p>
+</td>
+<td valign="top">
+<p>Sinc.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AAFILTER_AREA</CODE></p>
+</td>
+<td valign="top">
+<p>Area.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AAFILTER_CONE</CODE></p>
+</td>
+<td valign="top">
+<p>Cone.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AAFILTER_CATMULL</CODE></p>
+</td>
+<td valign="top">
+<p>Catmull.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AAFILTER_VIDEO</CODE></p>
+</td>
+<td valign="top">
+<p>PAL/NTSC.</p>
+</td>
+</tr>
+</table>
+</blockquote>
+</blockquote></td></tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AATHRESHOLD</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Real</CODE></p>
+</td>
+<td valign="top">
+<p>Threshold.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AAMINLEVEL</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Min Level.</p>
+</td>
+</tr>
+<tr><td colspan="3" class="subtable"><blockquote>
+<blockquote>
+<table cellspacing="6">
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AAMINLEVEL_1</CODE></p>
+</td>
+<td valign="top">
+<p>1x1.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AAMINLEVEL_2</CODE></p>
+</td>
+<td valign="top">
+<p>2x2.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AAMINLEVEL_4</CODE></p>
+</td>
+<td valign="top">
+<p>4x4.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AAMINLEVEL_8</CODE></p>
+</td>
+<td valign="top">
+<p>8x8.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AAMINLEVEL_16</CODE></p>
+</td>
+<td valign="top">
+<p>16x16.</p>
+</td>
+</tr>
+</table>
+</blockquote>
+</blockquote></td></tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AAMAXLEVEL</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Max Level.</p>
+</td>
+</tr>
+<tr><td colspan="3" class="subtable"><blockquote>
+<blockquote>
+<table cellspacing="6">
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AAMAXLEVEL_1</CODE></p>
+</td>
+<td valign="top">
+<p>1x1.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AAMAXLEVEL_2</CODE></p>
+</td>
+<td valign="top">
+<p>2x2.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AAMAXLEVEL_4</CODE></p>
+</td>
+<td valign="top">
+<p>4x4.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AAMAXLEVEL_8</CODE></p>
+</td>
+<td valign="top">
+<p>8x8.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AAMAXLEVEL_16</CODE></p>
+</td>
+<td valign="top">
+<p>16x16.</p>
+</td>
+</tr>
+</table>
+</blockquote>
+</blockquote></td></tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AAOBJECTPROPERTIES</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Use Object Properties.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AAMIPGLOBAL</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Real</CODE></p>
+</td>
+<td valign="top">
+<p>MIP Scale.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AASOFTNESS</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Real</CODE></p>
+</td>
+<td valign="top">
+<p>Softness.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_RENDERENGINE</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Render Engine (external renderers pass their plugin ID).</p>
+</td>
+</tr>
+<tr><td colspan="3" class="subtable"><blockquote>
+<blockquote>
+<table cellspacing="6">
+<tr>
+<td valign="top">
+<p><CODE>RDATA_RENDERENGINE_STANDARD</CODE></p>
+</td>
+<td valign="top">
+<p>Full Render.</p>
+</td>
+</tr>
+<td valign="top">
+<p><CODE>RDATA_RENDERENGINE_PREVIEWHARDWARE</CODE></p>
+</td>
+<td valign="top">
+<p>Hardware Preview.</p>
+</td>
+</tr>
+</table>
+</blockquote>
+</blockquote></td></tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_ACTIVEOBJECTONLY</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Active Object Only.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_AUTOLIGHT</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Auto Light.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_TEXTURES</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Textures.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_TEXTUREERROR</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Cancel if Texture Error.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_ENABLEBLURRY</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Blurriness.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_VOLUMETRICLIGHTING</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Volumetric Lighting.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_USELOD</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Use Display Tag LOD.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_SHOWHUD</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Render HUD.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_CACHESHADOWMAPS</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Cache Shadow Maps.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_ENABLESPD</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Sub-Polygon Displacement.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_POSTEFFECTS_ENABLE</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Post Effects.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_RAYDEPTH</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Ray Depth.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_REFLECTIONDEPTH</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Reflection Depth.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_SHADOWDEPTH</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Shadow Depth.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_THRESHOLD</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Real</CODE></p>
+</td>
+<td valign="top">
+<p>Ray Threshold.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_LOD</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Real</CODE></p>
+</td>
+<td valign="top">
+<p>Level of Detail.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_GLOBALBRIGHTNESS</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Real</CODE></p>
+</td>
+<td valign="top">
+<p>Global Brightness.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_RENDERGAMMA</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Real</CODE></p>
+</td>
+<td valign="top">
+<p>Render Gamma.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_MOTIONLENGTH</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Real</CODE></p>
+</td>
+<td valign="top">
+<p>Motion Scale.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_SAVEIMAGE</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Save Image.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PATH</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Filename</CODE></p>
+</td>
+<td valign="top">
+<p>Path.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FORMAT</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Format (bitmap filter plugins pass their plugin ID).</p>
+</td>
+</tr>
+<tr><td colspan="3" class="subtable"><blockquote>
+<blockquote>
+<table cellspacing="6">
+<tr>
+<td valign="top">
+<p><CODE>FILTER_TIF</CODE></p>
+</td>
+<td valign="top">
+<p>TIFF</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_TGA</CODE></p>
+</td>
+<td valign="top">
+<p>TGA</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_BMP</CODE></p>
+</td>
+<td valign="top">
+<p>BMP</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_IFF</CODE></p>
+</td>
+<td valign="top">
+<p>IFF</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_JPG</CODE></p>
+</td>
+<td valign="top">
+<p>JPEG</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_PICT</CODE></p>
+</td>
+<td valign="top">
+<p>Mac pict</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_PSD</CODE></p>
+</td>
+<td valign="top">
+<p>Photoshop</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_RLA</CODE></p>
+</td>
+<td valign="top">
+<p>RLA</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_RPF</CODE></p>
+</td>
+<td valign="top">
+<p>RPF</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_B3D</CODE></p>
+</td>
+<td valign="top">
+<p>Bodypaint</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_TIF_B3D</CODE></p>
+</td>
+<td valign="top">
+<p>TIFF B3D.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_PSB</CODE></p>
+</td>
+<td valign="top">
+<p>Photoshop Big.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_AVI</CODE></p>
+</td>
+<td valign="top">
+<p>AVI movie.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_MOVIE</CODE></p>
+</td>
+<td valign="top">
+<p>Quicktime movie.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_QTVRSAVER_PANORAMA</CODE></p>
+</td>
+<td valign="top">
+<p>QTVR panorama</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_QTVRSAVER_OBJECT</CODE></p>
+</td>
+<td valign="top">
+<p>QTVR object</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_HDR</CODE></p>
+</td>
+<td valign="top">
+<p>HDR</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_PNG</CODE></p>
+</td>
+<td valign="top">
+<p>PNG.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_IES</CODE></p>
+</td>
+<td valign="top">
+<p>IES.</p>
+</td>
+</tr>
+</table>
+</blockquote>
+</blockquote></td></tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_SAVEOPTIONS</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>BaseContainer</CODE></p>
+</td>
+<td valign="top">
+<p>Options.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FORMATDEPTH</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Depth.</p>
+</td>
+</tr>
+<tr><td colspan="3" class="subtable"><blockquote>
+<blockquote>
+<table cellspacing="6">
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FORMATDEPTH_8</CODE></p>
+</td>
+<td valign="top">
+<p>8 Bit/Channel.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FORMATDEPTH_16</CODE></p>
+</td>
+<td valign="top">
+<p>16 Bit/Channel.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FORMATDEPTH_32</CODE></p>
+</td>
+<td valign="top">
+<p>32 Bit/Channel.</p>
+</td>
+</tr>
+</table>
+</blockquote>
+</blockquote></td></tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_NAMEFORMAT</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Name.</p>
+</td>
+</tr>
+<tr><td colspan="3" class="subtable"><blockquote>
+<blockquote>
+<table cellspacing="6">
+<tr>
+<td valign="top">
+<p><CODE>RDATA_NAMEFORMAT_0</CODE></p>
+</td>
+<td valign="top">
+<p>Name0000.TIF</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_NAMEFORMAT_1</CODE></p>
+</td>
+<td valign="top">
+<p>Name0000</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_NAMEFORMAT_2</CODE></p>
+</td>
+<td valign="top">
+<p>Name.0000</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_NAMEFORMAT_3</CODE></p>
+</td>
+<td valign="top">
+<p>Name000.TIF</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_NAMEFORMAT_4</CODE></p>
+</td>
+<td valign="top">
+<p>Name000</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_NAMEFORMAT_5</CODE></p>
+</td>
+<td valign="top">
+<p>Name.000</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_NAMEFORMAT_6</CODE></p>
+</td>
+<td valign="top">
+<p>Name.0000.TIF</p>
+</td>
+</tr>
+</table>
+</blockquote>
+</blockquote></td></tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_TRUECOLORDITHERING</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>24 Bit Dithering.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_ALPHACHANNEL</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Alpha Channel.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_STRAIGHTALPHA</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Straight Alpha.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_SEPARATEALPHA</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Separate Alpha.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_VRGENERATE</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Generate File.</p>
+</td>
+</tr>
+<tr><td colspan="3" class="subtable"><blockquote>
+<blockquote>
+<table cellspacing="6">
+<tr>
+<td valign="top">
+<p><CODE>RDATA_VRGENERATE_VR</CODE></p>
+</td>
+<td valign="top">
+<p>VR.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_VRGENERATE_INTERMEDIATE</CODE></p>
+</td>
+<td valign="top">
+<p>Intermediate.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_VRGENERATE_BOTH</CODE></p>
+</td>
+<td valign="top">
+<p>Both.</p>
+</td>
+</tr>
+</table>
+</blockquote>
+</blockquote></td></tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_HSTEPS</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Horizontal Steps.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_HSTART</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Real</CODE></p>
+</td>
+<td valign="top">
+<p>Horizontal Start Angle.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_HEND</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Real</CODE></p>
+</td>
+<td valign="top">
+<p>Horizontal End Angle.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_VSTEPS</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Vertical Steps.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_VSTART</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Real</CODE></p>
+</td>
+<td valign="top">
+<p>Vertical Start Angle.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_VEND</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Real</CODE></p>
+</td>
+<td valign="top">
+<p>Vertical End Angle.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_VRDEFAULTX</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Default X Resolution.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_VRDEFAULTY</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Default Y Resolution.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PROJECTFILE</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Save Compositing Project File.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PROJECTFILETYPE</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Target Application.</p>
+</td>
+</tr>
+<tr><td colspan="3" class="subtable"><blockquote>
+<blockquote>
+<table cellspacing="6">
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PROJECTFILETYPE_AFTEREFFECTS</CODE></p>
+</td>
+<td valign="top">
+<p>After Effects.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PROJECTFILETYPE_COMBUSTION</CODE></p>
+</td>
+<td valign="top">
+<p>Combustion.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PROJECTFILETYPE_FINALCUT</CODE></p>
+</td>
+<td valign="top">
+<p>Final Cut (not yet avaible).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PROJECTFILETYPE_MOTION</CODE></p>
+</td>
+<td valign="top">
+<p>Motion.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PROJECTFILETYPE_SHAKE</CODE></p>
+</td>
+<td valign="top">
+<p>Shake.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PROJECTFILETYPE_DIGITALFUSION</CODE></p>
+</td>
+<td valign="top">
+<p>Digital Fusion.</p>
+</td>
+</tr>
+</table>
+</blockquote>
+</blockquote></td></tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PROJECTFILELOCAL</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Relative.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PROJECTFILEDATA</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Include 3D Data.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_XRES_VIRTUAL</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Real</CODE></p>
+</td>
+<td valign="top">
+<p>Width (units applied).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_YRES_VIRTUAL</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Real</CODE></p>
+</td>
+<td valign="top">
+<p>Height (units applied).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PIXELRESOLUTION_VIRTUAL</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Real</CODE></p>
+</td>
+<td valign="top">
+<p>Resolution (units applied).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PROJECTFILESAVE</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>BUTTON</CODE></p>
+</td>
+<td valign="top">
+<p>'Save Project File' button.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_XRES</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Real</CODE></p>
+</td>
+<td valign="top">
+<p>Width (Pixels).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_YRES</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Real</CODE></p>
+</td>
+<td valign="top">
+<p>Height (Pixels).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FRAMESEQUENCE</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Frame Range.</p>
+</td>
+</tr>
+<tr><td colspan="3" class="subtable"><blockquote>
+<blockquote>
+<table cellspacing="6">
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FRAMESEQUENCE_MANUAL</CODE></p>
+</td>
+<td valign="top">
+<p>Manual.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FRAMESEQUENCE_CURRENTFRAME</CODE></p>
+</td>
+<td valign="top">
+<p>Current Frame.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FRAMESEQUENCE_ALLFRAMES</CODE></p>
+</td>
+<td valign="top">
+<p>All Frames.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FRAMESEQUENCE_PREVIEWRANGE</CODE></p>
+</td>
+<td valign="top">
+<p>Preview Range.</p>
+</td>
+</tr>
+</table>
+</blockquote>
+</blockquote></td></tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FRAMEFROM</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>BaseTime</CODE></p>
+</td>
+<td valign="top">
+<p>From.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FRAMETO</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>BaseTime</CODE></p>
+</td>
+<td valign="top">
+<p>To.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FRAMESTEP</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Frame Step.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FIELD</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Fields.</p>
+</td>
+</tr>
+<tr><td colspan="3" class="subtable"><blockquote>
+<blockquote>
+<table cellspacing="6">
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FIELD_NONE</CODE></p>
+</td>
+<td valign="top">
+<p>None.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FIELD_EVEN</CODE></p>
+</td>
+<td valign="top">
+<p>Even First.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FIELD_ODD</CODE></p>
+</td>
+<td valign="top">
+<p>Odd First.</p>
+</td>
+</tr>
+</table>
+</blockquote>
+</blockquote></td></tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FRAMERATE</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Real</CODE></p>
+</td>
+<td valign="top">
+<p>Frame Rate.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_LOCKRATIO</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Lock Ratio.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_SIZEUNIT</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Units.</p>
+</td>
+</tr>
+<tr><td colspan="3" class="subtable"><blockquote>
+<blockquote>
+<table cellspacing="6">
+<tr>
+<td valign="top">
+<p><CODE>RDATA_SIZEUNIT_PIXELS</CODE></p>
+</td>
+<td valign="top">
+<p>Pixels.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_SIZEUNIT_CM</CODE></p>
+</td>
+<td valign="top">
+<p>cm.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_SIZEUNIT_MM</CODE></p>
+</td>
+<td valign="top">
+<p>mm.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_SIZEUNIT_INCHES</CODE></p>
+</td>
+<td valign="top">
+<p>Inches.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_SIZEUNIT_POINTS</CODE></p>
+</td>
+<td valign="top">
+<p>Points.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_SIZEUNIT_PICAS</CODE></p>
+</td>
+<td valign="top">
+<p>Picas.</p>
+</td>
+</tr>
+</table>
+</blockquote>
+</blockquote></td></tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PIXELRESOLUTION</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Real</CODE></p>
+</td>
+<td valign="top">
+<p>Resolution (always in DPI).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PIXELRESOLUTIONUNIT</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Resolution Units.</p>
+</td>
+</tr>
+<tr><td colspan="3" class="subtable"><blockquote>
+<blockquote>
+<table cellspacing="6">
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PIXELRESOLUTIONUNIT_PERCM</CODE></p>
+</td>
+<td valign="top">
+<p>Pixels/cm.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PIXELRESOLUTIONUNIT_PERINCH</CODE></p>
+</td>
+<td valign="top">
+<p>Pixels/Inch (DPI).</p>
+</td>
+</tr>
+</table>
+</blockquote>
+</blockquote></td></tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FILMASPECT</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Real</CODE></p>
+</td>
+<td valign="top">
+<p>Film Aspect.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FILMPRESET</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Film Aspect Presets.</p>
+</td>
+</tr>
+<tr><td colspan="3" class="subtable"><blockquote>
+<blockquote>
+<table cellspacing="6">
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FILMPRESET_CUSTOM</CODE></p>
+</td>
+<td valign="top">
+<p>Custom.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FILMPRESET_SQUARE</CODE></p>
+</td>
+<td valign="top">
+<p>Square (1:1).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FILMPRESET_STANDARD</CODE></p>
+</td>
+<td valign="top">
+<p>Standard (4:3).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FILMPRESET_HDTV</CODE></p>
+</td>
+<td valign="top">
+<p>HDTV (16:9).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FILMPRESET_35MMSTILL</CODE></p>
+</td>
+<td valign="top">
+<p>35mm Still (3:2).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FILMPRESET_WIDESCREEN</CODE></p>
+</td>
+<td valign="top">
+<p>Widescreen (14:9).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FILMPRESET_35MM</CODE></p>
+</td>
+<td valign="top">
+<p>35mm (1.85:1).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_FILMPRESET_PANAVISION</CODE></p>
+</td>
+<td valign="top">
+<p>Panavision (2.39:1).</p>
+</td>
+</tr>
+</table>
+</blockquote>
+</blockquote></td></tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PIXELASPECT</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Real</CODE></p>
+</td>
+<td valign="top">
+<p>Pixel Aspect.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PIXELPRESET</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Pixel Aspect Presets.</p>
+</td>
+</tr>
+<tr><td colspan="3" class="subtable"><blockquote>
+<blockquote>
+<table cellspacing="6">
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PIXELPRESET_CUSTOM</CODE></p>
+</td>
+<td valign="top">
+<p>Custom.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PIXELPRESET_SQUARE</CODE></p>
+</td>
+<td valign="top">
+<p>Square.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PIXELPRESET_D1DVNTSC</CODE></p>
+</td>
+<td valign="top">
+<p>D1/DV NTSC (0.9).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PIXELPRESET_D1DVPAL</CODE></p>
+</td>
+<td valign="top">
+<p>D1/DV PAL (1.067).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PIXELPRESET_D1DVNTSCWIDESCREEN</CODE></p>
+</td>
+<td valign="top">
+<p>D1/DV NTSC Widescreen (1.2).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PIXELPRESET_HDVANAMORPHIC</CODE></p>
+</td>
+<td valign="top">
+<p>HDV Anamorphic (1.333).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PIXELPRESET_D1DVPALWIDESCREEN</CODE></p>
+</td>
+<td valign="top">
+<p>D1/DV PAL Widescreen (1.422).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PIXELPRESET_ANAMORPHIC</CODE></p>
+</td>
+<td valign="top">
+<p>Anamorphic 2:1 (2.0).</p>
+</td>
+</tr>
+</table>
+</blockquote>
+</blockquote></td></tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>POPUP</CODE></p>
+</td>
+<td valign="top">
+<p>Presets.</p>
+</td>
+</tr>
+<tr><td colspan="3" class="subtable"><blockquote>
+<blockquote>
+<table cellspacing="6">
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_160_120</CODE></p>
+</td>
+<td valign="top">
+<p>160 x 120.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_320_240</CODE></p>
+</td>
+<td valign="top">
+<p>320 x 240.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_480_360</CODE></p>
+</td>
+<td valign="top">
+<p>480 x 360.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_640_480</CODE></p>
+</td>
+<td valign="top">
+<p>640 x 480.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_800_600</CODE></p>
+</td>
+<td valign="top">
+<p>800 x 600.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_1024_768</CODE></p>
+</td>
+<td valign="top">
+<p>1024 x 768.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_1280_1024</CODE></p>
+</td>
+<td valign="top">
+<p>1280 x 1024.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_1440_900</CODE></p>
+</td>
+<td valign="top">
+<p>1440 x 900.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_1680_1080</CODE></p>
+</td>
+<td valign="top">
+<p>1680 x 1080.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_1920_1200</CODE></p>
+</td>
+<td valign="top">
+<p>1920 x 1200.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_2560_1600</CODE></p>
+</td>
+<td valign="top">
+<p>2560 x 1600.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_EDITORRESOLUTION</CODE></p>
+</td>
+<td valign="top">
+<p>Editor Resolution.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_WEBVIDEO</CODE></p>
+</td>
+<td valign="top">
+<p>Web Video 320 x 240.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_WEBBANNER</CODE></p>
+</td>
+<td valign="top">
+<p>Web Banner 468 x 60.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_IPODVIDEO</CODE></p>
+</td>
+<td valign="top">
+<p>iPod Video 640 x 480.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_NTSCDV</CODE></p>
+</td>
+<td valign="top">
+<p>NTSC DV.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_NTSCDVWIDESCREEN</CODE></p>
+</td>
+<td valign="top">
+<p>NTSC Widescreen.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_NTSCDVWIDESCREEN24</CODE></p>
+</td>
+<td valign="top">
+<p>NTSC Widescreen 23.976.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_NTSCD1</CODE></p>
+</td>
+<td valign="top">
+<p>NTSC D1.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_NTSCD1WIDESCREEN</CODE></p>
+</td>
+<td valign="top">
+<p>NTSC D1 Widescreen.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_NTSCD1SQUAREPIXEL</CODE></p>
+</td>
+<td valign="top">
+<p>NTSC D1 Square Pixel.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_NTSCD1WIDESCREENSQUAREPIXEL</CODE></p>
+</td>
+<td valign="top">
+<p>NTSC D1 Widescreen Square Pixel.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_PALD1DV</CODE></p>
+</td>
+<td valign="top">
+<p>PAL D1/DV.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_PALD1DVWIDESCREEN</CODE></p>
+</td>
+<td valign="top">
+<p>PAL D1/DV Widescreen.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_PALD1DVSQUAREPIXEL</CODE></p>
+</td>
+<td valign="top">
+<p>PAL D1/DV Square Pixel.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_PALD1DVWIDESCREENSQUAREPIXEL</CODE></p>
+</td>
+<td valign="top">
+<p>PAL D1/DV Widescreen Square Pixel.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_HDVHDTV720_30</CODE></p>
+</td>
+<td valign="top">
+<p>HDV/HDTV 720 29.97.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_HDVHDTV720_25</CODE></p>
+</td>
+<td valign="top">
+<p>HDV/HDTV 720 25.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_HDV1080_30</CODE></p>
+</td>
+<td valign="top">
+<p>HDV 1080 29.97.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_HDV1080_25</CODE></p>
+</td>
+<td valign="top">
+<p>HDV 1080 25.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_DVCPRO_HD720_24</CODE></p>
+</td>
+<td valign="top">
+<p>DVCPRO HD 720 23.976.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_DVCPRO_HD720_30</CODE></p>
+</td>
+<td valign="top">
+<p>DVCPRO HD 720 29.97.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_DVCPRO_HD1080</CODE></p>
+</td>
+<td valign="top">
+<p>DVCPRO 1080 29.97.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_HDTV1080_24</CODE></p>
+</td>
+<td valign="top">
+<p>HDTV 1080 24.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_HDTV1080_30</CODE></p>
+</td>
+<td valign="top">
+<p>HDTV 1080 29.97.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_CINEONHALF</CODE></p>
+</td>
+<td valign="top">
+<p>Cineon Half.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_CINEONFULL</CODE></p>
+</td>
+<td valign="top">
+<p>Cineon Full.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_FILM2K</CODE></p>
+</td>
+<td valign="top">
+<p>Film (2K).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_FILM4K</CODE></p>
+</td>
+<td valign="top">
+<p>Film (4K).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_QTVRHALF</CODE></p>
+</td>
+<td valign="top">
+<p>Quicktime VR Half.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_QTVRFULL</CODE></p>
+</td>
+<td valign="top">
+<p>Quicktime VR Full.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_SQUARE1K</CODE></p>
+</td>
+<td valign="top">
+<p>Square (1K).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_SQUARE2K</CODE></p>
+</td>
+<td valign="top">
+<p>Square (2K).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_SQUARE3K</CODE></p>
+</td>
+<td valign="top">
+<p>Square (3K).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_SQUARE4K</CODE></p>
+</td>
+<td valign="top">
+<p>Square (4K).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_LETTER_H</CODE></p>
+</td>
+<td valign="top">
+<p>Letter (Portrait).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_LEGAL_H</CODE></p>
+</td>
+<td valign="top">
+<p>Legal (Portrait).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_TABLOID_H</CODE></p>
+</td>
+<td valign="top">
+<p>Tabloid (Portrait).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_A5_H</CODE></p>
+</td>
+<td valign="top">
+<p>A5 (Portrait).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_A4_H</CODE></p>
+</td>
+<td valign="top">
+<p>A4 (Portrait).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_A3_H</CODE></p>
+</td>
+<td valign="top">
+<p>A3 (Portrait).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_A2_H</CODE></p>
+</td>
+<td valign="top">
+<p>A2 (Portrait).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_A1_H</CODE></p>
+</td>
+<td valign="top">
+<p>A1 (Portrait).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_A0_H</CODE></p>
+</td>
+<td valign="top">
+<p>A0 (Portrait).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_B5_H</CODE></p>
+</td>
+<td valign="top">
+<p>B5 (Portrait).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_B4_H</CODE></p>
+</td>
+<td valign="top">
+<p>B4 (Portrait).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_B3_H</CODE></p>
+</td>
+<td valign="top">
+<p>B3 (Portrait).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_B2_H</CODE></p>
+</td>
+<td valign="top">
+<p>B2 (Portrait).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_B1_H</CODE></p>
+</td>
+<td valign="top">
+<p>B1 (Portrait).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_B0_H</CODE></p>
+</td>
+<td valign="top">
+<p>B0 (Portrait).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_2_3_INCH_H</CODE></p>
+</td>
+<td valign="top">
+<p>2'' x 3'' (Portrait).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_3_5_INCH_H</CODE></p>
+</td>
+<td valign="top">
+<p>3'' x 5'' (Portrait).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_4_6_INCH_H</CODE></p>
+</td>
+<td valign="top">
+<p>4'' x 6'' (Portrait).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_5_7_INCH_H</CODE></p>
+</td>
+<td valign="top">
+<p>5'' x 7'' (Portrait).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_8_10_INCH_H</CODE></p>
+</td>
+<td valign="top">
+<p>8'' x 10'' (Portrait).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_LETTER_V</CODE></p>
+</td>
+<td valign="top">
+<p>Letter (Landscape).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_LEGAL_V</CODE></p>
+</td>
+<td valign="top">
+<p>Legal (Landscape).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_TABLOID_V</CODE></p>
+</td>
+<td valign="top">
+<p>Tabloid (Landscape).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_A5_V</CODE></p>
+</td>
+<td valign="top">
+<p>A5 (Landscape).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_A4_V</CODE></p>
+</td>
+<td valign="top">
+<p>A4 (Landscape).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_A3_V</CODE></p>
+</td>
+<td valign="top">
+<p>A3 (Landscape).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_A2_V</CODE></p>
+</td>
+<td valign="top">
+<p>A2 (Landscape).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_A1_V</CODE></p>
+</td>
+<td valign="top">
+<p>A1 (Landscape).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_A0_V</CODE></p>
+</td>
+<td valign="top">
+<p>A0 (Landscape).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_B5_V</CODE></p>
+</td>
+<td valign="top">
+<p>B5 (Landscape).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_B4_V</CODE></p>
+</td>
+<td valign="top">
+<p>B4 (Landscape).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_B3_V</CODE></p>
+</td>
+<td valign="top">
+<p>B3 (Landscape).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_B2_V</CODE></p>
+</td>
+<td valign="top">
+<p>B2 (Landscape).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_B1_V</CODE></p>
+</td>
+<td valign="top">
+<p>B1 (Landscape).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_B0_V</CODE></p>
+</td>
+<td valign="top">
+<p>B0 (Landscape).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_2_3_INCH_V</CODE></p>
+</td>
+<td valign="top">
+<p>3'' x 2'' (Landscape).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_3_5_INCH_V</CODE></p>
+</td>
+<td valign="top">
+<p>5'' x 3'' (Landscape).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_4_6_INCH_V</CODE></p>
+</td>
+<td valign="top">
+<p>6'' x 4'' (Landscape).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_5_7_INCH_V</CODE></p>
+</td>
+<td valign="top">
+<p>7'' x 5'' (Landscape).</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_PRESET_8_10_INCH_V</CODE></p>
+</td>
+<td valign="top">
+<p>10'' x 8'' (Landscape).</p>
+</td>
+</tr>
+</table>
+</blockquote>
+</blockquote></td></tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_MULTIPASS_SAVEIMAGE</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Save Multi-Pass Image.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_MULTIPASS_SAVEONEFILE</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Mulit-Layer File.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_MULTIPASS_ENABLE</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Enable Multi-Pass.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_MULTIPASS_SAVEFORMAT</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Format (bitmap filter plugins pass their plugin ID).</p>
+</td>
+</tr>
+<tr><td colspan="3" class="subtable"><blockquote>
+<blockquote>
+<table cellspacing="6">
+<tr>
+<td valign="top">
+<p><CODE>FILTER_TIF</CODE></p>
+</td>
+<td valign="top">
+<p>TIFF</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_TGA</CODE></p>
+</td>
+<td valign="top">
+<p>TGA</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_BMP</CODE></p>
+</td>
+<td valign="top">
+<p>BMP</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_IFF</CODE></p>
+</td>
+<td valign="top">
+<p>IFF</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_JPG</CODE></p>
+</td>
+<td valign="top">
+<p>JPEG</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_PICT</CODE></p>
+</td>
+<td valign="top">
+<p>Mac pict</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_PSD</CODE></p>
+</td>
+<td valign="top">
+<p>Photoshop</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_RLA</CODE></p>
+</td>
+<td valign="top">
+<p>RLA</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_RPF</CODE></p>
+</td>
+<td valign="top">
+<p>RPF</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_B3D</CODE></p>
+</td>
+<td valign="top">
+<p>Bodypaint</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_TIF_B3D</CODE></p>
+</td>
+<td valign="top">
+<p>TIFF B3D.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_PSB</CODE></p>
+</td>
+<td valign="top">
+<p>Photoshop Big.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_AVI</CODE></p>
+</td>
+<td valign="top">
+<p>AVI movie.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_MOVIE</CODE></p>
+</td>
+<td valign="top">
+<p>Quicktime movie.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_QTVRSAVER_PANORAMA</CODE></p>
+</td>
+<td valign="top">
+<p>QTVR panorama</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_QTVRSAVER_OBJECT</CODE></p>
+</td>
+<td valign="top">
+<p>QTVR object</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_HDR</CODE></p>
+</td>
+<td valign="top">
+<p>HDR</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_PNG</CODE></p>
+</td>
+<td valign="top">
+<p>PNG.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>FILTER_IES</CODE></p>
+</td>
+<td valign="top">
+<p>IES.</p>
+</td>
+</tr>
+</table>
+</blockquote>
+</blockquote></td></tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_MULTIPASS_SAVEOPTIONS</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>BaseContainer</CODE></p>
+</td>
+<td valign="top">
+<p>Options.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_MULTIPASS_LIGHTS</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Separate Lights.</p>
+</td>
+</tr>
+<tr><td colspan="3" class="subtable"><blockquote>
+<blockquote>
+<table cellspacing="6">
+<tr>
+<td valign="top">
+<p><CODE>RDATA_MULTIPASS_LIGHTS_NONE</CODE></p>
+</td>
+<td valign="top">
+<p>None.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_MULTIPASS_LIGHTS_ALL</CODE></p>
+</td>
+<td valign="top">
+<p>All.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_MULTIPASS_LIGHTS_SELECTED</CODE></p>
+</td>
+<td valign="top">
+<p>Selected.</p>
+</td>
+</tr>
+</table>
+</blockquote>
+</blockquote></td></tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_MULTIPASS_FILENAME</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Filename</CODE></p>
+</td>
+<td valign="top">
+<p>Path.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_MULTIPASS_SAVEDEPTH</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Depth.</p>
+</td>
+</tr>
+<tr><td colspan="3" class="subtable"><blockquote>
+<blockquote>
+<table cellspacing="6">
+<tr>
+<td valign="top">
+<p><CODE>RDATA_MULTIPASS_SAVEDEPTH_8</CODE></p>
+</td>
+<td valign="top">
+<p>8 Bit/Channel</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_MULTIPASS_SAVEDEPTH_16</CODE></p>
+</td>
+<td valign="top">
+<p>16 Bit/Channel</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_MULTIPASS_SAVEDEPTH_32</CODE></p>
+</td>
+<td valign="top">
+<p>32 Bit/Channel</p>
+</td>
+</tr>
+</table>
+</blockquote>
+</blockquote></td></tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_MULTIPASS_LIGHTMODE</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Mode.</p>
+</td>
+</tr>
+<tr><td colspan="3" class="subtable"><blockquote>
+<blockquote>
+<table cellspacing="6">
+<tr>
+<td valign="top">
+<p><CODE>RDATA_MULTIPASS_LIGHTMODE_1CHANNEL</CODE></p>
+</td>
+<td valign="top">
+<p>1 Channel: Diffuse+Specular+Shadow</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_MULTIPASS_LIGHTMODE_2CHANNELS</CODE></p>
+</td>
+<td valign="top">
+<p>2 Channels: Diffuse+Specular,Shadow</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_MULTIPASS_LIGHTMODE_3CHANNELS</CODE></p>
+</td>
+<td valign="top">
+<p>3 Channels: Diffuse,Specular,Shadow</p>
+</td>
+</tr>
+</table>
+</blockquote>
+</blockquote></td></tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_MULTIPASS_SUFFIX</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Layer Name as Suffix.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_MULTIPASS_SHADOWCORRECTION</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Shadow Correction.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_MULTIPASS_STRAIGHTALPHA</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Straight Alpha.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_RENDERDOODLE</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Render Doodle.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_INCLUDESOUND</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Include Sound.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_GLOBALSAVE</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Enable Saving.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_HELPTEXT</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>String</CODE></p>
+</td>
+<td valign="top">
+<p>Annotations.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_SAVECALLBACK_FUNC</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>LONG</CODE></p>
+</td>
+<td valign="top">
+<p>Private.</p>
+</td>
+</tr>
+<tr><td colspan="3" class="subtable"><blockquote>
+<blockquote>
+<table cellspacing="6">
+<tr>
+<td valign="top">
+<p><CODE>RDATA_CALLABACK_OPEN</CODE></p>
+</td>
+<td valign="top">
+<p>Open.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_CALLABACK_WRITE</CODE></p>
+</td>
+<td valign="top">
+<p>Write.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_CALLABACK_CLOSE</CODE></p>
+</td>
+<td valign="top">
+<p>Close.</p>
+</td>
+</tr>
+</table>
+</blockquote>
+</blockquote></td></tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_SAVECALLBACK_USERDATA</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>void*</CODE></p>
+</td>
+<td valign="top">
+<p>Private.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_OPTION_TRANSPARENCY</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Transaprency.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_OPTION_REFRACTION</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Refraction.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_OPTION_REFLECTION</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Reflection.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_OPTION_SHADOW</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Shadow.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_LIMITREFLECTION</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Limit Reflections to Floor/Sky.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><CODE>RDATA_LIMITSHADOW</CODE></p>
+</td>
+<td valign="top">
+<p><CODE>Bool</CODE></p>
+</td>
+<td valign="top">
+<p>Limit Shadows to Soft.</p>
+</td>
+</tr>
+</table>
+</blockquote><br>
+<p><br>
+</p>
+</blockquote></dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#RenderData.__init__" title="RenderData.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">RenderData.__init__(self)</span></code></a></td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">c4d.documents.RenderData</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#RenderData.GetFirstVideoPost" title="RenderData.GetFirstVideoPost"><code class="xref py py-meth docutils literal notranslate"><span class="pre">RenderData.GetFirstVideoPost(self)</span></code></a></td>
+<td>Returns the first videopost of the render setting.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#RenderData.InsertVideoPost" title="RenderData.InsertVideoPost"><code class="xref py py-meth docutils literal notranslate"><span class="pre">RenderData.InsertVideoPost(self,</span> <span class="pre">pvp,</span> <span class="pre">pred)</span></code></a></td>
+<td>Inserts <em>pvp</em> as the last videopost in the render setting.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#RenderData.InsertVideoPostLast" title="RenderData.InsertVideoPostLast"><code class="xref py py-meth docutils literal notranslate"><span class="pre">RenderData.InsertVideoPostLast(self,</span> <span class="pre">pvp)</span></code></a></td>
+<td>Inserts <em>pvp</em> as the last videopost in the render setting.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#RenderData.GetFirstMultipass" title="RenderData.GetFirstMultipass"><code class="xref py py-meth docutils literal notranslate"><span class="pre">RenderData.GetFirstMultipass(self)</span></code></a></td>
+<td>Returns the first multipass of the render setting.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#RenderData.InsertMultipass" title="RenderData.InsertMultipass"><code class="xref py py-meth docutils literal notranslate"><span class="pre">RenderData.InsertMultipass(self,</span> <span class="pre">obj,</span> <span class="pre">pred)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Inserts the multipass channel into the render setting.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseList2D</span></code></a></li>
+</ul>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="RenderData.__init__">
+<code class="descclassname">RenderData.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#RenderData.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.documents.RenderData" title="c4d.documents.RenderData">c4d.documents.RenderData</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The new render data.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="RenderData.GetFirstVideoPost">
+<code class="descclassname">RenderData.</code><code class="descname">GetFirstVideoPost</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#RenderData.GetFirstVideoPost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the first videopost of the render setting.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../BaseVideoPost/index.html#c4d.documents.BaseVideoPost" title="c4d.documents.BaseVideoPost">c4d.documents.BaseVideoPost</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The first videopost.<div class="versionchanged">
+<p><span class="versionmodified">Changed in version R19: </span>Returns a <a class="reference internal" href="../BaseVideoPost/index.html#c4d.documents.BaseVideoPost" title="c4d.documents.BaseVideoPost"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseVideoPost</span></code></a> object.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="RenderData.InsertVideoPost">
+<code class="descclassname">RenderData.</code><code class="descname">InsertVideoPost</code><span class="sig-paren">(</span><em>self</em>, <em>pvp</em>, <em>pred</em><span class="sig-paren">)</span><a class="headerlink" href="#RenderData.InsertVideoPost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserts <em>pvp</em> as the last videopost in the render setting.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>pvp</strong> (<a class="reference internal" href="../BaseVideoPost/index.html#c4d.documents.BaseVideoPost" title="c4d.documents.BaseVideoPost"><em>c4d.documents.BaseVideoPost</em></a>) – <p>The videopost to insert.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version R19: </span>Accepts a <a class="reference internal" href="../BaseVideoPost/index.html#c4d.documents.BaseVideoPost" title="c4d.documents.BaseVideoPost"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseVideoPost</span></code></a> object.</p>
+</div>
+</li>
+<li><strong>pred</strong> (<a class="reference internal" href="../BaseVideoPost/index.html#c4d.documents.BaseVideoPost" title="c4d.documents.BaseVideoPost"><em>c4d.documents.BaseVideoPost</em></a>) – <p>The videopost to insert <em>pvp</em> after, or do not pass anything to insert <em>pvp</em> first.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version R19: </span>Accepts a <a class="reference internal" href="../BaseVideoPost/index.html#c4d.documents.BaseVideoPost" title="c4d.documents.BaseVideoPost"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseVideoPost</span></code></a> object.</p>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="RenderData.InsertVideoPostLast">
+<code class="descclassname">RenderData.</code><code class="descname">InsertVideoPostLast</code><span class="sig-paren">(</span><em>self</em>, <em>pvp</em><span class="sig-paren">)</span><a class="headerlink" href="#RenderData.InsertVideoPostLast" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserts <em>pvp</em> as the last videopost in the render setting.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pvp</strong> (<a class="reference internal" href="../BaseVideoPost/index.html#c4d.documents.BaseVideoPost" title="c4d.documents.BaseVideoPost"><em>c4d.documents.BaseVideoPost</em></a>) – <p>The videopost to insert.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version R19: </span>Accepts a <a class="reference internal" href="../BaseVideoPost/index.html#c4d.documents.BaseVideoPost" title="c4d.documents.BaseVideoPost"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseVideoPost</span></code></a> object.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="RenderData.GetFirstMultipass">
+<code class="descclassname">RenderData.</code><code class="descname">GetFirstMultipass</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#RenderData.GetFirstMultipass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the first multipass of the render setting.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D">c4d.BaseList2D</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The first multipass.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="RenderData.InsertMultipass">
+<code class="descclassname">RenderData.</code><code class="descname">InsertMultipass</code><span class="sig-paren">(</span><em>self</em>, <em>obj</em>, <em>pred</em><span class="sig-paren">)</span><a class="headerlink" href="#RenderData.InsertMultipass" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Inserts the multipass channel into the render setting.</div>
+<div class="line">Optionally specify the insertion position with the <em>pred</em> parameter, giving the multipass channel before (right above) the wanted position.</div>
+<div class="line">Otherwise the multipass channel is inserted at the first position in the list::</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">c4d</span>
+
+<span class="c1"># Create a depth object in the multipass object list</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span>
+    <span class="n">rd</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">GetActiveRenderData</span><span class="p">()</span>          <span class="c1"># Get the current renderdata</span>
+    <span class="n">vdepth</span><span class="o">=</span><span class="n">c4d</span><span class="o">.</span><span class="n">BaseList2D</span><span class="p">(</span><span class="n">c4d</span><span class="o">.</span><span class="n">Zmultipass</span><span class="p">)</span>   <span class="c1"># create a multipass object (all have the same plugin type ID &#39;Zmultipass&#39;)</span>
+    <span class="n">vdepth</span><span class="o">.</span><span class="n">GetDataInstance</span><span class="p">()[</span><span class="n">c4d</span><span class="o">.</span><span class="n">MULTIPASSOBJECT_TYPE</span><span class="p">]</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">VPBUFFER_DEPTH</span> <span class="c1">#Set type to &#39;Depth&#39;</span>
+    <span class="n">rd</span><span class="o">.</span><span class="n">InsertMultipass</span><span class="p">(</span><span class="n">vdepth</span><span class="p">)</span>              <span class="c1"># Insert into Multipass list</span>
+    <span class="n">c4d</span><span class="o">.</span><span class="n">EventAdd</span><span class="p">()</span>                          <span class="c1"># Send global event</span>
+
+<span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>obj</strong> (<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><em>c4d.BaseList2D</em></a>) – The multipass object to insert.</li>
+<li><strong>pred</strong> (<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><em>c4d.BaseList2D</em></a>) – Optional point to insert the multipass channel.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../c4d.gui/index.html" title="c4d.gui"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../LayerObject/index.html" title="c4d.documents.LayerObject"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >c4d.documents</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

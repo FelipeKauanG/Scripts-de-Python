@@ -1,0 +1,3126 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.documents.BaseDocument &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="c4d.documents.BaseVideoPost" href="../BaseVideoPost/index.html" />
+    <link rel="prev" title="c4d.documents" href="../index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../BaseVideoPost/index.html" title="c4d.documents.BaseVideoPost"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="c4d.documents"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">c4d.documents</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-documents-basedocument">
+<h1>c4d.documents.BaseDocument<a class="headerlink" href="#c4d-documents-basedocument" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.documents.BaseDocument">
+<em class="property">class </em><code class="descclassname">c4d.documents.</code><code class="descname">BaseDocument</code><a class="headerlink" href="#c4d.documents.BaseDocument" title="Permalink to this definition">¶</a></dt>
+<dd><p>This object contains the complete description of a scene.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Remember that you need to call <a class="reference internal" href="../../c4d/index.html#c4d.StopAllThreads" title="c4d.StopAllThreads"><code class="xref py py-func docutils literal notranslate"><span class="pre">StopAllThreads()</span></code></a> before making modifications to a user scene.</p>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><p class="rubric">Magic Methods</p>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.__init__" title="BaseDocument.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.__init__(self)</span></code></a></td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">c4d.documents.BaseDocument</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Deprecated</p>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetData" title="BaseDocument.GetData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetData(self,</span> <span class="pre">type)</span></code></a></td>
+<td><div class="first last deprecated">
+<p><span class="versionmodified">Deprecated since version R16: </span><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetDocumentData()</span></code> should be used instead.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.GetOrderedActiveObjects" title="BaseDocument.GetOrderedActiveObjects"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetOrderedActiveObjects(self)</span></code></a></td>
+<td><div class="first last deprecated">
+<p><span class="versionmodified">Deprecated since version R13.051: </span>Use <code class="xref py py-meth docutils literal notranslate"><span class="pre">GetActiveObjects()</span></code> with the corresponding flag instead.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Uncategorized</p>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.SetFps" title="BaseDocument.SetFps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetFps(self,</span> <span class="pre">fps)</span></code></a></td>
+<td>Set the frames per second.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.GetFps" title="BaseDocument.GetFps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetFps(self)</span></code></a></td>
+<td>Returns the fps of the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.SetLOD" title="BaseDocument.SetLOD"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetLOD(self,</span> <span class="pre">lod)</span></code></a></td>
+<td>Get the Level of Detail for this document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.GetLOD" title="BaseDocument.GetLOD"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetLOD(self)</span></code></a></td>
+<td>Get the Level of Detail for this document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetRenderLod" title="BaseDocument.GetRenderLod"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetRenderLod(self)</span></code></a></td>
+<td>Get if the level of detail for rendering should be used in the editor.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.SetRenderLod" title="BaseDocument.SetRenderLod"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetRenderLod(self,</span> <span class="pre">lod)</span></code></a></td>
+<td>Set the level of detail for rendering.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetDrawTime" title="BaseDocument.GetDrawTime"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetDrawTime(self)</span></code></a></td>
+<td>Get the editor redraw time.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.GetLayerObjectRoot" title="BaseDocument.GetLayerObjectRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetLayerObjectRoot(self)</span></code></a></td>
+<td>Returns the list of layers of the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetSplinePlane" title="BaseDocument.GetSplinePlane"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetSplinePlane(self)</span></code></a></td>
+<td>Get the plane in which the splines are created, such as XY plane.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.SetRewind" title="BaseDocument.SetRewind"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetRewind(self[,</span> <span class="pre">flags])</span></code></a></td>
+<td>Rewinds the whole document (from time 0 to current time) when the next event <em>EVMSG_CHANGE</em> or <a class="reference internal" href="../../c4d/index.html#c4d.DrawViews" title="c4d.DrawViews"><code class="xref py py-func docutils literal notranslate"><span class="pre">DrawViews()</span></code></a> is processed.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetBaseDrawCount" title="BaseDocument.GetBaseDrawCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetBaseDrawCount(self)</span></code></a></td>
+<td>Get the <a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#c4d.BaseDraw" title="c4d.BaseDraw"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDraw</span></code></a> count in the editor view.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.Flush" title="BaseDocument.Flush"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.Flush(self)</span></code></a></td>
+<td>Empties the document, deleting and freeing all resources used.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.SetDocumentName" title="BaseDocument.SetDocumentName"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetDocumentName(self,</span> <span class="pre">name)</span></code></a></td>
+<td>Set the file name of the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.SetDocumentPath" title="BaseDocument.SetDocumentPath"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetDocumentPath(self,</span> <span class="pre">path)</span></code></a></td>
+<td>Set the path of the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetDocumentName" title="BaseDocument.GetDocumentName"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetDocumentName(self)</span></code></a></td>
+<td>Returns the file name of the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.GetDocumentPath" title="BaseDocument.GetDocumentPath"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetDocumentPath(self)</span></code></a></td>
+<td>Returns the path of the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetParticleSystem" title="BaseDocument.GetParticleSystem"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetParticleSystem(self)</span></code></a></td>
+<td>Returns the particle master system of the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.ForceCreateBaseDraw" title="BaseDocument.ForceCreateBaseDraw"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.ForceCreateBaseDraw(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Makes sure that <code class="xref py py-meth docutils literal notranslate"><span class="pre">GetBaseDraw()</span></code> (0) is accessible.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.ExecutePasses" title="BaseDocument.ExecutePasses"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.ExecutePasses(self,</span> <span class="pre">bt,</span> <span class="pre">animation,</span> <span class="pre">...)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Animate the current frame of the document.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.FindSceneHook" title="BaseDocument.FindSceneHook"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.FindSceneHook(self,</span> <span class="pre">id)</span></code></a></td>
+<td>Finds a scene hook by ID.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.StartUndo" title="BaseDocument.StartUndo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.StartUndo(self)</span></code></a></td>
+<td>Tells Cinema 4D to start building a list of undos into a single undo action for the user.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.AddUndo" title="BaseDocument.AddUndo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.AddUndo(self,</span> <span class="pre">type,</span> <span class="pre">data[,</span> <span class="pre">...])</span></code></a></td>
+<td>Adds an undo <em>type</em> to the list of undo operations started with <code class="xref py py-meth docutils literal notranslate"><span class="pre">StartUndo()</span></code>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetUndoPtr" title="BaseDocument.GetUndoPtr"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetUndoPtr(self)</span></code></a></td>
+<td>Returns the element of the last undo action. E.g. if you have added a <a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseObject</span></code></a> undo you can retrieve the object by calling this method.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.FlushUndoBuffer" title="BaseDocument.FlushUndoBuffer"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.FlushUndoBuffer(self)</span></code></a></td>
+<td>Flushes the complete undo + redo buffer.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.FindUndoPtr" title="BaseDocument.FindUndoPtr"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.FindUndoPtr(self,</span> <span class="pre">bl,</span> <span class="pre">type)</span></code></a></td>
+<td>Returns the last undo state of the Cinema 4D element bl (object, tag, material, etc.) for the specified undo action type.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.DoRedo" title="BaseDocument.DoRedo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.DoRedo(self)</span></code></a></td>
+<td>Perform a redo on this document (undo the last undo).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.DoUndo" title="BaseDocument.DoUndo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.DoUndo(self[,</span> <span class="pre">multiple])</span></code></a></td>
+<td>Perform an undo operation, same as the user selecting Undo from within Cinema 4D.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.EndUndo" title="BaseDocument.EndUndo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.EndUndo(self)</span></code></a></td>
+<td>End the building of multiple undo actions into a single user undo.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.RecordKey" title="BaseDocument.RecordKey"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.RecordKey(self,</span> <span class="pre">op,</span> <span class="pre">id,</span> <span class="pre">time,</span> <span class="pre">...)</span></code></a></td>
+<td>Records a key for <em>op</em> at <em>time</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.AutoKey" title="BaseDocument.AutoKey"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.AutoKey(self,</span> <span class="pre">op,</span> <span class="pre">undo,</span> <span class="pre">...)</span></code></a></td>
+<td>Compares the object chain <em>op</em> to <em>undo</em> and sets keyframes for all the changes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.Record" title="BaseDocument.Record"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.Record(self)</span></code></a></td>
+<td>Records the active objects in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.AnimateObject" title="BaseDocument.AnimateObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.AnimateObject(self,</span> <span class="pre">op,</span> <span class="pre">time,</span> <span class="pre">flags)</span></code></a></td>
+<td>Animate a node in this document at the given time.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.Polygonize" title="BaseDocument.Polygonize"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.Polygonize(self[,</span> <span class="pre">keepanimation])</span></code></a></td>
+<td>Make a clone of the document and turn all objects into polygon based objects.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.SetMinTime" title="BaseDocument.SetMinTime"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetMinTime(self,</span> <span class="pre">time)</span></code></a></td>
+<td>Set the starting time for the timeline of this document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.SetMaxTime" title="BaseDocument.SetMaxTime"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetMaxTime(self,</span> <span class="pre">time)</span></code></a></td>
+<td>Set the end time of the timeline for this document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.GetMinTime" title="BaseDocument.GetMinTime"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetMinTime(self)</span></code></a></td>
+<td>Get the starting time for the timeline of this document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetMaxTime" title="BaseDocument.GetMaxTime"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetMaxTime(self)</span></code></a></td>
+<td>Get the end time for the timeline of this document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.GetTime" title="BaseDocument.GetTime"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetTime(self)</span></code></a></td>
+<td>Returns the min time.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.SetTime" title="BaseDocument.SetTime"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetTime(self,</span> <span class="pre">time)</span></code></a></td>
+<td>Set the current time for this documents timeline.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.GetLoopMinTime" title="BaseDocument.GetLoopMinTime"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetLoopMinTime(self)</span></code></a></td>
+<td>Returns the time of the left boundary of the document’s preview range (loop range).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.SetLoopMinTime" title="BaseDocument.SetLoopMinTime"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetLoopMinTime(self,</span> <span class="pre">time)</span></code></a></td>
+<td>Sets the left boundary of the document’s preview range (loop range) to the given time.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.GetLoopMaxTime" title="BaseDocument.GetLoopMaxTime"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetLoopMaxTime(self)</span></code></a></td>
+<td>Returns the time of the right boundary of the document’s preview range (loop range).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.SetLoopMaxTime" title="BaseDocument.SetLoopMaxTime"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetLoopMaxTime(self,</span> <span class="pre">time)</span></code></a></td>
+<td>Sets the right boundary of the document’s preview range (loop range) to the given time.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.SetActiveObject" title="BaseDocument.SetActiveObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetActiveObject(self,</span> <span class="pre">op[,</span> <span class="pre">mode])</span></code></a></td>
+<td>Modifies the current multi selection with <em>op</em>, depending on <em>mode</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.SetActiveTag" title="BaseDocument.SetActiveTag"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetActiveTag(self,</span> <span class="pre">tag[,</span> <span class="pre">mode])</span></code></a></td>
+<td>Sets a tag be the currently active one.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.SetActiveMaterial" title="BaseDocument.SetActiveMaterial"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetActiveMaterial(self,</span> <span class="pre">mp[,</span> <span class="pre">mode])</span></code></a></td>
+<td>Modifies the current multi selection with <em>op</em>, depending on <em>mode</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.SetActiveRenderData" title="BaseDocument.SetActiveRenderData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetActiveRenderData(self,</span> <span class="pre">rd)</span></code></a></td>
+<td>Sets the active render settings for the document, these are the settings that are used for rendering.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.GetAllTextures" title="BaseDocument.GetAllTextures"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetAllTextures(self[,</span> <span class="pre">isNet,</span> <span class="pre">ar])</span></code></a></td>
+<td>Returns a collection of all used textures in the document and optionally only for the objects in <em>ar</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.SetAction" title="BaseDocument.SetAction"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetAction(self,</span> <span class="pre">a)</span></code></a></td>
+<td>Set the current tool in the editor.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.GetAction" title="BaseDocument.GetAction"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetAction(self)</span></code></a></td>
+<td>Get the ID of the current active tool in the editor.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetActiveToolData" title="BaseDocument.GetActiveToolData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetActiveToolData(self)</span></code></a></td>
+<td>Gets the original tool data container.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.SetMode" title="BaseDocument.SetMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetMode(self,</span> <span class="pre">m)</span></code></a></td>
+<td>Set the main mode of the editor.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetMode" title="BaseDocument.GetMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetMode(self)</span></code></a></td>
+<td>Get the main mode of the editor.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.IsEditMode" title="BaseDocument.IsEditMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.IsEditMode(self)</span></code></a></td>
+<td>Check if the editor is in an editable mode.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetBaseDraw" title="BaseDocument.GetBaseDraw"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetBaseDraw(self,</span> <span class="pre">bd)</span></code></a></td>
+<td>Returns the BaseDraw hook of the editor <em>bd</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.GetActiveBaseDraw" title="BaseDocument.GetActiveBaseDraw"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetActiveBaseDraw(self)</span></code></a></td>
+<td>Get the activate BaseDraw in the editor, this is where all drawing should be performed.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetRenderBaseDraw" title="BaseDocument.GetRenderBaseDraw"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetRenderBaseDraw(self)</span></code></a></td>
+<td>This is the BaseDraw belonging to the view that the user has chosen as ‘Render View’ (see View menu in Cinema 4D).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.GetActiveTag" title="BaseDocument.GetActiveTag"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetActiveTag(self)</span></code></a></td>
+<td>Returns the active selected tag.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetMaterials" title="BaseDocument.GetMaterials"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetMaterials(self)</span></code></a></td>
+<td>Returns all materials in a list.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.GetActiveObject" title="BaseDocument.GetActiveObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetActiveObject(self)</span></code></a></td>
+<td>Returns the active selected object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetActiveRenderData" title="BaseDocument.GetActiveRenderData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetActiveRenderData(self)</span></code></a></td>
+<td>Returns the active selected render data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.GetFirstRenderData" title="BaseDocument.GetFirstRenderData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetFirstRenderData(self)</span></code></a></td>
+<td>Gets the first render data or options of the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.InsertRenderData" title="BaseDocument.InsertRenderData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.InsertRenderData(self,</span> <span class="pre">rd[,</span> <span class="pre">parent,</span> <span class="pre">pred])</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Inserts the render data into the document’s render settings hierarchy.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.InsertRenderDataLast" title="BaseDocument.InsertRenderDataLast"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.InsertRenderDataLast(self,</span> <span class="pre">rd)</span></code></a></td>
+<td>Inserts the render data as last child into the document’s render data list.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetActiveMaterial" title="BaseDocument.GetActiveMaterial"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetActiveMaterial(self)</span></code></a></td>
+<td>Returns the active selected material.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.GetDocumentData" title="BaseDocument.GetDocumentData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetDocumentData(self,</span> <span class="pre">type)</span></code></a></td>
+<td>Get the <a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseContainer</span></code></a> settings of the specified <em>type</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.SetDocumentData" title="BaseDocument.SetDocumentData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetDocumentData(self,</span> <span class="pre">type,</span> <span class="pre">bc)</span></code></a></td>
+<td>Merges the <a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseContainer</span></code></a> for the settings of the specified <em>type</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.GetSettingsInstance" title="BaseDocument.GetSettingsInstance"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetSettingsInstance(self,</span> <span class="pre">type)</span></code></a></td>
+<td>Returns the internal settings object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetFirstObject" title="BaseDocument.GetFirstObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetFirstObject(self)</span></code></a></td>
+<td>Returns the first object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.GetFirstMaterial" title="BaseDocument.GetFirstMaterial"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetFirstMaterial(self)</span></code></a></td>
+<td>Returns the first material.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetActiveMaterials" title="BaseDocument.GetActiveMaterials"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetActiveMaterials(self)</span></code></a></td>
+<td>Returns the material selection.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.GetActiveObjects" title="BaseDocument.GetActiveObjects"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetActiveObjects(self,</span> <span class="pre">flags)</span></code></a></td>
+<td>Returns the object selection.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetActiveTags" title="BaseDocument.GetActiveTags"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetActiveTags(self)</span></code></a></td>
+<td>Returns the tag selection.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.GetSelection" title="BaseDocument.GetSelection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetSelection(self)</span></code></a></td>
+<td>Returns the selection of materials, tags and objects in a list.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetActiveObjectsFilter" title="BaseDocument.GetActiveObjectsFilter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetActiveObjectsFilter(self,</span> <span class="pre">children,</span> <span class="pre">type,</span> <span class="pre">...)</span></code></a></td>
+<td>Returns the active object multi selection and removes objects that do not match the filter given by type and instanceof.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.GetRealActiveObject" title="BaseDocument.GetRealActiveObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetRealActiveObject(self,</span> <span class="pre">help)</span></code></a></td>
+<td>Returns the active object or the dummy axis if multiple objects are selected.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetObjects" title="BaseDocument.GetObjects"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetObjects(self)</span></code></a></td>
+<td>Returns the highest objects without children.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.SetSelection" title="BaseDocument.SetSelection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetSelection(self,</span> <span class="pre">bl[,</span> <span class="pre">mode])</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Sets the active selection.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.SearchMaterial" title="BaseDocument.SearchMaterial"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SearchMaterial(self,</span> <span class="pre">name)</span></code></a></td>
+<td>Search for a material with the same case sensitive name.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.SearchObject" title="BaseDocument.SearchObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SearchObject(self,</span> <span class="pre">name)</span></code></a></td>
+<td>Search for an object with the same case sensitive name.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetHighest" title="BaseDocument.GetHighest"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetHighest(self,</span> <span class="pre">type,</span> <span class="pre">editor)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">The first object in object manager hierarchy of type <em>type</em>.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.InsertObject" title="BaseDocument.InsertObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.InsertObject(self,</span> <span class="pre">op[,</span> <span class="pre">parent,</span> <span class="pre">...])</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Inserts the object into the document’s object hierarchy.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.InsertMaterial" title="BaseDocument.InsertMaterial"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.InsertMaterial(self,</span> <span class="pre">op[,</span> <span class="pre">pred,</span> <span class="pre">...])</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Inserts the material into the document’s material list.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.GetHelperAxis" title="BaseDocument.GetHelperAxis"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetHelperAxis(self)</span></code></a></td>
+<td>Get the helper axis for the current multi selection.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetChanged" title="BaseDocument.GetChanged"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetChanged(self)</span></code></a></td>
+<td>Checks if the document has been changed since it was last saved.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.SetChanged" title="BaseDocument.SetChanged"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetChanged(self)</span></code></a></td>
+<td>Set the changed state of the document to reflect it has been modified.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.IsAxisEnabled" title="BaseDocument.IsAxisEnabled"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.IsAxisEnabled(self)</span></code></a></td>
+<td>Returns the state of the object axis modifier.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.SendInfo" title="BaseDocument.SendInfo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SendInfo(self,</span> <span class="pre">type,</span> <span class="pre">format,</span> <span class="pre">fn,</span> <span class="pre">...)</span></code></a></td>
+<td>Sends <em>MSG_DOCUMENTINFO</em> messages.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetDocPreviewBitmap" title="BaseDocument.GetDocPreviewBitmap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetDocPreviewBitmap(self)</span></code></a></td>
+<td>Get the preview bitmap of the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.GetTakeData" title="BaseDocument.GetTakeData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetTakeData(self)</span></code></a></td>
+<td>Gets the take data for the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetTargetObject" title="BaseDocument.GetTargetObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetTargetObject(self)</span></code></a></td>
+<td>Gets the target object within a multi-selection.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.SetTargetObject" title="BaseDocument.SetTargetObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetTargetObject(self,</span> <span class="pre">op)</span></code></a></td>
+<td>Sets the target object within a multi-selection.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetDefaultKey" title="BaseDocument.GetDefaultKey"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetDefaultKey(self)</span></code></a></td>
+<td>Retrieves the document’s default keying settings.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.SetDefaultKey" title="BaseDocument.SetDefaultKey"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetDefaultKey(self,</span> <span class="pre">key,</span> <span class="pre">overdub)</span></code></a></td>
+<td>Sets the document’s default keying settings.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.GetPickSession" title="BaseDocument.GetPickSession"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetPickSession(self)</span></code></a></td>
+<td>Returns information about the current pick session.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDocument.StartPickSession" title="BaseDocument.StartPickSession"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.StartPickSession(self,</span> <span class="pre">callback,</span> <span class="pre">multi)</span></code></a></td>
+<td>Starts a pick session.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDocument.StopPickSession" title="BaseDocument.StopPickSession"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.StopPickSession(self,</span> <span class="pre">cancel)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Ends the pick session.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseList2D</span></code></a></li>
+</ul>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="BaseDocument.__init__">
+<code class="descclassname">BaseDocument.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument">c4d.documents.BaseDocument</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The new document.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetData">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetData</code><span class="sig-paren">(</span><em>self</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetData" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version R16: </span><a class="reference internal" href="#BaseDocument.GetDocumentData" title="BaseDocument.GetDocumentData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetDocumentData()</span></code></a> should be used instead.</p>
+</div>
+<p>Get the <a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseContainer</span></code></a> settings of the specified <em>type</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>int</em>) – The <strong>DOCUMENTSETTINGS</strong> type of the settings to get. See <a class="reference internal" href="../../../consts/DOCUMENTSETTINGS.html"><span class="doc">DOCUMENTSETTINGS</span></a>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer">c4d.BaseContainer</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The settings for the document.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetOrderedActiveObjects">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetOrderedActiveObjects</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetOrderedActiveObjects" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version R13.051: </span>Use <a class="reference internal" href="#BaseDocument.GetActiveObjects" title="BaseDocument.GetActiveObjects"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetActiveObjects()</span></code></a> with the corresponding flag instead.</p>
+</div>
+<p>Returns the objects in an ordered list.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">List[<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D">c4d.BaseList2D</a>]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The oredered list.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.SetFps">
+<code class="descclassname">BaseDocument.</code><code class="descname">SetFps</code><span class="sig-paren">(</span><em>self</em>, <em>fps</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.SetFps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the frames per second.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>fps</strong> (<em>int</em>) – The fps.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetFps">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetFps</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetFps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the fps of the document.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The fps</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.SetLOD">
+<code class="descclassname">BaseDocument.</code><code class="descname">SetLOD</code><span class="sig-paren">(</span><em>self</em>, <em>lod</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.SetLOD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the Level of Detail for this document.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>lod</strong> (<em>float</em>) – <p>The default level of detail values are:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Low</td>
+<td>0.25</td>
+</tr>
+<tr class="row-even"><td>Medium</td>
+<td>0.5</td>
+</tr>
+<tr class="row-odd"><td>High</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetLOD">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetLOD</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetLOD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the Level of Detail for this document.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The default level of detail values are:<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Low</td>
+<td>0.25</td>
+</tr>
+<tr class="row-even"><td>Medium</td>
+<td>0.5</td>
+</tr>
+<tr class="row-odd"><td>High</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetRenderLod">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetRenderLod</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetRenderLod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get if the level of detail for rendering should be used in the editor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if using the render lod.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.SetRenderLod">
+<code class="descclassname">BaseDocument.</code><code class="descname">SetRenderLod</code><span class="sig-paren">(</span><em>self</em>, <em>lod</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.SetRenderLod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the level of detail for rendering.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>lod</strong> (<em>bool</em>) – <strong>True</strong> if using the render lod.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetDrawTime">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetDrawTime</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetDrawTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the editor redraw time.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The editor redraw time.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetLayerObjectRoot">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetLayerObjectRoot</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetLayerObjectRoot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the list of layers of the document.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">GetFirstLayer</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span>
+    <span class="c1"># Returns the first layer, if available, otherwise None</span>
+
+    <span class="k">return</span> <span class="n">doc</span><span class="o">.</span><span class="n">GetLayerObjectRoot</span><span class="p">()</span><span class="o">.</span><span class="n">GetDown</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The hierarchy method <a class="reference internal" href="../../c4d/C4DAtom/GeListNode/index.html#GeListNode.GetDown" title="GeListNode.GetDown"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeListNode.GetDown()</span></code></a> can only be called on the returned object.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/index.html#c4d.GeListNode" title="c4d.GeListNode">c4d.GeListNode</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The head of the list of the document’s layers.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetSplinePlane">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetSplinePlane</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetSplinePlane" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the plane in which the splines are created, such as XY plane.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Values for this are:<table border="1" class="docutils">
+<colgroup>
+<col width="63%" />
+<col width="38%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>PRIM_PLANE_XY</em></td>
+<td>XY plane.</td>
+</tr>
+<tr class="row-even"><td><em>PRIM_PLANE_ZY</em></td>
+<td>ZY plane.</td>
+</tr>
+<tr class="row-odd"><td><em>PRIM_PLANE_XZ</em></td>
+<td>XZ plane.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.SetRewind">
+<code class="descclassname">BaseDocument.</code><code class="descname">SetRewind</code><span class="sig-paren">(</span><em>self</em>, <em>flags=0</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.SetRewind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rewinds the whole document (from time 0 to current time) when the next event <em>EVMSG_CHANGE</em> or <a class="reference internal" href="../../c4d/index.html#c4d.DrawViews" title="c4d.DrawViews"><code class="xref py py-func docutils literal notranslate"><span class="pre">DrawViews()</span></code></a> is processed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>flags</strong> (<em>int</em>) – Not used.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetBaseDrawCount">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetBaseDrawCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetBaseDrawCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the <a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#c4d.BaseDraw" title="c4d.BaseDraw"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDraw</span></code></a> count in the editor view.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The count.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.Flush">
+<code class="descclassname">BaseDocument.</code><code class="descname">Flush</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.Flush" title="Permalink to this definition">¶</a></dt>
+<dd><p>Empties the document, deleting and freeing all resources used.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.SetDocumentName">
+<code class="descclassname">BaseDocument.</code><code class="descname">SetDocumentName</code><span class="sig-paren">(</span><em>self</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.SetDocumentName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the file name of the document.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><em>name</em> must contain the filename part only.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – The file name part of the document to set.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.SetDocumentPath">
+<code class="descclassname">BaseDocument.</code><code class="descname">SetDocumentPath</code><span class="sig-paren">(</span><em>self</em>, <em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.SetDocumentPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the path of the document.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><em>path</em> must contain the path part only.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> (<em>str</em>) – The path part of the document to set.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetDocumentName">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetDocumentName</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetDocumentName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the file name of the document.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The file name of the document.<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the document has not been saved then the name is in the form ‘Untitled 1’, for instance for the first unsaved document.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetDocumentPath">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetDocumentPath</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetDocumentPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the path of the document.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The path of the document.<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the document has not been saved then the path is empty.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetParticleSystem">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetParticleSystem</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetParticleSystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the particle master system of the document.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d.modules/thinkingparticles/TP_MasterSystem/index.html#c4d.modules.thinkingparticles.TP_MasterSystem" title="c4d.modules.thinkingparticles.TP_MasterSystem">c4d.modules.thinkingparticles.TP_MasterSystem</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> – The particle system of the document. Is useless when the document was deleted, <strong>None</strong> if Thinking Particles is not installed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.ForceCreateBaseDraw">
+<code class="descclassname">BaseDocument.</code><code class="descname">ForceCreateBaseDraw</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.ForceCreateBaseDraw" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Makes sure that <a class="reference internal" href="#BaseDocument.GetBaseDraw" title="BaseDocument.GetBaseDraw"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetBaseDraw()</span></code></a> (0) is accessible.</div>
+<div class="line">This is only important in import filters where, at the time, there are no valid base draws.</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.ExecutePasses">
+<code class="descclassname">BaseDocument.</code><code class="descname">ExecutePasses</code><span class="sig-paren">(</span><em>self</em>, <em>bt</em>, <em>animation</em>, <em>expressions</em>, <em>caches</em>, <em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.ExecutePasses" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Animate the current frame of the document.</div>
+<div class="line">To update the editor you then need to send an update message using <a class="reference internal" href="../../c4d/index.html#c4d.EventAdd" title="c4d.EventAdd"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.EventAdd()</span></code></a>.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>bt</strong> (<a class="reference internal" href="../../c4d.threading/BaseThread/index.html#c4d.threading.BaseThread" title="c4d.threading.BaseThread"><em>c4d.threading.BaseThread</em></a>) – This thread can either be <strong>None</strong> (for the main Cinema 4D thread) or if you are within your own thread then you pass the thread.</li>
+<li><strong>animation</strong> (<em>bool</em>) – Animations are evaluated.</li>
+<li><strong>expressions</strong> (<em>bool</em>) – Expressions are evaluated.</li>
+<li><strong>caches</strong> (<em>bool</em>) – Caches are evaluated.</li>
+<li><strong>flags</strong> (<em>int</em>) – <p>Flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="53%" />
+<col width="47%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>BUILDFLAGS_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>BUILDFLAGS_INTERNALRENDERER</em></td>
+<td>Rendering in the editor.</td>
+</tr>
+<tr class="row-odd"><td><em>BUILDFLAGS_EXTERNALRENDERER</em></td>
+<td>Rendering externally.</td>
+</tr>
+<tr class="row-even"><td><em>BUILDFLAGS_ISOPARM</em></td>
+<td>Generate isoparam objects.</td>
+</tr>
+<tr class="row-odd"><td><em>BUILDFLAGS_EXPORT</em></td>
+<td>Exporting (e.g. Alembic).</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if successful, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.FindSceneHook">
+<code class="descclassname">BaseDocument.</code><code class="descname">FindSceneHook</code><span class="sig-paren">(</span><em>self</em>, <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.FindSceneHook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds a scene hook by ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id</strong> (<em>int</em>) – The scene hook ID.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D">c4d.BaseList2D</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The found scene hook, or <strong>None</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.StartUndo">
+<code class="descclassname">BaseDocument.</code><code class="descname">StartUndo</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.StartUndo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tells Cinema 4D to start building a list of undos into a single undo action for the user.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Success of starting the undo list.</td>
+</tr>
+</tbody>
+</table>
+<p>Here is a small example how to write a redo support for newly inserted objects.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">c4d</span>
+
+<span class="n">doc</span><span class="o">.</span><span class="n">StartUndo</span><span class="p">()</span>                     <span class="c1"># Start undo support</span>
+<span class="n">cube</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">BaseObject</span><span class="p">(</span><span class="n">c4d</span><span class="o">.</span><span class="n">Ocube</span><span class="p">)</span>
+
+<span class="n">doc</span><span class="o">.</span><span class="n">InsertObject</span><span class="p">(</span><span class="n">cube</span><span class="p">)</span>              <span class="c1"># Insert the object</span>
+<span class="n">doc</span><span class="o">.</span><span class="n">AddUndo</span><span class="p">(</span><span class="n">c4d</span><span class="o">.</span><span class="n">UNDOTYPE_NEW</span><span class="p">,</span> <span class="n">cube</span><span class="p">)</span> <span class="c1"># Support redo the insert operation</span>
+<span class="n">doc</span><span class="o">.</span><span class="n">EndUndo</span><span class="p">()</span>                       <span class="c1"># Do not forget to close the undo support</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.AddUndo">
+<code class="descclassname">BaseDocument.</code><code class="descname">AddUndo</code><span class="sig-paren">(</span><em>self</em>, <em>type</em>, <em>data</em>, <em>allowFromThread=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.AddUndo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds an undo <em>type</em> to the list of undo operations started with <a class="reference internal" href="#BaseDocument.StartUndo" title="BaseDocument.StartUndo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">StartUndo()</span></code></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="line-block">
+<div class="line">Always has to be called before a change is made.</div>
+<div class="line">In the case of the creation of a new object the call is done afterwards, after insertion into the document/object/track/sequence but before calling subsequent functions like <a class="reference internal" href="#BaseDocument.SetActiveObject" title="BaseDocument.SetActiveObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetActiveObject()</span></code></a> which creates another undo:</div>
+</div>
+<div class="last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tag</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">UVWTag</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">GetPointCount</span><span class="p">())</span>
+<span class="n">op</span><span class="o">.</span><span class="n">InsertTag</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+<span class="n">doc</span><span class="o">.</span><span class="n">AddUndo</span><span class="p">(</span><span class="n">c4d</span><span class="o">.</span><span class="n">UNDOTYPE_NEW</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span>
+<span class="n">c4d</span><span class="o">.</span><span class="n">EventAdd</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>type</strong> (<em>int</em>) – <p>The undo type:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="84%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>UNDOTYPE_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>UNDOTYPE_CHANGE</em></td>
+<td>Any change to an object, including hierarchy modifications; modification in positioning (object has been moved from A to B), substructures etc. (Needs to be called <cite>before</cite> the change.)</td>
+</tr>
+<tr class="row-odd"><td><em>UNDOTYPE_CHANGE_NOCHILDREN</em></td>
+<td>Same as <em>UNDOTYPE_CHANGE</em>, but without child modifications. (Needs to be called <cite>before</cite> the change.)</td>
+</tr>
+<tr class="row-even"><td><em>UNDOTYPE_CHANGE_SMALL</em></td>
+<td>Change to local data only (e.g. data container), no substructures (e.g. no tags on an object) and no children. (Needs to be called <cite>before</cite> the change.)</td>
+</tr>
+<tr class="row-odd"><td><em>UNDOTYPE_CHANGE_SELECTION</em></td>
+<td>Change to point/poly/edge selection only. (Needs to be called <cite>before</cite> the change.)</td>
+</tr>
+<tr class="row-even"><td><em>UNDOTYPE_NEW</em></td>
+<td>New object/node/tag etc. was created. (Needs to be called <cite>after</cite> the change.)</td>
+</tr>
+<tr class="row-odd"><td><em>UNDOTYPE_DELETE</em></td>
+<td>Object/node/tag etc. to be deleted. (Needs to be called <cite>before</cite> the change.)</td>
+</tr>
+<tr class="row-even"><td><em>UNDOTYPE_ACTIVATE</em></td>
+<td>Automatically managed by <a class="reference internal" href="#BaseDocument.SetActiveObject" title="BaseDocument.SetActiveObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetActiveObject()</span></code></a>/<a class="reference internal" href="#BaseDocument.SetActiveTag" title="BaseDocument.SetActiveTag"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetActiveTag()</span></code></a>/<a class="reference internal" href="#BaseDocument.SetActiveMaterial" title="BaseDocument.SetActiveMaterial"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetActiveMaterial()</span></code></a> etc. No need to use manually.</td>
+</tr>
+<tr class="row-odd"><td><em>UNDOTYPE_DEACTIVATE</em></td>
+<td>Automatically managed by <a class="reference internal" href="#BaseDocument.SetActiveObject" title="BaseDocument.SetActiveObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetActiveObject()</span></code></a>/<a class="reference internal" href="#BaseDocument.SetActiveTag" title="BaseDocument.SetActiveTag"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetActiveTag()</span></code></a>/<a class="reference internal" href="#BaseDocument.SetActiveMaterial" title="BaseDocument.SetActiveMaterial"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetActiveMaterial()</span></code></a> etc. No need to use manually.</td>
+</tr>
+<tr class="row-even"><td><em>UNDOTYPE_BITS</em></td>
+<td>Change to object bits, e.g. selection status. (Needs to be called <cite>before</cite> the change.)</td>
+</tr>
+<tr class="row-odd"><td><em>UNDOTYPE_HIERARCHY_PSR</em></td>
+<td>Change in hierarchical placement and PSR values. (Needs to be called <cite>before</cite> the change.)</td>
+</tr>
+<tr class="row-even"><td><em>UNDOTYPE_PRIVATE_STRING</em></td>
+<td>Private</td>
+</tr>
+<tr class="row-odd"><td><em>UNDOTYPE_PRIVATE_MULTISELECTIONAXIS</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-even"><td><em>UNDOTYPE_START</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-odd"><td><em>UNDOTYPE_END</em></td>
+<td>Private.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>data</strong> (<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><em>c4d.BaseList2D</em></a>) – The object the undo has been added for.</li>
+<li><strong>allowFromThread</strong> (<em>bool</em>) – <div class="versionadded">
+<p><span class="versionmodified">New in version R14.014: </span>If an undo is added from a thread this is not executed. (As a safety measure, because normally this doesn’t make any sense.)</p>
+<p>For explicit cases where a thread has to call <a class="reference internal" href="#BaseDocument.AddUndo" title="BaseDocument.AddUndo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">AddUndo()</span></code></a> (the view redraw and everything else is blocked) this can be set to <strong>True</strong>.</p>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Success of adding the undo.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetUndoPtr">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetUndoPtr</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetUndoPtr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the element of the last undo action. E.g. if you have added a <a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseObject</span></code></a> undo you can retrieve the object by calling this method.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Always be sure to check the type of the result first.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D">c4d.BaseList2D</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The last undo element.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.FlushUndoBuffer">
+<code class="descclassname">BaseDocument.</code><code class="descname">FlushUndoBuffer</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.FlushUndoBuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flushes the complete undo + redo buffer.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R14.014.</span></p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Only call when absolutely needed.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.FindUndoPtr">
+<code class="descclassname">BaseDocument.</code><code class="descname">FindUndoPtr</code><span class="sig-paren">(</span><em>self</em>, <em>bl</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.FindUndoPtr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the last undo state of the Cinema 4D element bl (object, tag, material, etc.) for the specified undo action type.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R14.014.</span></p>
+</div>
+<p>Here is an how to retrieve the pre-undo object after a change has made</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">preundo</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">FindUndoPtr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">c4d</span><span class="o">.</span><span class="n">UNDOTYPE_CHANGE</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Always check the type of the returned object.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>bl</strong> (<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><em>c4d.BaseList2D</em></a>) – The element from which to obtain the last undo action.</li>
+<li><strong>type</strong> (<em>int</em>) – <p>The undo type to check:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="84%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>UNDOTYPE_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>UNDOTYPE_CHANGE</em></td>
+<td>Any change to an object, including hierarchy modifications; modification in positioning (object has been moved from A to B), substructures etc. (Needs to be called <cite>before</cite> the change.)</td>
+</tr>
+<tr class="row-odd"><td><em>UNDOTYPE_CHANGE_NOCHILDREN</em></td>
+<td>Same as <em>UNDOTYPE_CHANGE</em>, but without child modifications. (Needs to be called <cite>before</cite> the change.)</td>
+</tr>
+<tr class="row-even"><td><em>UNDOTYPE_CHANGE_SMALL</em></td>
+<td>Change to local data only (e.g. data container), no substructures (e.g. no tags on an object) and no children. (Needs to be called <cite>before</cite> the change.)</td>
+</tr>
+<tr class="row-odd"><td><em>UNDOTYPE_CHANGE_SELECTION</em></td>
+<td>Change to point/poly/edge selection only. (Needs to be called <cite>before</cite> the change.)</td>
+</tr>
+<tr class="row-even"><td><em>UNDOTYPE_NEW</em></td>
+<td>New object/node/tag etc. was created. (Needs to be called <cite>after</cite> the change.)</td>
+</tr>
+<tr class="row-odd"><td><em>UNDOTYPE_DELETE</em></td>
+<td>Object/node/tag etc. to be deleted. (Needs to be called <cite>before</cite> the change.)</td>
+</tr>
+<tr class="row-even"><td><em>UNDOTYPE_ACTIVATE</em></td>
+<td>Automatically managed by <a class="reference internal" href="#BaseDocument.SetActiveObject" title="BaseDocument.SetActiveObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetActiveObject()</span></code></a>/<a class="reference internal" href="#BaseDocument.SetActiveTag" title="BaseDocument.SetActiveTag"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetActiveTag()</span></code></a>/<a class="reference internal" href="#BaseDocument.SetActiveMaterial" title="BaseDocument.SetActiveMaterial"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetActiveMaterial()</span></code></a> etc. No need to use manually.</td>
+</tr>
+<tr class="row-odd"><td><em>UNDOTYPE_DEACTIVATE</em></td>
+<td>Automatically managed by <a class="reference internal" href="#BaseDocument.SetActiveObject" title="BaseDocument.SetActiveObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SetActiveObject()</span></code></a>/<a class="reference internal" href="#BaseDocument.SetActiveTag" title="BaseDocument.SetActiveTag"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetActiveTag()</span></code></a>/<a class="reference internal" href="#BaseDocument.SetActiveMaterial" title="BaseDocument.SetActiveMaterial"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetActiveMaterial()</span></code></a> etc. No need to use manually.</td>
+</tr>
+<tr class="row-even"><td><em>UNDOTYPE_BITS</em></td>
+<td>Change to object bits, e.g. selection status. (Needs to be called <cite>before</cite> the change.)</td>
+</tr>
+<tr class="row-odd"><td><em>UNDOTYPE_HIERARCHY_PSR</em></td>
+<td>Change in hierarchical placement and PSR values. (Needs to be called <cite>before</cite> the change.)</td>
+</tr>
+<tr class="row-even"><td><em>UNDOTYPE_PRIVATE_STRING</em></td>
+<td>Private</td>
+</tr>
+<tr class="row-odd"><td><em>UNDOTYPE_PRIVATE_MULTISELECTIONAXIS</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-even"><td><em>UNDOTYPE_START</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-odd"><td><em>UNDOTYPE_END</em></td>
+<td>Private.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D">c4d.BaseList2D</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The last undo element.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.DoRedo">
+<code class="descclassname">BaseDocument.</code><code class="descname">DoRedo</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.DoRedo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform a redo on this document (undo the last undo).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Success of the operation.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.DoUndo">
+<code class="descclassname">BaseDocument.</code><code class="descname">DoUndo</code><span class="sig-paren">(</span><em>self</em>, <em>multiple=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.DoUndo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform an undo operation, same as the user selecting Undo from within Cinema 4D.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>multiple</strong> (<em>bool</em>) – This parameter only matters if this method is called between <a class="reference internal" href="#BaseDocument.AddUndo" title="BaseDocument.AddUndo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">AddUndo()</span></code></a> and <a class="reference internal" href="#BaseDocument.EndUndo" title="BaseDocument.EndUndo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">EndUndo()</span></code></a>. If <em>multiple</em> is <strong>True</strong> then all the <a class="reference internal" href="#BaseDocument.AddUndo" title="BaseDocument.AddUndo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">AddUndo()</span></code></a> steps will be undone. Otherwise only the last <a class="reference internal" href="#BaseDocument.AddUndo" title="BaseDocument.AddUndo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">AddUndo()</span></code></a> step will be undone. If <a class="reference internal" href="#BaseDocument.EndUndo" title="BaseDocument.EndUndo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">EndUndo()</span></code></a> has been called then all steps are always undone.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.EndUndo">
+<code class="descclassname">BaseDocument.</code><code class="descname">EndUndo</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.EndUndo" title="Permalink to this definition">¶</a></dt>
+<dd><p>End the building of multiple undo actions into a single user undo.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This must be paired with <a class="reference internal" href="#BaseDocument.StartUndo" title="BaseDocument.StartUndo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">StartUndo()</span></code></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Success of finishing the undo list.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.RecordKey">
+<code class="descclassname">BaseDocument.</code><code class="descname">RecordKey</code><span class="sig-paren">(</span><em>self</em>, <em>op</em>, <em>id</em>, <em>time</em>, <em>undo</em>, <em>autoKey</em>, <em>eval_attribmanager</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.RecordKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Records a key for <em>op</em> at <em>time</em>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>op</strong> (<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><em>c4d.BaseList2D</em></a>) – The object to record.</li>
+<li><strong>id</strong> (<a class="reference internal" href="../../c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><em>c4d.DescID</em></a>) – The description ID to record.</li>
+<li><strong>time</strong> (<a class="reference internal" href="../../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><em>c4d.BaseTime</em></a>) – The time to record.</li>
+<li><strong>undo</strong> (<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><em>c4d.BaseList2D</em></a>) – <div class="line-block">
+<div class="line">The object in the old state.</div>
+<div class="line">This is necessary e.g. for autokeyframing so that Cinema 4D can compare values</div>
+<div class="line">Usually this is the object from the undo buffer.</div>
+<div class="line">To record keys (no autokeying) <strong>None</strong> can be passed.</div>
+</div>
+</li>
+<li><strong>autoKey</strong> (<em>bool</em>) – If <strong>True</strong> then autokeying is used and undo needs to be passed for comparison.</li>
+<li><strong>eval_attribmanager</strong> (<em>bool</em>) – Evaluate attributes manager.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if successful, otherwise <em>False</em>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.AutoKey">
+<code class="descclassname">BaseDocument.</code><code class="descname">AutoKey</code><span class="sig-paren">(</span><em>self</em>, <em>op</em>, <em>undo</em>, <em>recursive</em>, <em>pos</em>, <em>scale</em>, <em>rot</em>, <em>param</em>, <em>pla</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.AutoKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compares the object chain <em>op</em> to <em>undo</em> and sets keyframes for all the changes.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>op</strong> (<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><em>c4d.BaseObject</em></a>) – The object chain to add the keys to.</li>
+<li><strong>undo</strong> (<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><em>c4d.BaseList2D</em></a>) – The object chain to compare to. This is necessary e.g. for autokeyframing so that Cinema 4D can compare values. Usually this is the object from the undo buffer.</li>
+<li><strong>recursive</strong> (<em>bool</em>) – If <strong>True</strong> then the function applies to all children of <em>op</em> as well. The hierarchy of <em>op</em> and <em>undo</em> must match.</li>
+<li><strong>pos</strong> (<em>bool</em>) – If <strong>True</strong> keyframes are added for differences in position.</li>
+<li><strong>scale</strong> (<em>bool</em>) – If <strong>True</strong> keyframes are added for differences in scale.</li>
+<li><strong>rot</strong> (<em>bool</em>) – If <strong>True</strong> keyframes are added for differences in rotation.</li>
+<li><strong>param</strong> (<em>bool</em>) – If <strong>True</strong> keyframes are added for differences in parameters.</li>
+<li><strong>pla</strong> (<em>bool</em>) – If <strong>True</strong> keyframes are added as PLA for differences in point positions.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.Record">
+<code class="descclassname">BaseDocument.</code><code class="descname">Record</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.Record" title="Permalink to this definition">¶</a></dt>
+<dd><p>Records the active objects in the document.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.AnimateObject">
+<code class="descclassname">BaseDocument.</code><code class="descname">AnimateObject</code><span class="sig-paren">(</span><em>self</em>, <em>op</em>, <em>time</em>, <em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.AnimateObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Animate a node in this document at the given time.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Does not take expressions into account.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>op</strong> (<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><em>c4d.BaseList2D</em></a>) – This is the node to animate.</li>
+<li><strong>time</strong> (<a class="reference internal" href="../../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><em>c4d.BaseTime</em></a>) – The time at which it is being animated.</li>
+<li><strong>flags</strong> (<em>int</em>) – <p>Flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="53%" />
+<col width="47%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>ANIMATEFLAGS_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>ANIMATEFLAGS_NO_PARTICLES</em></td>
+<td>Ignore particles.</td>
+</tr>
+<tr class="row-odd"><td><em>ANIMATEFLAGS_NO_CHILDREN</em></td>
+<td>Do not animate children.</td>
+</tr>
+<tr class="row-even"><td><em>ANIMATEFLAGS_INRENDER</em></td>
+<td>Prepare to render scene.</td>
+</tr>
+<tr class="row-odd"><td><em>ANIMATEFLAGS_NO_MINMAX</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-even"><td><em>ANIMATEFLAGS_NO_NLA</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-odd"><td><em>ANIMATEFLAGS_NLA_SUM</em></td>
+<td>Private.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.Polygonize">
+<code class="descclassname">BaseDocument.</code><code class="descname">Polygonize</code><span class="sig-paren">(</span><em>self</em>, <em>keepanimation=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.Polygonize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make a clone of the document and turn all objects into polygon based objects.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>keepanimation</strong> (<em>bool</em>) – Keep animation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument">c4d.documents.BaseDocument</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The cloned polygon based document or <strong>None</strong> if failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.SetMinTime">
+<code class="descclassname">BaseDocument.</code><code class="descname">SetMinTime</code><span class="sig-paren">(</span><em>self</em>, <em>time</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.SetMinTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the starting time for the timeline of this document.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">For conversion of FPS or other time units, see <a class="reference internal" href="../../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTime</span></code></a></div>
+<div class="line">You may also find the <a class="reference internal" href="#BaseDocument.GetFps" title="BaseDocument.GetFps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetFps()</span></code></a> useful when using this method.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<a class="reference internal" href="../../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><em>c4d.BaseTime</em></a>) – The time.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.SetMaxTime">
+<code class="descclassname">BaseDocument.</code><code class="descname">SetMaxTime</code><span class="sig-paren">(</span><em>self</em>, <em>time</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.SetMaxTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the end time of the timeline for this document.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">For conversion of FPS or other time units, see <a class="reference internal" href="../../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTime</span></code></a></div>
+<div class="line">You may also find the <a class="reference internal" href="#BaseDocument.GetFps" title="BaseDocument.GetFps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetFps()</span></code></a> useful when using this method.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<a class="reference internal" href="../../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><em>c4d.BaseTime</em></a>) – The time.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetMinTime">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetMinTime</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetMinTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the starting time for the timeline of this document.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">For conversion of FPS or other time units, see <a class="reference internal" href="../../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTime</span></code></a></div>
+<div class="line">You may also find the <a class="reference internal" href="#BaseDocument.GetFps" title="BaseDocument.GetFps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetFps()</span></code></a> useful when using this method.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime">c4d.BaseTime</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The time.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetMaxTime">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetMaxTime</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetMaxTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the end time for the timeline of this document.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">For conversion of FPS or other time units, see <a class="reference internal" href="../../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTime</span></code></a></div>
+<div class="line">You may also find the <a class="reference internal" href="#BaseDocument.GetFps" title="BaseDocument.GetFps"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetFps()</span></code></a> useful when using this method.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime">c4d.BaseTime</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The time.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetTime">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetTime</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the min time.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime">c4d.BaseTime</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The current time.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.SetTime">
+<code class="descclassname">BaseDocument.</code><code class="descname">SetTime</code><span class="sig-paren">(</span><em>self</em>, <em>time</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.SetTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the current time for this documents timeline.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function only changes the document time, it does not start a redraw and/or animation/expressions.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<a class="reference internal" href="../../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><em>c4d.BaseTime</em></a>) – The time.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetLoopMinTime">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetLoopMinTime</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetLoopMinTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the time of the left boundary of the document’s preview range (loop range).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime">c4d.BaseTime</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The time.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.SetLoopMinTime">
+<code class="descclassname">BaseDocument.</code><code class="descname">SetLoopMinTime</code><span class="sig-paren">(</span><em>self</em>, <em>time</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.SetLoopMinTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the left boundary of the document’s preview range (loop range) to the given time.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<a class="reference internal" href="../../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><em>c4d.BaseTime</em></a>) – The time.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetLoopMaxTime">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetLoopMaxTime</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetLoopMaxTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the time of the right boundary of the document’s preview range (loop range).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime">c4d.BaseTime</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The time.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.SetLoopMaxTime">
+<code class="descclassname">BaseDocument.</code><code class="descname">SetLoopMaxTime</code><span class="sig-paren">(</span><em>self</em>, <em>time</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.SetLoopMaxTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the right boundary of the document’s preview range (loop range) to the given time.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<a class="reference internal" href="../../c4d/BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><em>c4d.BaseTime</em></a>) – The time.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.SetActiveObject">
+<code class="descclassname">BaseDocument.</code><code class="descname">SetActiveObject</code><span class="sig-paren">(</span><em>self</em>, <em>op</em>, <em>mode=SELECTION_NEW</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.SetActiveObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modifies the current multi selection with <em>op</em>, depending on <em>mode</em>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><a class="reference internal" href="#BaseDocument.GetActiveObject" title="BaseDocument.GetActiveObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetActiveObject()</span></code></a> Should be called afterward to update the internal selection state.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>op</strong> (<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><em>c4d.BaseObject</em></a>) – The object.</li>
+<li><strong>mode</strong> (<em>int</em>) – <p>The selection flag:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>SELECTION_NEW</em></td>
+<td>Starts a new selection.</td>
+</tr>
+<tr class="row-even"><td><em>SELECTION_ADD</em></td>
+<td>Adds to the current selection</td>
+</tr>
+<tr class="row-odd"><td><em>SELECTION_SUB</em></td>
+<td>Subtracts from the current selection.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.SetActiveTag">
+<code class="descclassname">BaseDocument.</code><code class="descname">SetActiveTag</code><span class="sig-paren">(</span><em>self</em>, <em>tag</em>, <em>mode=SELECTION_NEW</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.SetActiveTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a tag be the currently active one.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><a class="reference internal" href="#BaseDocument.GetActiveTag" title="BaseDocument.GetActiveTag"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetActiveTag()</span></code></a> Should be called afterward to update the internal selection state.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>tag</strong> (<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseTag/index.html#c4d.BaseTag" title="c4d.BaseTag"><em>c4d.BaseTag</em></a>) – The tag to set active.</li>
+<li><strong>mode</strong> (<em>int</em>) – <p>The selection flag:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>SELECTION_NEW</em></td>
+<td>Starts a new selection.</td>
+</tr>
+<tr class="row-even"><td><em>SELECTION_ADD</em></td>
+<td>Adds to the current selection</td>
+</tr>
+<tr class="row-odd"><td><em>SELECTION_SUB</em></td>
+<td>Subtracts from the current selection.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.SetActiveMaterial">
+<code class="descclassname">BaseDocument.</code><code class="descname">SetActiveMaterial</code><span class="sig-paren">(</span><em>self</em>, <em>mp</em>, <em>mode=SELECTION_NEW</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.SetActiveMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modifies the current multi selection with <em>op</em>, depending on <em>mode</em>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><a class="reference internal" href="#BaseDocument.GetActiveMaterial" title="BaseDocument.GetActiveMaterial"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetActiveMaterial()</span></code></a> Should be called afterward to update the internal selection state.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>mp</strong> (<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseMaterial/index.html#c4d.BaseMaterial" title="c4d.BaseMaterial"><em>c4d.BaseMaterial</em></a>) – The material to set active.</li>
+<li><strong>mode</strong> (<em>int</em>) – <p>The selection flag:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>SELECTION_NEW</em></td>
+<td>Starts a new selection.</td>
+</tr>
+<tr class="row-even"><td><em>SELECTION_ADD</em></td>
+<td>Adds to the current selection</td>
+</tr>
+<tr class="row-odd"><td><em>SELECTION_SUB</em></td>
+<td>Subtracts from the current selection.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.SetActiveRenderData">
+<code class="descclassname">BaseDocument.</code><code class="descname">SetActiveRenderData</code><span class="sig-paren">(</span><em>self</em>, <em>rd</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.SetActiveRenderData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the active render settings for the document, these are the settings that are used for rendering.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>rd</strong> (<a class="reference internal" href="../RenderData/index.html#c4d.documents.RenderData" title="c4d.documents.RenderData"><em>c4d.documents.RenderData</em></a>) – The render data that you want to make active.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetAllTextures">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetAllTextures</code><span class="sig-paren">(</span><em>self</em>, <em>isNet=True</em>, <em>ar=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetAllTextures" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a collection of all used textures in the document and optionally only for the objects in <em>ar</em>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">If <em>isNet</em> is passed <strong>True</strong> (default) then the function only delivers the textures of the current take.</div>
+<div class="line">Set the parameter to <strong>False</strong> to get all.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>isNet</strong> (<em>bool</em>) – <div class="versionadded">
+<p><span class="versionmodified">New in version R16.021: </span>Pass <strong>True</strong> (default) to retrieve the textures used in the current NET rendering.</p>
+</div>
+</li>
+<li><strong>ar</strong> (<em>List</em><em>[</em><a class="reference internal" href="../../c4d/C4DAtom/index.html#c4d.C4DAtom" title="c4d.C4DAtom"><em>c4d.C4DAtom</em></a><em>]</em>) – An atom array to get the textures for. If <strong>None</strong> (default), all used textures in the document will be returned.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer">c4d.BaseContainer</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A container with all filenames of used textures in the document.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.SetAction">
+<code class="descclassname">BaseDocument.</code><code class="descname">SetAction</code><span class="sig-paren">(</span><em>self</em>, <em>a</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.SetAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the current tool in the editor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>a</strong> (<em>int</em>) – The values are <em>ID_MODELING_MOVE</em>, <em>ID_MODELING_SCALE</em>, <em>ID_MODELING_ROTATE</em> etc. The IDs are listed in <em>modelingids.h</em>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetAction">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetAction</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the ID of the current active tool in the editor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The ID.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetActiveToolData">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetActiveToolData</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetActiveToolData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the original tool data container.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The container is alive until the host object is freed.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer">c4d.BaseContainer</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Tool data container.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.SetMode">
+<code class="descclassname">BaseDocument.</code><code class="descname">SetMode</code><span class="sig-paren">(</span><em>self</em>, <em>m</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.SetMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the main mode of the editor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>m</strong> (<em>int</em>) – <p>The value:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>Mcamera</em></td>
+<td>Camera mode.</td>
+</tr>
+<tr class="row-even"><td><em>Mobject</em></td>
+<td>Object mode.</td>
+</tr>
+<tr class="row-odd"><td><em>Mtexture</em></td>
+<td>Texture mode.</td>
+</tr>
+<tr class="row-even"><td><em>Mtextureaxis</em></td>
+<td>Texture axis mode.</td>
+</tr>
+<tr class="row-odd"><td><em>Mpoints</em></td>
+<td>Point edit mode.</td>
+</tr>
+<tr class="row-even"><td><em>Medges</em></td>
+<td>Edge edit mode.</td>
+</tr>
+<tr class="row-odd"><td><em>Mpolygons</em></td>
+<td>Polygon edit mode.</td>
+</tr>
+<tr class="row-even"><td><em>Manimation</em></td>
+<td>Animation mode.</td>
+</tr>
+<tr class="row-odd"><td><em>Mkinematic</em></td>
+<td>IK mode.</td>
+</tr>
+<tr class="row-even"><td><em>Mmodel</em></td>
+<td>Model mode.</td>
+</tr>
+<tr class="row-odd"><td><em>Mpaint</em></td>
+<td>Paint mode.</td>
+</tr>
+<tr class="row-even"><td><em>Muvpoints</em></td>
+<td>UV points mode.</td>
+</tr>
+<tr class="row-odd"><td><em>Muvpolygons</em></td>
+<td>UV polygons mode.</td>
+</tr>
+<tr class="row-even"><td><em>Mdrag</em></td>
+<td>Drag mode.</td>
+</tr>
+<tr class="row-odd"><td><em>Mpolyedgepoint</em></td>
+<td>Combined poly/edge/point mode. Must only be used in <a class="reference internal" href="../../c4d.utils/ViewportSelect/index.html#c4d.utils.ViewportSelect" title="c4d.utils.ViewportSelect"><code class="xref py py-class docutils literal notranslate"><span class="pre">ViewportSelect</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>Medgepoint</em></td>
+<td>Combined edge/point mode. Must only be used in <a class="reference internal" href="../../c4d.utils/ViewportSelect/index.html#c4d.utils.ViewportSelect" title="c4d.utils.ViewportSelect"><code class="xref py py-class docutils literal notranslate"><span class="pre">ViewportSelect</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>Mworkplane</em></td>
+<td>Workplane mode.</td>
+</tr>
+<tr class="row-even"><td><em>Mdrag</em></td>
+<td>Drag mode.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetMode">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetMode</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the main mode of the editor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The value:<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>Mcamera</em></td>
+<td>Camera mode.</td>
+</tr>
+<tr class="row-even"><td><em>Mobject</em></td>
+<td>Object mode.</td>
+</tr>
+<tr class="row-odd"><td><em>Mtexture</em></td>
+<td>Texture mode.</td>
+</tr>
+<tr class="row-even"><td><em>Mtextureaxis</em></td>
+<td>Texture axis mode.</td>
+</tr>
+<tr class="row-odd"><td><em>Mpoints</em></td>
+<td>Point edit mode.</td>
+</tr>
+<tr class="row-even"><td><em>Medges</em></td>
+<td>Edge edit mode.</td>
+</tr>
+<tr class="row-odd"><td><em>Mpolygons</em></td>
+<td>Polygon edit mode.</td>
+</tr>
+<tr class="row-even"><td><em>Manimation</em></td>
+<td>Animation mode.</td>
+</tr>
+<tr class="row-odd"><td><em>Mkinematic</em></td>
+<td>IK mode.</td>
+</tr>
+<tr class="row-even"><td><em>Mmodel</em></td>
+<td>Model mode.</td>
+</tr>
+<tr class="row-odd"><td><em>Mpaint</em></td>
+<td>Paint mode.</td>
+</tr>
+<tr class="row-even"><td><em>Muvpoints</em></td>
+<td>UV points mode.</td>
+</tr>
+<tr class="row-odd"><td><em>Muvpolygons</em></td>
+<td>UV polygons mode.</td>
+</tr>
+<tr class="row-even"><td><em>Mdrag</em></td>
+<td>Drag mode.</td>
+</tr>
+<tr class="row-odd"><td><em>Mpolyedgepoint</em></td>
+<td>Combined poly/edge/point mode. Must only be used in <a class="reference internal" href="../../c4d.utils/ViewportSelect/index.html#c4d.utils.ViewportSelect" title="c4d.utils.ViewportSelect"><code class="xref py py-class docutils literal notranslate"><span class="pre">ViewportSelect</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>Medgepoint</em></td>
+<td>Combined edge/point mode. Must only be used in <a class="reference internal" href="../../c4d.utils/ViewportSelect/index.html#c4d.utils.ViewportSelect" title="c4d.utils.ViewportSelect"><code class="xref py py-class docutils literal notranslate"><span class="pre">ViewportSelect</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>Mworkplane</em></td>
+<td>Workplane mode.</td>
+</tr>
+<tr class="row-even"><td><em>Mdrag</em></td>
+<td>Drag mode.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.IsEditMode">
+<code class="descclassname">BaseDocument.</code><code class="descname">IsEditMode</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.IsEditMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the editor is in an editable mode.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This checks if <a class="reference internal" href="#BaseDocument.GetMode" title="BaseDocument.GetMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetMode()</span></code></a> is <em>Mpoints</em>, <em>Medges</em> or <em>Mpolygons</em>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the editor is in point/poly editing mode.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetBaseDraw">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetBaseDraw</code><span class="sig-paren">(</span><em>self</em>, <em>bd</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetBaseDraw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the BaseDraw hook of the editor <em>bd</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>bd</strong> (<em>int</em>) – If there are multiple views (multiple basedraws), this selects the view.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#c4d.BaseDraw" title="c4d.BaseDraw">c4d.BaseDraw</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The requested view in the editor, or <strong>None</strong></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetActiveBaseDraw">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetActiveBaseDraw</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetActiveBaseDraw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the activate BaseDraw in the editor, this is where all drawing should be performed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#c4d.BaseDraw" title="c4d.BaseDraw">c4d.BaseDraw</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The active view in the editor.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetRenderBaseDraw">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetRenderBaseDraw</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetRenderBaseDraw" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the BaseDraw belonging to the view that the user has chosen as ‘Render View’ (see View menu in Cinema 4D).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#c4d.BaseDraw" title="c4d.BaseDraw">c4d.BaseDraw</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The render view in the editor.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetActiveTag">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetActiveTag</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetActiveTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the active selected tag.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseTag/index.html#c4d.BaseTag" title="c4d.BaseTag">c4d.BaseTag</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The active tag, or <strong>None</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetMaterials">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetMaterials</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetMaterials" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all materials in a list.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">List[<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseMaterial/index.html#c4d.BaseMaterial" title="c4d.BaseMaterial">c4d.BaseMaterial</a>]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The list of all materials.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetActiveObject">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetActiveObject</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetActiveObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the active selected object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject">c4d.BaseObject</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The active object, or <strong>None</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetActiveRenderData">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetActiveRenderData</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetActiveRenderData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the active selected render data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../RenderData/index.html#c4d.documents.RenderData" title="c4d.documents.RenderData">c4d.documents.RenderData</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The active render data.<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Guaranteed to never be <strong>None</strong>.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetFirstRenderData">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetFirstRenderData</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetFirstRenderData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the first render data or options of the document.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The other render settings in the document can be accessed by using the list functions <a class="reference internal" href="../../c4d/C4DAtom/GeListNode/index.html#GeListNode.GetNext" title="GeListNode.GetNext"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetNext()</span></code></a>, <a class="reference internal" href="../../c4d/C4DAtom/GeListNode/index.html#GeListNode.GetPred" title="GeListNode.GetPred"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPred()</span></code></a>, <a class="reference internal" href="../../c4d/C4DAtom/GeListNode/index.html#GeListNode.GetDown" title="GeListNode.GetDown"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetDown()</span></code></a> and <a class="reference internal" href="../../c4d/C4DAtom/GeListNode/index.html#GeListNode.GetUp" title="GeListNode.GetUp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetUp()</span></code></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../RenderData/index.html#c4d.documents.RenderData" title="c4d.documents.RenderData">c4d.documents.RenderData</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The first render data of the document, or <strong>None</strong> if there are no render data associated with the document.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.InsertRenderData">
+<code class="descclassname">BaseDocument.</code><code class="descname">InsertRenderData</code><span class="sig-paren">(</span><em>self</em>, <em>rd</em>, <em>parent=None</em>, <em>pred=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.InsertRenderData" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Inserts the render data into the document’s render settings hierarchy.</div>
+<div class="line">Optionally the insertion position can either be specified by the <em>parent</em> parameter, inserting the render data as the first child of the specified <em>parent</em>, or by the <em>pred</em> parameter, inserting the render data below the specified <em>pred</em> render data.</div>
+<div class="line">If neither is given, the render data is inserted at the top of the hierarchy.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>rd</strong> (<a class="reference internal" href="../RenderData/index.html#c4d.documents.RenderData" title="c4d.documents.RenderData"><em>c4d.documents.RenderData</em></a>) – The render data to insert.</li>
+<li><strong>parent</strong> (<a class="reference internal" href="../RenderData/index.html#c4d.documents.RenderData" title="c4d.documents.RenderData"><em>c4d.documents.RenderData</em></a>) – An optional parent to insert the render data as a child of.</li>
+<li><strong>pred</strong> (<a class="reference internal" href="../RenderData/index.html#c4d.documents.RenderData" title="c4d.documents.RenderData"><em>c4d.documents.RenderData</em></a>) – An optional render data of the document to use as insertion point.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.InsertRenderDataLast">
+<code class="descclassname">BaseDocument.</code><code class="descname">InsertRenderDataLast</code><span class="sig-paren">(</span><em>self</em>, <em>rd</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.InsertRenderDataLast" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserts the render data as last child into the document’s render data list.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>rd</strong> (<a class="reference internal" href="../RenderData/index.html#c4d.documents.RenderData" title="c4d.documents.RenderData"><em>c4d.documents.RenderData</em></a>) – The render data to insert.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetActiveMaterial">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetActiveMaterial</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetActiveMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the active selected material.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseMaterial/index.html#c4d.BaseMaterial" title="c4d.BaseMaterial">c4d.BaseMaterial</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The active material, or <strong>None</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetDocumentData">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetDocumentData</code><span class="sig-paren">(</span><em>self</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetDocumentData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the <a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseContainer</span></code></a> settings of the specified <em>type</em>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<div class="last line-block">
+<div class="line">Use <a class="reference internal" href="#BaseDocument.GetSettingsInstance" title="BaseDocument.GetSettingsInstance"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetSettingsInstance()</span></code></a> to retrieve <strong>DOCUMENTSETTINGS_TOOLS</strong>.</div>
+<div class="line"><a class="reference internal" href="#BaseDocument.GetDocumentData" title="BaseDocument.GetDocumentData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetDocumentData()</span></code></a> does not return these settings.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>int</em>) – The <strong>DOCUMENTSETTINGS</strong> type of the settings to get. See <a class="reference internal" href="../../../consts/DOCUMENTSETTINGS.html"><span class="doc">DOCUMENTSETTINGS</span></a>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer">c4d.BaseContainer</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The settings for the document.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.SetDocumentData">
+<code class="descclassname">BaseDocument.</code><code class="descname">SetDocumentData</code><span class="sig-paren">(</span><em>self</em>, <em>type</em>, <em>bc</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.SetDocumentData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merges the <a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseContainer</span></code></a> for the settings of the specified <em>type</em>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<div class="last line-block">
+<div class="line">Use <a class="reference internal" href="#BaseDocument.GetSettingsInstance" title="BaseDocument.GetSettingsInstance"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetSettingsInstance()</span></code></a> to change <strong>DOCUMENTSETTINGS_TOOLS</strong>.</div>
+<div class="line"><a class="reference internal" href="#BaseDocument.SetDocumentData" title="BaseDocument.SetDocumentData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetDocumentData()</span></code></a> does not affect these settings.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>type</strong> (<em>int</em>) – The <strong>DOCUMENTSETTINGS</strong> type of the settings to merge for the document. See <a class="reference internal" href="../../../consts/DOCUMENTSETTINGS.html"><span class="doc">DOCUMENTSETTINGS</span></a>.</li>
+<li><strong>bc</strong> (<a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The container to take the new settings from.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetSettingsInstance">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetSettingsInstance</code><span class="sig-paren">(</span><em>self</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetSettingsInstance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the internal settings object.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Changes to the returned container are reflected in the document so it is not needed to call <a class="reference internal" href="#BaseDocument.SetDocumentData" title="BaseDocument.SetDocumentData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetDocumentData()</span></code></a> manually.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<div class="last line-block">
+<div class="line">Use <a class="reference internal" href="#BaseDocument.GetDocumentData" title="BaseDocument.GetDocumentData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetDocumentData()</span></code></a>/<a class="reference internal" href="#BaseDocument.SetDocumentData" title="BaseDocument.SetDocumentData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetDocumentData()</span></code></a> to retrieve/change <strong>DOCUMENTSETTINGS_GENERAL</strong>.</div>
+<div class="line"><a class="reference internal" href="#BaseDocument.GetSettingsInstance" title="BaseDocument.GetSettingsInstance"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetSettingsInstance()</span></code></a> does not return these settings.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>int</em>) – The <strong>DOCUMENTSETTINGS</strong> type of the settings to get. See <a class="reference internal" href="../../../consts/DOCUMENTSETTINGS.html"><span class="doc">DOCUMENTSETTINGS</span></a>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer">c4d.BaseContainer</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The settings for the document.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetFirstObject">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetFirstObject</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetFirstObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the first object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject">c4d.BaseObject</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The first object, or <strong>None</strong> if no objects are contained in this document.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetFirstMaterial">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetFirstMaterial</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetFirstMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the first material.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseMaterial/index.html#c4d.BaseMaterial" title="c4d.BaseMaterial">c4d.BaseMaterial</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The active material, or <strong>None</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetActiveMaterials">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetActiveMaterials</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetActiveMaterials" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the material selection.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">List[<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseMaterial/index.html#c4d.BaseMaterial" title="c4d.BaseMaterial">c4d.BaseMaterial</a>]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The selected materials in a list.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetActiveObjects">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetActiveObjects</code><span class="sig-paren">(</span><em>self</em>, <em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetActiveObjects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the object selection.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>flags</strong> (<em>int</em>) – <p>Flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>GETACTIVEOBJECTFLAGS_NONE</em></td>
+<td>Only the topmost parent of each chain is added.</td>
+</tr>
+<tr class="row-even"><td><em>GETACTIVEOBJECTFLAGS_CHILDREN</em></td>
+<td>Child objects are added to the selection too, provided they are selected.</td>
+</tr>
+<tr class="row-odd"><td><em>GETACTIVEOBJECTFLAGS_SELECTIONORDER</em></td>
+<td>The selection array is sorted in the selection order, e.g. the first selected object is the first element in the array.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">List[<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D">c4d.BaseList2D</a>]</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The selected objects in a list.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetActiveTags">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetActiveTags</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetActiveTags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the tag selection.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">List[<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseTag/index.html#c4d.BaseTag" title="c4d.BaseTag">c4d.BaseTag</a>]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The selected tags in a list.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetSelection">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetSelection</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the selection of materials, tags and objects in a list.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">List[<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D">c4d.BaseList2D</a>]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The selected objects in a list.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetActiveObjectsFilter">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetActiveObjectsFilter</code><span class="sig-paren">(</span><em>self</em>, <em>children</em>, <em>type</em>, <em>instanceof</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetActiveObjectsFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the active object multi selection and removes objects that do not match the filter given by type and instanceof.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>children</strong> (<em>bool</em>) – If <strong>True</strong> then children are also added to selection, provided that they are selected. Otherwise only the topmost parent in each chain is added.</li>
+<li><strong>type</strong> (<em>int</em>) – Checked against <a class="reference internal" href="../../c4d/C4DAtom/index.html#C4DAtom.GetType" title="C4DAtom.GetType"><code class="xref py py-meth docutils literal notranslate"><span class="pre">C4DAtom.GetType()</span></code></a>. Pass <em>NOTOK</em> to ignore this test.</li>
+<li><strong>instanceof</strong> (<em>int</em>) – Checked against <a class="reference internal" href="../../c4d/C4DAtom/index.html#C4DAtom.IsInstanceOf" title="C4DAtom.IsInstanceOf"><code class="xref py py-meth docutils literal notranslate"><span class="pre">C4DAtom.IsInstanceOf()</span></code></a>. Pass <em>NOTOK</em> to ignore this test.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">List[<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D">c4d.BaseList2D</a>]</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The selected objects in a list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetRealActiveObject">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetRealActiveObject</code><span class="sig-paren">(</span><em>self</em>, <em>help</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetRealActiveObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the active object or the dummy axis if multiple objects are selected.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>help</strong> (<em>Iterable</em><em>[</em><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><em>c4d.BaseObject</em></a><em>]</em>) – Can be set to <strong>None</strong> or for speedup purposes pass a list/tuple of active objects.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Tuple[<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject">c4d.BaseObject</a>, bool]</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A tuple with the real active object and a bool telling if multiple objects are selected. <strong>None</strong> if the method failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetObjects">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetObjects</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetObjects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the highest objects without children.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">List[<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject">c4d.BaseObject</a>]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The objects.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.SetSelection">
+<code class="descclassname">BaseDocument.</code><code class="descname">SetSelection</code><span class="sig-paren">(</span><em>self</em>, <em>bl</em>, <em>mode=SELECTION_NEW</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.SetSelection" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Sets the active selection.</div>
+<div class="line">This function deals with both objects, tags and materials.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>bl</strong> (<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><em>c4d.BaseList2D</em></a>) – The baselist object within this document that you want to make active. Must be in the document already.</li>
+<li><strong>mode</strong> (<em>int</em>) – <p>The selection mode:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>SELECTION_NEW</em></td>
+<td>Starts a new selection.</td>
+</tr>
+<tr class="row-even"><td><em>SELECTION_ADD</em></td>
+<td>Adds to the current selection</td>
+</tr>
+<tr class="row-odd"><td><em>SELECTION_SUB</em></td>
+<td>Subtracts from the current selection.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.SearchMaterial">
+<code class="descclassname">BaseDocument.</code><code class="descname">SearchMaterial</code><span class="sig-paren">(</span><em>self</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.SearchMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search for a material with the same case sensitive name.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – The name of the material to search for.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseMaterial/index.html#c4d.BaseMaterial" title="c4d.BaseMaterial">c4d.BaseMaterial</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The material or <strong>None</strong> if nothing was found.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.SearchObject">
+<code class="descclassname">BaseDocument.</code><code class="descname">SearchObject</code><span class="sig-paren">(</span><em>self</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.SearchObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search for an object with the same case sensitive name.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – The name of the object to search for.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject">c4d.BaseObject</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The object or <strong>None</strong> if nothing was found.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetHighest">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetHighest</code><span class="sig-paren">(</span><em>self</em>, <em>type</em>, <em>editor</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetHighest" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The first object in object manager hierarchy of type <em>type</em>.</div>
+<div class="line">It searches objects that are not deactivated in the object manager (set to red).</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>type</strong> (<em>int</em>) – the object type</li>
+<li><strong>editor</strong> (<em>bool</em>) – <strong>True</strong> will search using the ‘editor dot’ in the Object Manager, <strong>False</strong> will use the ‘render dot’.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject">c4d.BaseObject</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The first requested object or <strong>None</strong> if nothing was found.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.InsertObject">
+<code class="descclassname">BaseDocument.</code><code class="descname">InsertObject</code><span class="sig-paren">(</span><em>self</em>, <em>op</em>, <em>parent=None</em>, <em>pred=None</em>, <em>checknames=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.InsertObject" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Inserts the object into the document’s object hierarchy.</div>
+<div class="line">The insertion position can either be specified by the parent parameter, inserting the object as the first child of the specified parent, or by the <em>pred</em> parameter, inserting the object below the specified
+<em>prev</em> object.</div>
+<div class="line">If neither is given, the object is inserted at the top of the hierarchy.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If both <em>pred</em> and <em>parent</em> are provided then pred has precedence.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><strong>ReferenceError</strong> – If the passed objects (<em>parent</em> and <em>pred</em>) are not in the same document.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>op</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><em>c4d.BaseObject</em></a><em>]</em>) – Object to insert into the document.</li>
+<li><strong>parent</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><em>c4d.BaseObject</em></a><em>]</em>) – Optional parent to insert the object as a child of.</li>
+<li><strong>pred</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><em>c4d.BaseObject</em></a><em>]</em>) – Optional insertion point.</li>
+<li><strong>checknames</strong> (<em>bool</em>) – Check for duplicate names and append .1, .2 etc.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.InsertMaterial">
+<code class="descclassname">BaseDocument.</code><code class="descname">InsertMaterial</code><span class="sig-paren">(</span><em>self</em>, <em>op</em>, <em>pred=None</em>, <em>checknames=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.InsertMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Inserts the material into the document’s material list.</div>
+<div class="line">Optionally you can specify the insertion position with the pred parameter, giving the material before (just to the left of) the wanted position.</div>
+<div class="line">Otherwise the material is inserted at the first position in the list.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>op</strong> (<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseMaterial/index.html#c4d.BaseMaterial" title="c4d.BaseMaterial"><em>c4d.BaseMaterial</em></a>) – Material to insert into the document.</li>
+<li><strong>pred</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><em>c4d.BaseObject</em></a><em>]</em>) – <p>Optional insertion point for the material.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">Require condition <em>pred.GetDocument()==op.GetDocument()==op</em>.</div>
+<div class="line">That means, the object has to be in the same document.</div>
+</div>
+</div>
+</li>
+<li><strong>checknames</strong> (<em>bool</em>) – Check for duplicate names and append .1, .2 etc.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetHelperAxis">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetHelperAxis</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetHelperAxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the helper axis for the current multi selection.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject">c4d.BaseObject</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The axis object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetChanged">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetChanged</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the document has been changed since it was last saved.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the document has been changed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.SetChanged">
+<code class="descclassname">BaseDocument.</code><code class="descname">SetChanged</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.SetChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the changed state of the document to reflect it has been modified.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.IsAxisEnabled">
+<code class="descclassname">BaseDocument.</code><code class="descname">IsAxisEnabled</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.IsAxisEnabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the state of the object axis modifier.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R14.014.</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><cite>c4d.CallCommand(12102)</cite> toggles the tool.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the object axis modifier is enabled, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.SendInfo">
+<code class="descclassname">BaseDocument.</code><code class="descname">SendInfo</code><span class="sig-paren">(</span><em>self</em>, <em>type</em>, <em>format</em>, <em>fn</em>, <em>bl</em>, <em>hooks_only</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.SendInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends <em>MSG_DOCUMENTINFO</em> messages.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R14.014.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>type</strong> (<em>int</em>) – <p>The message type:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="79%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>MSG_DOCUMENTINFO_TYPE_SETACTIVE</em></td>
+<td>Document was set as active.</td>
+</tr>
+<tr class="row-even"><td><em>MSG_DOCUMENTINFO_TYPE_LOAD</em></td>
+<td>Document was loaded.</td>
+</tr>
+<tr class="row-odd"><td><em>MSG_DOCUMENTINFO_TYPE_MERGE</em></td>
+<td>Document was merged.</td>
+</tr>
+<tr class="row-even"><td><em>MSG_DOCUMENTINFO_TYPE_BEFOREMERGE</em></td>
+<td>Document before merge. <cite>data</cite> is a <a class="reference internal" href="../../../consts/MSG_DOCUMENTINFO_TYPE_BEFOREMERGE_RESULT.html"><span class="doc">MSG_DOCUMENTINFO_TYPE_BEFOREMERGE_RESULT</span></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>MSG_DOCUMENTINFO_TYPE_SAVE_BEFORE</em></td>
+<td>Document is about to be written.</td>
+</tr>
+<tr class="row-even"><td><em>MSG_DOCUMENTINFO_TYPE_SAVE_AFTER</em></td>
+<td>Document was saved.</td>
+</tr>
+<tr class="row-odd"><td><em>MSG_DOCUMENTINFO_TYPE_SAVEPROJECT_BEFORE</em></td>
+<td>Save Project is about to be executed.</td>
+</tr>
+<tr class="row-even"><td><em>MSG_DOCUMENTINFO_TYPE_SAVEPROJECT_AFTER</em></td>
+<td>Save Project was executed.</td>
+</tr>
+<tr class="row-odd"><td><em>MSG_DOCUMENTINFO_TYPE_REMOVE</em></td>
+<td>The document is removed from the document list. All structures are still accessible.</td>
+</tr>
+<tr class="row-even"><td><em>MSG_DOCUMENTINFO_TYPE_TOOL_CHANGED</em></td>
+<td>Tool changed.</td>
+</tr>
+<tr class="row-odd"><td><em>MSG_DOCUMENTINFO_TYPE_OBJECT_INSERT</em></td>
+<td>Objects got inserted into the document.</td>
+</tr>
+<tr class="row-even"><td><em>MSG_DOCUMENTINFO_TYPE_TAG_INSERT</em></td>
+<td>Tags got inserted into the document.</td>
+</tr>
+<tr class="row-odd"><td><em>MSG_DOCUMENTINFO_TYPE_MATERIAL_INSERT</em></td>
+<td>Materials got inserted into the document.</td>
+</tr>
+<tr class="row-even"><td><em>MSG_DOCUMENTINFO_TYPE_UNDO</em></td>
+<td>Undo was called.</td>
+</tr>
+<tr class="row-odd"><td><em>MSG_DOCUMENTINFO_TYPE_REDO</em></td>
+<td>Redo was called.</td>
+</tr>
+<tr class="row-even"><td><em>MSG_DOCUMENTINFO_TYPE_PASTE</em></td>
+<td>Paste was called.</td>
+</tr>
+<tr class="row-odd"><td><em>MSG_DOCUMENTINFO_TYPE_COPY</em></td>
+<td>Copy was called. Private.</td>
+</tr>
+<tr class="row-even"><td><em>MSG_DOCUMENTINFO_TYPE_LOAD_XREFS</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-odd"><td><em>MSG_DOCUMENTINFO_TYPE_MERGE_XREFS</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-even"><td><em>MSG_DOCUMENTINFO_TYPE_XREFS_IMPORTED</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-odd"><td><em>MSG_DOCUMENTINFO_TYPE_MAKEPROJECT</em></td>
+<td>Sent around during “Save as Project” for each texture / asset it copies. The data contains the source and destination files. This message is only sent to scene hooks.</td>
+</tr>
+<tr class="row-even"><td><em>MSG_DOCUMENTINFO_TYPE_SWAP_XREF</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-odd"><td><em>MSG_DOCUMENTINFO_TYPE_NODE_ASSETS_CHANGED</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.000: </span>Send around after node assets in a basedocument have been changed.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><em>MSG_DOCUMENTINFO_TYPE_MODE_CHANGED</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.000: </span>Mode changed.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>MSG_DOCUMENTINFO_TYPE_FLUSHCACHES</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R19.062: </span>Document caches are flushed. This message is only sent to scene hooks.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>format</strong> (<em>int</em>) – <p>The file format: (Set for load, merge and before/after save only. Otherwise <em>NOTOK</em>.)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="38%" />
+<col width="62%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>FORMAT_PREF</em></td>
+<td>Preferences.</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_WAV</em></td>
+<td>WAV sound.</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_L4D</em></td>
+<td>Layout.</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_P4D</em></td>
+<td>Layout.</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_C4DIMPORT</em></td>
+<td><cite>Cinema 4D</cite> import.</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_C4DEXPORT</em></td>
+<td><cite>Cinema 4D</cite> export.</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_VRML1IMPORT</em></td>
+<td>VRML 1 import.</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_VRML1EXPORT</em></td>
+<td>VRML 1 export.</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_VRML2IMPORT</em></td>
+<td>VRML 2 import.</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_VRML2EXPORT</em></td>
+<td>VRML 2 export.</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_DXFIMPORT</em></td>
+<td>DXF import.</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_DXFEXPORT</em></td>
+<td>DXF export.</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_3DSIMPORT</em></td>
+<td>3DS import.</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_3DSEXPORT</em></td>
+<td>3DS export.</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_OBJIMPORT</em></td>
+<td>Old OBJ import (R16 and older).</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_OBJEXPORT</em></td>
+<td>Old OBJ export (R16 and older).</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_Q3DIMPORT</em></td>
+<td>QuickDraw 3D import.</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_Q3DEXPORT</em></td>
+<td>QuickDraw 3D export.</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_AIIMPORT</em></td>
+<td>AI import.</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_DEMIMPORT</em></td>
+<td>DEM import.</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_D3DEXPORT</em></td>
+<td><cite>Direct3D</cite> export.</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_OBJ2IMPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R17.048: </span>New OBJ import (R17 and newer).</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_OBJ2EXPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R17.048: </span>New OBJ export (R17 and newer).</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_SKPIMPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R17.048: </span>SketchUp import.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_STEPIMPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.026: </span>Step import.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_CATIAIMPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.026: </span>Catia V5 import.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_IGESIMPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.026: </span>Iges  import.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_JTIMPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.026: </span>Jt import.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_SOLIDWORKSIMPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.026: </span>Solidworks  import.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_ABCIMPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.041: </span>Alembic import (R20.041 and newer).</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_ABCEXPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.041: </span>Alembic export (R20.041 and newer).</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_DAE14IMPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.041: </span>Collada 14 import (R20.041 and newer).</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_DAE14EXPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.041: </span>Collada 14 export (R20.041 and newer).</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><em>FORMAT_DAE15IMPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.041: </span>Collada 15 import (R20.041 and newer).</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>FORMAT_DAE15EXPORT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20.041: </span>Collada 15 export (R20.041 and newer).</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>fn</strong> (<em>str</em>) – <p>The document filename.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is not always the same as <a class="reference internal" href="#BaseDocument.GetDocumentPath" title="BaseDocument.GetDocumentPath"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetDocumentPath()</span></code></a>. E.g. for <em>MSG_DOCUMENTINFO_TYPE_SAVE_BEFORE</em> <a class="reference internal" href="#BaseDocument.GetDocumentPath" title="BaseDocument.GetDocumentPath"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetDocumentPath()</span></code></a> still contains the old path whereas <em>fn</em> designates the real file.</p>
+</div>
+</li>
+<li><strong>bl</strong> (<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><em>c4d.BaseList2D</em></a>) – <p>The object/tag/material that got inserted. It is used if type is of one of the following types:</p>
+<div class="line-block">
+<div class="line"><em>MSG_DOCUMENTINFO_TYPE_OBJECT_INSERT</em></div>
+<div class="line"><em>MSG_DOCUMENTINFO_TYPE_TAG_INSERT</em></div>
+<div class="line"><em>MSG_DOCUMENTINFO_TYPE_MATERIAL_INSERT</em></div>
+</div>
+</li>
+<li><strong>hooks_only</strong> (<em>bool</em>) – If <strong>True</strong> send only to scene hooks.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetDocPreviewBitmap">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetDocPreviewBitmap</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetDocPreviewBitmap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the preview bitmap of the document.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d.bitmaps/BaseBitmap/index.html#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap">c4d.bitmaps.BaseBitmap</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The preview bitmap of the document, or <strong>None</strong> if it could not be retrieved.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetTakeData">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetTakeData</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetTakeData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the take data for the document.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R17.032.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d.modules/takesystem/TakeData/index.html#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData">c4d.modules.takesystem.TakeData</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The take data.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetTargetObject">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetTargetObject</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetTargetObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the target object within a multi-selection.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R17.048.</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">This is the last object selected and is used by commands such as Spline Boolean in order to allow the user to control which object will be used as the target for the command.</div>
+<div class="line">The target object displays in the Object Manager as highlighted.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject">c4d.BaseObject</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The target object, or <strong>None</strong> if it fails or there is no selection.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.SetTargetObject">
+<code class="descclassname">BaseDocument.</code><code class="descname">SetTargetObject</code><span class="sig-paren">(</span><em>self</em>, <em>op</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.SetTargetObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the target object within a multi-selection.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R17.048.</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">This is the last object selected and is used by commands such as Spline Boolean in order to allow the user to control which object will be used as the target for the command.</div>
+<div class="line">The target object displays in the Object Manager as highlighted.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>op</strong> (<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><em>c4d.BaseObject</em></a>) – The object to set as the target.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetDefaultKey">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetDefaultKey</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetDefaultKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the document’s default keying settings.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Tuple[<a class="reference internal" href="../../c4d/C4DAtom/CKey/index.html#c4d.CKey" title="c4d.CKey">c4d.CKey</a>, bool]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="line-block">
+<div class="line">A tuple containing a key with the document’s default settings and a bool giving the document’s default overdub state.</div>
+<div class="line"><strong>None</strong> if the function failed.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.SetDefaultKey">
+<code class="descclassname">BaseDocument.</code><code class="descname">SetDefaultKey</code><span class="sig-paren">(</span><em>self</em>, <em>key</em>, <em>overdub</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.SetDefaultKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the document’s default keying settings.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>key</strong> (<a class="reference internal" href="../../c4d/C4DAtom/CKey/index.html#c4d.CKey" title="c4d.CKey"><em>c4d.CKey</em></a>) – The key to set the new default document’s settings.</li>
+<li><strong>overdub</strong> (<em>bool</em>) – <div class="line-block">
+<div class="line">The new document’s default overdub.</div>
+<div class="line">If a keyframe already exists, the existing keyframe’s interpolation type will be maintained when a new keyframe is recorded (only the value key will be overwritten).</div>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.GetPickSession">
+<code class="descclassname">BaseDocument.</code><code class="descname">GetPickSession</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.GetPickSession" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns information about the current pick session.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Tuple[List[<a class="reference internal" href="../../c4d/C4DAtom/index.html#c4d.C4DAtom" title="c4d.C4DAtom">c4d.C4DAtom</a>], bool]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><div class="line-block">
+<div class="line">A tuple with the list of picked objects and the multi-pick state.</div>
+<div class="line"><strong>None</strong> if there is no active pick session.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.StartPickSession">
+<code class="descclassname">BaseDocument.</code><code class="descname">StartPickSession</code><span class="sig-paren">(</span><em>self</em>, <em>callback</em>, <em>multi</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.StartPickSession" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts a pick session.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>callback</strong> (function(<em>active</em>, <em>multi</em>)) – <p>The pick session callback. The function does not need to return a value. The passed arguments are:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><em>active</em>: <cite>list</cite> of <a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseObject</span></code></a>: The list of picked objects.</div>
+<div class="line"><em>multi</em>: <cite>bool</cite>: The multi-pick state.</div>
+</div>
+</div></blockquote>
+</li>
+<li><strong>multi</strong> (<em>bool</em>) – Pass <strong>True</strong> for multi-pick sessions. Usually a pick session ends when something is selected. With a multi-pick session it ends when the user terminates it (ESC key or double-click).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDocument.StopPickSession">
+<code class="descclassname">BaseDocument.</code><code class="descname">StopPickSession</code><span class="sig-paren">(</span><em>self</em>, <em>cancel</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDocument.StopPickSession" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Ends the pick session.</div>
+<div class="line">For instance after filling the pick session array.</div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cancel</strong> (<em>bool</em>) – Pass <strong>True</strong> to cancel a pick session, for instance if an error occurred. Pass <strong>False</strong> if the pick session is ended regularly.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../BaseVideoPost/index.html" title="c4d.documents.BaseVideoPost"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="c4d.documents"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >c4d.documents</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

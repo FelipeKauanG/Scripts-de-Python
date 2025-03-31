@@ -1,0 +1,495 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.threading &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="c4d.threading.BaseThread" href="BaseThread/index.html" />
+    <link rel="prev" title="c4d.storage.MemoryFileStruct" href="../c4d.storage/MemoryFileStruct/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="BaseThread/index.html" title="c4d.threading.BaseThread"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../c4d.storage/MemoryFileStruct/index.html" title="c4d.storage.MemoryFileStruct"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-threading">
+<h1>c4d.threading<a class="headerlink" href="#c4d-threading" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.threading">
+<em class="property">class </em><code class="descclassname">c4d.</code><code class="descname">threading</code><a class="headerlink" href="#c4d.threading" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<div class="line-block">
+<div class="line">Programming a lower level thread is not as easy for the most people so this module helps to minimize the effort to run or handle code in another Thread.</div>
+<div class="line">Python is shipped with a standard module which already supports a Thread class, but Cinema 4D and Python use different implementations.</div>
+<div class="line">Use this module instead of the Python standard module, since all functions in this module are wrapped from the Cinema 4D C++ SDK and therefore stable.</div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">The important <a class="reference internal" href="../../manuals/application_development/threading.html#threading-information"><span class="std std-ref">Threading Information</span></a>.</p>
+</div>
+</div>
+<div class="section" id="types">
+<h1>Types<a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="BaseThread/index.html">c4d.threading.BaseThread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C4DThread/index.html">c4d.threading.C4DThread</a></li>
+</ul>
+</div>
+<p class="rubric">Functions Signatures</p>
+<p><p class="rubric">Deprecated</p>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.threading.GeGetCPUCount" title="c4d.threading.GeGetCPUCount"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.threading.GeGetCPUCount()</span></code></a></td>
+<td>Gets the number of threads available.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Uncategorized</p>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.threading.GeThreadLock" title="c4d.threading.GeThreadLock"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.threading.GeThreadLock()</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Locks using a global semaphore.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.threading.GeThreadUnlock" title="c4d.threading.GeThreadUnlock"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.threading.GeThreadUnlock()</span></code></a></td>
+<td>Continues blocked threads after a call to <code class="xref py py-meth docutils literal notranslate"><span class="pre">GeThreadLock()</span></code>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.threading.GeIsMainThread" title="c4d.threading.GeIsMainThread"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.threading.GeIsMainThread()</span></code></a></td>
+<td>Checks if the code is run from within the main thread of Cinema 4D.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.threading.GeIsMainThreadAndNoDrawThread" title="c4d.threading.GeIsMainThreadAndNoDrawThread"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.threading.GeIsMainThreadAndNoDrawThread()</span></code></a></td>
+<td>Checks if code is run from within the main thread of Cinema 4D and if the main thread does not execute any drawing code currently.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.threading.GeGetCurrentThreadCount" title="c4d.threading.GeGetCurrentThreadCount"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.threading.GeGetCurrentThreadCount()</span></code></a></td>
+<td>Gets the number of threads available.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.threading.GeGetCurrentThreadId" title="c4d.threading.GeGetCurrentThreadId"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.threading.GeGetCurrentThreadId()</span></code></a></td>
+<td>Returns a unique ID for the current thread.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.threading.IdentifyThread" title="c4d.threading.IdentifyThread"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.threading.IdentifyThread(bt)</span></code></a></td>
+<td>Identifies a thread’s type.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.threading.GeGetCurrentThread" title="c4d.threading.GeGetCurrentThread"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.threading.GeGetCurrentThread()</span></code></a></td>
+<td>Returns the current thread.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.threading.GeGetDummyThread" title="c4d.threading.GeGetDummyThread"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.threading.GeGetDummyThread()</span></code></a></td>
+<td>Returns a dummy thread. The thread’s <a class="reference internal" href="BaseThread/index.html#BaseThread.TestBreak" title="BaseThread.TestBreak"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseThread.TestBreak()</span></code></a> function always returns <strong>False</strong>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.threading.GeGetEscTestThread" title="c4d.threading.GeGetEscTestThread"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.threading.GeGetEscTestThread()</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Returns a dummy thread for escape key testing.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.threading.GeCheckBackgroundThreadsRunning" title="c4d.threading.GeCheckBackgroundThreadsRunning"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.threading.GeCheckBackgroundThreadsRunning(typeclass,</span> <span class="pre">all)</span></code></a></td>
+<td>Checks if any of the threads matching <em>typeclass</em> is running.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.threading.GeStopBackgroundThreads" title="c4d.threading.GeStopBackgroundThreads"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.threading.GeStopBackgroundThreads(typeclass,</span> <span class="pre">flags)</span></code></a></td>
+<td>Stops all running background threads of the given <em>typeclass</em>.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Functions Documentation</p>
+<p><dl class="function">
+<dt id="c4d.threading.GeGetCPUCount">
+<code class="descclassname">c4d.threading.</code><code class="descname">GeGetCPUCount</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c4d.threading.GeGetCPUCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the number of threads available.</p>
+<div class="deprecated">
+<p><span class="versionmodified">Deprecated since version R16.</span></p>
+</div>
+<p>Use <code class="xref py py-func docutils literal notranslate"><span class="pre">threading.GeGetCurrentThreadCount()</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The number of current threads.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.threading.GeThreadLock">
+<code class="descclassname">c4d.threading.</code><code class="descname">GeThreadLock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c4d.threading.GeThreadLock" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Locks using a global semaphore.</div>
+<div class="line">When locked, any other thread trying to acquire the lock will have to wait.</div>
+<div class="line">Other threads will continue.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">As this blocks all threads it should only be used if and when necessary.</div>
+<div class="line">A local semaphore is a more elegant and efficient solution to multiple thread data access.</div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.threading.GeThreadUnlock">
+<code class="descclassname">c4d.threading.</code><code class="descname">GeThreadUnlock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c4d.threading.GeThreadUnlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Continues blocked threads after a call to <a class="reference internal" href="#c4d.threading.GeThreadLock" title="c4d.threading.GeThreadLock"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeThreadLock()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.threading.GeIsMainThread">
+<code class="descclassname">c4d.threading.</code><code class="descname">GeIsMainThread</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c4d.threading.GeIsMainThread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the code is run from within the main thread of Cinema 4D.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if called from the main thread, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.threading.GeIsMainThreadAndNoDrawThread">
+<code class="descclassname">c4d.threading.</code><code class="descname">GeIsMainThreadAndNoDrawThread</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c4d.threading.GeIsMainThreadAndNoDrawThread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if code is run from within the main thread of Cinema 4D and if the main thread does not execute any drawing code currently.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.038.</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">This routine can be used to make sure that no illegal code is called during a drawing operation.</div>
+<div class="line">In Cinema 4D the drawing will be started threaded or non-threaded, depending on the situation.</div>
+<div class="line">It is not allowed to add e.g. undo or delete objects or materials while the drawing is in progress (this would lead to immediate crashes).</div>
+<div class="line">If code calls other routines that are not aware of their context (e.g. some code within a Message() that does not know whether it was called from a drawing thread or during a command call).</div>
+<div class="line"><a class="reference internal" href="#c4d.threading.GeIsMainThreadAndNoDrawThread" title="c4d.threading.GeIsMainThreadAndNoDrawThread"><code class="xref py py-func docutils literal notranslate"><span class="pre">GeIsMainThreadAndNoDrawThread()</span></code></a> can be used to detect the correct situation.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if called from the main thread and main thread does not execute a drawing operation, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.threading.GeGetCurrentThreadCount">
+<code class="descclassname">c4d.threading.</code><code class="descname">GeGetCurrentThreadCount</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c4d.threading.GeGetCurrentThreadCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the number of threads available.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The number of current threads.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.threading.GeGetCurrentThreadId">
+<code class="descclassname">c4d.threading.</code><code class="descname">GeGetCurrentThreadId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c4d.threading.GeGetCurrentThreadId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a unique ID for the current thread.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Usually do not care about this.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The unique ID for the current thread.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.threading.IdentifyThread">
+<code class="descclassname">c4d.threading.</code><code class="descname">IdentifyThread</code><span class="sig-paren">(</span><em>bt</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.threading.IdentifyThread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifies a thread’s type.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>bt</strong> (<a class="reference internal" href="BaseThread/index.html#c4d.threading.BaseThread" title="c4d.threading.BaseThread"><em>BaseThread</em></a>) – The thread to identify.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The thread type:<table border="1" class="docutils">
+<colgroup>
+<col width="63%" />
+<col width="37%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>THREADTYPE_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>THREADTYPE_EDITORREDRAW</em></td>
+<td>Editor redraw.</td>
+</tr>
+<tr class="row-odd"><td><em>THREADTYPE_RENDEREDITOR</em></td>
+<td>Editor render.</td>
+</tr>
+<tr class="row-even"><td><em>THREADTYPE_RENDEREXTERNAL</em></td>
+<td>External render.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.threading.GeGetCurrentThread">
+<code class="descclassname">c4d.threading.</code><code class="descname">GeGetCurrentThread</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c4d.threading.GeGetCurrentThread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current thread.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BaseThread/index.html#c4d.threading.BaseThread" title="c4d.threading.BaseThread"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseThread</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The current thread.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.threading.GeGetDummyThread">
+<code class="descclassname">c4d.threading.</code><code class="descname">GeGetDummyThread</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c4d.threading.GeGetDummyThread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a dummy thread. The thread’s <a class="reference internal" href="BaseThread/index.html#BaseThread.TestBreak" title="BaseThread.TestBreak"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseThread.TestBreak()</span></code></a> function always returns <strong>False</strong>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R17.048.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BaseThread/index.html#c4d.threading.BaseThread" title="c4d.threading.BaseThread"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseThread</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A dummy thread .</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.threading.GeGetEscTestThread">
+<code class="descclassname">c4d.threading.</code><code class="descname">GeGetEscTestThread</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c4d.threading.GeGetEscTestThread" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns a dummy thread for escape key testing.</div>
+<div class="line">The thread’s <a class="reference internal" href="BaseThread/index.html#BaseThread.TestBreak" title="BaseThread.TestBreak"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseThread.TestBreak()</span></code></a> function returns <strong>True</strong> when the user presses the escape key.</div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R17.048.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BaseThread/index.html#c4d.threading.BaseThread" title="c4d.threading.BaseThread"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseThread</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">An escape key test thread.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.threading.GeCheckBackgroundThreadsRunning">
+<code class="descclassname">c4d.threading.</code><code class="descname">GeCheckBackgroundThreadsRunning</code><span class="sig-paren">(</span><em>typeclass</em>, <em>all</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.threading.GeCheckBackgroundThreadsRunning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if any of the threads matching <em>typeclass</em> is running.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>typeclass</strong> (<em>int</em>) – <div class="line-block">
+<div class="line">The type class of the background threads to check. If <cite>0</cite>, all threads are checked. Pass <strong>BACKGROUNDHANDLER_TYPECLASS_C4D</strong> to check Cinema 4D background handlers.</div>
+<div class="line"><br /></div>
+<div class="line">For example <cite>GeCheckBackgroundThreadsRunning(BACKGROUNDHANDLER_TYPECLASS_C4D, True)</cite> checks if Cinema 4D is doing anything right now.</div>
+<div class="line">If <strong>False</strong> were passed it would not check for the external renderer (which are always running in a BodyPaint 3D selection).</div>
+</div>
+</li>
+<li><strong>all</strong> (<em>bool</em>) – If <strong>True</strong> then background handler with negative priority are also checked.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the specified threads are running, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.threading.GeStopBackgroundThreads">
+<code class="descclassname">c4d.threading.</code><code class="descname">GeStopBackgroundThreads</code><span class="sig-paren">(</span><em>typeclass</em>, <em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.threading.GeStopBackgroundThreads" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops all running background threads of the given <em>typeclass</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>typeclass</strong> (<em>int</em>) – The type class of the background threads to stop. If <cite>0</cite>, all threads are stopped. Pass <strong>BACKGROUNDHANDLER_TYPECLASS_C4D</strong> to stop Cinema 4D background handlers.</li>
+<li><strong>flags</strong> (<em>int</em>) – <div class="line-block">
+<div class="line">If <em>typeclass</em> is <strong>BACKGROUNDHANDLER_TYPECLASS_C4D</strong> then the following flags can be used:</div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="72%" />
+<col width="28%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>BACKGROUNDHANDLERFLAGS_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>BACKGROUNDHANDLERFLAGS_VIEWREDRAW</em></td>
+<td>View redraw.</td>
+</tr>
+<tr class="row-odd"><td><em>BACKGROUNDHANDLERFLAGS_EDITORRENDDER</em></td>
+<td>Editor render.</td>
+</tr>
+<tr class="row-even"><td><em>BACKGROUNDHANDLERFLAGS_MATERIALPREVIEW</em></td>
+<td>Material preview.</td>
+</tr>
+<tr class="row-odd"><td><em>BACKGROUNDHANDLERFLAGS_RENDEREXTERNAL</em></td>
+<td>Render external.</td>
+</tr>
+<tr class="row-even"><td><em>BACKGROUNDHANDLERFLAGS_PRIVATE_VIEWREDRAW</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-odd"><td><em>BACKGROUNDHANDLERFLAGS_SHUTDOWN</em></td>
+<td>Shutdown.</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><cite>GeStopBackgroundThreads(BACKGROUNDHANDLER_TYPECLASS_C4D, BACKGROUNDHANDLER_FLAGS_EDITORRENDDER)</cite> only stops the editor renderer (if it was running).</div>
+<div class="line"><cite>GeStopBackgroundThreads(0, BACKGROUNDHANDLERFLAGS_SHUTDOWN)</cite> kills anything running.</div>
+<div class="line"><br /></div>
+<div class="line">Pass flags as needed for custom type classes, they will be routed to the background handler function.</div>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">c4d.threading</a></li>
+<li><a class="reference internal" href="#types">Types</a></li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="BaseThread/index.html" title="c4d.threading.BaseThread"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../c4d.storage/MemoryFileStruct/index.html" title="c4d.storage.MemoryFileStruct"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

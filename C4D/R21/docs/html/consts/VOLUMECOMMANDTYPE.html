@@ -1,0 +1,150 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>VOLUMECOMMANDTYPE &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="VOLUMEINFO" href="VOLUMEINFO.html" />
+    <link rel="prev" title="VOLUMECOMMANDSETTINGS" href="VOLUMECOMMANDSETTINGS.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="VOLUMEINFO.html" title="VOLUMEINFO"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="VOLUMECOMMANDSETTINGS.html" title="VOLUMECOMMANDSETTINGS"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../types/index.html" accesskey="U">Types and Symbols List</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="volumecommandtype">
+<h1>VOLUMECOMMANDTYPE<a class="headerlink" href="#volumecommandtype" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>VOLUMECOMMANDTYPE_VOLUMETOMESH</em></td>
+<td>Converts a <a class="reference internal" href="../modules/c4d.modules/volume/VolumeObject/index.html#c4d.modules.volume.VolumeObject" title="c4d.modules.volume.VolumeObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">VolumeObject</span></code></a> into a <a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/PointObject/PolygonObject/index.html#c4d.PolygonObject" title="c4d.PolygonObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PolygonObject</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>VOLUMECOMMANDTYPE_MESHTOVOLUME</em></td>
+<td>Converts a PolygonObject into a SDF <a class="reference internal" href="../modules/c4d.modules/volume/VolumeObject/index.html#c4d.modules.volume.VolumeObject" title="c4d.modules.volume.VolumeObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">VolumeObject</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>VOLUMECOMMANDTYPE_VOLUMEBOOLE</em></td>
+<td>Boolean operation on SDF volume objects.</td>
+</tr>
+<tr class="row-even"><td><em>VOLUMECOMMANDTYPE_PARTICLESTOVOLUME</em></td>
+<td>Converts particle objects and TP groups to a SDF <a class="reference internal" href="../modules/c4d.modules/volume/VolumeObject/index.html#c4d.modules.volume.VolumeObject" title="c4d.modules.volume.VolumeObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">VolumeObject</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>VOLUMECOMMANDTYPE_SPLINETOVOLUME</em></td>
+<td>Converts a <a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/PointObject/SplineObject/index.html#c4d.SplineObject" title="c4d.SplineObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">SplineObject</span></code></a> to a SDF <a class="reference internal" href="../modules/c4d.modules/volume/VolumeObject/index.html#c4d.modules.volume.VolumeObject" title="c4d.modules.volume.VolumeObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">VolumeObject</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>VOLUMECOMMANDTYPE_FILTER</em></td>
+<td>Filters a float grid <a class="reference internal" href="../modules/c4d.modules/volume/VolumeObject/index.html#c4d.modules.volume.VolumeObject" title="c4d.modules.volume.VolumeObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">VolumeObject</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>VOLUMECOMMANDTYPE_SDFFILTER</em></td>
+<td>Filters a float grid SDF <a class="reference internal" href="../modules/c4d.modules/volume/VolumeObject/index.html#c4d.modules.volume.VolumeObject" title="c4d.modules.volume.VolumeObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">VolumeObject</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>VOLUMECOMMANDTYPE_SDFTOFOG</em></td>
+<td>Converts a SDF Volume to a fog <a class="reference internal" href="../modules/c4d.modules/volume/VolumeObject/index.html#c4d.modules.volume.VolumeObject" title="c4d.modules.volume.VolumeObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">VolumeObject</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>VOLUMECOMMANDTYPE_FOGTOSDF</em></td>
+<td>Converts a fog Volume to a SDF <a class="reference internal" href="../modules/c4d.modules/volume/VolumeObject/index.html#c4d.modules.volume.VolumeObject" title="c4d.modules.volume.VolumeObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">VolumeObject</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>VOLUMECOMMANDTYPE_RESAMPLE</em></td>
+<td>Resamples a <a class="reference internal" href="../modules/c4d.modules/volume/VolumeObject/index.html#c4d.modules.volume.VolumeObject" title="c4d.modules.volume.VolumeObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">VolumeObject</span></code></a> to a new grid size.</td>
+</tr>
+<tr class="row-odd"><td><em>VOLUMECOMMANDTYPE_MIX</em></td>
+<td>Mix operation on several fog <a class="reference internal" href="../modules/c4d.modules/volume/VolumeObject/index.html#c4d.modules.volume.VolumeObject" title="c4d.modules.volume.VolumeObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">VolumeObject</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>VOLUMECOMMANDTYPE_FIELDTOVOLUME</em></td>
+<td>Converts a field to a fog <a class="reference internal" href="../modules/c4d.modules/volume/VolumeObject/index.html#c4d.modules.volume.VolumeObject" title="c4d.modules.volume.VolumeObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">VolumeObject</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>VOLUMECOMMANDTYPE_CREATESPHEREVOLUME</em></td>
+<td>Creates a sphere <a class="reference internal" href="../modules/c4d.modules/volume/VolumeObject/index.html#c4d.modules.volume.VolumeObject" title="c4d.modules.volume.VolumeObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">VolumeObject</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>VOLUMECOMMANDTYPE_CREATEPLATONICVOLUME</em></td>
+<td>Creates a platonic <a class="reference internal" href="../modules/c4d.modules/volume/VolumeObject/index.html#c4d.modules.volume.VolumeObject" title="c4d.modules.volume.VolumeObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">VolumeObject</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="VOLUMEINFO.html" title="VOLUMEINFO"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="VOLUMECOMMANDSETTINGS.html" title="VOLUMECOMMANDSETTINGS"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../types/index.html" >Types and Symbols List</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>maxon.StringInterface &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="maxon.UrlInterface" href="maxon.UrlInterface.html" />
+    <link rel="prev" title="maxon.RegistryInterface" href="maxon.RegistryInterface.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="maxon.UrlInterface.html" title="maxon.UrlInterface"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="maxon.RegistryInterface.html" title="maxon.RegistryInterface"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../maxon/interfaces.html" accesskey="U">MAXON API - Interfaces</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="maxon-stringinterface">
+<h1>maxon.StringInterface<a class="headerlink" href="#maxon-stringinterface" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-maxon.StringInterface">
+<span id="description"></span><h2>Description<a class="headerlink" href="#module-maxon.StringInterface" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">Class to store unicode strings. String stores 16bit unicode characters.</div>
+<div class="line">Any characters are legal, including 0C (strings are not null-terminated).</div>
+<div class="line">Strings are reference-counted objects.</div>
+<div class="line"><br /></div>
+<div class="line">This means that as long as you copy and do not modify strings they are just referenced.</div>
+<div class="line">The first modification breaks the link and it becomes a unique new object.</div>
+</div>
+</div>
+<div class="section" id="inheritance-diagram">
+<h2>Inheritance diagram<a class="headerlink" href="#inheritance-diagram" title="Permalink to this headline">¶</a></h2>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../datatypes/base_core/maxon.Builtin.html#module-maxon.Builtin" title="maxon.Builtin"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Builtin</span></code></a></li>
+</ul>
+<p>Child Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../references/core/maxon.String.html#module-maxon.String" title="maxon.String"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.String</span></code></a></li>
+</ul>
+</div>
+<div class="section" id="methods-signature">
+<h2>Methods Signature<a class="headerlink" href="#methods-signature" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+</div>
+<div class="section" id="methods-definition">
+<h2>Methods Definition<a class="headerlink" href="#methods-definition" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">maxon.StringInterface</a><ul>
+<li><a class="reference internal" href="#module-maxon.StringInterface">Description</a></li>
+<li><a class="reference internal" href="#inheritance-diagram">Inheritance diagram</a></li>
+<li><a class="reference internal" href="#methods-signature">Methods Signature</a></li>
+<li><a class="reference internal" href="#methods-definition">Methods Definition</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="maxon.UrlInterface.html" title="maxon.UrlInterface"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="maxon.RegistryInterface.html" title="maxon.RegistryInterface"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../maxon/interfaces.html" >MAXON API - Interfaces</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

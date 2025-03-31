@@ -1,0 +1,231 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>maxon.Registry &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="maxon.String" href="maxon.String.html" />
+    <link rel="prev" title="maxon.DataDictionary" href="maxon.DataDictionary.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="maxon.String.html" title="maxon.String"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="maxon.DataDictionary.html" title="maxon.DataDictionary"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../maxon/references.html" accesskey="U">MAXON API - References</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="maxon-registry">
+<h1>maxon.Registry<a class="headerlink" href="#maxon-registry" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-maxon.Registry">
+<span id="description"></span><h2>Description<a class="headerlink" href="#module-maxon.Registry" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">Registries are used to register specific implementations of a given interface.</div>
+<div class="line">An implementation that is registered in such a registry can then be accessed
+with a specific ID from anywhere in the application.</div>
+</div>
+</div>
+<div class="section" id="inheritance-diagram">
+<h2>Inheritance diagram<a class="headerlink" href="#inheritance-diagram" title="Permalink to this headline">¶</a></h2>
+<p class="rubric">Inheritance</p>
+<p>Children Classes:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../registries/maxon.Classes.html#module-maxon.Classes" title="maxon.Classes"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Classes</span></code></a></li>
+<li><a class="reference internal" href="../../registries/maxon.Loggers.html#module-maxon.Loggers" title="maxon.Loggers"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Loggers</span></code></a></li>
+<li><a class="reference internal" href="../../registries/maxon.LoggerTypes.html#module-maxon.LoggerTypes" title="maxon.LoggerTypes"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.LoggerTypes</span></code></a></li>
+<li><a class="reference internal" href="../../registries/maxon.IoHandlers.html#module-maxon.IoHandlers" title="maxon.IoHandlers"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.IoHandlers</span></code></a></li>
+<li><a class="reference internal" href="../../registries/maxon.FileFormats.html#module-maxon.FileFormats" title="maxon.FileFormats"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.FileFormats</span></code></a></li>
+<li><a class="reference internal" href="../../registries/maxon.FileFormatHandlers.html#module-maxon.FileFormatHandlers" title="maxon.FileFormatHandlers"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.FileFormatHandlers</span></code></a></li>
+<li><a class="reference internal" href="../../registries/maxon.ParametricTypes.html#module-maxon.ParametricTypes" title="maxon.ParametricTypes"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.ParametricTypes</span></code></a></li>
+<li><a class="reference internal" href="../../frameworks/mesh_misc/registry/maxon.frameworks.mesh_misc.CustomDataTagDisplayClasses.html#module-maxon.frameworks.mesh_misc.CustomDataTagDisplayClasses" title="maxon.frameworks.mesh_misc.CustomDataTagDisplayClasses"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.mesh_misc.CustomDataTagDisplayClasses</span></code></a></li>
+</ul>
+</div>
+<div class="section" id="methods-signature">
+<h2>Methods Signature<a class="headerlink" href="#methods-signature" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.Registry.Get" title="maxon.Registry.Get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Get</span></code></a>(eid)</td>
+<td>Retrieves the object stored with the given <a class="reference internal" href="../../datatypes/id/maxon.Id.html#module-maxon.Id" title="maxon.Id"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Id</span></code></a> within the current registry.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.Registry.GetEntries" title="maxon.Registry.GetEntries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetEntries</span></code></a>()</td>
+<td>Retrieve a RegistryIterator that can be iterate with a for loop.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.Registry.GetId" title="maxon.Registry.GetId"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetId</span></code></a>()</td>
+<td>Return the identifier of this registry.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.Registry.Insert" title="maxon.Registry.Insert"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Insert</span></code></a>(eid,&nbsp;object)</td>
+<td>Inserts a new entry into the current registry.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="methods-definition">
+<h2>Methods Definition<a class="headerlink" href="#methods-definition" title="Permalink to this headline">¶</a></h2>
+<dl class="classmethod">
+<dt id="maxon.Registry.Get">
+<em class="property">classmethod </em><code class="descclassname">Registry.</code><code class="descname">Get</code><span class="sig-paren">(</span><em>eid</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.Registry.Get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the object stored with the given <a class="reference internal" href="../../datatypes/id/maxon.Id.html#module-maxon.Id" title="maxon.Id"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Id</span></code></a> within the current registry.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>eid</strong> (<a class="reference internal" href="../../datatypes/id/maxon.Id.html#module-maxon.Id" title="maxon.Id"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Id</span></code></a>) – The object identifier to access into the registry.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The object stored in the current registry matching the <a class="reference internal" href="../../datatypes/id/maxon.Id.html#module-maxon.Id" title="maxon.Id"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Id</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Any</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>LookupError</strong> – If value not inside the registry.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="maxon.Registry.GetEntries">
+<em class="property">classmethod </em><code class="descclassname">Registry.</code><code class="descname">GetEntries</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.Registry.GetEntries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve a RegistryIterator that can be iterate with a for loop.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">an iterator.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="maxon.Registry.GetId">
+<em class="property">classmethod </em><code class="descclassname">Registry.</code><code class="descname">GetId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.Registry.GetId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the identifier of this registry.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The identifier of this registry.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../datatypes/id/maxon.Id.html#module-maxon.Id" title="maxon.Id"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Id</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="maxon.Registry.Insert">
+<em class="property">classmethod </em><code class="descclassname">Registry.</code><code class="descname">Insert</code><span class="sig-paren">(</span><em>eid</em>, <em>object</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.Registry.Insert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserts a new entry into the current registry.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>eid</strong> (<a class="reference internal" href="../../datatypes/id/maxon.Id.html#module-maxon.Id" title="maxon.Id"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Id</span></code></a>) – The identifier of the object.</li>
+<li><strong>object</strong> (<em>Any</em>) – The object to store into the registry.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">maxon.Registry</a><ul>
+<li><a class="reference internal" href="#module-maxon.Registry">Description</a></li>
+<li><a class="reference internal" href="#inheritance-diagram">Inheritance diagram</a></li>
+<li><a class="reference internal" href="#methods-signature">Methods Signature</a></li>
+<li><a class="reference internal" href="#methods-definition">Methods Definition</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="maxon.String.html" title="maxon.String"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="maxon.DataDictionary.html" title="maxon.DataDictionary"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../maxon/references.html" >MAXON API - References</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,285 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Python Sketch and Toon Material &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Descriptions in Cinema 4D" href="../../misc/descriptions.html" />
+    <link rel="prev" title="Python Character Tag" href="python_character_tag.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../misc/descriptions.html" title="Descriptions in Cinema 4D"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="python_character_tag.html" title="Python Character Tag"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Manual List</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="python-sketch-and-toon-material">
+<span id="manual-python-sketch-toon"></span><h1>Python Sketch and Toon Material<a class="headerlink" href="#python-sketch-and-toon-material" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Python code can be executed from a Sketch And Toon Material to control the <em>Color</em>, <em>Thickness</em> and the <em>Opacity</em>.
+In all of these three channels, it’s possible thick Python checkbox to enable it.</p>
+<p>The <em>Color</em> channel expects a <a class="reference internal" href="../../modules/c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a> to be returned while <em>Thickness</em> and <em>Opacity</em> channel expect a <strong>float</strong>.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">The important <a class="reference internal" href="../application_development/threading.html#threading-information"><span class="std std-ref">Threading Information</span></a>.</p>
+</div>
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt>
+<code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Override - Mandatory method, used to define the parameter value.
+It’s called for each sample of the <a class="reference internal" href="../../modules/c4d.plugins/BaseData/NodeData/ShaderData/index.html#c4d.plugins.ShaderData" title="c4d.plugins.ShaderData"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.plugins.ShaderData</span></code></a>.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<p>The following variables are defined in the main function of the Python Sketch and Toon (they are all read-only, modifying these values will have no effect):</p>
+<blockquote>
+<div><ul>
+<li><p class="first"><cite>op</cite>: <a class="reference internal" href="../../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseObject</span></code></a>: The current object being sampled. It must be noted that it’s the <a class="reference internal" href="../../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseObject</span></code></a> stored in the <a class="reference internal" href="../../modules/c4d.modules/render/VolumeData/index.html#c4d.modules.render.VolumeData" title="c4d.modules.render.VolumeData"><code class="xref py py-class docutils literal notranslate"><span class="pre">VolumeData</span></code></a>, an optimized version of the BaseObject used by the render engine. Not all data are copied (e.g. UserData are lost).</p>
+</li>
+<li><p class="first"><cite>sPosition</cite>: <em>Float</em>: Distance from LineStart to the current sampled point of the actual line sampled.</p>
+</li>
+<li><p class="first"><cite>sNormalisedP</cite>: <em>Float</em>: Distance from LineStart to the current sampled point of the actual line sampled normalized between 0 and 1.</p>
+</li>
+<li><p class="first"><cite>ToLine</cite>: <em>Float</em>: Distance from the original Line.</p>
+</li>
+<li><p class="first"><cite>LineOff</cite>: <em>Float</em>: Percent of the point sampled depending on the total the total line.</p>
+</li>
+<li><p class="first"><cite>thickness</cite>: <em>Float</em>: Line thickness at the sampling point.</p>
+</li>
+<li><p class="first"><cite>StrokeLength</cite>: <em>Float</em>: Total length of the actual line sampled.</p>
+</li>
+<li><p class="first"><cite>ScnPnt</cite>: <a class="reference internal" href="../../modules/c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>: Screen position currently sampled.</p>
+</li>
+<li><p class="first"><cite>wPnt</cite>: <a class="reference internal" href="../../modules/c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>: World position currently sampled.</p>
+</li>
+<li><p class="first"><cite>Time</cite>: <em>Float</em>: Current time rendered in seconds.</p>
+</li>
+<li><p class="first"><cite>Frame</cite>: <em>Int</em>: Current frame rendered.</p>
+</li>
+<li><p class="first"><cite>FPS</cite>: <em>Int</em>: Frame rate per second of the document rendered.</p>
+</li>
+<li><p class="first"><cite>LineStart</cite>: <a class="reference internal" href="../../modules/c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>: Screen coordinates at the line starting point.</p>
+</li>
+<li><p class="first"><cite>LineEnd</cite>: <a class="reference internal" href="../../modules/c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>: Screen coordinates at the line ending point.</p>
+</li>
+<li><p class="first"><cite>JoinAngleA</cite>: <em>Float</em>: Angle of the current line and previous lines drawn.</p>
+</li>
+<li><p class="first"><cite>JoinAngleB</cite>: <em>Float</em>: Angle of the current line and next lines drawn.</p>
+</li>
+<li><p class="first"><cite>LineNormal</cite>: <a class="reference internal" href="../../modules/c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>: The normal of the line currently draw, defined by (A-&gt;B)%(0,0,1).</p>
+</li>
+<li><p class="first"><cite>EdgeNormal</cite>: <a class="reference internal" href="../../modules/c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>: The normal of the line currently draw, defined from the polygon angles.</p>
+</li>
+<li><p class="first"><cite>LinePosA</cite>: <em>Float</em>: Position of A from the actual line sampled.</p>
+</li>
+<li><p class="first"><cite>LinePosB</cite>: <em>Float</em>: Position of B from the actual line sampled.</p>
+</li>
+<li><p class="first"><cite>PntA</cite>: <em>Int</em>: Point id of the StartLine.</p>
+</li>
+<li><p class="first"><cite>PntB</cite>: <em>Int</em>: Point id of the EndLine.</p>
+</li>
+<li><p class="first"><cite>PolyA</cite>: <em>Int</em>: Polygon id of the StartLine.</p>
+</li>
+<li><p class="first"><cite>PolyB</cite>: <em>Int</em>: Polygon id of the EndLine.</p>
+</li>
+<li><p class="first"><cite>Color</cite>: <a class="reference internal" href="../../modules/c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>: Current color.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">Python Sketch and Toon layer is always evaluated after all others modifiers.</div>
+<div class="line">Only available in the color channel of the Sketch and Toon material.</div>
+</div>
+</div>
+</li>
+<li><p class="first"><cite>RayBits</cite>: <em>Int</em>: Ray information, these values are:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="79%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>RAYBIT_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_REFLECTION</em></td>
+<td>Ray chain contains a reflection ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_TRANSPARENCY</em></td>
+<td>Ray chain contains a transparency ray (refractions are not contained).</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_REFRACTION</em></td>
+<td>Ray chain contains a refraction ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_CUSTOM</em></td>
+<td>Ray chain contains a custom ray.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_CURR_REFLECTION</em></td>
+<td>Current ray is a reflection ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_CURR_TRANSPARENCY</em></td>
+<td>Current ray is a transparency ray.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_CURR_REFRACTION</em></td>
+<td>Current ray is a refraction ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_CURR_CUSTOM</em></td>
+<td>Current ray is a custom ray.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_VOLUMETRICLIGHT</em></td>
+<td>Current ray is used to calculate a volumetric light.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_ALLOWVLMIX</em></td>
+<td>Custom mixing of visible light sources allowed for the ray; bit must be deleted by shader if used.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_GI</em></td>
+<td>Current ray is a Global Illumination ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_BLURRY</em></td>
+<td>Current ray is a blurry ray.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_SSS</em></td>
+<td>Current ray is a subsurface scattering ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_AO</em></td>
+<td>Current ray is an Ambient Occlusion ray.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_COMPOSITING</em></td>
+<td>Current ray is a compositing ray.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p class="first"><cite>CosC</cite>: <em>Float</em>: The angle between ray vector and non-perturbed normal.</p>
+</li>
+<li><p class="first"><cite>Normal</cite>: <a class="reference internal" href="../../modules/c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>: The surface phong normal.</p>
+</li>
+<li><p class="first"><cite>BumpNormal</cite>: <a class="reference internal" href="../../modules/c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>: The surface phong and bump normal.</p>
+</li>
+<li><p class="first"><cite>Dist</cite>: <em>Float</em>: Distance between SurfPnt and Ray.p, i.e. the ray length.</p>
+</li>
+<li><p class="first"><cite>PolyHit</cite>: <em>Int</em>: The polygon index at the sampling point.</p>
+</li>
+<li><p class="first"><cite>RayPos</cite>: <a class="reference internal" href="../../modules/c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>: The rays position.</p>
+</li>
+<li><p class="first"><cite>RayDirn</cite>: <a class="reference internal" href="../../modules/c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>: The rays direction vector.</p>
+</li>
+<li><p class="first"><cite>SurfPnt</cite>: <a class="reference internal" href="../../modules/c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>: The surface point.</p>
+</li>
+<li><p class="first"><cite>RendLeft</cite>: <em>Int</em>: Left offset for the marquee render.</p>
+</li>
+<li><p class="first"><cite>RendTop</cite>: <em>Int</em>: Top offset for the marquee render.</p>
+</li>
+<li><p class="first"><cite>RendRight</cite>: <em>Int</em>: Right offset for the marquee render.</p>
+</li>
+<li><p class="first"><cite>RendBottom</cite>: <em>Int</em>: Bottom offset for the marquee render.</p>
+</li>
+<li><p class="first"><cite>ObjLeft</cite>: <em>Int</em>: Left object screen bounds.</p>
+</li>
+<li><p class="first"><cite>ObjTop</cite>: <em>Int</em>: Top object screen bounds.</p>
+</li>
+<li><p class="first"><cite>ObjRight</cite>: <em>Int</em>: Right object screen bounds.</p>
+</li>
+<li><p class="first"><cite>ObjBottom</cite>: <em>Int</em>: Bottom object screen bounds.</p>
+</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Python Sketch and Toon Material</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#variables">Variables</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../misc/descriptions.html" title="Descriptions in Cinema 4D"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="python_character_tag.html" title="Python Character Tag"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Manual List</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

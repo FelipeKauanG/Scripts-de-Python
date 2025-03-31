@@ -1,0 +1,154 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Threading Information &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Color Profiles" href="../3d_concept/color_management.html" />
+    <link rel="prev" title="Matrix Fundamentals" href="../data_algorithms/classic_api/matrix.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../3d_concept/color_management.html" title="Color Profiles"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../data_algorithms/classic_api/matrix.html" title="Matrix Fundamentals"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Manual List</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="threading-information">
+<span id="id1"></span><h1>Threading Information<a class="headerlink" href="#threading-information" title="Permalink to this headline">¶</a></h1>
+<p>All parts of the execution/drawing pipeline of Cinema 4D are threaded. This means that the following methods are called within another thread:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../modules/c4d.plugins/BaseData/NodeData/TagData/index.html#TagData.Draw" title="TagData.Draw"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TagData.Draw()</span></code></a> <a class="reference internal" href="../../modules/c4d.plugins/BaseData/NodeData/TagData/index.html#TagData.Execute" title="TagData.Execute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TagData.Execute()</span></code></a></li>
+<li><a class="reference internal" href="../../modules/c4d.plugins/BaseData/NodeData/ObjectData/index.html#ObjectData.GetVirtualObjects" title="ObjectData.GetVirtualObjects"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ObjectData.GetVirtualObjects()</span></code></a> <a class="reference internal" href="../../modules/c4d.plugins/BaseData/NodeData/ObjectData/index.html#ObjectData.Execute" title="ObjectData.Execute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ObjectData.Execute()</span></code></a> <a class="reference internal" href="../../modules/c4d.plugins/BaseData/NodeData/ObjectData/index.html#ObjectData.Draw" title="ObjectData.Draw"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ObjectData.Draw()</span></code></a> <a class="reference internal" href="../../modules/c4d.plugins/BaseData/NodeData/ObjectData/index.html#ObjectData.DrawShadow" title="ObjectData.DrawShadow"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ObjectData.DrawShadow()</span></code></a></li>
+<li>other <cite>Draw()</cite> / <cite>Execute()</cite></li>
+<li>All objects that embbed Python such as the python generator, python tag, python effector, python field.</li>
+</ul>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<div class="last line-block">
+<div class="line">The document must not be modified in any case (insertion, change order, etc.) inside these methods.</div>
+<div class="line">Changing the document structure while an expression is evaluated will crash the application!</div>
+<div class="line">As an exception, modifications are allowed that change an object’s parameters like the position or attributes.</div>
+<div class="line">So the following functions are forbidden inside expressions (tags/nodes):</div>
+<div class="line"><br /></div>
+<div class="line">- <a class="reference internal" href="../../modules/c4d/C4DAtom/GeListNode/index.html#GeListNode.InsertBefore" title="GeListNode.InsertBefore"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeListNode.InsertBefore()</span></code></a></div>
+<div class="line">- <a class="reference internal" href="../../modules/c4d/C4DAtom/GeListNode/index.html#GeListNode.InsertAfter" title="GeListNode.InsertAfter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeListNode.InsertAfter()</span></code></a></div>
+<div class="line">- <a class="reference internal" href="../../modules/c4d/C4DAtom/GeListNode/index.html#GeListNode.InsertUnder" title="GeListNode.InsertUnder"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeListNode.InsertUnder()</span></code></a></div>
+<div class="line">- <a class="reference internal" href="../../modules/c4d/C4DAtom/GeListNode/index.html#GeListNode.InsertUnderLast" title="GeListNode.InsertUnderLast"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeListNode.InsertUnderLast()</span></code></a></div>
+<div class="line">- <a class="reference internal" href="../../modules/c4d/C4DAtom/GeListNode/index.html#GeListNode.Remove" title="GeListNode.Remove"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeListNode.Remove()</span></code></a></div>
+</div>
+</div>
+<p><a class="reference internal" href="../../modules/c4d.plugins/BaseData/NodeData/ObjectData/index.html#ObjectData.GetVirtualObjects" title="ObjectData.GetVirtualObjects"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ObjectData.GetVirtualObjects()</span></code></a> is of course allowed to do any modifications that do not modify the document as the object returned is not in the document
+at that time it may be created/changed in any way.</p>
+<div class="section" id="forbidden-functions">
+<h2>Forbidden Functions<a class="headerlink" href="#forbidden-functions" title="Permalink to this headline">¶</a></h2>
+<p>For all threaded functions it is forbidden to:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Add an event.</li>
+<li>Make any changes to materials.</li>
+<li>Change the structure of objects attached to the document.</li>
+<li>Change parameters of elements attached to the document. (Allowed, but not recommended except for tags.)</li>
+<li>Call a <cite>Draw()</cite> function.</li>
+<li>Perform any GUI functionality. (E.g. displaying messages, opening dialogs etc.)</li>
+<li>During drawing to do any file operations. (During execution it is allowed.)</li>
+<li>Create undos.</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="document-modifications">
+<h2>Document Modifications<a class="headerlink" href="#document-modifications" title="Permalink to this headline">¶</a></h2>
+<p>Before making modifications in the active document, for example from a <a class="reference internal" href="../../modules/c4d.plugins/BaseData/CommandData/index.html#c4d.plugins.CommandData" title="c4d.plugins.CommandData"><code class="xref py py-class docutils literal notranslate"><span class="pre">CommandData</span></code></a> dialog, always call <a class="reference internal" href="../../modules/c4d/index.html#c4d.StopAllThreads" title="c4d.StopAllThreads"><code class="xref py py-func docutils literal notranslate"><span class="pre">StopAllThreads()</span></code></a>.
+Do this even if in the main thread, since there could be other threads that read from the document.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Threading Information</a><ul>
+<li><a class="reference internal" href="#forbidden-functions">Forbidden Functions</a></li>
+<li><a class="reference internal" href="#document-modifications">Document Modifications</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../3d_concept/color_management.html" title="Color Profiles"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../data_algorithms/classic_api/matrix.html" title="Matrix Fundamentals"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Manual List</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

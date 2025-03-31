@@ -1,0 +1,488 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.net &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="c4d.modules.net.NetRenderService" href="NetRenderService/index.html" />
+    <link rel="prev" title="c4d.modules.motiontracker.MtTrkGid" href="../motiontracker/MtTrkGid/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="NetRenderService/index.html" title="c4d.modules.net.NetRenderService"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../motiontracker/MtTrkGid/index.html" title="c4d.modules.motiontracker.MtTrkGid"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">c4d.modules</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-net">
+<h1>c4d.modules.net<a class="headerlink" href="#c4d-modules-net" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.net">
+<em class="property">class </em><code class="descclassname">c4d.modules.</code><code class="descname">net</code><a class="headerlink" href="#c4d.modules.net" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+</div>
+<div class="section" id="types">
+<h1>Types<a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="NetRenderService/index.html">c4d.modules.net.NetRenderService</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RenderJob/index.html">c4d.modules.net.RenderJob</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Repository/index.html">c4d.modules.net.Repository</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UserPool/index.html">c4d.modules.net.UserPool</a></li>
+</ul>
+</div>
+<p class="rubric">Functions Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.modules.net.SetErrorLevel" title="c4d.modules.net.SetErrorLevel"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.net.SetErrorLevel(printDebugErrors,</span> <span class="pre">...)</span></code></a></td>
+<td>Sets the level for stack and location in errors.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.modules.net.GetGlobalNetRenderService" title="c4d.modules.net.GetGlobalNetRenderService"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.net.GetGlobalNetRenderService()</span></code></a></td>
+<td>Get the global NET render service.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.modules.net.VerificationStateToString" title="c4d.modules.net.VerificationStateToString"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.net.VerificationStateToString(state)</span></code></a></td>
+<td>Format a verification <em>state</em> as a string.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.modules.net.JobCommandToString" title="c4d.modules.net.JobCommandToString"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.net.JobCommandToString(command)</span></code></a></td>
+<td>Format a job <em>command</em> as a string.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.modules.net.JobStateToString" title="c4d.modules.net.JobStateToString"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.net.JobStateToString(state)</span></code></a></td>
+<td>Format a job <em>state</em> as a string.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.modules.net.NetSpecialEventAdd" title="c4d.modules.net.NetSpecialEventAdd"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.net.NetSpecialEventAdd(service,</span> <span class="pre">remoteUuid,</span> <span class="pre">msg)</span></code></a></td>
+<td>Adds a custom event over NET.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.modules.net.NetGeSyncMessage" title="c4d.modules.net.NetGeSyncMessage"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.net.NetGeSyncMessage(service,</span> <span class="pre">remoteUuid,</span> <span class="pre">msg)</span></code></a></td>
+<td>Sends a synchronous event message over NET.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Functions Documentation</p>
+<p><dl class="function">
+<dt id="c4d.modules.net.SetErrorLevel">
+<code class="descclassname">c4d.modules.net.</code><code class="descname">SetErrorLevel</code><span class="sig-paren">(</span><em>printDebugErrors</em>, <em>stackInErrors</em>, <em>locationInErrors</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.modules.net.SetErrorLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the level for stack and location in errors.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.038.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>printDebugErrors</strong> (<em>bool</em>) – <div class="versionadded">
+<p><span class="versionmodified">New in version R16.050: </span><strong>True</strong> to print debug errors, otherwise <strong>False</strong>.</p>
+</div>
+</li>
+<li><strong>stackInErrors</strong> (<em>bool</em>) – <strong>True</strong> to enable stack in errors, otherwise <strong>False</strong>.</li>
+<li><strong>locationInErrors</strong> (<em>bool</em>) – <strong>True</strong> to enable location in errors, otherwise <strong>False</strong>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.modules.net.GetGlobalNetRenderService">
+<code class="descclassname">c4d.modules.net.</code><code class="descname">GetGlobalNetRenderService</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c4d.modules.net.GetGlobalNetRenderService" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the global NET render service.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="NetRenderService/index.html#c4d.modules.net.NetRenderService" title="c4d.modules.net.NetRenderService">c4d.modules.net.NetRenderService</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The global NET render service.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.modules.net.VerificationStateToString">
+<code class="descclassname">c4d.modules.net.</code><code class="descname">VerificationStateToString</code><span class="sig-paren">(</span><em>state</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.modules.net.VerificationStateToString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Format a verification <em>state</em> as a string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>state</strong> (<em>int</em>) – <p>The verification state:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>VERIFICATIONBIT_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>VERIFICATIONBIT_ONLINE</em></td>
+<td>Online.</td>
+</tr>
+<tr class="row-odd"><td><em>VERIFICATIONBIT_VERIFIED</em></td>
+<td>Verified.</td>
+</tr>
+<tr class="row-even"><td><em>VERIFICATIONBIT_VERIFIEDME</em></td>
+<td>Certified client (set on client for server).</td>
+</tr>
+<tr class="row-odd"><td><em>VERIFICATIONBIT_SHARED</em></td>
+<td>Shared.</td>
+</tr>
+<tr class="row-even"><td><em>VERIFICATIONBIT_VERIFYING</em></td>
+<td>Verifying.</td>
+</tr>
+<tr class="row-odd"><td><em>VERIFICATIONBIT_FAILURE</em></td>
+<td>Unknown.</td>
+</tr>
+<tr class="row-even"><td><em>VERIFICATIONBIT_SECURITYTOKENCHANGED</em></td>
+<td>Security token changed.</td>
+</tr>
+<tr class="row-odd"><td><em>VERIFICATIONBIT_WRONGBUILDID</em></td>
+<td>Wrong build ID.</td>
+</tr>
+<tr class="row-even"><td><em>VERIFICATIONBIT_WRONGARCHITECTURE</em></td>
+<td>Wrong architecture.</td>
+</tr>
+<tr class="row-odd"><td><em>VERIFICATIONBIT_REMOTENOTREACHABLE</em></td>
+<td>Remote not reachable.</td>
+</tr>
+<tr class="row-even"><td><em>VERIFICATIONBIT_THISNOTREACHABLE</em></td>
+<td>This not reachable.</td>
+</tr>
+<tr class="row-odd"><td><em>VERIFICATIONBIT_WRONGSECURITYTOKEN</em></td>
+<td>Wrong security token.</td>
+</tr>
+<tr class="row-even"><td><em>VERIFICATIONBIT_DEMONOTACTIVATED</em></td>
+<td>Demo not activated.</td>
+</tr>
+<tr class="row-odd"><td><em>VERIFICATIONBIT_REMOVING</em></td>
+<td>Removing.</td>
+</tr>
+<tr class="row-even"><td><em>VERIFICATIONBIT_NORENDERSUPPORT</em></td>
+<td>No render support.</td>
+</tr>
+<tr class="row-odd"><td><em>VERIFICATIONBIT_INITIALIZING</em></td>
+<td>GUI flag only to show a please wait indicator on startup.</td>
+</tr>
+<tr class="row-even"><td><em>VERIFICATIONBIT_VERIFICATIONESTABLISHED</em></td>
+<td>Set soon after the persistent connection has been registered.
+Can be set without <em>VERIFICATIONBIT_VERIFIED</em> on first connect and host adds itself on the server.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The formatted verification state.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.modules.net.JobCommandToString">
+<code class="descclassname">c4d.modules.net.</code><code class="descname">JobCommandToString</code><span class="sig-paren">(</span><em>command</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.modules.net.JobCommandToString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Format a job <em>command</em> as a string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>command</strong> (<em>int</em>) – <p>The job command:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="62%" />
+<col width="38%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>JOBCOMMAND_NONE</em></td>
+<td>Do nothing.</td>
+</tr>
+<tr class="row-even"><td><em>JOBCOMMAND_FETCHJOB</em></td>
+<td>Fetch job.</td>
+</tr>
+<tr class="row-odd"><td><em>JOBCOMMAND_ALLOCATESPACE</em></td>
+<td>Allocate space.</td>
+</tr>
+<tr class="row-even"><td><em>JOBCOMMAND_DOWNLOAD</em></td>
+<td>Download.</td>
+</tr>
+<tr class="row-odd"><td><em>JOBCOMMAND_RENDER</em></td>
+<td>Render.</td>
+</tr>
+<tr class="row-even"><td><em>JOBCOMMAND_DELETE</em></td>
+<td>Delete.</td>
+</tr>
+<tr class="row-odd"><td><em>JOBCOMMAND_STOPANDDELETE</em></td>
+<td>Stop and delete.</td>
+</tr>
+<tr class="row-even"><td><em>JOBCOMMAND_ASSEMBLE</em></td>
+<td>Assemble.</td>
+</tr>
+<tr class="row-odd"><td><em>JOBCOMMAND_END</em></td>
+<td>End.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The formatted job command.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.modules.net.JobStateToString">
+<code class="descclassname">c4d.modules.net.</code><code class="descname">JobStateToString</code><span class="sig-paren">(</span><em>state</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.modules.net.JobStateToString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Format a job <em>state</em> as a string.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>command</strong> (<em>int</em>) – <p>The job state:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>JOBSTATE_IDLE</em></td>
+<td>Idle.</td>
+</tr>
+<tr class="row-even"><td><em>JOBSTATE_PREPARING_RUNNING</em></td>
+<td>Preparing running. Preparing only for server in async mode for <a class="reference internal" href="NetRenderService/index.html#NetRenderService.StartRendering" title="NetRenderService.StartRendering"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.StartRendering()</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>JOBSTATE_PREPARING_FAILED</em></td>
+<td>Preparing failed.</td>
+</tr>
+<tr class="row-even"><td><em>JOBSTATE_PREPARING_OK</em></td>
+<td>Preparing ok.</td>
+</tr>
+<tr class="row-odd"><td><em>JOBSTATE_RENDER_RUNNING</em></td>
+<td>Render running.</td>
+</tr>
+<tr class="row-even"><td><em>JOBSTATE_RENDER_OK</em></td>
+<td>Render ok.</td>
+</tr>
+<tr class="row-odd"><td><em>JOBSTATE_RENDER_FAILED</em></td>
+<td>Render failed.</td>
+</tr>
+<tr class="row-even"><td><em>JOBSTATE_ALLOCATESPACE_RUNNING</em></td>
+<td>Allocate space running.</td>
+</tr>
+<tr class="row-odd"><td><em>JOBSTATE_ALLOCATESPACE_OK</em></td>
+<td>Allocate space ok.</td>
+</tr>
+<tr class="row-even"><td><em>JOBSTATE_ALLOCATESPACE_FAILED</em></td>
+<td>Allocated space failed.</td>
+</tr>
+<tr class="row-odd"><td><em>JOBSTATE_DOWNLOAD_RUNNING</em></td>
+<td>Download running.</td>
+</tr>
+<tr class="row-even"><td><em>JOBSTATE_DOWNLOAD_OK</em></td>
+<td>Download ok.</td>
+</tr>
+<tr class="row-odd"><td><em>JOBSTATE_DOWNLOAD_FAILED</em></td>
+<td>Download failed.</td>
+</tr>
+<tr class="row-even"><td><em>JOBSTATE_ASSEMBLE_RUNNING</em></td>
+<td>Assemble running.</td>
+</tr>
+<tr class="row-odd"><td><em>JOBSTATE_ASSEMBLE_OK</em></td>
+<td>Assemble ok.</td>
+</tr>
+<tr class="row-even"><td><em>JOBSTATE_ASSEMBLE_FAILED</em></td>
+<td>Assemble failed.</td>
+</tr>
+<tr class="row-odd"><td><em>JOBSTATE_STOPPED</em></td>
+<td>Stopped.</td>
+</tr>
+<tr class="row-even"><td><em>JOBSTATE_QUEUED</em></td>
+<td>Queued.</td>
+</tr>
+<tr class="row-odd"><td><em>JOBSTATE_PENDING</em></td>
+<td>Non-native state which is only available in the server when no machine is involved in a running job.</td>
+</tr>
+<tr class="row-even"><td><em>JOBSTATE_QUEUED_WAITING</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R18: </span>Queued waiting.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>JOBSTATE_ASSEMBLE_PENDING</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R17.053: </span>Allocate space running.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The formatted job state.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.modules.net.NetSpecialEventAdd">
+<code class="descclassname">c4d.modules.net.</code><code class="descname">NetSpecialEventAdd</code><span class="sig-paren">(</span><em>service</em>, <em>remoteUuid</em>, <em>msg</em>, <em>forceConnect=True</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.modules.net.NetSpecialEventAdd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a custom event over NET.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>service</strong> (<a class="reference internal" href="NetRenderService/index.html#c4d.modules.net.NetRenderService" title="c4d.modules.net.NetRenderService"><em>c4d.modules.net.NetRenderService</em></a>) – The NET render service.</li>
+<li><strong>remoteUuid</strong> (<a class="reference external" href="https://docs.python.org/release/2.7/library/uuid.html#uuid.UUID">UUID</a>) – The machine to send the message to.</li>
+<li><strong>msg</strong> (<a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The message container.</li>
+<li><strong>forceConnect</strong> (<em>bool</em>) – Private.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if successful, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.modules.net.NetGeSyncMessage">
+<code class="descclassname">c4d.modules.net.</code><code class="descname">NetGeSyncMessage</code><span class="sig-paren">(</span><em>service</em>, <em>remoteUuid</em>, <em>msg</em>, <em>forceConnect=True</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.modules.net.NetGeSyncMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends a synchronous event message over NET.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>service</strong> (<a class="reference internal" href="NetRenderService/index.html#c4d.modules.net.NetRenderService" title="c4d.modules.net.NetRenderService"><em>c4d.modules.net.NetRenderService</em></a>) – The NET render service.</li>
+<li><strong>remoteUuid</strong> – The machine to send the message to.</li>
+<li><strong>msg</strong> (<a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The message container.</li>
+<li><strong>forceConnect</strong> (<em>bool</em>) – Private.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">tuple(bool, <a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseContainer</span></code></a>)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The successful status and result container.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">c4d.modules.net</a></li>
+<li><a class="reference internal" href="#types">Types</a></li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="NetRenderService/index.html" title="c4d.modules.net.NetRenderService"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../motiontracker/MtTrkGid/index.html" title="c4d.modules.motiontracker.MtTrkGid"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >c4d.modules</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

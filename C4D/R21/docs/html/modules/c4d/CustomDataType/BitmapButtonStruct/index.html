@@ -1,0 +1,187 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.BitmapButtonStruct &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.DateTimeData" href="../DateTimeData/index.html" />
+    <link rel="prev" title="c4d.CustomDataType" href="../index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../DateTimeData/index.html" title="c4d.DateTimeData"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="c4d.CustomDataType"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.CustomDataType</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-bitmapbuttonstruct">
+<h1>c4d.BitmapButtonStruct<a class="headerlink" href="#c4d-bitmapbuttonstruct" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.BitmapButtonStruct">
+<em class="property">class </em><code class="descclassname">c4d.</code><code class="descname">BitmapButtonStruct</code><a class="headerlink" href="#c4d.BitmapButtonStruct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bitmap button data type (<em>CUSTOMDATATYPE_BITMAPBUTTON</em>) for <a class="reference internal" href="../../../c4d.gui/BaseCustomGui/BitmapButtonCustomGui/index.html#c4d.gui.BitmapButtonCustomGui" title="c4d.gui.BitmapButtonCustomGui"><code class="xref py py-class docutils literal notranslate"><span class="pre">BitmapButtonCustomGui</span></code></a>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R17.032.</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">Used to get a bitmap button in the Attribute Manager.</div>
+<div class="line">Specify an object, <a class="reference internal" href="#BitmapButtonStruct.op" title="BitmapButtonStruct.op"><code class="xref py py-attr docutils literal notranslate"><span class="pre">BitmapButtonStruct.op</span></code></a>, that provides an icon through the <em>MSG_DESCRIPTION_GETBITMAP</em> message.</div>
+</div>
+</div>
+</dd></dl>
+
+<p class="rubric">Attributes</p>
+<p><blockquote>
+<div><dl class="attribute">
+<dt id="BitmapButtonStruct.op">
+<code class="descclassname">BitmapButtonStruct.</code><code class="descname">op</code><a class="headerlink" href="#BitmapButtonStruct.op" title="Permalink to this definition">¶</a></dt>
+<dd><p>[Read/Write]</p>
+<p>The object to send <em>MSG_DESCRIPTION_GETBITMAP</em> to.</p>
+<p><strong>Type:</strong> <a class="reference internal" href="../../C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseList2D</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="BitmapButtonStruct.id">
+<code class="descclassname">BitmapButtonStruct.</code><code class="descname">id</code><a class="headerlink" href="#BitmapButtonStruct.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>[Read/Write]</p>
+<p>The ID of the bitmap button.</p>
+<p><strong>Type:</strong> <a class="reference internal" href="../../DescID/index.html#c4d.DescID" title="c4d.DescID"><code class="xref py py-class docutils literal notranslate"><span class="pre">DescID</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="BitmapButtonStruct.dirty">
+<code class="descclassname">BitmapButtonStruct.</code><code class="descname">dirty</code><a class="headerlink" href="#BitmapButtonStruct.dirty" title="Permalink to this definition">¶</a></dt>
+<dd><p>[Read/Write]</p>
+<p>The dirty flag. Internally used to detect changes. If this flag changes on parameter set, a new <em>MSG_DESCRIPTION_GETBITMAP</em> will be emitted.</p>
+<p><strong>Type:</strong> int</p>
+</dd></dl>
+
+</div></blockquote>
+</p>
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BitmapButtonStruct.__init__" title="BitmapButtonStruct.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BitmapButtonStruct.__init__(self,</span> <span class="pre">op,</span> <span class="pre">id,</span> <span class="pre">dirty)</span></code></a></td>
+<td>Constructor.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../index.html#c4d.CustomDataType" title="c4d.CustomDataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.CustomDataType</span></code></a></li>
+</ul>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="BitmapButtonStruct.__init__">
+<code class="descclassname">BitmapButtonStruct.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>op</em>, <em>id</em>, <em>dirty</em><span class="sig-paren">)</span><a class="headerlink" href="#BitmapButtonStruct.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>op</strong> (<a class="reference internal" href="../../C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><em>c4d.BaseList2D</em></a>) – The object to send <em>MSG_DESCRIPTION_GETBITMAP</em> to.</li>
+<li><strong>id</strong> (<a class="reference internal" href="../../DescID/index.html#c4d.DescID" title="c4d.DescID"><em>c4d.DescID</em></a>) – The ID of the bitmap button.</li>
+<li><strong>dirty</strong> (<em>int</em>) – The dirty flag. Internally used to detect changes. If this flag changes on parameter set, a new <em>MSG_DESCRIPTION_GETBITMAP</em> will be emitted.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="#c4d.BitmapButtonStruct" title="c4d.BitmapButtonStruct">c4d.BitmapButtonStruct</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The new bitmap button data.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../DateTimeData/index.html" title="c4d.DateTimeData"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="c4d.CustomDataType"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.CustomDataType</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

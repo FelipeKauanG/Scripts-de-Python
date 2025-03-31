@@ -1,0 +1,389 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Noise Types &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Object Types" href="objects.html" />
+    <link rel="prev" title="Material Types" href="materials.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="objects.html" title="Object Types"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="materials.html" title="Material Types"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Types and Symbols List</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <p>The next code was used to generate the next picture of noises.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">c4d</span>
+
+<span class="n">width</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">height</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">noisetype</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">NOISE_DISPL_TURB</span>
+<span class="n">bmp</span> <span class="o">=</span>  <span class="n">c4d</span><span class="o">.</span><span class="n">bitmaps</span><span class="o">.</span><span class="n">BaseBitmap</span><span class="p">()</span>
+<span class="n">bmp</span><span class="o">.</span><span class="n">Init</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="mi">24</span><span class="p">)</span>
+
+<span class="c1"># Create and initialize the noise instance</span>
+<span class="n">noise</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">noise</span><span class="o">.</span><span class="n">C4DNoise</span><span class="p">(</span><span class="mi">1234</span><span class="p">)</span>
+<span class="n">noise</span><span class="o">.</span><span class="n">InitFbm</span><span class="p">(</span><span class="mi">21</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+
+<span class="n">rw</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">width</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">rh</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">height</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Iterate through the bitmap and set the noise value per pixel</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xrange</span><span class="p">(</span><span class="n">width</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">xrange</span><span class="p">(</span><span class="n">height</span><span class="p">):</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">noise</span><span class="o">.</span><span class="n">Noise</span><span class="p">(</span><span class="n">noisetype</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="n">rw</span><span class="p">,</span> <span class="n">y</span><span class="o">/</span><span class="n">rh</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="mf">7.0</span><span class="p">,</span> <span class="n">octaves</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+        <span class="n">o</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">c4d</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">Clamp</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mf">255.0</span><span class="o">*</span><span class="n">r</span><span class="p">))</span>
+        <span class="n">bmp</span><span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">o</span><span class="p">)</span>
+
+<span class="n">c4d</span><span class="o">.</span><span class="n">bitmaps</span><span class="o">.</span><span class="n">ShowBitmap</span><span class="p">(</span><span class="n">bmp</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="noise-types">
+<h1>Noise Types<a class="headerlink" href="#noise-types" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="boxnoise">
+<h2>BoxNoise<a class="headerlink" href="#boxnoise" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_BOX_NOISE</p>
+<img alt="../_images/c4dnoise_boxnoise.jpg" src="../_images/c4dnoise_boxnoise.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="blistered-turbulence">
+<h2>Blistered Turbulence<a class="headerlink" href="#blistered-turbulence" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_BLIST_TURB</p>
+<img alt="../_images/c4dnoise_blisteredturbulence.jpg" src="../_images/c4dnoise_blisteredturbulence.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="buya">
+<h2>Buya<a class="headerlink" href="#buya" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_BUYA</p>
+<img alt="../_images/c4dnoise_buya.jpg" src="../_images/c4dnoise_buya.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="cell-noise">
+<h2>Cell Noise<a class="headerlink" href="#cell-noise" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_CELL_NOISE</p>
+<img alt="../_images/c4dnoise_cellnoise.jpg" src="../_images/c4dnoise_cellnoise.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="cell-voronoi">
+<h2>Cell Voronoi<a class="headerlink" href="#cell-voronoi" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_CELL_VORONOI</p>
+<img alt="../_images/c4dnoise_cellvoronoi.jpg" src="../_images/c4dnoise_cellvoronoi.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="cranal">
+<h2>Cranal<a class="headerlink" href="#cranal" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_CRANAL</p>
+<img alt="../_images/c4dnoise_cranal.jpg" src="../_images/c4dnoise_cranal.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="dents">
+<h2>Dents<a class="headerlink" href="#dents" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_DENTS</p>
+<img alt="../_images/c4dnoise_dents.jpg" src="../_images/c4dnoise_dents.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="displaced-turbulence">
+<h2>Displaced Turbulence<a class="headerlink" href="#displaced-turbulence" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_DISPL_TURB</p>
+<img alt="../_images/c4dnoise_displacedturbulence.jpg" src="../_images/c4dnoise_displacedturbulence.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="electric">
+<h2>Electric<a class="headerlink" href="#electric" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_ELECTRIC</p>
+<img alt="../_images/c4dnoise_electric.jpg" src="../_images/c4dnoise_electric.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="fbm">
+<h2>FBM<a class="headerlink" href="#fbm" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_FBM</p>
+<img alt="../_images/c4dnoise_fbm.jpg" src="../_images/c4dnoise_fbm.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="fire">
+<h2>Fire<a class="headerlink" href="#fire" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_FIRE</p>
+<img alt="../_images/c4dnoise_fire.jpg" src="../_images/c4dnoise_fire.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="gas">
+<h2>Gas<a class="headerlink" href="#gas" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_GASEOUS</p>
+<img alt="../_images/c4dnoise_gaseous.jpg" src="../_images/c4dnoise_gaseous.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="hama">
+<h2>Hama<a class="headerlink" href="#hama" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_HAMA</p>
+<img alt="../_images/c4dnoise_hama.jpg" src="../_images/c4dnoise_hama.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="luka">
+<h2>Luka<a class="headerlink" href="#luka" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_LUKA</p>
+<img alt="../_images/c4dnoise_luka.jpg" src="../_images/c4dnoise_luka.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="mod-noise">
+<h2>Mod Noise<a class="headerlink" href="#mod-noise" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_MOD_NOISE</p>
+<img alt="../_images/c4dnoise_modnoise.jpg" src="../_images/c4dnoise_modnoise.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="naki">
+<h2>Naki<a class="headerlink" href="#naki" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_NAKI</p>
+<img alt="../_images/c4dnoise_naki.jpg" src="../_images/c4dnoise_naki.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="noise">
+<h2>Noise<a class="headerlink" href="#noise" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_NOISE</p>
+<img alt="../_images/c4dnoise_noise.jpg" src="../_images/c4dnoise_noise.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="none">
+<h2>None<a class="headerlink" href="#none" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_NONE</p>
+<img alt="../_images/c4dnoise_none.jpg" src="../_images/c4dnoise_none.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="nutous">
+<h2>Nutous<a class="headerlink" href="#nutous" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_NUTOUS</p>
+<img alt="../_images/c4dnoise_nutous.jpg" src="../_images/c4dnoise_nutous.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="ober">
+<h2>Ober<a class="headerlink" href="#ober" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_OBER</p>
+<img alt="../_images/c4dnoise_ober.jpg" src="../_images/c4dnoise_ober.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="pezo">
+<h2>Pezo<a class="headerlink" href="#pezo" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_PEZO</p>
+<img alt="../_images/c4dnoise_pezo.jpg" src="../_images/c4dnoise_pezo.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="poxo">
+<h2>Poxo<a class="headerlink" href="#poxo" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_POXO</p>
+<img alt="../_images/c4dnoise_poxo.jpg" src="../_images/c4dnoise_poxo.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="sema">
+<h2>Sema<a class="headerlink" href="#sema" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_SEMA</p>
+<img alt="../_images/c4dnoise_sema.jpg" src="../_images/c4dnoise_sema.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="sparse-convolution">
+<h2>Sparse Convolution<a class="headerlink" href="#sparse-convolution" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_SPARSE_CONV</p>
+<img alt="../_images/c4dnoise_sparseconvolution.jpg" src="../_images/c4dnoise_sparseconvolution.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="stupl">
+<h2>Stupl<a class="headerlink" href="#stupl" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_STUPL</p>
+<img alt="../_images/c4dnoise_stupl.jpg" src="../_images/c4dnoise_stupl.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="turbulence">
+<h2>Turbulence<a class="headerlink" href="#turbulence" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_TURBULENCE</p>
+<img alt="../_images/c4dnoise_turbulence.jpg" src="../_images/c4dnoise_turbulence.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="vlnoise">
+<h2>VLNoise<a class="headerlink" href="#vlnoise" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_VL_NOISE</p>
+<img alt="../_images/c4dnoise_vlnoise.jpg" src="../_images/c4dnoise_vlnoise.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="voronoi-1">
+<h2>Voronoi 1<a class="headerlink" href="#voronoi-1" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_VORONOI_1</p>
+<img alt="../_images/c4dnoise_voronoi1.jpg" src="../_images/c4dnoise_voronoi1.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="voronoi-2">
+<h2>Voronoi 2<a class="headerlink" href="#voronoi-2" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_VORONOI_2</p>
+<img alt="../_images/c4dnoise_voronoi2.jpg" src="../_images/c4dnoise_voronoi2.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="voronoi-3">
+<h2>Voronoi 3<a class="headerlink" href="#voronoi-3" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_VORONOI_3</p>
+<img alt="../_images/c4dnoise_voronoi3.jpg" src="../_images/c4dnoise_voronoi3.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="wavy-turbulence">
+<h2>Wavy Turbulence<a class="headerlink" href="#wavy-turbulence" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_WAVY_TURB</p>
+<img alt="../_images/c4dnoise_wavyturbulence.jpg" src="../_images/c4dnoise_wavyturbulence.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="zada">
+<h2>Zada<a class="headerlink" href="#zada" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Type:</strong> NOISE_ZADA</p>
+<img alt="../_images/c4dnoise_zada.jpg" src="../_images/c4dnoise_zada.jpg" />
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Noise Types</a><ul>
+<li><a class="reference internal" href="#boxnoise">BoxNoise</a></li>
+<li><a class="reference internal" href="#blistered-turbulence">Blistered Turbulence</a></li>
+<li><a class="reference internal" href="#buya">Buya</a></li>
+<li><a class="reference internal" href="#cell-noise">Cell Noise</a></li>
+<li><a class="reference internal" href="#cell-voronoi">Cell Voronoi</a></li>
+<li><a class="reference internal" href="#cranal">Cranal</a></li>
+<li><a class="reference internal" href="#dents">Dents</a></li>
+<li><a class="reference internal" href="#displaced-turbulence">Displaced Turbulence</a></li>
+<li><a class="reference internal" href="#electric">Electric</a></li>
+<li><a class="reference internal" href="#fbm">FBM</a></li>
+<li><a class="reference internal" href="#fire">Fire</a></li>
+<li><a class="reference internal" href="#gas">Gas</a></li>
+<li><a class="reference internal" href="#hama">Hama</a></li>
+<li><a class="reference internal" href="#luka">Luka</a></li>
+<li><a class="reference internal" href="#mod-noise">Mod Noise</a></li>
+<li><a class="reference internal" href="#naki">Naki</a></li>
+<li><a class="reference internal" href="#noise">Noise</a></li>
+<li><a class="reference internal" href="#none">None</a></li>
+<li><a class="reference internal" href="#nutous">Nutous</a></li>
+<li><a class="reference internal" href="#ober">Ober</a></li>
+<li><a class="reference internal" href="#pezo">Pezo</a></li>
+<li><a class="reference internal" href="#poxo">Poxo</a></li>
+<li><a class="reference internal" href="#sema">Sema</a></li>
+<li><a class="reference internal" href="#sparse-convolution">Sparse Convolution</a></li>
+<li><a class="reference internal" href="#stupl">Stupl</a></li>
+<li><a class="reference internal" href="#turbulence">Turbulence</a></li>
+<li><a class="reference internal" href="#vlnoise">VLNoise</a></li>
+<li><a class="reference internal" href="#voronoi-1">Voronoi 1</a></li>
+<li><a class="reference internal" href="#voronoi-2">Voronoi 2</a></li>
+<li><a class="reference internal" href="#voronoi-3">Voronoi 3</a></li>
+<li><a class="reference internal" href="#wavy-turbulence">Wavy Turbulence</a></li>
+<li><a class="reference internal" href="#zada">Zada</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="objects.html" title="Object Types"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="materials.html" title="Material Types"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Types and Symbols List</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

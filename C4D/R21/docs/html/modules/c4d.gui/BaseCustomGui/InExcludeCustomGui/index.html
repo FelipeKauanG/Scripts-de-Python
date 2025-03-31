@@ -1,0 +1,419 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.gui.InExcludeCustomGui &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.gui.LinkBoxGui" href="../LinkBoxGui/index.html" />
+    <link rel="prev" title="c4d.gui.HyperLinkCustomGui" href="../HyperLinkCustomGui/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../LinkBoxGui/index.html" title="c4d.gui.LinkBoxGui"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../HyperLinkCustomGui/index.html" title="c4d.gui.HyperLinkCustomGui"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.gui</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.gui.BaseCustomGui</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-gui-inexcludecustomgui">
+<h1>c4d.gui.InExcludeCustomGui<a class="headerlink" href="#c4d-gui-inexcludecustomgui" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.gui.InExcludeCustomGui">
+<em class="property">class </em><code class="descclassname">c4d.gui.</code><code class="descname">InExcludeCustomGui</code><a class="headerlink" href="#c4d.gui.InExcludeCustomGui" title="Permalink to this definition">¶</a></dt>
+<dd><p>InExclude custom GUI (<em>CUSTOMGUI_INEXCLUDE_LIST</em>). Here are the settings:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="2%" />
+<col width="79%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_NUM_FLAGS</em></td>
+<td>int</td>
+<td>The number of different flags.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_INIT_STATE</em></td>
+<td>int</td>
+<td>The initial state of a newly inserted element.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_SEND_SELCHANGE_MSG</em></td>
+<td>bool</td>
+<td><strong>True</strong> if the selection state should be stored in the object’s data container.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_ENABLED_IN_TRISTATE</em></td>
+<td>bool</td>
+<td><strong>True</strong> if list is should be enabled in tristate (old behavior). If <strong>False</strong> list will be disabled in tristate and it will show text “&lt;&lt;Multiple Values&gt;&gt;”.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_SMALL_MODE_SIZE</em></td>
+<td>int</td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R18.011: </span>Size of the list in small mode.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_BIG_MODE_SIZE</em></td>
+<td>int</td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R18.011: </span>Size of the list in big mode.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_NO_RESIZABLE</em></td>
+<td>bool</td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R21.108: </span>True if resizable bar at bottom should be hidden.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_01_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 1.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_01_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 1.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_02_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 2.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_02_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 2.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_03_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 3.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_03_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 3.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_04_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 4.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_04_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 4.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_05_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 5.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_05_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 5.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_06_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 6.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_06_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 6.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_07_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 7.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_07_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 7.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_08_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 8.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_08_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 8.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_09_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 9.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_09_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 9.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_10_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 10.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_10_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 10.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_11_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 11.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_11_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 11.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_12_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 12.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_12_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 12.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_13_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 13.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_13_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 13.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_14_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 14.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_14_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 14.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_15_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 15.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_15_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 15.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_16_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 16.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_16_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 16.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_17_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 17.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_17_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 17.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_18_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 18.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_18_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 18.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_19_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 19.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_19_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 19.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_20_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 20.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_20_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 20.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_21_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 21.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_21_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 21.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_22_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 22.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_22_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 22.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_23_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 23.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_23_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 23.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_24_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 24.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_24_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 24.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_25_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 25.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_25_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 25.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_26_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 26.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_26_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 26.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_27_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 27.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_27_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 27.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_28_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 28.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_28_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 28.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_29_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 29.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_29_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 29.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_30_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 30.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_30_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 30.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_31_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 31.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_31_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 31.</td>
+</tr>
+<tr class="row-even"><td><em>IN_EXCLUDE_FLAG_IMAGE_32_ON</em></td>
+<td>int</td>
+<td>Image ID of the On state for column 32.</td>
+</tr>
+<tr class="row-odd"><td><em>IN_EXCLUDE_FLAG_IMAGE_32_OFF</em></td>
+<td>int</td>
+<td>Image ID of the Off state for column 32.</td>
+</tr>
+</tbody>
+</table>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.057.</span></p>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Inheritance</p>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../index.html#c4d.gui.BaseCustomGui" title="c4d.gui.BaseCustomGui"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.gui.BaseCustomGui</span></code></a></li>
+</ul>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../LinkBoxGui/index.html" title="c4d.gui.LinkBoxGui"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../HyperLinkCustomGui/index.html" title="c4d.gui.HyperLinkCustomGui"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.gui</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.gui.BaseCustomGui</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

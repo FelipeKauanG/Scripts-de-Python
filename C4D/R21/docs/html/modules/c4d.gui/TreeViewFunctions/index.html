@@ -1,0 +1,1930 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.gui.TreeViewFunctions &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="c4d.modules" href="../../c4d.modules/index.html" />
+    <link rel="prev" title="c4d.gui.C4DGadget" href="../C4DGadget/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../c4d.modules/index.html" title="c4d.modules"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../C4DGadget/index.html" title="c4d.gui.C4DGadget"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">c4d.gui</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-gui-treeviewfunctions">
+<h1>c4d.gui.TreeViewFunctions<a class="headerlink" href="#c4d-gui-treeviewfunctions" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.gui.TreeViewFunctions">
+<em class="property">class </em><code class="descclassname">c4d.gui.</code><code class="descname">TreeViewFunctions</code><a class="headerlink" href="#c4d.gui.TreeViewFunctions" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Inherit this class to supply a data and view model for <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#c4d.gui.TreeViewCustomGui" title="c4d.gui.TreeViewCustomGui"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.gui.TreeViewCustomGui</span></code></a>.</div>
+<div class="line">Create an instance of the implemented class and pass it to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</div>
+</div>
+<p class="rubric" id="drawinfo-dict">DrawInfo Dict</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="38%" />
+<col width="51%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><cite>bgCol</cite></td>
+<td>int or <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a></td>
+<td>The background color ID or vector.</td>
+</tr>
+<tr class="row-even"><td><cite>frame</cite></td>
+<td><a class="reference internal" href="../GeUserArea/index.html#c4d.gui.GeUserArea" title="c4d.gui.GeUserArea"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.gui.GeUserArea</span></code></a></td>
+<td>The user area to draw in.</td>
+</tr>
+<tr class="row-odd"><td><cite>xpos</cite></td>
+<td>int</td>
+<td>The position X coordinate.</td>
+</tr>
+<tr class="row-even"><td><cite>ypos</cite></td>
+<td>int</td>
+<td>The position Y coordinate.</td>
+</tr>
+<tr class="row-odd"><td><cite>width</cite></td>
+<td>int</td>
+<td>The width.</td>
+</tr>
+<tr class="row-even"><td><cite>height</cite></td>
+<td>int</td>
+<td>The height.</td>
+</tr>
+<tr class="row-odd"><td><cite>line</cite></td>
+<td>int</td>
+<td>The line.</td>
+</tr>
+<tr class="row-even"><td><cite>col</cite></td>
+<td>int</td>
+<td>The column.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric" id="mouseinfo-dict">MouseInfo Dict</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="13%" />
+<col width="66%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><cite>mx</cite></td>
+<td>float</td>
+<td>The mouse X coordinate.</td>
+</tr>
+<tr class="row-even"><td><cite>my</cite></td>
+<td>float</td>
+<td>The mouse Y coordinate.</td>
+</tr>
+<tr class="row-odd"><td><cite>button</cite></td>
+<td>int</td>
+<td>The mouse button:</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="64%" />
+<col width="36%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>MOUSEINFO_BUTTON_LEFT</em></td>
+<td>Left button.</td>
+</tr>
+<tr class="row-even"><td><em>MOUSEINFO_BUTTON_RIGHT</em></td>
+<td>Right button.</td>
+</tr>
+<tr class="row-odd"><td><em>MOUSEINFO_BUTTON_MIDDLE</em></td>
+<td>Middle button.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="71%" />
+<col width="29%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><cite>mxRelative</cite></td>
+<td>float</td>
+</tr>
+</tbody>
+</table>
+<p>The mouse position relative to the end of the horizontal tree lines.
+Usually mouse coordinates are in list view space. This can become difficult when the user clicks into the <strong>LV_USERTREE</strong> column, hence this member.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="48%" />
+<col width="16%" />
+<col width="36%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><cite>startDrag</cite></td>
+<td>bool</td>
+<td>Not used.</td>
+</tr>
+<tr class="row-even"><td><cite>startpaint</cite></td>
+<td>bool</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<p>This is needed in the Layer Manager. The user can change the state of the column by clicking somewhere and dragging the mouse.
+To start this drag, set <cite>startpaint</cite> to <strong>True</strong> in <a class="reference internal" href="#TreeViewFunctions.MouseDown" title="TreeViewFunctions.MouseDown"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.MouseDown()</span></code></a>.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="69%" />
+<col width="31%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><cite>inpaint</cite></td>
+<td>bool</td>
+</tr>
+</tbody>
+</table>
+<p>This is needed in the Layer Manager. The user can change the state of the column by clicking somewhere and dragging the mouse.
+<a class="reference internal" href="#TreeViewFunctions.MouseDown" title="TreeViewFunctions.MouseDown"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.MouseDown()</span></code></a> will be called for each line with <cite>inpaint</cite> set to <strong>True</strong>.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="7%" />
+<col width="18%" />
+<col width="75%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><cite>inputmsg</cite></td>
+<td><a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseContainer</span></code></a></td>
+<td>The container originally sent to the <a class="reference internal" href="../GeUserArea/index.html#GeUserArea.InputEvent" title="GeUserArea.InputEvent"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeUserArea.InputEvent()</span></code></a> of the tree view’s user area. Never <strong>None</strong>.</td>
+</tr>
+<tr class="row-even"><td><cite>frame</cite></td>
+<td><a class="reference internal" href="../GeUserArea/index.html#c4d.gui.GeUserArea" title="c4d.gui.GeUserArea"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.gui.GeUserArea</span></code></a></td>
+<td>The user area to draw in.</td>
+</tr>
+<tr class="row-odd"><td><cite>xpos</cite></td>
+<td>int</td>
+<td>The position X coordinate.</td>
+</tr>
+<tr class="row-even"><td><cite>ypos</cite></td>
+<td>int</td>
+<td>The position Y coordinate.</td>
+</tr>
+<tr class="row-odd"><td><cite>width</cite></td>
+<td>int</td>
+<td>The width.</td>
+</tr>
+<tr class="row-even"><td><cite>height</cite></td>
+<td>int</td>
+<td>The height.</td>
+</tr>
+<tr class="row-odd"><td><cite>line</cite></td>
+<td>int</td>
+<td>The line.</td>
+</tr>
+<tr class="row-even"><td><cite>col</cite></td>
+<td>int</td>
+<td>The column.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewFunctions.GetFirst" title="TreeViewFunctions.GetFirst"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.GetFirst(self,</span> <span class="pre">root,</span> <span class="pre">userdata)</span></code></a></td>
+<td>Called to retrieve the first object of the tree.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TreeViewFunctions.GetDown" title="TreeViewFunctions.GetDown"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.GetDown(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">obj)</span></code></a></td>
+<td>Called to retrieve the first child of <em>obj</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewFunctions.GetNext" title="TreeViewFunctions.GetNext"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.GetNext(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">obj)</span></code></a></td>
+<td>Called to retrieve the object after <em>obj</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TreeViewFunctions.GetPred" title="TreeViewFunctions.GetPred"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.GetPred(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">obj)</span></code></a></td>
+<td>Called to retrieve the object before <em>obj</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewFunctions.GetColumnWidth" title="TreeViewFunctions.GetColumnWidth"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.GetColumnWidth(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">...)</span></code></a></td>
+<td>Called to retrieve the column width of object <em>obj</em> in column <em>col</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TreeViewFunctions.GetHeaderColumnWidth" title="TreeViewFunctions.GetHeaderColumnWidth"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.GetHeaderColumnWidth(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">...)</span></code></a></td>
+<td>Called to retrieve the width of the header for column <em>col</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewFunctions.GetMinHeaderHeight" title="TreeViewFunctions.GetMinHeaderHeight"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.GetMinHeaderHeight(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">area)</span></code></a></td>
+<td>Called to retrieve the minimum header height.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TreeViewFunctions.GetLineHeight" title="TreeViewFunctions.GetLineHeight"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.GetLineHeight(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">...)</span></code></a></td>
+<td>Called to retrieve the line height of object <em>obj</em> in column <em>col</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewFunctions.GetColors" title="TreeViewFunctions.GetColors"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.GetColors(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">obj)</span></code></a></td>
+<td>Called to specify the text colors of object <em>obj</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TreeViewFunctions.GetBackgroundColor" title="TreeViewFunctions.GetBackgroundColor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.GetBackgroundColor(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">...)</span></code></a></td>
+<td>Called to specify the background color of <em>line</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewFunctions.DrawCell" title="TreeViewFunctions.DrawCell"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.DrawCell(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">...)</span></code></a></td>
+<td>Called to draw the cell for object <em>obj</em> in column <em>col</em> into the user <em>area</em> in <em>drawinfo[‘frame’]</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TreeViewFunctions.DrawHeaderCell" title="TreeViewFunctions.DrawHeaderCell"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.DrawHeaderCell(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">...)</span></code></a></td>
+<td>Called to draw the header for column <em>col</em> into the user <em>area</em> in <em>drawinfo[‘frame’]</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewFunctions.IsSelected" title="TreeViewFunctions.IsSelected"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.IsSelected(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">obj)</span></code></a></td>
+<td>Called to retrieve the selection status of object <em>obj</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TreeViewFunctions.Select" title="TreeViewFunctions.Select"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.Select(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">...)</span></code></a></td>
+<td>Called to select object <em>obj</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewFunctions.IsOpened" title="TreeViewFunctions.IsOpened"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.IsOpened(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">obj)</span></code></a></td>
+<td>Called to retrieve the folding status of object <em>obj</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TreeViewFunctions.Open" title="TreeViewFunctions.Open"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.Open(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">...)</span></code></a></td>
+<td>Called to open or close object <em>obj</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewFunctions.GetName" title="TreeViewFunctions.GetName"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.GetName(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">obj)</span></code></a></td>
+<td>Called to retrieve the name of object <em>obj</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TreeViewFunctions.SetName" title="TreeViewFunctions.SetName"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.SetName(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">...)</span></code></a></td>
+<td>Called to set the name of object <em>obj</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewFunctions.GetID" title="TreeViewFunctions.GetID"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.GetID(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">obj)</span></code></a></td>
+<td>Called to retrieve the ID of object <em>obj</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TreeViewFunctions.IsChecked" title="TreeViewFunctions.IsChecked"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.IsChecked(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">...)</span></code></a></td>
+<td>Called to retrieve the checkbox status of object <em>obj</em> for column <em>lColumn</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewFunctions.SetCheck" title="TreeViewFunctions.SetCheck"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.SetCheck(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">...)</span></code></a></td>
+<td>Called to set the checkbox status of object <em>obj</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TreeViewFunctions.IsTristate" title="TreeViewFunctions.IsTristate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.IsTristate(self,</span> <span class="pre">root,</span> <span class="pre">userdata)</span></code></a></td>
+<td>Called to retrieve the tristate flag of the tree.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewFunctions.GetDragType" title="TreeViewFunctions.GetDragType"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.GetDragType(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">obj)</span></code></a></td>
+<td>Called to retrieve the drag type of object <em>obj</em>, i.e. the type that the user would get if he started a drag in that cell.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TreeViewFunctions.AcceptDragObject" title="TreeViewFunctions.AcceptDragObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.AcceptDragObject(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">...)</span></code></a></td>
+<td>Called to check if object <em>obj</em> can accept the specified drag-and-drop action, and in that case what the result would be.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewFunctions.GenerateDragArray" title="TreeViewFunctions.GenerateDragArray"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.GenerateDragArray(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">obj)</span></code></a></td>
+<td>Called to generate a drag array for object <em>obj</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TreeViewFunctions.DragStart" title="TreeViewFunctions.DragStart"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.DragStart(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">obj)</span></code></a></td>
+<td>Called to determine if object <em>obj</em> can be dragged or not and if dragged objects will be selected or not.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewFunctions.SetDragObject" title="TreeViewFunctions.SetDragObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.SetDragObject(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">obj)</span></code></a></td>
+<td>Called to set the drag object to <em>obj</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TreeViewFunctions.InsertObject" title="TreeViewFunctions.InsertObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.InsertObject(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">...)</span></code></a></td>
+<td>Called to insert <em>dragobject</em> as specified.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewFunctions.CreateContextMenu" title="TreeViewFunctions.CreateContextMenu"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.CreateContextMenu(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">...)</span></code></a></td>
+<td>Called to build a context menu for object <em>obj</em> and column <em>lColumn</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TreeViewFunctions.ContextMenuCall" title="TreeViewFunctions.ContextMenuCall"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.ContextMenuCall(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">...)</span></code></a></td>
+<td>Called by a command in the context menu setup in <code class="xref py py-meth docutils literal notranslate"><span class="pre">CreateContextMenu()</span></code>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewFunctions.GetHeaderSortArrow" title="TreeViewFunctions.GetHeaderSortArrow"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.GetHeaderSortArrow(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">...)</span></code></a></td>
+<td>Called to retrieve the sort mode of column <em>lColID</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TreeViewFunctions.IsResizeColAllowed" title="TreeViewFunctions.IsResizeColAllowed"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.IsResizeColAllowed(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">...)</span></code></a></td>
+<td>Called to check if column <em>lColID</em> can be resized or not.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewFunctions.IsMoveColAllowed" title="TreeViewFunctions.IsMoveColAllowed"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.IsMoveColAllowed(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">...)</span></code></a></td>
+<td>Called to check if column <em>lColID</em> can be moved or not.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TreeViewFunctions.InputEvent" title="TreeViewFunctions.InputEvent"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.InputEvent(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">...)</span></code></a></td>
+<td>Called when an input event is received.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewFunctions.MouseDown" title="TreeViewFunctions.MouseDown"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.MouseDown(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">...)</span></code></a></td>
+<td>Called when a mouse down event is received.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TreeViewFunctions.DoubleClick" title="TreeViewFunctions.DoubleClick"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.DoubleClick(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">...)</span></code></a></td>
+<td>Called when a mouse double click event is received.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewFunctions.DeletePressed" title="TreeViewFunctions.DeletePressed"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.DeletePressed(self,</span> <span class="pre">root,</span> <span class="pre">userdata)</span></code></a></td>
+<td>Called when a delete event is received.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TreeViewFunctions.HeaderClick" title="TreeViewFunctions.HeaderClick"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.HeaderClick(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">...)</span></code></a></td>
+<td>Called when a header has been clicked.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewFunctions.Scrolled" title="TreeViewFunctions.Scrolled"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.Scrolled(self,</span> <span class="pre">root,</span> <span class="pre">userdata,</span> <span class="pre">...)</span></code></a></td>
+<td>Called when the tree view has been scrolled.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TreeViewFunctions.PaintFinished" title="TreeViewFunctions.PaintFinished"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.PaintFinished(self,</span> <span class="pre">root,</span> <span class="pre">userdata)</span></code></a></td>
+<td>Called when a paint selection has been performed in the tree view.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewFunctions.SelectionChanged" title="TreeViewFunctions.SelectionChanged"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.SelectionChanged(self,</span> <span class="pre">root,</span> <span class="pre">userdata)</span></code></a></td>
+<td>Called when selection has changed.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="TreeViewFunctions.GetFirst">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">GetFirst</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.GetFirst" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to retrieve the first object of the tree.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">Any</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The first object.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.GetDown">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">GetDown</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.GetDown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to retrieve the first child of <em>obj</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">Any</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The first child of <em>obj</em>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.GetNext">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">GetNext</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.GetNext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to retrieve the object after <em>obj</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">Any</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The object after <em>obj</em>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.GetPred">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">GetPred</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.GetPred" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to retrieve the object before <em>obj</em>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is only used for drag and drop checks.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">Any</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The object before <em>obj</em>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.GetColumnWidth">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">GetColumnWidth</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em>, <em>col</em>, <em>area</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.GetColumnWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to retrieve the column width of object <em>obj</em> in column <em>col</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+<li><strong>col</strong> (<em>int</em>) – The column index.</li>
+<li><strong>area</strong> (<a class="reference internal" href="../GeUserArea/index.html#c4d.gui.GeUserArea" title="c4d.gui.GeUserArea"><em>c4d.gui.GeUserArea</em></a>) – The user area used to determine the text width with <a class="reference internal" href="../GeUserArea/index.html#GeUserArea.DrawGetTextWidth" title="GeUserArea.DrawGetTextWidth"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeUserArea.DrawGetTextWidth()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The column width.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.GetHeaderColumnWidth">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">GetHeaderColumnWidth</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>col</em>, <em>area</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.GetHeaderColumnWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to retrieve the width of the header for column <em>col</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>col</strong> (<em>int</em>) – The column index.</li>
+<li><strong>area</strong> (<a class="reference internal" href="../GeUserArea/index.html#c4d.gui.GeUserArea" title="c4d.gui.GeUserArea"><em>c4d.gui.GeUserArea</em></a>) – The user area used to determine the text width with <a class="reference internal" href="../GeUserArea/index.html#GeUserArea.DrawGetTextWidth" title="GeUserArea.DrawGetTextWidth"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeUserArea.DrawGetTextWidth()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The header column width, or a negative number for auto header width.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.GetMinHeaderHeight">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">GetMinHeaderHeight</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>area</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.GetMinHeaderHeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to retrieve the minimum header height.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>area</strong> (<a class="reference internal" href="../GeUserArea/index.html#c4d.gui.GeUserArea" title="c4d.gui.GeUserArea"><em>c4d.gui.GeUserArea</em></a>) – The user area used to determine the text height with <a class="reference internal" href="../GeUserArea/index.html#GeUserArea.DrawGetFontHeight" title="GeUserArea.DrawGetFontHeight"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeUserArea.DrawGetFontHeight()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The minimum header height, or a negative value for auto header height.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.GetLineHeight">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">GetLineHeight</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em>, <em>col</em>, <em>area</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.GetLineHeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to retrieve the line height of object <em>obj</em> in column <em>col</em>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Always return a positive value.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+<li><strong>col</strong> (<em>int</em>) – The column index.</li>
+<li><strong>area</strong> (<a class="reference internal" href="../GeUserArea/index.html#c4d.gui.GeUserArea" title="c4d.gui.GeUserArea"><em>c4d.gui.GeUserArea</em></a>) – The user area used to determine the text height with <a class="reference internal" href="../GeUserArea/index.html#GeUserArea.DrawGetFontHeight" title="GeUserArea.DrawGetFontHeight"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeUserArea.DrawGetFontHeight()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The line height.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.GetColors">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">GetColors</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.GetColors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to specify the text colors of object <em>obj</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">tuple(int or <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>, int or <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>) or list(int or <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>, int or <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The normal and selected text color as color ID or vector.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.GetBackgroundColor">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">GetBackgroundColor</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em>, <em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.GetBackgroundColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to specify the background color of <em>line</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+<li><strong>line</strong> (<em>int</em>) – The line index.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int or <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The background color for <em>line</em> as color ID or vector.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.DrawCell">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">DrawCell</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em>, <em>col</em>, <em>drawinfo</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.DrawCell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to draw the cell for object <em>obj</em> in column <em>col</em> into the user <em>area</em> in <em>drawinfo[‘frame’]</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+<li><strong>col</strong> (<em>int</em>) – The column index.</li>
+<li><strong>drawinfo</strong> (<em>dict</em>) – The draw information. See <a class="reference internal" href="#drawinfo-dict"><span class="std std-ref">DrawInfo Dict</span></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int or <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The background color as color ID or vector.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.DrawHeaderCell">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">DrawHeaderCell</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>col</em>, <em>drawinfo</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.DrawHeaderCell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to draw the header for column <em>col</em> into the user <em>area</em> in <em>drawinfo[‘frame’]</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>col</strong> (<em>int</em>) – The column index.</li>
+<li><strong>drawinfo</strong> (<em>dict</em>) – The draw information. See <a class="reference internal" href="#drawinfo-dict"><span class="std std-ref">DrawInfo Dict</span></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the header has been drawn or <strong>False</strong> if the header should be drawn by the tree view.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.IsSelected">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">IsSelected</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.IsSelected" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to retrieve the selection status of object <em>obj</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the object is selected, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.Select">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">Select</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em>, <em>mode</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.Select" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to select object <em>obj</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+<li><strong>mode</strong> (<em>int</em>) – <p>The selection mode:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>SELECTION_NEW</em></td>
+<td>Starts a new selection.</td>
+</tr>
+<tr class="row-even"><td><em>SELECTION_ADD</em></td>
+<td>Adds to the current selection</td>
+</tr>
+<tr class="row-odd"><td><em>SELECTION_SUB</em></td>
+<td>Subtracts from the current selection.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.IsOpened">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">IsOpened</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.IsOpened" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to retrieve the folding status of object <em>obj</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the object is opened, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.Open">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">Open</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em>, <em>onoff</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.Open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to open or close object <em>obj</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+<li><strong>onoff</strong> (<em>bool</em>) – <strong>True</strong> if <em>obj</em> should be opened, otherwise <strong>False</strong>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.GetName">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">GetName</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.GetName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to retrieve the name of object <em>obj</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">str</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The object name.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.SetName">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">SetName</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em>, <em>str</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.SetName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to set the name of object <em>obj</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+<li><strong>str</strong> (<em>str</em>) – The new object name.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.GetID">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">GetID</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.GetID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to retrieve the ID of object <em>obj</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The object ID.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.IsChecked">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">IsChecked</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em>, <em>lColumn</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.IsChecked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to retrieve the checkbox status of object <em>obj</em> for column <em>lColumn</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+<li><strong>lColumn</strong> (<em>int</em>) – The column index.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>A combination of the following flags or <strong>c4d.NOTOK</strong> to show no checkbox:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="52%" />
+<col width="48%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>LV_CHECKBOX_ENABLED</em></td>
+<td>Checkbox is enabled.</td>
+</tr>
+<tr class="row-even"><td><em>LV_CHECKBOX_CHECKED</em></td>
+<td>Checkbox is checked.</td>
+</tr>
+<tr class="row-odd"><td><em>LV_CHECKBOX_TRISTATE</em></td>
+<td>Checkbox tristate.</td>
+</tr>
+<tr class="row-even"><td><em>LV_CHECKBOX_HIDE</em></td>
+<td>Checkbox is hidden.</td>
+</tr>
+</tbody>
+</table>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.SetCheck">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">SetCheck</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em>, <em>lColumn</em>, <em>bCheck</em>, <em>bcMsg</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.SetCheck" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to set the checkbox status of object <em>obj</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+<li><strong>lColumn</strong> (<em>int</em>) – The column index.</li>
+<li><strong>bCheck</strong> (<em>bool</em>) – <strong>True</strong> if the checkbox should be checked, otherwise <strong>False</strong>.</li>
+<li><strong>bcMsg</strong> (<a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The container originally sent to the <a class="reference internal" href="../GeUserArea/index.html#GeUserArea.InputEvent" title="GeUserArea.InputEvent"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeUserArea.InputEvent()</span></code></a> of the tree view’s user area.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.IsTristate">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">IsTristate</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.IsTristate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to retrieve the tristate flag of the tree.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the tristate flag is set, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.GetDragType">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">GetDragType</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.GetDragType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to retrieve the drag type of object <em>obj</em>, i.e. the type that the user would get if he started a drag in that cell.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>The object drag type, or <strong>c4d.NOTOK</strong> to disable drag-and-drop:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>DRAGTYPE_ATOMARRAY</em></td>
+<td>Atom array. The data is a list of <a class="reference internal" href="../../c4d/C4DAtom/index.html#c4d.C4DAtom" title="c4d.C4DAtom"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.C4DAtom</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>DRAGTYPE_CMDPALETTE</em></td>
+<td>Not supported.</td>
+</tr>
+<tr class="row-odd"><td><em>DRAGTYPE_COMMAND</em></td>
+<td>Not supported.</td>
+</tr>
+<tr class="row-even"><td><em>DRAGTYPE_DESCID</em></td>
+<td>Description ID. The data is a dict(‘did’: <a class="reference internal" href="../../c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.DescID</span></code></a>, ‘arr’: list of <a class="reference internal" href="../../c4d/C4DAtom/index.html#c4d.C4DAtom" title="c4d.C4DAtom"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.C4DAtom</span></code></a>).</td>
+</tr>
+<tr class="row-odd"><td><em>DRAGTYPE_ICON</em></td>
+<td>Not supported.</td>
+</tr>
+<tr class="row-even"><td><em>DRAGTYPE_FILES</em></td>
+<td>Files. The data is a string with the filename.</td>
+</tr>
+<tr class="row-odd"><td><em>DRAGTYPE_FILENAME_IMAGE</em></td>
+<td>Image. The data is a string with the filename.</td>
+</tr>
+<tr class="row-even"><td><em>DRAGTYPE_FILENAME_OTHER</em></td>
+<td>Other filename. The data is a string with the filename.</td>
+</tr>
+<tr class="row-odd"><td><em>DRAGTYPE_FILENAME_SCENE</em></td>
+<td>Scene filename. The data is a string with the filename.</td>
+</tr>
+<tr class="row-even"><td><em>DRAGTYPE_MANAGER</em></td>
+<td>Not supported.</td>
+</tr>
+<tr class="row-odd"><td><em>DRAGTYPE_RGB</em></td>
+<td>RGB color. The data is a <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>DRAGTYPE_RGB_ARRAY</em></td>
+<td>RGB color array. The data is a list of <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>DRAGTYPE_RGBA_ARRAY</em></td>
+<td>RGBA color array. The data is a <a class="reference internal" href="../../maxon_generated/datatypes/collection/maxon.BaseArray.html#module-maxon.BaseArray" title="maxon.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.BaseArray</span></code></a> of <a class="reference internal" href="../../maxon_generated/datatypes/vec_col_mat/maxon.ColorA.html#module-maxon.ColorA" title="maxon.ColorA"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.ColorA</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>DRAGTYPE_BROWSER</em></td>
+<td>Browser drag message. The data is a list of string with the filename.</td>
+</tr>
+</tbody>
+</table>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.AcceptDragObject">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">AcceptDragObject</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em>, <em>dragtype</em>, <em>dragobject</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.AcceptDragObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to check if object <em>obj</em> can accept the specified drag-and-drop action, and in that case what the result would be.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If <em>obj</em> is <strong>None</strong> then <em>dragobject</em> should be inserted as a child of the root.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+<li><strong>dragtype</strong> (<em>int</em>) – <p>The drag type:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>DRAGTYPE_ATOMARRAY</em></td>
+<td>Atom array. The data is a list of <a class="reference internal" href="../../c4d/C4DAtom/index.html#c4d.C4DAtom" title="c4d.C4DAtom"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.C4DAtom</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>DRAGTYPE_CMDPALETTE</em></td>
+<td>Not supported.</td>
+</tr>
+<tr class="row-odd"><td><em>DRAGTYPE_COMMAND</em></td>
+<td>Not supported.</td>
+</tr>
+<tr class="row-even"><td><em>DRAGTYPE_DESCID</em></td>
+<td>Description ID. The data is a dict(‘did’: <a class="reference internal" href="../../c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.DescID</span></code></a>, ‘arr’: list of <a class="reference internal" href="../../c4d/C4DAtom/index.html#c4d.C4DAtom" title="c4d.C4DAtom"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.C4DAtom</span></code></a>).</td>
+</tr>
+<tr class="row-odd"><td><em>DRAGTYPE_ICON</em></td>
+<td>Not supported.</td>
+</tr>
+<tr class="row-even"><td><em>DRAGTYPE_FILES</em></td>
+<td>Files. The data is a string with the filename.</td>
+</tr>
+<tr class="row-odd"><td><em>DRAGTYPE_FILENAME_IMAGE</em></td>
+<td>Image. The data is a string with the filename.</td>
+</tr>
+<tr class="row-even"><td><em>DRAGTYPE_FILENAME_OTHER</em></td>
+<td>Other filename. The data is a string with the filename.</td>
+</tr>
+<tr class="row-odd"><td><em>DRAGTYPE_FILENAME_SCENE</em></td>
+<td>Scene filename. The data is a string with the filename.</td>
+</tr>
+<tr class="row-even"><td><em>DRAGTYPE_MANAGER</em></td>
+<td>Not supported.</td>
+</tr>
+<tr class="row-odd"><td><em>DRAGTYPE_RGB</em></td>
+<td>RGB color. The data is a <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>DRAGTYPE_RGB_ARRAY</em></td>
+<td>RGB color array. The data is a list of <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>DRAGTYPE_RGBA_ARRAY</em></td>
+<td>RGBA color array. The data is a <a class="reference internal" href="../../maxon_generated/datatypes/collection/maxon.BaseArray.html#module-maxon.BaseArray" title="maxon.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.BaseArray</span></code></a> of <a class="reference internal" href="../../maxon_generated/datatypes/vec_col_mat/maxon.ColorA.html#module-maxon.ColorA" title="maxon.ColorA"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.ColorA</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>DRAGTYPE_BROWSER</em></td>
+<td>Browser drag message. The data is a list of string with the filename.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><strong>dragobject</strong> (<em>any</em>) – The drag object.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">tuple(int, bool)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>A tuple with the following information:</p>
+<ul>
+<li><p class="first">int: The insert mode:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="49%" />
+<col width="51%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>INSERT_BEFORE</em></td>
+<td>Insert before.</td>
+</tr>
+<tr class="row-even"><td><em>INSERT_AFTER</em></td>
+<td>Insert after.</td>
+</tr>
+<tr class="row-odd"><td><em>INSERT_UNDER</em></td>
+<td>Insert under.</td>
+</tr>
+<tr class="row-even"><td><em>INSERT_REPLACE</em></td>
+<td>Replace the object.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <strong>ACCEPT_DRAG_OBJECT_FORCE_COPY</strong> bit flag can be used together with the <strong>INSERT</strong> constants.</p>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">bool: <strong>True</strong> if copying is allowed to this position, otherwise <strong>False</strong>.</p>
+</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.GenerateDragArray">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">GenerateDragArray</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.GenerateDragArray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to generate a drag array for object <em>obj</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">List[<a class="reference internal" href="../../c4d/C4DAtom/index.html#c4d.C4DAtom" title="c4d.C4DAtom">c4d.C4DAtom</a>]</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The drag objects for <em>obj</em>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.DragStart">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">DragStart</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.DragStart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to determine if object <em>obj</em> can be dragged or not and if dragged objects will be selected or not.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.024.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>A combination of the following flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="52%" />
+<col width="48%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>TREEVIEW_DRAGSTART_ALLOW</em></td>
+<td>Allow dragging.</td>
+</tr>
+<tr class="row-even"><td><em>TREEVIEW_DRAGSTART_SELECT</em></td>
+<td>Select the picked object.</td>
+</tr>
+</tbody>
+</table>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.SetDragObject">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">SetDragObject</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.SetDragObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to set the drag object to <em>obj</em>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.024.</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">Helps to determine if dragging happens internally (rearranged items) or externally (dragged items from another treeview for instance).</div>
+<div class="line">To check this, store the drag object data and compare it with <em>dragobject</em> in <a class="reference internal" href="#TreeViewFunctions.InsertObject" title="TreeViewFunctions.InsertObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">InsertObject()</span></code></a>.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – The drag object on drag start.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.InsertObject">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">InsertObject</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em>, <em>dragtype</em>, <em>dragobject</em>, <em>insertmode</em>, <em>bCopy</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.InsertObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to insert <em>dragobject</em> as specified.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+<li><strong>dragtype</strong> (<em>int</em>) – <p>The drag type:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>DRAGTYPE_ATOMARRAY</em></td>
+<td>Atom array. The data is a list of <a class="reference internal" href="../../c4d/C4DAtom/index.html#c4d.C4DAtom" title="c4d.C4DAtom"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.C4DAtom</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>DRAGTYPE_CMDPALETTE</em></td>
+<td>Not supported.</td>
+</tr>
+<tr class="row-odd"><td><em>DRAGTYPE_COMMAND</em></td>
+<td>Not supported.</td>
+</tr>
+<tr class="row-even"><td><em>DRAGTYPE_DESCID</em></td>
+<td>Description ID. The data is a dict(‘did’: <a class="reference internal" href="../../c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.DescID</span></code></a>, ‘arr’: list of <a class="reference internal" href="../../c4d/C4DAtom/index.html#c4d.C4DAtom" title="c4d.C4DAtom"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.C4DAtom</span></code></a>).</td>
+</tr>
+<tr class="row-odd"><td><em>DRAGTYPE_ICON</em></td>
+<td>Not supported.</td>
+</tr>
+<tr class="row-even"><td><em>DRAGTYPE_FILES</em></td>
+<td>Files. The data is a string with the filename.</td>
+</tr>
+<tr class="row-odd"><td><em>DRAGTYPE_FILENAME_IMAGE</em></td>
+<td>Image. The data is a string with the filename.</td>
+</tr>
+<tr class="row-even"><td><em>DRAGTYPE_FILENAME_OTHER</em></td>
+<td>Other filename. The data is a string with the filename.</td>
+</tr>
+<tr class="row-odd"><td><em>DRAGTYPE_FILENAME_SCENE</em></td>
+<td>Scene filename. The data is a string with the filename.</td>
+</tr>
+<tr class="row-even"><td><em>DRAGTYPE_MANAGER</em></td>
+<td>Not supported.</td>
+</tr>
+<tr class="row-odd"><td><em>DRAGTYPE_RGB</em></td>
+<td>RGB color. The data is a <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>DRAGTYPE_RGB_ARRAY</em></td>
+<td>RGB color array. The data is a list of <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>DRAGTYPE_RGBA_ARRAY</em></td>
+<td>RGBA color array. The data is a <a class="reference internal" href="../../maxon_generated/datatypes/collection/maxon.BaseArray.html#module-maxon.BaseArray" title="maxon.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.BaseArray</span></code></a> of <a class="reference internal" href="../../maxon_generated/datatypes/vec_col_mat/maxon.ColorA.html#module-maxon.ColorA" title="maxon.ColorA"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.ColorA</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>DRAGTYPE_BROWSER</em></td>
+<td>Browser drag message. The data is a list of string with the filename.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><strong>dragobject</strong> (<em>any</em>) – The drag object on drag receive.</li>
+<li><strong>insertmode</strong> (<em>int</em>) – <p>The insert mode:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="49%" />
+<col width="51%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>INSERT_BEFORE</em></td>
+<td>Insert before.</td>
+</tr>
+<tr class="row-even"><td><em>INSERT_AFTER</em></td>
+<td>Insert after.</td>
+</tr>
+<tr class="row-odd"><td><em>INSERT_UNDER</em></td>
+<td>Insert under.</td>
+</tr>
+<tr class="row-even"><td><em>INSERT_REPLACE</em></td>
+<td>Replace the object.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><strong>bCopy</strong> (<em>bool</em>) – <strong>True</strong> if the object should be copied, otherwise <strong>False</strong>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.CreateContextMenu">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">CreateContextMenu</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em>, <em>lColumn</em>, <em>bc</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.CreateContextMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to build a context menu for object <em>obj</em> and column <em>lColumn</em>.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../index.html#c4d.gui.ShowPopupDialog" title="c4d.gui.ShowPopupDialog"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.gui.ShowPopupDialog()</span></code></a> for the format.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line"><em>bc</em> container already contains 2 default items: <strong>c4d.ID_TREEVIEW_CONTEXT_REMOVE</strong> and <strong>c4d.ID_TREEVIEW_CONTEXT_RESET</strong>. These may be removed.</div>
+<div class="line">The added menu entry IDs must be larger than <strong>c4d.ID_TREEVIEW_FIRST_NEW_ID</strong>.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+<li><strong>lColumn</strong> (<em>int</em>) – The column index.</li>
+<li><strong>bc</strong> (<a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – Add context menu entries to this container.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.ContextMenuCall">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">ContextMenuCall</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em>, <em>lColumn</em>, <em>lCommand</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.ContextMenuCall" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called by a command in the context menu setup in <a class="reference internal" href="#TreeViewFunctions.CreateContextMenu" title="TreeViewFunctions.CreateContextMenu"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CreateContextMenu()</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+<li><strong>lColumn</strong> (<em>int</em>) – The column index.</li>
+<li><strong>lCommand</strong> (<em>int</em>) – The menu command ID.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the command has been processed and the data needs to be updated, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.GetHeaderSortArrow">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">GetHeaderSortArrow</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>lColID</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.GetHeaderSortArrow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to retrieve the sort mode of column <em>lColID</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>lColID</strong> (<em>int</em>) – The column index.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The sort direction.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.IsResizeColAllowed">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">IsResizeColAllowed</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>lColID</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.IsResizeColAllowed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to check if column <em>lColID</em> can be resized or not.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>lColID</strong> (<em>int</em>) – The column index.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the column can be resized, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.IsMoveColAllowed">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">IsMoveColAllowed</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>lColID</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.IsMoveColAllowed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to check if column <em>lColID</em> can be moved or not.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>lColID</strong> (<em>int</em>) – The column index.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the column can be moved, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.InputEvent">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">InputEvent</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>pArea</em>, <em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.InputEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when an input event is received.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All information about the input event is stored in the <em>msg</em> container.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>pArea</strong> (<a class="reference internal" href="../GeUserArea/index.html#c4d.gui.GeUserArea" title="c4d.gui.GeUserArea"><em>c4d.gui.GeUserArea</em></a>) – The user area of the tree view.</li>
+<li><strong>msg</strong> (<a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The event container.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the event was handled, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.MouseDown">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">MouseDown</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em>, <em>col</em>, <em>mouseinfo</em>, <em>rightButton</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.MouseDown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when a mouse down event is received.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+<li><strong>col</strong> (<em>int</em>) – The column index.</li>
+<li><strong>mouseinfo</strong> (<em>dict</em>) – The mouse information. See <a class="reference internal" href="#mouseinfo-dict"><span class="std std-ref">MouseInfo Dict</span></a>.</li>
+<li><strong>rightButton</strong> (<em>bool</em>) – <strong>True</strong> if the right mouse button was used, otherwise <strong>False</strong>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the event was handled, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.DoubleClick">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">DoubleClick</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>obj</em>, <em>col</em>, <em>mouseinfo</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.DoubleClick" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when a mouse double click event is received.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>obj</strong> (<em>any</em>) – An object in the tree.</li>
+<li><strong>col</strong> (<em>int</em>) – The column index.</li>
+<li><strong>mouseinfo</strong> (<em>dict</em>) – The mouse information. See <a class="reference internal" href="#mouseinfo-dict"><span class="std std-ref">MouseInfo Dict</span></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the event was handled, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.DeletePressed">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">DeletePressed</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.DeletePressed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when a delete event is received.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.HeaderClick">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">HeaderClick</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>lColID</em>, <em>lChannel</em>, <em>bDblClk</em>, <em>mouseX</em>, <em>mouseY</em>, <em>ua</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.HeaderClick" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when a header has been clicked.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version R20: </span>Added parameters <em>mouseX</em>, <em>mouseY</em> and <em>ua</em>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>lColID</strong> (<em>int</em>) – The column index.</li>
+<li><strong>lChannel</strong> (<em>int</em>) – <p>The mouse channel:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="53%" />
+<col width="47%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>BFM_INPUT_MOUSELEFT</em></td>
+<td>Left mouse button.</td>
+</tr>
+<tr class="row-even"><td><em>BFM_INPUT_MOUSERIGHT</em></td>
+<td>Right mouse button.</td>
+</tr>
+<tr class="row-odd"><td><em>BFM_INPUT_MOUSEMIDDLE</em></td>
+<td>Middle mouse button.</td>
+</tr>
+<tr class="row-even"><td><em>BFM_INPUT_MOUSEX1</em></td>
+<td>Fourth mouse button.</td>
+</tr>
+<tr class="row-odd"><td><em>BFM_INPUT_MOUSEX2</em></td>
+<td>Five mouse button.</td>
+</tr>
+<tr class="row-even"><td><em>BFM_INPUT_MOUSEWHEEL</em></td>
+<td>Mouse wheel message.</td>
+</tr>
+<tr class="row-odd"><td><em>BFM_INPUT_MOUSEMOVE</em></td>
+<td>Mouse move message.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><strong>bDblClk</strong> (<em>int</em>) – <strong>True</strong> for double-click event, otherwise <strong>False</strong>.</li>
+<li><strong>mouseX</strong> (<em>int</em>) – <div class="versionadded">
+<p><span class="versionmodified">New in version R20: </span>The mouse horizontal position local to the left hand edge of the column, or <cite>NOTOK</cite> if dragging a column.</p>
+</div>
+</li>
+<li><strong>mouseY</strong> (<em>int</em>) – <div class="versionadded">
+<p><span class="versionmodified">New in version R20: </span>The mouse vertical position local to the header top, or <cite>NOTOK</cite> if dragging a column.</p>
+</div>
+</li>
+<li><strong>ua</strong> (<a class="reference internal" href="../GeUserArea/index.html#c4d.gui.GeUserArea" title="c4d.gui.GeUserArea"><em>c4d.gui.GeUserArea</em></a>) – <div class="versionadded">
+<p><span class="versionmodified">New in version R20: </span>The header’s user area, or <strong>None</strong> if dragging a column.</p>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the tree view needs to be updated, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.Scrolled">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">Scrolled</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em>, <em>h</em>, <em>v</em>, <em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.Scrolled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when the tree view has been scrolled.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>h</strong> (<em>int</em>) – The horizontal scroll steps.</li>
+<li><strong>v</strong> (<em>int</em>) – The vertical scroll steps.</li>
+<li><strong>x</strong> (<em>int</em>) – The X offset.</li>
+<li><strong>y</strong> (<em>int</em>) – The Y offset.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.PaintFinished">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">PaintFinished</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.PaintFinished" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when a paint selection has been performed in the tree view.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewFunctions.SelectionChanged">
+<code class="descclassname">TreeViewFunctions.</code><code class="descname">SelectionChanged</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>userdata</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewFunctions.SelectionChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when selection has changed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>root</strong> (<em>any</em>) – The tree root passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+<li><strong>userdata</strong> (<em>any</em>) – The user data passed to <a class="reference internal" href="../BaseCustomGui/TreeViewCustomGui/index.html#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+<div class="section" id="id1">
+<h1>DrawInfo Dict<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="38%" />
+<col width="51%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><cite>bgCol</cite></td>
+<td>int or <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a></td>
+<td>The background color ID or vector.</td>
+</tr>
+<tr class="row-even"><td><cite>frame</cite></td>
+<td><a class="reference internal" href="../GeUserArea/index.html#c4d.gui.GeUserArea" title="c4d.gui.GeUserArea"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.gui.GeUserArea</span></code></a></td>
+<td>The user area to draw in.</td>
+</tr>
+<tr class="row-odd"><td><cite>xpos</cite></td>
+<td>int</td>
+<td>The position X coordinate.</td>
+</tr>
+<tr class="row-even"><td><cite>ypos</cite></td>
+<td>int</td>
+<td>The position Y coordinate.</td>
+</tr>
+<tr class="row-odd"><td><cite>width</cite></td>
+<td>int</td>
+<td>The width.</td>
+</tr>
+<tr class="row-even"><td><cite>height</cite></td>
+<td>int</td>
+<td>The height.</td>
+</tr>
+<tr class="row-odd"><td><cite>line</cite></td>
+<td>int</td>
+<td>The line.</td>
+</tr>
+<tr class="row-even"><td><cite>col</cite></td>
+<td>int</td>
+<td>The column.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id2">
+<h1>MouseInfo Dict<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="13%" />
+<col width="66%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><cite>mx</cite></td>
+<td>float</td>
+<td>The mouse X coordinate.</td>
+</tr>
+<tr class="row-even"><td><cite>my</cite></td>
+<td>float</td>
+<td>The mouse Y coordinate.</td>
+</tr>
+<tr class="row-odd"><td><cite>button</cite></td>
+<td>int</td>
+<td>The mouse button:</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="64%" />
+<col width="36%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>MOUSEINFO_BUTTON_LEFT</em></td>
+<td>Left button.</td>
+</tr>
+<tr class="row-even"><td><em>MOUSEINFO_BUTTON_RIGHT</em></td>
+<td>Right button.</td>
+</tr>
+<tr class="row-odd"><td><em>MOUSEINFO_BUTTON_MIDDLE</em></td>
+<td>Middle button.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="71%" />
+<col width="29%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><cite>mxRelative</cite></td>
+<td>float</td>
+</tr>
+</tbody>
+</table>
+<p>The mouse position relative to the end of the horizontal tree lines.
+Usually mouse coordinates are in list view space. This can become difficult when the user clicks into the <strong>LV_USERTREE</strong> column, hence this member.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="48%" />
+<col width="16%" />
+<col width="36%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><cite>startDrag</cite></td>
+<td>bool</td>
+<td>Not used.</td>
+</tr>
+<tr class="row-even"><td><cite>startpaint</cite></td>
+<td>bool</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<p>This is needed in the Layer Manager. The user can change the state of the column by clicking somewhere and dragging the mouse.
+To start this drag, set <cite>startpaint</cite> to <strong>True</strong> in <a class="reference internal" href="#TreeViewFunctions.MouseDown" title="TreeViewFunctions.MouseDown"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.MouseDown()</span></code></a>.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="69%" />
+<col width="31%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><cite>inpaint</cite></td>
+<td>bool</td>
+</tr>
+</tbody>
+</table>
+<p>This is needed in the Layer Manager. The user can change the state of the column by clicking somewhere and dragging the mouse.
+<a class="reference internal" href="#TreeViewFunctions.MouseDown" title="TreeViewFunctions.MouseDown"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.MouseDown()</span></code></a> will be called for each line with <cite>inpaint</cite> set to <strong>True</strong>.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="7%" />
+<col width="18%" />
+<col width="75%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><cite>inputmsg</cite></td>
+<td><a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseContainer</span></code></a></td>
+<td>The container originally sent to the <a class="reference internal" href="../GeUserArea/index.html#GeUserArea.InputEvent" title="GeUserArea.InputEvent"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeUserArea.InputEvent()</span></code></a> of the tree view’s user area. Never <strong>None</strong>.</td>
+</tr>
+<tr class="row-even"><td><cite>frame</cite></td>
+<td><a class="reference internal" href="../GeUserArea/index.html#c4d.gui.GeUserArea" title="c4d.gui.GeUserArea"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.gui.GeUserArea</span></code></a></td>
+<td>The user area to draw in.</td>
+</tr>
+<tr class="row-odd"><td><cite>xpos</cite></td>
+<td>int</td>
+<td>The position X coordinate.</td>
+</tr>
+<tr class="row-even"><td><cite>ypos</cite></td>
+<td>int</td>
+<td>The position Y coordinate.</td>
+</tr>
+<tr class="row-odd"><td><cite>width</cite></td>
+<td>int</td>
+<td>The width.</td>
+</tr>
+<tr class="row-even"><td><cite>height</cite></td>
+<td>int</td>
+<td>The height.</td>
+</tr>
+<tr class="row-odd"><td><cite>line</cite></td>
+<td>int</td>
+<td>The line.</td>
+</tr>
+<tr class="row-even"><td><cite>col</cite></td>
+<td>int</td>
+<td>The column.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">c4d.gui.TreeViewFunctions</a></li>
+<li><a class="reference internal" href="#id1">DrawInfo Dict</a></li>
+<li><a class="reference internal" href="#id2">MouseInfo Dict</a></li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../c4d.modules/index.html" title="c4d.modules"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../C4DGadget/index.html" title="c4d.gui.C4DGadget"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >c4d.gui</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

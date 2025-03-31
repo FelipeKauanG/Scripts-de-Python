@@ -1,0 +1,254 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.motiontracker.Mt2dTrack &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.modules.motiontracker.Mt2dTrackData" href="../Mt2dTrackData/index.html" />
+    <link rel="prev" title="c4d.modules.motiontracker.MotionTrackerObject" href="../MotionTrackerObject/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../Mt2dTrackData/index.html" title="c4d.modules.motiontracker.Mt2dTrackData"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../MotionTrackerObject/index.html" title="c4d.modules.motiontracker.MotionTrackerObject"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.modules.motiontracker</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-motiontracker-mt2dtrack">
+<h1>c4d.modules.motiontracker.Mt2dTrack<a class="headerlink" href="#c4d-modules-motiontracker-mt2dtrack" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.motiontracker.Mt2dTrack">
+<em class="property">class </em><code class="descclassname">c4d.modules.motiontracker.</code><code class="descname">Mt2dTrack</code><a class="headerlink" href="#c4d.modules.motiontracker.Mt2dTrack" title="Permalink to this definition">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified">New in version R18.020.</span></p>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#Mt2dTrack.GetName" title="Mt2dTrack.GetName"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mt2dTrack.GetName(self)</span></code></a></td>
+<td>Retrieves the name of the track.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Mt2dTrack.GetId" title="Mt2dTrack.GetId"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mt2dTrack.GetId(self)</span></code></a></td>
+<td>Retrieves the global ID of the track.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Mt2dTrack.GetStatus" title="Mt2dTrack.GetStatus"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mt2dTrack.GetStatus(self)</span></code></a></td>
+<td>Retrieves the track status.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Mt2dTrack.GetFramesWithTrackData" title="Mt2dTrack.GetFramesWithTrackData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mt2dTrack.GetFramesWithTrackData(self)</span></code></a></td>
+<td>Retrieves the frames on which the track has data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Mt2dTrack.GetDataForFrame" title="Mt2dTrack.GetDataForFrame"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mt2dTrack.GetDataForFrame(self,</span> <span class="pre">frameNum)</span></code></a></td>
+<td>Retrieves the motion tracking data for the given frame.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Mt2dTrack.GetDataForCurrentFrame" title="Mt2dTrack.GetDataForCurrentFrame"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mt2dTrack.GetDataForCurrentFrame(self)</span></code></a></td>
+<td>Retrieves the track data for the current frame.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="Mt2dTrack.GetName">
+<code class="descclassname">Mt2dTrack.</code><code class="descname">GetName</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#Mt2dTrack.GetName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the name of the track.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The name of the track.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Mt2dTrack.GetId">
+<code class="descclassname">Mt2dTrack.</code><code class="descname">GetId</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#Mt2dTrack.GetId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the global ID of the track.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../MtTrkGid/index.html#c4d.modules.motiontracker.MtTrkGid" title="c4d.modules.motiontracker.MtTrkGid">c4d.modules.motiontracker.MtTrkGid</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The global ID of the track.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Mt2dTrack.GetStatus">
+<code class="descclassname">Mt2dTrack.</code><code class="descname">GetStatus</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#Mt2dTrack.GetStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the track status.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The track status:<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="86%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>INVALID_TRACK</em></td>
+<td>Not a valid track.</td>
+</tr>
+<tr class="row-even"><td><em>UNTRACKED</em></td>
+<td>Has not yet been tracked.</td>
+</tr>
+<tr class="row-odd"><td><em>TRACKED_VALID</em></td>
+<td>Has been tracked, and is up to date.</td>
+</tr>
+<tr class="row-even"><td><em>TRACKED_STALE</em></td>
+<td>Has been tracked, but needs updating. (Changes have been made, but has not yet been retracked.)</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Mt2dTrack.GetFramesWithTrackData">
+<code class="descclassname">Mt2dTrack.</code><code class="descname">GetFramesWithTrackData</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#Mt2dTrack.GetFramesWithTrackData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the frames on which the track has data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/BaseSelect/index.html#c4d.BaseSelect" title="c4d.BaseSelect"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseSelect</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The frames with track data.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Mt2dTrack.GetDataForFrame">
+<code class="descclassname">Mt2dTrack.</code><code class="descname">GetDataForFrame</code><span class="sig-paren">(</span><em>self</em>, <em>frameNum</em><span class="sig-paren">)</span><a class="headerlink" href="#Mt2dTrack.GetDataForFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the motion tracking data for the given frame.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>frameNum</strong> (<em>int</em>) – The frame number.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../MtData/index.html#c4d.modules.motiontracker.MtData" title="c4d.modules.motiontracker.MtData">c4d.modules.motiontracker.MtData</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The tracking data, or <strong>None</strong> if it does not exist for the requested frame.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Mt2dTrack.GetDataForCurrentFrame">
+<code class="descclassname">Mt2dTrack.</code><code class="descname">GetDataForCurrentFrame</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#Mt2dTrack.GetDataForCurrentFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the track data for the current frame.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../MtData/index.html#c4d.modules.motiontracker.MtData" title="c4d.modules.motiontracker.MtData">c4d.modules.motiontracker.MtData</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The tracking data for the current frame, or <strong>None</strong> if it does not exist.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../Mt2dTrackData/index.html" title="c4d.modules.motiontracker.Mt2dTrackData"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../MotionTrackerObject/index.html" title="c4d.modules.motiontracker.MotionTrackerObject"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.modules.motiontracker</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

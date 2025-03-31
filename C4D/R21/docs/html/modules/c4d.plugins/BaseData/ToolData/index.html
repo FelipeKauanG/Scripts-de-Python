@@ -1,0 +1,811 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.plugins.ToolData &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.plugins.BaseDrawHelp" href="../../BaseDrawHelp/index.html" />
+    <link rel="prev" title="c4d.plugins.SculptBrushToolData" href="../SculptBrushToolData/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../BaseDrawHelp/index.html" title="c4d.plugins.BaseDrawHelp"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../SculptBrushToolData/index.html" title="c4d.plugins.SculptBrushToolData"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.plugins</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.plugins.BaseData</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-plugins-tooldata">
+<h1>c4d.plugins.ToolData<a class="headerlink" href="#c4d-plugins-tooldata" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.plugins.ToolData">
+<em class="property">class </em><code class="descclassname">c4d.plugins.</code><code class="descname">ToolData</code><a class="headerlink" href="#c4d.plugins.ToolData" title="Permalink to this definition">¶</a></dt>
+<dd><p>A data class for creating tool plugins. Use <a class="reference internal" href="../../index.html#c4d.plugins.RegisterToolPlugin" title="c4d.plugins.RegisterToolPlugin"><code class="xref py py-func docutils literal notranslate"><span class="pre">RegisterToolPlugin()</span></code></a> to register the tool plugin.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference external" href="https://github.com/PluginCafe/cinema4d_py_sdk_extended/tree/master/plugins/py-liquid_painter_r12/py-liquid_painter_r12.pyp">Py-LiquidPainter</a> plugin example.</p>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#ToolData.InitTool" title="ToolData.InitTool"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ToolData.InitTool(self,</span> <span class="pre">doc,</span> <span class="pre">data,</span> <span class="pre">bt)</span></code></a></td>
+<td>Override - Called each time the tool is selected.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ToolData.FreeTool" title="ToolData.FreeTool"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ToolData.FreeTool(self,</span> <span class="pre">doc,</span> <span class="pre">data)</span></code></a></td>
+<td>Override - Called each time the user chooses another tool.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ToolData.InitDefaultSettings" title="ToolData.InitDefaultSettings"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ToolData.InitDefaultSettings(self,</span> <span class="pre">doc,</span> <span class="pre">data)</span></code></a></td>
+<td>Called to let you initialize the default tool settings in <em>data</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ToolData.MouseInput" title="ToolData.MouseInput"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ToolData.MouseInput(self,</span> <span class="pre">doc,</span> <span class="pre">data,</span> <span class="pre">bd,</span> <span class="pre">...)</span></code></a></td>
+<td>Override - Called when the user clicks with the mouse in any of the editors views.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ToolData.KeyboardInput" title="ToolData.KeyboardInput"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ToolData.KeyboardInput(self,</span> <span class="pre">doc,</span> <span class="pre">data,</span> <span class="pre">bd,</span> <span class="pre">...)</span></code></a></td>
+<td>Override - Called when the user types something in any of the editors views.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ToolData.GetState" title="ToolData.GetState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ToolData.GetState(self,</span> <span class="pre">doc)</span></code></a></td>
+<td>Called to check if the tool should be enabled, checked or not.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ToolData.GetCursorInfo" title="ToolData.GetCursorInfo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ToolData.GetCursorInfo(self,</span> <span class="pre">doc,</span> <span class="pre">data,</span> <span class="pre">bd,</span> <span class="pre">x,</span> <span class="pre">...)</span></code></a></td>
+<td>Called when the cursor is over editor window to get the state of the mouse pointer.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ToolData.Draw" title="ToolData.Draw"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ToolData.Draw(self,</span> <span class="pre">doc,</span> <span class="pre">data,</span> <span class="pre">bd,</span> <span class="pre">...)</span></code></a></td>
+<td>Called when the editor view is updated so you can display graphics for your tool in the view.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ToolData.AllocSubDialog" title="ToolData.AllocSubDialog"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ToolData.AllocSubDialog(self,</span> <span class="pre">bc)</span></code></a></td>
+<td>Called to get a GUI for the Active Tool window. Return an instance of your tool’s dialog.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ToolData.Message" title="ToolData.Message"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ToolData.Message(self,</span> <span class="pre">doc,</span> <span class="pre">data,</span> <span class="pre">type,</span> <span class="pre">...)</span></code></a></td>
+<td>Called when the tool receives messages.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ToolData.GetDDescription" title="ToolData.GetDDescription"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ToolData.GetDDescription(self,</span> <span class="pre">doc,</span> <span class="pre">data,</span> <span class="pre">...)</span></code></a></td>
+<td>Called to add parameters to the description for the tool. Modify the passed description as needed and return the appropriate flags.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ToolData.GetDParameter" title="ToolData.GetDParameter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ToolData.GetDParameter(self,</span> <span class="pre">doc,</span> <span class="pre">data,</span> <span class="pre">id,</span> <span class="pre">flags)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Called to override the reading of description parameters. Necessary for parameters that are not simply stored in the tool’s container e.g. class members.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ToolData.SetDParameter" title="ToolData.SetDParameter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ToolData.SetDParameter(self,</span> <span class="pre">doc,</span> <span class="pre">data,</span> <span class="pre">id,</span> <span class="pre">...)</span></code></a></td>
+<td>Called to override the writing of parameters. Read the passed <em>t_data</em> if the right <em>id</em> is provided, store the data and return the appropriate flags.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ToolData.GetDEnabling" title="ToolData.GetDEnabling"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ToolData.GetDEnabling(self,</span> <span class="pre">doc,</span> <span class="pre">data,</span> <span class="pre">id,</span> <span class="pre">...)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Called to let decide which parameters should be enabled or disabled (ghosted).</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ToolData.TranslateDescID" title="ToolData.TranslateDescID"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ToolData.TranslateDescID(self,</span> <span class="pre">doc,</span> <span class="pre">data,</span> <span class="pre">id)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Called by the Attribute Manager for every tool and every description ID.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../index.html#c4d.plugins.BaseData" title="c4d.plugins.BaseData"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.plugins.BaseData</span></code></a></li>
+</ul>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="ToolData.InitTool">
+<code class="descclassname">ToolData.</code><code class="descname">InitTool</code><span class="sig-paren">(</span><em>self</em>, <em>doc</em>, <em>data</em>, <em>bt</em><span class="sig-paren">)</span><a class="headerlink" href="#ToolData.InitTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override - Called each time the tool is selected.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>doc</strong> (<a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The active document.</li>
+<li><strong>data</strong> (<a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The original tool settings container.</li>
+<li><strong>bt</strong> (<a class="reference internal" href="../../../c4d.threading/BaseThread/index.html#c4d.threading.BaseThread" title="c4d.threading.BaseThread"><em>c4d.threading.BaseThread</em></a>) – The calling thread.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if there was no error, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ToolData.FreeTool">
+<code class="descclassname">ToolData.</code><code class="descname">FreeTool</code><span class="sig-paren">(</span><em>self</em>, <em>doc</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#ToolData.FreeTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override - Called each time the user chooses another tool.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>doc</strong> (<a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The active document.</li>
+<li><strong>data</strong> (<a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The original tool settings container.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ToolData.InitDefaultSettings">
+<code class="descclassname">ToolData.</code><code class="descname">InitDefaultSettings</code><span class="sig-paren">(</span><em>self</em>, <em>doc</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#ToolData.InitDefaultSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to let you initialize the default tool settings in <em>data</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>doc</strong> (<a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The currently active document.</li>
+<li><strong>data</strong> (<a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The tool settings container.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ToolData.MouseInput">
+<code class="descclassname">ToolData.</code><code class="descname">MouseInput</code><span class="sig-paren">(</span><em>self</em>, <em>doc</em>, <em>data</em>, <em>bd</em>, <em>win</em>, <em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#ToolData.MouseInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override - Called when the user clicks with the mouse in any of the editors views.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>doc</strong> (<a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The currently active document.</li>
+<li><strong>data</strong> (<a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The tool settings container.</li>
+<li><strong>bd</strong> (<a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#c4d.BaseDraw" title="c4d.BaseDraw"><em>c4d.BaseDraw</em></a>) – The <a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#c4d.BaseDraw" title="c4d.BaseDraw"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDraw</span></code></a> object for the active editor view.</li>
+<li><strong>win</strong> (<a class="reference internal" href="../../../c4d.gui/EditorWindow/index.html#c4d.gui.EditorWindow" title="c4d.gui.EditorWindow"><em>c4d.gui.EditorWindow</em></a>) – The <a class="reference internal" href="../../../c4d.gui/EditorWindow/index.html#c4d.gui.EditorWindow" title="c4d.gui.EditorWindow"><code class="xref py py-class docutils literal notranslate"><span class="pre">EditorWindow</span></code></a> object for the active editor view.</li>
+<li><strong>msg</strong> (<a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The original message container.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>False</strong> if a problem occured during this function.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ToolData.KeyboardInput">
+<code class="descclassname">ToolData.</code><code class="descname">KeyboardInput</code><span class="sig-paren">(</span><em>self</em>, <em>doc</em>, <em>data</em>, <em>bd</em>, <em>win</em>, <em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#ToolData.KeyboardInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override - Called when the user types something in any of the editors views.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Make sure that you only use this function when the user is somehow working with your plugin, so that other plugins can also use this hook when it is their turn.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>doc</strong> (<a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The currently active document.</li>
+<li><strong>data</strong> (<a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The tool settings container.</li>
+<li><strong>bd</strong> (<a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#c4d.BaseDraw" title="c4d.BaseDraw"><em>c4d.BaseDraw</em></a>) – The <a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#c4d.BaseDraw" title="c4d.BaseDraw"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDraw</span></code></a> object for the active editor view.</li>
+<li><strong>win</strong> (<a class="reference internal" href="../../../c4d.gui/EditorWindow/index.html#c4d.gui.EditorWindow" title="c4d.gui.EditorWindow"><em>c4d.gui.EditorWindow</em></a>) – The <a class="reference internal" href="../../../c4d.gui/EditorWindow/index.html#c4d.gui.EditorWindow" title="c4d.gui.EditorWindow"><code class="xref py py-class docutils literal notranslate"><span class="pre">EditorWindow</span></code></a> object for the active editor view.</li>
+<li><strong>msg</strong> (<a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The original message container.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>False</strong> if a problem occured during this function.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ToolData.GetState">
+<code class="descclassname">ToolData.</code><code class="descname">GetState</code><span class="sig-paren">(</span><em>self</em>, <em>doc</em><span class="sig-paren">)</span><a class="headerlink" href="#ToolData.GetState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to check if the tool should be enabled, checked or not.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>doc</strong> (<a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document the tool is being used in.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The return flags:<table border="1" class="docutils">
+<colgroup>
+<col width="62%" />
+<col width="38%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>CMD_ENABLED</em></td>
+<td>Enabled.</td>
+</tr>
+<tr class="row-even"><td><em>CMD_VALUE</em></td>
+<td>Checked.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ToolData.GetCursorInfo">
+<code class="descclassname">ToolData.</code><code class="descname">GetCursorInfo</code><span class="sig-paren">(</span><em>self</em>, <em>doc</em>, <em>data</em>, <em>bd</em>, <em>x</em>, <em>y</em>, <em>bc</em><span class="sig-paren">)</span><a class="headerlink" href="#ToolData.GetCursorInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when the cursor is over editor window to get the state of the mouse pointer.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference external" href="https://github.com/PluginCafe/cinema4d_py_sdk_extended/tree/master/plugins/py-liquid_painter_r12/py-liquid_painter_r12.pyp#L232">Py-LiquidPainter</a> change the cursor and the bubble help string.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>doc</strong> (<a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The currently active document.</li>
+<li><strong>data</strong> (<a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The tool settings container.</li>
+<li><strong>bd</strong> (<a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#c4d.BaseDraw" title="c4d.BaseDraw"><em>c4d.BaseDraw</em></a>) – The <a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#c4d.BaseDraw" title="c4d.BaseDraw"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDraw</span></code></a> object for the active editor view.</li>
+<li><strong>x</strong> (<em>float</em>) – The x coordinate of the mouse cursor relative to the top-left of the currently active editor view.</li>
+<li><strong>y</strong> (<em>float</em>) – The y coordinate of the mouse cursor relative to the top-left of the currently active editor view.</li>
+<li><strong>bc</strong> (<a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – <p>The container to store the result in. Use the following container IDs:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="3%" />
+<col width="76%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>RESULT_BUBBLEHELP_TITLE</em></td>
+<td>str</td>
+<td>Bubble help text title. Printed in bold for the bubble help, not visible in the status bar.</td>
+</tr>
+<tr class="row-even"><td><em>RESULT_BUBBLEHELP</em></td>
+<td>str</td>
+<td>Bubble text help.</td>
+</tr>
+<tr class="row-odd"><td><em>RESULT_CURSOR</em></td>
+<td>int</td>
+<td>Mouse cursor: <a class="reference internal" href="../../../../consts/MOUSE.html"><span class="doc">MOUSE</span></a>.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>False</strong> if a problem occured during this function.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ToolData.Draw">
+<code class="descclassname">ToolData.</code><code class="descname">Draw</code><span class="sig-paren">(</span><em>self</em>, <em>doc</em>, <em>data</em>, <em>bd</em>, <em>bh</em>, <em>bt</em>, <em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#ToolData.Draw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when the editor view is updated so you can display graphics for your tool in the view.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>doc</strong> (<a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The active document.</li>
+<li><strong>data</strong> (<a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The tool settings container.</li>
+<li><strong>bd</strong> (<a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#c4d.BaseDraw" title="c4d.BaseDraw"><em>c4d.BaseDraw</em></a>) – The <a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#c4d.BaseDraw" title="c4d.BaseDraw"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDraw</span></code></a> object for the active editor view.</li>
+<li><strong>bh</strong> (<a class="reference internal" href="../../BaseDrawHelp/index.html#c4d.plugins.BaseDrawHelp" title="c4d.plugins.BaseDrawHelp"><em>c4d.plugins.BaseDrawHelp</em></a>) – The helper for the editor’s view. The caller owns the pointed base draw helper.</li>
+<li><strong>flags</strong> (<em>int</em>) – <p>The flags are:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="86%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>TOOLDRAWFLAGS_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>TOOLDRAWFLAGS_INVERSE_Z</em></td>
+<td><div class="first last line-block">
+<div class="line">Inverse Z-buffer mode. If set, the drawing engine of Cinema 4D will only draw elements if they are further away from the camera than other objects.</div>
+<div class="line">This is mostly used for help lines (such as the semi-transparent axis inside of objects).
+.. note:: This mode only works when all objects are drawn so it should be passed last.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>TOOLDRAWFLAGS_HIGHLIGHT</em></td>
+<td>Highlight mode.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>bt</strong> (<a class="reference internal" href="../../../c4d.threading/BaseThread/index.html#c4d.threading.BaseThread" title="c4d.threading.BaseThread"><em>c4d.threading.BaseThread</em></a>) – The calling thread.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>The values for this are:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="66%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>TOOLDRAW_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>TOOLDRAW_HANDLES</em></td>
+<td>The active objects handles will be drawn.</td>
+</tr>
+<tr class="row-odd"><td><em>TOOLDRAW_AXIS</em></td>
+<td>The active objects axes will be drawn.</td>
+</tr>
+<tr class="row-even"><td><em>TOOLDRAW_HIGHLIGHTS</em></td>
+<td>The highlights will be drawn.</td>
+</tr>
+</tbody>
+</table>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ToolData.AllocSubDialog">
+<code class="descclassname">ToolData.</code><code class="descname">AllocSubDialog</code><span class="sig-paren">(</span><em>self</em>, <em>bc</em><span class="sig-paren">)</span><a class="headerlink" href="#ToolData.AllocSubDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to get a GUI for the Active Tool window. Return an instance of your tool’s dialog.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>bc</strong> (<a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – Currently not used.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d.gui/GeDialog/SubDialog/index.html#c4d.gui.SubDialog" title="c4d.gui.SubDialog">c4d.gui.SubDialog</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The allocated sub dialog.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ToolData.Message">
+<code class="descclassname">ToolData.</code><code class="descname">Message</code><span class="sig-paren">(</span><em>self</em>, <em>doc</em>, <em>data</em>, <em>type</em>, <em>t_data</em><span class="sig-paren">)</span><a class="headerlink" href="#ToolData.Message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when the tool receives messages.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../../../../consts/MSG_PLUGINS.html"><span class="doc">MSG</span></a> for the information on the messages type, data and input/output.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>doc</strong> (<a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The current document.</li>
+<li><strong>data</strong> (<a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The current tool data.</li>
+<li><strong>type</strong> (<em>int</em>) – The message type.</li>
+<li><strong>t_data</strong> (<em>any</em>) – Depends on <em>type</em>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Depends on the message <em>type</em>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ToolData.GetDDescription">
+<code class="descclassname">ToolData.</code><code class="descname">GetDDescription</code><span class="sig-paren">(</span><em>self</em>, <em>doc</em>, <em>data</em>, <em>description</em>, <em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#ToolData.GetDDescription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to add parameters to the description for the tool. Modify the passed description as needed and return the appropriate flags.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.011.</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If only a description resource is used it is not needed to overload <a class="reference internal" href="#ToolData.GetDDescription" title="ToolData.GetDDescription"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetDDescription()</span></code></a>.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../NodeData/index.html#NodeData.GetDDescription" title="NodeData.GetDDescription"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NodeData.GetDDescription()</span></code></a></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>doc</strong> (<a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The active document.</li>
+<li><strong>data</strong> (<a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The tool settings container.</li>
+<li><strong>description</strong> (<a class="reference internal" href="../../../c4d/Description/index.html#c4d.Description" title="c4d.Description"><em>c4d.Description</em></a>) – The description to add the parameters to.</li>
+<li><strong>flags</strong> (<em>int</em>) – <p>The flags for the description operation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>DESCFLAGS_DESC_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>DESCFLAGS_DESC_RESOLVEMULTIPLEDATA</em></td>
+<td>Private and unused.</td>
+</tr>
+<tr class="row-odd"><td><em>DESCFLAGS_DESC_LOADED</em></td>
+<td>Set if elements have been added to the description, either by loading or manual addition.</td>
+</tr>
+<tr class="row-even"><td><em>DESCFLAGS_DESC_RECURSIONLOCK</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-odd"><td><em>DESCFLAGS_DESC_DONTLOADDEFAULT</em></td>
+<td>If set, the object description will also contain the tag’s descriptions (as sub-containers).</td>
+</tr>
+<tr class="row-even"><td><em>DESCFLAGS_DESC_MAPTAGS</em></td>
+<td>If specified, the object description will also contain the tag’s descriptions (as sub-containers).</td>
+</tr>
+<tr class="row-odd"><td><em>DESCFLAGS_DESC_NEEDDEFAULTVALUE</em></td>
+<td>Set if <cite>“Reset to Default”</cite> was called by the user.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool or tuple(bool, int)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>One of these options:</p>
+<div class="line-block">
+<div class="line">bool: <strong>True</strong> if successful, otherwise <strong>False</strong>. Useful in error state to only return <strong>False</strong>.</div>
+<div class="line">tuple(bool, int): The status (<strong>True</strong> if successful, otherwise <strong>False</strong>) and description flags (<em>DESCFLAGS_DESC</em>).</div>
+</div>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ToolData.GetDParameter">
+<code class="descclassname">ToolData.</code><code class="descname">GetDParameter</code><span class="sig-paren">(</span><em>self</em>, <em>doc</em>, <em>data</em>, <em>id</em>, <em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#ToolData.GetDParameter" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Called to override the reading of description parameters. Necessary for parameters that are not simply stored in the tool’s container e.g. class members.</div>
+<div class="line">Return the parameter data and the appropriate flags if the right <em>id</em> is provided.</div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.011.</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If only a description resource is used it is not needed to overload <a class="reference internal" href="#ToolData.GetDParameter" title="ToolData.GetDParameter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetDParameter()</span></code></a>.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../NodeData/index.html#NodeData.GetDParameter" title="NodeData.GetDParameter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NodeData.GetDParameter()</span></code></a></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>doc</strong> (<a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The active document.</li>
+<li><strong>data</strong> (<a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The tool settings container.</li>
+<li><strong>id</strong> (<a class="reference internal" href="../../../c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><em>c4d.DescID</em></a>) – The ID of the parameter.</li>
+<li><strong>flags</strong> (<em>int</em>) – <p>The flags for the description operation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="28%" />
+<col width="72%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>DESCFLAGS_GET_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>DESCFLAGS_GET_PARAM_GET</em></td>
+<td>Parameter retrieved.</td>
+</tr>
+<tr class="row-odd"><td><em>DESCFLAGS_GET_NO_GEDATADEFAULTVALUE</em></td>
+<td>If set, the C++ <cite>GeData</cite> default type will not be initialized for <a class="reference internal" href="../../../c4d/C4DAtom/index.html#C4DAtom.GetParameter" title="C4DAtom.GetParameter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">C4DAtom.GetParameter()</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>DESCFLAGS_GET_NO_GLOBALDATA</em></td>
+<td>Private.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool or tuple(bool, any, int)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>One of these options:</p>
+<div class="line-block">
+<div class="line">bool: <strong>True</strong> if successful, otherwise <strong>False</strong>. Useful in error state to only return <strong>False</strong>.</div>
+<div class="line">tuple(bool, any, int): The status (<strong>True</strong> if successful, otherwise <strong>False</strong>), parameter data and description flags (<em>DESCFLAGS_DESC</em>).</div>
+</div>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ToolData.SetDParameter">
+<code class="descclassname">ToolData.</code><code class="descname">SetDParameter</code><span class="sig-paren">(</span><em>self</em>, <em>doc</em>, <em>data</em>, <em>id</em>, <em>t_data</em>, <em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#ToolData.SetDParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to override the writing of parameters. Read the passed <em>t_data</em> if the right <em>id</em> is provided, store the data and return the appropriate flags.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.011.</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If only a description resource is used it is not needed to overload <a class="reference internal" href="#ToolData.SetDParameter" title="ToolData.SetDParameter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetDParameter()</span></code></a>.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../NodeData/index.html#NodeData.SetDParameter" title="NodeData.SetDParameter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NodeData.SetDParameter()</span></code></a></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>doc</strong> (<a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The active document.</li>
+<li><strong>data</strong> (<a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The tool settings container.</li>
+<li><strong>id</strong> (<a class="reference internal" href="../../../c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><em>c4d.DescID</em></a>) – The ID of the parameter.</li>
+<li><strong>t_data</strong> (<em>any</em>) – The parameter data to set.</li>
+<li><strong>flags</strong> (<em>int</em>) – <p>The flags for the description operation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="86%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>DESCFLAGS_SET_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>DESCFLAGS_SET_PARAM_SET</em></td>
+<td>Parameter set.</td>
+</tr>
+<tr class="row-odd"><td><em>DESCFLAGS_SET_USERINTERACTION</em></td>
+<td>Set when the GUI is calling <a class="reference internal" href="../../../c4d/C4DAtom/index.html#C4DAtom.SetParameter" title="C4DAtom.SetParameter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetParameter()</span></code></a>. This is the only time when <a class="reference internal" href="../../../c4d/C4DAtom/index.html#C4DAtom.SetParameter" title="C4DAtom.SetParameter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetParameter()</span></code></a> is allowed to use user interaction elements (e.g. open dialogs, display messages etc.).</td>
+</tr>
+<tr class="row-even"><td><em>DESCFLAGS_SET_DONTCHECKMINMAX</em></td>
+<td>No check is internally done if the parameter passed is within the [min/max] range of the description, to save some time.</td>
+</tr>
+<tr class="row-odd"><td><em>DESCFLAGS_SET_DONTAFFECTINHERITANCE</em></td>
+<td>No parameter inheritance, for render settings and post effects only.</td>
+</tr>
+<tr class="row-even"><td><em>DESCFLAGS_SET_FORCESET</em></td>
+<td>Forces the set value without <a class="reference internal" href="../../../c4d/C4DAtom/index.html#C4DAtom.GetParameter" title="C4DAtom.GetParameter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetParameter()</span></code></a>/Compare. Use only for calls where for sure the value was changed!</td>
+</tr>
+<tr class="row-odd"><td><em>DESCFLAGS_SET_DONTFREESPLINECACHE</em></td>
+<td>Private.
+.. versionadded:: R16.038</td>
+</tr>
+<tr class="row-even"><td><em>DESCFLAGS_SET_INDRAG</em></td>
+<td>Gadget (e.g. Slider) in dragging mode (not finished). Only used when <em>DESCFLAGS_SET_USERINTERACTION</em> is set.
+.. versionadded:: R17.053</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool or tuple(bool, int)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>One of these options:</p>
+<div class="line-block">
+<div class="line">bool: <strong>True</strong> if successful, otherwise <strong>False</strong>. Useful in error state to only return <strong>False</strong>.</div>
+<div class="line">tuple(bool, int): The status (<strong>True</strong> if successful, otherwise <strong>False</strong>) and description flags (<em>DESCFLAGS_DESC</em>).</div>
+</div>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ToolData.GetDEnabling">
+<code class="descclassname">ToolData.</code><code class="descname">GetDEnabling</code><span class="sig-paren">(</span><em>self</em>, <em>doc</em>, <em>data</em>, <em>id</em>, <em>t_data</em>, <em>flags</em>, <em>itemdesc</em><span class="sig-paren">)</span><a class="headerlink" href="#ToolData.GetDEnabling" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Called to let decide which parameters should be enabled or disabled (ghosted).</div>
+<div class="line">This can be used both for parameters that are stored in the tool’s container and for custom parameters.</div>
+<div class="line"><br /></div>
+<div class="line">Just read the passed <em>t_data</em> if the right <em>id</em> was provided, and return <strong>True</strong> to enable the parameter or <strong>False</strong> to disable it depending on the value.</div>
+<div class="line"><br /></div>
+<div class="line">And if the passed <em>id</em> element is not processed, include a call to the base class method as last return.</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="n">ToolData</span><span class="o">.</span><span class="n">GetDEnabling</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">doc</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">t_data</span><span class="p">,</span> <span class="n">flags</span><span class="p">,</span> <span class="n">itemdesc</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.011.</span></p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../NodeData/index.html#NodeData.GetDEnabling" title="NodeData.GetDEnabling"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NodeData.GetDEnabling()</span></code></a></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>doc</strong> (<a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The active document.</li>
+<li><strong>data</strong> (<a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The tool settings container.</li>
+<li><strong>id</strong> (<a class="reference internal" href="../../../c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><em>c4d.DescID</em></a>) – The ID of the parameter.</li>
+<li><strong>t_data</strong> (<em>any</em>) – The current data for the parameter.</li>
+<li><strong>flags</strong> (<em>int</em>) – Not used.</li>
+<li><strong>itemdesc</strong> (<a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The description, encoded to a container as described in <a class="reference internal" href="../../../c4d/Description/index.html#c4d.Description" title="c4d.Description"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Description</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p><strong>True</strong> if the parameter should be enabled, otherwise <strong>False</strong>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is recommended to include a call to the base class method as last return.</p>
+</div>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ToolData.TranslateDescID">
+<code class="descclassname">ToolData.</code><code class="descname">TranslateDescID</code><span class="sig-paren">(</span><em>self</em>, <em>doc</em>, <em>data</em>, <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#ToolData.TranslateDescID" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Called by the Attribute Manager for every tool and every description ID.</div>
+<div class="line">Gives the opportunity to route a description ID in the description of a tool to another one.</div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.011.</span></p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../NodeData/index.html#NodeData.TranslateDescID" title="NodeData.TranslateDescID"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NodeData.TranslateDescID()</span></code></a></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>doc</strong> (<a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The active document.</li>
+<li><strong>data</strong> (<a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The tool settings container.</li>
+<li><strong>id</strong> (<a class="reference internal" href="../../../c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><em>c4d.DescID</em></a>) – The source description ID.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool or tuple(bool, <a class="reference internal" href="../../../c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><code class="xref py py-class docutils literal notranslate"><span class="pre">DescID</span></code></a>, <a class="reference internal" href="../../../c4d/C4DAtom/index.html#c4d.C4DAtom" title="c4d.C4DAtom"><code class="xref py py-class docutils literal notranslate"><span class="pre">C4DAtom</span></code></a>)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>One of these options:</p>
+<div class="line-block">
+<div class="line">bool: <strong>True</strong> if successful, otherwise <strong>False</strong>. Useful in error state to only return <strong>False</strong>.</div>
+<div class="line">tuple(bool, <a class="reference internal" href="../../../c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><code class="xref py py-class docutils literal notranslate"><span class="pre">DescID</span></code></a>, <a class="reference internal" href="../../../c4d/C4DAtom/index.html#c4d.C4DAtom" title="c4d.C4DAtom"><code class="xref py py-class docutils literal notranslate"><span class="pre">C4DAtom</span></code></a>): The status (<strong>True</strong> if successful, otherwise <strong>False</strong>), target description ID and tool.</div>
+</div>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../BaseDrawHelp/index.html" title="c4d.plugins.BaseDrawHelp"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../SculptBrushToolData/index.html" title="c4d.plugins.SculptBrushToolData"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.plugins</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.plugins.BaseData</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

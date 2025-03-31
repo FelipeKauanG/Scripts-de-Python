@@ -1,0 +1,260 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.sculpting.SculptLayerBase &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.modules.sculpting.SculptFolder" href="../SculptFolder/index.html" />
+    <link rel="prev" title="c4d.modules.sculpting" href="../index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../SculptFolder/index.html" title="c4d.modules.sculpting.SculptFolder"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="c4d.modules.sculpting"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.modules.sculpting</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-sculpting-sculptlayerbase">
+<h1>c4d.modules.sculpting.SculptLayerBase<a class="headerlink" href="#c4d-modules-sculpting-sculptlayerbase" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.sculpting.SculptLayerBase">
+<em class="property">class </em><code class="descclassname">c4d.modules.sculpting.</code><code class="descname">SculptLayerBase</code><a class="headerlink" href="#c4d.modules.sculpting.SculptLayerBase" title="Permalink to this definition">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#SculptLayerBase.Select" title="SculptLayerBase.Select"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptLayerBase.Select(self)</span></code></a></td>
+<td>Select the layer.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SculptLayerBase.IsVisible" title="SculptLayerBase.IsVisible"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptLayerBase.IsVisible(self)</span></code></a></td>
+<td>Check if the layer is currently visible on the sculpt object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SculptLayerBase.SetVisible" title="SculptLayerBase.SetVisible"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptLayerBase.SetVisible(self,</span> <span class="pre">state)</span></code></a></td>
+<td>Set the visibility of this layer on the sculpt object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SculptLayerBase.IsLocked" title="SculptLayerBase.IsLocked"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptLayerBase.IsLocked(self)</span></code></a></td>
+<td>Check if the layer is currently locked on the sculpt object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SculptLayerBase.SetLocked" title="SculptLayerBase.SetLocked"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptLayerBase.SetLocked(self,</span> <span class="pre">state)</span></code></a></td>
+<td>Set the locked status of the layer on the sculpt object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SculptLayerBase.GetStrength" title="SculptLayerBase.GetStrength"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptLayerBase.GetStrength(self)</span></code></a></td>
+<td>Get the currents strength of the layer.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SculptLayerBase.SetStrength" title="SculptLayerBase.SetStrength"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptLayerBase.SetStrength(self,</span> <span class="pre">strength)</span></code></a></td>
+<td>Set the strength of the layer on the sculpt object.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseObject</span></code></a></li>
+</ul>
+<p>Children Classes:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../SculptLayer/index.html#c4d.modules.sculpting.SculptLayer" title="c4d.modules.sculpting.SculptLayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.sculpting.SculptLayer</span></code></a></li>
+<li><a class="reference internal" href="../SculptFolder/index.html#c4d.modules.sculpting.SculptFolder" title="c4d.modules.sculpting.SculptFolder"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.sculpting.SculptFolder</span></code></a></li>
+</ul>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="SculptLayerBase.Select">
+<code class="descclassname">SculptLayerBase.</code><code class="descname">Select</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptLayerBase.Select" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select the layer.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This will only work if the subdivision level is at the same level as this layer.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the layer was selected, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptLayerBase.IsVisible">
+<code class="descclassname">SculptLayerBase.</code><code class="descname">IsVisible</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptLayerBase.IsVisible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the layer is currently visible on the sculpt object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if visible, <strong>False</strong> if invisible.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptLayerBase.SetVisible">
+<code class="descclassname">SculptLayerBase.</code><code class="descname">SetVisible</code><span class="sig-paren">(</span><em>self</em>, <em>state</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptLayerBase.SetVisible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the visibility of this layer on the sculpt object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>state</strong> (<em>bool</em>) – The visibility state.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptLayerBase.IsLocked">
+<code class="descclassname">SculptLayerBase.</code><code class="descname">IsLocked</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptLayerBase.IsLocked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the layer is currently locked on the sculpt object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if locked, <strong>False</strong> if unlocked.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptLayerBase.SetLocked">
+<code class="descclassname">SculptLayerBase.</code><code class="descname">SetLocked</code><span class="sig-paren">(</span><em>self</em>, <em>state</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptLayerBase.SetLocked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the locked status of the layer on the sculpt object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>state</strong> (<em>bool</em>) – The locked state.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptLayerBase.GetStrength">
+<code class="descclassname">SculptLayerBase.</code><code class="descname">GetStrength</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptLayerBase.GetStrength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the currents strength of the layer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The strength value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptLayerBase.SetStrength">
+<code class="descclassname">SculptLayerBase.</code><code class="descname">SetStrength</code><span class="sig-paren">(</span><em>self</em>, <em>strength</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptLayerBase.SetStrength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the strength of the layer on the sculpt object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>strength</strong> (<em>float</em>) – The strength value to set.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../SculptFolder/index.html" title="c4d.modules.sculpting.SculptFolder"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="c4d.modules.sculpting"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.modules.sculpting</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,579 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>maxon.IoConnectionInterface &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="maxon.IoBrowseInterface" href="maxon.IoBrowseInterface.html" />
+    <link rel="prev" title="maxon.IoHandlerInterface" href="maxon.IoHandlerInterface.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="maxon.IoBrowseInterface.html" title="maxon.IoBrowseInterface"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="maxon.IoHandlerInterface.html" title="maxon.IoHandlerInterface"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../maxon/interfaces.html" accesskey="U">MAXON API - Interfaces</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="maxon-ioconnectioninterface">
+<h1>maxon.IoConnectionInterface<a class="headerlink" href="#maxon-ioconnectioninterface" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-maxon.IoConnectionInterface">
+<span id="description"></span><h2>Description<a class="headerlink" href="#module-maxon.IoConnectionInterface" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">The connection interface a given <a class="reference internal" href="../../references/core/maxon.Url.html#module-maxon.Url" title="maxon.Url"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Url</span></code></a>.</div>
+<div class="line">This connection needs to be implemented for each protocol.</div>
+</div>
+</div>
+<div class="section" id="inheritance-diagram">
+<h2>Inheritance diagram<a class="headerlink" href="#inheritance-diagram" title="Permalink to this headline">¶</a></h2>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../core/maxon.DataDictionaryObjectInterface.html#module-maxon.DataDictionaryObjectInterface" title="maxon.DataDictionaryObjectInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DataDictionaryObjectInterface</span></code></a></li>
+</ul>
+<p>Child Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../references/io/maxon.IoConnectionRef.html#module-maxon.IoConnectionRef" title="maxon.IoConnectionRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.IoConnectionRef</span></code></a></li>
+</ul>
+</div>
+<div class="section" id="methods-signature">
+<h2>Methods Signature<a class="headerlink" href="#methods-signature" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.IoConnectionInterface.GetBrowseIterator" title="maxon.IoConnectionInterface.GetBrowseIterator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetBrowseIterator</span></code></a>(flags)</td>
+<td><div class="line-block">
+<div class="line">Returns a <a class="reference internal" href="maxon.IoBrowseInterface.html#module-maxon.IoBrowseInterface" title="maxon.IoBrowseInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.IoBrowseInterface</span></code></a> class to browse through all children of an Url.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.IoConnectionInterface.GetContentLength" title="maxon.IoConnectionInterface.GetContentLength"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetContentLength</span></code></a>()</td>
+<td>Returns length of the content.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.IoConnectionInterface.GetUrl" title="maxon.IoConnectionInterface.GetUrl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetUrl</span></code></a>()</td>
+<td>Returns the corresponding <a class="reference internal" href="../../references/core/maxon.Url.html#module-maxon.Url" title="maxon.Url"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Url</span></code></a> connected to the <a class="reference internal" href="../../references/io/maxon.IoConnectionRef.html#module-maxon.IoConnectionRef" title="maxon.IoConnectionRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.IoConnectionRef</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.IoConnectionInterface.IoCopyFile" title="maxon.IoConnectionInterface.IoCopyFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IoCopyFile</span></code></a>(destName,&nbsp;overwrite,&nbsp;removeReadOnly)</td>
+<td>Copies a file to a different location, the path must exist otherwise the function returns an error.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.IoConnectionInterface.IoCreateDirectory" title="maxon.IoConnectionInterface.IoCreateDirectory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IoCreateDirectory</span></code></a>(createParents[,&nbsp;createDirs])</td>
+<td>Creates a new directory.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.IoConnectionInterface.IoDelete" title="maxon.IoConnectionInterface.IoDelete"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IoDelete</span></code></a>(force)</td>
+<td>Deletes the file physically on the medium.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.IoConnectionInterface.IoDetect" title="maxon.IoConnectionInterface.IoDetect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IoDetect</span></code></a>()</td>
+<td><div class="line-block">
+<div class="line">Detects the type of the <a class="reference internal" href="../../references/core/maxon.Url.html#module-maxon.Url" title="maxon.Url"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Url</span></code></a>.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.IoConnectionInterface.IoGetAttributes" title="maxon.IoConnectionInterface.IoGetAttributes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IoGetAttributes</span></code></a>()</td>
+<td>Returns the file attributes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.IoConnectionInterface.IoGetFreeVolumeSpace" title="maxon.IoConnectionInterface.IoGetFreeVolumeSpace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IoGetFreeVolumeSpace</span></code></a>()</td>
+<td>Calculates the free space on a volume.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.IoConnectionInterface.IoGetTime" title="maxon.IoConnectionInterface.IoGetTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IoGetTime</span></code></a>(mode)</td>
+<td><div class="line-block">
+<div class="line">Returns the <code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DateTime</span></code> of the current file.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.IoConnectionInterface.IoMove" title="maxon.IoConnectionInterface.IoMove"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IoMove</span></code></a>(destName)</td>
+<td><div class="line-block">
+<div class="line">Moves a file or directory (including hierarchy) to a different location.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.IoConnectionInterface.IoRename" title="maxon.IoConnectionInterface.IoRename"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IoRename</span></code></a>(newName)</td>
+<td>Renames a file or directory.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.IoConnectionInterface.IoSetAttributes" title="maxon.IoConnectionInterface.IoSetAttributes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IoSetAttributes</span></code></a>(flags,&nbsp;mask)</td>
+<td>Modify the file attributes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.IoConnectionInterface.IoSetTime" title="maxon.IoConnectionInterface.IoSetTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IoSetTime</span></code></a>(mode,&nbsp;dateTime)</td>
+<td>Modifies the <code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DateTime</span></code> of the current file.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.IoConnectionInterface.IoShowInOS" title="maxon.IoConnectionInterface.IoShowInOS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IoShowInOS</span></code></a>()</td>
+<td><div class="line-block">
+<div class="line">Opens or shows the file in the systems explorer (desktop/finder).</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.IoConnectionInterface.OpenInOutputStream" title="maxon.IoConnectionInterface.OpenInOutputStream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenInOutputStream</span></code></a>([flags])</td>
+<td><div class="line-block">
+<div class="line">Opens an <a class="reference internal" href="../../references/io/maxon.InOutputStreamRef.html#module-maxon.InOutputStreamRef" title="maxon.InOutputStreamRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.InOutputStreamRef</span></code></a> for the given connection.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.IoConnectionInterface.OpenInputStream" title="maxon.IoConnectionInterface.OpenInputStream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenInputStream</span></code></a>([flags])</td>
+<td><div class="line-block">
+<div class="line">Opens an <a class="reference internal" href="../../references/io/maxon.InputStreamRef.html#module-maxon.InputStreamRef" title="maxon.InputStreamRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.InputStreamRef</span></code></a> for the given connection.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.IoConnectionInterface.OpenOutputStream" title="maxon.IoConnectionInterface.OpenOutputStream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenOutputStream</span></code></a>([flags])</td>
+<td><div class="line-block">
+<div class="line">Opens an <a class="reference internal" href="../../references/io/maxon.OutputStreamRef.html#module-maxon.OutputStreamRef" title="maxon.OutputStreamRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.OutputStreamRef</span></code></a> for the given connection.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="methods-definition">
+<h2>Methods Definition<a class="headerlink" href="#methods-definition" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="maxon.IoConnectionInterface.GetBrowseIterator">
+<code class="descclassname">IoConnectionInterface.</code><code class="descname">GetBrowseIterator</code><span class="sig-paren">(</span><em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.IoConnectionInterface.GetBrowseIterator" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns a <a class="reference internal" href="maxon.IoBrowseInterface.html#module-maxon.IoBrowseInterface" title="maxon.IoBrowseInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.IoBrowseInterface</span></code></a> class to browse through all children of an Url.</div>
+<div class="line">The return value needs to be checked against None.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>flags</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.GETBROWSEITERATORFLAGS</span></code>) – Defines how the iterator resolve data.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The iterator.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="maxon.IoBrowseInterface.html#module-maxon.IoBrowseInterface" title="maxon.IoBrowseInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.IoBrowseInterface</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.IoConnectionInterface.GetContentLength">
+<code class="descclassname">IoConnectionInterface.</code><code class="descname">GetContentLength</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.IoConnectionInterface.GetContentLength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns length of the content.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The effective size in bytes of the <a class="reference internal" href="#module-maxon.IoConnectionInterface" title="maxon.IoConnectionInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.IoConnectionInterface</span></code></a> (e.g. filesize).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.IoConnectionInterface.GetUrl">
+<code class="descclassname">IoConnectionInterface.</code><code class="descname">GetUrl</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.IoConnectionInterface.GetUrl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the corresponding <a class="reference internal" href="../../references/core/maxon.Url.html#module-maxon.Url" title="maxon.Url"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Url</span></code></a> connected to the <a class="reference internal" href="../../references/io/maxon.IoConnectionRef.html#module-maxon.IoConnectionRef" title="maxon.IoConnectionRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.IoConnectionRef</span></code></a>.
+:return: Returns the name of the connection.
+:rtype: <a class="reference internal" href="../../references/core/maxon.Url.html#module-maxon.Url" title="maxon.Url"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Url</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.IoConnectionInterface.IoCopyFile">
+<code class="descclassname">IoConnectionInterface.</code><code class="descname">IoCopyFile</code><span class="sig-paren">(</span><em>destName</em>, <em>overwrite</em>, <em>removeReadOnly</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.IoConnectionInterface.IoCopyFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies a file to a different location, the path must exist otherwise the function returns an error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>destName</strong> (<a class="reference internal" href="../../references/core/maxon.Url.html#module-maxon.Url" title="maxon.Url"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Url</span></code></a>) – Destination name for the copy operation.</li>
+<li><strong>overwrite</strong> (<em>bool</em>) – True to allow overwriting destName file if it was already there.</li>
+<li><strong>removeReadOnly</strong> (<em>bool</em>) – True to remove the read only flag on the newly created copy.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.IoConnectionInterface.IoCreateDirectory">
+<code class="descclassname">IoConnectionInterface.</code><code class="descname">IoCreateDirectory</code><span class="sig-paren">(</span><em>createParents</em>, <em>createDirs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.IoConnectionInterface.IoCreateDirectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new directory.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The function returns false if the directory already exists.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>createParents</strong> (<em>bool</em>) – Check if parent directory exists and if not create them recursively.</li>
+<li><strong>createDirs</strong> (<a class="reference internal" href="../../datatypes/collection/maxon.BaseArray.html#module-maxon.BaseArray" title="maxon.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.BaseArray</span></code></a> (<a class="reference internal" href="../../references/core/maxon.Url.html#module-maxon.Url" title="maxon.Url"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Url</span></code></a>)) – <div class="line-block">
+<div class="line">An array that will contain all newly created subdirectories in the order in which they
+were created.</div>
+<div class="line">If this parameter is None it will be ignored.</div>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.IoConnectionInterface.IoDelete">
+<code class="descclassname">IoConnectionInterface.</code><code class="descname">IoDelete</code><span class="sig-paren">(</span><em>force</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.IoConnectionInterface.IoDelete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the file physically on the medium.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>force</strong> – True tries to deletes the file/directory even if the file/directory has read only flags set.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if the file/directory could be removed successfully.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.IoConnectionInterface.IoDetect">
+<code class="descclassname">IoConnectionInterface.</code><code class="descname">IoDetect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.IoConnectionInterface.IoDetect" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Detects the type of the <a class="reference internal" href="../../references/core/maxon.Url.html#module-maxon.Url" title="maxon.Url"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Url</span></code></a>.</div>
+<div class="line">This allows to check if a file or directory exists.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Flags defining the detection state.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../enums/maxon.IODETECT.html#module-maxon.IODETECT" title="maxon.IODETECT"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.IODETECT</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.IoConnectionInterface.IoGetAttributes">
+<code class="descclassname">IoConnectionInterface.</code><code class="descname">IoGetAttributes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.IoConnectionInterface.IoGetAttributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the file attributes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">IOATTRIBUTES of the files.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../enums/maxon.IOATTRIBUTES.html#module-maxon.IOATTRIBUTES" title="maxon.IOATTRIBUTES"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.IOATTRIBUTES</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.IoConnectionInterface.IoGetFreeVolumeSpace">
+<code class="descclassname">IoConnectionInterface.</code><code class="descname">IoGetFreeVolumeSpace</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.IoConnectionInterface.IoGetFreeVolumeSpace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the free space on a volume.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <a class="reference internal" href="../../references/core/maxon.Url.html#module-maxon.Url" title="maxon.Url"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Url</span></code></a> can point to a volume or directory.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">In the next order:<ol class="arabic simple">
+<li>The number of available bytes on the volume.</li>
+<li>The total size of the volume in bytes.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">tuple(int, int)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.IoConnectionInterface.IoGetTime">
+<code class="descclassname">IoConnectionInterface.</code><code class="descname">IoGetTime</code><span class="sig-paren">(</span><em>mode</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.IoConnectionInterface.IoGetTime" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns the <code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DateTime</span></code> of the current file.</div>
+<div class="line">The time is in local time.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mode</strong> (<a class="reference internal" href="../../enums/maxon.IOTIMEMODE.html#module-maxon.IOTIMEMODE" title="maxon.IOTIMEMODE"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.IOTIMEMODE</span></code></a>) – IOTIMEMODE of the requested time.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Returns the <code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DateTime</span></code> or an error.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../datatypes/time/maxon.UniversalDateTime.html#module-maxon.UniversalDateTime" title="maxon.UniversalDateTime"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.UniversalDateTime</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.IoConnectionInterface.IoMove">
+<code class="descclassname">IoConnectionInterface.</code><code class="descname">IoMove</code><span class="sig-paren">(</span><em>destName</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.IoConnectionInterface.IoMove" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Moves a file or directory (including hierarchy) to a different location.</div>
+<div class="line">The path must exist otherwise the function returns an error.</div>
+<div class="line"><br /></div>
+<div class="line">If the destName file or directory does already exist the function returns with an error.</div>
+<div class="line"><br /></div>
+<div class="line">Moving a file or directory on the same partition will perform without a temporary copy.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>destName</strong> (<a class="reference internal" href="../../references/core/maxon.Url.html#module-maxon.Url" title="maxon.Url"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Url</span></code></a>) – Destination name for the move operation.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.IoConnectionInterface.IoRename">
+<code class="descclassname">IoConnectionInterface.</code><code class="descname">IoRename</code><span class="sig-paren">(</span><em>newName</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.IoConnectionInterface.IoRename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Renames a file or directory.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The newName must not be the name of an existing file or directory.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>newName</strong> – New name for the rename operation.</li>
+<li><strong>newName</strong> – <a class="reference internal" href="../../references/core/maxon.Url.html#module-maxon.Url" title="maxon.Url"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Url</span></code></a></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.IoConnectionInterface.IoSetAttributes">
+<code class="descclassname">IoConnectionInterface.</code><code class="descname">IoSetAttributes</code><span class="sig-paren">(</span><em>flags</em>, <em>mask</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.IoConnectionInterface.IoSetAttributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modify the file attributes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>flags</strong> – Flags to set/clear.</li>
+<li><strong>flags</strong> – <a class="reference internal" href="../../enums/maxon.IOATTRIBUTES.html#module-maxon.IOATTRIBUTES" title="maxon.IOATTRIBUTES"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.IOATTRIBUTES</span></code></a></li>
+<li><strong>mask</strong> – Mask with all flags to be changed.</li>
+<li><strong>mask</strong> – <a class="reference internal" href="../../enums/maxon.IOATTRIBUTES.html#module-maxon.IOATTRIBUTES" title="maxon.IOATTRIBUTES"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.IOATTRIBUTES</span></code></a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.IoConnectionInterface.IoSetTime">
+<code class="descclassname">IoConnectionInterface.</code><code class="descname">IoSetTime</code><span class="sig-paren">(</span><em>mode</em>, <em>dateTime</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.IoConnectionInterface.IoSetTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modifies the <code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DateTime</span></code> of the current file. the time is in local time.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>mode</strong> (<a class="reference internal" href="../../enums/maxon.IOTIMEMODE.html#module-maxon.IOTIMEMODE" title="maxon.IOTIMEMODE"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.IOTIMEMODE</span></code></a>) – IOTIMEMODE of the requested time.</li>
+<li><strong>dateTime</strong> (<a class="reference internal" href="../../datatypes/time/maxon.UniversalDateTime.html#module-maxon.UniversalDateTime" title="maxon.UniversalDateTime"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.UniversalDateTime</span></code></a>) – New datetime for the file.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.IoConnectionInterface.IoShowInOS">
+<code class="descclassname">IoConnectionInterface.</code><code class="descname">IoShowInOS</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.IoConnectionInterface.IoShowInOS" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Opens or shows the file in the systems explorer (desktop/finder).</div>
+<div class="line"><br /></div>
+<div class="line">Under windows that would be on the desktop/explorer.</div>
+<div class="line">Under OSX this would be the Finder.</div>
+<div class="line"><br /></div>
+<div class="line">Depending on the url scheme this could also open another browser.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>flags</strong> (<a class="reference internal" href="../../enums/maxon.IOSHOWINOSFLAGS.html#module-maxon.IOSHOWINOSFLAGS" title="maxon.IOSHOWINOSFLAGS"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.IOSHOWINOSFLAGS</span></code></a>) – Flags to define how to show/open that file.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.IoConnectionInterface.OpenInOutputStream">
+<code class="descclassname">IoConnectionInterface.</code><code class="descname">OpenInOutputStream</code><span class="sig-paren">(</span><em>flags=maxon.OPENSTREAMFLAGS.NONE</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.IoConnectionInterface.OpenInOutputStream" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Opens an <a class="reference internal" href="../../references/io/maxon.InOutputStreamRef.html#module-maxon.InOutputStreamRef" title="maxon.InOutputStreamRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.InOutputStreamRef</span></code></a> for the given connection.</div>
+<div class="line">With this kind of streams it’s possible to read/write to it.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>flags</strong> (<a class="reference internal" href="../../enums/maxon.OPENSTREAMFLAGS.html#module-maxon.OPENSTREAMFLAGS" title="maxon.OPENSTREAMFLAGS"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.OPENSTREAMFLAGS</span></code></a>) – Defines how the stream will be handled.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">An input stream, should be free with <code class="xref py py-func docutils literal notranslate"><span class="pre">ObjectInterface.Free()</span></code>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../references/io/maxon.InOutputStreamRef.html#module-maxon.InOutputStreamRef" title="maxon.InOutputStreamRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.InOutputStreamRef</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.IoConnectionInterface.OpenInputStream">
+<code class="descclassname">IoConnectionInterface.</code><code class="descname">OpenInputStream</code><span class="sig-paren">(</span><em>flags=maxon.OPENSTREAMFLAGS.NONE</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.IoConnectionInterface.OpenInputStream" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Opens an <a class="reference internal" href="../../references/io/maxon.InputStreamRef.html#module-maxon.InputStreamRef" title="maxon.InputStreamRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.InputStreamRef</span></code></a> for the given connection.</div>
+<div class="line">With this kind of streams it’s only possible to read from it.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>flags</strong> (<a class="reference internal" href="../../enums/maxon.OPENSTREAMFLAGS.html#module-maxon.OPENSTREAMFLAGS" title="maxon.OPENSTREAMFLAGS"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.OPENSTREAMFLAGS</span></code></a>) – Defines how the stream will be handled.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">An input stream, should be free with <code class="xref py py-func docutils literal notranslate"><span class="pre">ObjectInterface.Free()</span></code>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../references/io/maxon.InputStreamRef.html#module-maxon.InputStreamRef" title="maxon.InputStreamRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.InputStreamRef</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.IoConnectionInterface.OpenOutputStream">
+<code class="descclassname">IoConnectionInterface.</code><code class="descname">OpenOutputStream</code><span class="sig-paren">(</span><em>flags=maxon.OPENSTREAMFLAGS.NONE</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.IoConnectionInterface.OpenOutputStream" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Opens an <a class="reference internal" href="../../references/io/maxon.OutputStreamRef.html#module-maxon.OutputStreamRef" title="maxon.OutputStreamRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.OutputStreamRef</span></code></a> for the given connection.</div>
+<div class="line">With this kind of streams it’s only possible to write to it.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>flags</strong> (<a class="reference internal" href="../../enums/maxon.OPENSTREAMFLAGS.html#module-maxon.OPENSTREAMFLAGS" title="maxon.OPENSTREAMFLAGS"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.OPENSTREAMFLAGS</span></code></a>) – Defines how the stream will be handled.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">An input stream, should be free with <code class="xref py py-func docutils literal notranslate"><span class="pre">ObjectInterface.Free()</span></code>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../references/io/maxon.OutputStreamRef.html#module-maxon.OutputStreamRef" title="maxon.OutputStreamRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.OutputStreamRef</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">maxon.IoConnectionInterface</a><ul>
+<li><a class="reference internal" href="#module-maxon.IoConnectionInterface">Description</a></li>
+<li><a class="reference internal" href="#inheritance-diagram">Inheritance diagram</a></li>
+<li><a class="reference internal" href="#methods-signature">Methods Signature</a></li>
+<li><a class="reference internal" href="#methods-definition">Methods Definition</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="maxon.IoBrowseInterface.html" title="maxon.IoBrowseInterface"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="maxon.IoHandlerInterface.html" title="maxon.IoHandlerInterface"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../maxon/interfaces.html" >MAXON API - Interfaces</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

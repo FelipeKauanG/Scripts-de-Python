@@ -1,0 +1,154 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.plugins.PreferenceData &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="c4d.plugins.SceneLoaderData" href="../SceneLoaderData/index.html" />
+    <link rel="prev" title="c4d.plugins.ObjectData" href="../ObjectData/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../SceneLoaderData/index.html" title="c4d.plugins.SceneLoaderData"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../ObjectData/index.html" title="c4d.plugins.ObjectData"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../index.html" >c4d.plugins</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../index.html" >c4d.plugins.BaseData</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../index.html" accesskey="U">c4d.plugins.NodeData</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-plugins-preferencedata">
+<h1>c4d.plugins.PreferenceData<a class="headerlink" href="#c4d-plugins-preferencedata" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.plugins.PreferenceData">
+<em class="property">class </em><code class="descclassname">c4d.plugins.</code><code class="descname">PreferenceData</code><a class="headerlink" href="#c4d.plugins.PreferenceData" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Defines a new preference category in the Cinema 4D preference dialog.</div>
+<div class="line">Register this type of plugin with <a class="reference internal" href="../../../index.html#c4d.plugins.RegisterPreferencePlugin" title="c4d.plugins.RegisterPreferencePlugin"><code class="xref py py-func docutils literal notranslate"><span class="pre">RegisterPreferencePlugin()</span></code></a>.</div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#PreferenceData.InitPreferenceValue" title="PreferenceData.InitPreferenceValue"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PreferenceData.InitPreferenceValue(self,</span> <span class="pre">id,</span> <span class="pre">data,</span> <span class="pre">desc,</span> <span class="pre">...)</span></code></a></td>
+<td>Initializes preference values in <em>bc</em>.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../index.html#c4d.plugins.NodeData" title="c4d.plugins.NodeData"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.plugins.NodeData</span></code></a></li>
+</ul>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="PreferenceData.InitPreferenceValue">
+<code class="descclassname">PreferenceData.</code><code class="descname">InitPreferenceValue</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>data</em>, <em>desc</em>, <em>descid</em>, <em>bc</em><span class="sig-paren">)</span><a class="headerlink" href="#PreferenceData.InitPreferenceValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes preference values in <em>bc</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<em>int</em>) – The world container ID of the preference parameter.</li>
+<li><strong>data</strong> (<em>any</em>) – The value used for the initialization.</li>
+<li><strong>desc</strong> (<a class="reference internal" href="../../../../c4d/Description/index.html#c4d.Description" title="c4d.Description"><em>c4d.Description</em></a>) – The description of the preference hook. If <strong>None</strong>, <em>id</em> is used instead of <em>descid</em>.</li>
+<li><strong>descid</strong> (<a class="reference internal" href="../../../../c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><em>c4d.DescID</em></a>) – The description ID of the preference parameter.</li>
+<li><strong>bc</strong> (<a class="reference internal" href="../../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The preference world container. A plugin should always store its parameters in a sub-container in the world container.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../SceneLoaderData/index.html" title="c4d.plugins.SceneLoaderData"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../ObjectData/index.html" title="c4d.plugins.ObjectData"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../index.html" >c4d.plugins</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../index.html" >c4d.plugins.BaseData</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../index.html" >c4d.plugins.NodeData</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

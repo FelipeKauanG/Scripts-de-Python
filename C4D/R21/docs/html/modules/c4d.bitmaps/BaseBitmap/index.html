@@ -1,0 +1,1895 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.bitmaps.BaseBitmap &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="c4d.bitmaps.MultipassBitmap" href="MultipassBitmap/index.html" />
+    <link rel="prev" title="c4d.bitmaps" href="../index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="MultipassBitmap/index.html" title="c4d.bitmaps.MultipassBitmap"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="c4d.bitmaps"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">c4d.bitmaps</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-bitmaps-basebitmap">
+<h1>c4d.bitmaps.BaseBitmap<a class="headerlink" href="#c4d-bitmaps-basebitmap" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.bitmaps.BaseBitmap">
+<em class="property">class </em><code class="descclassname">c4d.bitmaps.</code><code class="descname">BaseBitmap</code><a class="headerlink" href="#c4d.bitmaps.BaseBitmap" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The bitmap class can be used to load, read, draw and save bitmap pictures of various formats.</div>
+<div class="line">Be sure to call <a class="reference internal" href="#BaseBitmap.Init" title="BaseBitmap.Init"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.Init()</span></code></a> before you attempt to use a newly allocated bitmap.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Bitmaps are organized so that x = y = 0 is the top left corner.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Though the bitmap class can work with other bit depths than 24 and 32, please note that only these function support other bit depths: <a class="reference internal" href="#BaseBitmap.GetBw" title="BaseBitmap.GetBw"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetBw()</span></code></a>, <a class="reference internal" href="#BaseBitmap.GetBh" title="BaseBitmap.GetBh"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetBh()</span></code></a>, <a class="reference internal" href="#BaseBitmap.GetBt" title="BaseBitmap.GetBt"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetBt()</span></code></a>, <a class="reference internal" href="#BaseBitmap.GetBpz" title="BaseBitmap.GetBpz"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetBpz()</span></code></a>, <a class="reference internal" href="#BaseBitmap.Init" title="BaseBitmap.Init"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.Init()</span></code></a>, <a class="reference internal" href="#BaseBitmap.GetPixelCnt" title="BaseBitmap.GetPixelCnt"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetPixelCnt()</span></code></a>, <a class="reference internal" href="#BaseBitmap.SetPixelCnt" title="BaseBitmap.SetPixelCnt"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.SetPixelCnt()</span></code></a>, <a class="reference internal" href="#BaseBitmap.SetCMAP" title="BaseBitmap.SetCMAP"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.SetCMAP()</span></code></a>, <a class="reference internal" href="#BaseBitmap.AddChannel" title="BaseBitmap.AddChannel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.AddChannel()</span></code></a>, <a class="reference internal" href="#BaseBitmap.RemoveChannel" title="BaseBitmap.RemoveChannel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.RemoveChannel()</span></code></a>, <a class="reference internal" href="#BaseBitmap.GetAlphaPixel" title="BaseBitmap.GetAlphaPixel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetAlphaPixel()</span></code></a>, <a class="reference internal" href="#BaseBitmap.SetAlphaPixel" title="BaseBitmap.SetAlphaPixel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.SetAlphaPixel()</span></code></a>, <a class="reference internal" href="#BaseBitmap.GetChannelCount" title="BaseBitmap.GetChannelCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetChannelCount()</span></code></a>, <a class="reference internal" href="#BaseBitmap.GetChannelNum" title="BaseBitmap.GetChannelNum"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetChannelNum()</span></code></a> (to use higher bit depths or multiple channels, see <a class="reference internal" href="MultipassBitmap/index.html#c4d.bitmaps.MultipassBitmap" title="c4d.bitmaps.MultipassBitmap"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultipassBitmap</span></code></a>).</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference external" href="https://github.com/PluginCafe/cinema4d_py_sdk_extended/tree/master/scripts/03_application_development/files_media/copy_32bits_image_r13.py">Copy32BitImage.py</a> for an example showing how to copy the internal data of an image to a new one.</p>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><p class="rubric">Magic Methods</p>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BaseBitmap.__init__" title="BaseBitmap.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.__init__(self,)</span></code></a></td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body"><a class="reference internal" href="#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseBitmap</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseBitmap.__getitem__" title="BaseBitmap.__getitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.__getitem__(self,</span> <span class="pre">key)</span></code></a></td>
+<td>This is similar to <code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPixel()</span></code>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseBitmap.__setitem__" title="BaseBitmap.__setitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.__setitem__(self,</span> <span class="pre">key,</span> <span class="pre">value)</span></code></a></td>
+<td>This is similar to <code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPixel()</span></code>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseBitmap.__eq__" title="BaseBitmap.__eq__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.__eq__(self,</span> <span class="pre">other)</span></code></a></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseBitmap.__ne__" title="BaseBitmap.__ne__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.__ne__(self,</span> <span class="pre">other)</span></code></a></td>
+<td>Check if two references point to the same bitmap.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Deprecated</p>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BaseBitmap.Scale" title="BaseBitmap.Scale"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.Scale(self,</span> <span class="pre">dst,</span> <span class="pre">intens,</span> <span class="pre">...)</span></code></a></td>
+<td><div class="first last deprecated">
+<p><span class="versionmodified">Deprecated since version R18: </span>Use <a class="reference internal" href="#BaseBitmap.ScaleIt" title="BaseBitmap.ScaleIt"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.ScaleIt()</span></code></a> instead.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Uncategorized</p>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BaseBitmap.SetPixel" title="BaseBitmap.SetPixel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.SetPixel(self,</span> <span class="pre">x,</span> <span class="pre">y,</span> <span class="pre">r,</span> <span class="pre">g,</span> <span class="pre">b)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Sets the pixel at <em>(x, y)</em> to the color specified by <em>(r,g,b) (0 &lt;= r/g/b &lt;= 255)</em>.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseBitmap.GetPixel" title="BaseBitmap.GetPixel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetPixel(self,</span> <span class="pre">x,</span> <span class="pre">y)</span></code></a></td>
+<td>Retrieves the color at (<em>x,y</em>). Similar to the <code class="xref py py-meth docutils literal notranslate"><span class="pre">__getitem__()</span></code>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseBitmap.GetPixelCnt" title="BaseBitmap.GetPixelCnt"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetPixelCnt(self,</span> <span class="pre">x,</span> <span class="pre">y,</span> <span class="pre">cnt,</span> <span class="pre">...[,</span> <span class="pre">...])</span></code></a></td>
+<td>Reads <em>cnt</em> pixels from (<em>x</em>, <em>y</em>) in the bitmap to the buffer with mode <em>dstmode</em>, incrementing <em>inc</em> bytes for each pixel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseBitmap.SetPixelCnt" title="BaseBitmap.SetPixelCnt"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.SetPixelCnt(self,</span> <span class="pre">x,</span> <span class="pre">y,</span> <span class="pre">cnt,</span> <span class="pre">...)</span></code></a></td>
+<td>Sets <em>cnt</em> pixels at (<em>x</em>, <em>y</em>) in the bitmap from buffer with mode <em>srcmode</em>, incrementing <em>inc</em> bytes for each pixel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseBitmap.GetInternalChannel" title="BaseBitmap.GetInternalChannel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetInternalChannel(self,)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Get the internal read-only alpha channel.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseBitmap.GetAlphaPixel" title="BaseBitmap.GetAlphaPixel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetAlphaPixel(self,</span> <span class="pre">channel,</span> <span class="pre">x,</span> <span class="pre">y)</span></code></a></td>
+<td>Get the alpha value at (<em>x,y</em>).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseBitmap.SetAlphaPixel" title="BaseBitmap.SetAlphaPixel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.SetAlphaPixel(self,</span> <span class="pre">channel,</span> <span class="pre">x,</span> <span class="pre">y,</span> <span class="pre">val)</span></code></a></td>
+<td>Sets the alpha value at <em>(x,y)</em> to <em>val</em>. The valid range of val is <em>0</em> to <em>255</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseBitmap.Init" title="BaseBitmap.Init"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.Init(self,</span> <span class="pre">x,</span> <span class="pre">y[,</span> <span class="pre">depth,</span> <span class="pre">flags])</span></code></a></td>
+<td>Initializes the bitmap to the given dimensions and depth.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseBitmap.InitWith" title="BaseBitmap.InitWith"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.InitWith(self,</span> <span class="pre">name[,</span> <span class="pre">frame])</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Loads a file into the bitmap. The file can be either a movie or a picture.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseBitmap.FlushAll" title="BaseBitmap.FlushAll"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.FlushAll(self,)</span></code></a></td>
+<td>Resets the bitmap to its initial state and frees allocated memory.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseBitmap.SetColorProfile" title="BaseBitmap.SetColorProfile"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.SetColorProfile(self,</span> <span class="pre">profile)</span></code></a></td>
+<td>Copy the color profile to the bitmap.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseBitmap.GetColorProfile" title="BaseBitmap.GetColorProfile"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetColorProfile(self,)</span></code></a></td>
+<td>Get a new color profile instance of the bitmap.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseBitmap.CopyTo" title="BaseBitmap.CopyTo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.CopyTo(self,</span> <span class="pre">dst)</span></code></a></td>
+<td>Copies the image to <em>dst</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseBitmap.CopyPartTo" title="BaseBitmap.CopyPartTo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.CopyPartTo(self,</span> <span class="pre">dst,</span> <span class="pre">x,</span> <span class="pre">y,</span> <span class="pre">w,</span> <span class="pre">h)</span></code></a></td>
+<td>Copies a part of the image to <em>dst</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseBitmap.GetClone" title="BaseBitmap.GetClone"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetClone(self,)</span></code></a></td>
+<td>Clones the Bitmap and returns a new instance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseBitmap.GetClonePart" title="BaseBitmap.GetClonePart"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetClonePart(self,</span> <span class="pre">x,</span> <span class="pre">y,</span> <span class="pre">w,</span> <span class="pre">h)</span></code></a></td>
+<td>Clones a part of the bitmap, specified by the rectangle <em>(x,y)</em> to <em>(x+w,y+h)</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseBitmap.Save" title="BaseBitmap.Save"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.Save(self,</span> <span class="pre">name,</span> <span class="pre">format[,</span> <span class="pre">...])</span></code></a></td>
+<td>Saves the bitmap to a file. Valid formats are:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseBitmap.GetChannelCount" title="BaseBitmap.GetChannelCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetChannelCount(self,)</span></code></a></td>
+<td>Returns the number of alpha channels in the bitmap, including the internal channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseBitmap.Within" title="BaseBitmap.Within"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.Within(self,</span> <span class="pre">x,</span> <span class="pre">y)</span></code></a></td>
+<td>Checks if a position is in the bitmap.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseBitmap.GetSize" title="BaseBitmap.GetSize"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetSize(self,)</span></code></a></td>
+<td>Returns the size of the bitmap in pixels.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseBitmap.GetBw" title="BaseBitmap.GetBw"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetBw(self,)</span></code></a></td>
+<td>Returns the width of the bitmap in pixels.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseBitmap.GetBh" title="BaseBitmap.GetBh"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetBh(self,)</span></code></a></td>
+<td>Returns the height of the bitmap in pixels.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseBitmap.GetBt" title="BaseBitmap.GetBt"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetBt(self,)</span></code></a></td>
+<td>Returns the number of bits per pixel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseBitmap.SetCMAP" title="BaseBitmap.SetCMAP"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.SetCMAP(self,</span> <span class="pre">i,</span> <span class="pre">r,</span> <span class="pre">g,</span> <span class="pre">b)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">If the image in the bitmap has 8 bit indexed color, this function can be used to set the palette entries.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseBitmap.GetBpz" title="BaseBitmap.GetBpz"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetBpz(self,)</span></code></a></td>
+<td>Returns the number of bytes per line.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseBitmap.SetData" title="BaseBitmap.SetData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.SetData(self,</span> <span class="pre">id,</span> <span class="pre">data)</span></code></a></td>
+<td>Sets bitmap data. Private.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseBitmap.GetData" title="BaseBitmap.GetData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetData(self,</span> <span class="pre">id,</span> <span class="pre">default)</span></code></a></td>
+<td>Gets bitmap data. Private.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseBitmap.ScaleBicubic" title="BaseBitmap.ScaleBicubic"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.ScaleBicubic(self,</span> <span class="pre">dst,</span> <span class="pre">src_xmin,</span> <span class="pre">...)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Scales the bitmap rectangle (<em>src_xmin</em>, <em>src_ymin</em>, <em>src_xmax</em>, <em>src_ymax</em>) to fit in the destination bitmap rectangle (<em>dst_xmin</em>, <em>dst_ymin</em>, <em>dst_xmax</em>, <em>dst_ymax</em>) and copies it there.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseBitmap.ScaleIt" title="BaseBitmap.ScaleIt"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.ScaleIt(self,</span> <span class="pre">dst,</span> <span class="pre">intens,</span> <span class="pre">...)</span></code></a></td>
+<td>Scales the bitmap to fit in the destination bitmap and copies it there.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseBitmap.AddChannel" title="BaseBitmap.AddChannel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.AddChannel(self,</span> <span class="pre">internal,</span> <span class="pre">straight)</span></code></a></td>
+<td>Adds a new alpha channel to the image.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseBitmap.RemoveChannel" title="BaseBitmap.RemoveChannel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.RemoveChannel(self,</span> <span class="pre">channel)</span></code></a></td>
+<td>Removes the specified channel from the bitmap.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseBitmap.GetChannelNum" title="BaseBitmap.GetChannelNum"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetChannelNum(self,</span> <span class="pre">num)</span></code></a></td>
+<td>Returns the channel ID from the channel index.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseBitmap.GetDirty" title="BaseBitmap.GetDirty"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetDirty(self,)</span></code></a></td>
+<td>Private.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseBitmap.SetDirty" title="BaseBitmap.SetDirty"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.SetDirty(self,)</span></code></a></td>
+<td>Makes the bitmap dirty.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseBitmap.IsMultipassBitmap" title="BaseBitmap.IsMultipassBitmap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.IsMultipassBitmap(self,)</span></code></a></td>
+<td>Checks if the image is a <a class="reference internal" href="MultipassBitmap/index.html#c4d.bitmaps.MultipassBitmap" title="c4d.bitmaps.MultipassBitmap"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultipassBitmap</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseBitmap.GetColorMode" title="BaseBitmap.GetColorMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetColorMode(self,)</span></code></a></td>
+<td>Returns the color mode of the bitmap.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseBitmap.GetMemoryInfo" title="BaseBitmap.GetMemoryInfo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetMemoryInfo(self,)</span></code></a></td>
+<td>Get the size of the memory used by the bitmap.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseBitmap.GetUpdateRegionBitmap" title="BaseBitmap.GetUpdateRegionBitmap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.GetUpdateRegionBitmap(self,)</span></code></a></td>
+<td>Get the updated region of a bitmap.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p class="rubric">Inheritance</p>
+<p>Child Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="MultipassBitmap/index.html#c4d.bitmaps.MultipassBitmap" title="c4d.bitmaps.MultipassBitmap"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.bitmaps.MultipassBitmap</span></code></a></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="BaseBitmap.__init__">
+<code class="descclassname">BaseBitmap.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseBitmap</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The new bitmap.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.__getitem__">
+<code class="descclassname">BaseBitmap.</code><code class="descname">__getitem__</code><span class="sig-paren">(</span><em>self</em>, <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.__getitem__" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is similar to <a class="reference internal" href="#BaseBitmap.GetPixel" title="BaseBitmap.GetPixel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPixel()</span></code></a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">bmp</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span> <span class="c1">#returns the color of a pixel at position x(5), y(5)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If the pixel position is out of the bitmap boundaries. See <a class="reference internal" href="#BaseBitmap.GetSize" title="BaseBitmap.GetSize"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetSize()</span></code></a>, <a class="reference internal" href="#BaseBitmap.GetBw" title="BaseBitmap.GetBw"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetBw()</span></code></a> and <a class="reference internal" href="#BaseBitmap.GetBh" title="BaseBitmap.GetBh"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetBh()</span></code></a>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<em>int</em>) – The pixel position.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">tuple(int, int, int)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The color of a pixel. Range between <em>0-255</em>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.__setitem__">
+<code class="descclassname">BaseBitmap.</code><code class="descname">__setitem__</code><span class="sig-paren">(</span><em>self</em>, <em>key</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.__setitem__" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is similar to <a class="reference internal" href="#BaseBitmap.GetPixel" title="BaseBitmap.GetPixel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPixel()</span></code></a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bmp</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span> <span class="c1">#returns the color of a pixel at position x(5), y(5)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">The <a class="reference internal" href="../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a> objects does not support item deletion.</div>
+<div class="line">For instance by calling <cite>del(bmp[5,5])</cite>.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><strong>IndexError</strong> – If the pixel position is out of the bitmap boundaries. See <a class="reference internal" href="#BaseBitmap.GetSize" title="BaseBitmap.GetSize"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetSize()</span></code></a>, <a class="reference internal" href="#BaseBitmap.GetBw" title="BaseBitmap.GetBw"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetBw()</span></code></a> and <a class="reference internal" href="#BaseBitmap.GetBh" title="BaseBitmap.GetBh"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetBh()</span></code></a>.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>key</strong> (<em>int</em>) – The pixel position.</li>
+<li><strong>value</strong> (<em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>)</em>) – The color of the pixel. Range between <em>0-255</em>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.__eq__">
+<code class="descclassname">BaseBitmap.</code><code class="descname">__eq__</code><span class="sig-paren">(</span><em>self</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.__eq__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.__ne__">
+<code class="descclassname">BaseBitmap.</code><code class="descname">__ne__</code><span class="sig-paren">(</span><em>self</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.__ne__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if two references point to the same bitmap.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Does not compare if two references are equal.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.Scale">
+<code class="descclassname">BaseBitmap.</code><code class="descname">Scale</code><span class="sig-paren">(</span><em>self</em>, <em>dst</em>, <em>intens</em>, <em>sample</em>, <em>nprop</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.Scale" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version R18: </span>Use <a class="reference internal" href="#BaseBitmap.ScaleIt" title="BaseBitmap.ScaleIt"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseBitmap.ScaleIt()</span></code></a> instead.</p>
+</div>
+<p>Scales the bitmap to fit in the destination bitmap and copies it there.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The destination needs to be initialized with the destination size before calling this function.</p>
+</div>
+<a class="reference internal image-reference" href="../../../_images/basebitmap_scaleit.jpg"><img alt="../../../_images/basebitmap_scaleit.jpg" src="../../../_images/basebitmap_scaleit.jpg" style="width: 70%;" /></a>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dst</strong> (<a class="reference internal" href="#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap"><em>c4d.bitmaps.BaseBitmap</em></a>) – The destination image. Must be initiated already with the destination size.</li>
+<li><strong>intens</strong> (<em>int</em>) – Lets you change brightness of the image (128 = 50% brightness, 256 = unchanged).</li>
+<li><strong>sample</strong> (<em>bool</em>) – If <strong>True</strong> a better scaling algorithm is used, which results in a better quality but is a bit slower.</li>
+<li><strong>nprop</strong> (<em>bool</em>) – Must be <strong>True</strong> if non-proportional scaling is wanted.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.SetPixel">
+<code class="descclassname">BaseBitmap.</code><code class="descname">SetPixel</code><span class="sig-paren">(</span><em>self</em>, <em>x</em>, <em>y</em>, <em>r</em>, <em>g</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.SetPixel" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Sets the pixel at <em>(x, y)</em> to the color specified by <em>(r,g,b) (0 &lt;= r/g/b &lt;= 255)</em>.</div>
+<div class="line">Similar to the <a class="reference internal" href="#BaseBitmap.__setitem__" title="BaseBitmap.__setitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__setitem__()</span></code></a>.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">Currently this method does no range check of <em>x</em> and <em>y</em>.</div>
+<div class="line">This might be added in the future.</div>
+<div class="line">Please do the check on your own.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> (<em>int</em>) – The X coordinate.</li>
+<li><strong>y</strong> (<em>int</em>) – The Y coordinate.</li>
+<li><strong>r</strong> (<em>int</em>) – The red component.</li>
+<li><strong>g</strong> (<em>int</em>) – The green component.</li>
+<li><strong>b</strong> (<em>int</em>) – The blue component.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if successful, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.GetPixel">
+<code class="descclassname">BaseBitmap.</code><code class="descname">GetPixel</code><span class="sig-paren">(</span><em>self</em>, <em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.GetPixel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the color at (<em>x,y</em>). Similar to the <a class="reference internal" href="#BaseBitmap.__getitem__" title="BaseBitmap.__getitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__getitem__()</span></code></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">Currently this method does no range check of <em>x</em> and <em>y</em>.</div>
+<div class="line">This might be added in the future.</div>
+<div class="line">Please do the check on your own.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> (<em>int</em>) – The X coordinate.</li>
+<li><strong>y</strong> (<em>int</em>) – The Y coordinate.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">List[int]</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The color of the pixel. Range between <em>0-255</em>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.GetPixelCnt">
+<code class="descclassname">BaseBitmap.</code><code class="descname">GetPixelCnt</code><span class="sig-paren">(</span><em>self</em>, <em>x</em>, <em>y</em>, <em>cnt</em>, <em>buffer</em>, <em>inc</em>, <em>dstmode</em>, <em>flags</em>, <em>conversion=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.GetPixelCnt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads <em>cnt</em> pixels from (<em>x</em>, <em>y</em>) in the bitmap to the buffer with mode <em>dstmode</em>, incrementing <em>inc</em> bytes for each pixel.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> (<em>int</em>) – X coordinate of the first pixel to set.</li>
+<li><strong>y</strong> (<em>int</em>) – Y coordinate of the first pixel to set.</li>
+<li><strong>cnt</strong> (<em>int</em>) – Number of pixels to set.</li>
+<li><strong>buffer</strong> (<a class="reference internal" href="../../c4d.storage/ByteSeq/index.html#c4d.storage.ByteSeq" title="c4d.storage.ByteSeq"><em>c4d.storage.ByteSeq</em></a>) – The destination buffer.</li>
+<li><strong>inc</strong> (<em>int</em>) – The byte increment per pixel in the buffer.</li>
+<li><strong>dstmode</strong> (<em>int</em>) – <p>The destination mode:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>COLORMODE_ILLEGAL</em></td>
+<td>Illegal 8-bit mode.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_ALPHA</em></td>
+<td>Only 8-bit alpha channel.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_GRAY</em></td>
+<td>8-bit grayscale channel.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_AGRAY</em></td>
+<td>8-bit grayscale channel with 8-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_RGB</em></td>
+<td>8-bit RGB channels.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_ARGB</em></td>
+<td>8-bit RGB channels with 8-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_CMYK</em></td>
+<td>8-bit CMYK channel.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_ACMYK</em></td>
+<td>8-bit CMYK channel with 8-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_MASK</em></td>
+<td>8-bit grayscale map as mask.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_AMASK</em></td>
+<td>8-bit grayscale map as mask with 8-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_ILLEGALw</em></td>
+<td>Illegal 16-bit mode.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_GRAYw</em></td>
+<td>16-bit grayscale channel.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_AGRAYw</em></td>
+<td>16-bit grayscale channel with 16-bit alpha.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_RGBw</em></td>
+<td>16-bit RGB channels.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_ARGBw</em></td>
+<td>16-bit RGB channels with 16-bit alpha.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_MASKw</em></td>
+<td>16-bit grayscale map as mask with 16-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_ILLEGALf</em></td>
+<td>Illegal 32-bit mode.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_GRAYf</em></td>
+<td>32-bit floating point grayscale channel.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_AGRAYf</em></td>
+<td>32-bit floating point grayscale channel with floating point alpha.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_RGBf</em></td>
+<td>32-bit floating point RGB channels.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_ARGBf</em></td>
+<td>32-bit floating point RGB channels with floating point alpha.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_MASKf</em></td>
+<td>32-bit floating point grayscale map as mask.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>flags</strong> (<em>int</em>) – <p>Flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>PIXELCNT_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>PIXELCNT_DITHERING</em></td>
+<td>Allow dithering.</td>
+</tr>
+<tr class="row-odd"><td><em>PIXELCNT_B3DLAYERS</em></td>
+<td>Merge BodyPaint 3D layers (<a class="reference internal" href="MultipassBitmap/index.html#c4d.bitmaps.MultipassBitmap" title="c4d.bitmaps.MultipassBitmap"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultipassBitmap</span></code></a>).</td>
+</tr>
+<tr class="row-even"><td><em>PIXELCNT_APPLYALPHA</em></td>
+<td>Apply alpha layers to the result (<a class="reference internal" href="../../c4d.modules/bodypaint/PaintBitmap/PaintLayer/PaintLayerBmp/index.html#c4d.modules.bodypaint.PaintLayerBmp" title="c4d.modules.bodypaint.PaintLayerBmp"><code class="xref py py-class docutils literal notranslate"><span class="pre">PaintLayerBmp</span></code></a>).</td>
+</tr>
+<tr class="row-odd"><td><em>PIXELCNT_INTERNAL_SETLINE</em></td>
+<td>Internal SetLine indicator. Private.</td>
+</tr>
+<tr class="row-even"><td><em>PIXELCNT_INTERNAL_ALPHAVALUE</em></td>
+<td>Get also the alpha value (RGBA <cite>32</cite>-bit). Private.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>conversion</strong> (<a class="reference internal" href="../ColorProfileConvert/index.html#c4d.bitmaps.ColorProfileConvert" title="c4d.bitmaps.ColorProfileConvert"><em>c4d.bitmaps.ColorProfileConvert</em></a>) – <div class="versionadded">
+<p><span class="versionmodified">New in version R17.032.</span></p>
+</div>
+<div class="line-block">
+<div class="line">This should be normally set to <strong>None</strong>. Pass a color profile only if a conversion is wanted before retrieving the pixel data.</div>
+<div class="line">This only works if either the bitmap is 32-bit per component (so no 8/16-bit images) or the <em>dstmode</em> is 32-bit per component.</div>
+<div class="line">The conversion is done before color reduction (e.g. if <em>dstmode</em> is 16-bit the profile is first applied and then the data resampled to 16-bit).</div>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if successful, otherwise <em>False</em>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.SetPixelCnt">
+<code class="descclassname">BaseBitmap.</code><code class="descname">SetPixelCnt</code><span class="sig-paren">(</span><em>self</em>, <em>x</em>, <em>y</em>, <em>cnt</em>, <em>buffer</em>, <em>inc</em>, <em>srcmode</em>, <em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.SetPixelCnt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets <em>cnt</em> pixels at (<em>x</em>, <em>y</em>) in the bitmap from buffer with mode <em>srcmode</em>, incrementing <em>inc</em> bytes for each pixel.</p>
+<p>The following example shows you how to read/write from/into an image.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Test Example:</span>
+<span class="sd">BaseBitmap.SetPixelCnt()/BaseBitmap.GetPixelCnt()</span>
+
+<span class="sd">This example shows how to copy the internal data of a 32 bit per-channel image to a new one.</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="kn">import</span> <span class="nn">c4d</span><span class="o">,</span> <span class="nn">struct</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">LoadDialog</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="n">c4d</span><span class="o">.</span><span class="n">FILESELECTTYPE_IMAGES</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Please Choose a 32 Bit Image:&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">path</span><span class="p">:</span> <span class="k">return</span>
+
+    <span class="c1"># Create and initialize selected image</span>
+    <span class="n">orig</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">bitmaps</span><span class="o">.</span><span class="n">BaseBitmap</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">orig</span><span class="o">.</span><span class="n">InitWith</span><span class="p">(</span><span class="n">path</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">IMAGERESULT_OK</span><span class="p">:</span>
+        <span class="n">c4d</span><span class="o">.</span><span class="n">gui</span><span class="o">.</span><span class="n">MessageDialog</span><span class="p">(</span><span class="s2">&quot;Cannot load image &quot;&quot; + path + &quot;&quot;.&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="c1"># Check if channel depth is really 32 bit</span>
+    <span class="k">if</span> <span class="n">orig</span><span class="o">.</span><span class="n">GetBt</span><span class="p">()</span><span class="o">/</span><span class="mi">3</span> <span class="o">!=</span> <span class="mi">32</span><span class="p">:</span>
+        <span class="n">c4d</span><span class="o">.</span><span class="n">gui</span><span class="o">.</span><span class="n">MessageDialog</span><span class="p">(</span><span class="s2">&quot;The image &quot;&quot; + path + &quot;&quot; is not a 32 bit per-channel image.&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="c1"># Get selected image infos</span>
+    <span class="n">width</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="n">orig</span><span class="o">.</span><span class="n">GetSize</span><span class="p">()</span>
+    <span class="n">bits</span> <span class="o">=</span> <span class="n">orig</span><span class="o">.</span><span class="n">GetBt</span><span class="p">()</span>
+
+    <span class="c1"># Create the copy and initialize it</span>
+    <span class="n">copy</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">bitmaps</span><span class="o">.</span><span class="n">BaseBitmap</span><span class="p">()</span>
+    <span class="n">copy</span><span class="o">.</span><span class="n">Init</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">bits</span><span class="p">)</span>
+
+    <span class="c1"># Calculate the number of bytes per pixel</span>
+    <span class="n">inc</span> <span class="o">=</span> <span class="n">orig</span><span class="o">.</span><span class="n">GetBt</span><span class="p">()</span><span class="o">/</span><span class="mi">8</span> <span class="c1"># Each pixel has RGB bits, so we need an offset of &#39;inc&#39; bytes per pixel</span>
+                                              <span class="c1"># the image has 32 bits per-channel : (32*3)/8 = 12 bytes per pixel (1 byte = 8 bits)</span>
+                                              <span class="c1"># the image has 3 channels per pixel (RGB) : 12/3 = 4 bytes per component = 1 float</span>
+
+    <span class="c1"># Create a byte sequence buffer large enough to store the copied image pixels</span>
+    <span class="n">sq</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">ByteSeq</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">width</span><span class="o">*</span><span class="n">height</span><span class="o">*</span><span class="n">inc</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">xrange</span><span class="p">(</span><span class="n">height</span><span class="p">):</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="n">sq</span><span class="o">.</span><span class="n">GetOffset</span><span class="p">(</span><span class="n">row</span><span class="o">*</span><span class="p">(</span><span class="n">width</span><span class="o">*</span><span class="n">inc</span><span class="p">))</span> <span class="c1"># Offset on bitmap row + offset bytes per pixel</span>
+        <span class="n">orig</span><span class="o">.</span><span class="n">GetPixelCnt</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">inc</span><span class="p">,</span> <span class="n">c4d</span><span class="o">.</span><span class="n">COLORMODE_RGBf</span><span class="p">,</span> <span class="n">c4d</span><span class="o">.</span><span class="n">PIXELCNT_NONE</span><span class="p">)</span> <span class="c1"># Read pixels from the original bitmap to the buffer</span>
+
+    <span class="c1">#Example: RGB value of first pixel (only for 32 bits)</span>
+    <span class="c1">#import struct</span>
+    <span class="c1">#r, g, b = struct.unpack(&quot;fff&quot;, sq[0:12])</span>
+    <span class="c1">#print r, g, b</span>
+
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">xrange</span><span class="p">(</span><span class="n">height</span><span class="p">):</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="n">sq</span><span class="o">.</span><span class="n">GetOffset</span><span class="p">(</span><span class="n">row</span><span class="o">*</span><span class="p">(</span><span class="n">width</span><span class="o">*</span><span class="n">inc</span><span class="p">))</span> <span class="c1"># Offset on bitmap row + offset bytes per pixel</span>
+        <span class="n">copy</span><span class="o">.</span><span class="n">SetPixelCnt</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">inc</span><span class="p">,</span> <span class="n">c4d</span><span class="o">.</span><span class="n">COLORMODE_RGBf</span><span class="p">,</span> <span class="n">c4d</span><span class="o">.</span><span class="n">PIXELCNT_NONE</span><span class="p">)</span> <span class="c1"># Set pixels in bitmap copy</span>
+
+    <span class="n">c4d</span><span class="o">.</span><span class="n">bitmaps</span><span class="o">.</span><span class="n">ShowBitmap</span><span class="p">(</span><span class="n">orig</span><span class="p">)</span> <span class="c1"># Show original</span>
+    <span class="n">c4d</span><span class="o">.</span><span class="n">bitmaps</span><span class="o">.</span><span class="n">ShowBitmap</span><span class="p">(</span><span class="n">copy</span><span class="p">)</span> <span class="c1"># Show copied image</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> (<em>int</em>) – X coordinate of the first pixel to set.</li>
+<li><strong>y</strong> (<em>int</em>) – Y coordinate of the first pixel to set.</li>
+<li><strong>cnt</strong> (<em>int</em>) – Number of pixels to set.</li>
+<li><strong>buffer</strong> (<a class="reference internal" href="../../c4d.storage/ByteSeq/index.html#c4d.storage.ByteSeq" title="c4d.storage.ByteSeq"><em>c4d.storage.ByteSeq</em></a>) – The source buffer.</li>
+<li><strong>inc</strong> (<em>int</em>) – The byte increment per pixel in the buffer.</li>
+<li><strong>srcmode</strong> (<em>int</em>) – <p>The source mode.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">None of the alpha modes are supported.</p>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>COLORMODE_ILLEGAL</em></td>
+<td>Illegal 8-bit mode.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_ALPHA</em></td>
+<td>Only 8-bit alpha channel.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_GRAY</em></td>
+<td>8-bit grayscale channel.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_AGRAY</em></td>
+<td>8-bit grayscale channel with 8-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_RGB</em></td>
+<td>8-bit RGB channels.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_ARGB</em></td>
+<td>8-bit RGB channels with 8-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_CMYK</em></td>
+<td>8-bit CMYK channel.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_ACMYK</em></td>
+<td>8-bit CMYK channel with 8-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_MASK</em></td>
+<td>8-bit grayscale map as mask.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_AMASK</em></td>
+<td>8-bit grayscale map as mask with 8-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_ILLEGALw</em></td>
+<td>Illegal 16-bit mode.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_GRAYw</em></td>
+<td>16-bit grayscale channel.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_AGRAYw</em></td>
+<td>16-bit grayscale channel with 16-bit alpha.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_RGBw</em></td>
+<td>16-bit RGB channels.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_ARGBw</em></td>
+<td>16-bit RGB channels with 16-bit alpha.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_MASKw</em></td>
+<td>16-bit grayscale map as mask with 16-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_ILLEGALf</em></td>
+<td>Illegal 32-bit mode.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_GRAYf</em></td>
+<td>32-bit floating point grayscale channel.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_AGRAYf</em></td>
+<td>32-bit floating point grayscale channel with floating point alpha.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_RGBf</em></td>
+<td>32-bit floating point RGB channels.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_ARGBf</em></td>
+<td>32-bit floating point RGB channels with floating point alpha.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_MASKf</em></td>
+<td>32-bit floating point grayscale map as mask.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>flags</strong> (<em>int</em>) – <p>Flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>PIXELCNT_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>PIXELCNT_DITHERING</em></td>
+<td>Allow dithering.</td>
+</tr>
+<tr class="row-odd"><td><em>PIXELCNT_B3DLAYERS</em></td>
+<td>Merge BodyPaint 3D layers (<a class="reference internal" href="MultipassBitmap/index.html#c4d.bitmaps.MultipassBitmap" title="c4d.bitmaps.MultipassBitmap"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultipassBitmap</span></code></a>).</td>
+</tr>
+<tr class="row-even"><td><em>PIXELCNT_APPLYALPHA</em></td>
+<td>Apply alpha layers to the result (<a class="reference internal" href="../../c4d.modules/bodypaint/PaintBitmap/PaintLayer/PaintLayerBmp/index.html#c4d.modules.bodypaint.PaintLayerBmp" title="c4d.modules.bodypaint.PaintLayerBmp"><code class="xref py py-class docutils literal notranslate"><span class="pre">PaintLayerBmp</span></code></a>).</td>
+</tr>
+<tr class="row-odd"><td><em>PIXELCNT_INTERNAL_SETLINE</em></td>
+<td>Internal SetLine indicator. Private.</td>
+</tr>
+<tr class="row-even"><td><em>PIXELCNT_INTERNAL_ALPHAVALUE</em></td>
+<td>Get also the alpha value (RGBA <cite>32</cite>-bit). Private.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if successful, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.GetInternalChannel">
+<code class="descclassname">BaseBitmap.</code><code class="descname">GetInternalChannel</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.GetInternalChannel" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Get the internal read-only alpha channel.</div>
+<div class="line">The internal alpha channel is the one that’s saved together with the picture, with those formats that support this.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If no internal alpha is available, None is returned.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap">c4d.bitmaps.BaseBitmap</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The internal alpha channel.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.GetAlphaPixel">
+<code class="descclassname">BaseBitmap.</code><code class="descname">GetAlphaPixel</code><span class="sig-paren">(</span><em>self</em>, <em>channel</em>, <em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.GetAlphaPixel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the alpha value at (<em>x,y</em>).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">Currently this method does no range check of <em>x</em> and <em>y</em>.</div>
+<div class="line">This might be added in the future.</div>
+<div class="line">Please do the check on your own.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>bmp</strong> (<a class="reference internal" href="#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap"><em>c4d.bitmaps.BaseBitmap</em></a>) – The alpha channels to use. Has to be an alpha bitmap.</li>
+<li><strong>x</strong> (<em>int</em>) – X coordinate.</li>
+<li><strong>y</strong> (<em>int</em>) – Y coordinate.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The alpha value. Range is <em>0</em> to <em>255</em>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.SetAlphaPixel">
+<code class="descclassname">BaseBitmap.</code><code class="descname">SetAlphaPixel</code><span class="sig-paren">(</span><em>self</em>, <em>channel</em>, <em>x</em>, <em>y</em>, <em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.SetAlphaPixel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the alpha value at <em>(x,y)</em> to <em>val</em>. The valid range of val is <em>0</em> to <em>255</em>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">Currently this method does no range check of <em>x</em> and <em>y</em>.</div>
+<div class="line">This might be added in the future.</div>
+<div class="line">Please do the check on your own.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>bmp</strong> (<a class="reference internal" href="#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap"><em>c4d.bitmaps.BaseBitmap</em></a>) – The alpha channels to use. Has to be an alpha bitmap.</li>
+<li><strong>x</strong> (<em>int</em>) – X coordinate.</li>
+<li><strong>y</strong> (<em>int</em>) – Y coordinate.</li>
+<li><strong>val</strong> (<em>int</em>) – The alpha value. Range is <em>0</em> to <em>255</em>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.Init">
+<code class="descclassname">BaseBitmap.</code><code class="descname">Init</code><span class="sig-paren">(</span><em>self</em>, <em>x</em>, <em>y</em>, <em>depth=24</em>, <em>flags=INITBITMAPFLAGS_NONE</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.Init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes the bitmap to the given dimensions and depth.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Any previous data in the bitmap object is lost.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">The bitmap class only supports up to 4 channels.</div>
+<div class="line">Also, most image loaders will only load one alpha channel.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> (<em>int</em>) – The requested width in pixels. (Max 16000 pixels.).</li>
+<li><strong>y</strong> (<em>int</em>) – The requested width in pixels. (Max 16000 pixels.).</li>
+<li><strong>depth</strong> (<em>int</em>) – <div class="line-block">
+<div class="line">The requested bit depth (24 default).</div>
+<div class="line">The possible values are {1,4,8,16,24,32}.</div>
+<div class="line">On some platforms 32 bits will be used even if 24 is requested, to allow for padding.</div>
+</div>
+</li>
+<li><strong>flags</strong> (<em>int</em>) – <p>Flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="46%" />
+<col width="54%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>INITBITMAPFLAGS_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>INITBITMAPFLAGS_GRAYSCALE</em></td>
+<td>Initializes as grayscale bitmap.</td>
+</tr>
+<tr class="row-odd"><td><em>INITBITMAPFLAGS_SYSTEM</em></td>
+<td>Private.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>The result:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="48%" />
+<col width="52%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>IMAGERESULT_OK</em></td>
+<td>Image loaded/created.</td>
+</tr>
+<tr class="row-even"><td><em>IMAGERESULT_NOTEXISTING</em></td>
+<td>Image does not exist.</td>
+</tr>
+<tr class="row-odd"><td><em>IMAGERESULT_WRONGTYPE</em></td>
+<td>Image has the wrong type.</td>
+</tr>
+<tr class="row-even"><td><em>IMAGERESULT_OUTOFMEMORY</em></td>
+<td>Not enough memory.</td>
+</tr>
+<tr class="row-odd"><td><em>IMAGERESULT_FILEERROR</em></td>
+<td>File error.</td>
+</tr>
+<tr class="row-even"><td><em>IMAGERESULT_FILESTRUCTURE</em></td>
+<td>Invalid file structure.</td>
+</tr>
+<tr class="row-odd"><td><em>IMAGERESULT_MISC_ERROR</em></td>
+<td>Unknown error.</td>
+</tr>
+<tr class="row-even"><td><em>IMAGERESULT_PARAM_ERROR</em></td>
+<td>Parameter error.</td>
+</tr>
+<tr class="row-odd"><td><em>IMAGERESULT_THREADCANCELED</em></td>
+<td>Thread canceled while working.</td>
+</tr>
+</tbody>
+</table>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.InitWith">
+<code class="descclassname">BaseBitmap.</code><code class="descname">InitWith</code><span class="sig-paren">(</span><em>self</em>, <em>name</em>, <em>frame=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.InitWith" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Loads a file into the bitmap. The file can be either a movie or a picture.</div>
+<div class="line">The file format is automatically detected</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="p">,</span> <span class="n">isMovie</span> <span class="o">=</span> <span class="n">bmp</span><span class="o">.</span><span class="n">InitWith</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">result</span> <span class="o">==</span> <span class="n">c4d</span><span class="o">.</span><span class="n">IMAGERESULT_OK</span><span class="p">:</span> <span class="c1">#int check</span>
+    <span class="c1"># picture loaded</span>
+
+    <span class="k">if</span> <span class="n">isMovie</span><span class="p">:</span> <span class="c1">#bool check</span>
+        <span class="k">pass</span> <span class="c1"># file is a movie</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">pass</span> <span class="c1"># file is no movie</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">The bitmap class only supports up to 4 channels.</div>
+<div class="line">Also, most image loaders will only load one alpha channel.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><a class="reference internal" href="../../c4d.storage/MemoryFileStruct/index.html#c4d.storage.MemoryFileStruct" title="c4d.storage.MemoryFileStruct"><em>c4d.storage.MemoryFileStruct</em></a><em>]</em>) – The file.</li>
+<li><strong>frame</strong> (<em>int</em>) – The frame number to load in a movie.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">tuple(int, bool)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>The result for first element:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="48%" />
+<col width="52%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>IMAGERESULT_OK</em></td>
+<td>Image loaded/created.</td>
+</tr>
+<tr class="row-even"><td><em>IMAGERESULT_NOTEXISTING</em></td>
+<td>Image does not exist.</td>
+</tr>
+<tr class="row-odd"><td><em>IMAGERESULT_WRONGTYPE</em></td>
+<td>Image has the wrong type.</td>
+</tr>
+<tr class="row-even"><td><em>IMAGERESULT_OUTOFMEMORY</em></td>
+<td>Not enough memory.</td>
+</tr>
+<tr class="row-odd"><td><em>IMAGERESULT_FILEERROR</em></td>
+<td>File error.</td>
+</tr>
+<tr class="row-even"><td><em>IMAGERESULT_FILESTRUCTURE</em></td>
+<td>Invalid file structure.</td>
+</tr>
+<tr class="row-odd"><td><em>IMAGERESULT_MISC_ERROR</em></td>
+<td>Unknown error.</td>
+</tr>
+<tr class="row-even"><td><em>IMAGERESULT_PARAM_ERROR</em></td>
+<td>Parameter error.</td>
+</tr>
+<tr class="row-odd"><td><em>IMAGERESULT_THREADCANCELED</em></td>
+<td>Thread canceled while working.</td>
+</tr>
+</tbody>
+</table>
+<p>The second element is <strong>True</strong> if the loaded picture was a movie.</p>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.FlushAll">
+<code class="descclassname">BaseBitmap.</code><code class="descname">FlushAll</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.FlushAll" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets the bitmap to its initial state and frees allocated memory.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Requires a call to <a class="reference internal" href="#BaseBitmap.Init" title="BaseBitmap.Init"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Init()</span></code></a> before the bitmap can be used again.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.SetColorProfile">
+<code class="descclassname">BaseBitmap.</code><code class="descname">SetColorProfile</code><span class="sig-paren">(</span><em>self</em>, <em>profile</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.SetColorProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy the color profile to the bitmap.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>profile</strong> (<a class="reference internal" href="../ColorProfile/index.html#c4d.bitmaps.ColorProfile" title="c4d.bitmaps.ColorProfile"><em>c4d.bitmaps.ColorProfile</em></a>) – The profile.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> on success, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.GetColorProfile">
+<code class="descclassname">BaseBitmap.</code><code class="descname">GetColorProfile</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.GetColorProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a new color profile instance of the bitmap.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../ColorProfile/index.html#c4d.bitmaps.ColorProfile" title="c4d.bitmaps.ColorProfile">c4d.bitmaps.ColorProfile</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The profile.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.CopyTo">
+<code class="descclassname">BaseBitmap.</code><code class="descname">CopyTo</code><span class="sig-paren">(</span><em>self</em>, <em>dst</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.CopyTo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies the image to <em>dst</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dst</strong> (<a class="reference internal" href="#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap"><em>c4d.bitmaps.BaseBitmap</em></a>) – The bitmap to copy the image to.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Success of copying the image.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.CopyPartTo">
+<code class="descclassname">BaseBitmap.</code><code class="descname">CopyPartTo</code><span class="sig-paren">(</span><em>self</em>, <em>dst</em>, <em>x</em>, <em>y</em>, <em>w</em>, <em>h</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.CopyPartTo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies a part of the image to <em>dst</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>dst</strong> (<a class="reference internal" href="#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap"><em>c4d.bitmaps.BaseBitmap</em></a>) – The bitmap to copy the image to.</li>
+<li><strong>x</strong> (<em>int</em>) – The X position of the part to be copied from the source image.</li>
+<li><strong>y</strong> (<em>int</em>) – The Y position of the part to be copied from the source image.</li>
+<li><strong>w</strong> (<em>int.</em>) – The width of the part to be copied.</li>
+<li><strong>h</strong> (<em>int</em>) – The height of the part to be copied.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Success of copying the image.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.GetClone">
+<code class="descclassname">BaseBitmap.</code><code class="descname">GetClone</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.GetClone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clones the Bitmap and returns a new instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap">c4d.bitmaps.BaseBitmap</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The clone.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.GetClonePart">
+<code class="descclassname">BaseBitmap.</code><code class="descname">GetClonePart</code><span class="sig-paren">(</span><em>self</em>, <em>x</em>, <em>y</em>, <em>w</em>, <em>h</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.GetClonePart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clones a part of the bitmap, specified by the rectangle <em>(x,y)</em> to <em>(x+w,y+h)</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> (<em>int</em>) – The upper X coordinate of the rectangle.</li>
+<li><strong>y</strong> (<em>int</em>) – The upper Y coordinate of the rectangle.</li>
+<li><strong>w</strong> (<em>int.</em>) – The width of the rectangle.</li>
+<li><strong>h</strong> (<em>int</em>) – The height of the rectangle.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap">c4d.bitmaps.BaseBitmap</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The cloned bitmap, or <strong>None</strong> if an error occured.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.Save">
+<code class="descclassname">BaseBitmap.</code><code class="descname">Save</code><span class="sig-paren">(</span><em>self</em>, <em>name</em>, <em>format</em>, <em>data=None</em>, <em>savebits=SAVEBIT_NONE</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.Save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the bitmap to a file. Valid formats are:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="47%" />
+<col width="53%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>FILTER_TIF</em></td>
+<td>TIFF.</td>
+</tr>
+<tr class="row-even"><td><em>FILTER_TGA</em></td>
+<td>TGA.</td>
+</tr>
+<tr class="row-odd"><td><em>FILTER_BMP</em></td>
+<td>BMP.</td>
+</tr>
+<tr class="row-even"><td><em>FILTER_IFF</em></td>
+<td>IFF.</td>
+</tr>
+<tr class="row-odd"><td><em>FILTER_JPG</em></td>
+<td>JPEG.</td>
+</tr>
+<tr class="row-even"><td><em>FILTER_PICT</em></td>
+<td>PICT.</td>
+</tr>
+<tr class="row-odd"><td><em>FILTER_PSD</em></td>
+<td>PSD.</td>
+</tr>
+<tr class="row-even"><td><em>FILTER_RLA</em></td>
+<td>RLA.</td>
+</tr>
+<tr class="row-odd"><td><em>FILTER_RPF</em></td>
+<td>RPF.</td>
+</tr>
+<tr class="row-even"><td><em>FILTER_B3D</em></td>
+<td><cite>BodyPaint 3D</cite>.</td>
+</tr>
+<tr class="row-odd"><td><em>FILTER_TIF_B3D</em></td>
+<td>TIFF <cite>BodyPaint 3D</cite>.</td>
+</tr>
+<tr class="row-even"><td><em>FILTER_PSB</em></td>
+<td>PSB.</td>
+</tr>
+<tr class="row-odd"><td><em>FILTER_AVI</em></td>
+<td>AVI Movie.</td>
+</tr>
+<tr class="row-even"><td><em>FILTER_MOVIE</em></td>
+<td>Quicktime Movie.</td>
+</tr>
+<tr class="row-odd"><td><em>FILTER_QTVRSAVER_PANORAMA</em></td>
+<td>QTVR Panorama.</td>
+</tr>
+<tr class="row-even"><td><em>FILTER_QTVRSAVER_OBJECT</em></td>
+<td>QTVR Object.</td>
+</tr>
+<tr class="row-odd"><td><em>FILTER_HDR</em></td>
+<td>HDR.</td>
+</tr>
+<tr class="row-even"><td><em>FILTER_EXR_LOAD</em></td>
+<td>EXR (Load).</td>
+</tr>
+<tr class="row-odd"><td><em>FILTER_EXR</em></td>
+<td>EXR.</td>
+</tr>
+<tr class="row-even"><td><em>FILTER_PNG</em></td>
+<td>PNG.</td>
+</tr>
+<tr class="row-odd"><td><em>FILTER_IES</em></td>
+<td>IES.</td>
+</tr>
+<tr class="row-even"><td><em>FILTER_B3DNET</em></td>
+<td><cite>BodyPaint 3D</cite> NET. Private.</td>
+</tr>
+<tr class="row-odd"><td><em>FILTER_DPX</em></td>
+<td>DPX.</td>
+</tr>
+<tr class="row-even"><td><em>FILTER_DDS</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R19: </span>DDS.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><a class="reference internal" href="../../c4d.storage/MemoryFileStruct/index.html#c4d.storage.MemoryFileStruct" title="c4d.storage.MemoryFileStruct"><em>c4d.storage.MemoryFileStruct</em></a><em>]</em>) – A file.</li>
+<li><strong>format</strong> (<em>int</em>) – The image format.</li>
+<li><strong>data</strong> (<a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The data.</li>
+<li><strong>savebits</strong> (<em>int</em>) – <p>Can be a combination of the following flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>SAVEBIT_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEBIT_ALPHA</em></td>
+<td>Save the alpha channel(s) in the file. (For filter plugins, do not save an alpha channel if this is not set.)</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEBIT_MULTILAYER</em></td>
+<td>Save multiple layers.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEBIT_USESELECTEDLAYERS</em></td>
+<td>Use selected layers.</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEBIT_16BITCHANNELS</em></td>
+<td>Use <cite>16</cite>-bit channels.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEBIT_GREYSCALE</em></td>
+<td>Save in grayscale mode.</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEBIT_INTERNALNET</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEBIT_DONTMERGE</em></td>
+<td>Avoid merging of layers in BodyPaint 3D files.</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEBIT_32BITCHANNELS</em></td>
+<td>Use <cite>32</cite>-bit channels.</td>
+</tr>
+<tr class="row-even"><td><em>SAVEBIT_SAVERENDERRESULT</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-odd"><td><em>SAVEBIT_FIRSTALPHA_ONLY</em></td>
+<td>Private.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p><strong>True</strong> if <a class="reference internal" href="#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseBitmap</span></code></a> is not empty, otherwise <strong>False</strong>.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="48%" />
+<col width="52%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>IMAGERESULT_OK</em></td>
+<td>Image loaded/created.</td>
+</tr>
+<tr class="row-even"><td><em>IMAGERESULT_NOTEXISTING</em></td>
+<td>Image does not exist.</td>
+</tr>
+<tr class="row-odd"><td><em>IMAGERESULT_WRONGTYPE</em></td>
+<td>Image has the wrong type.</td>
+</tr>
+<tr class="row-even"><td><em>IMAGERESULT_OUTOFMEMORY</em></td>
+<td>Not enough memory.</td>
+</tr>
+<tr class="row-odd"><td><em>IMAGERESULT_FILEERROR</em></td>
+<td>File error.</td>
+</tr>
+<tr class="row-even"><td><em>IMAGERESULT_FILESTRUCTURE</em></td>
+<td>Invalid file structure.</td>
+</tr>
+<tr class="row-odd"><td><em>IMAGERESULT_MISC_ERROR</em></td>
+<td>Unknown error.</td>
+</tr>
+<tr class="row-even"><td><em>IMAGERESULT_PARAM_ERROR</em></td>
+<td>Parameter error.</td>
+</tr>
+<tr class="row-odd"><td><em>IMAGERESULT_THREADCANCELED</em></td>
+<td>Thread canceled while working.</td>
+</tr>
+</tbody>
+</table>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.GetChannelCount">
+<code class="descclassname">BaseBitmap.</code><code class="descname">GetChannelCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.GetChannelCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of alpha channels in the bitmap, including the internal channel.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Number of alpha channels.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.Within">
+<code class="descclassname">BaseBitmap.</code><code class="descname">Within</code><span class="sig-paren">(</span><em>self</em>, <em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.Within" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if a position is in the bitmap.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> (<em>int</em>) – The X Coordinate</li>
+<li><strong>y</strong> (<em>int</em>) – The Y Coordinate</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the coordinate is in the bitmap.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.GetSize">
+<code class="descclassname">BaseBitmap.</code><code class="descname">GetSize</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.GetSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the size of the bitmap in pixels.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>If the bitmap hasn’t been initialized the return values are 0. (This is the only way to see if a bitmap has been initialized.)</p>
+<div class="last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#bmp is a BaseBitmap instance</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">bmp</span><span class="o">.</span><span class="n">GetSize</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">List[int]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Bitmap width and height in pixels, or 0 if the bitmap is not initialized.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.GetBw">
+<code class="descclassname">BaseBitmap.</code><code class="descname">GetBw</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.GetBw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the width of the bitmap in pixels.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the bitmap hasn’t been initialized the return value is 0. (This is the only way to see if a bitmap has been initialized.)</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Bitmap width in pixels, or 0 if the bitmap is not initialized.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.GetBh">
+<code class="descclassname">BaseBitmap.</code><code class="descname">GetBh</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.GetBh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the height of the bitmap in pixels.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Bitmap height in pixels.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.GetBt">
+<code class="descclassname">BaseBitmap.</code><code class="descname">GetBt</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.GetBt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of bits per pixel.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The number of bits.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.SetCMAP">
+<code class="descclassname">BaseBitmap.</code><code class="descname">SetCMAP</code><span class="sig-paren">(</span><em>self</em>, <em>i</em>, <em>r</em>, <em>g</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.SetCMAP" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">If the image in the bitmap has 8 bit indexed color, this function can be used to set the palette entries.</div>
+<div class="line">All four parameters must be between <em>0</em> and <em>255</em>.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>i</strong> (<em>int</em>) – The index.</li>
+<li><strong>r</strong> (<em>int</em>) – The red component.</li>
+<li><strong>g</strong> (<em>int</em>) – The green component.</li>
+<li><strong>b</strong> (<em>int</em>) – The blue component.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.GetBpz">
+<code class="descclassname">BaseBitmap.</code><code class="descname">GetBpz</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.GetBpz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of bytes per line.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Number of bytes per line.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.SetData">
+<code class="descclassname">BaseBitmap.</code><code class="descname">SetData</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.SetData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets bitmap data. Private.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>int</em>) – The data ID to set.</li>
+<li><strong>data</strong> (<em>any</em>) – The data to set.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the data could be set, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.GetData">
+<code class="descclassname">BaseBitmap.</code><code class="descname">GetData</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>default</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.GetData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets bitmap data. Private.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>int</em>) – The data ID to get.</li>
+<li><strong>default</strong> (<em>any</em>) – Returned if data is not set.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">Any</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The retrieved data, or <em>default</em>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.ScaleBicubic">
+<code class="descclassname">BaseBitmap.</code><code class="descname">ScaleBicubic</code><span class="sig-paren">(</span><em>self</em>, <em>dst</em>, <em>src_xmin</em>, <em>src_ymin</em>, <em>src_xmax</em>, <em>src_ymax</em>, <em>dst_xmin</em>, <em>dst_ymin</em>, <em>dst_xmax</em>, <em>dst_ymax</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.ScaleBicubic" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Scales the bitmap rectangle (<em>src_xmin</em>, <em>src_ymin</em>, <em>src_xmax</em>, <em>src_ymax</em>) to fit in the destination bitmap rectangle (<em>dst_xmin</em>, <em>dst_ymin</em>, <em>dst_xmax</em>, <em>dst_ymax</em>) and copies it there.</div>
+<div class="line">The scaling, if necessary, is done using bicubic interpolation.</div>
+<div class="line">The destination needs to be initialized before calling this function.</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bmp</span><span class="o">.</span><span class="n">ScaleBicubic</span><span class="p">(</span><span class="n">dst</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">bmp</span><span class="o">.</span><span class="n">GetBw</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">bmp</span><span class="o">.</span><span class="n">GetBh</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">dst</span><span class="o">.</span><span class="n">GetBw</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">dst</span><span class="o">.</span><span class="n">GetBh</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function can currently only scale down, i.e. the destination needs to be smaller to the source in size.</p>
+</div>
+<a class="reference internal image-reference" href="../../../_images/basebitmap_scalebicubic.jpg"><img alt="../../../_images/basebitmap_scalebicubic.jpg" src="../../../_images/basebitmap_scalebicubic.jpg" style="width: 70%;" /></a>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dst</strong> (<a class="reference internal" href="#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap"><em>c4d.bitmaps.BaseBitmap</em></a>) – The destination bitmap.</li>
+<li><strong>src_xmin</strong> (<em>int</em>) – Source top left X coordinate.</li>
+<li><strong>src_ymin</strong> (<em>int</em>) – Source top left Y coordinate.</li>
+<li><strong>src_xmax</strong> (<em>int</em>) – Source bottom right X coordinate.</li>
+<li><strong>src_ymax</strong> (<em>int</em>) – Source bottom right Y coordinate.</li>
+<li><strong>dst_xmin</strong> (<em>int</em>) – Destination top left X coordinate.</li>
+<li><strong>dst_ymin</strong> (<em>int</em>) – Destination top left Y coordinate.</li>
+<li><strong>dst_xmax</strong> (<em>int</em>) – Destination bottom right X coordinate.</li>
+<li><strong>dst_ymax</strong> (<em>int</em>) – Destination bottom right Y coordinate.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.ScaleIt">
+<code class="descclassname">BaseBitmap.</code><code class="descname">ScaleIt</code><span class="sig-paren">(</span><em>self</em>, <em>dst</em>, <em>intens</em>, <em>sample</em>, <em>nprop</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.ScaleIt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scales the bitmap to fit in the destination bitmap and copies it there.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The destination needs to be initialized with the destination size before calling this function.</p>
+</div>
+<a class="reference internal image-reference" href="../../../_images/basebitmap_scaleit.jpg"><img alt="../../../_images/basebitmap_scaleit.jpg" src="../../../_images/basebitmap_scaleit.jpg" style="width: 70%;" /></a>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dst</strong> (<a class="reference internal" href="#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap"><em>c4d.bitmaps.BaseBitmap</em></a>) – The destination image. Must be initiated already with the destination size.</li>
+<li><strong>intens</strong> (<em>int</em>) – Lets you change brightness of the image (128 = 50% brightness, 256 = unchanged).</li>
+<li><strong>sample</strong> (<em>bool</em>) – If <strong>True</strong> a better scaling algorithm is used, which results in a better quality but is a bit slower.</li>
+<li><strong>nprop</strong> (<em>bool</em>) – Must be <strong>True</strong> if non-proportional scaling is wanted.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.AddChannel">
+<code class="descclassname">BaseBitmap.</code><code class="descname">AddChannel</code><span class="sig-paren">(</span><em>self</em>, <em>internal</em>, <em>straight</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.AddChannel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a new alpha channel to the image.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>internal</strong> (<em>bool</em>) – <div class="line-block">
+<div class="line">Should only be <strong>True</strong> for the first alpha.</div>
+<div class="line">The internal alpha will be stored within an image if the image format supports alphas.</div>
+</div>
+</li>
+<li><strong>straight</strong> (<em>bool</em>) – <div class="line-block">
+<div class="line">Should be <strong>True</strong> if the image has to be interpreted as straight.</div>
+<div class="line">For information about straight alphas please take a look at the corresponding option in the render settings of Cinema 4D and the Cinema 4D manual.</div>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The new channel.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.RemoveChannel">
+<code class="descclassname">BaseBitmap.</code><code class="descname">RemoveChannel</code><span class="sig-paren">(</span><em>self</em>, <em>channel</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.RemoveChannel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the specified channel from the bitmap.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>channel</strong> (<a class="reference internal" href="#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap"><em>c4d.bitmaps.BaseBitmap</em></a>) – The alpha channels to use.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.GetChannelNum">
+<code class="descclassname">BaseBitmap.</code><code class="descname">GetChannelNum</code><span class="sig-paren">(</span><em>self</em>, <em>num</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.GetChannelNum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the channel ID from the channel index.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>num</strong> (<em>int</em>) – A number between 0 and <a class="reference internal" href="#BaseBitmap.GetChannelCount" title="BaseBitmap.GetChannelCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetChannelCount()</span></code></a>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap">c4d.bitmaps.BaseBitmap</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The requested channel.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.GetDirty">
+<code class="descclassname">BaseBitmap.</code><code class="descname">GetDirty</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.GetDirty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Private.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Dirty count, incremented when the bitmap changes.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.SetDirty">
+<code class="descclassname">BaseBitmap.</code><code class="descname">SetDirty</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.SetDirty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes the bitmap dirty.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.IsMultipassBitmap">
+<code class="descclassname">BaseBitmap.</code><code class="descname">IsMultipassBitmap</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.IsMultipassBitmap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the image is a <a class="reference internal" href="MultipassBitmap/index.html#c4d.bitmaps.MultipassBitmap" title="c4d.bitmaps.MultipassBitmap"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultipassBitmap</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the image is a <a class="reference internal" href="MultipassBitmap/index.html#c4d.bitmaps.MultipassBitmap" title="c4d.bitmaps.MultipassBitmap"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultipassBitmap</span></code></a>, otherwise <strong>False</strong></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.GetColorMode">
+<code class="descclassname">BaseBitmap.</code><code class="descname">GetColorMode</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.GetColorMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the color mode of the bitmap.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Color mode<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>COLORMODE_ILLEGAL</em></td>
+<td>Illegal 8-bit mode.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_ALPHA</em></td>
+<td>Only 8-bit alpha channel.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_GRAY</em></td>
+<td>8-bit grayscale channel.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_AGRAY</em></td>
+<td>8-bit grayscale channel with 8-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_RGB</em></td>
+<td>8-bit RGB channels.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_ARGB</em></td>
+<td>8-bit RGB channels with 8-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_CMYK</em></td>
+<td>8-bit CMYK channel.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_ACMYK</em></td>
+<td>8-bit CMYK channel with 8-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_MASK</em></td>
+<td>8-bit grayscale map as mask.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_AMASK</em></td>
+<td>8-bit grayscale map as mask with 8-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_ILLEGALw</em></td>
+<td>Illegal 16-bit mode.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_GRAYw</em></td>
+<td>16-bit grayscale channel.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_AGRAYw</em></td>
+<td>16-bit grayscale channel with 16-bit alpha.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_RGBw</em></td>
+<td>16-bit RGB channels.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_ARGBw</em></td>
+<td>16-bit RGB channels with 16-bit alpha.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_MASKw</em></td>
+<td>16-bit grayscale map as mask with 16-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_ILLEGALf</em></td>
+<td>Illegal 32-bit mode.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_GRAYf</em></td>
+<td>32-bit floating point grayscale channel.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_AGRAYf</em></td>
+<td>32-bit floating point grayscale channel with floating point alpha.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_RGBf</em></td>
+<td>32-bit floating point RGB channels.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_ARGBf</em></td>
+<td>32-bit floating point RGB channels with floating point alpha.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_MASKf</em></td>
+<td>32-bit floating point grayscale map as mask.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.GetMemoryInfo">
+<code class="descclassname">BaseBitmap.</code><code class="descname">GetMemoryInfo</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.GetMemoryInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the size of the memory used by the bitmap.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">long</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Memory size of the bitmap.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseBitmap.GetUpdateRegionBitmap">
+<code class="descclassname">BaseBitmap.</code><code class="descname">GetUpdateRegionBitmap</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseBitmap.GetUpdateRegionBitmap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the updated region of a bitmap.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap">c4d.bitmaps.BaseBitmap</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The updated region.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="MultipassBitmap/index.html" title="c4d.bitmaps.MultipassBitmap"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="c4d.bitmaps"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >c4d.bitmaps</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

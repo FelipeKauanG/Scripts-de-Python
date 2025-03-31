@@ -1,0 +1,539 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.utils.PolygonReduction &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="c4d.utils.SplineHelp" href="../SplineHelp/index.html" />
+    <link rel="prev" title="c4d.utils.Neighbor" href="../Neighbor/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../SplineHelp/index.html" title="c4d.utils.SplineHelp"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../Neighbor/index.html" title="c4d.utils.Neighbor"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">c4d.utils</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-utils-polygonreduction">
+<h1>c4d.utils.PolygonReduction<a class="headerlink" href="#c4d-utils-polygonreduction" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.utils.PolygonReduction">
+<em class="property">class </em><code class="descclassname">c4d.utils.</code><code class="descname">PolygonReduction</code><a class="headerlink" href="#c4d.utils.PolygonReduction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs polygon reduction for a polygon object.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+<p class="rubric" id="polygonreductiondata-dictionary">PolygonReductionData Dictionary</p>
+<p>The dictionary stores information required for polygon reduction:</p>
+<ul class="simple">
+<li><cite>_doc</cite>: <a class="reference internal" href="../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDocument</span></code></a>: The document.</li>
+<li><cite>_op</cite>: <a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/PointObject/PolygonObject/index.html#c4d.PolygonObject" title="c4d.PolygonObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.PolygonObject</span></code></a>: The polygon object to be reduced.</li>
+<li><cite>_thread</cite>: <a class="reference internal" href="../../c4d.threading/BaseThread/index.html#c4d.threading.BaseThread" title="c4d.threading.BaseThread"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.threading.BaseThread</span></code></a>: The caller thread. Set to <strong>None</strong> if synchronous pre-processing calculation is needed (e.g. during rendering).</li>
+<li><cite>_settings</cite>: <a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseContainer</span></code></a>: The reduction constraints settings. See <cite>opolyreduxgen.h</cite>.</li>
+</ul>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#PolygonReduction.__init__" title="PolygonReduction.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonReduction.__init__(self)</span></code></a></td>
+<td>Creates a polygon reduction object.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#PolygonReduction.PreProcess" title="PolygonReduction.PreProcess"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonReduction.PreProcess(self,</span> <span class="pre">data)</span></code></a></td>
+<td>Starts the background or synchronous preprocessing that sets up the polygon reduction cache.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#PolygonReduction.IsPreprocessing" title="PolygonReduction.IsPreprocessing"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonReduction.IsPreprocessing(self)</span></code></a></td>
+<td>Checks whether the background preprocessing thread is still running.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#PolygonReduction.StopPreprocessing" title="PolygonReduction.StopPreprocessing"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonReduction.StopPreprocessing(self)</span></code></a></td>
+<td>Aborts preprocessing if it is running in the background. Resets the interactive settings values.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#PolygonReduction.Reset" title="PolygonReduction.Reset"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonReduction.Reset(self)</span></code></a></td>
+<td>Aborts preprocessing if it is running in the background and frees all temporary data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#PolygonReduction.SetReductionStrengthLevel" title="PolygonReduction.SetReductionStrengthLevel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonReduction.SetReductionStrengthLevel(self,</span> <span class="pre">strengthLevel)</span></code></a></td>
+<td>Sets the reduction strength level if the desired level is different than the current one.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#PolygonReduction.SetTriangleLevel" title="PolygonReduction.SetTriangleLevel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonReduction.SetTriangleLevel(self,</span> <span class="pre">desiredLevel)</span></code></a></td>
+<td>Reduces or restores the mesh to the desired number of triangles.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#PolygonReduction.SetVertexLevel" title="PolygonReduction.SetVertexLevel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonReduction.SetVertexLevel(self,</span> <span class="pre">desiredLevel)</span></code></a></td>
+<td>Reduces or restores the mesh to the desired number of vertices.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#PolygonReduction.SetRemainingEdgesLevel" title="PolygonReduction.SetRemainingEdgesLevel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonReduction.SetRemainingEdgesLevel(self,</span> <span class="pre">desiredLevel)</span></code></a></td>
+<td>Reduces or restores the mesh to the desired number of edges remaining to collapse.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#PolygonReduction.GetReductionStrengthLevel" title="PolygonReduction.GetReductionStrengthLevel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonReduction.GetReductionStrengthLevel(self)</span></code></a></td>
+<td>Queries the current reduction strength level.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#PolygonReduction.GetTriangleLevel" title="PolygonReduction.GetTriangleLevel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonReduction.GetTriangleLevel(self)</span></code></a></td>
+<td>Queries the current triangle count.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#PolygonReduction.GetVertexLevel" title="PolygonReduction.GetVertexLevel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonReduction.GetVertexLevel(self)</span></code></a></td>
+<td>Queries the current vertex count.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#PolygonReduction.GetRemainingEdgesLevel" title="PolygonReduction.GetRemainingEdgesLevel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonReduction.GetRemainingEdgesLevel(self)</span></code></a></td>
+<td>Queries the current remaining number of edges available to collapse.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#PolygonReduction.GetMaxReductionStrengthLevel" title="PolygonReduction.GetMaxReductionStrengthLevel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonReduction.GetMaxReductionStrengthLevel(self)</span></code></a></td>
+<td>Queries the maximum reduction strength percentage.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#PolygonReduction.GetMaxTriangleLevel" title="PolygonReduction.GetMaxTriangleLevel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonReduction.GetMaxTriangleLevel(self)</span></code></a></td>
+<td>Queries the triangle count when no reduction has been performed.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#PolygonReduction.GetMaxVertexLevel" title="PolygonReduction.GetMaxVertexLevel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonReduction.GetMaxVertexLevel(self)</span></code></a></td>
+<td>Queries the vertex count when no reduction has been performed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#PolygonReduction.GetMaxRemainingEdgesLevel" title="PolygonReduction.GetMaxRemainingEdgesLevel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonReduction.GetMaxRemainingEdgesLevel(self)</span></code></a></td>
+<td>Queries the total number of possible edge collapses.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#PolygonReduction.GetMinTriangleLevel" title="PolygonReduction.GetMinTriangleLevel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonReduction.GetMinTriangleLevel(self)</span></code></a></td>
+<td>Queries the triangle count when complete reduction has been performed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#PolygonReduction.GetMinVertexLevel" title="PolygonReduction.GetMinVertexLevel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonReduction.GetMinVertexLevel(self)</span></code></a></td>
+<td>Queries the vertex count when complete reduction has been performed.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#PolygonReduction.GetData" title="PolygonReduction.GetData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonReduction.GetData(self)</span></code></a></td>
+<td>Retrieves the associated data for the polygon reduction.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#PolygonReduction.IsValid" title="PolygonReduction.IsValid"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PolygonReduction.IsValid(self)</span></code></a></td>
+<td>Checks if a valid object and a valid document are associated with the <a class="reference internal" href="#c4d.utils.PolygonReduction" title="c4d.utils.PolygonReduction"><code class="xref py py-class docutils literal notranslate"><span class="pre">PolygonReduction</span></code></a> instance.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="PolygonReduction.__init__">
+<code class="descclassname">PolygonReduction.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonReduction.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a polygon reduction object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.utils.PolygonReduction" title="c4d.utils.PolygonReduction">c4d.utils.PolygonReduction</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A new polygon reduction object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonReduction.PreProcess">
+<code class="descclassname">PolygonReduction.</code><code class="descname">PreProcess</code><span class="sig-paren">(</span><em>self</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonReduction.PreProcess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts the background or synchronous preprocessing that sets up the polygon reduction cache.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>dict</em>) – The data for the reduction. See <a class="reference internal" href="#polygonreductiondata-dictionary"><span class="std std-ref">PolygonReductionData Dictionary</span></a>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonReduction.IsPreprocessing">
+<code class="descclassname">PolygonReduction.</code><code class="descname">IsPreprocessing</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonReduction.IsPreprocessing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks whether the background preprocessing thread is still running.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if preprocessing is ongoing, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonReduction.StopPreprocessing">
+<code class="descclassname">PolygonReduction.</code><code class="descname">StopPreprocessing</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonReduction.StopPreprocessing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aborts preprocessing if it is running in the background. Resets the interactive settings values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonReduction.Reset">
+<code class="descclassname">PolygonReduction.</code><code class="descname">Reset</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonReduction.Reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aborts preprocessing if it is running in the background and frees all temporary data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonReduction.SetReductionStrengthLevel">
+<code class="descclassname">PolygonReduction.</code><code class="descname">SetReductionStrengthLevel</code><span class="sig-paren">(</span><em>self</em>, <em>strengthLevel</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonReduction.SetReductionStrengthLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the reduction strength level if the desired level is different than the current one.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>strengthLevel</strong> (<em>float</em>) – The desired reduction strength level.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonReduction.SetTriangleLevel">
+<code class="descclassname">PolygonReduction.</code><code class="descname">SetTriangleLevel</code><span class="sig-paren">(</span><em>self</em>, <em>desiredLevel</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonReduction.SetTriangleLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reduces or restores the mesh to the desired number of triangles.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">If the desired level is different than the current level, at least one edge collapse or restore will be performed.</div>
+<div class="line">The actual resulting number of triangles may be slightly different.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>desiredLevel</strong> (<em>int</em>) – The desired number of triangles on call.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonReduction.SetVertexLevel">
+<code class="descclassname">PolygonReduction.</code><code class="descname">SetVertexLevel</code><span class="sig-paren">(</span><em>self</em>, <em>desiredLevel</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonReduction.SetVertexLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reduces or restores the mesh to the desired number of vertices.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">If the desired level is different than the current level, at least one edge collapse or restore will be performed.</div>
+<div class="line">The actual resulting number of vertices may be slightly different.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>desiredLevel</strong> (<em>int</em>) – The desired number of vertices on call.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonReduction.SetRemainingEdgesLevel">
+<code class="descclassname">PolygonReduction.</code><code class="descname">SetRemainingEdgesLevel</code><span class="sig-paren">(</span><em>self</em>, <em>desiredLevel</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonReduction.SetRemainingEdgesLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reduces or restores the mesh to the desired number of edges remaining to collapse.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">If the desired level is different than the current level, at least one edge collapse or restore will be performed.</div>
+<div class="line">The actual resulting number of edges may be slightly different.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>desiredLevel</strong> (<em>int</em>) – The desired number of collapse stack.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonReduction.GetReductionStrengthLevel">
+<code class="descclassname">PolygonReduction.</code><code class="descname">GetReductionStrengthLevel</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonReduction.GetReductionStrengthLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queries the current reduction strength level.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The reduction strength percentage: <cite>0</cite> means no reduction performed, <cite>1</cite> means maximum reduction performed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonReduction.GetTriangleLevel">
+<code class="descclassname">PolygonReduction.</code><code class="descname">GetTriangleLevel</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonReduction.GetTriangleLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queries the current triangle count.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The triangle count.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonReduction.GetVertexLevel">
+<code class="descclassname">PolygonReduction.</code><code class="descname">GetVertexLevel</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonReduction.GetVertexLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queries the current vertex count.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The vertex count.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonReduction.GetRemainingEdgesLevel">
+<code class="descclassname">PolygonReduction.</code><code class="descname">GetRemainingEdgesLevel</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonReduction.GetRemainingEdgesLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queries the current remaining number of edges available to collapse.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The remaining edges level.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonReduction.GetMaxReductionStrengthLevel">
+<code class="descclassname">PolygonReduction.</code><code class="descname">GetMaxReductionStrengthLevel</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonReduction.GetMaxReductionStrengthLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queries the maximum reduction strength percentage.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The maximum reduction strength percentage. Always <cite>1.0</cite>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonReduction.GetMaxTriangleLevel">
+<code class="descclassname">PolygonReduction.</code><code class="descname">GetMaxTriangleLevel</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonReduction.GetMaxTriangleLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queries the triangle count when no reduction has been performed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The maximum triangle count.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonReduction.GetMaxVertexLevel">
+<code class="descclassname">PolygonReduction.</code><code class="descname">GetMaxVertexLevel</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonReduction.GetMaxVertexLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queries the vertex count when no reduction has been performed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The maximum vertex count.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonReduction.GetMaxRemainingEdgesLevel">
+<code class="descclassname">PolygonReduction.</code><code class="descname">GetMaxRemainingEdgesLevel</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonReduction.GetMaxRemainingEdgesLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queries the total number of possible edge collapses.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The maximum collapse count.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonReduction.GetMinTriangleLevel">
+<code class="descclassname">PolygonReduction.</code><code class="descname">GetMinTriangleLevel</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonReduction.GetMinTriangleLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queries the triangle count when complete reduction has been performed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The minimum triangle count. May be non-zero if border constraints are enabled.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonReduction.GetMinVertexLevel">
+<code class="descclassname">PolygonReduction.</code><code class="descname">GetMinVertexLevel</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonReduction.GetMinVertexLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queries the vertex count when complete reduction has been performed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The minimum vertex count. May be non-zero if border constraints are enabled.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonReduction.GetData">
+<code class="descclassname">PolygonReduction.</code><code class="descname">GetData</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonReduction.GetData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the associated data for the polygon reduction.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The associated data. See <a class="reference internal" href="#polygonreductiondata-dictionary"><span class="std std-ref">PolygonReductionData Dictionary</span></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PolygonReduction.IsValid">
+<code class="descclassname">PolygonReduction.</code><code class="descname">IsValid</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#PolygonReduction.IsValid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if a valid object and a valid document are associated with the <a class="reference internal" href="#c4d.utils.PolygonReduction" title="c4d.utils.PolygonReduction"><code class="xref py py-class docutils literal notranslate"><span class="pre">PolygonReduction</span></code></a> instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the <a class="reference internal" href="#c4d.utils.PolygonReduction" title="c4d.utils.PolygonReduction"><code class="xref py py-class docutils literal notranslate"><span class="pre">PolygonReduction</span></code></a> instance is valid, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../SplineHelp/index.html" title="c4d.utils.SplineHelp"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../Neighbor/index.html" title="c4d.utils.Neighbor"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >c4d.utils</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

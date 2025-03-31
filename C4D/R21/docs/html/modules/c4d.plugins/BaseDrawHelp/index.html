@@ -1,0 +1,389 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.plugins.BaseDrawHelp &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="c4d.plugins.GeResource" href="../GeResource/index.html" />
+    <link rel="prev" title="c4d.plugins.ToolData" href="../BaseData/ToolData/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../GeResource/index.html" title="c4d.plugins.GeResource"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../BaseData/ToolData/index.html" title="c4d.plugins.ToolData"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">c4d.plugins</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-plugins-basedrawhelp">
+<h1>c4d.plugins.BaseDrawHelp<a class="headerlink" href="#c4d-plugins-basedrawhelp" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.plugins.BaseDrawHelp">
+<em class="property">class </em><code class="descclassname">c4d.plugins.</code><code class="descname">BaseDrawHelp</code><a class="headerlink" href="#c4d.plugins.BaseDrawHelp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contains useful data for drawing objects into a BaseDraw view.</p>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDrawHelp.__init__" title="BaseDrawHelp.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDrawHelp.__init__(self,</span> <span class="pre">bd,</span> <span class="pre">doc)</span></code></a></td>
+<td>Create a new help object for base draw <em>bd</em>.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDrawHelp.GetDocument" title="BaseDrawHelp.GetDocument"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDrawHelp.GetDocument(self)</span></code></a></td>
+<td>Returns the relevant document for the current draw operation, i.e. the currently active document. Never returns <strong>None</strong>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDrawHelp.GetActiveTag" title="BaseDrawHelp.GetActiveTag"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDrawHelp.GetActiveTag(self)</span></code></a></td>
+<td>Returns the currently active tag, or <strong>None</strong> if no tag is active (similar to <a class="reference internal" href="../../c4d.documents/BaseDocument/index.html#BaseDocument.GetActiveTag" title="BaseDocument.GetActiveTag"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetActiveTag()</span></code></a> but more efficient since the active tag is cached).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDrawHelp.GetMg" title="BaseDrawHelp.GetMg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDrawHelp.GetMg(self)</span></code></a></td>
+<td>Returns the global matrix of the object to be drawn (similar to <a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#BaseObject.GetMg" title="BaseObject.GetMg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetMg()</span></code></a> but more efficient since the matrix is cached).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDrawHelp.SetMg" title="BaseDrawHelp.SetMg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDrawHelp.SetMg(self,</span> <span class="pre">mg)</span></code></a></td>
+<td>Sets the matrix returned by <code class="xref py py-meth docutils literal notranslate"><span class="pre">GetMg()</span></code>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDrawHelp.GetDisplay" title="BaseDrawHelp.GetDisplay"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDrawHelp.GetDisplay(self)</span></code></a></td>
+<td>Retrieves a container with the display mode for the object to be drawn. See <cite>Tdisplay.h</cite> for values.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDrawHelp.SetDisplay" title="BaseDrawHelp.SetDisplay"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDrawHelp.SetDisplay(self,</span> <span class="pre">bc)</span></code></a></td>
+<td>Sets the display mode for the object to be drawn. See <cite>Tdisplay.h</cite> for values.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDrawHelp.GetViewSchedulerFlags" title="BaseDrawHelp.GetViewSchedulerFlags"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDrawHelp.GetViewSchedulerFlags(self)</span></code></a></td>
+<td>Returns the flags which have been passed to <a class="reference internal" href="../../c4d/index.html#c4d.DrawViews" title="c4d.DrawViews"><code class="xref py py-func docutils literal notranslate"><span class="pre">DrawViews()</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseDrawHelp.IsActive" title="BaseDrawHelp.IsActive"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDrawHelp.IsActive(self)</span></code></a></td>
+<td>Checks if the current object is active.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseDrawHelp.IsHighlight" title="BaseDrawHelp.IsHighlight"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDrawHelp.IsHighlight(self)</span></code></a></td>
+<td>Checks if the current object is highlighted (i.e. when the user has moved the mouse over it).</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="BaseDrawHelp.__init__">
+<code class="descclassname">BaseDrawHelp.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>bd</em>, <em>doc</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDrawHelp.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new help object for base draw <em>bd</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>bd</strong> (<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#c4d.BaseDraw" title="c4d.BaseDraw"><em>c4d.BaseDraw</em></a>) – The base draw the <a class="reference internal" href="#c4d.plugins.BaseDrawHelp" title="c4d.plugins.BaseDrawHelp"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDrawHelp</span></code></a> is assigned to.</li>
+<li><strong>doc</strong> (<a class="reference internal" href="../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document of the base draw <em>bd</em>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="#c4d.plugins.BaseDrawHelp" title="c4d.plugins.BaseDrawHelp">c4d.plugins.BaseDrawHelp</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The new base draw help object.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDrawHelp.GetDocument">
+<code class="descclassname">BaseDrawHelp.</code><code class="descname">GetDocument</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDrawHelp.GetDocument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the relevant document for the current draw operation, i.e. the currently active document. Never returns <strong>None</strong>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument">c4d.documents.BaseDocument</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The relevant document.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDrawHelp.GetActiveTag">
+<code class="descclassname">BaseDrawHelp.</code><code class="descname">GetActiveTag</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDrawHelp.GetActiveTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the currently active tag, or <strong>None</strong> if no tag is active (similar to <a class="reference internal" href="../../c4d.documents/BaseDocument/index.html#BaseDocument.GetActiveTag" title="BaseDocument.GetActiveTag"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetActiveTag()</span></code></a> but more efficient since the active tag is cached).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseTag/index.html#c4d.BaseTag" title="c4d.BaseTag">c4d.BaseTag</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The active tag.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDrawHelp.GetMg">
+<code class="descclassname">BaseDrawHelp.</code><code class="descname">GetMg</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDrawHelp.GetMg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the global matrix of the object to be drawn (similar to <a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#BaseObject.GetMg" title="BaseObject.GetMg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetMg()</span></code></a> but more efficient since the matrix is cached).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix">c4d.Matrix</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The global matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDrawHelp.SetMg">
+<code class="descclassname">BaseDrawHelp.</code><code class="descname">SetMg</code><span class="sig-paren">(</span><em>self</em>, <em>mg</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDrawHelp.SetMg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the matrix returned by <a class="reference internal" href="#BaseDrawHelp.GetMg" title="BaseDrawHelp.GetMg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetMg()</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mg</strong> (<a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><em>c4d.Matrix</em></a>) – New matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDrawHelp.GetDisplay">
+<code class="descclassname">BaseDrawHelp.</code><code class="descname">GetDisplay</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDrawHelp.GetDisplay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a container with the display mode for the object to be drawn. See <cite>Tdisplay.h</cite> for values.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer">c4d.BaseContainer</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The display mode container.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDrawHelp.SetDisplay">
+<code class="descclassname">BaseDrawHelp.</code><code class="descname">SetDisplay</code><span class="sig-paren">(</span><em>self</em>, <em>bc</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDrawHelp.SetDisplay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the display mode for the object to be drawn. See <cite>Tdisplay.h</cite> for values.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>bc</strong> (<a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The new display mode container.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDrawHelp.GetViewSchedulerFlags">
+<code class="descclassname">BaseDrawHelp.</code><code class="descname">GetViewSchedulerFlags</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDrawHelp.GetViewSchedulerFlags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the flags which have been passed to <a class="reference internal" href="../../c4d/index.html#c4d.DrawViews" title="c4d.DrawViews"><code class="xref py py-func docutils literal notranslate"><span class="pre">DrawViews()</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Flags:<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="85%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>DRAWFLAGS_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>DRAWFLAGS_NO_THREAD</em></td>
+<td>Synchronous call.</td>
+</tr>
+<tr class="row-odd"><td><em>DRAWFLAGS_NO_REDUCTION</em></td>
+<td>Ignore redraw limit.</td>
+</tr>
+<tr class="row-even"><td><em>DRAWFLAGS_NO_ANIMATION</em></td>
+<td>Ignore all animation.</td>
+</tr>
+<tr class="row-odd"><td><em>DRAWFLAGS_ONLY_ACTIVE_VIEW</em></td>
+<td>Only redraw the active view.</td>
+</tr>
+<tr class="row-even"><td><em>DRAWFLAGS_NO_EXPRESSIONS</em></td>
+<td>Ignore expressions.</td>
+</tr>
+<tr class="row-odd"><td><em>DRAWFLAGS_INDRAG</em></td>
+<td>In drag.</td>
+</tr>
+<tr class="row-even"><td><em>DRAWFLAGS_NO_HIGHLIGHT_PLANE</em></td>
+<td>The entire view is drawn, not just the highlight plane.</td>
+</tr>
+<tr class="row-odd"><td><em>DRAWFLAGS_FORCEFULLREDRAW</em></td>
+<td>Force full redraw.</td>
+</tr>
+<tr class="row-even"><td><em>DRAWFLAGS_ONLY_CAMERAEXPRESSION</em></td>
+<td>Camera expression.</td>
+</tr>
+<tr class="row-odd"><td><em>DRAWFLAGS_INMOVE</em></td>
+<td>In move.</td>
+</tr>
+<tr class="row-even"><td><em>DRAWFLAGS_ONLY_BASEDRAW</em></td>
+<td>Draw specific base draw only.</td>
+</tr>
+<tr class="row-odd"><td><em>DRAWFLAGS_ONLY_HIGHLIGHT</em></td>
+<td>Only highlights.</td>
+</tr>
+<tr class="row-even"><td><em>DRAWFLAGS_STATICBREAK</em></td>
+<td>If the display is done in the main thread (Cinema 4D only does this during animation playback) this allows that a special thread is used that polls the escape key. <strong>Note</strong>: Use only in combination with <em>DRAWFLAGS_NO_THREAD</em>.</td>
+</tr>
+<tr class="row-odd"><td><em>DRAWFLAGS_PRIVATE_NO_WAIT_GL_FINISHED</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-even"><td><em>DRAWFLAGS_PRIVATE_ONLYBACKGROUND</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-odd"><td><em>DRAWFLAGS_PRIVATE_NOBLIT</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-even"><td><em>DRAWFLAGS_PRIVATE_OPENGLHACK</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-odd"><td><em>DRAWFLAGS_PRIVATE_ONLY_PREPARE</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-even"><td><em>DRAWFLAGS_PRIVATE_NO_DCLIPPING</em></td>
+<td>Private.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDrawHelp.IsActive">
+<code class="descclassname">BaseDrawHelp.</code><code class="descname">IsActive</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDrawHelp.IsActive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the current object is active.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R14.014.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the current object is active.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseDrawHelp.IsHighlight">
+<code class="descclassname">BaseDrawHelp.</code><code class="descname">IsHighlight</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseDrawHelp.IsHighlight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the current object is highlighted (i.e. when the user has moved the mouse over it).</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R14.014.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the current object is highlighted.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../GeResource/index.html" title="c4d.plugins.GeResource"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../BaseData/ToolData/index.html" title="c4d.plugins.ToolData"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >c4d.plugins</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

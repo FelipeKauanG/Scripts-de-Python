@@ -1,0 +1,376 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.VoronoiFracture &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../../" src="../../../../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../../search.html" />
+    <link rel="next" title="c4d.BaseShader" href="../../BaseShader/index.html" />
+    <link rel="prev" title="c4d.SplineObject" href="../PointObject/SplineObject/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../BaseShader/index.html" title="c4d.BaseShader"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../PointObject/SplineObject/index.html" title="c4d.SplineObject"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../../../index.html" >c4d</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../../../index.html" >c4d.C4DAtom</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../../../index.html" >c4d.GeListNode</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="../../index.html" >c4d.BaseList2D</a> &#187;</li>
+          <li class="nav-item nav-item-5"><a href="../index.html" accesskey="U">c4d.BaseObject</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-voronoifracture">
+<h1>c4d.VoronoiFracture<a class="headerlink" href="#c4d-voronoifracture" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.VoronoiFracture">
+<em class="property">class </em><code class="descclassname">c4d.</code><code class="descname">VoronoiFracture</code><a class="headerlink" href="#c4d.VoronoiFracture" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">A VoronoiFracture object represents a Voronoi Fracture MoGraph generator.</div>
+<div class="line">The class provides safe access to the point sources referenced, owned and used by the generator.</div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.039.</span></p>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#VoronoiFracture.__init__" title="VoronoiFracture.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VoronoiFracture.__init__(self)</span></code></a></td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">c4d.VoronoiFracture</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#VoronoiFracture.GetSourcesCount" title="VoronoiFracture.GetSourcesCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VoronoiFracture.GetSourcesCount(self)</span></code></a></td>
+<td>Returns the number of elements in the Sources list, including point generators.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#VoronoiFracture.GetSource" title="VoronoiFracture.GetSource"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VoronoiFracture.GetSource(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Retrieves the object referenced at the given <em>index</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#VoronoiFracture.GetSourceByType" title="VoronoiFracture.GetSourceByType"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VoronoiFracture.GetSourceByType(self,</span> <span class="pre">type[,</span> <span class="pre">startIndex])</span></code></a></td>
+<td>Retrieves the object referenced in the Sources list with the given type.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#VoronoiFracture.RemoveSource" title="VoronoiFracture.RemoveSource"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VoronoiFracture.RemoveSource(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Removes the source element in the list at the given index.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#VoronoiFracture.AddPointGenerator" title="VoronoiFracture.AddPointGenerator"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VoronoiFracture.AddPointGenerator(self,</span> <span class="pre">type[,</span> <span class="pre">shaderType])</span></code></a></td>
+<td>Adds a new point generator.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#VoronoiFracture.AddSceneObject" title="VoronoiFracture.AddSceneObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VoronoiFracture.AddSceneObject(self,</span> <span class="pre">object)</span></code></a></td>
+<td>Adds a valid object from the scene to the Sources list.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#VoronoiFracture.ClearSources" title="VoronoiFracture.ClearSources"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VoronoiFracture.ClearSources(self)</span></code></a></td>
+<td>Clears the Sources list and deletes all point generators.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#VoronoiFracture.GetSourceSettingsContainerForIndex" title="VoronoiFracture.GetSourceSettingsContainerForIndex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VoronoiFracture.GetSourceSettingsContainerForIndex(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Returns the internal container for the settings of an external source input, like a polygon object as point source.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#VoronoiFracture.GetSourceSettingsContainerForObject" title="VoronoiFracture.GetSourceSettingsContainerForObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VoronoiFracture.GetSourceSettingsContainerForObject(self,</span> <span class="pre">object)</span></code></a></td>
+<td>Returns the internal container for the settings of an external source input, like a polygon object as point source.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../index.html#c4d.BaseObject" title="c4d.BaseObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseObject</span></code></a></li>
+</ul>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="VoronoiFracture.__init__">
+<code class="descclassname">VoronoiFracture.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#VoronoiFracture.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.VoronoiFracture" title="c4d.VoronoiFracture">c4d.VoronoiFracture</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The new Voronoi fracture object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VoronoiFracture.GetSourcesCount">
+<code class="descclassname">VoronoiFracture.</code><code class="descname">GetSourcesCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#VoronoiFracture.GetSourcesCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of elements in the Sources list, including point generators.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The number of elements in the Sources list.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VoronoiFracture.GetSource">
+<code class="descclassname">VoronoiFracture.</code><code class="descname">GetSource</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#VoronoiFracture.GetSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the object referenced at the given <em>index</em>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If <em>index</em> references a point generator that point generator object is returned.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index of the source element to access.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../index.html#c4d.BaseObject" title="c4d.BaseObject">c4d.BaseObject</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The object at the given <em>index</em>, or <strong>None</strong> if the method failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VoronoiFracture.GetSourceByType">
+<code class="descclassname">VoronoiFracture.</code><code class="descname">GetSourceByType</code><span class="sig-paren">(</span><em>self</em>, <em>type</em>, <em>startIndex=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#VoronoiFracture.GetSourceByType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the object referenced in the Sources list with the given type.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If multiple objects with the given <em>type</em> exist the first is returned.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>type</strong> (<em>int</em>) – The type of object to access.</li>
+<li><strong>startIndex</strong> (<em>int</em>) – The index to start the search.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">tuple(<a class="reference internal" href="../index.html#c4d.BaseObject" title="c4d.BaseObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseObject</span></code></a>, int)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A tuple with the found source object and its index, or <strong>None</strong> if the method failed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VoronoiFracture.RemoveSource">
+<code class="descclassname">VoronoiFracture.</code><code class="descname">RemoveSource</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#VoronoiFracture.RemoveSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the source element in the list at the given index.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the index references a point generator it is also deleted from the internal list.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index of the source element to remove.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the element was removed successfully, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VoronoiFracture.AddPointGenerator">
+<code class="descclassname">VoronoiFracture.</code><code class="descname">AddPointGenerator</code><span class="sig-paren">(</span><em>self</em>, <em>type</em>, <em>shaderType=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#VoronoiFracture.AddPointGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a new point generator.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>type</strong> (<em>int</em>) – The type of point generator, either <strong>ID_POINTCREATOR_CREATORTYPE_DISTRIBUTION</strong> or <strong>ID_POINTCREATOR_CREATORTYPE_SHADER</strong>.</li>
+<li><strong>shaderType</strong> (<em>int</em>) – If a Shader generator is created a shader of this type is automatically added to it.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">tuple(<a class="reference internal" href="../index.html#c4d.BaseObject" title="c4d.BaseObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseObject</span></code></a>, int)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A tuple with the added point generator and its index, or <strong>None</strong> if the method failed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VoronoiFracture.AddSceneObject">
+<code class="descclassname">VoronoiFracture.</code><code class="descname">AddSceneObject</code><span class="sig-paren">(</span><em>self</em>, <em>object</em><span class="sig-paren">)</span><a class="headerlink" href="#VoronoiFracture.AddSceneObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a valid object from the scene to the Sources list.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>object</strong> (<a class="reference internal" href="../index.html#c4d.BaseObject" title="c4d.BaseObject"><em>c4d.BaseObject</em></a>) – The scene object that should be added.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">tuple(bool, int)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A tuple with the scene object addition state and its index, or <strong>None</strong> if the method failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VoronoiFracture.ClearSources">
+<code class="descclassname">VoronoiFracture.</code><code class="descname">ClearSources</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#VoronoiFracture.ClearSources" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears the Sources list and deletes all point generators.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VoronoiFracture.GetSourceSettingsContainerForIndex">
+<code class="descclassname">VoronoiFracture.</code><code class="descname">GetSourceSettingsContainerForIndex</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#VoronoiFracture.GetSourceSettingsContainerForIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the internal container for the settings of an external source input, like a polygon object as point source.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Allows to change the settings that control for example the distribution of points in the object and the point count.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index of the object in the Sources list.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../../BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer">c4d.BaseContainer</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The container for the source settings if the index fits to an external Source input, otherwise <strong>None</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VoronoiFracture.GetSourceSettingsContainerForObject">
+<code class="descclassname">VoronoiFracture.</code><code class="descname">GetSourceSettingsContainerForObject</code><span class="sig-paren">(</span><em>self</em>, <em>object</em><span class="sig-paren">)</span><a class="headerlink" href="#VoronoiFracture.GetSourceSettingsContainerForObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the internal container for the settings of an external source input, like a polygon object as point source.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Allows to change the settings that control for example the distribution of points in the object and the point count.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>object</strong> (<a class="reference internal" href="../index.html#c4d.BaseObject" title="c4d.BaseObject"><em>c4d.BaseObject</em></a>) – The external source object in the Sources list.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../../BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer">c4d.BaseContainer</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The container for the source settings if the object is in the Sources list, otherwise <strong>None</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../BaseShader/index.html" title="c4d.BaseShader"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../PointObject/SplineObject/index.html" title="c4d.SplineObject"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../../../index.html" >c4d</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../../../index.html" >c4d.C4DAtom</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../../../index.html" >c4d.GeListNode</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="../../index.html" >c4d.BaseList2D</a> &#187;</li>
+          <li class="nav-item nav-item-5"><a href="../index.html" >c4d.BaseObject</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

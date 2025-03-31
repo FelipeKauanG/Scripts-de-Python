@@ -1,0 +1,1162 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.render.VolumeData &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.modules.render.ChannelData" href="../ChannelData/index.html" />
+    <link rel="prev" title="c4d.modules.render.BaseVolumeData" href="../BaseVolumeData/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../ChannelData/index.html" title="c4d.modules.render.ChannelData"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../BaseVolumeData/index.html" title="c4d.modules.render.BaseVolumeData"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.modules.render</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-render-volumedata">
+<h1>c4d.modules.render.VolumeData<a class="headerlink" href="#c4d-modules-render-volumedata" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.render.VolumeData">
+<em class="property">class </em><code class="descclassname">c4d.modules.render.</code><code class="descname">VolumeData</code><a class="headerlink" href="#c4d.modules.render.VolumeData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#VolumeData.GetObjCount" title="VolumeData.GetObjCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.GetObjCount(self)</span></code></a></td>
+<td>Returns the overall number of objects.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#VolumeData.GetSkyCount" title="VolumeData.GetSkyCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.GetSkyCount(self)</span></code></a></td>
+<td>Returns the number of skies.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#VolumeData.GetCurrentCPU" title="VolumeData.GetCurrentCPU"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.GetCurrentCPU(self)</span></code></a></td>
+<td>Returns the current CPU on which the shader is executed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#VolumeData.GetCPUCount" title="VolumeData.GetCPUCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.GetCPUCount(self)</span></code></a></td>
+<td>Returns the CPU count the renderer is utilizing.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#VolumeData.OutOfMemory" title="VolumeData.OutOfMemory"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.OutOfMemory(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Notify Cinema 4D that a (severe) out-of-memory condition occurred.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#VolumeData.SkipRenderProcess" title="VolumeData.SkipRenderProcess"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.SkipRenderProcess(self)</span></code></a></td>
+<td>Skips the render process. (Useful for custom renderers.)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#VolumeData.ScreenToCamera" title="VolumeData.ScreenToCamera"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.ScreenToCamera(self,</span> <span class="pre">p)</span></code></a></td>
+<td>Transform screen to camera coordinates. During QTVR rendering same point is returned.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#VolumeData.CameraToScreen" title="VolumeData.CameraToScreen"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.CameraToScreen(self,</span> <span class="pre">p)</span></code></a></td>
+<td>Transform camera to screen coordinates. During QTVR rendering same point is returned.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#VolumeData.StatusSetText" title="VolumeData.StatusSetText"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.StatusSetText(self,</span> <span class="pre">str)</span></code></a></td>
+<td>Set the status bar text during initialization of your shader or videopost effect.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#VolumeData.StatusSetBar" title="VolumeData.StatusSetBar"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.StatusSetBar(self)</span></code></a></td>
+<td>Set the progress bar during initialization of your shader or videopost effect.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#VolumeData.StatusSetSpinMode" title="VolumeData.StatusSetSpinMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.StatusSetSpinMode(self,</span> <span class="pre">on)</span></code></a></td>
+<td>Set the render progress bar spinning. Use this to indicate that your plugin is still processing even if the progress bar is not increasing.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#VolumeData.GetLightCount" title="VolumeData.GetLightCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.GetLightCount(self)</span></code></a></td>
+<td>Returns the overall number of lights.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#VolumeData.GetLight" title="VolumeData.GetLight"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.GetLight(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Get the given light source.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#VolumeData.CalcArea" title="VolumeData.CalcArea"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.CalcArea(self,</span> <span class="pre">light,</span> <span class="pre">nodiffuse,</span> <span class="pre">...)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">If you code custom illumination models (e.g. different specular function) you can do this for standard lightsources easily.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#VolumeData.CalcShadow" title="VolumeData.CalcShadow"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.CalcShadow(self,</span> <span class="pre">l,</span> <span class="pre">p,</span> <span class="pre">bumpn,</span> <span class="pre">...)</span></code></a></td>
+<td>Compute a shadow.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#VolumeData.IlluminanceAnyPoint" title="VolumeData.IlluminanceAnyPoint"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.IlluminanceAnyPoint(self,</span> <span class="pre">p,</span> <span class="pre">flags,</span> <span class="pre">raybits)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Calculates the light intensity for a given point <em>p</em>.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#VolumeData.IlluminateSurfacePoint" title="VolumeData.IlluminateSurfacePoint"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.IlluminateSurfacePoint(self,</span> <span class="pre">rl,</span> <span class="pre">p,</span> <span class="pre">bumpn,</span> <span class="pre">...)</span></code></a></td>
+<td>Calculates the intensity of incoming light for a given light and surface point.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#VolumeData.CalcVisibleLight" title="VolumeData.CalcVisibleLight"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.CalcVisibleLight(self,</span> <span class="pre">ray,</span> <span class="pre">maxdist)</span></code></a></td>
+<td>Returns the mixed color of all visible lights on a given ray span.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#VolumeData.GetRS" title="VolumeData.GetRS"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.GetRS(self,</span> <span class="pre">hitid,</span> <span class="pre">p)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Calculates the R/S parameters for a point.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#VolumeData.GetWeights" title="VolumeData.GetWeights"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.GetWeights(self,</span> <span class="pre">hitid,</span> <span class="pre">p)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Returns barycentric coordinates for a point on the surface of a polygon.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#VolumeData.GetSmoothedNormal" title="VolumeData.GetSmoothedNormal"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.GetSmoothedNormal(self,</span> <span class="pre">hitid,</span> <span class="pre">p)</span></code></a></td>
+<td>Returns the phong normal for a point.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#VolumeData.GetXY" title="VolumeData.GetXY"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.GetXY(self)</span></code></a></td>
+<td>Returns the current X/Y pixel position in render resolution. Render resolution is the screen resolution multiplied by ‘scale’.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#VolumeData.SetXY" title="VolumeData.SetXY"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.SetXY(self,</span> <span class="pre">x,</span> <span class="pre">y)</span></code></a></td>
+<td>Sets the current X/Y pixel position in render resolution. Render resolution is the screen resolution multiplied by ‘scale’.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#VolumeData.CalcFgBg" title="VolumeData.CalcFgBg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.CalcFgBg(self,</span> <span class="pre">foreground,</span> <span class="pre">x,</span> <span class="pre">y,</span> <span class="pre">...)</span></code></a></td>
+<td>Calculates the foreground or background color and alpha at (<em>x</em>, <em>y</em>).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#VolumeData.GetLightFalloff" title="VolumeData.GetLightFalloff"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.GetLightFalloff(self)</span></code></a></td>
+<td>Calculate the light falloff function (light intensity for a distance).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#VolumeData.GetRay" title="VolumeData.GetRay"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.GetRay(self,</span> <span class="pre">x,</span> <span class="pre">y,</span> <span class="pre">ray)</span></code></a></td>
+<td>Generate the view ray for a position.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#VolumeData.GetVideoPost" title="VolumeData.GetVideoPost"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.GetVideoPost(self,</span> <span class="pre">nth)</span></code></a></td>
+<td>Returns the n-th video post effect for this render process.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#VolumeData.FindVideoPost" title="VolumeData.FindVideoPost"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.FindVideoPost(self,</span> <span class="pre">id)</span></code></a></td>
+<td>Returns a video post effect for this render process by ID.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#VolumeData.Init" title="VolumeData.Init"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.Init(self,</span> <span class="pre">from_)</span></code></a></td>
+<td>Initializes this <a class="reference internal" href="#c4d.modules.render.VolumeData" title="c4d.modules.render.VolumeData"><code class="xref py py-class docutils literal notranslate"><span class="pre">VolumeData</span></code></a> object with the data from the <em>from</em> object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#VolumeData.CopyTo" title="VolumeData.CopyTo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">VolumeData.CopyTo(self,</span> <span class="pre">dst)</span></code></a></td>
+<td>Copy this to another <a class="reference internal" href="#c4d.modules.render.VolumeData" title="c4d.modules.render.VolumeData"><code class="xref py py-class docutils literal notranslate"><span class="pre">VolumeData</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../BaseVolumeData/index.html#c4d.modules.render.BaseVolumeData" title="c4d.modules.render.BaseVolumeData"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.render.BaseVolumeData</span></code></a></li>
+</ul>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="VolumeData.GetObjCount">
+<code class="descclassname">VolumeData.</code><code class="descname">GetObjCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.GetObjCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the overall number of objects.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The total number of objects.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.GetSkyCount">
+<code class="descclassname">VolumeData.</code><code class="descname">GetSkyCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.GetSkyCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of skies.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The number of skies.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.GetCurrentCPU">
+<code class="descclassname">VolumeData.</code><code class="descname">GetCurrentCPU</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.GetCurrentCPU" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current CPU on which the shader is executed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The running CPU id.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.GetCPUCount">
+<code class="descclassname">VolumeData.</code><code class="descname">GetCPUCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.GetCPUCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the CPU count the renderer is utilizing.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The number of CPUs.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.OutOfMemory">
+<code class="descclassname">VolumeData.</code><code class="descname">OutOfMemory</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.OutOfMemory" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Notify Cinema 4D that a (severe) out-of-memory condition occurred.</div>
+<div class="line">Cinema 4D will stop as soon as possible, but there is no guarantee when exactly.</div>
+<div class="line">It is possible that your shader could still be called several times, so it has to be programmed to handle this and to be crash-proof.</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.SkipRenderProcess">
+<code class="descclassname">VolumeData.</code><code class="descname">SkipRenderProcess</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.SkipRenderProcess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skips the render process. (Useful for custom renderers.)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.ScreenToCamera">
+<code class="descclassname">VolumeData.</code><code class="descname">ScreenToCamera</code><span class="sig-paren">(</span><em>self</em>, <em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.ScreenToCamera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transform screen to camera coordinates. During QTVR rendering same point is returned.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>p</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The screen coordinate.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The camera coordinate.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.CameraToScreen">
+<code class="descclassname">VolumeData.</code><code class="descname">CameraToScreen</code><span class="sig-paren">(</span><em>self</em>, <em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.CameraToScreen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transform camera to screen coordinates. During QTVR rendering same point is returned.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>p</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The camera coordinate.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The screen coordinate.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.StatusSetText">
+<code class="descclassname">VolumeData.</code><code class="descname">StatusSetText</code><span class="sig-paren">(</span><em>self</em>, <em>str</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.StatusSetText" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the status bar text during initialization of your shader or videopost effect.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If an empty string is passed the status bar will be cleared.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>str</strong> (<em>str</em>) – The status text to display.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.StatusSetBar">
+<code class="descclassname">VolumeData.</code><code class="descname">StatusSetBar</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.StatusSetBar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the progress bar during initialization of your shader or videopost effect.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The value passed will only be displayed if it is bigger than the previous one. To reset the bar call <em>StatusSetText</em> (“”).</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.StatusSetSpinMode">
+<code class="descclassname">VolumeData.</code><code class="descname">StatusSetSpinMode</code><span class="sig-paren">(</span><em>self</em>, <em>on</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.StatusSetSpinMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the render progress bar spinning. Use this to indicate that your plugin is still processing even if the progress bar is not increasing.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>on</strong> (<em>bool</em>) – <strong>True</strong> to set the progress bar spinning, <strong>False</strong> to stop it.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.GetLightCount">
+<code class="descclassname">VolumeData.</code><code class="descname">GetLightCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.GetLightCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the overall number of lights.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The number of lights.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.GetLight">
+<code class="descclassname">VolumeData.</code><code class="descname">GetLight</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.GetLight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the given light source.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index of the light source to return.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">ptr</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The light source.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.CalcArea">
+<code class="descclassname">VolumeData.</code><code class="descname">CalcArea</code><span class="sig-paren">(</span><em>self</em>, <em>light</em>, <em>nodiffuse</em>, <em>nospecular</em>, <em>specular_exponent</em>, <em>ray_vector</em>, <em>p</em>, <em>bumpn</em>, <em>orign</em>, <em>raybits</em>, <em>ignoreLightColor</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.CalcArea" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">If you code custom illumination models (e.g. different specular function) you can do this for standard lightsources easily.</div>
+<div class="line">For area lights you’ll usually want to fall back to the default illumination model though, as otherwise you’d have to rebuild the sample code of area lights!</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>light</strong> (<em>ptr</em>) – The area light to calculate.</li>
+<li><strong>nodiffuse</strong> (<em>bool</em>) – <strong>True</strong> if the diffuse value should not be calculated, otherwise <strong>False</strong>.</li>
+<li><strong>nospecular</strong> (<em>bool</em>) – <strong>True</strong> if the specular value should not be calculated, otherwise <strong>False</strong>.</li>
+<li><strong>specular_exponent</strong> (<em>float</em>) – Specular exponent to use.</li>
+<li><strong>ray_vector</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – Ray vector.</li>
+<li><strong>p</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The surface point.</li>
+<li><strong>bumpn</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The bump normal.</li>
+<li><strong>orign</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The original normal.</li>
+<li><strong>raybits</strong> (<em>int</em>) – <p>The ray bits:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="79%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>RAYBIT_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_REFLECTION</em></td>
+<td>Ray chain contains a reflection ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_TRANSPARENCY</em></td>
+<td>Ray chain contains a transparency ray (refractions are not contained).</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_REFRACTION</em></td>
+<td>Ray chain contains a refraction ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_CUSTOM</em></td>
+<td>Ray chain contains a custom ray.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_CURR_REFLECTION</em></td>
+<td>Current ray is a reflection ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_CURR_TRANSPARENCY</em></td>
+<td>Current ray is a transparency ray.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_CURR_REFRACTION</em></td>
+<td>Current ray is a refraction ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_CURR_CUSTOM</em></td>
+<td>Current ray is a custom ray.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_VOLUMETRICLIGHT</em></td>
+<td>Current ray is used to calculate a volumetric light.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_ALLOWVLMIX</em></td>
+<td>Custom mixing of visible light sources allowed for the ray; bit must be deleted by shader if used.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_GI</em></td>
+<td>Current ray is a Global Illumination ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_BLURRY</em></td>
+<td>Current ray is a blurry ray.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_SSS</em></td>
+<td>Current ray is a subsurface scattering ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_AO</em></td>
+<td>Current ray is an Ambient Occlusion ray.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_COMPOSITING</em></td>
+<td>Current ray is a compositing ray.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>ignoreLightColor</strong> (<em>bool</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R20: </span><strong>True</strong> to ignore the light color into the result, otherwise <strong>False</strong>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">tuple(<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>, <a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The diffuse and specular components.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.CalcShadow">
+<code class="descclassname">VolumeData.</code><code class="descname">CalcShadow</code><span class="sig-paren">(</span><em>self</em>, <em>l</em>, <em>p</em>, <em>bumpn</em>, <em>phongn</em>, <em>orign</em>, <em>rayv</em>, <em>transparency</em>, <em>hitid</em>, <em>raybits</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.CalcShadow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute a shadow.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>l</strong> (<em>ptr</em>) – The illuminating light source.</li>
+<li><strong>p</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The point in global coordinates.</li>
+<li><strong>bumpn</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The bump normal.</li>
+<li><strong>phongn</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The phong normal.</li>
+<li><strong>orign</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The original normal.</li>
+<li><strong>rayv</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The ray vector.</li>
+<li><strong>transparency</strong> (<em>bool</em>) – <strong>True</strong> if transparencies/alphas for inbetween objects should be evaluated.</li>
+<li><strong>hitid</strong> (<em>ptr</em>) – The global RayHitID for the surface intersection (to avoid self shadowing), or RayHitID() if you are not on a surface or do not wish to make use of this avoidance.</li>
+<li><strong>raybits</strong> (<em>int</em>) – <p>The ray bits:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="79%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>RAYBIT_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_REFLECTION</em></td>
+<td>Ray chain contains a reflection ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_TRANSPARENCY</em></td>
+<td>Ray chain contains a transparency ray (refractions are not contained).</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_REFRACTION</em></td>
+<td>Ray chain contains a refraction ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_CUSTOM</em></td>
+<td>Ray chain contains a custom ray.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_CURR_REFLECTION</em></td>
+<td>Current ray is a reflection ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_CURR_TRANSPARENCY</em></td>
+<td>Current ray is a transparency ray.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_CURR_REFRACTION</em></td>
+<td>Current ray is a refraction ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_CURR_CUSTOM</em></td>
+<td>Current ray is a custom ray.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_VOLUMETRICLIGHT</em></td>
+<td>Current ray is used to calculate a volumetric light.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_ALLOWVLMIX</em></td>
+<td>Custom mixing of visible light sources allowed for the ray; bit must be deleted by shader if used.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_GI</em></td>
+<td>Current ray is a Global Illumination ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_BLURRY</em></td>
+<td>Current ray is a blurry ray.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_SSS</em></td>
+<td>Current ray is a subsurface scattering ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_AO</em></td>
+<td>Current ray is an Ambient Occlusion ray.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_COMPOSITING</em></td>
+<td>Current ray is a compositing ray.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The returned shadow value. If there is no shadow, 0.0 will be returned. 1.0 is the maximum shadow value for each component.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.IlluminanceAnyPoint">
+<code class="descclassname">VolumeData.</code><code class="descname">IlluminanceAnyPoint</code><span class="sig-paren">(</span><em>self</em>, <em>p</em>, <em>flags</em>, <em>raybits</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.IlluminanceAnyPoint" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Calculates the light intensity for a given point <em>p</em>.</div>
+<div class="line">This routine can calculate the illumination for any point in space and is widely used for transparent volumetric shaders (gases, clouds etc.).</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>p</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The point in global coordinates.</li>
+<li><strong>raybits</strong> (<em>int</em>) – The global coordinate point to calculate the illumination for.</li>
+<li><strong>flags</strong> (<em>int</em>) – <p>The illuminate flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>ILLUMINATEFLAGS_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>ILLUMINATEFLAGS_SHADOW</em></td>
+<td>Full shadow calculations.</td>
+</tr>
+<tr class="row-odd"><td><em>ILLUMINATEFLAGS_NOENVIRONMENT</em></td>
+<td>Shadow calculations are enabled but no environment shading will be calculated.</td>
+</tr>
+<tr class="row-even"><td><em>ILLUMINATEFLAGS_DISABLESHADOWMAP_CORRECTION</em></td>
+<td>Shadow maps evaluate the normal at a surface point, to avoid the problem of self-shadowing (that is otherwise inherent due to the way the algorithm works).
+If a free point is sampled in space (where no surface is) this correction has to be disabled though, otherwise wrong results will be returned.</td>
+</tr>
+<tr class="row-odd"><td><em>ILLUMINATEFLAGS_DISABLESHADOWCASTERMP_CORRECTION</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-even"><td><em>ILLUMINATEFLAGS_LIGHTDIRNORMALS</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-odd"><td><em>ILLUMINATEFLAGS_NODISTANCEFALLOFF</em></td>
+<td>Do not take distance falloff into account.</td>
+</tr>
+<tr class="row-even"><td><em>ILLUMINATEFLAGS_NOGRAIN</em></td>
+<td>Do not take grain into account.</td>
+</tr>
+<tr class="row-odd"><td><em>ILLUMINATEFLAGS_BACKLIGHT</em></td>
+<td>Take backlight into account.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>raybits</strong> – <p>The ray bits:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="79%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>RAYBIT_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_REFLECTION</em></td>
+<td>Ray chain contains a reflection ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_TRANSPARENCY</em></td>
+<td>Ray chain contains a transparency ray (refractions are not contained).</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_REFRACTION</em></td>
+<td>Ray chain contains a refraction ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_CUSTOM</em></td>
+<td>Ray chain contains a custom ray.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_CURR_REFLECTION</em></td>
+<td>Current ray is a reflection ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_CURR_TRANSPARENCY</em></td>
+<td>Current ray is a transparency ray.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_CURR_REFRACTION</em></td>
+<td>Current ray is a refraction ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_CURR_CUSTOM</em></td>
+<td>Current ray is a custom ray.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_VOLUMETRICLIGHT</em></td>
+<td>Current ray is used to calculate a volumetric light.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_ALLOWVLMIX</em></td>
+<td>Custom mixing of visible light sources allowed for the ray; bit must be deleted by shader if used.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_GI</em></td>
+<td>Current ray is a Global Illumination ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_BLURRY</em></td>
+<td>Current ray is a blurry ray.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_SSS</em></td>
+<td>Current ray is a subsurface scattering ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_AO</em></td>
+<td>Current ray is an Ambient Occlusion ray.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_COMPOSITING</em></td>
+<td>Current ray is a compositing ray.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>The returned color.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The returned color components can exceed values of 1.0!</p>
+</div>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.IlluminateSurfacePoint">
+<code class="descclassname">VolumeData.</code><code class="descname">IlluminateSurfacePoint</code><span class="sig-paren">(</span><em>self</em>, <em>rl</em>, <em>p</em>, <em>bumpn</em>, <em>phongn</em>, <em>orign</em>, <em>ray_vector</em>, <em>flags</em>, <em>hitid</em>, <em>raybits</em>, <em>cosine_cutoff</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.IlluminateSurfacePoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the intensity of incoming light for a given light and surface point.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Used for custom illumination models.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>rl</strong> (<em>PyCObject</em>) – The illuminating light.</li>
+<li><strong>p</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The surface point.</li>
+<li><strong>bumpn</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The bump normal.</li>
+<li><strong>phongn</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The phong normal.</li>
+<li><strong>orign</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The original normal.</li>
+<li><strong>ray_vector</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The ray vector.</li>
+<li><strong>flags</strong> (<em>int</em>) – <p>The illuminate flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>ILLUMINATEFLAGS_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>ILLUMINATEFLAGS_SHADOW</em></td>
+<td>Full shadow calculations.</td>
+</tr>
+<tr class="row-odd"><td><em>ILLUMINATEFLAGS_NOENVIRONMENT</em></td>
+<td>Shadow calculations are enabled but no environment shading will be calculated.</td>
+</tr>
+<tr class="row-even"><td><em>ILLUMINATEFLAGS_DISABLESHADOWMAP_CORRECTION</em></td>
+<td>Shadow maps evaluate the normal at a surface point, to avoid the problem of self-shadowing (that is otherwise inherent due to the way the algorithm works).
+If a free point is sampled in space (where no surface is) this correction has to be disabled though, otherwise wrong results will be returned.</td>
+</tr>
+<tr class="row-odd"><td><em>ILLUMINATEFLAGS_DISABLESHADOWCASTERMP_CORRECTION</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-even"><td><em>ILLUMINATEFLAGS_LIGHTDIRNORMALS</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-odd"><td><em>ILLUMINATEFLAGS_NODISTANCEFALLOFF</em></td>
+<td>Do not take distance falloff into account.</td>
+</tr>
+<tr class="row-even"><td><em>ILLUMINATEFLAGS_NOGRAIN</em></td>
+<td>Do not take grain into account.</td>
+</tr>
+<tr class="row-odd"><td><em>ILLUMINATEFLAGS_BACKLIGHT</em></td>
+<td>Take backlight into account.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>hitid</strong> (<em>PyCObject</em>) – The global RayHitID.</li>
+<li><strong>raybits</strong> (<em>int</em>) – <p>The ray bits:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="79%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>RAYBIT_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_REFLECTION</em></td>
+<td>Ray chain contains a reflection ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_TRANSPARENCY</em></td>
+<td>Ray chain contains a transparency ray (refractions are not contained).</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_REFRACTION</em></td>
+<td>Ray chain contains a refraction ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_CUSTOM</em></td>
+<td>Ray chain contains a custom ray.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_CURR_REFLECTION</em></td>
+<td>Current ray is a reflection ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_CURR_TRANSPARENCY</em></td>
+<td>Current ray is a transparency ray.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_CURR_REFRACTION</em></td>
+<td>Current ray is a refraction ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_CURR_CUSTOM</em></td>
+<td>Current ray is a custom ray.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_VOLUMETRICLIGHT</em></td>
+<td>Current ray is used to calculate a volumetric light.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_ALLOWVLMIX</em></td>
+<td>Custom mixing of visible light sources allowed for the ray; bit must be deleted by shader if used.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_GI</em></td>
+<td>Current ray is a Global Illumination ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_BLURRY</em></td>
+<td>Current ray is a blurry ray.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_SSS</em></td>
+<td>Current ray is a subsurface scattering ray.</td>
+</tr>
+<tr class="row-odd"><td><em>RAYBIT_AO</em></td>
+<td>Current ray is an Ambient Occlusion ray.</td>
+</tr>
+<tr class="row-even"><td><em>RAYBIT_COMPOSITING</em></td>
+<td>Current ray is a compositing ray.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>cosine_cutoff</strong> (<em>bool</em>) – <strong>True</strong> if cosine cut-off should be used, otherwise <strong>False</strong>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">Tuple(<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a>, <a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a>)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A tuple with the color result for the calculation and the light to point vector.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.CalcVisibleLight">
+<code class="descclassname">VolumeData.</code><code class="descname">CalcVisibleLight</code><span class="sig-paren">(</span><em>self</em>, <em>ray</em>, <em>maxdist</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.CalcVisibleLight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the mixed color of all visible lights on a given ray span.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ray</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The ray span.</li>
+<li><strong>maxdist</strong> (<em>float</em>) – The maximum distance for the lights.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">tuple(<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>, <a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The mixed color of the lights and a value indicating if some light sources have a dust effect (!= 0 in this case).</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.GetRS">
+<code class="descclassname">VolumeData.</code><code class="descname">GetRS</code><span class="sig-paren">(</span><em>self</em>, <em>hitid</em>, <em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.GetRS" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Calculates the R/S parameters for a point.</div>
+<div class="line"><br /></div>
+<div class="line">If you want to calculate weighted data (e.g. based upon a color for each polygon point) you can do this the following way:</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">r</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">GetRS</span><span class="p">(</span><span class="n">hitid</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">color</span> <span class="n">a</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0</span><span class="o">-</span><span class="n">r</span><span class="o">-</span><span class="n">s</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="n">color</span> <span class="n">d</span><span class="p">]</span><span class="o">*</span><span class="n">r</span> <span class="o">+</span> <span class="p">[</span><span class="n">color</span> <span class="n">c</span><span class="p">]</span><span class="o">*</span><span class="n">s</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>hitid</strong> (<em>ptr</em>) – The global RayHitID.</li>
+<li><strong>p</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The point.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">tuple(bool, float, float)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><div class="line-block">
+<div class="line">If the polygon is a quadrangle then the first value holds True for the second part (a-c-d) of the quadrangle or False for the first part (a-b-c). If the polygon is a triangle then this is the same as the first part of a quadrangle (a-b-c).</div>
+<div class="line">The 2nd and 3rd values are the R and S parameters for point <em>p</em>.</div>
+</div>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.GetWeights">
+<code class="descclassname">VolumeData.</code><code class="descname">GetWeights</code><span class="sig-paren">(</span><em>self</em>, <em>hitid</em>, <em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.GetWeights" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns barycentric coordinates for a point on the surface of a polygon.</div>
+<div class="line">Cinema 4D uses enhanced interpolation routines for quadrangles, so you’ll get a higher quality using it instead of considering a quadrangle as two triangles.</div>
+<div class="line">The routine works for any type of polygon, including triangles and non-coplanar quadrangles.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">The function returns a tuple with the weight factors for the global polygon with ID <em>hitid</em> at <em>p</em>.</div>
+<div class="line">Works similar to <a class="reference internal" href="#VolumeData.GetRS" title="VolumeData.GetRS"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetRS()</span></code></a>, but has a higher quality.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>hitid</strong> (<em>ptr</em>) – The global RayHitID.</li>
+<li><strong>p</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – Point on polygon.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">tuple(float, float, float, float)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A tuple with the respective weight factors for points A, B, C and D.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.GetSmoothedNormal">
+<code class="descclassname">VolumeData.</code><code class="descname">GetSmoothedNormal</code><span class="sig-paren">(</span><em>self</em>, <em>hitid</em>, <em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.GetSmoothedNormal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the phong normal for a point.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>hitid</strong> (<em>ptr</em>) – <p>The global RayHitID.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Must be a valid RayHitID.</p>
+</div>
+</li>
+<li><strong>p</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – <p>The point for the phong normal.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The point must be within the surface boundaries of the polygon.</p>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The phong normal.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.GetXY">
+<code class="descclassname">VolumeData.</code><code class="descname">GetXY</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.GetXY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current X/Y pixel position in render resolution. Render resolution is the screen resolution multiplied by ‘scale’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">tuple(int, int, int)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The X, Y pixel positions and render scale.<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">X/scale and Y/scale is the screen position.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.SetXY">
+<code class="descclassname">VolumeData.</code><code class="descname">SetXY</code><span class="sig-paren">(</span><em>self</em>, <em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.SetXY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the current X/Y pixel position in render resolution. Render resolution is the screen resolution multiplied by ‘scale’.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">X/scale and Y/scale is the screen position.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Some Shaders use the screen pixel position. Plugins (like the Baker for instance) can change this position without having to render an image.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>x</strong> (<em>float</em>) – The X pixel position to set.</li>
+<li><strong>y</strong> (<em>float</em>) – The Y pixel position to set.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.CalcFgBg">
+<code class="descclassname">VolumeData.</code><code class="descname">CalcFgBg</code><span class="sig-paren">(</span><em>self</em>, <em>foreground</em>, <em>x</em>, <em>y</em>, <em>subx</em>, <em>suby</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.CalcFgBg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the foreground or background color and alpha at (<em>x</em>, <em>y</em>).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>foreground</strong> (<em>bool</em>) – <strong>True</strong> to calculate the foreground color. Otherwise the background color is calculated.</li>
+<li><strong>x</strong> (<em>int</em>) – X coordinate.</li>
+<li><strong>y</strong> (<em>int</em>) – Y coordinate.</li>
+<li><strong>subx</strong> (<em>int</em>) – Sub pixel X position. (0 &lt;= subx &lt;= 15)</li>
+<li><strong>suby</strong> (<em>int</em>) – Sub pixel Y position. (0 &lt;= suby &lt;= 15)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">tuple(<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>, float)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The background/foreground color and alpha.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.GetLightFalloff">
+<code class="descclassname">VolumeData.</code><code class="descname">GetLightFalloff</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.GetLightFalloff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the light falloff function (light intensity for a distance).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.GetRay">
+<code class="descclassname">VolumeData.</code><code class="descname">GetRay</code><span class="sig-paren">(</span><em>self</em>, <em>x</em>, <em>y</em>, <em>ray</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.GetRay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the view ray for a position.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function does not set <a class="reference internal" href="../Ray/index.html#Ray.pp" title="Ray.pp"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Ray.pp</span></code></a> [0..2], <a class="reference internal" href="../Ray/index.html#Ray.vv" title="Ray.vv"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Ray.vv</span></code></a> [0..2], <a class="reference internal" href="../Ray/index.html#Ray.transport" title="Ray.transport"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Ray.transport</span></code></a> and <a class="reference internal" href="../Ray/index.html#Ray.ior" title="Ray.ior"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Ray.ior</span></code></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>x</strong> (<em>float</em>) – The X position for the view ray in screen space coordinates.</li>
+<li><strong>y</strong> (<em>float</em>) – The Y position for the view ray in screen space coordinates.</li>
+<li><strong>ray</strong> (<a class="reference internal" href="../Ray/index.html#c4d.modules.render.Ray" title="c4d.modules.render.Ray"><em>c4d.modules.render.Ray</em></a>) – The view ray.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.GetVideoPost">
+<code class="descclassname">VolumeData.</code><code class="descname">GetVideoPost</code><span class="sig-paren">(</span><em>self</em>, <em>nth</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.GetVideoPost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the n-th video post effect for this render process.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>int</strong> (<em>int</em>) – nth	The nth index of the videopost effect.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D">c4d.BaseList2D</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The video post, or <strong>None</strong> if the index is too large.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.FindVideoPost">
+<code class="descclassname">VolumeData.</code><code class="descname">FindVideoPost</code><span class="sig-paren">(</span><em>self</em>, <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.FindVideoPost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a video post effect for this render process by ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id</strong> (<em>int</em>) – The video post effect ID.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D">c4d.BaseList2D</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The found video post, or <strong>None</strong> if it doesn’t exist.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.Init">
+<code class="descclassname">VolumeData.</code><code class="descname">Init</code><span class="sig-paren">(</span><em>self</em>, <em>from_</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.Init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes this <a class="reference internal" href="#c4d.modules.render.VolumeData" title="c4d.modules.render.VolumeData"><code class="xref py py-class docutils literal notranslate"><span class="pre">VolumeData</span></code></a> object with the data from the <em>from</em> object.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only the most essential parts are copied over, including the render instance.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>from</strong> (<a class="reference internal" href="#c4d.modules.render.VolumeData" title="c4d.modules.render.VolumeData"><em>c4d.modules.render.VolumeData</em></a>) – Source object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="VolumeData.CopyTo">
+<code class="descclassname">VolumeData.</code><code class="descname">CopyTo</code><span class="sig-paren">(</span><em>self</em>, <em>dst</em><span class="sig-paren">)</span><a class="headerlink" href="#VolumeData.CopyTo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy this to another <a class="reference internal" href="#c4d.modules.render.VolumeData" title="c4d.modules.render.VolumeData"><code class="xref py py-class docutils literal notranslate"><span class="pre">VolumeData</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dst</strong> (<a class="reference internal" href="#c4d.modules.render.VolumeData" title="c4d.modules.render.VolumeData"><em>c4d.modules.render.VolumeData</em></a>) – The destination VolumeData.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../ChannelData/index.html" title="c4d.modules.render.ChannelData"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../BaseVolumeData/index.html" title="c4d.modules.render.BaseVolumeData"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.modules.render</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

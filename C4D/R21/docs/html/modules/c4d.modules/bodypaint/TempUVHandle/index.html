@@ -1,0 +1,450 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.bodypaint.TempUVHandle &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.modules.character" href="../../character/index.html" />
+    <link rel="prev" title="c4d.modules.bodypaint.PaintTexture" href="../PaintBitmap/PaintTexture/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../character/index.html" title="c4d.modules.character"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../PaintBitmap/PaintTexture/index.html" title="c4d.modules.bodypaint.PaintTexture"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.modules.bodypaint</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-bodypaint-tempuvhandle">
+<h1>c4d.modules.bodypaint.TempUVHandle<a class="headerlink" href="#c4d-modules-bodypaint-tempuvhandle" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.bodypaint.TempUVHandle">
+<em class="property">class </em><code class="descclassname">c4d.modules.bodypaint.</code><code class="descname">TempUVHandle</code><a class="headerlink" href="#c4d.modules.bodypaint.TempUVHandle" title="Permalink to this definition">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified">New in version R18.011.</span></p>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#TempUVHandle.GetMode" title="TempUVHandle.GetMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TempUVHandle.GetMode(self)</span></code></a></td>
+<td>Retrieves the current UV editor mode.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TempUVHandle.GetPoints" title="TempUVHandle.GetPoints"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TempUVHandle.GetPoints(self)</span></code></a></td>
+<td>Retrieves the read-only points array.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TempUVHandle.GetPolys" title="TempUVHandle.GetPolys"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TempUVHandle.GetPolys(self)</span></code></a></td>
+<td>Retrieves the read-only polygons array.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TempUVHandle.GetPolySel" title="TempUVHandle.GetPolySel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TempUVHandle.GetPolySel(self)</span></code></a></td>
+<td>Retrieves the selected polygons.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TempUVHandle.GetPolyHid" title="TempUVHandle.GetPolyHid"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TempUVHandle.GetPolyHid(self)</span></code></a></td>
+<td>Retrieves the hidden polygons.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TempUVHandle.GetUVPointSel" title="TempUVHandle.GetUVPointSel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TempUVHandle.GetUVPointSel(self)</span></code></a></td>
+<td>Retrieves the selected UV points.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TempUVHandle.GetPointCount" title="TempUVHandle.GetPointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TempUVHandle.GetPointCount(self)</span></code></a></td>
+<td>Retrieves the point count.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TempUVHandle.GetPolyCount" title="TempUVHandle.GetPolyCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TempUVHandle.GetPolyCount(self)</span></code></a></td>
+<td>Retrieves the polygon count.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TempUVHandle.GetBaseObject" title="TempUVHandle.GetBaseObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TempUVHandle.GetBaseObject(self)</span></code></a></td>
+<td>Retrieves the object of the UV set.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TempUVHandle.IsEditable" title="TempUVHandle.IsEditable"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TempUVHandle.IsEditable(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Checks if UVs are editable or not.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TempUVHandle.GetUVW" title="TempUVHandle.GetUVW"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TempUVHandle.GetUVW(self)</span></code></a></td>
+<td>Retrieves the UV list.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TempUVHandle.SetUVW" title="TempUVHandle.SetUVW"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TempUVHandle.SetUVW(self,</span> <span class="pre">uvw)</span></code></a></td>
+<td>Applies changes of the UV set to the object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TempUVHandle.SetUVWFromTextureView" title="TempUVHandle.SetUVWFromTextureView"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TempUVHandle.SetUVWFromTextureView(self,</span> <span class="pre">uvw,</span> <span class="pre">...)</span></code></a></td>
+<td>Applies changes of the UV set to the object.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="TempUVHandle.GetMode">
+<code class="descclassname">TempUVHandle.</code><code class="descname">GetMode</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#TempUVHandle.GetMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the current UV editor mode.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The UV editor mode:<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>Mcamera</em></td>
+<td>Camera mode.</td>
+</tr>
+<tr class="row-even"><td><em>Mobject</em></td>
+<td>Object mode.</td>
+</tr>
+<tr class="row-odd"><td><em>Mtexture</em></td>
+<td>Texture mode.</td>
+</tr>
+<tr class="row-even"><td><em>Mtextureaxis</em></td>
+<td>Texture axis mode.</td>
+</tr>
+<tr class="row-odd"><td><em>Mpoints</em></td>
+<td>Point edit mode.</td>
+</tr>
+<tr class="row-even"><td><em>Medges</em></td>
+<td>Edge edit mode.</td>
+</tr>
+<tr class="row-odd"><td><em>Mpolygons</em></td>
+<td>Polygon edit mode.</td>
+</tr>
+<tr class="row-even"><td><em>Manimation</em></td>
+<td>Animation mode.</td>
+</tr>
+<tr class="row-odd"><td><em>Mkinematic</em></td>
+<td>IK mode.</td>
+</tr>
+<tr class="row-even"><td><em>Mmodel</em></td>
+<td>Model mode.</td>
+</tr>
+<tr class="row-odd"><td><em>Mpaint</em></td>
+<td>Paint mode.</td>
+</tr>
+<tr class="row-even"><td><em>Muvpoints</em></td>
+<td>UV points mode.</td>
+</tr>
+<tr class="row-odd"><td><em>Muvpolygons</em></td>
+<td>UV polygons mode.</td>
+</tr>
+<tr class="row-even"><td><em>Mdrag</em></td>
+<td>Drag mode.</td>
+</tr>
+<tr class="row-odd"><td><em>Mpolyedgepoint</em></td>
+<td>Combined poly/edge/point mode. Must only be used in <a class="reference internal" href="../../../c4d.utils/ViewportSelect/index.html#c4d.utils.ViewportSelect" title="c4d.utils.ViewportSelect"><code class="xref py py-class docutils literal notranslate"><span class="pre">ViewportSelect</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>Medgepoint</em></td>
+<td>Combined edge/point mode. Must only be used in <a class="reference internal" href="../../../c4d.utils/ViewportSelect/index.html#c4d.utils.ViewportSelect" title="c4d.utils.ViewportSelect"><code class="xref py py-class docutils literal notranslate"><span class="pre">ViewportSelect</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>Mworkplane</em></td>
+<td>Workplane mode.</td>
+</tr>
+<tr class="row-even"><td><em>Mdrag</em></td>
+<td>Drag mode.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TempUVHandle.GetPoints">
+<code class="descclassname">TempUVHandle.</code><code class="descname">GetPoints</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#TempUVHandle.GetPoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the read-only points array.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list of <a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The points.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TempUVHandle.GetPolys">
+<code class="descclassname">TempUVHandle.</code><code class="descname">GetPolys</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#TempUVHandle.GetPolys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the read-only polygons array.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list of <a class="reference internal" href="../../../c4d/CPolygon/index.html#c4d.CPolygon" title="c4d.CPolygon"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.CPolygon</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The polygons.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TempUVHandle.GetPolySel">
+<code class="descclassname">TempUVHandle.</code><code class="descname">GetPolySel</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#TempUVHandle.GetPolySel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the selected polygons.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/BaseSelect/index.html#c4d.BaseSelect" title="c4d.BaseSelect"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseSelect</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The polygons selection.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TempUVHandle.GetPolyHid">
+<code class="descclassname">TempUVHandle.</code><code class="descname">GetPolyHid</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#TempUVHandle.GetPolyHid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the hidden polygons.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/BaseSelect/index.html#c4d.BaseSelect" title="c4d.BaseSelect"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseSelect</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The hidden polygons selection.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TempUVHandle.GetUVPointSel">
+<code class="descclassname">TempUVHandle.</code><code class="descname">GetUVPointSel</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#TempUVHandle.GetUVPointSel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the selected UV points.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The points are indexed by <cite>4</cite> * <cite>polygon</cite> + <cite>point</cite> where <cite>polygon</cite> is the polygon index and <cite>point</cite> is the point index between <cite>0</cite> and <cite>3</cite>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/BaseSelect/index.html#c4d.BaseSelect" title="c4d.BaseSelect"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseSelect</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The hidden polygons selection.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TempUVHandle.GetPointCount">
+<code class="descclassname">TempUVHandle.</code><code class="descname">GetPointCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#TempUVHandle.GetPointCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the point count.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The point count.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TempUVHandle.GetPolyCount">
+<code class="descclassname">TempUVHandle.</code><code class="descname">GetPolyCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#TempUVHandle.GetPolyCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the polygon count.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The polygon count.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TempUVHandle.GetBaseObject">
+<code class="descclassname">TempUVHandle.</code><code class="descname">GetBaseObject</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#TempUVHandle.GetBaseObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the object of the UV set.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseObject</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The object of the UV set.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TempUVHandle.IsEditable">
+<code class="descclassname">TempUVHandle.</code><code class="descname">IsEditable</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#TempUVHandle.IsEditable" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Checks if UVs are editable or not.</div>
+<div class="line">Polygon objects have editable UVs, object generators usually not.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseObject</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The object of the UV set.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TempUVHandle.GetUVW">
+<code class="descclassname">TempUVHandle.</code><code class="descname">GetUVW</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#TempUVHandle.GetUVW" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the UV list.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list of dict(‘a’,’b’,’c’,’d’)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The UV list.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TempUVHandle.SetUVW">
+<code class="descclassname">TempUVHandle.</code><code class="descname">SetUVW</code><span class="sig-paren">(</span><em>self</em>, <em>uvw</em><span class="sig-paren">)</span><a class="headerlink" href="#TempUVHandle.SetUVW" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies changes of the UV set to the object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>uvw</strong> (<em>list of dict</em><em>(</em><em>'a'</em><em>,</em><em>'b'</em><em>,</em><em>'c'</em><em>,</em><em>'d'</em><em>)</em>) – The UV list to set.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TempUVHandle.SetUVWFromTextureView">
+<code class="descclassname">TempUVHandle.</code><code class="descname">SetUVWFromTextureView</code><span class="sig-paren">(</span><em>self</em>, <em>uvw</em>, <em>ignoreHidden</em>, <em>ignoreUnselected</em>, <em>autoSelectAll</em>, <em>registerUndo</em><span class="sig-paren">)</span><a class="headerlink" href="#TempUVHandle.SetUVWFromTextureView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies changes of the UV set to the object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>uvw</strong> (<em>list of dict</em><em>(</em><em>'a'</em><em>,</em><em>'b'</em><em>,</em><em>'c'</em><em>,</em><em>'d'</em><em>)</em>) – The UV list to set.</li>
+<li><strong>ignoreHidden</strong> (<em>bool</em>) – If <strong>True</strong>, do not affect the UV coordinates of UV Polygons or UV Points of hidden polygons.</li>
+<li><strong>ignoreUnselected</strong> (<em>bool</em>) – If <strong>True</strong>, do not affect the UV coordinates of UV Polygons, or UV Points (depending on the current mode) that are unselected in the Texture View.</li>
+<li><strong>autoSelectAll</strong> (<em>bool</em>) – If <strong>True</strong>, automatically selects all UV Polygons, or UV Points (depending on the current mode).</li>
+<li><strong>registerUndo</strong> (<em>bool</em>) – If <strong>True</strong>, an undo is added for the operation.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if successful, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../character/index.html" title="c4d.modules.character"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../PaintBitmap/PaintTexture/index.html" title="c4d.modules.bodypaint.PaintTexture"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.modules.bodypaint</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

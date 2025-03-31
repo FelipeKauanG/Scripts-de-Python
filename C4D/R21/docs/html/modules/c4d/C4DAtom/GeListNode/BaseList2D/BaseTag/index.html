@@ -1,0 +1,211 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.BaseTag &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title="c4d.SelectionTag" href="SelectionTag/index.html" />
+    <link rel="prev" title="c4d.LayerShader" href="../BaseShader/LayerShader/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="SelectionTag/index.html" title="c4d.SelectionTag"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../BaseShader/LayerShader/index.html" title="c4d.LayerShader"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../../index.html" >c4d</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../../index.html" >c4d.C4DAtom</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../../index.html" >c4d.GeListNode</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="../index.html" accesskey="U">c4d.BaseList2D</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-basetag">
+<h1>c4d.BaseTag<a class="headerlink" href="#c4d-basetag" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.BaseTag">
+<em class="property">class </em><code class="descclassname">c4d.</code><code class="descname">BaseTag</code><a class="headerlink" href="#c4d.BaseTag" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">A variety of properties can be added to objects using tags.</div>
+<div class="line">For example, adding smoothing (Phong tag) or preventing an object from being edited accidentally (Protection tag).</div>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BaseTag.__init__" title="BaseTag.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseTag.__init__(self,</span> <span class="pre">type)</span></code></a></td>
+<td>Initialize a new <a class="reference internal" href="#c4d.BaseTag" title="c4d.BaseTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTag</span></code></a> in memory.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BaseTag.GetObject" title="BaseTag.GetObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseTag.GetObject(self)</span></code></a></td>
+<td>Returns the object where the object is attached.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseTag.GetOrigin" title="BaseTag.GetOrigin"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseTag.GetOrigin(self)</span></code></a></td>
+<td>Returns where the tag was cloned from.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../index.html#c4d.BaseList2D" title="c4d.BaseList2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseList2D</span></code></a></li>
+</ul>
+<p>Children Classes:</p>
+<ul class="simple">
+<li><a class="reference internal" href="SelectionTag/index.html#c4d.SelectionTag" title="c4d.SelectionTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.SelectionTag</span></code></a></li>
+<li><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.CustomDataTag</span></code></li>
+<li><a class="reference internal" href="TextureTag/index.html#c4d.TextureTag" title="c4d.TextureTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.TextureTag</span></code></a></li>
+<li><a class="reference internal" href="VariableTag/index.html#c4d.VariableTag" title="c4d.VariableTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.VariableTag</span></code></a></li>
+<li><a class="reference internal" href="../../../../../c4d.modules/character/CAWeightTag/index.html#c4d.modules.character.CAWeightTag" title="c4d.modules.character.CAWeightTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.character.CAWeightTag</span></code></a></li>
+<li><a class="reference internal" href="../../../../../c4d.modules/character/CAPoseMorphTag/index.html#c4d.modules.character.CAPoseMorphTag" title="c4d.modules.character.CAPoseMorphTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.character.CAPoseMorphTag</span></code></a></li>
+<li><a class="reference internal" href="../../../../../c4d.modules/hair/HairVertexMapTag/index.html#c4d.modules.hair.HairVertexMapTag" title="c4d.modules.hair.HairVertexMapTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.hair.HairVertexMapTag</span></code></a></li>
+<li><a class="reference internal" href="../../../../../c4d.modules/hair/HairSelectionTag/index.html#c4d.modules.hair.HairSelectionTag" title="c4d.modules.hair.HairSelectionTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.hair.HairSelectionTag</span></code></a></li>
+<li><a class="reference internal" href="../../../../../c4d.modules/hair/HairTangentTag/index.html#c4d.modules.hair.HairTangentTag" title="c4d.modules.hair.HairTangentTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.hair.HairTangentTag</span></code></a></li>
+<li><a class="reference internal" href="../../../../../c4d.modules/sculpting/SculptTag/index.html#c4d.modules.sculpting.SculptTag" title="c4d.modules.sculpting.SculptTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.sculpting.SculptTag</span></code></a></li>
+<li><a class="reference internal" href="../../../../../c4d.modules/graphview/XPressoTag/index.html#c4d.modules.graphview.XPressoTag" title="c4d.modules.graphview.XPressoTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.graphview.XPressoTag</span></code></a></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="BaseTag.__init__">
+<code class="descclassname">BaseTag.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseTag.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize a new <a class="reference internal" href="#c4d.BaseTag" title="c4d.BaseTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTag</span></code></a> in memory.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>int</em>) – The type of tag. See <a class="reference internal" href="../../../../../../types/tags.html"><span class="doc">Tag Types</span></a>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.BaseTag" title="c4d.BaseTag">c4d.BaseTag</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A new tag.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseTag.GetObject">
+<code class="descclassname">BaseTag.</code><code class="descname">GetObject</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseTag.GetObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the object where the object is attached.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject">c4d.BaseObject</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The object or <strong>None</strong> if it is not attached.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseTag.GetOrigin">
+<code class="descclassname">BaseTag.</code><code class="descname">GetOrigin</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseTag.GetOrigin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns where the tag was cloned from.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For example, if the tag is on a cache object, it tells you what the original tag was from the original document.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.BaseTag" title="c4d.BaseTag">c4d.BaseTag</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The origin tag or <strong>None</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="SelectionTag/index.html" title="c4d.SelectionTag"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../BaseShader/LayerShader/index.html" title="c4d.LayerShader"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../../index.html" >c4d</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../../index.html" >c4d.C4DAtom</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../../index.html" >c4d.GeListNode</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="../index.html" >c4d.BaseList2D</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

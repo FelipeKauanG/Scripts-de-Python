@@ -1,0 +1,1819 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.BaseContainer &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="c4d.DescID" href="../DescID/index.html" />
+    <link rel="prev" title="c4d.BaseTime" href="../BaseTime/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../DescID/index.html" title="c4d.DescID"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../BaseTime/index.html" title="c4d.BaseTime"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">c4d</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-basecontainer">
+<h1>c4d.BaseContainer<a class="headerlink" href="#c4d-basecontainer" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.BaseContainer">
+<em class="property">class </em><code class="descclassname">c4d.</code><code class="descname">BaseContainer</code><a class="headerlink" href="#c4d.BaseContainer" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">A container is a collection of individual values.</div>
+<div class="line">Each value has its own ID and type. Container can also carry any number of child containers.</div>
+<div class="line">There is no guarantee that a value is there in the container.</div>
+</div>
+<div class="line-block">
+<div class="line">Keep in mind that there is no guarantee for a value to be in the container.</div>
+<div class="line">Use default values whenever possible when accessing the values.</div>
+<div class="line">Maybe your plugin won’t be able to change some values, but it will work anyway.</div>
+</div>
+<div class="line-block">
+<div class="line">It is recommended that you use the available containers to store your own values as well.</div>
+<div class="line">That way they will be automatically saved.</div>
+<div class="line">However, if you want to store values in the top level of for example an object container, you’ll have to use a unique id.</div>
+<div class="line">You can use a plugin id from <a class="reference external" href="http://www.plugincafe.com">PluginCafe</a> for this.</div>
+<div class="line">A good way is to store a sub-container with this id. Inside this sub-container you can use whatever ids you want.</div>
+</div>
+<div class="line-block">
+<div class="line">Once you’ve set a container value using one type you must neither try to access it using another type, nor overwrite it with a value of another type!</div>
+<div class="line">Using the wrong access will not crash, but it is illegal.</div>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><p class="rubric">Magic Methods</p>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.__init__" title="BaseContainer.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.__init__(self[,</span> <span class="pre">n])</span></code></a></td>
+<td>Initializes a new container.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.__iter__" title="BaseContainer.__iter__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.__iter__(self)</span></code></a></td>
+<td>The BaseContainer is iterable so just use it like in the following example</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.__getitem__" title="BaseContainer.__getitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.__getitem__(self,</span> <span class="pre">key)</span></code></a></td>
+<td>Returns a value with the specified ID.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.__setitem__" title="BaseContainer.__setitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.__setitem__(self,</span> <span class="pre">key,</span> <span class="pre">value)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Automatically redirect the value to the corresponding Set* method.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.__ne__" title="BaseContainer.__ne__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.__ne__(self,</span> <span class="pre">other)</span></code></a></td>
+<td>Check if the compared containers don’t have the same ID, don’t have the same values, and all values are not equal.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.__eq__" title="BaseContainer.__eq__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.__eq__(self,</span> <span class="pre">other)</span></code></a></td>
+<td>Check if the compared containers have the same ID, have the same values, and all values are equal.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.__len__" title="BaseContainer.__len__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.__len__(self)</span></code></a></td>
+<td>Calculates the number of data elements inside the container.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Deprecated</p>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.GetLLong" title="BaseContainer.GetLLong"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetLLong(self,</span> <span class="pre">id[,</span> <span class="pre">preset])</span></code></a></td>
+<td><div class="first last deprecated">
+<p><span class="versionmodified">Deprecated since version R15: </span>Use <code class="xref py py-meth docutils literal notranslate"><span class="pre">GetInt64()</span></code> instead.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.GetLong" title="BaseContainer.GetLong"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetLong(self,</span> <span class="pre">id[,</span> <span class="pre">preset])</span></code></a></td>
+<td><div class="first last deprecated">
+<p><span class="versionmodified">Deprecated since version R15: </span>Use <code class="xref py py-meth docutils literal notranslate"><span class="pre">GetInt32()</span></code> instead.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.GetReal" title="BaseContainer.GetReal"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetReal(self,</span> <span class="pre">id[,</span> <span class="pre">preset])</span></code></a></td>
+<td><div class="first last deprecated">
+<p><span class="versionmodified">Deprecated since version R15: </span>Use <code class="xref py py-meth docutils literal notranslate"><span class="pre">GetFloat()</span></code> instead.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.SetLLong" title="BaseContainer.SetLLong"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.SetLLong(self,</span> <span class="pre">id,</span> <span class="pre">l)</span></code></a></td>
+<td><div class="first last deprecated">
+<p><span class="versionmodified">Deprecated since version R15: </span>Use <code class="xref py py-meth docutils literal notranslate"><span class="pre">SetInt64()</span></code> instead.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.SetLong" title="BaseContainer.SetLong"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.SetLong(self,</span> <span class="pre">id,</span> <span class="pre">l)</span></code></a></td>
+<td><div class="first last deprecated">
+<p><span class="versionmodified">Deprecated since version R15: </span>Use <code class="xref py py-meth docutils literal notranslate"><span class="pre">SetInt32()</span></code> instead.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.SetReal" title="BaseContainer.SetReal"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.SetReal(self,</span> <span class="pre">id,</span> <span class="pre">v)</span></code></a></td>
+<td><div class="first last deprecated">
+<p><span class="versionmodified">Deprecated since version R15: </span>Use <code class="xref py py-meth docutils literal notranslate"><span class="pre">SetFloat()</span></code> instead.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Uncategorized</p>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.GetClone" title="BaseContainer.GetClone"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetClone(self,</span> <span class="pre">flags[,</span> <span class="pre">trans])</span></code></a></td>
+<td>Returns a copy of the container including all values.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.CopyTo" title="BaseContainer.CopyTo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.CopyTo(self,</span> <span class="pre">dst,</span> <span class="pre">flags[,</span> <span class="pre">trans])</span></code></a></td>
+<td>Copies all values to <em>dst</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.FlushAll" title="BaseContainer.FlushAll"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.FlushAll(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Clears all values in the container.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.GetId" title="BaseContainer.GetId"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetId(self)</span></code></a></td>
+<td>Returns the ID of the container.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.SetId" title="BaseContainer.SetId"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.SetId(self,</span> <span class="pre">id)</span></code></a></td>
+<td>Sets the ID of the container.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.GetDirty" title="BaseContainer.GetDirty"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetDirty(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Returns the dirty count.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.RemoveData" title="BaseContainer.RemoveData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.RemoveData(self,</span> <span class="pre">id)</span></code></a></td>
+<td>Removes the first data item with the specified ID.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.RemoveIndex" title="BaseContainer.RemoveIndex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.RemoveIndex(self,</span> <span class="pre">i)</span></code></a></td>
+<td>Removes the data item at the specified index <em>i</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.FindIndex" title="BaseContainer.FindIndex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.FindIndex(self,</span> <span class="pre">i)</span></code></a></td>
+<td>Returns the index for the value with the specified ID, or -1 if no such value exists.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.GetIndexId" title="BaseContainer.GetIndexId"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetIndexId(self,</span> <span class="pre">index)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Returns the ID of the element at the specified index, or <em>NOTOK</em> if it doesn’t exist.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.GetType" title="BaseContainer.GetType"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetType(self,</span> <span class="pre">id)</span></code></a></td>
+<td>Returns the type of a container element by ID.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.InsData" title="BaseContainer.InsData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.InsData(self,</span> <span class="pre">id,</span> <span class="pre">n)</span></code></a></td>
+<td>Inserts an arbitrary data at the specified <em>id</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.InsDataAfter" title="BaseContainer.InsDataAfter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.InsDataAfter(self,</span> <span class="pre">id,</span> <span class="pre">n,</span> <span class="pre">last)</span></code></a></td>
+<td>Inserts an arbitrary data at the specified <em>id</em> after <em>last</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.SetData" title="BaseContainer.SetData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.SetData(self,</span> <span class="pre">id,</span> <span class="pre">n)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Sets an arbitrary data value at the specified ID.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.GetData" title="BaseContainer.GetData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetData(self,</span> <span class="pre">id)</span></code></a></td>
+<td>Returns the data for an element by ID.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.GetDataPointer" title="BaseContainer.GetDataPointer"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetDataPointer(self,</span> <span class="pre">id)</span></code></a></td>
+<td>Retrieves a pointer to directly access the data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.GetBool" title="BaseContainer.GetBool"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetBool(self,</span> <span class="pre">id[,</span> <span class="pre">preset])</span></code></a></td>
+<td>Returns a bool value with the specified ID, or <em>preset</em> if it doesn’t exist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.GetInt32" title="BaseContainer.GetInt32"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetInt32(self,</span> <span class="pre">id[,</span> <span class="pre">preset])</span></code></a></td>
+<td>Returns a int value with the specified ID, or <em>preset</em> if it doesn’t exist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.GetInt64" title="BaseContainer.GetInt64"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetInt64(self,</span> <span class="pre">id[,</span> <span class="pre">preset])</span></code></a></td>
+<td>Returns a long value with the specified ID, or <em>preset</em> if it doesn’t exist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.GetFloat" title="BaseContainer.GetFloat"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetFloat(self,</span> <span class="pre">id[,</span> <span class="pre">preset])</span></code></a></td>
+<td>Returns a float value with the specified ID, or <em>preset</em> if it doesn’t exist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.GetVector" title="BaseContainer.GetVector"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetVector(self,</span> <span class="pre">id[,</span> <span class="pre">preset])</span></code></a></td>
+<td>Returns a <a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a> value with the specified ID, or <em>preset</em> if it doesn’t exist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.GetMatrix" title="BaseContainer.GetMatrix"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetMatrix(self,</span> <span class="pre">id[,</span> <span class="pre">preset])</span></code></a></td>
+<td>Returns a <a class="reference internal" href="../Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a> value with the specified ID, or <em>preset</em> if it doesn’t exist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.GetString" title="BaseContainer.GetString"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetString(self,</span> <span class="pre">id[,</span> <span class="pre">preset])</span></code></a></td>
+<td>Returns a string value with the specified ID, or <em>preset</em> if it doesn’t exist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.GetFilename" title="BaseContainer.GetFilename"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetFilename(self,</span> <span class="pre">id[,</span> <span class="pre">preset])</span></code></a></td>
+<td>Returns a string value with the specified ID, or <em>preset</em> if it doesn’t exist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.GetUuid" title="BaseContainer.GetUuid"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetUuid(self,</span> <span class="pre">id,</span> <span class="pre">preset)</span></code></a></td>
+<td>Returns a uuid value with the specified ID, or <em>preset</em> if it doesn’t exist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.GetTime" title="BaseContainer.GetTime"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetTime(self,</span> <span class="pre">id[,</span> <span class="pre">preset])</span></code></a></td>
+<td>Returns a <a class="reference internal" href="../BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTime</span></code></a> value with the specified ID, or <em>preset</em> if it doesn’t exist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.GetContainer" title="BaseContainer.GetContainer"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetContainer(self,</span> <span class="pre">id)</span></code></a></td>
+<td>Returns a copy of the sub-container with the specified ID, or an empty container if it doesn’t exist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.GetContainerInstance" title="BaseContainer.GetContainerInstance"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetContainerInstance(self,</span> <span class="pre">id)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Returns the sub-container with the specified ID, or <strong>None</strong> if it doesn’t exist.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.GetLink" title="BaseContainer.GetLink"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetLink(self,</span> <span class="pre">id[,</span> <span class="pre">doc,</span> <span class="pre">...])</span></code></a></td>
+<td>Returns a linked object, evaluated in the attached document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.GetObjectLink" title="BaseContainer.GetObjectLink"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetObjectLink(self,</span> <span class="pre">id[,</span> <span class="pre">doc])</span></code></a></td>
+<td>Returns a linked base object, evaluated in the attached document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.GetMaterialLink" title="BaseContainer.GetMaterialLink"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetMaterialLink(self,</span> <span class="pre">id[,</span> <span class="pre">doc])</span></code></a></td>
+<td>Returns a linked material object, evaluated in the attached document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.GetCustomDataType" title="BaseContainer.GetCustomDataType"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetCustomDataType(self,</span> <span class="pre">id)</span></code></a></td>
+<td>Returns a copy of the custom data type or <strong>None</strong> if it doesn’t exist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.GetVoid" title="BaseContainer.GetVoid"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetVoid(self,</span> <span class="pre">id)</span></code></a></td>
+<td>Gets the void* value at the specified id.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.SetBool" title="BaseContainer.SetBool"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.SetBool(self,</span> <span class="pre">id,</span> <span class="pre">b)</span></code></a></td>
+<td>Sets a bool value and changes the data type accordingly.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.SetInt32" title="BaseContainer.SetInt32"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.SetInt32(self,</span> <span class="pre">id,</span> <span class="pre">l)</span></code></a></td>
+<td>Sets an int value and changes the data type accordingly.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.SetInt64" title="BaseContainer.SetInt64"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.SetInt64(self,</span> <span class="pre">id,</span> <span class="pre">l)</span></code></a></td>
+<td>Sets a long value and changes the data type accordingly.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.SetFloat" title="BaseContainer.SetFloat"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.SetFloat(self,</span> <span class="pre">id,</span> <span class="pre">v)</span></code></a></td>
+<td>Sets a float value and changes the data type accordingly.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.SetVector" title="BaseContainer.SetVector"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.SetVector(self,</span> <span class="pre">id,</span> <span class="pre">v)</span></code></a></td>
+<td>Sets a <a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a> value and changes the data type accordingly.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.SetMatrix" title="BaseContainer.SetMatrix"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.SetMatrix(self,</span> <span class="pre">id,</span> <span class="pre">m)</span></code></a></td>
+<td>Sets a <a class="reference internal" href="../Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a> value and changes the data type accordingly.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.SetString" title="BaseContainer.SetString"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.SetString(self,</span> <span class="pre">id,</span> <span class="pre">s)</span></code></a></td>
+<td>Sets a string value and changes the data type accordingly.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.SetFilename" title="BaseContainer.SetFilename"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.SetFilename(self,</span> <span class="pre">id,</span> <span class="pre">f)</span></code></a></td>
+<td>Sets a new string value with the specified ID to <em>s</em> as a filepath, or inserts it if it didn’t exist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.SetUuid" title="BaseContainer.SetUuid"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.SetUuid(self,</span> <span class="pre">id,</span> <span class="pre">u)</span></code></a></td>
+<td>Sets a uuid value and changes the data type accordingly.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.SetTime" title="BaseContainer.SetTime"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.SetTime(self,</span> <span class="pre">id,</span> <span class="pre">b)</span></code></a></td>
+<td>Sets a <a class="reference internal" href="../BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTime</span></code></a> value and changes the data type accordingly.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.SetContainer" title="BaseContainer.SetContainer"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.SetContainer(self,</span> <span class="pre">id,</span> <span class="pre">s)</span></code></a></td>
+<td>Sets a <a class="reference internal" href="#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseContainer</span></code></a> value and changes the data type accordingly.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.SetLink" title="BaseContainer.SetLink"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.SetLink(self,</span> <span class="pre">id,</span> <span class="pre">link)</span></code></a></td>
+<td>Stores a link to an atom object with the specified ID.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.SetVoid" title="BaseContainer.SetVoid"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.SetVoid(self,</span> <span class="pre">id,</span> <span class="pre">v)</span></code></a></td>
+<td>Stores a PyCObject to an void* object with the specified ID.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.GetIndexData" title="BaseContainer.GetIndexData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetIndexData(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Retrieves the data for the element at <em>index</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.SetIndexData" title="BaseContainer.SetIndexData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.SetIndexData(self,</span> <span class="pre">index,</span> <span class="pre">data)</span></code></a></td>
+<td>Sets the data for the element at <em>index</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.IsInstance" title="BaseContainer.IsInstance"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.IsInstance(self)</span></code></a></td>
+<td>Checks if the container is an instance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseContainer.MergeContainer" title="BaseContainer.MergeContainer"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.MergeContainer(self,</span> <span class="pre">src)</span></code></a></td>
+<td>Stores the values in src in this container, overwriting any elements with colliding IDs and keeping the rest.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseContainer.Sort" title="BaseContainer.Sort"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.Sort(self)</span></code></a></td>
+<td>Sorts the container entries by ID.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="BaseContainer.__init__">
+<code class="descclassname">BaseContainer.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>n=NOTOK</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes a new container.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>n</strong> (<em>[</em><a class="reference internal" href="#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a><em>, </em><em>int</em><em>, </em><em>None</em><em>]</em>) – Use int if you just want to set the ID of the container. Pass a container if you want to clone it, or <strong>None</strong> to use a standard empty container.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.BaseContainer" title="c4d.BaseContainer">c4d.BaseContainer</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The new container.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.__iter__">
+<code class="descclassname">BaseContainer.</code><code class="descname">__iter__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.__iter__" title="Permalink to this definition">¶</a></dt>
+<dd><p>The BaseContainer is iterable so just use it like in the following example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">iter_container</span><span class="p">(</span><span class="n">bc</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">bc</span><span class="p">:</span>
+        <span class="nb">print</span> <span class="s2">&quot;Index: </span><span class="si">%i</span><span class="s2">, Value: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.__getitem__">
+<code class="descclassname">BaseContainer.</code><code class="descname">__getitem__</code><span class="sig-paren">(</span><em>self</em>, <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.__getitem__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a value with the specified ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<em>int</em>) – Index of the value.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Any</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Any value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.__setitem__">
+<code class="descclassname">BaseContainer.</code><code class="descname">__setitem__</code><span class="sig-paren">(</span><em>self</em>, <em>key</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.__setitem__" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Automatically redirect the value to the corresponding Set* method.</div>
+<div class="line">Its recommended to use the original Set* method to avoid type problems.</div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<div class="last line-block">
+<div class="line">This method can replace types.</div>
+<div class="line">Please check the types before when a special key is associated with a special type.</div>
+</div>
+</div>
+<p>To delete a key, call <em>del(bc[i])</em> or <a class="reference internal" href="#BaseContainer.RemoveData" title="BaseContainer.RemoveData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">RemoveData()</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>key</strong> (<em>int</em>) – Index of the value.</li>
+<li><strong>value</strong> (<em>any</em>) – It depends on the type which Set* method is internally called.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.__ne__">
+<code class="descclassname">BaseContainer.</code><code class="descname">__ne__</code><span class="sig-paren">(</span><em>self</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.__ne__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the compared containers don’t have the same ID, don’t have the same values, and all values are not equal.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other</strong> (<a class="reference internal" href="#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – Returns <strong>True</strong> if the compared containers are equal.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.__eq__">
+<code class="descclassname">BaseContainer.</code><code class="descname">__eq__</code><span class="sig-paren">(</span><em>self</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.__eq__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the compared containers have the same ID, have the same values, and all values are equal.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other</strong> (<a class="reference internal" href="#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – Returns <strong>True</strong> if the compared containers are equal.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.__len__">
+<code class="descclassname">BaseContainer.</code><code class="descname">__len__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.__len__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the number of data elements inside the container.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The number of data elements.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetLLong">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetLLong</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>preset=0</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetLLong" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version R15: </span>Use <a class="reference internal" href="#BaseContainer.GetInt64" title="BaseContainer.GetInt64"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetInt64()</span></code></a> instead.</p>
+</div>
+<p>Returns a long value with the specified ID, or <em>preset</em> if it doesn’t exist.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the requested value.</li>
+<li><strong>preset</strong> (<em>long</em>) – Returned if the value is not available.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">long</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetLong">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetLong</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>preset=0</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetLong" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version R15: </span>Use <a class="reference internal" href="#BaseContainer.GetInt32" title="BaseContainer.GetInt32"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetInt32()</span></code></a> instead.</p>
+</div>
+<p>Returns a int value with the specified ID, or <em>preset</em> if it doesn’t exist.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the requested value.</li>
+<li><strong>preset</strong> (<em>int</em>) – Returned if the value is not available.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetReal">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetReal</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>preset=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetReal" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version R15: </span>Use <a class="reference internal" href="#BaseContainer.GetFloat" title="BaseContainer.GetFloat"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetFloat()</span></code></a> instead.</p>
+</div>
+<p>Returns a float value with the specified ID, or <em>preset</em> if it doesn’t exist.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the requested value.</li>
+<li><strong>preset</strong> (<em>float</em>) – Returned if the value is not available.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">float</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.SetLLong">
+<code class="descclassname">BaseContainer.</code><code class="descname">SetLLong</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>l</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.SetLLong" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version R15: </span>Use <a class="reference internal" href="#BaseContainer.SetInt64" title="BaseContainer.SetInt64"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetInt64()</span></code></a> instead.</p>
+</div>
+<p>Sets a long value and changes the data type accordingly.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the value to set.</li>
+<li><strong>l</strong> (<em>long</em>) – The new value.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.SetLong">
+<code class="descclassname">BaseContainer.</code><code class="descname">SetLong</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>l</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.SetLong" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version R15: </span>Use <a class="reference internal" href="#BaseContainer.SetInt32" title="BaseContainer.SetInt32"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetInt32()</span></code></a> instead.</p>
+</div>
+<p>Sets an int value and changes the data type accordingly.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the value to set.</li>
+<li><strong>l</strong> (<em>int</em>) – The new value.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.SetReal">
+<code class="descclassname">BaseContainer.</code><code class="descname">SetReal</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.SetReal" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version R15: </span>Use <a class="reference internal" href="#BaseContainer.SetFloat" title="BaseContainer.SetFloat"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetFloat()</span></code></a> instead.</p>
+</div>
+<p>Sets a float value and changes the data type accordingly.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the value to set.</li>
+<li><strong>l</strong> (<em>int</em>) – The new value.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetClone">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetClone</code><span class="sig-paren">(</span><em>self</em>, <em>flags</em>, <em>trans=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetClone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of the container including all values.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>flags</strong> (<em>int</em>) – <p>Flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="85%" />
+<col width="15%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>COPYFLAGS_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>COPYFLAGS_PRIVATE_CONTAINER_COPY_DIRTY</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-odd"><td><em>COPYFLAGS_PRIVATE_CONTAINER_COPY_IDENTICAL</em></td>
+<td>Private.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>trans</strong> (<a class="reference internal" href="../AliasTrans/index.html#c4d.AliasTrans" title="c4d.AliasTrans"><em>c4d.AliasTrans</em></a>) – <div class="versionadded">
+<p><span class="versionmodified">New in version R17.032.</span></p>
+</div>
+<p>An optional alias translator for the operation.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="#c4d.BaseContainer" title="c4d.BaseContainer">c4d.BaseContainer</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The cloned container.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.CopyTo">
+<code class="descclassname">BaseContainer.</code><code class="descname">CopyTo</code><span class="sig-paren">(</span><em>self</em>, <em>dst</em>, <em>flags</em>, <em>trans=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.CopyTo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies all values to <em>dst</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dst</strong> (<a class="reference internal" href="#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The destination container.</li>
+<li><strong>flags</strong> (<em>int</em>) – <p>Flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="85%" />
+<col width="15%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>COPYFLAGS_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>COPYFLAGS_PRIVATE_CONTAINER_COPY_DIRTY</em></td>
+<td>Private.</td>
+</tr>
+<tr class="row-odd"><td><em>COPYFLAGS_PRIVATE_CONTAINER_COPY_IDENTICAL</em></td>
+<td>Private.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>trans</strong> (<a class="reference internal" href="../AliasTrans/index.html#c4d.AliasTrans" title="c4d.AliasTrans"><em>c4d.AliasTrans</em></a>) – <div class="versionadded">
+<p><span class="versionmodified">New in version R17.032.</span></p>
+</div>
+<p>An optional alias translator for the operation.</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.FlushAll">
+<code class="descclassname">BaseContainer.</code><code class="descname">FlushAll</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.FlushAll" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Clears all values in the container.</div>
+<div class="line">The container ID is not changed.</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetId">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetId</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the ID of the container.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The container ID.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.SetId">
+<code class="descclassname">BaseContainer.</code><code class="descname">SetId</code><span class="sig-paren">(</span><em>self</em>, <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.SetId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the ID of the container.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id</strong> (<em>int</em>) – The container ID.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetDirty">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetDirty</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetDirty" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns the dirty count.</div>
+<div class="line">Can be used to check if the container has changed.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Dirty counter. It is incremented when the container changes.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.RemoveData">
+<code class="descclassname">BaseContainer.</code><code class="descname">RemoveData</code><span class="sig-paren">(</span><em>self</em>, <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.RemoveData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the first data item with the specified ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id</strong> (<em>int</em>) – The container ID.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if any value was removed, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.RemoveIndex">
+<code class="descclassname">BaseContainer.</code><code class="descname">RemoveIndex</code><span class="sig-paren">(</span><em>self</em>, <em>i</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.RemoveIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the data item at the specified index <em>i</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>i</strong> (<em>int</em>) – The index of the value to be removed.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if any value was removed, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.FindIndex">
+<code class="descclassname">BaseContainer.</code><code class="descname">FindIndex</code><span class="sig-paren">(</span><em>self</em>, <em>i</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.FindIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the index for the value with the specified ID, or -1 if no such value exists.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id</strong> (<em>int</em>) – The ID of the value.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The index of the value, or -1.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetIndexId">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetIndexId</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetIndexId" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns the ID of the element at the specified index, or <em>NOTOK</em> if it doesn’t exist.</div>
+<div class="line">Used to browse through the container.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index of the value.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The ID of the value, or <em>NOTOK</em>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetType">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetType</code><span class="sig-paren">(</span><em>self</em>, <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the type of a container element by ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id</strong> (<em>int</em>) – The ID of the element.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The type:<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>DA_NIL</em></td>
+<td>No value.</td>
+</tr>
+<tr class="row-even"><td><em>DA_VOID</em></td>
+<td>PyCObject</td>
+</tr>
+<tr class="row-odd"><td><em>DA_LONG</em></td>
+<td>Integer.</td>
+</tr>
+<tr class="row-even"><td><em>DA_REAL</em></td>
+<td>Float.</td>
+</tr>
+<tr class="row-odd"><td><em>DA_TIME</em></td>
+<td><a class="reference internal" href="../BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTime</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>DA_VECTOR</em></td>
+<td><a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>DA_MATRIX</em></td>
+<td><a class="reference internal" href="../Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>DA_LLONG</em></td>
+<td>Integer.</td>
+</tr>
+<tr class="row-odd"><td><em>DA_STRING</em></td>
+<td>String.</td>
+</tr>
+<tr class="row-even"><td><em>DA_FILENAME</em></td>
+<td>String.</td>
+</tr>
+<tr class="row-odd"><td><em>DA_CONTAINER</em></td>
+<td><a class="reference internal" href="#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseContainer</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>DA_ALIASLINK</em></td>
+<td><a class="reference internal" href="../C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseList2D</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>DA_MARKER</em></td>
+<td>Not used.</td>
+</tr>
+<tr class="row-even"><td><em>DA_MISSINGPLUG</em></td>
+<td>Denotes a missing datatype plugin.</td>
+</tr>
+<tr class="row-odd"><td><em>DA_UUID</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R17.048: </span><a class="reference external" href="https://docs.python.org/release/2.7/library/uuid.html#uuid.UUID">UUID</a>.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><em>DA_TRISTATE</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20: </span>No single value.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>DA_CUSTOMDATATYPE</em></td>
+<td>Datatypes higher than this value are custom.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.InsData">
+<code class="descclassname">BaseContainer.</code><code class="descname">InsData</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.InsData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserts an arbitrary data at the specified <em>id</em>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This function does not check if the ID already exists in the container!</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>int</em>) – The ID to insert at.</li>
+<li><strong>n</strong> (<em>any</em>) – The data to insert.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">Any</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The inserted data.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.InsDataAfter">
+<code class="descclassname">BaseContainer.</code><code class="descname">InsDataAfter</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>n</em>, <em>last</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.InsDataAfter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserts an arbitrary data at the specified <em>id</em> after <em>last</em>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This function does not check if the ID already exists in the container!</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>int</em>) – The ID to insert at.</li>
+<li><strong>n</strong> (<em>any</em>) – The data to insert.</li>
+<li><strong>last</strong> (<em>any</em>) – The data to insert after.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">Any</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The inserted data.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.SetData">
+<code class="descclassname">BaseContainer.</code><code class="descname">SetData</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.SetData" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Sets an arbitrary data value at the specified ID.</div>
+<div class="line">If a value exists under the same ID, its content will be changed.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the element to set.</li>
+<li><strong>n</strong> (<em>any</em>) – The data value to set.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetData">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetData</code><span class="sig-paren">(</span><em>self</em>, <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the data for an element by ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id</strong> (<em>int</em>) – The ID of the element.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Any</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The data or <strong>None</strong> if it wasn’t found.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetDataPointer">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetDataPointer</code><span class="sig-paren">(</span><em>self</em>, <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetDataPointer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a pointer to directly access the data.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R17.053.</span></p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">c4d</span>
+
+<span class="n">bc</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">BaseContainer</span><span class="p">()</span>
+<span class="n">bc</span><span class="p">[</span><span class="mi">1000</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
+<span class="n">bc</span><span class="p">[</span><span class="mi">2000</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;world&quot;</span>
+
+<span class="c1"># Print content</span>
+<span class="nb">print</span> <span class="s2">&quot;Original:&quot;</span>
+<span class="k">for</span> <span class="n">dataid</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">bc</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="n">data</span><span class="p">,</span>
+
+<span class="n">dataptr</span> <span class="o">=</span> <span class="n">bc</span><span class="o">.</span><span class="n">GetDataPointer</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">bc</span><span class="o">.</span><span class="n">InsDataAfter</span><span class="p">(</span><span class="mi">3000</span><span class="p">,</span> <span class="s2">&quot;beautiful&quot;</span><span class="p">,</span> <span class="n">dataptr</span><span class="p">)</span>
+
+<span class="c1"># Print content</span>
+<span class="nb">print</span> <span class="s2">&quot;Changed:&quot;</span>
+<span class="k">for</span> <span class="n">dataid</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">bc</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="n">data</span><span class="p">,</span>
+<span class="nb">print</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id</strong> (<em>int</em>) – The ID of the element.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">PyCObject</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A pointer to the data.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetBool">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetBool</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>preset=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetBool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a bool value with the specified ID, or <em>preset</em> if it doesn’t exist.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the requested value.</li>
+<li><strong>preset</strong> (<em>bool</em>) – Returned if the value is not available.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetInt32">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetInt32</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>preset=0</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetInt32" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a int value with the specified ID, or <em>preset</em> if it doesn’t exist.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the requested value.</li>
+<li><strong>preset</strong> (<em>int</em>) – Returned if the value is not available.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetInt64">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetInt64</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>preset=0</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetInt64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a long value with the specified ID, or <em>preset</em> if it doesn’t exist.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the requested value.</li>
+<li><strong>preset</strong> (<em>long</em>) – Returned if the value is not available.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">long</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetFloat">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetFloat</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>preset=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetFloat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a float value with the specified ID, or <em>preset</em> if it doesn’t exist.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the requested value.</li>
+<li><strong>preset</strong> (<em>float</em>) – Returned if the value is not available.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">float</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetVector">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetVector</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>preset=Vector()</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a <a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a> value with the specified ID, or <em>preset</em> if it doesn’t exist.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the requested value.</li>
+<li><strong>preset</strong> (<a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – Returned if the value is not available.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetMatrix">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetMatrix</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>preset=Matrix()</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a <a class="reference internal" href="../Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a> value with the specified ID, or <em>preset</em> if it doesn’t exist.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the requested value.</li>
+<li><strong>preset</strong> (<a class="reference internal" href="../Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><em>c4d.Matrix</em></a>) – Returned if the value is not available.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../Matrix/index.html#c4d.Matrix" title="c4d.Matrix">c4d.Matrix</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetString">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetString</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>preset=&quot;&quot;</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string value with the specified ID, or <em>preset</em> if it doesn’t exist.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the requested value.</li>
+<li><strong>preset</strong> (<em>str</em>) – Returned if the value is not available.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">str</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetFilename">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetFilename</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>preset=&quot;&quot;</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetFilename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string value with the specified ID, or <em>preset</em> if it doesn’t exist.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the requested value.</li>
+<li><strong>preset</strong> (<em>str</em>) – Returned if the value is not available.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">str</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetUuid">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetUuid</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>preset</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetUuid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a uuid value with the specified ID, or <em>preset</em> if it doesn’t exist.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the requested value.</li>
+<li><strong>preset</strong> – Returned if the value is not available.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><p><a class="reference external" href="https://docs.python.org/release/2.7/library/uuid.html#uuid.UUID">UUID</a></p>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetTime">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetTime</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>preset=BaseTime()</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a <a class="reference internal" href="../BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTime</span></code></a> value with the specified ID, or <em>preset</em> if it doesn’t exist.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the requested value.</li>
+<li><strong>preset</strong> (<a class="reference internal" href="../BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><em>c4d.BaseTime</em></a>) – Returned if the value is not available.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime">c4d.BaseTime</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetContainer">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetContainer</code><span class="sig-paren">(</span><em>self</em>, <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetContainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of the sub-container with the specified ID, or an empty container if it doesn’t exist.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id</strong> (<em>int</em>) – The ID of the requested sub-container.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.BaseContainer" title="c4d.BaseContainer">c4d.BaseContainer</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The Sub-container.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetContainerInstance">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetContainerInstance</code><span class="sig-paren">(</span><em>self</em>, <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetContainerInstance" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns the sub-container with the specified ID, or <strong>None</strong> if it doesn’t exist.</div>
+<div class="line">Changes to the container are reflected in the stored sub-container.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id</strong> (<em>int</em>) – The ID of the requested sub-container.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.BaseContainer" title="c4d.BaseContainer">c4d.BaseContainer</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The sub-container, or <strong>None</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetLink">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetLink</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>doc=None</em>, <em>isinstanceof=0</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetLink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a linked object, evaluated in the attached document.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If <em>instanceof</em> is specified, <strong>None</strong> is returned if the object is not of this type.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the requested sub-container.</li>
+<li><strong>doc</strong> (<a class="reference internal" href="../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document to evalulate the link in or <strong>None</strong>.</li>
+<li><strong>isinstanceof</strong> (<em>int</em>) – Set this to a node type to only return the link if it is of this type.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D">c4d.BaseList2D</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The linked object, or <strong>None</strong> if the link is broken.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetObjectLink">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetObjectLink</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>doc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetObjectLink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a linked base object, evaluated in the attached document.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Returns <strong>None</strong> if the link doesn’t point to a base object.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the requested sub-container.</li>
+<li><strong>doc</strong> (<a class="reference internal" href="../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document to evalulate the link in.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject">c4d.BaseObject</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The linked base object, or <strong>None</strong> if the link is broken.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetMaterialLink">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetMaterialLink</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>doc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetMaterialLink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a linked material object, evaluated in the attached document.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Returns <strong>None</strong> if the link doesn’t point to a base object.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the requested sub-container.</li>
+<li><strong>doc</strong> (<a class="reference internal" href="../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document to evalulate the link in.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../C4DAtom/GeListNode/BaseList2D/BaseMaterial/index.html#c4d.BaseMaterial" title="c4d.BaseMaterial">c4d.BaseMaterial</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The linked material object, or <strong>None</strong> if the link is broken.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetCustomDataType">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetCustomDataType</code><span class="sig-paren">(</span><em>self</em>, <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetCustomDataType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of the custom data type or <strong>None</strong> if it doesn’t exist.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id</strong> (<em>int</em>) – The ID of the requested sub-container.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The custom data type.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetVoid">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetVoid</code><span class="sig-paren">(</span><em>self</em>, <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetVoid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the void* value at the specified id.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id</strong> (<em>int</em>) – The ID of the requested void object.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">PyCObject</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The PyCObject representing the void object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.SetBool">
+<code class="descclassname">BaseContainer.</code><code class="descname">SetBool</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.SetBool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a bool value and changes the data type accordingly.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the value to set.</li>
+<li><strong>b</strong> (<em>bool</em>) – The new value.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.SetInt32">
+<code class="descclassname">BaseContainer.</code><code class="descname">SetInt32</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>l</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.SetInt32" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets an int value and changes the data type accordingly.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the value to set.</li>
+<li><strong>l</strong> (<em>int</em>) – The new value.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.SetInt64">
+<code class="descclassname">BaseContainer.</code><code class="descname">SetInt64</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>l</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.SetInt64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a long value and changes the data type accordingly.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the value to set.</li>
+<li><strong>l</strong> (<em>long</em>) – The new value.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.SetFloat">
+<code class="descclassname">BaseContainer.</code><code class="descname">SetFloat</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.SetFloat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a float value and changes the data type accordingly.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the value to set.</li>
+<li><strong>l</strong> (<em>int</em>) – The new value.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.SetVector">
+<code class="descclassname">BaseContainer.</code><code class="descname">SetVector</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.SetVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a <a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a> value and changes the data type accordingly.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the value to set.</li>
+<li><strong>v</strong> (<a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The new value.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.SetMatrix">
+<code class="descclassname">BaseContainer.</code><code class="descname">SetMatrix</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>m</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.SetMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a <a class="reference internal" href="../Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a> value and changes the data type accordingly.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the value to set.</li>
+<li><strong>m</strong> (<a class="reference internal" href="../Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><em>c4d.Matrix</em></a>) – The new value.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.SetString">
+<code class="descclassname">BaseContainer.</code><code class="descname">SetString</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>s</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.SetString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a string value and changes the data type accordingly.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the value to set.</li>
+<li><strong>s</strong> (<em>str</em>) – The new value.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.SetFilename">
+<code class="descclassname">BaseContainer.</code><code class="descname">SetFilename</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>f</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.SetFilename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a new string value with the specified ID to <em>s</em> as a filepath, or inserts it if it didn’t exist.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the value to set.</li>
+<li><strong>f</strong> (<em>str</em>) – The new value.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.SetUuid">
+<code class="descclassname">BaseContainer.</code><code class="descname">SetUuid</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>u</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.SetUuid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a uuid value and changes the data type accordingly.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the value to set.</li>
+<li><strong>u</strong> – The new value.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.SetTime">
+<code class="descclassname">BaseContainer.</code><code class="descname">SetTime</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.SetTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a <a class="reference internal" href="../BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTime</span></code></a> value and changes the data type accordingly.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the value to set.</li>
+<li><strong>b</strong> (<a class="reference internal" href="../BaseTime/index.html#c4d.BaseTime" title="c4d.BaseTime"><em>c4d.BaseTime</em></a>) – The new value.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.SetContainer">
+<code class="descclassname">BaseContainer.</code><code class="descname">SetContainer</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>s</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.SetContainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a <a class="reference internal" href="#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseContainer</span></code></a> value and changes the data type accordingly.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the value to set.</li>
+<li><strong>s</strong> (<a class="reference internal" href="#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The sub-container</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.SetLink">
+<code class="descclassname">BaseContainer.</code><code class="descname">SetLink</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>link</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.SetLink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores a link to an atom object with the specified ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the value to set.</li>
+<li><strong>link</strong> (<a class="reference internal" href="../C4DAtom/index.html#c4d.C4DAtom" title="c4d.C4DAtom"><em>c4d.C4DAtom</em></a>) – The link to store.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.SetVoid">
+<code class="descclassname">BaseContainer.</code><code class="descname">SetVoid</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.SetVoid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores a PyCObject to an void* object with the specified ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<em>int</em>) – The ID of the requested void object.</li>
+<li><strong>v</strong> (<em>PyCObject</em>) – The void* as a PyCObject to store.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.GetIndexData">
+<code class="descclassname">BaseContainer.</code><code class="descname">GetIndexData</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.GetIndexData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the data for the element at <em>index</em>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.038.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index of the element.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Any</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The data, or <strong>None</strong> if no data was found.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.SetIndexData">
+<code class="descclassname">BaseContainer.</code><code class="descname">SetIndexData</code><span class="sig-paren">(</span><em>self</em>, <em>index</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.SetIndexData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the data for the element at <em>index</em>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.038.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<em>int</em>) – The index of the element.</li>
+<li><strong>data</strong> (<em>any</em>) – The data for the element.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the data was set, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.IsInstance">
+<code class="descclassname">BaseContainer.</code><code class="descname">IsInstance</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.IsInstance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the container is an instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the container is an instance, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.MergeContainer">
+<code class="descclassname">BaseContainer.</code><code class="descname">MergeContainer</code><span class="sig-paren">(</span><em>self</em>, <em>src</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.MergeContainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores the values in src in this container, overwriting any elements with colliding IDs and keeping the rest.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>src</strong> (<a class="reference internal" href="#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The source container.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseContainer.Sort">
+<code class="descclassname">BaseContainer.</code><code class="descname">Sort</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseContainer.Sort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sorts the container entries by ID.</p>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../DescID/index.html" title="c4d.DescID"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../BaseTime/index.html" title="c4d.BaseTime"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >c4d</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

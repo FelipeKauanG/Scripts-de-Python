@@ -1,0 +1,155 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Color Profiles &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Polygon Object in Detail" href="modeling/polygon_object.html" />
+    <link rel="prev" title="Threading Information" href="../application_development/threading.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="modeling/polygon_object.html" title="Polygon Object in Detail"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../application_development/threading.html" title="Threading Information"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Manual List</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="color-profiles">
+<span id="color-profiles-information"></span><h1>Color Profiles<a class="headerlink" href="#color-profiles" title="Permalink to this headline">¶</a></h1>
+<p>Cinema 4D now supports color management and color profiles in all places of the application. The render engine natively supports linear workflow.</p>
+<p>You mostly need to be aware of linear workflow and color conversion when you write shaders, materials or videopost effects.</p>
+<p>Here’s a schematic of Cinema 4D’s colorspace transformation pipeline:</p>
+<img alt="../../_images/colorprofile_lwf_pipeline.png" src="../../_images/colorprofile_lwf_pipeline.png" />
+<p>Before rendering all assets (bitmaps, colors or other external references) are transferred into the render engine’s colorspace. This can either be Linear Colorspace - if the user has “Linear Workflow” in Cinema 4D’s document settings enabled - or sRGB Colorspace.</p>
+<p>The render engine now does all lighting calculations and creates an image - which is still in the colorspace that the renderer is operating in.</p>
+<p>As a final step the render output is transformed into a user chosen output color space. Mostly this will be sRGB if the image has a bit depth of 8 or 16 and Linear for 32. But the use can choose any output colorspace in the render settings.</p>
+<p>Please note that multi-pass images produced by the renderer always have render colorspace assigned - this is different from the regular image where you can set any arbitrary output colorspace. The reason for this is that a multi-pass image tries to recreate the render operations (adding multiple passes). If this didn’t happen in render colorspace the results would look completely wrong.</p>
+<p>On a further note this is the reason for applications like Photoshop that cannot show multipasses correctly if bit depth is 32 and LWF is off - they have a hard-wired built-in logic that 32 bit images cannot have any color profile assigned and always use linear space.</p>
+</div>
+<div class="section" id="explanation-of-color-management">
+<h1>Explanation of Color Management<a class="headerlink" href="#explanation-of-color-management" title="Permalink to this headline">¶</a></h1>
+<p>Everyone has heard of it but only few understand what it really is, even though many books have been - and still are being - written about this topic. In the following you will find a brief introduction of the problematic of color fastness.</p>
+<p>Surely you are familiar with the effect of an image looking perfect on your monitor (colors are exactly as you want them to be - brightness, contrast, etc. are immaculate) but when you view the same image on your colleague’s monitor or even printed out it looks completely different - mostly worse.</p>
+<p>How does this happen?</p>
+<p>Colleague A creates an image using an image editing program. He creates his image according to how it looks on his monitor. When finished, he saves the image - and this is where the problems start: Image editing programs have to save images with a reproducible color definition (i.e. the color profile, which is mostly RGB). Most often a color profile is selected that corresponds to the display device - for most (but not all!) monitors sRGB and for pring CMYK, etc.</p>
+<p>This means that the red value on colleague A’s monitor has to correspond to the RGB value in the image file. Colleague A’s monitor must pass on the image’s colors exactly how the image processing program will display the RGB values. In order to do so, Colleague A’s monitor must be calibrated correctly. Over time, a monitor’s color display will change and should theoretically be calibrated every 4 weeks if being used for work with real color profiles. Regular calibration is also necessary for all input and output devices such as monitors, printers, scanners, etc.</p>
+<p>If everything has been calculated correctly, the printed image from colleague A’s monitor should appear exactly the same on colleague C’s monitor after being scanned in. How probable this actually is can be attested to by anyone who has actually attempted such a feat (a 100% match is in fact not possible because not all devices can convert color profiles loss-free). But at least a nearly 100% match can be achieved on different monitors when calibrated correctly.</p>
+<p>This was a simplified explanation of the issues involved with precise color management. What is basically required is a consistent, clearly-defined color profile within the creation process from image editing to the final output of the image.</p>
+<div class="section" id="and-what-does-all-this-have-to-do-with-cinema-4d">
+<h2>And what does all this have to do with Cinema 4D?<a class="headerlink" href="#and-what-does-all-this-have-to-do-with-cinema-4d" title="Permalink to this headline">¶</a></h2>
+<p>First the good news: If you’ve never heard of color management and your renderings have always met or exceeded your requirements then you can simply ignore this parameter (and leave all Cinema 4D adjustable color profiles set to their default mode sRGB). To be honest, only very experienced artists will see the difference between images created using precise color management and those created by rule of thumb.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only change the color profile settings if you really know what you’re doing. Changing these values can otherwise lead to frustration and unwanted results. When in doubt, simply set everything back to sRGB. sRGB is the color profile that has been used for several years whenever no alternative color profile has specifically been defined. This is why about 99% of all images on the internet contain this default color profile. Even Cinema 4D versions prior to R12 saved images exclusively in the sRGB color profile.</p>
+</div>
+</div>
+<div class="section" id="input-color-profile">
+<h2>Input Color Profile<a class="headerlink" href="#input-color-profile" title="Permalink to this headline">¶</a></h2>
+<p>Here you define 3 things:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Whether or not the embedded color profile of textures should be used</li>
+<li>Which color profile should be used for textures with NO embedded color profile.</li>
+<li>Which color profile should color selection fields, gradients, etc. within the application use</li>
+</ul>
+</div></blockquote>
+<p><em>sRGB</em></p>
+<p><em>Linear</em></p>
+<blockquote>
+<div>If a texture has an embedded color profile, these options define how the color selection fields, gradients, etc. will be displayed in Cinema 4D. sRGB is the most commonly used display mode (when in doubt, use this mode). Linear is the mode that less common and more difficult to use.</div></blockquote>
+<p><em>Disabled</em></p>
+<blockquote>
+<div>In this mode, embedded color profiles will not be taken into consideration. The sRGB color profile will be used instead. Simultaneously disabling the Linear Workflow option will reflect the mode prior to R12.</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Color Profiles</a></li>
+<li><a class="reference internal" href="#explanation-of-color-management">Explanation of Color Management</a><ul>
+<li><a class="reference internal" href="#and-what-does-all-this-have-to-do-with-cinema-4d">And what does all this have to do with Cinema 4D?</a></li>
+<li><a class="reference internal" href="#input-color-profile">Input Color Profile</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="modeling/polygon_object.html" title="Polygon Object in Detail"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../application_development/threading.html" title="Threading Information"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Manual List</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

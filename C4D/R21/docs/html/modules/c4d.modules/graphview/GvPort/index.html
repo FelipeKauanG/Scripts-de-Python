@@ -1,0 +1,490 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.graphview.GvPort &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.modules.hair" href="../../hair/index.html" />
+    <link rel="prev" title="c4d.modules.graphview.GvNodeMaster" href="../GvNodeMaster/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../hair/index.html" title="c4d.modules.hair"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../GvNodeMaster/index.html" title="c4d.modules.graphview.GvNodeMaster"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.modules.graphview</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-graphview-gvport">
+<h1>c4d.modules.graphview.GvPort<a class="headerlink" href="#c4d-modules-graphview-gvport" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.graphview.GvPort">
+<em class="property">class </em><code class="descclassname">c4d.modules.graphview.</code><code class="descname">GvPort</code><a class="headerlink" href="#c4d.modules.graphview.GvPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <a class="reference internal" href="#c4d.modules.graphview.GvPort" title="c4d.modules.graphview.GvPort"><code class="xref py py-class docutils literal notranslate"><span class="pre">GvPort</span></code></a> is a port of a <a class="reference internal" href="../GvNode/index.html#c4d.modules.graphview.GvNode" title="c4d.modules.graphview.GvNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">GvNode</span></code></a>-object.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">A <a class="reference internal" href="#c4d.modules.graphview.GvPort" title="c4d.modules.graphview.GvPort"><code class="xref py py-class docutils literal notranslate"><span class="pre">GvPort</span></code></a> object cannot be alive without its owner.</div>
+<div class="line">Use <a class="reference internal" href="../GvNode/index.html#GvNode.AddPort" title="GvNode.AddPort"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvNode.AddPort()</span></code></a> to create a port.</div>
+</div>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#GvPort.Connect" title="GvPort.Connect"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvPort.Connect(self,</span> <span class="pre">port)</span></code></a></td>
+<td>Connects a port with another.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#GvPort.Remove" title="GvPort.Remove"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvPort.Remove(self)</span></code></a></td>
+<td>Removes the connections of this port.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#GvPort.GetNrOfConnections" title="GvPort.GetNrOfConnections"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvPort.GetNrOfConnections(self)</span></code></a></td>
+<td>Get the number of connections, including both the incoming connection and outgoing connections.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#GvPort.IsIncomingConnected" title="GvPort.IsIncomingConnected"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvPort.IsIncomingConnected(self)</span></code></a></td>
+<td>Check if there’s an incoming connection.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#GvPort.GetDestination" title="GvPort.GetDestination"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvPort.GetDestination(self)</span></code></a></td>
+<td>Returns the port where the port is linked with.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#GvPort.GetNode" title="GvPort.GetNode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvPort.GetNode(self)</span></code></a></td>
+<td>Returns the node of this port.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#GvPort.GetName" title="GvPort.GetName"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvPort.GetName(self,</span> <span class="pre">node)</span></code></a></td>
+<td>Gets the name of this port.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#GvPort.SetName" title="GvPort.SetName"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvPort.SetName(self,</span> <span class="pre">name)</span></code></a></td>
+<td>Sets the name of this port.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#GvPort.GetIO" title="GvPort.GetIO"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvPort.GetIO(self)</span></code></a></td>
+<td>Gets the IO mode for this port.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#GvPort.GetMainID" title="GvPort.GetMainID"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvPort.GetMainID(self)</span></code></a></td>
+<td>Gets the main ID of the port.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#GvPort.SetMainID" title="GvPort.SetMainID"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvPort.SetMainID(self,</span> <span class="pre">id)</span></code></a></td>
+<td>Sets the main ID of the port.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#GvPort.GetSubID" title="GvPort.GetSubID"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvPort.GetSubID(self)</span></code></a></td>
+<td>Gets the sub ID of the port.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#GvPort.SetUserID" title="GvPort.SetUserID"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvPort.SetUserID(self,</span> <span class="pre">id)</span></code></a></td>
+<td>Sets the user ID of the port.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#GvPort.GetUserID" title="GvPort.GetUserID"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvPort.GetUserID(self)</span></code></a></td>
+<td>Gets the user ID of the port.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#GvPort.GetValueType" title="GvPort.GetValueType"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvPort.GetValueType(self)</span></code></a></td>
+<td>Gets the value type of the port.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#GvPort.SetVisible" title="GvPort.SetVisible"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvPort.SetVisible(self,</span> <span class="pre">v)</span></code></a></td>
+<td>Set the visibility of the port.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#GvPort.GetVisible" title="GvPort.GetVisible"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvPort.GetVisible(self)</span></code></a></td>
+<td>Checks if this port is hidden or visible.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#GvPort.GetUserData" title="GvPort.GetUserData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvPort.GetUserData(self)</span></code></a></td>
+<td>Internal.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#GvPort.SetUserData" title="GvPort.SetUserData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GvPort.SetUserData(self)</span></code></a></td>
+<td>Internal.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="GvPort.Connect">
+<code class="descclassname">GvPort.</code><code class="descname">Connect</code><span class="sig-paren">(</span><em>self</em>, <em>port</em><span class="sig-paren">)</span><a class="headerlink" href="#GvPort.Connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connects a port with another.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Remember, the nodes of the ports have to be in the same <a class="reference internal" href="../GvNodeMaster/index.html#c4d.modules.graphview.GvNodeMaster" title="c4d.modules.graphview.GvNodeMaster"><code class="xref py py-class docutils literal notranslate"><span class="pre">GvNodeMaster</span></code></a>, otherwise the connection fails.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>port</strong> (<a class="reference internal" href="#c4d.modules.graphview.GvPort" title="c4d.modules.graphview.GvPort"><em>c4d.modules.graphview.GvPort</em></a>) – The port to connect to.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> on succeeded connection, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvPort.Remove">
+<code class="descclassname">GvPort.</code><code class="descname">Remove</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#GvPort.Remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the connections of this port.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the connection was removed, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvPort.GetNrOfConnections">
+<code class="descclassname">GvPort.</code><code class="descname">GetNrOfConnections</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#GvPort.GetNrOfConnections" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of connections, including both the incoming connection and outgoing connections.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Number of connections.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvPort.IsIncomingConnected">
+<code class="descclassname">GvPort.</code><code class="descname">IsIncomingConnected</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#GvPort.IsIncomingConnected" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if there’s an incoming connection.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if there’s an incoming connection to the port, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvPort.GetDestination">
+<code class="descclassname">GvPort.</code><code class="descname">GetDestination</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#GvPort.GetDestination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the port where the port is linked with.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list of type <a class="reference internal" href="#c4d.modules.graphview.GvPort" title="c4d.modules.graphview.GvPort"><code class="xref py py-class docutils literal notranslate"><span class="pre">GvPort</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Param:</th><td class="field-body">A list with all destinations.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvPort.GetNode">
+<code class="descclassname">GvPort.</code><code class="descname">GetNode</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#GvPort.GetNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the node of this port.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../GvNode/index.html#c4d.modules.graphview.GvNode" title="c4d.modules.graphview.GvNode">c4d.modules.graphview.GvNode</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Param:</th><td class="field-body">The container</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvPort.GetName">
+<code class="descclassname">GvPort.</code><code class="descname">GetName</code><span class="sig-paren">(</span><em>self</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#GvPort.GetName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the name of this port.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>node</strong> (<a class="reference internal" href="../GvNode/index.html#c4d.modules.graphview.GvNode" title="c4d.modules.graphview.GvNode"><em>c4d.modules.graphview.GvNode</em></a>) – The node the port belongs to</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Port name.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvPort.SetName">
+<code class="descclassname">GvPort.</code><code class="descname">SetName</code><span class="sig-paren">(</span><em>self</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#GvPort.SetName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the name of this port.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – Port name.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvPort.GetIO">
+<code class="descclassname">GvPort.</code><code class="descname">GetIO</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#GvPort.GetIO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the IO mode for this port.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">IO mode:<table border="1" class="docutils">
+<colgroup>
+<col width="61%" />
+<col width="39%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>GV_PORT_INVALID</em></td>
+<td>Invalid.</td>
+</tr>
+<tr class="row-even"><td><em>GV_PORT_INPUT</em></td>
+<td>Input.</td>
+</tr>
+<tr class="row-odd"><td><em>GV_PORT_OUTPUT</em></td>
+<td>Output.</td>
+</tr>
+<tr class="row-even"><td><em>GV_PORT_INPUT_OR_GEDATA</em></td>
+<td>Input or GeData.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvPort.GetMainID">
+<code class="descclassname">GvPort.</code><code class="descname">GetMainID</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#GvPort.GetMainID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the main ID of the port.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Main ID.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvPort.SetMainID">
+<code class="descclassname">GvPort.</code><code class="descname">SetMainID</code><span class="sig-paren">(</span><em>self</em>, <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#GvPort.SetMainID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the main ID of the port.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id</strong> (<em>int</em>) – New main ID.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvPort.GetSubID">
+<code class="descclassname">GvPort.</code><code class="descname">GetSubID</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#GvPort.GetSubID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the sub ID of the port.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Sub ID.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvPort.SetUserID">
+<code class="descclassname">GvPort.</code><code class="descname">SetUserID</code><span class="sig-paren">(</span><em>self</em>, <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#GvPort.SetUserID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the user ID of the port.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id</strong> (<em>int</em>) – The user ID to set.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvPort.GetUserID">
+<code class="descclassname">GvPort.</code><code class="descname">GetUserID</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#GvPort.GetUserID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the user ID of the port.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Sub ID.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvPort.GetValueType">
+<code class="descclassname">GvPort.</code><code class="descname">GetValueType</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#GvPort.GetValueType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the value type of the port.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The value type.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvPort.SetVisible">
+<code class="descclassname">GvPort.</code><code class="descname">SetVisible</code><span class="sig-paren">(</span><em>self</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#GvPort.SetVisible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the visibility of the port.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<em>bool</em>) – <strong>False</strong> for an invisible port.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvPort.GetVisible">
+<code class="descclassname">GvPort.</code><code class="descname">GetVisible</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#GvPort.GetVisible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if this port is hidden or visible.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if visible, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvPort.GetUserData">
+<code class="descclassname">GvPort.</code><code class="descname">GetUserData</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#GvPort.GetUserData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Internal.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R17.048.</span></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="GvPort.SetUserData">
+<code class="descclassname">GvPort.</code><code class="descname">SetUserData</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#GvPort.SetUserData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Internal.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R17.048.</span></p>
+</div>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../hair/index.html" title="c4d.modules.hair"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../GvNodeMaster/index.html" title="c4d.modules.graphview.GvNodeMaster"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.modules.graphview</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

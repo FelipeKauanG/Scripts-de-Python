@@ -1,0 +1,236 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>maxon.NetworkIpAddrInterface &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="maxon.NetworkIpAddrPortInterface" href="maxon.NetworkIpAddrPortInterface.html" />
+    <link rel="prev" title="maxon.OutputStreamInterface.softspace" href="../io/maxon.OutputStreamInterface.softspace.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="maxon.NetworkIpAddrPortInterface.html" title="maxon.NetworkIpAddrPortInterface"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../io/maxon.OutputStreamInterface.softspace.html" title="maxon.OutputStreamInterface.softspace"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../maxon/interfaces.html" accesskey="U">MAXON API - Interfaces</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="maxon-networkipaddrinterface">
+<h1>maxon.NetworkIpAddrInterface<a class="headerlink" href="#maxon-networkipaddrinterface" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-maxon.NetworkIpAddrInterface">
+<span id="description"></span><h2>Description<a class="headerlink" href="#module-maxon.NetworkIpAddrInterface" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">This class represents an Internet Protocol (IP) address.</div>
+<div class="line">It is version agnostic and supports both IPv4 and IPv6.</div>
+</div>
+</div>
+<div class="section" id="inheritance-diagram">
+<h2>Inheritance diagram<a class="headerlink" href="#inheritance-diagram" title="Permalink to this headline">¶</a></h2>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../core_helper/maxon.ObjectInterface.html#module-maxon.ObjectInterface" title="maxon.ObjectInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.ObjectInterface</span></code></a></li>
+</ul>
+<p>Children Classes:</p>
+<ul class="simple">
+<li><a class="reference internal" href="maxon.NetworkIpAddrPortInterface.html#module-maxon.NetworkIpAddrPortInterface" title="maxon.NetworkIpAddrPortInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.NetworkIpAddrPortInterface</span></code></a></li>
+<li><a class="reference internal" href="../../references/network/maxon.NetworkIpAddr.html#module-maxon.NetworkIpAddr" title="maxon.NetworkIpAddr"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.NetworkIpAddr</span></code></a></li>
+</ul>
+</div>
+<div class="section" id="methods-signature">
+<h2>Methods Signature<a class="headerlink" href="#methods-signature" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.NetworkIpAddrInterface.Flush" title="maxon.NetworkIpAddrInterface.Flush"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Flush</span></code></a>()</td>
+<td><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 20.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.NetworkIpAddrInterface.GetNativeProtocol" title="maxon.NetworkIpAddrInterface.GetNativeProtocol"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetNativeProtocol</span></code></a>()</td>
+<td>Returns the type of the IP address used in this object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.NetworkIpAddrInterface.GetProtocol" title="maxon.NetworkIpAddrInterface.GetProtocol"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetProtocol</span></code></a>()</td>
+<td>Returns the type of the IP address used in this object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.NetworkIpAddrInterface.GetString" title="maxon.NetworkIpAddrInterface.GetString"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetString</span></code></a>([port])</td>
+<td>Retrieves the string representation of the current IP address.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.NetworkIpAddrInterface.SetIPv4" title="maxon.NetworkIpAddrInterface.SetIPv4"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetIPv4</span></code></a>()</td>
+<td>Sets an IP v4 address from the native in_addr structure.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.NetworkIpAddrInterface.SetIPv6" title="maxon.NetworkIpAddrInterface.SetIPv6"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetIPv6</span></code></a>()</td>
+<td>Sets an IP v6 address from the native in_addr structure.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="methods-definition">
+<h2>Methods Definition<a class="headerlink" href="#methods-definition" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="maxon.NetworkIpAddrInterface.Flush">
+<code class="descclassname">NetworkIpAddrInterface.</code><code class="descname">Flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.NetworkIpAddrInterface.Flush" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 20: </span>Use <code class="xref py py-func docutils literal notranslate"><span class="pre">NetworkIpAddrInterface.Reset()</span></code> instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.NetworkIpAddrInterface.GetNativeProtocol">
+<code class="descclassname">NetworkIpAddrInterface.</code><code class="descname">GetNativeProtocol</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.NetworkIpAddrInterface.GetNativeProtocol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the type of the IP address used in this object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The Protocol type.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.NetworkIpAddrInterface.GetProtocol">
+<code class="descclassname">NetworkIpAddrInterface.</code><code class="descname">GetProtocol</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.NetworkIpAddrInterface.GetProtocol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the type of the IP address used in this object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The IP address type.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.PROTOCOL</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.NetworkIpAddrInterface.GetString">
+<code class="descclassname">NetworkIpAddrInterface.</code><code class="descname">GetString</code><span class="sig-paren">(</span><em>port=0</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.NetworkIpAddrInterface.GetString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the string representation of the current IP address.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>port</strong> (<em>int</em>) – The port to be appended at the end of the IP address.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The string representation of the current IP address.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.NetworkIpAddrInterface.SetIPv4">
+<code class="descclassname">NetworkIpAddrInterface.</code><code class="descname">SetIPv4</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.NetworkIpAddrInterface.SetIPv4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets an IP v4 address from the native in_addr structure.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.NetworkIpAddrInterface.SetIPv6">
+<code class="descclassname">NetworkIpAddrInterface.</code><code class="descname">SetIPv6</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.NetworkIpAddrInterface.SetIPv6" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets an IP v6 address from the native in_addr structure.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">maxon.NetworkIpAddrInterface</a><ul>
+<li><a class="reference internal" href="#module-maxon.NetworkIpAddrInterface">Description</a></li>
+<li><a class="reference internal" href="#inheritance-diagram">Inheritance diagram</a></li>
+<li><a class="reference internal" href="#methods-signature">Methods Signature</a></li>
+<li><a class="reference internal" href="#methods-definition">Methods Definition</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="maxon.NetworkIpAddrPortInterface.html" title="maxon.NetworkIpAddrPortInterface"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../io/maxon.OutputStreamInterface.softspace.html" title="maxon.OutputStreamInterface.softspace"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../maxon/interfaces.html" >MAXON API - Interfaces</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

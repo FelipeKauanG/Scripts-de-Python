@@ -1,0 +1,156 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>SCENEFILTER &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SCRIPTMODE" href="SCRIPTMODE.html" />
+    <link rel="prev" title="SAVEPROJECT" href="SAVEPROJECT.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="SCRIPTMODE.html" title="SCRIPTMODE"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="SAVEPROJECT.html" title="SAVEPROJECT"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../types/index.html" accesskey="U">Types and Symbols List</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="scenefilter">
+<h1>SCENEFILTER<a class="headerlink" href="#scenefilter" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>SCENEFILTER_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_OBJECTS</em></td>
+<td>Load/save objects.</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_MATERIALS</em></td>
+<td>Load/save materials.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_DIALOGSALLOWED</em></td>
+<td>Flag to inform a plugin that a dialog can be displayed. If this flag is not set then no dialogs must be opened.</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_PROGRESSALLOWED</em></td>
+<td>Flag to inform a plugin that a progress bar can be displayed. The progress bar can be set by calling <a class="reference internal" href="../modules/c4d/index.html#c4d.StatusSetBar" title="c4d.StatusSetBar"><code class="xref py py-func docutils literal notranslate"><span class="pre">StatusSetBar()</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_MERGESCENE</em></td>
+<td>Flag to inform a plugin that this is a merge operation, i.e. the document that is inserted to is an existing scene.</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_NONEWMARKERS</em></td>
+<td>Objects loaded from disk will keep their markers.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_SAVECACHES</em></td>
+<td>For <cite>melange</cite> export only. Caches of objects will also be written (only supported by Cinema 4D format). This is the same as the global option “Save Polygon Objects for Melange Exchange”.</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_NOUNDO</em></td>
+<td>Use together with <em>SCENEFILTER_MERGESCENE</em> to avoid that undos are created for the merge operation.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_SAVE_BINARYCACHE</em></td>
+<td>Save the binary compiled shaders with the scene (only for Cinema 4D format).</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_IDENTIFY_ONLY</em></td>
+<td>Do not load the whole document, identify it only.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_ONLY_RENDERDATA</em></td>
+<td>Only load render settings. If this flag is set, <em>SCENEFILTER_OBJECTS</em> and <em>SCENEFILTER_MATERIALS</em> are ignored.</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_IGNOREMISSINGPLUGINSINNONACTIVERENDERDATA</em></td>
+<td>Ignore all missing plugins which are part of a non-active render data.</td>
+</tr>
+<tr class="row-even"><td><em>SCENEFILTER_IGNOREXREFS</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R16.038: </span>Avoid that included X-Refs will be loaded.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>SCENEFILTER_DONTCORRECTOUTPUTFORMAT</em></td>
+<td>Do not change unknown output formats in render settings.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="SCRIPTMODE.html" title="SCRIPTMODE"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="SAVEPROJECT.html" title="SAVEPROJECT"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../types/index.html" >Types and Symbols List</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

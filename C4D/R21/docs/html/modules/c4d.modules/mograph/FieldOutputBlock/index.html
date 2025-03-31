@@ -1,0 +1,776 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.mograph.FieldOutputBlock &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.modules.motiontracker" href="../../motiontracker/index.html" />
+    <link rel="prev" title="c4d.modules.mograph.FieldOutput" href="../FieldOutput/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../motiontracker/index.html" title="c4d.modules.motiontracker"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../FieldOutput/index.html" title="c4d.modules.mograph.FieldOutput"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.modules.mograph</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-mograph-fieldoutputblock">
+<h1>c4d.modules.mograph.FieldOutputBlock<a class="headerlink" href="#c4d-modules-mograph-fieldoutputblock" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.mograph.FieldOutputBlock">
+<em class="property">class </em><code class="descclassname">c4d.modules.mograph.</code><code class="descname">FieldOutputBlock</code><a class="headerlink" href="#c4d.modules.mograph.FieldOutputBlock" title="Permalink to this definition">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified">New in version R20.</span></p>
+</div>
+</dd></dl>
+
+<p class="rubric">Attributes</p>
+<p><blockquote>
+<div><dl class="attribute">
+<dt id="FieldOutputBlock._value">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">_value</code><a class="headerlink" href="#FieldOutputBlock._value" title="Permalink to this definition">¶</a></dt>
+<dd><p>The weight value array.</p>
+<p><strong>Type:</strong> List[float]</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="FieldOutputBlock._alpha">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">_alpha</code><a class="headerlink" href="#FieldOutputBlock._alpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>The alpha array for color and direction. Only available when color or direction are allocated.</p>
+<p><strong>Type:</strong> List[float]</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="FieldOutputBlock._color">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">_color</code><a class="headerlink" href="#FieldOutputBlock._color" title="Permalink to this definition">¶</a></dt>
+<dd><p>The color array.</p>
+<p><strong>Type:</strong> List[<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>]</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="FieldOutputBlock._direction">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">_direction</code><a class="headerlink" href="#FieldOutputBlock._direction" title="Permalink to this definition">¶</a></dt>
+<dd><p>The slope direction array.</p>
+<p><strong>Type:</strong> List[<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>]</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="FieldOutputBlock._rotation">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">_rotation</code><a class="headerlink" href="#FieldOutputBlock._rotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>The rotational velocity array.</p>
+<p><strong>Type:</strong> List[<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>]</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="FieldOutputBlock._pivot">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">_pivot</code><a class="headerlink" href="#FieldOutputBlock._pivot" title="Permalink to this definition">¶</a></dt>
+<dd><p>The rotational velocity (axe + magnitude)</p>
+<p><strong>Type:</strong> List[<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>]</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="FieldOutputBlock._deactivated">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">_deactivated</code><a class="headerlink" href="#FieldOutputBlock._deactivated" title="Permalink to this definition">¶</a></dt>
+<dd><p>The deactivated state array.</p>
+<p><strong>Type:</strong> List[bool]</p>
+</dd></dl>
+
+</div></blockquote>
+</p>
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#FieldOutputBlock.__init__" title="FieldOutputBlock.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.__init__(self)</span></code></a></td>
+<td>Creates a <a class="reference internal" href="#c4d.modules.mograph.FieldOutputBlock" title="c4d.modules.mograph.FieldOutputBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldOutputBlock</span></code></a> instance.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#FieldOutputBlock.GetSubBlock" title="FieldOutputBlock.GetSubBlock"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.GetSubBlock(self)</span></code></a></td>
+<td>Gets a sub-section of the sampling arrays.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#FieldOutputBlock.Reset" title="FieldOutputBlock.Reset"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.Reset(self)</span></code></a></td>
+<td>Resets the <a class="reference internal" href="#c4d.modules.mograph.FieldOutputBlock" title="c4d.modules.mograph.FieldOutputBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldOutputBlock</span></code></a> instance to an empty state. All memory is deallocated.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#FieldOutputBlock.GetCount" title="FieldOutputBlock.GetCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.GetCount(self)</span></code></a></td>
+<td>Returns the number of elements in the sub-block.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#FieldOutputBlock.GetFullCount" title="FieldOutputBlock.GetFullCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.GetFullCount(self)</span></code></a></td>
+<td>Returns the number of elements in the parent <a class="reference internal" href="../FieldOutput/index.html#c4d.modules.mograph.FieldOutput" title="c4d.modules.mograph.FieldOutput"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldOutput</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#FieldOutputBlock.GetOffset" title="FieldOutputBlock.GetOffset"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.GetOffset(self)</span></code></a></td>
+<td>Returns the offset of the sub-block in the parent <a class="reference internal" href="../FieldOutput/index.html#c4d.modules.mograph.FieldOutput" title="c4d.modules.mograph.FieldOutput"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldOutput</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#FieldOutputBlock.GetOwner" title="FieldOutputBlock.GetOwner"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.GetOwner(self)</span></code></a></td>
+<td>Returns the parent or owner <a class="reference internal" href="../FieldOutput/index.html#c4d.modules.mograph.FieldOutput" title="c4d.modules.mograph.FieldOutput"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldOutput</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#FieldOutputBlock.IsValid" title="FieldOutputBlock.IsValid"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.IsValid(self)</span></code></a></td>
+<td>Checks if the <a class="reference internal" href="#c4d.modules.mograph.FieldOutputBlock" title="c4d.modules.mograph.FieldOutputBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldOutputBlock</span></code></a> instance allocations and sizes are valid.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#FieldOutputBlock.IsPopulated" title="FieldOutputBlock.IsPopulated"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.IsPopulated(self)</span></code></a></td>
+<td>Checks if the <a class="reference internal" href="#c4d.modules.mograph.FieldOutputBlock" title="c4d.modules.mograph.FieldOutputBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldOutputBlock</span></code></a> is valid and non-empty.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#FieldOutputBlock.CopyFrom" title="FieldOutputBlock.CopyFrom"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.CopyFrom(self,</span> <span class="pre">src)</span></code></a></td>
+<td>Copies from <a class="reference internal" href="#c4d.modules.mograph.FieldOutputBlock" title="c4d.modules.mograph.FieldOutputBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldOutputBlock</span></code></a> <em>src</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#FieldOutputBlock.CopyArrayContentFrom" title="FieldOutputBlock.CopyArrayContentFrom"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.CopyArrayContentFrom(self,</span> <span class="pre">src)</span></code></a></td>
+<td>Copies from <em>src</em> array content.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#FieldOutputBlock.ClearMemory" title="FieldOutputBlock.ClearMemory"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.ClearMemory(self[,</span> <span class="pre">startIdx,</span> <span class="pre">...])</span></code></a></td>
+<td>Resets the sampling data to default values.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#FieldOutputBlock.ClearDeactivated" title="FieldOutputBlock.ClearDeactivated"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.ClearDeactivated(self[,</span> <span class="pre">state])</span></code></a></td>
+<td>Clears the deactivated array.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#FieldOutputBlock.CalculateCrc" title="FieldOutputBlock.CalculateCrc"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.CalculateCrc(self)</span></code></a></td>
+<td>Calculates a Crc on all internal data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#FieldOutputBlock.GetValue" title="FieldOutputBlock.GetValue"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.GetValue(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Reads value at specified <em>index</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#FieldOutputBlock.SetValue" title="FieldOutputBlock.SetValue"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.SetValue(self,</span> <span class="pre">index,</span> <span class="pre">value)</span></code></a></td>
+<td>Writes value at specified <em>index</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#FieldOutputBlock.GetAlpha" title="FieldOutputBlock.GetAlpha"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.GetAlpha(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Reads alpha at specified <em>index</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#FieldOutputBlock.SetAlpha" title="FieldOutputBlock.SetAlpha"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.SetAlpha(self,</span> <span class="pre">index,</span> <span class="pre">alpha)</span></code></a></td>
+<td>Writes alpha at specified <em>index</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#FieldOutputBlock.GetColor" title="FieldOutputBlock.GetColor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.GetColor(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Reads color at specified <em>index</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#FieldOutputBlock.SetColor" title="FieldOutputBlock.SetColor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.SetColor(self,</span> <span class="pre">index,</span> <span class="pre">color)</span></code></a></td>
+<td>Writes color at specified <em>index</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#FieldOutputBlock.GetDirection" title="FieldOutputBlock.GetDirection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.GetDirection(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Reads direction at specified <em>index</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#FieldOutputBlock.SetDirection" title="FieldOutputBlock.SetDirection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.SetDirection(self,</span> <span class="pre">index,</span> <span class="pre">direction)</span></code></a></td>
+<td>Writes direction at specified <em>index</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#FieldOutputBlock.GetRotation" title="FieldOutputBlock.GetRotation"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.GetRotation(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Reads rotation at specified <em>index</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#FieldOutputBlock.SetRotation" title="FieldOutputBlock.SetRotation"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.SetRotation(self,</span> <span class="pre">index,</span> <span class="pre">rotation,</span> <span class="pre">...)</span></code></a></td>
+<td>Writes rotation at specified <em>index</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#FieldOutputBlock.GetPivot" title="FieldOutputBlock.GetPivot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.GetPivot(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Retrieve the rotational velocity (axe + magnitude) at specified <em>index</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#FieldOutputBlock.GetDeactivated" title="FieldOutputBlock.GetDeactivated"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.GetDeactivated(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Reads deactivated state at specified <em>index</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#FieldOutputBlock.SetDeactivated" title="FieldOutputBlock.SetDeactivated"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldOutputBlock.SetDeactivated(self,</span> <span class="pre">index,</span> <span class="pre">deact)</span></code></a></td>
+<td>Writes deactivated state at specified <em>index</em>.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="FieldOutputBlock.__init__">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a <a class="reference internal" href="#c4d.modules.mograph.FieldOutputBlock" title="c4d.modules.mograph.FieldOutputBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldOutputBlock</span></code></a> instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.modules.mograph.FieldOutputBlock" title="c4d.modules.mograph.FieldOutputBlock">c4d.modules.mograph.FieldOutputBlock</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The created <a class="reference internal" href="#c4d.modules.mograph.FieldOutputBlock" title="c4d.modules.mograph.FieldOutputBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldOutputBlock</span></code></a> instance.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.GetSubBlock">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">GetSubBlock</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.GetSubBlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a sub-section of the sampling arrays.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>offset</strong> (<em>int</em>) – The offset index to retrieve a sub-block starting at.</li>
+<li><strong>size</strong> (<em>int</em>) – The suggested size of the block. Note the function clamps the size against the maximum number of entries.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="#c4d.modules.mograph.FieldOutputBlock" title="c4d.modules.mograph.FieldOutputBlock">c4d.modules.mograph.FieldOutputBlock</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The requested sub-block.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.Reset">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">Reset</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.Reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets the <a class="reference internal" href="#c4d.modules.mograph.FieldOutputBlock" title="c4d.modules.mograph.FieldOutputBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldOutputBlock</span></code></a> instance to an empty state. All memory is deallocated.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.GetCount">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">GetCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.GetCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of elements in the sub-block.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The number of elements.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.GetFullCount">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">GetFullCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.GetFullCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of elements in the parent <a class="reference internal" href="../FieldOutput/index.html#c4d.modules.mograph.FieldOutput" title="c4d.modules.mograph.FieldOutput"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldOutput</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The full number of elements.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.GetOffset">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">GetOffset</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.GetOffset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the offset of the sub-block in the parent <a class="reference internal" href="../FieldOutput/index.html#c4d.modules.mograph.FieldOutput" title="c4d.modules.mograph.FieldOutput"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldOutput</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The offset.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.GetOwner">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">GetOwner</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.GetOwner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the parent or owner <a class="reference internal" href="../FieldOutput/index.html#c4d.modules.mograph.FieldOutput" title="c4d.modules.mograph.FieldOutput"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldOutput</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../FieldOutput/index.html#c4d.modules.mograph.FieldOutput" title="c4d.modules.mograph.FieldOutput">c4d.modules.mograph.FieldOutput</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The owner.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.IsValid">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">IsValid</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.IsValid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the <a class="reference internal" href="#c4d.modules.mograph.FieldOutputBlock" title="c4d.modules.mograph.FieldOutputBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldOutputBlock</span></code></a> instance allocations and sizes are valid.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">An empty <a class="reference internal" href="#c4d.modules.mograph.FieldOutputBlock" title="c4d.modules.mograph.FieldOutputBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldOutputBlock</span></code></a> instance is considered valid.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the <a class="reference internal" href="#c4d.modules.mograph.FieldOutputBlock" title="c4d.modules.mograph.FieldOutputBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldOutputBlock</span></code></a> instance is valid, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.IsPopulated">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">IsPopulated</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.IsPopulated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the <a class="reference internal" href="#c4d.modules.mograph.FieldOutputBlock" title="c4d.modules.mograph.FieldOutputBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldOutputBlock</span></code></a> is valid and non-empty.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the <a class="reference internal" href="#c4d.modules.mograph.FieldOutputBlock" title="c4d.modules.mograph.FieldOutputBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldOutputBlock</span></code></a> instance is populated, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.CopyFrom">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">CopyFrom</code><span class="sig-paren">(</span><em>self</em>, <em>src</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.CopyFrom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies from <a class="reference internal" href="#c4d.modules.mograph.FieldOutputBlock" title="c4d.modules.mograph.FieldOutputBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldOutputBlock</span></code></a> <em>src</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>src</strong> (<a class="reference internal" href="#c4d.modules.mograph.FieldOutputBlock" title="c4d.modules.mograph.FieldOutputBlock"><em>c4d.modules.mograph.FieldOutputBlock</em></a>) – The source <a class="reference internal" href="#c4d.modules.mograph.FieldOutputBlock" title="c4d.modules.mograph.FieldOutputBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldOutputBlock</span></code></a>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.CopyArrayContentFrom">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">CopyArrayContentFrom</code><span class="sig-paren">(</span><em>self</em>, <em>src</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.CopyArrayContentFrom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies from <em>src</em> array content.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">Size and flags are not affected by <a class="reference internal" href="#FieldOutputBlock.CopyArrayContentFrom" title="FieldOutputBlock.CopyArrayContentFrom"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CopyArrayContentFrom()</span></code></a>.</div>
+<div class="line">The destination <a class="reference internal" href="#c4d.modules.mograph.FieldOutputBlock" title="c4d.modules.mograph.FieldOutputBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldOutputBlock</span></code></a> must be big enough to accept the full content of <em>src</em>.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>src</strong> (<a class="reference internal" href="#c4d.modules.mograph.FieldOutputBlock" title="c4d.modules.mograph.FieldOutputBlock"><em>c4d.modules.mograph.FieldOutputBlock</em></a>) – The source <a class="reference internal" href="#c4d.modules.mograph.FieldOutputBlock" title="c4d.modules.mograph.FieldOutputBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldOutputBlock</span></code></a>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.ClearMemory">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">ClearMemory</code><span class="sig-paren">(</span><em>self</em>, <em>startIdx=0</em>, <em>count=GetCount</em>, <em>deactivatedOnly=False</em>, <em>deactivatedState=False</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.ClearMemory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets the sampling data to default values.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Values are reset to <cite>0</cite>, colors to <cite>1.0</cite>, direction to <cite>0</cite>, deactivated to <cite>0</cite>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>startIdx</strong> (<em>int</em>) – The index to start at.</li>
+<li><strong>count</strong> (<em>int</em>) – The number of array elements to reset to default value.</li>
+<li><strong>deactivatedOnly</strong> (<em>bool</em>) – <strong>True</strong> to clear deactivated only, otherwise <strong>False</strong>.</li>
+<li><strong>deactivatedState</strong> (<em>bool</em>) – The state the deactivated array should be cleared to.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.ClearDeactivated">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">ClearDeactivated</code><span class="sig-paren">(</span><em>self</em>, <em>state=False</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.ClearDeactivated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears the deactivated array.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>state</strong> (<em>bool</em>) – The state the deactivated array should be cleared to.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.CalculateCrc">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">CalculateCrc</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.CalculateCrc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates a Crc on all internal data.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Crc is not kept internally and is calculated from scratch on each <a class="reference internal" href="#FieldOutputBlock.CalculateCrc" title="FieldOutputBlock.CalculateCrc"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CalculateCrc()</span></code></a> call.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The calculated Crc.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.GetValue">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">GetValue</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.GetValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads value at specified <em>index</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index in the array.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If the <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#FieldOutputBlock.GetCount" title="FieldOutputBlock.GetCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetCount()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.SetValue">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">SetValue</code><span class="sig-paren">(</span><em>self</em>, <em>index</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.SetValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes value at specified <em>index</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<em>int</em>) – The index in the array.</li>
+<li><strong>value</strong> (<em>float</em>) – The value to set.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><strong>IndexError</strong> – If the <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#FieldOutputBlock.GetCount" title="FieldOutputBlock.GetCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetCount()</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.GetAlpha">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">GetAlpha</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.GetAlpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads alpha at specified <em>index</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index in the array.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If the <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#FieldOutputBlock.GetCount" title="FieldOutputBlock.GetCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetCount()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The alpha.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.SetAlpha">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">SetAlpha</code><span class="sig-paren">(</span><em>self</em>, <em>index</em>, <em>alpha</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.SetAlpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes alpha at specified <em>index</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<em>int</em>) – The index in the array.</li>
+<li><strong>alpha</strong> (<em>float</em>) – The alpha to set.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><strong>IndexError</strong> – If the <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#FieldOutputBlock.GetCount" title="FieldOutputBlock.GetCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetCount()</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.GetColor">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">GetColor</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.GetColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads color at specified <em>index</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index in the array.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If the <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#FieldOutputBlock.GetCount" title="FieldOutputBlock.GetCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetCount()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The color.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.SetColor">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">SetColor</code><span class="sig-paren">(</span><em>self</em>, <em>index</em>, <em>color</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.SetColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes color at specified <em>index</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<em>int</em>) – The index in the array.</li>
+<li><strong>color</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The color to set.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><strong>IndexError</strong> – If the <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#FieldOutputBlock.GetCount" title="FieldOutputBlock.GetCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetCount()</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.GetDirection">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">GetDirection</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.GetDirection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads direction at specified <em>index</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index in the array.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If the <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#FieldOutputBlock.GetCount" title="FieldOutputBlock.GetCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetCount()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The direction.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.SetDirection">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">SetDirection</code><span class="sig-paren">(</span><em>self</em>, <em>index</em>, <em>direction</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.SetDirection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes direction at specified <em>index</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<em>int</em>) – The index in the array.</li>
+<li><strong>direction</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The direction to set.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><strong>IndexError</strong> – If the <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#FieldOutputBlock.GetCount" title="FieldOutputBlock.GetCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetCount()</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.GetRotation">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">GetRotation</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.GetRotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads rotation at specified <em>index</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index in the array.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If the <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#FieldOutputBlock.GetCount" title="FieldOutputBlock.GetCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetCount()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The rotation.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.SetRotation">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">SetRotation</code><span class="sig-paren">(</span><em>self</em>, <em>index</em>, <em>rotation</em>, <em>pivot</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.SetRotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes rotation at specified <em>index</em>.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version R21.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<em>int</em>) – The index in the array.</li>
+<li><strong>rotation</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The rotation to set.</li>
+<li><strong>pivot</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The rotational velocity.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><strong>IndexError</strong> – If the <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#FieldOutputBlock.GetCount" title="FieldOutputBlock.GetCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetCount()</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.GetPivot">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">GetPivot</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.GetPivot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the rotational velocity (axe + magnitude) at specified <em>index</em>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R21.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index in the array.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If the <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#FieldOutputBlock.GetCount" title="FieldOutputBlock.GetCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetCount()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The rotational velocity (axe + magnitude).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.GetDeactivated">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">GetDeactivated</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.GetDeactivated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads deactivated state at specified <em>index</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index in the array.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If the <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#FieldOutputBlock.GetCount" title="FieldOutputBlock.GetCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetCount()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The deactivated state.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldOutputBlock.SetDeactivated">
+<code class="descclassname">FieldOutputBlock.</code><code class="descname">SetDeactivated</code><span class="sig-paren">(</span><em>self</em>, <em>index</em>, <em>deact</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldOutputBlock.SetDeactivated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes deactivated state at specified <em>index</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<em>int</em>) – The index in the array.</li>
+<li><strong>deact</strong> (<em>bool</em>) – The deactivated state to set.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><strong>IndexError</strong> – If the <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#FieldOutputBlock.GetCount" title="FieldOutputBlock.GetCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetCount()</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../motiontracker/index.html" title="c4d.modules.motiontracker"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../FieldOutput/index.html" title="c4d.modules.mograph.FieldOutput"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.modules.mograph</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

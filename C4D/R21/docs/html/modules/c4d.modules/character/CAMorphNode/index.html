@@ -1,0 +1,1138 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.character.CAMorphNode &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.modules.character.CAWeightTag" href="../CAWeightTag/index.html" />
+    <link rel="prev" title="c4d.modules.character.CAMorph" href="../CAMorph/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../CAWeightTag/index.html" title="c4d.modules.character.CAWeightTag"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../CAMorph/index.html" title="c4d.modules.character.CAMorph"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.modules.character</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-character-camorphnode">
+<h1>c4d.modules.character.CAMorphNode<a class="headerlink" href="#c4d-modules-character-camorphnode" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.character.CAMorphNode">
+<em class="property">class </em><code class="descclassname">c4d.modules.character.</code><code class="descname">CAMorphNode</code><a class="headerlink" href="#c4d.modules.character.CAMorphNode" title="Permalink to this definition">¶</a></dt>
+<dd><a class="reference internal image-reference" href="../../../../_images/character_association_pose.png"><img alt="../../../../_images/character_association_pose.png" src="../../../../_images/character_association_pose.png" style="width: 400px;" /></a>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#CAMorphNode.GetUp" title="CAMorphNode.GetUp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetUp(self)</span></code></a></td>
+<td>Retrieves the parent morph node.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAMorphNode.GetNext" title="CAMorphNode.GetNext"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetNext(self)</span></code></a></td>
+<td>Retrieves the next morph node.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAMorphNode.GetPrev" title="CAMorphNode.GetPrev"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetPrev(self)</span></code></a></td>
+<td>Retrieves the previous morph node.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAMorphNode.GetDown" title="CAMorphNode.GetDown"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetDown(self)</span></code></a></td>
+<td>Retrieves the first child of the morph node.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAMorphNode.GetLink" title="CAMorphNode.GetLink"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetLink(self,</span> <span class="pre">tag,</span> <span class="pre">morph,</span> <span class="pre">doc)</span></code></a></td>
+<td>Retrieves the object linked to the morph node.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAMorphNode.GetInfo" title="CAMorphNode.GetInfo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetInfo(self)</span></code></a></td>
+<td>Returns the information on what morph data is stored in the morph node.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAMorphNode.GetP" title="CAMorphNode.GetP"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetP(self)</span></code></a></td>
+<td>Returns the position of the morph node.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAMorphNode.GetS" title="CAMorphNode.GetS"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetS(self)</span></code></a></td>
+<td>Returns the scale of the morph node.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAMorphNode.GetR" title="CAMorphNode.GetR"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetR(self)</span></code></a></td>
+<td>Returns the rotation of the morph node.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAMorphNode.GetPointCount" title="CAMorphNode.GetPointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetPointCount(self)</span></code></a></td>
+<td>Returns the point count.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAMorphNode.SetPointCount" title="CAMorphNode.SetPointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.SetPointCount(self,</span> <span class="pre">cnt)</span></code></a></td>
+<td>Sets the point count.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAMorphNode.GetPoint" title="CAMorphNode.GetPoint"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetPoint(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Retrieves a point of the morph node.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAMorphNode.SetPoint" title="CAMorphNode.SetPoint"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.SetPoint(self,</span> <span class="pre">index,</span> <span class="pre">pnt)</span></code></a></td>
+<td>Sets a point of the morph node.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAMorphNode.GetTangentCount" title="CAMorphNode.GetTangentCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetTangentCount(self)</span></code></a></td>
+<td>Returns the tangent count.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAMorphNode.SetTangentCount" title="CAMorphNode.SetTangentCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.SetTangentCount(self,</span> <span class="pre">cnt)</span></code></a></td>
+<td>Sets the tangent count.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAMorphNode.GetTangent" title="CAMorphNode.GetTangent"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetTangent(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Retrieves a tangent of the morph node.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAMorphNode.SetTangent" title="CAMorphNode.SetTangent"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.SetTangent(self,</span> <span class="pre">index,</span> <span class="pre">v)</span></code></a></td>
+<td>Sets the tangent at <em>index</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAMorphNode.GetVertexMapTagCount" title="CAMorphNode.GetVertexMapTagCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetVertexMapTagCount(self)</span></code></a></td>
+<td>Retrieves the number of vertex map tags of the morph node.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAMorphNode.GetVertexMapCount" title="CAMorphNode.GetVertexMapCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetVertexMapCount(self,</span> <span class="pre">tindex)</span></code></a></td>
+<td>Retrieves the size of the vertex map at <em>tindex</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAMorphNode.SetVertexMapTagCount" title="CAMorphNode.SetVertexMapTagCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.SetVertexMapTagCount(self,</span> <span class="pre">tindex,</span> <span class="pre">cnt)</span></code></a></td>
+<td>Sets the size of the vertex map at <em>tindex</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAMorphNode.GetVertexMap" title="CAMorphNode.GetVertexMap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetVertexMap(self,</span> <span class="pre">tindex,</span> <span class="pre">index)</span></code></a></td>
+<td>Retrieves the vertex map value at <em>index</em> of the <em>tindex</em> vertex map.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAMorphNode.SetVertexMap" title="CAMorphNode.SetVertexMap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.SetVertexMap(self,</span> <span class="pre">tindex,</span> <span class="pre">index,</span> <span class="pre">v)</span></code></a></td>
+<td>Sets the vertex map value at <em>index</em> of the <em>tindex</em> vertex map.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAMorphNode.GetParamCount" title="CAMorphNode.GetParamCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetParamCount(self)</span></code></a></td>
+<td>Retrieves the parameter count.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAMorphNode.SetParamCount" title="CAMorphNode.SetParamCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.SetParamCount(self,</span> <span class="pre">cnt)</span></code></a></td>
+<td>Sets the parameter count.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAMorphNode.GetUVTagCount" title="CAMorphNode.GetUVTagCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetUVTagCount(self)</span></code></a></td>
+<td>Retrieves the UV tag count.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAMorphNode.GetUVCount" title="CAMorphNode.GetUVCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetUVCount(self,</span> <span class="pre">tindex)</span></code></a></td>
+<td>Retrieves the UV coordinates count of the UV tag at <em>tindex</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAMorphNode.GetUV" title="CAMorphNode.GetUV"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetUV(self,</span> <span class="pre">tindex,</span> <span class="pre">index)</span></code></a></td>
+<td>Retrieves the UV coordinate <em>index</em> of the <em>tindex</em> UV tag.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAMorphNode.SetUV" title="CAMorphNode.SetUV"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.SetUV(self,</span> <span class="pre">tindex,</span> <span class="pre">index,</span> <span class="pre">a,</span> <span class="pre">...)</span></code></a></td>
+<td>Sets the UV coordinate <em>index</em> of the <em>tindex</em> UV tag.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAMorphNode.SetUVCount" title="CAMorphNode.SetUVCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.SetUVCount(self,</span> <span class="pre">tindex,</span> <span class="pre">cnt)</span></code></a></td>
+<td>Sets the UV coordinates count of the UV tag at <em>tindex</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAMorphNode.GetParam" title="CAMorphNode.GetParam"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetParam(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Returns a parameter.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAMorphNode.SetParam" title="CAMorphNode.SetParam"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.SetParam(self,</span> <span class="pre">index,</span> <span class="pre">data,</span> <span class="pre">id)</span></code></a></td>
+<td>Sets a parameter.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAMorphNode.GetWeightMapTagCount" title="CAMorphNode.GetWeightMapTagCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetWeightMapTagCount(self)</span></code></a></td>
+<td>Retrieves the number of weight map tags.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAMorphNode.GetWeightMapJointCount" title="CAMorphNode.GetWeightMapJointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetWeightMapJointCount(self,</span> <span class="pre">tindex)</span></code></a></td>
+<td>Retrieves the joint count of the weight tag at <em>tindex</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAMorphNode.GetWeightMapCount" title="CAMorphNode.GetWeightMapCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetWeightMapCount(self,</span> <span class="pre">tindex,</span> <span class="pre">jindex)</span></code></a></td>
+<td>Retrieves the weights count of the joint at <em>jindex</em> of <em>tindex</em> weight tag.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAMorphNode.SetWeightMapCount" title="CAMorphNode.SetWeightMapCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.SetWeightMapCount(self,</span> <span class="pre">tindex,</span> <span class="pre">jindex,</span> <span class="pre">cnt)</span></code></a></td>
+<td>Sets the weights count of the joint at <em>jindex</em> of <em>tindex</em> weight tag.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAMorphNode.GetWeightMap" title="CAMorphNode.GetWeightMap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetWeightMap(self,</span> <span class="pre">tindex,</span> <span class="pre">jindex,</span> <span class="pre">index)</span></code></a></td>
+<td>Retrieves the weight at <em>index</em> of <em>jindex</em> joint and <em>tindex</em> weight tag.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAMorphNode.SetWeightMap" title="CAMorphNode.SetWeightMap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.SetWeightMap(self,</span> <span class="pre">tindex,</span> <span class="pre">jindex,</span> <span class="pre">...)</span></code></a></td>
+<td>Sets the weight at <em>index</em> of <em>jindex</em> joint and <em>tindex</em> weight tag.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAMorphNode.GetPSDReference" title="CAMorphNode.GetPSDReference"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorphNode.GetPSDReference(self)</span></code></a></td>
+<td>Retrieves the PSD data for a point pose holding the reference pose and providing multiple functions dedicated to PSD behavior.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="CAMorphNode.GetUp">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetUp</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the parent morph node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.modules.character.CAMorphNode" title="c4d.modules.character.CAMorphNode">c4d.modules.character.CAMorphNode</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The parent node.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.GetNext">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetNext</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetNext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the next morph node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.modules.character.CAMorphNode" title="c4d.modules.character.CAMorphNode">c4d.modules.character.CAMorphNode</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The next node.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.GetPrev">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetPrev</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetPrev" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the previous morph node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.modules.character.CAMorphNode" title="c4d.modules.character.CAMorphNode">c4d.modules.character.CAMorphNode</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The previous node.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.GetDown">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetDown</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetDown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the first child of the morph node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.modules.character.CAMorphNode" title="c4d.modules.character.CAMorphNode">c4d.modules.character.CAMorphNode</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The first child.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.GetLink">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetLink</code><span class="sig-paren">(</span><em>self</em>, <em>tag</em>, <em>morph</em>, <em>doc</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetLink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the object linked to the morph node.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.057.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>tag</strong> (<a class="reference internal" href="../CAPoseMorphTag/index.html#c4d.modules.character.CAPoseMorphTag" title="c4d.modules.character.CAPoseMorphTag"><em>c4d.modules.character.CAPoseMorphTag</em></a>) – The morph tag containing the morph data.</li>
+<li><strong>morph</strong> (<a class="reference internal" href="../CAMorph/index.html#c4d.modules.character.CAMorph" title="c4d.modules.character.CAMorph"><em>c4d.modules.character.CAMorph</em></a>) – The morph containing the morph node.</li>
+<li><strong>doc</strong> (<a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document containing the linked object.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D">c4d.BaseList2D</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The linked object if there is one, or <strong>None</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.GetInfo">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetInfo</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the information on what morph data is stored in the morph node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The data flags:<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>CAMORPH_DATA_FLAGS_P</em></td>
+<td>Position morphing.</td>
+</tr>
+<tr class="row-even"><td><em>CAMORPH_DATA_FLAGS_S</em></td>
+<td>Scale morphing.</td>
+</tr>
+<tr class="row-odd"><td><em>CAMORPH_DATA_FLAGS_R</em></td>
+<td>HPB rotation morphing.</td>
+</tr>
+<tr class="row-even"><td><em>CAMORPH_DATA_FLAGS_POINTS</em></td>
+<td>Points morphing.</td>
+</tr>
+<tr class="row-odd"><td><em>CAMORPH_DATA_FLAGS_TANGENTS</em></td>
+<td>Tangents morphing.</td>
+</tr>
+<tr class="row-even"><td><em>CAMORPH_DATA_FLAGS_VERTEXMAP</em></td>
+<td>Vertex map morphing.</td>
+</tr>
+<tr class="row-odd"><td><em>CAMORPH_DATA_FLAGS_WEIGHTMAPS</em></td>
+<td>Joint weights morphing.</td>
+</tr>
+<tr class="row-even"><td><em>CAMORPH_DATA_FLAGS_PARAMS</em></td>
+<td>Parameter morphing.</td>
+</tr>
+<tr class="row-odd"><td><em>CAMORPH_DATA_FLAGS_USERDATA</em></td>
+<td>User data morphing.</td>
+</tr>
+<tr class="row-even"><td><em>CAMORPH_DATA_FLAGS_UV</em></td>
+<td>UV coordinate morphing.</td>
+</tr>
+<tr class="row-odd"><td><em>CAMORPH_DATA_FLAGS_ASTAG</em></td>
+<td>Set to store the current state of an object into the morph.
+Stores the morph data as set by the user in the morph tag, otherwise it would mess up the internal data.</td>
+</tr>
+<tr class="row-even"><td><em>CAMORPH_DATA_FLAGS_ALL</em></td>
+<td>All data morphing.</td>
+</tr>
+<tr class="row-odd"><td><em>CAMORPH_DATA_FLAGS_NONE</em></td>
+<td>None.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.GetP">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetP</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the position of the morph node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The position.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.GetS">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetS</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the scale of the morph node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The scale.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.GetR">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetR</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the rotation of the morph node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The rotation.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.GetPointCount">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetPointCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetPointCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the point count.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../CAMorph/index.html#CAMorph.SetMode" title="CAMorph.SetMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorph.SetMode()</span></code></a> to retrieve all data.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The point count.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.SetPointCount">
+<code class="descclassname">CAMorphNode.</code><code class="descname">SetPointCount</code><span class="sig-paren">(</span><em>self</em>, <em>cnt</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.SetPointCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the point count.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cnt</strong> (<em>int</em>) – The point count to be set.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.GetPoint">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetPoint</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a point of the morph node.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../CAMorph/index.html#CAMorph.SetMode" title="CAMorph.SetMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorph.SetMode()</span></code></a> to retrieve all data.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index of the point to get.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#CAMorphNode.GetPointCount" title="CAMorphNode.GetPointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPointCount()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The point at <em>index</em>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.SetPoint">
+<code class="descclassname">CAMorphNode.</code><code class="descname">SetPoint</code><span class="sig-paren">(</span><em>self</em>, <em>index</em>, <em>pnt</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.SetPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a point of the morph node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<em>int</em>) – The index of the point.</li>
+<li><strong>pnt</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The point to be set.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><strong>IndexError</strong> – If <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#CAMorphNode.GetPointCount" title="CAMorphNode.GetPointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPointCount()</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.GetTangentCount">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetTangentCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetTangentCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the tangent count.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../CAMorph/index.html#CAMorph.SetMode" title="CAMorph.SetMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorph.SetMode()</span></code></a> to retrieve all data.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The tangent count.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.SetTangentCount">
+<code class="descclassname">CAMorphNode.</code><code class="descname">SetTangentCount</code><span class="sig-paren">(</span><em>self</em>, <em>cnt</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.SetTangentCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the tangent count.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cnt</strong> (<em>int</em>) – The tangent count to be set.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.GetTangent">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetTangent</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetTangent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a tangent of the morph node.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../CAMorph/index.html#CAMorph.SetMode" title="CAMorph.SetMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorph.SetMode()</span></code></a> to retrieve all data.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index of the tangent to get.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#CAMorphNode.GetTangentCount" title="CAMorphNode.GetTangentCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetTangentCount()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The tangent.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.SetTangent">
+<code class="descclassname">CAMorphNode.</code><code class="descname">SetTangent</code><span class="sig-paren">(</span><em>self</em>, <em>index</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.SetTangent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the tangent at <em>index</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<em>int</em>) – The tangent index.</li>
+<li><strong>v</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The tangent to be set.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><strong>IndexError</strong> – If <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#CAMorphNode.GetTangentCount" title="CAMorphNode.GetTangentCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetTangentCount()</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.GetVertexMapTagCount">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetVertexMapTagCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetVertexMapTagCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the number of vertex map tags of the morph node.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../CAMorph/index.html#CAMorph.SetMode" title="CAMorph.SetMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorph.SetMode()</span></code></a> to retrieve all data.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The vertex map tag count.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.GetVertexMapCount">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetVertexMapCount</code><span class="sig-paren">(</span><em>self</em>, <em>tindex</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetVertexMapCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the size of the vertex map at <em>tindex</em>.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../CAMorph/index.html#CAMorph.SetMode" title="CAMorph.SetMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorph.SetMode()</span></code></a> to retrieve all data.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tindex</strong> (<em>int</em>) – The vertex map tag index.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If <em>tindex</em> is out of range : <em>0&lt;=tindex&lt;</em><a class="reference internal" href="#CAMorphNode.GetVertexMapTagCount" title="CAMorphNode.GetVertexMapTagCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetVertexMapTagCount()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The vertex map count.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.SetVertexMapTagCount">
+<code class="descclassname">CAMorphNode.</code><code class="descname">SetVertexMapTagCount</code><span class="sig-paren">(</span><em>self</em>, <em>tindex</em>, <em>cnt</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.SetVertexMapTagCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the size of the vertex map at <em>tindex</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>tindex</strong> (<em>int</em>) – The vertex map tag index.</li>
+<li><strong>cnt</strong> (<em>int</em>) – The count.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><strong>IndexError</strong> – If <em>tindex</em> is out of range : <em>0&lt;=tindex&lt;</em><a class="reference internal" href="#CAMorphNode.GetVertexMapTagCount" title="CAMorphNode.GetVertexMapTagCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetVertexMapTagCount()</span></code></a>.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if successful, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.GetVertexMap">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetVertexMap</code><span class="sig-paren">(</span><em>self</em>, <em>tindex</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetVertexMap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the vertex map value at <em>index</em> of the <em>tindex</em> vertex map.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../CAMorph/index.html#CAMorph.SetMode" title="CAMorph.SetMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorph.SetMode()</span></code></a> to retrieve all data.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>tindex</strong> (<em>int</em>) – The vertex map tag index.</li>
+<li><strong>index</strong> (<em>int</em>) – The vertex map index.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><strong>IndexError</strong> – If <em>tindex</em> is out of range : <em>0&lt;=tindex&lt;</em><a class="reference internal" href="#CAMorphNode.GetVertexMapTagCount" title="CAMorphNode.GetVertexMapTagCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetVertexMapTagCount()</span></code></a>.</li>
+<li><strong>IndexError</strong> – If <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#CAMorphNode.GetVertexMapCount" title="CAMorphNode.GetVertexMapCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetVertexMapCount()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">float</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The vertex map value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.SetVertexMap">
+<code class="descclassname">CAMorphNode.</code><code class="descname">SetVertexMap</code><span class="sig-paren">(</span><em>self</em>, <em>tindex</em>, <em>index</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.SetVertexMap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the vertex map value at <em>index</em> of the <em>tindex</em> vertex map.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>tindex</strong> (<em>int</em>) – The vertex map tag index.</li>
+<li><strong>index</strong> (<em>int</em>) – The vertex map index.</li>
+<li><strong>v</strong> (<em>float</em>) – The vertex map value to be set.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><strong>IndexError</strong> – If <em>tindex</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#CAMorphNode.GetVertexMapTagCount" title="CAMorphNode.GetVertexMapTagCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetVertexMapTagCount()</span></code></a>.</li>
+<li><strong>IndexError</strong> – If <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#CAMorphNode.GetVertexMapCount" title="CAMorphNode.GetVertexMapCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetVertexMapCount()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.GetParamCount">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetParamCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetParamCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the parameter count.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../CAMorph/index.html#CAMorph.SetMode" title="CAMorph.SetMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorph.SetMode()</span></code></a> to retrieve all data.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The parameter count.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.SetParamCount">
+<code class="descclassname">CAMorphNode.</code><code class="descname">SetParamCount</code><span class="sig-paren">(</span><em>self</em>, <em>cnt</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.SetParamCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the parameter count.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cnt</strong> (<em>int</em>) – The parameter count to be set.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.GetUVTagCount">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetUVTagCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetUVTagCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the UV tag count.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../CAMorph/index.html#CAMorph.SetMode" title="CAMorph.SetMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorph.SetMode()</span></code></a> to retrieve all data.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The UV tag count.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.GetUVCount">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetUVCount</code><span class="sig-paren">(</span><em>self</em>, <em>tindex</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetUVCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the UV coordinates count of the UV tag at <em>tindex</em>.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../CAMorph/index.html#CAMorph.SetMode" title="CAMorph.SetMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorph.SetMode()</span></code></a> to retrieve all data.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tindex</strong> (<em>int</em>) – The UV tag index.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If <em>tindex</em> is out of range : <em>0&lt;=tindex&lt;</em><a class="reference internal" href="#CAMorphNode.GetUVTagCount" title="CAMorphNode.GetUVTagCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetUVTagCount()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The UV coordinates count.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.GetUV">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetUV</code><span class="sig-paren">(</span><em>self</em>, <em>tindex</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetUV" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the UV coordinate <em>index</em> of the <em>tindex</em> UV tag.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../CAMorph/index.html#CAMorph.SetMode" title="CAMorph.SetMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorph.SetMode()</span></code></a> to retrieve all data.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>tindex</strong> (<em>int</em>) – The UV tag index.</li>
+<li><strong>index</strong> (<em>int</em>) – The UV coordinates index.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><strong>IndexError</strong> – If <em>tindex</em> is out of range : <em>0&lt;=tindex&lt;</em><a class="reference internal" href="#CAMorphNode.GetUVTagCount" title="CAMorphNode.GetUVTagCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetUVTagCount()</span></code></a>.</li>
+<li><strong>IndexError</strong> – If <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#CAMorphNode.GetUVCount" title="CAMorphNode.GetUVCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetUVCount()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">tuple(<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>, <a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>, <a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>, <a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>)</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The UV structure.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.SetUV">
+<code class="descclassname">CAMorphNode.</code><code class="descname">SetUV</code><span class="sig-paren">(</span><em>self</em>, <em>tindex</em>, <em>index</em>, <em>a</em>, <em>b</em>, <em>c</em>, <em>d</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.SetUV" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the UV coordinate <em>index</em> of the <em>tindex</em> UV tag.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>tindex</strong> (<em>int</em>) – The UV tag index.</li>
+<li><strong>index</strong> (<em>int</em>) – The UV coordinates index.</li>
+<li><strong>a</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The UVW coordinate for the first point.</li>
+<li><strong>b</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The UVW coordinate for the second point.</li>
+<li><strong>c</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The UVW coordinate for the third point.</li>
+<li><strong>d</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The UVW coordinate for the fourth point.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><strong>IndexError</strong> – If <em>tindex</em> is out of range : <em>0&lt;=tindex&lt;</em><a class="reference internal" href="#CAMorphNode.GetUVTagCount" title="CAMorphNode.GetUVTagCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetUVTagCount()</span></code></a>.</li>
+<li><strong>IndexError</strong> – If <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#CAMorphNode.GetUVCount" title="CAMorphNode.GetUVCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetUVCount()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.SetUVCount">
+<code class="descclassname">CAMorphNode.</code><code class="descname">SetUVCount</code><span class="sig-paren">(</span><em>self</em>, <em>tindex</em>, <em>cnt</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.SetUVCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the UV coordinates count of the UV tag at <em>tindex</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>tindex</strong> (<em>int</em>) – The UV tag index.</li>
+<li><strong>cnt</strong> (<em>int</em>) – The new UV coordinates count.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><strong>IndexError</strong> – If <em>tindex</em> is out of range : <em>0&lt;=tindex&lt;</em><a class="reference internal" href="#CAMorphNode.GetUVTagCount" title="CAMorphNode.GetUVTagCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetUVTagCount()</span></code></a>.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if successful, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.GetParam">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetParam</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetParam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a parameter.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../CAMorph/index.html#CAMorph.SetMode" title="CAMorph.SetMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorph.SetMode()</span></code></a> to retrieve all data.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The parameter index.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#CAMorphNode.GetParamCount" title="CAMorphNode.GetParamCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetParamCount()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">dict{<strong>data</strong>: any, <strong>id</strong>: <a class="reference internal" href="../../../c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><code class="xref py py-class docutils literal notranslate"><span class="pre">DescID</span></code></a>}</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The parameter.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.SetParam">
+<code class="descclassname">CAMorphNode.</code><code class="descname">SetParam</code><span class="sig-paren">(</span><em>self</em>, <em>index</em>, <em>data</em>, <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.SetParam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a parameter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<em>int</em>) – The parameter index.</li>
+<li><strong>data</strong> (<em>any</em>) – The data to be set.</li>
+<li><strong>id</strong> (<a class="reference internal" href="../../../c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><em>c4d.DescID</em></a>) – The id.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><strong>IndexError</strong> – If <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#CAMorphNode.GetParamCount" title="CAMorphNode.GetParamCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetParamCount()</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.GetWeightMapTagCount">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetWeightMapTagCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetWeightMapTagCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the number of weight map tags.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../CAMorph/index.html#CAMorph.SetMode" title="CAMorph.SetMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorph.SetMode()</span></code></a> to retrieve all data.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The weight map tag count.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.GetWeightMapJointCount">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetWeightMapJointCount</code><span class="sig-paren">(</span><em>self</em>, <em>tindex</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetWeightMapJointCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the joint count of the weight tag at <em>tindex</em>.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../CAMorph/index.html#CAMorph.SetMode" title="CAMorph.SetMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorph.SetMode()</span></code></a> to retrieve all data.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tindex</strong> (<em>int.</em>) – The weight tag index.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If <em>tindex</em> is out of range : <em>0&lt;=tindex&lt;</em><a class="reference internal" href="#CAMorphNode.GetWeightMapTagCount" title="CAMorphNode.GetWeightMapTagCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetWeightMapTagCount()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The weight map joint count.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.GetWeightMapCount">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetWeightMapCount</code><span class="sig-paren">(</span><em>self</em>, <em>tindex</em>, <em>jindex</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetWeightMapCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the weights count of the joint at <em>jindex</em> of <em>tindex</em> weight tag.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../CAMorph/index.html#CAMorph.SetMode" title="CAMorph.SetMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorph.SetMode()</span></code></a> to retrieve all data.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>tindex</strong> (<em>int.</em>) – The weight tag index.</li>
+<li><strong>jindex</strong> (<em>int</em>) – The joint index.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><strong>IndexError</strong> – If <em>tindex</em> is out of range : <em>0&lt;=tindex&lt;</em><a class="reference internal" href="#CAMorphNode.GetWeightMapTagCount" title="CAMorphNode.GetWeightMapTagCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetWeightMapTagCount()</span></code></a>.</li>
+<li><strong>IndexError</strong> – If <em>jindex</em> is out of range : <em>0&lt;=jindex&lt;</em><a class="reference internal" href="#CAMorphNode.GetWeightMapJointCount" title="CAMorphNode.GetWeightMapJointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetWeightMapJointCount()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The weight count of the specified joint.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.SetWeightMapCount">
+<code class="descclassname">CAMorphNode.</code><code class="descname">SetWeightMapCount</code><span class="sig-paren">(</span><em>self</em>, <em>tindex</em>, <em>jindex</em>, <em>cnt</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.SetWeightMapCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the weights count of the joint at <em>jindex</em> of <em>tindex</em> weight tag.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>tindex</strong> (<em>int.</em>) – The weight tag index.</li>
+<li><strong>jindex</strong> (<em>int</em>) – The joint index.</li>
+<li><strong>cnt</strong> (<em>int</em>) – The new weight count.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><strong>IndexError</strong> – If <em>tindex</em> is out of range : <em>0&lt;=tindex&lt;</em><a class="reference internal" href="#CAMorphNode.GetWeightMapTagCount" title="CAMorphNode.GetWeightMapTagCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetWeightMapTagCount()</span></code></a>.</li>
+<li><strong>IndexError</strong> – If <em>jindex</em> is out of range : <em>0&lt;=jindex&lt;</em><a class="reference internal" href="#CAMorphNode.GetWeightMapJointCount" title="CAMorphNode.GetWeightMapJointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetWeightMapJointCount()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if successful, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.GetWeightMap">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetWeightMap</code><span class="sig-paren">(</span><em>self</em>, <em>tindex</em>, <em>jindex</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetWeightMap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the weight at <em>index</em> of <em>jindex</em> joint and <em>tindex</em> weight tag.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../CAMorph/index.html#CAMorph.SetMode" title="CAMorph.SetMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorph.SetMode()</span></code></a> to retrieve all data.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>tindex</strong> (<em>int.</em>) – The weight tag index.</li>
+<li><strong>jindex</strong> (<em>int</em>) – The joint index.</li>
+<li><strong>index</strong> (<em>int</em>) – The weight index.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><strong>IndexError</strong> – If <em>tindex</em> is out of range : <em>0&lt;=tindex&lt;</em><a class="reference internal" href="#CAMorphNode.GetWeightMapTagCount" title="CAMorphNode.GetWeightMapTagCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetWeightMapTagCount()</span></code></a>.</li>
+<li><strong>IndexError</strong> – If <em>jindex</em> is out of range : <em>0&lt;=jindex&lt;</em><a class="reference internal" href="#CAMorphNode.GetWeightMapJointCount" title="CAMorphNode.GetWeightMapJointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetWeightMapJointCount()</span></code></a>.</li>
+<li><strong>IndexError</strong> – If <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#CAMorphNode.GetWeightMapCount" title="CAMorphNode.GetWeightMapCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetWeightMapCount()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">float</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The weight value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.SetWeightMap">
+<code class="descclassname">CAMorphNode.</code><code class="descname">SetWeightMap</code><span class="sig-paren">(</span><em>self</em>, <em>tindex</em>, <em>jindex</em>, <em>index</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.SetWeightMap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the weight at <em>index</em> of <em>jindex</em> joint and <em>tindex</em> weight tag.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>tindex</strong> (<em>int.</em>) – The weight tag index.</li>
+<li><strong>jindex</strong> (<em>int</em>) – The joint index.</li>
+<li><strong>index</strong> (<em>int</em>) – The weight index.</li>
+<li><strong>v</strong> (<em>float</em>) – The new weight value.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><strong>IndexError</strong> – If <em>tindex</em> is out of range : <em>0&lt;=tindex&lt;</em><a class="reference internal" href="#CAMorphNode.GetWeightMapTagCount" title="CAMorphNode.GetWeightMapTagCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetWeightMapTagCount()</span></code></a>.</li>
+<li><strong>IndexError</strong> – If <em>jindex</em> is out of range : <em>0&lt;=jindex&lt;</em><a class="reference internal" href="#CAMorphNode.GetWeightMapJointCount" title="CAMorphNode.GetWeightMapJointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetWeightMapJointCount()</span></code></a>.</li>
+<li><strong>IndexError</strong> – If <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#CAMorphNode.GetWeightMapCount" title="CAMorphNode.GetWeightMapCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetWeightMapCount()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAMorphNode.GetPSDReference">
+<code class="descclassname">CAMorphNode.</code><code class="descname">GetPSDReference</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAMorphNode.GetPSDReference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the PSD data for a point pose holding the reference pose and providing multiple functions dedicated to PSD behavior.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../CAMorph/index.html#CAMorph.SetMode" title="CAMorph.SetMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAMorph.SetMode()</span></code></a> to retrieve all data.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../CAReferencePSD/index.html#c4d.modules.character.CAReferencePSD" title="c4d.modules.character.CAReferencePSD">c4d.modules.character.CAReferencePSD</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The PSD referential for the morph node.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../CAWeightTag/index.html" title="c4d.modules.character.CAWeightTag"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../CAMorph/index.html" title="c4d.modules.character.CAMorph"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.modules.character</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

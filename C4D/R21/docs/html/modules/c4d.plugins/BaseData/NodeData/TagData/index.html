@@ -1,0 +1,337 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.plugins.TagData &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="c4d.plugins.SculptBrushToolData" href="../../SculptBrushToolData/index.html" />
+    <link rel="prev" title="c4d.plugins.ShaderData" href="../ShaderData/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../SculptBrushToolData/index.html" title="c4d.plugins.SculptBrushToolData"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../ShaderData/index.html" title="c4d.plugins.ShaderData"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../index.html" >c4d.plugins</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../index.html" >c4d.plugins.BaseData</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../index.html" accesskey="U">c4d.plugins.NodeData</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-plugins-tagdata">
+<h1>c4d.plugins.TagData<a class="headerlink" href="#c4d-plugins-tagdata" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.plugins.TagData">
+<em class="property">class </em><code class="descclassname">c4d.plugins.</code><code class="descname">TagData</code><a class="headerlink" href="#c4d.plugins.TagData" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">A data class for tag plugins.</div>
+<div class="line">Use <a class="reference internal" href="../../../index.html#c4d.plugins.RegisterTagPlugin" title="c4d.plugins.RegisterTagPlugin"><code class="xref py py-func docutils literal notranslate"><span class="pre">RegisterTagPlugin()</span></code></a> to register the plugin.</div>
+<div class="line">Registered tag plugins appear in the New Tag menu and can be attached to objects.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Before you start writing your own TagData plugin, you should read <a class="reference internal" href="../../../../../manuals/3d_concept/scene_elements/nodedata_management.html#nodedata-management"><span class="std std-ref">NodeData Management</span></a> and <a class="reference internal" href="../../../../../misc/writingdelta.html"><span class="doc">Writing delta time plugins</span></a> before.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference external" href="https://github.com/PluginCafe/cinema4d_py_sdk_extended/tree/master/plugins/py-look_at_camera_r13/py-look_at_camera_r13.pyp">Py-LookAtCamera</a> plugin example.</p>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#TagData.Draw" title="TagData.Draw"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TagData.Draw(self,</span> <span class="pre">tag,</span> <span class="pre">op,</span> <span class="pre">bd,</span> <span class="pre">bh)</span></code></a></td>
+<td>Override - Called when the display is updated for you to display some visual element of your tag in the 3D view.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TagData.Execute" title="TagData.Execute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TagData.Execute(self,</span> <span class="pre">tag,</span> <span class="pre">doc,</span> <span class="pre">op,</span> <span class="pre">bt,</span> <span class="pre">...)</span></code></a></td>
+<td>Override - Called at the point when the tag is executed.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TagData.AddToExecution" title="TagData.AddToExecution"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TagData.AddToExecution(self,</span> <span class="pre">tag,</span> <span class="pre">list)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Override - By default this function returns <strong>False</strong>.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../index.html#c4d.plugins.NodeData" title="c4d.plugins.NodeData"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.plugins.NodeData</span></code></a></li>
+</ul>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="TagData.Draw">
+<code class="descclassname">TagData.</code><code class="descname">Draw</code><span class="sig-paren">(</span><em>self</em>, <em>tag</em>, <em>op</em>, <em>bd</em>, <em>bh</em><span class="sig-paren">)</span><a class="headerlink" href="#TagData.Draw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override - Called when the display is updated for you to display some visual element of your tag in the 3D view.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">This function is called in a thread context.</div>
+<div class="line">Please see the <a class="reference internal" href="../../../../../manuals/application_development/threading.html#threading-information"><span class="std std-ref">important information</span></a> about threading.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>tag</strong> (<a class="reference internal" href="../../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseTag/index.html#c4d.BaseTag" title="c4d.BaseTag"><em>c4d.BaseTag</em></a>) – The object which is established with this instance.</li>
+<li><strong>op</strong> (<a class="reference internal" href="../../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><em>c4d.BaseObject</em></a>) – The host object of the tag.</li>
+<li><strong>bd</strong> (<a class="reference internal" href="../../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#c4d.BaseDraw" title="c4d.BaseDraw"><em>c4d.BaseDraw</em></a>) – The editor’s view.</li>
+<li><strong>bh</strong> (<a class="reference internal" href="../../../BaseDrawHelp/index.html#c4d.plugins.BaseDrawHelp" title="c4d.plugins.BaseDrawHelp"><em>c4d.plugins.BaseDrawHelp</em></a>) – An helper class.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Success of drawing into the editor view.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TagData.Execute">
+<code class="descclassname">TagData.</code><code class="descname">Execute</code><span class="sig-paren">(</span><em>self</em>, <em>tag</em>, <em>doc</em>, <em>op</em>, <em>bt</em>, <em>priority</em>, <em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#TagData.Execute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override - Called at the point when the tag is executed.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">This function is called in a thread context.</div>
+<div class="line">Please see the <a class="reference internal" href="../../../../../manuals/application_development/threading.html#threading-information"><span class="std std-ref">important information</span></a> about threading.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>tag</strong> (<a class="reference internal" href="../../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseTag/index.html#c4d.BaseTag" title="c4d.BaseTag"><em>c4d.BaseTag</em></a>) – The established <a class="reference internal" href="../../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseTag/index.html#c4d.BaseTag" title="c4d.BaseTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTag</span></code></a>.</li>
+<li><strong>doc</strong> (<a class="reference internal" href="../../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The host document of the tag’s object.</li>
+<li><strong>op</strong> (<a class="reference internal" href="../../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><em>c4d.BaseObject</em></a>) – The host object of the tag.</li>
+<li><strong>bt</strong> (<a class="reference internal" href="../../../../c4d.threading/BaseThread/index.html#c4d.threading.BaseThread" title="c4d.threading.BaseThread"><em>c4d.threading.BaseThread</em></a>) – The calling thread.</li>
+<li><strong>priority</strong> (<em>int</em>) – <p>One of the following flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="26%" />
+<col width="74%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>EXECUTIONPRIORITY_INITIAL</em></td>
+<td>Initial.</td>
+</tr>
+<tr class="row-even"><td><em>EXECUTIONPRIORITY_ANIMATION</em></td>
+<td>Animation.</td>
+</tr>
+<tr class="row-odd"><td><em>EXECUTIONPRIORITY_ANIMATION_NLA</em></td>
+<td>NLA.</td>
+</tr>
+<tr class="row-even"><td><em>EXECUTIONPRIORITY_EXPRESSION</em></td>
+<td>Expression.</td>
+</tr>
+<tr class="row-odd"><td><em>EXECUTIONPRIORITY_DYNAMICS</em></td>
+<td>Dynamics.</td>
+</tr>
+<tr class="row-even"><td><em>EXECUTIONPRIORITY_GENERATOR</em></td>
+<td>Generators.</td>
+</tr>
+<tr class="row-odd"><td><em>EXECUTIONPRIORITY_FORCE</em></td>
+<td>Highest priority that will ensure execution even if the execution pipeline is cancelled before.
+Only use this to e.g. release locks or do super-fast non-blocking operations.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>flags</strong> (<em>int</em>) – <p>A combination of the following flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="66%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>EXECUTIONFLAGS_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>EXECUTIONFLAGS_ANIMATION</em></td>
+<td>Animation is calculated.</td>
+</tr>
+<tr class="row-odd"><td><em>EXECUTIONFLAGS_EXPRESSION</em></td>
+<td>Expressions are calculated.</td>
+</tr>
+<tr class="row-even"><td><em>EXECUTIONFLAGS_CACHEBUILDING</em></td>
+<td>Cache building is done.</td>
+</tr>
+<tr class="row-odd"><td><em>EXECUTIONFLAGS_CAMERAONLY</em></td>
+<td>Only camera dependent expressions shall be executed.</td>
+</tr>
+<tr class="row-even"><td><em>EXECUTIONFLAGS_INDRAG</em></td>
+<td>Pipeline is done within scrubbing.</td>
+</tr>
+<tr class="row-odd"><td><em>EXECUTIONFLAGS_INMOVE</em></td>
+<td>Pipeline is done within moving.</td>
+</tr>
+<tr class="row-even"><td><em>EXECUTIONFLAGS_RENDER</em></td>
+<td>The external renderer (Picture Viewer) is running.</td>
+</tr>
+<tr class="row-odd"><td><em>EXECUTIONFLAGS_ALLOW_PRIORITYSHIFT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R18: </span>Allow to shift the priority with the priority shift tag. Private.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>One of the following results:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="62%" />
+<col width="38%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>EXECUTIONRESULT_OK</em></td>
+<td>OK.</td>
+</tr>
+<tr class="row-even"><td><em>EXECUTIONRESULT_USERBREAK</em></td>
+<td>User break.</td>
+</tr>
+<tr class="row-odd"><td><em>EXECUTIONRESULT_MEMORYERROR</em></td>
+<td>Not enough memory.</td>
+</tr>
+</tbody>
+</table>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TagData.AddToExecution">
+<code class="descclassname">TagData.</code><code class="descname">AddToExecution</code><span class="sig-paren">(</span><em>self</em>, <em>tag</em>, <em>list</em><span class="sig-paren">)</span><a class="headerlink" href="#TagData.AddToExecution" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Override - By default this function returns <strong>False</strong>.</div>
+<div class="line">Then Cinema 4D will call <a class="reference internal" href="#TagData.Execute" title="TagData.Execute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Execute()</span></code></a> at the priority specified by the user in the <em>EXPRESSION_PRIORITY</em> parameter of the container.</div>
+</div>
+<p>If you override this function and return <strong>True</strong>, then you can insert your own points of execution in the list by calling for example.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">EXECUTIONPRIORITY_ANIMATION</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="nb">list</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">EXECUTIONPRIORITY_GENERATOR</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Cinema 4D will then call <a class="reference internal" href="#TagData.Execute" title="TagData.Execute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Execute()</span></code></a> two times.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>tag</strong> (<a class="reference internal" href="../../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseTag/index.html#c4d.BaseTag" title="c4d.BaseTag"><em>c4d.BaseTag</em></a>) – The established <a class="reference internal" href="../../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseTag/index.html#c4d.BaseTag" title="c4d.BaseTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTag</span></code></a>.</li>
+<li><strong>list</strong> (<a class="reference internal" href="../../../PriorityList/index.html#c4d.plugins.PriorityList" title="c4d.plugins.PriorityList"><em>c4d.plugins.PriorityList</em></a>) – The priority list to add your tag’s execution points to.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if you override this function and have added stuff to list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../SculptBrushToolData/index.html" title="c4d.plugins.SculptBrushToolData"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../ShaderData/index.html" title="c4d.plugins.ShaderData"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../index.html" >c4d.plugins</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../index.html" >c4d.plugins.BaseData</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../index.html" >c4d.plugins.NodeData</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

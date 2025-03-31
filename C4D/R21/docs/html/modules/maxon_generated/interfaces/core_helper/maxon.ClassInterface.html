@@ -1,0 +1,369 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>maxon.ClassInterface &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="maxon.ClassInterface.R" href="maxon.ClassInterface.R.html" />
+    <link rel="prev" title="maxon.UrlInterface" href="../core/maxon.UrlInterface.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="maxon.ClassInterface.R.html" title="maxon.ClassInterface.R"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../core/maxon.UrlInterface.html" title="maxon.UrlInterface"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../maxon/interfaces.html" accesskey="U">MAXON API - Interfaces</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="maxon-classinterface">
+<h1>maxon.ClassInterface<a class="headerlink" href="#maxon-classinterface" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-maxon.ClassInterface">
+<span id="description"></span><h2>Description<a class="headerlink" href="#module-maxon.ClassInterface" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">A <a class="reference internal" href="#module-maxon.ClassInterface" title="maxon.ClassInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.ClassInterface</span></code></a> object represents an object class at runtime.</div>
+<div class="line">Such an object class can be published by <code class="xref py py-func docutils literal notranslate"><span class="pre">MAXON_DECLARATION()</span></code>, and it is then typically defined by
+<code class="xref py py-func docutils literal notranslate"><span class="pre">MAXON_COMPONENT_CLASS_REGISTER()</span></code>.</div>
+<div class="line"><br /></div>
+<div class="line">A class consists of several components (see ComponentDescriptor), each of which may implement several virtual
+interfaces (declared by <code class="xref py py-func docutils literal notranslate"><span class="pre">ComponentDescriptor()</span></code>).</div>
+<div class="line">The class itself then implements all interfaces of all of its components.</div>
+<div class="line">Information about components and interfaces can be obtained from the ClassInfo object returned by
+<code class="xref py py-func docutils literal notranslate"><span class="pre">ObjectInterface.GetClassInfo()</span></code>.</div>
+<div class="line"><br /></div>
+<div class="line">After allocation of a class, you have to add the components of which it shall consist via
+<code class="xref py py-func docutils literal notranslate"><span class="pre">ClassInterface.AddComponent()</span></code> or <code class="xref py py-func docutils literal notranslate"><span class="pre">ClassInterface.AddComponents()</span></code>.</div>
+<div class="line">Afterwards, you can invoke <code class="xref py py-func docutils literal notranslate"><span class="pre">ClassInterface.Finalize()</span></code> to make the class ready for use.</div>
+<div class="line">From then on, only const methods may be invoked on a class.</div>
+<div class="line">If you use <code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.GenericClass</span></code> or <a class="reference internal" href="../../references/core_helper/maxon.Class.html#module-maxon.Class" title="maxon.Class"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Class</span></code></a> to access a class,
+this is automatically guaranteed as those are const references.</div>
+<div class="line">If you don’t invoke <code class="xref py py-func docutils literal notranslate"><span class="pre">ClassInterface.Finalize()</span></code>,
+this will be done implicitly when the first instance of the class is allocated.</div>
+<div class="line"><br /></div>
+<div class="line">The <code class="xref py py-func docutils literal notranslate"><span class="pre">MAXON_COMPONENT_CLASS_REGISTER()</span></code> and <code class="xref py py-func docutils literal notranslate"><span class="pre">MAXON_COMPONENT_OBJECT_REGISTER()</span></code> macros greatly
+simplify the setup of a class.</div>
+<div class="line"><br /></div>
+<div class="line"><a class="reference internal" href="#module-maxon.ClassInterface" title="maxon.ClassInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.ClassInterface</span></code></a> objects are automatically registered in the <a class="reference internal" href="../../registries/maxon.Classes.html#module-maxon.Classes" title="maxon.Classes"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Classes</span></code></a> registry.</div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<div class="last line-block">
+<div class="line">This function is only there to expose a C++ Object to Python.</div>
+<div class="line">As a Python developer you normally don’t have to deal with this function.</div>
+</div>
+</div>
+</div>
+<div class="section" id="inheritance-diagram">
+<h2>Inheritance diagram<a class="headerlink" href="#inheritance-diagram" title="Permalink to this headline">¶</a></h2>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="maxon.ObjectInterface.html#module-maxon.ObjectInterface" title="maxon.ObjectInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.ObjectInterface</span></code></a></li>
+</ul>
+<p>Child Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../references/core_helper/maxon.Class.html#module-maxon.Class" title="maxon.Class"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Class</span></code></a></li>
+</ul>
+</div>
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="maxon.ClassInterface.R.html#maxon.ClassInterface.R" title="maxon.ClassInterface.R"><code class="xref py py-obj docutils literal notranslate"><span class="pre">maxon.ClassInterface.R</span></code></a></td>
+<td>Stores the passed reference type if created e.g.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="methods-signature">
+<h2>Methods Signature<a class="headerlink" href="#methods-signature" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.ClassInterface.Create" title="maxon.ClassInterface.Create"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Create</span></code></a>([type])</td>
+<td><div class="line-block">
+<div class="line">Constructs a new instance of this class.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.ClassInterface.CreateRef" title="maxon.ClassInterface.CreateRef"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateRef</span></code></a>()</td>
+<td><div class="line-block">
+<div class="line">Constructs a new instance of this class.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.ClassInterface.Finalize" title="maxon.ClassInterface.Finalize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Finalize</span></code></a>()</td>
+<td><div class="line-block">
+<div class="line">Finalizes this class so that it can be used afterwards.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.ClassInterface.GetDataType" title="maxon.ClassInterface.GetDataType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDataType</span></code></a>()</td>
+<td>Returns the data type corresponding to the set of implemented interfaces of this class.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.ClassInterface.GetId" title="maxon.ClassInterface.GetId"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetId</span></code></a>()</td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.ClassInterface.GetKind" title="maxon.ClassInterface.GetKind"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetKind</span></code></a>()</td>
+<td>Returns the identifier of this object class.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.ClassInterface.IsFinalized" title="maxon.ClassInterface.IsFinalized"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsFinalized</span></code></a>()</td>
+<td>Returns True if the class has been finalized successfully before.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="methods-definition">
+<h2>Methods Definition<a class="headerlink" href="#methods-definition" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="maxon.ClassInterface.Create">
+<code class="descclassname">ClassInterface.</code><code class="descname">Create</code><span class="sig-paren">(</span><em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.ClassInterface.Create" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Constructs a new instance of this class.</div>
+<div class="line">This will invoke the constructors of each component in the order of addition, and then the
+<cite>ComponentRoot.InitComponent</cite> functions of each component.</div>
+<div class="line">When one of the <a class="reference internal" href="../../datatypes/base_core/maxon.ComponentRoot.html#maxon.ComponentRoot.InitComponent" title="maxon.ComponentRoot.InitComponent"><code class="xref py py-func docutils literal notranslate"><span class="pre">ComponentRoot.InitComponent()</span></code></a> functions fails with an error,
+<a class="reference internal" href="../../datatypes/base_core/maxon.ComponentRoot.html#maxon.ComponentRoot.FreeComponent" title="maxon.ComponentRoot.FreeComponent"><code class="xref py py-func docutils literal notranslate"><span class="pre">ComponentRoot.FreeComponent()</span></code></a> will be invoked on the previous (already initialized) components,
+the component destructors will be invoked, the memory will by freed, and <a class="reference internal" href="#maxon.ClassInterface.Create" title="maxon.ClassInterface.Create"><code class="xref py py-func docutils literal notranslate"><span class="pre">ClassInterface.Create()</span></code></a> returns
+the error.</div>
+<div class="line"><br /></div>
+<div class="line">For a singleton class, this doesn’t create a new instance, but returns the singleton instance of this class.</div>
+<div class="line">This instance is automatically created on finalization of the class.</div>
+<div class="line"><br /></div>
+<div class="line">For an abstract class, this will always raise an error.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>type</strong> – The expected type of object to create.</li>
+<li><strong>type</strong> – maxon API type.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Reference to new instance, or an error if the allocation or initialization failed.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Any.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.ClassInterface.CreateRef">
+<code class="descclassname">ClassInterface.</code><code class="descname">CreateRef</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.ClassInterface.CreateRef" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Constructs a new instance of this class.</div>
+<div class="line">This will invoke the constructors of each component in the order of addition, and then the
+<cite>ComponentRoot.InitComponent</cite> functions of each component.</div>
+<div class="line">When one of the <a class="reference internal" href="../../datatypes/base_core/maxon.ComponentRoot.html#maxon.ComponentRoot.InitComponent" title="maxon.ComponentRoot.InitComponent"><code class="xref py py-func docutils literal notranslate"><span class="pre">ComponentRoot.InitComponent()</span></code></a> functions fails with an error,
+<a class="reference internal" href="../../datatypes/base_core/maxon.ComponentRoot.html#maxon.ComponentRoot.FreeComponent" title="maxon.ComponentRoot.FreeComponent"><code class="xref py py-func docutils literal notranslate"><span class="pre">ComponentRoot.FreeComponent()</span></code></a> will be invoked on the previous (already initialized) components,
+the component destructors will be invoked, the memory will by freed, and <a class="reference internal" href="#maxon.ClassInterface.Create" title="maxon.ClassInterface.Create"><code class="xref py py-func docutils literal notranslate"><span class="pre">ClassInterface.Create()</span></code></a> returns
+the error.</div>
+<div class="line"><br /></div>
+<div class="line">For a singleton class, this doesn’t create a new instance, but returns the singleton instance of this class.</div>
+<div class="line">This instance is automatically created on finalization of the class.</div>
+<div class="line"><br /></div>
+<div class="line">For an abstract class, this will always raise an error.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Reference to new instance, or an error if the allocation or initialization failed.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Any.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.ClassInterface.Finalize">
+<code class="descclassname">ClassInterface.</code><code class="descname">Finalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.ClassInterface.Finalize" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Finalizes this class so that it can be used afterwards.</div>
+<div class="line">The class has to be built before by <code class="xref py py-func docutils literal notranslate"><span class="pre">ClassInterface.AddComponent()</span></code>.</div>
+<div class="line"><br /></div>
+<div class="line">Some internal data will be set-up for the class so that it is ready for use.</div>
+<div class="line">If you don’t invoke <a class="reference internal" href="#maxon.ClassInterface.Finalize" title="maxon.ClassInterface.Finalize"><code class="xref py py-func docutils literal notranslate"><span class="pre">ClassInterface.Finalize()</span></code></a>, it will be done implicitly when an object of the
+class is instantiated for the first time.</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.ClassInterface.GetDataType">
+<code class="descclassname">ClassInterface.</code><code class="descname">GetDataType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.ClassInterface.GetDataType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the data type corresponding to the set of implemented interfaces of this class.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For an abstract class this will return None.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Data type of this class.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../datatypes/base_core/maxon.DataType.html#module-maxon.DataType" title="maxon.DataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DataType</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.ClassInterface.GetId">
+<code class="descclassname">ClassInterface.</code><code class="descname">GetId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.ClassInterface.GetId" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.ClassInterface.GetKind">
+<code class="descclassname">ClassInterface.</code><code class="descname">GetKind</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.ClassInterface.GetKind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the identifier of this object class. Class identifiers are unique.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference internal" href="../../references/core_helper/maxon.Class.html#module-maxon.Class" title="maxon.Class"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Class</span></code></a> identifier.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../datatypes/id/maxon.Id.html#module-maxon.Id" title="maxon.Id"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Id</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.ClassInterface.IsFinalized">
+<code class="descclassname">ClassInterface.</code><code class="descname">IsFinalized</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.ClassInterface.IsFinalized" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if the class has been finalized successfully before.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if the class is finalized.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">maxon.ClassInterface</a><ul>
+<li><a class="reference internal" href="#module-maxon.ClassInterface">Description</a></li>
+<li><a class="reference internal" href="#inheritance-diagram">Inheritance diagram</a></li>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#methods-signature">Methods Signature</a></li>
+<li><a class="reference internal" href="#methods-definition">Methods Definition</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="maxon.ClassInterface.R.html" title="maxon.ClassInterface.R"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../core/maxon.UrlInterface.html" title="maxon.UrlInterface"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../maxon/interfaces.html" >MAXON API - Interfaces</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

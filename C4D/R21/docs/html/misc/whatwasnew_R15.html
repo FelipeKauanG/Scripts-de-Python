@@ -1,0 +1,289 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>What was New in R15 &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="What was New in R14" href="whatwasnew_R14.html" />
+    <link rel="prev" title="What was New in R16" href="whatwasnew_R16.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="whatwasnew_R14.html" title="What was New in R14"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="whatwasnew_R16.html" title="What was New in R16"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="what-was-new-in-r15">
+<h1>What was New in R15<a class="headerlink" href="#what-was-new-in-r15" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="in-r15-057">
+<h2>In R15.057<a class="headerlink" href="#in-r15-057" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Fixes:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Full Control Mode in the Python Effector</li>
+<li><a class="reference internal" href="../modules/c4d.documents/index.html#c4d.documents.SaveDocument" title="c4d.documents.SaveDocument"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.documents.SaveDocument()</span></code></a> is now consistent with the GUI behavior. See warning note in <a class="reference internal" href="../modules/c4d.plugins/BaseData/NodeData/SceneSaverData/index.html#SceneSaverData.Save" title="SceneSaverData.Save"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SceneSaverData.Save()</span></code></a></li>
+<li><cite>AttributeError</cite> with <a class="reference internal" href="../modules/c4d.gui/BaseCustomGui/BitmapButtonCustomGui/index.html#c4d.gui.BitmapButtonCustomGui" title="c4d.gui.BitmapButtonCustomGui"><code class="xref py py-class docutils literal notranslate"><span class="pre">BitmapButtonCustomGui</span></code></a> and <a class="reference internal" href="../modules/c4d.plugins/BaseData/NodeData/index.html#NodeData.GetDEnabling" title="NodeData.GetDEnabling"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NodeData.GetDEnabling()</span></code></a></li>
+<li>The Link port of the XPresso Python node that could not be set to <strong>None</strong></li>
+<li>Source Protector overwriting <cite>.pype</cite> files</li>
+<li><a class="reference internal" href="../modules/c4d.gui/BaseCustomGui/QuickTabCustomGui/index.html#QuickTabCustomGui.SetTextColor" title="QuickTabCustomGui.SetTextColor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">QuickTabCustomGui.SetTextColor()</span></code></a> can now be called (was raising a parameter error)</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Python API changes:</p>
+<blockquote>
+<div><ul class="simple">
+<li>New functions <a class="reference internal" href="../modules/c4d.documents/index.html#c4d.documents.GetAllAssets" title="c4d.documents.GetAllAssets"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.documents.GetAllAssets()</span></code></a> and <a class="reference internal" href="../modules/c4d.documents/index.html#c4d.documents.SaveProject" title="c4d.documents.SaveProject"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.documents.SaveProject()</span></code></a></li>
+<li>New naming <a class="reference internal" href="../modules/c4d.modules/mograph/FalloffDataData/index.html#FalloffDataData.useSpline" title="FalloffDataData.useSpline"><code class="xref py py-attr docutils literal notranslate"><span class="pre">FalloffDataData.useSpline</span></code></a> and <a class="reference internal" href="../modules/c4d.modules/mograph/FalloffDataData/index.html#FalloffDataData.inverseNodeMat" title="FalloffDataData.inverseNodeMat"><code class="xref py py-attr docutils literal notranslate"><span class="pre">FalloffDataData.inverseNodeMat</span></code></a> for deprecated <a class="reference internal" href="../modules/c4d.modules/mograph/FalloffDataData/index.html#FalloffDataData.usespline" title="FalloffDataData.usespline"><code class="xref py py-attr docutils literal notranslate"><span class="pre">FalloffDataData.usespline</span></code></a> and <a class="reference internal" href="../modules/c4d.modules/mograph/FalloffDataData/index.html#FalloffDataData.inodemat" title="FalloffDataData.inodemat"><code class="xref py py-attr docutils literal notranslate"><span class="pre">FalloffDataData.inodemat</span></code></a></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="in-r15-037">
+<h2>In R15.037<a class="headerlink" href="#in-r15-037" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="important-python-encryption">
+<h3>Important: Python Encryption<a class="headerlink" href="#important-python-encryption" title="Permalink to this headline">¶</a></h3>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<div class="last line-block">
+<div class="line">For <cite>R15</cite> the Encryption <cite>pype</cite> of Python plugins is unfortunately deprecated. The new plugin suffix is called <cite>pypv</cite>.</div>
+<div class="line">The plugins developers have to re-encrypt their Python plugins for <cite>R15</cite> and they can ship both <cite>*.pype</cite> (to support pre-<cite>R15</cite> versions) and <cite>*.pypv</cite> (to support <cite>R15</cite>) files:</div>
+</div>
+</div>
+<ul class="simple">
+<li>If both encrypted files are present in the same directory no error will be output in <cite>R15</cite></li>
+<li>If there is just the <cite>*.pype</cite> file there will be a message in the console that the plugin cannot be opened in <cite>R15</cite></li>
+</ul>
+</div>
+<div class="section" id="new-symbols">
+<h3>New Symbols<a class="headerlink" href="#new-symbols" title="Permalink to this headline">¶</a></h3>
+<p>Here is a list of the new modules, classes, methods and functions in the Python API:</p>
+<div class="section" id="new-modules">
+<h4>New Modules<a class="headerlink" href="#new-modules" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d.modules/net/index.html#c4d.modules.net" title="c4d.modules.net"><code class="xref py py-mod docutils literal notranslate"><span class="pre">c4d.modules.net</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.modules/sculpting/index.html#c4d.modules.sculpting" title="c4d.modules.sculpting"><code class="xref py py-mod docutils literal notranslate"><span class="pre">c4d.modules.sculpting</span></code></a></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li>Standard Python <a class="reference external" href="https://docs.python.org/release/2.7/library/uuid.html">uuid</a> module published in <a class="reference internal" href="../modules/c4d.modules/index.html#c4d.modules" title="c4d.modules"><code class="xref py py-mod docutils literal notranslate"><span class="pre">c4d.modules</span></code></a></li>
+</ul>
+</div>
+<div class="section" id="new-classes">
+<h4>New Classes<a class="headerlink" href="#new-classes" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d/Description/index.html#c4d.Description" title="c4d.Description"><code class="xref py py-class docutils literal notranslate"><span class="pre">Description</span></code></a></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d.modules/net/NetRenderService/index.html#c4d.modules.net.NetRenderService" title="c4d.modules.net.NetRenderService"><code class="xref py py-class docutils literal notranslate"><span class="pre">NetRenderService</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.modules/net/RenderJob/index.html#c4d.modules.net.RenderJob" title="c4d.modules.net.RenderJob"><code class="xref py py-class docutils literal notranslate"><span class="pre">RenderJob</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.modules/net/UserPool/index.html#c4d.modules.net.UserPool" title="c4d.modules.net.UserPool"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserPool</span></code></a></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d.modules/sculpting/SculptFolder/index.html#c4d.modules.sculpting.SculptFolder" title="c4d.modules.sculpting.SculptFolder"><code class="xref py py-class docutils literal notranslate"><span class="pre">SculptFolder</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.modules/sculpting/SculptLayer/index.html#c4d.modules.sculpting.SculptLayer" title="c4d.modules.sculpting.SculptLayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">SculptLayer</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.modules/sculpting/SculptLayerBase/index.html#c4d.modules.sculpting.SculptLayerBase" title="c4d.modules.sculpting.SculptLayerBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">SculptLayerBase</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.modules/sculpting/SculptLayerData/index.html#c4d.modules.sculpting.SculptLayerData" title="c4d.modules.sculpting.SculptLayerData"><code class="xref py py-class docutils literal notranslate"><span class="pre">SculptLayerData</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.modules/sculpting/SculptObject/index.html#c4d.modules.sculpting.SculptObject" title="c4d.modules.sculpting.SculptObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">SculptObject</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.modules/sculpting/SculptTag/index.html#c4d.modules.sculpting.SculptTag" title="c4d.modules.sculpting.SculptTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">SculptTag</span></code></a></li>
+</ul>
+</div>
+<div class="section" id="new-methods">
+<h4>New Methods<a class="headerlink" href="#new-methods" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d.documents/BaseDocument/index.html#BaseDocument.GetDocPreviewBitmap" title="BaseDocument.GetDocPreviewBitmap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.GetDocPreviewBitmap()</span></code></a></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d.documents/BatchRender/index.html#BatchRender.GetJsonJobs" title="BatchRender.GetJsonJobs"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BatchRender.GetJsonJobs()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.documents/BatchRender/index.html#BatchRender.GetFrameBitmap" title="BatchRender.GetFrameBitmap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BatchRender.GetFrameBitmap()</span></code></a></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d/C4DAtom/index.html#C4DAtom.GetRealType" title="C4DAtom.GetRealType"><code class="xref py py-meth docutils literal notranslate"><span class="pre">C4DAtom.GetRealType()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d/C4DAtom/index.html#C4DAtom.GetDescription" title="C4DAtom.GetDescription"><code class="xref py py-meth docutils literal notranslate"><span class="pre">C4DAtom.GetDescription()</span></code></a></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d/BaseContainer/index.html#BaseContainer.GetInt32" title="BaseContainer.GetInt32"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetInt32()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d/BaseContainer/index.html#BaseContainer.GetInt64" title="BaseContainer.GetInt64"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetInt64()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d/BaseContainer/index.html#BaseContainer.GetFloat" title="BaseContainer.GetFloat"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.GetFloat()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d/BaseContainer/index.html#BaseContainer.SetInt32" title="BaseContainer.SetInt32"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.SetInt32()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d/BaseContainer/index.html#BaseContainer.SetInt64" title="BaseContainer.SetInt64"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.SetInt64()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d/BaseContainer/index.html#BaseContainer.SetFloat" title="BaseContainer.SetFloat"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseContainer.SetFloat()</span></code></a></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d.gui/GeDialog/index.html#GeDialog.GetInt32" title="GeDialog.GetInt32"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeDialog.GetInt32()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.gui/GeDialog/index.html#GeDialog.GetFloat" title="GeDialog.GetFloat"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeDialog.GetFloat()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.gui/GeDialog/index.html#GeDialog.SetInt32" title="GeDialog.SetInt32"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeDialog.SetInt32()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.gui/GeDialog/index.html#GeDialog.SetFloat" title="GeDialog.SetFloat"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeDialog.SetFloat()</span></code></a></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d.storage/HyperFile/index.html#HyperFile.WriteInt16" title="HyperFile.WriteInt16"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteInt16()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.storage/HyperFile/index.html#HyperFile.WriteUInt16" title="HyperFile.WriteUInt16"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteUInt16()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.storage/HyperFile/index.html#HyperFile.WriteInt32" title="HyperFile.WriteInt32"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteInt32()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.storage/HyperFile/index.html#HyperFile.WriteUInt32" title="HyperFile.WriteUInt32"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteUInt32()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.storage/HyperFile/index.html#HyperFile.WriteInt64" title="HyperFile.WriteInt64"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteInt64()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.storage/HyperFile/index.html#HyperFile.WriteUInt64" title="HyperFile.WriteUInt64"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteUInt64()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.storage/HyperFile/index.html#HyperFile.WriteFloat64" title="HyperFile.WriteFloat64"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteFloat64()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.storage/HyperFile/index.html#HyperFile.WriteVector64" title="HyperFile.WriteVector64"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteVector64()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.storage/HyperFile/index.html#HyperFile.WriteMatrix64" title="HyperFile.WriteMatrix64"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.WriteMatrix64()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.storage/HyperFile/index.html#HyperFile.ReadInt16" title="HyperFile.ReadInt16"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadInt16()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.storage/HyperFile/index.html#HyperFile.ReadUInt16" title="HyperFile.ReadUInt16"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadUInt16()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.storage/HyperFile/index.html#HyperFile.ReadInt32" title="HyperFile.ReadInt32"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadInt32()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.storage/HyperFile/index.html#HyperFile.ReadUInt32" title="HyperFile.ReadUInt32"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadUInt32()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.storage/HyperFile/index.html#HyperFile.ReadInt64" title="HyperFile.ReadInt64"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadInt64()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.storage/HyperFile/index.html#HyperFile.ReadFloat64" title="HyperFile.ReadFloat64"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadFloat64()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.storage/HyperFile/index.html#HyperFile.ReadVector64" title="HyperFile.ReadVector64"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadVector64()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.storage/HyperFile/index.html#HyperFile.ReadMatrix64" title="HyperFile.ReadMatrix64"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HyperFile.ReadMatrix64()</span></code></a></li>
+</ul>
+</div>
+<div class="section" id="new-functions">
+<h4>New Functions<a class="headerlink" href="#new-functions" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d/index.html#c4d.IsNet" title="c4d.IsNet"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.IsNet()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d/index.html#c4d.IsServer" title="c4d.IsServer"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.IsServer()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d/index.html#c4d.IsClient" title="c4d.IsClient"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.IsClient()</span></code></a></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d.storage/index.html#c4d.storage.GetUserSiteSpecificPath" title="c4d.storage.GetUserSiteSpecificPath"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.storage.GetUserSiteSpecificPath()</span></code></a></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d.utils/index.html#c4d.utils.ClampValue" title="c4d.utils.ClampValue"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.utils.ClampValue()</span></code></a> (In this version of <a class="reference internal" href="../modules/c4d.utils/index.html#c4d.utils.Clamp" title="c4d.utils.Clamp"><code class="xref py py-func docutils literal notranslate"><span class="pre">Clamp()</span></code></a> the order of parameters are the same as Peachey’s definition)</li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d.modules/net/index.html#c4d.modules.net.GetGlobalNetRenderService" title="c4d.modules.net.GetGlobalNetRenderService"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.net.GetGlobalNetRenderService()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.modules/net/index.html#c4d.modules.net.VerificationStateToString" title="c4d.modules.net.VerificationStateToString"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.net.VerificationStateToString()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.modules/net/index.html#c4d.modules.net.JobCommandToString" title="c4d.modules.net.JobCommandToString"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.net.JobCommandToString()</span></code></a></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d.modules/sculpting/index.html#c4d.modules.sculpting.MakeSculptObject" title="c4d.modules.sculpting.MakeSculptObject"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.sculpting.MakeSculptObject()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.modules/sculpting/index.html#c4d.modules.sculpting.GetSelectedSculptObject" title="c4d.modules.sculpting.GetSelectedSculptObject"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.sculpting.GetSelectedSculptObject()</span></code></a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="important-fixes">
+<h3>Important Fixes<a class="headerlink" href="#important-fixes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d/index.html#c4d.GePluginMessage" title="c4d.GePluginMessage"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.GePluginMessage()</span></code></a> with <em>data</em> parameter set to <em>None</em></li>
+<li>Loading textures with <a class="reference internal" href="../modules/c4d.modules/bodypaint/index.html#c4d.modules.bodypaint.SendPainterCommand" title="c4d.modules.bodypaint.SendPainterCommand"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.bodypaint.SendPainterCommand()</span></code></a></li>
+</ul>
+</div>
+<div class="section" id="documentation">
+<h3>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Added <cite>warning</cite> note to <a class="reference internal" href="../modules/c4d.storage/index.html#c4d.storage.LoadDialog" title="c4d.storage.LoadDialog"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.storage.LoadDialog()</span></code></a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">What was New in R15</a><ul>
+<li><a class="reference internal" href="#in-r15-057">In R15.057</a></li>
+<li><a class="reference internal" href="#in-r15-037">In R15.037</a><ul>
+<li><a class="reference internal" href="#important-python-encryption">Important: Python Encryption</a></li>
+<li><a class="reference internal" href="#new-symbols">New Symbols</a><ul>
+<li><a class="reference internal" href="#new-modules">New Modules</a></li>
+<li><a class="reference internal" href="#new-classes">New Classes</a></li>
+<li><a class="reference internal" href="#new-methods">New Methods</a></li>
+<li><a class="reference internal" href="#new-functions">New Functions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#important-fixes">Important Fixes</a></li>
+<li><a class="reference internal" href="#documentation">Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="whatwasnew_R14.html" title="What was New in R14"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="whatwasnew_R16.html" title="What was New in R16"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

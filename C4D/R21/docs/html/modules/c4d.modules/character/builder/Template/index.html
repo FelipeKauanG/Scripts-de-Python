@@ -1,0 +1,189 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.character.builder.Template &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="c4d.modules.character.CAPoseMorphTag" href="../../CAPoseMorphTag/index.html" />
+    <link rel="prev" title="c4d.modules.character.builder.ComponentObject" href="../ComponentObject/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../CAPoseMorphTag/index.html" title="c4d.modules.character.CAPoseMorphTag"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../ComponentObject/index.html" title="c4d.modules.character.builder.ComponentObject"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../index.html" >c4d.modules.character</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../index.html" accesskey="U">c4d.modules.character.builder</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-character-builder-template">
+<h1>c4d.modules.character.builder.Template<a class="headerlink" href="#c4d-modules-character-builder-template" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.character.builder.Template">
+<em class="property">class </em><code class="descclassname">c4d.modules.character.builder.</code><code class="descname">Template</code><a class="headerlink" href="#c4d.modules.character.builder.Template" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../../../../../manuals/introduction/python_character_tag.html#manual-python-character-tag"><span class="std std-ref">Python Character Tag</span></a></p>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#Template.FindComponent" title="Template.FindComponent"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Template.FindComponent(self,</span> <span class="pre">name,</span> <span class="pre">ident)</span></code></a></td>
+<td>Find component within template.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Template.FindObject" title="Template.FindObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Template.FindObject(self,</span> <span class="pre">name)</span></code></a></td>
+<td>Find object within template.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Template.GetDocument" title="Template.GetDocument"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Template.GetDocument(self)</span></code></a></td>
+<td>Get the template BaseDocument.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="Template.FindComponent">
+<code class="descclassname">Template.</code><code class="descname">FindComponent</code><span class="sig-paren">(</span><em>self</em>, <em>name</em>, <em>ident</em><span class="sig-paren">)</span><a class="headerlink" href="#Template.FindComponent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find component within template.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<em>str</em>) – The component name to search for.</li>
+<li><strong>ident</strong> (<em>bool</em>) – If <strong>true</strong>, matches name and unique id string.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../Component/index.html#c4d.modules.character.builder.Component" title="c4d.modules.character.builder.Component">c4d.modules.character.builder.Component</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The found component or <strong>None</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Template.FindObject">
+<code class="descclassname">Template.</code><code class="descname">FindObject</code><span class="sig-paren">(</span><em>self</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#Template.FindObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find object within template.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – The component name to search for.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject">c4d.BaseObject</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The found object or <strong>None</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Template.GetDocument">
+<code class="descclassname">Template.</code><code class="descname">GetDocument</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#Template.GetDocument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the template BaseDocument.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument">c4d.documents.BaseDocument</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The document.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../CAPoseMorphTag/index.html" title="c4d.modules.character.CAPoseMorphTag"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../ComponentObject/index.html" title="c4d.modules.character.builder.ComponentObject"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../index.html" >c4d.modules.character</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../index.html" >c4d.modules.character.builder</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

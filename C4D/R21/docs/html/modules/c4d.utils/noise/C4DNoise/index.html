@@ -1,0 +1,487 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.utils.noise.C4DNoise &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="MAXON API Introduction" href="../../../../manuals/introduction/maxon_api.html" />
+    <link rel="prev" title="c4d.utils.noise" href="../index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../../../manuals/introduction/maxon_api.html" title="MAXON API Introduction"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="c4d.utils.noise"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.utils</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.utils.noise</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-utils-noise-c4dnoise">
+<h1>c4d.utils.noise.C4DNoise<a class="headerlink" href="#c4d-utils-noise-c4dnoise" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.utils.noise.C4DNoise">
+<em class="property">class </em><code class="descclassname">c4d.utils.noise.</code><code class="descname">C4DNoise</code><a class="headerlink" href="#c4d.utils.noise.C4DNoise" title="Permalink to this definition">¶</a></dt>
+<dd><p>An important technique for generating procedural textures is the use of fractal noise.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../../../../types/noise.html"><span class="doc">Noise Types</span></a>.</p>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#C4DNoise.__init__" title="C4DNoise.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">C4DNoise.__init__(self[,</span> <span class="pre">seed])</span></code></a></td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">type seed:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#C4DNoise.InitFbm" title="C4DNoise.InitFbm"><code class="xref py py-meth docutils literal notranslate"><span class="pre">C4DNoise.InitFbm(self,</span> <span class="pre">lMaxOctaves,</span> <span class="pre">...)</span></code></a></td>
+<td>Initializes fractal brownian motion.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#C4DNoise.Noise" title="C4DNoise.Noise"><code class="xref py py-meth docutils literal notranslate"><span class="pre">C4DNoise.Noise(self,</span> <span class="pre">t,</span> <span class="pre">two_d,</span> <span class="pre">p[,</span> <span class="pre">...])</span></code></a></td>
+<td>Samples a 2D or 3D noise.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#C4DNoise.SNoise" title="C4DNoise.SNoise"><code class="xref py py-meth docutils literal notranslate"><span class="pre">C4DNoise.SNoise(self,</span> <span class="pre">p,</span> <span class="pre">lRepeat[,</span> <span class="pre">t])</span></code></a></td>
+<td>Generate a periodic signed noise value.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#C4DNoise.Turbulence" title="C4DNoise.Turbulence"><code class="xref py py-meth docutils literal notranslate"><span class="pre">C4DNoise.Turbulence(self,</span> <span class="pre">p,</span> <span class="pre">rOctaves,</span> <span class="pre">...)</span></code></a></td>
+<td>Generate a turbulence value, this is a sum of multiple noises with different frequency.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#C4DNoise.Fbm" title="C4DNoise.Fbm"><code class="xref py py-meth docutils literal notranslate"><span class="pre">C4DNoise.Fbm(self,</span> <span class="pre">p,</span> <span class="pre">rOctaves,</span> <span class="pre">lRepeat)</span></code></a></td>
+<td>Generate a periodic Fractional Brownian Motion value.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#C4DNoise.RidgedMultifractal" title="C4DNoise.RidgedMultifractal"><code class="xref py py-meth docutils literal notranslate"><span class="pre">C4DNoise.RidgedMultifractal(self,</span> <span class="pre">p,</span> <span class="pre">rOctaves,</span> <span class="pre">...)</span></code></a></td>
+<td>Generate a periodic fractal function used for such things as landscapes or mountain ranges.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Static Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.utils.noise.C4DNoise.CreateMenuContainer" title="c4d.utils.noise.C4DNoise.CreateMenuContainer"><code class="xref py py-meth docutils literal notranslate"><span class="pre">c4d.utils.noise.C4DNoise.CreateMenuContainer([bIncludeNone])</span></code></a></td>
+<td>Creates a menu container with the different noise options available:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.utils.noise.C4DNoise.HasOctaves" title="c4d.utils.noise.C4DNoise.HasOctaves"><code class="xref py py-meth docutils literal notranslate"><span class="pre">c4d.utils.noise.C4DNoise.HasOctaves(t)</span></code></a></td>
+<td>Checks if a certain noise type supports the octaves parameter.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.utils.noise.C4DNoise.HasCycles" title="c4d.utils.noise.C4DNoise.HasCycles"><code class="xref py py-meth docutils literal notranslate"><span class="pre">c4d.utils.noise.C4DNoise.HasCycles(t)</span></code></a></td>
+<td>Checks if a certain noise type supports the cycles parameter.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.utils.noise.C4DNoise.HasAbsolute" title="c4d.utils.noise.C4DNoise.HasAbsolute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">c4d.utils.noise.C4DNoise.HasAbsolute(t)</span></code></a></td>
+<td>Checks if a certain noise type supports the absolute parameter.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.utils.noise.C4DNoise.EvaluateSampleOffset" title="c4d.utils.noise.C4DNoise.EvaluateSampleOffset"><code class="xref py py-meth docutils literal notranslate"><span class="pre">c4d.utils.noise.C4DNoise.EvaluateSampleOffset(type,</span> <span class="pre">rOctaves,</span> <span class="pre">rDelta)</span></code></a></td>
+<td>Evaluates the sample offset.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="C4DNoise.__init__">
+<code class="descclassname">C4DNoise.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>seed=665</em><span class="sig-paren">)</span><a class="headerlink" href="#C4DNoise.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>seed</strong> (<em>int</em>) – Noise seed.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.utils.noise.C4DNoise" title="c4d.utils.noise.C4DNoise">c4d.utils.noise.C4DNoise</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A new noise object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="C4DNoise.InitFbm">
+<code class="descclassname">C4DNoise.</code><code class="descname">InitFbm</code><span class="sig-paren">(</span><em>self</em>, <em>lMaxOctaves</em>, <em>rLacunarity</em>, <em>h</em><span class="sig-paren">)</span><a class="headerlink" href="#C4DNoise.InitFbm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes fractal brownian motion.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>lMaxOctaves</strong> (<em>int</em>) – The maximum octave.</li>
+<li><strong>rLacunarity</strong> (<em>float</em>) – This parameter controls the scale of each successive fractal overlay.</li>
+<li><strong>h</strong> (<em>float</em>) – H-Parameter</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Initializes fractal brownian motion</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="C4DNoise.Noise">
+<code class="descclassname">C4DNoise.</code><code class="descname">Noise</code><span class="sig-paren">(</span><em>self</em>, <em>t</em>, <em>two_d</em>, <em>p</em>, <em>time=0.0</em>, <em>octaves=4.0</em>, <em>absolute=False</em>, <em>sampleRad=0.25</em>, <em>detailAtt=0.25</em>, <em>t_repeat=0</em><span class="sig-paren">)</span><a class="headerlink" href="#C4DNoise.Noise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Samples a 2D or 3D noise.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>t</strong> (<em>int</em>) – <p>The noise <strong>Type:</strong> <a class="reference internal" href="../../../../types/noise.html"><span class="doc">Noise Types</span></a></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Please use <a class="reference internal" href="#C4DNoise.InitFbm" title="C4DNoise.InitFbm"><code class="xref py py-meth docutils literal notranslate"><span class="pre">InitFbm()</span></code></a> before you use one of the following noise types:  NOISE_ZADA, NOISE_DISPL_VORONOI, NOISE_OBER, NOISE_FBM, NOISE_BUYA.</p>
+</div>
+</li>
+<li><strong>two_d</strong> (<em>bool</em>) – <strong>True</strong> for 2D Sampling, <strong>False</strong> for 3D Sampling</li>
+<li><strong>p</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – Noise coordinate.</li>
+<li><strong>time</strong> (<em>float</em>) – Time.</li>
+<li><strong>octaves</strong> (<em>float</em>) – Octaves, if supported. See <code class="xref py py-meth docutils literal notranslate"><span class="pre">HasOctaves()</span></code></li>
+<li><strong>absolute</strong> (<em>bool</em>) – Absolute value, if supported. See <code class="xref py py-meth docutils literal notranslate"><span class="pre">HasAbsolute()</span></code></li>
+<li><strong>sampleRad</strong> (<em>float</em>) – Sample radius.</li>
+<li><strong>detailAtt</strong> (<em>float</em>) – Detail attenuation.</li>
+<li><strong>t_repeat</strong> (<em>int</em>) – Must be <em>2^x - 1</em>, where x = [1..10], i.e. one of 1, 3, 7, 15, 31, 63, 127, 255, 511, and 1023. A noise repeats itself in time every 1024 units. Using a smaller repeat the noise will repeat at an earlier time.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">float</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Noise sample.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="C4DNoise.SNoise">
+<code class="descclassname">C4DNoise.</code><code class="descname">SNoise</code><span class="sig-paren">(</span><em>self</em>, <em>p</em>, <em>lRepeat</em>, <em>t=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#C4DNoise.SNoise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a periodic signed noise value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>p</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – Noise coordinate.</li>
+<li><strong>lRepeat</strong> (<em>int</em>) – Must be <em>2^x - 1</em>, where x = [1..10], i.e. one of 1, 3, 7, 15, 31, 63, 127, 255, 511, and 1023. A noise repeats itself in time every 1024 units. Using a smaller <em>lRepeat</em> the noise will repeat at an earlier time.</li>
+<li><strong>t</strong> (<em>float</em>) – The time.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">float</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Signed noise value, this is between -1.0 and 1.0.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="C4DNoise.Turbulence">
+<code class="descclassname">C4DNoise.</code><code class="descname">Turbulence</code><span class="sig-paren">(</span><em>self</em>, <em>p</em>, <em>rOctaves</em>, <em>bAsolute</em>, <em>lRepeat</em>, <em>t=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#C4DNoise.Turbulence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a turbulence value, this is a sum of multiple noises with different frequency.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>p</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – Turbulence coordinate</li>
+<li><strong>rOctaves</strong> (<em>float</em>) – The number of octaves.</li>
+<li><strong>bAbsolute</strong> (<em>bool</em>) – <strong>True</strong> for absolute values.</li>
+<li><strong>lRepeat</strong> (<em>int</em>) – Must be <em>2^x - 1</em>, where x = [1..10], i.e. one of 1, 3, 7, 15, 31, 63, 127, 255, 511, and 1023. A noise repeats itself in time every 1024 units. Using a smaller <em>lRepeat</em> the noise will repeat at an earlier time.</li>
+<li><strong>t</strong> (<em>float</em>) – The time.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">float</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Noise sample.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="C4DNoise.Fbm">
+<code class="descclassname">C4DNoise.</code><code class="descname">Fbm</code><span class="sig-paren">(</span><em>self</em>, <em>p</em>, <em>rOctaves</em>, <em>lRepeat</em>, <em>t=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#C4DNoise.Fbm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a periodic Fractional Brownian Motion value.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Needs the call <a class="reference internal" href="#C4DNoise.InitFbm" title="C4DNoise.InitFbm"><code class="xref py py-meth docutils literal notranslate"><span class="pre">InitFbm()</span></code></a> before.</p>
+<div class="last admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The <em>rOctaves</em> value must not exceed the value passed to <a class="reference internal" href="#C4DNoise.InitFbm" title="C4DNoise.InitFbm"><code class="xref py py-meth docutils literal notranslate"><span class="pre">InitFbm()</span></code></a> but can be lower.</p>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>p</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The evaluation point.</li>
+<li><strong>rOctaves</strong> (<em>float</em>) – The octaves</li>
+<li><strong>lRepeat</strong> (<em>int</em>) – Must be <em>2^x - 1</em>, where x = [1..10], i.e. one of 1, 3, 7, 15, 31, 63, 127, 255, 511, and 1023. A noise repeats itself in time every 1024 units. Using a smaller repeat the noise will repeat at an earlier time.</li>
+<li><strong>t</strong> (<em>float</em>) – The time</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">float</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The fbm value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="C4DNoise.RidgedMultifractal">
+<code class="descclassname">C4DNoise.</code><code class="descname">RidgedMultifractal</code><span class="sig-paren">(</span><em>self</em>, <em>p</em>, <em>rOctaves</em>, <em>rOffset</em>, <em>rGain</em>, <em>lRepeat</em>, <em>t=0</em><span class="sig-paren">)</span><a class="headerlink" href="#C4DNoise.RidgedMultifractal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a periodic fractal function used for such things as landscapes or mountain ranges.</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Needs the call <a class="reference internal" href="#C4DNoise.InitFbm" title="C4DNoise.InitFbm"><code class="xref py py-meth docutils literal notranslate"><span class="pre">InitFbm()</span></code></a> before.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The <em>rOctaves</em> value must not exceed the value passed to <a class="reference internal" href="#C4DNoise.InitFbm" title="C4DNoise.InitFbm"><code class="xref py py-meth docutils literal notranslate"><span class="pre">InitFbm()</span></code></a> but can be lower.</p>
+</div>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>p</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The evaluation point.</li>
+<li><strong>rOctaves</strong> (<em>float</em>) – The octave.</li>
+<li><strong>rOffset</strong> (<em>float</em>) – The zero offset, this controls the multifractality.</li>
+<li><strong>rGain</strong> (<em>float</em>) – The amplification of the fractal value.</li>
+<li><strong>lRepeat</strong> (<em>float</em>) – Must be <em>2^x - 1</em>, where x = [1..10], i.e. one of 1, 3, 7, 15, 31, 63, 127, 255, 511, and 1023. A noise repeats itself in time every 1024 units. Using a smaller lrepeat the noise will repeat at an earlier time.</li>
+<li><strong>t</strong> (<em>float</em>) – The time.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">float</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The fractal value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+<p class="rubric">Static Methods Documentation</p>
+<p><dl class="staticmethod">
+<dt id="c4d.utils.noise.C4DNoise.CreateMenuContainer">
+<em class="property">static </em><code class="descclassname">c4d.utils.noise.C4DNoise.</code><code class="descname">CreateMenuContainer</code><span class="sig-paren">(</span><em>bIncludeNone=False</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.utils.noise.C4DNoise.CreateMenuContainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a menu container with the different noise options available:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">c4d</span>
+
+
+
+<span class="n">bc</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">noise</span><span class="o">.</span><span class="n">C4DNoise</span><span class="o">.</span><span class="n">CreateMenuContainer</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">bc</span><span class="p">:</span>
+
+    <span class="nb">print</span> <span class="n">index</span><span class="p">,</span> <span class="n">name</span>
+
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>bIncludeNone</strong> (<em>bool</em>) – Include the none option.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer">c4d.BaseContainer</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Generated noise menu.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="c4d.utils.noise.C4DNoise.HasOctaves">
+<em class="property">static </em><code class="descclassname">c4d.utils.noise.C4DNoise.</code><code class="descname">HasOctaves</code><span class="sig-paren">(</span><em>t</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.utils.noise.C4DNoise.HasOctaves" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if a certain noise type supports the octaves parameter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>t</strong> (<em>int</em>) – Noise type.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if octaves is supported, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="c4d.utils.noise.C4DNoise.HasCycles">
+<em class="property">static </em><code class="descclassname">c4d.utils.noise.C4DNoise.</code><code class="descname">HasCycles</code><span class="sig-paren">(</span><em>t</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.utils.noise.C4DNoise.HasCycles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if a certain noise type supports the cycles parameter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>t</strong> (<em>int</em>) – Noise type.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if cycles is supported, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="c4d.utils.noise.C4DNoise.HasAbsolute">
+<em class="property">static </em><code class="descclassname">c4d.utils.noise.C4DNoise.</code><code class="descname">HasAbsolute</code><span class="sig-paren">(</span><em>t</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.utils.noise.C4DNoise.HasAbsolute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if a certain noise type supports the absolute parameter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>t</strong> (<em>int</em>) – Noise type.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if absolute is supported, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="c4d.utils.noise.C4DNoise.EvaluateSampleOffset">
+<em class="property">static </em><code class="descclassname">c4d.utils.noise.C4DNoise.</code><code class="descname">EvaluateSampleOffset</code><span class="sig-paren">(</span><em>type</em>, <em>rOctaves</em>, <em>rDelta</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.utils.noise.C4DNoise.EvaluateSampleOffset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the sample offset.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>type</strong> (<em>int</em>) – Noise type.</li>
+<li><strong>rOctaves</strong> (<em>float</em>) – Number of octaves.</li>
+<li><strong>rDelta</strong> (<em>float</em>) – Delta.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">float</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The sample offset.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../../../manuals/introduction/maxon_api.html" title="MAXON API Introduction"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="c4d.utils.noise"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.utils</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.utils.noise</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

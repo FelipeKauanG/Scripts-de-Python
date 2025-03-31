@@ -1,0 +1,984 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.bitmaps.MultipassBitmap &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Icons list" href="../../RESOURCEIMAGE.html" />
+    <link rel="prev" title="c4d.bitmaps.BaseBitmap" href="../index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../RESOURCEIMAGE.html" title="Icons list"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="c4d.bitmaps.BaseBitmap"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.bitmaps</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.bitmaps.BaseBitmap</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-bitmaps-multipassbitmap">
+<h1>c4d.bitmaps.MultipassBitmap<a class="headerlink" href="#c4d-bitmaps-multipassbitmap" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.bitmaps.MultipassBitmap">
+<em class="property">class </em><code class="descclassname">c4d.bitmaps.</code><code class="descname">MultipassBitmap</code><a class="headerlink" href="#c4d.bitmaps.MultipassBitmap" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">This is an extension of the <a class="reference internal" href="../index.html#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseBitmap</span></code></a> class that</div>
+<div class="line">supports higher bit depths, even floating point images, and multiple layers.</div>
+<div class="line"><br /></div>
+<div class="line">The layers are stored hierarchically. There are three kinds of layers:</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="6%" />
+<col width="94%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>Layer</em></td>
+<td>A regular layer, with full range of functionality.</td>
+</tr>
+<tr class="row-even"><td><em>Folder</em></td>
+<td>A collection of layers. This is a dummy element that has no image content, but other stuff like name, visibility etc.</td>
+</tr>
+<tr class="row-odd"><td><em>Alpha</em></td>
+<td>An alpha channel, with full range of functionality.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><p class="rubric">Magic Methods</p>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#MultipassBitmap.__init__" title="MultipassBitmap.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MultipassBitmap.__init__(self,</span> <span class="pre">bx,</span> <span class="pre">by,</span> <span class="pre">mode)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Allocates a multipass bitmap of size bx/by and bit depth given by mode.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Add Methods</p>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#MultipassBitmap.AddAlpha" title="MultipassBitmap.AddAlpha"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MultipassBitmap.AddAlpha(self,</span> <span class="pre">insertafter,</span> <span class="pre">...)</span></code></a></td>
+<td>Adds an alpha layer with mode <em>colormode</em> after <em>insertafter</em> in the bitmap.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#MultipassBitmap.AddFolder" title="MultipassBitmap.AddFolder"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MultipassBitmap.AddFolder(self,</span> <span class="pre">insertafter[,</span> <span class="pre">hidden])</span></code></a></td>
+<td>Adds a folder after <em>insertafter</em> in the bitmap.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#MultipassBitmap.AddLayer" title="MultipassBitmap.AddLayer"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MultipassBitmap.AddLayer(self,</span> <span class="pre">insertafter,</span> <span class="pre">...)</span></code></a></td>
+<td>Adds a layer after <em>insertafter</em> with mode <em>colormode</em> after <em>insertafter</em> in the bitmap.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Deprecated</p>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#MultipassBitmap.GetHiddneLayerNum" title="MultipassBitmap.GetHiddneLayerNum"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MultipassBitmap.GetHiddneLayerNum(self,</span> <span class="pre">num)</span></code></a></td>
+<td><div class="first last deprecated">
+<p><span class="versionmodified">Deprecated since version R21.204: </span>Use <a class="reference internal" href="#MultipassBitmap.GetHiddenLayerNum" title="MultipassBitmap.GetHiddenLayerNum"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MultipassBitmap.GetHiddenLayerNum()</span></code></a> instead.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">General</p>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#MultipassBitmap.ClearImageData" title="MultipassBitmap.ClearImageData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MultipassBitmap.ClearImageData(self,)</span></code></a></td>
+<td>Clears the image data for all layers.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#MultipassBitmap.DeleteLayer" title="MultipassBitmap.DeleteLayer"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MultipassBitmap.DeleteLayer(self,</span> <span class="pre">layer)</span></code></a></td>
+<td>Deletes <em>layer</em> from the bitmap, freeing the memory.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#MultipassBitmap.FindUserID" title="MultipassBitmap.FindUserID"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MultipassBitmap.FindUserID(self,</span> <span class="pre">id[,</span> <span class="pre">subid])</span></code></a></td>
+<td>Finds a layer in the bitmap by ID.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#MultipassBitmap.FreeHiddenLayers" title="MultipassBitmap.FreeHiddenLayers"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MultipassBitmap.FreeHiddenLayers(self,)</span></code></a></td>
+<td>Free the hidden layers.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#MultipassBitmap.GetPaintBitmap" title="MultipassBitmap.GetPaintBitmap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MultipassBitmap.GetPaintBitmap(self,)</span></code></a></td>
+<td>Gets a BodyPaint 3D paint bitmap for the multipass bitmap.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Layer Methods</p>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#MultipassBitmap.GetAlphaLayerCount" title="MultipassBitmap.GetAlphaLayerCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MultipassBitmap.GetAlphaLayerCount(self,)</span></code></a></td>
+<td>Retrieves the number of alpha layers in the bitmap.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#MultipassBitmap.GetHiddenLayerCount" title="MultipassBitmap.GetHiddenLayerCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MultipassBitmap.GetHiddenLayerCount(self,)</span></code></a></td>
+<td>Retrieves the number of hidden layers in the bitmap.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#MultipassBitmap.GetLayerCount" title="MultipassBitmap.GetLayerCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MultipassBitmap.GetLayerCount(self,</span> <span class="pre">num)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Retrieves the number of layers in the bitmap.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#MultipassBitmap.GetLayers" title="MultipassBitmap.GetLayers"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MultipassBitmap.GetLayers(self[,</span> <span class="pre">flags])</span></code></a></td>
+<td>Gets all the layers specified by <em>flags</em>.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Parameter Methods</p>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#MultipassBitmap.GetAlphaLayerNum" title="MultipassBitmap.GetAlphaLayerNum"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MultipassBitmap.GetAlphaLayerNum(self,</span> <span class="pre">num)</span></code></a></td>
+<td>Gets the alpha layer with number <em>num</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#MultipassBitmap.GetHiddenLayerNum" title="MultipassBitmap.GetHiddenLayerNum"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MultipassBitmap.GetHiddenLayerNum(self,</span> <span class="pre">num)</span></code></a></td>
+<td>Gets the hidden layer with number <em>num</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#MultipassBitmap.GetLayerNum" title="MultipassBitmap.GetLayerNum"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MultipassBitmap.GetLayerNum(self,</span> <span class="pre">num)</span></code></a></td>
+<td>Gets the layer with number <em>num</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#MultipassBitmap.GetParameter" title="MultipassBitmap.GetParameter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MultipassBitmap.GetParameter(self,</span> <span class="pre">id)</span></code></a></td>
+<td>Gets a layer parameter.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#MultipassBitmap.SetParameter" title="MultipassBitmap.SetParameter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MultipassBitmap.SetParameter(self,</span> <span class="pre">id,</span> <span class="pre">t_data)</span></code></a></td>
+<td>Sets a layer parameter.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Static Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.bitmaps.MultipassBitmap.AllocWrapper" title="c4d.bitmaps.MultipassBitmap.AllocWrapper"><code class="xref py py-meth docutils literal notranslate"><span class="pre">c4d.bitmaps.MultipassBitmap.AllocWrapper(self,</span> <span class="pre">bmp)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Allocates a multipass wrapper for bmp.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../index.html#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.bitmaps.BaseBitmap</span></code></a></li>
+</ul>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="MultipassBitmap.__init__">
+<code class="descclassname">MultipassBitmap.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>bx</em>, <em>by</em>, <em>mode</em><span class="sig-paren">)</span><a class="headerlink" href="#MultipassBitmap.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Allocates a multipass bitmap of size bx/by and bit depth given by mode.</div>
+<div class="line">The first RGBA layer is also created.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>bx</strong> (<em>int</em>) – Width in pixels.</li>
+<li><strong>bx</strong> – Height in pixels.</li>
+<li><strong>mode</strong> (<em>int</em>) – <p>Main mode:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>COLORMODE_ILLEGAL</em></td>
+<td>Illegal 8-bit mode.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_ALPHA</em></td>
+<td>Only 8-bit alpha channel.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_GRAY</em></td>
+<td>8-bit grayscale channel.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_AGRAY</em></td>
+<td>8-bit grayscale channel with 8-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_RGB</em></td>
+<td>8-bit RGB channels.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_ARGB</em></td>
+<td>8-bit RGB channels with 8-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_CMYK</em></td>
+<td>8-bit CMYK channel.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_ACMYK</em></td>
+<td>8-bit CMYK channel with 8-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_MASK</em></td>
+<td>8-bit grayscale map as mask.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_AMASK</em></td>
+<td>8-bit grayscale map as mask with 8-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_ILLEGALw</em></td>
+<td>Illegal 16-bit mode.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_GRAYw</em></td>
+<td>16-bit grayscale channel.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_AGRAYw</em></td>
+<td>16-bit grayscale channel with 16-bit alpha.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_RGBw</em></td>
+<td>16-bit RGB channels.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_ARGBw</em></td>
+<td>16-bit RGB channels with 16-bit alpha.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_MASKw</em></td>
+<td>16-bit grayscale map as mask with 16-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_ILLEGALf</em></td>
+<td>Illegal 32-bit mode.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_GRAYf</em></td>
+<td>32-bit floating point grayscale channel.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_AGRAYf</em></td>
+<td>32-bit floating point grayscale channel with floating point alpha.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_RGBf</em></td>
+<td>32-bit floating point RGB channels.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_ARGBf</em></td>
+<td>32-bit floating point RGB channels with floating point alpha.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_MASKf</em></td>
+<td>32-bit floating point grayscale map as mask.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="#c4d.bitmaps.MultipassBitmap" title="c4d.bitmaps.MultipassBitmap">c4d.bitmaps.MultipassBitmap</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The new multipass bitmap.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MultipassBitmap.AddAlpha">
+<code class="descclassname">MultipassBitmap.</code><code class="descname">AddAlpha</code><span class="sig-paren">(</span><em>self</em>, <em>insertafter</em>, <em>colormode</em><span class="sig-paren">)</span><a class="headerlink" href="#MultipassBitmap.AddAlpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds an alpha layer with mode <em>colormode</em> after <em>insertafter</em> in the bitmap.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>insertafter</strong> (<a class="reference internal" href="#c4d.bitmaps.MultipassBitmap" title="c4d.bitmaps.MultipassBitmap"><em>c4d.bitmaps.MultipassBitmap</em></a>) – The layer to insert after.</li>
+<li><strong>colormode</strong> (<em>int</em>) – <p>Color mode of the new alpha layer.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>COLORMODE_ILLEGAL</em></td>
+<td>Illegal 8-bit mode.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_ALPHA</em></td>
+<td>Only 8-bit alpha channel.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_GRAY</em></td>
+<td>8-bit grayscale channel.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_AGRAY</em></td>
+<td>8-bit grayscale channel with 8-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_RGB</em></td>
+<td>8-bit RGB channels.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_ARGB</em></td>
+<td>8-bit RGB channels with 8-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_CMYK</em></td>
+<td>8-bit CMYK channel.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_ACMYK</em></td>
+<td>8-bit CMYK channel with 8-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_MASK</em></td>
+<td>8-bit grayscale map as mask.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_AMASK</em></td>
+<td>8-bit grayscale map as mask with 8-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_ILLEGALw</em></td>
+<td>Illegal 16-bit mode.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_GRAYw</em></td>
+<td>16-bit grayscale channel.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_AGRAYw</em></td>
+<td>16-bit grayscale channel with 16-bit alpha.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_RGBw</em></td>
+<td>16-bit RGB channels.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_ARGBw</em></td>
+<td>16-bit RGB channels with 16-bit alpha.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_MASKw</em></td>
+<td>16-bit grayscale map as mask with 16-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_ILLEGALf</em></td>
+<td>Illegal 32-bit mode.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_GRAYf</em></td>
+<td>32-bit floating point grayscale channel.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_AGRAYf</em></td>
+<td>32-bit floating point grayscale channel with floating point alpha.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_RGBf</em></td>
+<td>32-bit floating point RGB channels.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_ARGBf</em></td>
+<td>32-bit floating point RGB channels with floating point alpha.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_MASKf</em></td>
+<td>32-bit floating point grayscale map as mask.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="#c4d.bitmaps.MultipassBitmap" title="c4d.bitmaps.MultipassBitmap">c4d.bitmaps.MultipassBitmap</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The added alpha layer or <strong>None</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MultipassBitmap.AddFolder">
+<code class="descclassname">MultipassBitmap.</code><code class="descname">AddFolder</code><span class="sig-paren">(</span><em>self</em>, <em>insertafter</em>, <em>hidden=False</em><span class="sig-paren">)</span><a class="headerlink" href="#MultipassBitmap.AddFolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a folder after <em>insertafter</em> in the bitmap.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>insertafter</strong> (<a class="reference internal" href="#c4d.bitmaps.MultipassBitmap" title="c4d.bitmaps.MultipassBitmap"><em>c4d.bitmaps.MultipassBitmap</em></a>) – The layer to insert after.</li>
+<li><strong>hidden</strong> (<em>bool</em>) – If this is <strong>True</strong>, the layer is hidden.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="#c4d.bitmaps.MultipassBitmap" title="c4d.bitmaps.MultipassBitmap">c4d.bitmaps.MultipassBitmap</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The added folder or <strong>None</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MultipassBitmap.AddLayer">
+<code class="descclassname">MultipassBitmap.</code><code class="descname">AddLayer</code><span class="sig-paren">(</span><em>self</em>, <em>insertafter</em>, <em>colormode</em>, <em>hidden=False</em><span class="sig-paren">)</span><a class="headerlink" href="#MultipassBitmap.AddLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a layer after <em>insertafter</em> with mode <em>colormode</em> after <em>insertafter</em> in the bitmap.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>insertafter</strong> (<a class="reference internal" href="#c4d.bitmaps.MultipassBitmap" title="c4d.bitmaps.MultipassBitmap"><em>c4d.bitmaps.MultipassBitmap</em></a>) – The layer to insert after.</li>
+<li><strong>colormode</strong> (<em>int</em>) – <p>Color mode of the new layer:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>COLORMODE_ILLEGAL</em></td>
+<td>Illegal 8-bit mode.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_ALPHA</em></td>
+<td>Only 8-bit alpha channel.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_GRAY</em></td>
+<td>8-bit grayscale channel.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_AGRAY</em></td>
+<td>8-bit grayscale channel with 8-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_RGB</em></td>
+<td>8-bit RGB channels.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_ARGB</em></td>
+<td>8-bit RGB channels with 8-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_CMYK</em></td>
+<td>8-bit CMYK channel.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_ACMYK</em></td>
+<td>8-bit CMYK channel with 8-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_MASK</em></td>
+<td>8-bit grayscale map as mask.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_AMASK</em></td>
+<td>8-bit grayscale map as mask with 8-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_ILLEGALw</em></td>
+<td>Illegal 16-bit mode.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_GRAYw</em></td>
+<td>16-bit grayscale channel.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_AGRAYw</em></td>
+<td>16-bit grayscale channel with 16-bit alpha.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_RGBw</em></td>
+<td>16-bit RGB channels.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_ARGBw</em></td>
+<td>16-bit RGB channels with 16-bit alpha.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_MASKw</em></td>
+<td>16-bit grayscale map as mask with 16-bit alpha.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_ILLEGALf</em></td>
+<td>Illegal 32-bit mode.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_GRAYf</em></td>
+<td>32-bit floating point grayscale channel.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_AGRAYf</em></td>
+<td>32-bit floating point grayscale channel with floating point alpha.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_RGBf</em></td>
+<td>32-bit floating point RGB channels.</td>
+</tr>
+<tr class="row-odd"><td><em>COLORMODE_ARGBf</em></td>
+<td>32-bit floating point RGB channels with floating point alpha.</td>
+</tr>
+<tr class="row-even"><td><em>COLORMODE_MASKf</em></td>
+<td>32-bit floating point grayscale map as mask.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>hidden</strong> (<em>bool</em>) – If this is <strong>True</strong>, the layer is hidden.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MultipassBitmap.GetHiddneLayerNum">
+<code class="descclassname">MultipassBitmap.</code><code class="descname">GetHiddneLayerNum</code><span class="sig-paren">(</span><em>self</em>, <em>num</em><span class="sig-paren">)</span><a class="headerlink" href="#MultipassBitmap.GetHiddneLayerNum" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version R21.204: </span>Use <a class="reference internal" href="#MultipassBitmap.GetHiddenLayerNum" title="MultipassBitmap.GetHiddenLayerNum"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MultipassBitmap.GetHiddenLayerNum()</span></code></a> instead.</p>
+</div>
+<p>Gets the hidden layer with number <em>num</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>num</strong> (<em>int</em>) – Hidden layer index, <em>0</em> &lt;= <em>num</em> &lt; <a class="reference internal" href="#MultipassBitmap.GetHiddenLayerCount" title="MultipassBitmap.GetHiddenLayerCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetHiddenLayerCount()</span></code></a>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.bitmaps.MultipassBitmap" title="c4d.bitmaps.MultipassBitmap">c4d.bitmaps.MultipassBitmap</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The retrieved layer, or <strong>None</strong> if the operation failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MultipassBitmap.ClearImageData">
+<code class="descclassname">MultipassBitmap.</code><code class="descname">ClearImageData</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#MultipassBitmap.ClearImageData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears the image data for all layers.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The layers themselves are not removed or deleted.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="MultipassBitmap.DeleteLayer">
+<code class="descclassname">MultipassBitmap.</code><code class="descname">DeleteLayer</code><span class="sig-paren">(</span><em>self</em>, <em>layer</em><span class="sig-paren">)</span><a class="headerlink" href="#MultipassBitmap.DeleteLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes <em>layer</em> from the bitmap, freeing the memory.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>layer</strong> (<a class="reference internal" href="#c4d.bitmaps.MultipassBitmap" title="c4d.bitmaps.MultipassBitmap"><em>c4d.bitmaps.MultipassBitmap</em></a>) – The layer to delete. Never access this reference afterwards.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MultipassBitmap.FindUserID">
+<code class="descclassname">MultipassBitmap.</code><code class="descname">FindUserID</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>subid=0</em><span class="sig-paren">)</span><a class="headerlink" href="#MultipassBitmap.FindUserID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds a layer in the bitmap by ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>int</em>) – Main layer ID.</li>
+<li><strong>subid</strong> (<em>int</em>) – Sub ID.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="#c4d.bitmaps.MultipassBitmap" title="c4d.bitmaps.MultipassBitmap">c4d.bitmaps.MultipassBitmap</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The found layer or <strong>None</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MultipassBitmap.FreeHiddenLayers">
+<code class="descclassname">MultipassBitmap.</code><code class="descname">FreeHiddenLayers</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#MultipassBitmap.FreeHiddenLayers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Free the hidden layers.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="MultipassBitmap.GetPaintBitmap">
+<code class="descclassname">MultipassBitmap.</code><code class="descname">GetPaintBitmap</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#MultipassBitmap.GetPaintBitmap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a BodyPaint 3D paint bitmap for the multipass bitmap.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d.modules/bodypaint/PaintBitmap/index.html#c4d.modules.bodypaint.PaintBitmap" title="c4d.modules.bodypaint.PaintBitmap">c4d.modules.bodypaint.PaintBitmap</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The paint bitmap.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MultipassBitmap.GetAlphaLayerCount">
+<code class="descclassname">MultipassBitmap.</code><code class="descname">GetAlphaLayerCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#MultipassBitmap.GetAlphaLayerCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the number of alpha layers in the bitmap.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Alpha layer count.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MultipassBitmap.GetHiddenLayerCount">
+<code class="descclassname">MultipassBitmap.</code><code class="descname">GetHiddenLayerCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#MultipassBitmap.GetHiddenLayerCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the number of hidden layers in the bitmap.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Hidden layer count.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MultipassBitmap.GetLayerCount">
+<code class="descclassname">MultipassBitmap.</code><code class="descname">GetLayerCount</code><span class="sig-paren">(</span><em>self</em>, <em>num</em><span class="sig-paren">)</span><a class="headerlink" href="#MultipassBitmap.GetLayerCount" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Retrieves the number of layers in the bitmap.</div>
+<div class="line">This is the sum of the number of layers, folders and alphas that are direct children of this bitmap.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>num</strong> (<em>int</em>) – Hidden layer index, <em>0</em> &lt;= <em>num</em> &lt; <a class="reference internal" href="#MultipassBitmap.GetHiddenLayerCount" title="MultipassBitmap.GetHiddenLayerCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetHiddenLayerCount()</span></code></a>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Layer count.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MultipassBitmap.GetLayers">
+<code class="descclassname">MultipassBitmap.</code><code class="descname">GetLayers</code><span class="sig-paren">(</span><em>self</em>, <em>flags=MPB_GETLAYERS_IMAGE|MPB_GETLAYERS_ALPHA</em><span class="sig-paren">)</span><a class="headerlink" href="#MultipassBitmap.GetLayers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets all the layers specified by <em>flags</em>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R14.014.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>flags</strong> (<em>int</em>) – <p>Flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="55%" />
+<col width="45%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>MPB_GETLAYERS_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>MPB_GETLAYERS_ALPHA</em></td>
+<td>Get alpha layers.</td>
+</tr>
+<tr class="row-odd"><td><em>MPB_GETLAYERS_IMAGE</em></td>
+<td>Get image layers.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list[<a class="reference internal" href="../index.html#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap">c4d.bitmaps.BaseBitmap</a>]</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The layers.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MultipassBitmap.GetAlphaLayerNum">
+<code class="descclassname">MultipassBitmap.</code><code class="descname">GetAlphaLayerNum</code><span class="sig-paren">(</span><em>self</em>, <em>num</em><span class="sig-paren">)</span><a class="headerlink" href="#MultipassBitmap.GetAlphaLayerNum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the alpha layer with number <em>num</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>num</strong> (<em>int</em>) – Alpha layer index, <em>0</em> &lt;= <em>num</em> &lt; <a class="reference internal" href="#MultipassBitmap.GetAlphaLayerCount" title="MultipassBitmap.GetAlphaLayerCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetAlphaLayerCount()</span></code></a>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.bitmaps.MultipassBitmap" title="c4d.bitmaps.MultipassBitmap">c4d.bitmaps.MultipassBitmap</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The retrieved layer, or <strong>None</strong> if the operation failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MultipassBitmap.GetHiddenLayerNum">
+<code class="descclassname">MultipassBitmap.</code><code class="descname">GetHiddenLayerNum</code><span class="sig-paren">(</span><em>self</em>, <em>num</em><span class="sig-paren">)</span><a class="headerlink" href="#MultipassBitmap.GetHiddenLayerNum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the hidden layer with number <em>num</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>num</strong> (<em>int</em>) – Hidden layer index, <em>0</em> &lt;= <em>num</em> &lt; <a class="reference internal" href="#MultipassBitmap.GetHiddenLayerCount" title="MultipassBitmap.GetHiddenLayerCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetHiddenLayerCount()</span></code></a>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.bitmaps.MultipassBitmap" title="c4d.bitmaps.MultipassBitmap">c4d.bitmaps.MultipassBitmap</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The retrieved layer, or <strong>None</strong> if the operation failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MultipassBitmap.GetLayerNum">
+<code class="descclassname">MultipassBitmap.</code><code class="descname">GetLayerNum</code><span class="sig-paren">(</span><em>self</em>, <em>num</em><span class="sig-paren">)</span><a class="headerlink" href="#MultipassBitmap.GetLayerNum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the layer with number <em>num</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>num</strong> (<em>int</em>) – Layer index, <em>0</em> &lt;= <em>num</em> &lt; <a class="reference internal" href="#MultipassBitmap.GetLayerCount" title="MultipassBitmap.GetLayerCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetLayerCount()</span></code></a>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.bitmaps.MultipassBitmap" title="c4d.bitmaps.MultipassBitmap">c4d.bitmaps.MultipassBitmap</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The retrieved layer, or <strong>None</strong> if the operation failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MultipassBitmap.GetParameter">
+<code class="descclassname">MultipassBitmap.</code><code class="descname">GetParameter</code><span class="sig-paren">(</span><em>self</em>, <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#MultipassBitmap.GetParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a layer parameter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id</strong> (<em>int</em>) – <p>The layer parameter ID:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="3%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>MPBTYPE_SHOW</em></td>
+<td>bool</td>
+<td>Determines if the layer will be shown in the external render window. (The Cinema 4D renderer modifies this value itself.)</td>
+</tr>
+<tr class="row-even"><td><em>MPBTYPE_SAVE</em></td>
+<td>bool</td>
+<td>Determines if the layer is saved with the image or not if <em>SAVEBIT_USESELECTEDLAYERS</em> is used.</td>
+</tr>
+<tr class="row-odd"><td><em>MPBTYPE_PERCENT</em></td>
+<td>float</td>
+<td>The blend parameter, between <cite>0.0</cite> and <cite>1.0</cite>.</td>
+</tr>
+<tr class="row-even"><td><em>MPBTYPE_BLENDMODE</em></td>
+<td>int</td>
+<td>The blend mode. (<cite>LAYER_NORMAL</cite>, <cite>LAYER_DISSOLVE</cite> etc. from  from <cite>bplayer.h.</cite>)</td>
+</tr>
+<tr class="row-odd"><td><em>MPBTYPE_COLORMODE</em></td>
+<td>int</td>
+<td>The color mode: See <a class="reference internal" href="../../../../consts/COLORMODE.html"><span class="doc">COLORMODE</span></a>.</td>
+</tr>
+<tr class="row-even"><td><em>MPBTYPE_BITMAPTYPE</em></td>
+<td>int</td>
+<td>The bitmap type. Cannot be set with <a class="reference internal" href="#MultipassBitmap.SetParameter" title="MultipassBitmap.SetParameter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MultipassBitmap.SetParameter()</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>MPBTYPE_NAME</em></td>
+<td>str</td>
+<td>The layer name. Only a <a class="reference internal" href="../../../c4d.modules/bodypaint/PaintBitmap/PaintLayer/PaintLayerBmp/index.html#c4d.modules.bodypaint.PaintLayerBmp" title="c4d.modules.bodypaint.PaintLayerBmp"><code class="xref py py-class docutils literal notranslate"><span class="pre">PaintLayerBmp</span></code></a> or <a class="reference internal" href="../../../c4d.modules/bodypaint/PaintBitmap/PaintLayer/PaintLayerFolder/index.html#c4d.modules.bodypaint.PaintLayerFolder" title="c4d.modules.bodypaint.PaintLayerFolder"><code class="xref py py-class docutils literal notranslate"><span class="pre">PaintLayerFolder</span></code></a> can have a name.</td>
+</tr>
+<tr class="row-even"><td><em>MPBTYPE_DPI</em></td>
+<td>int</td>
+<td>The resolution in DPI. <strong>Private.</strong></td>
+</tr>
+<tr class="row-odd"><td><em>MPBTYPE_USERID</em></td>
+<td>int</td>
+<td>The user ID for the layer. In the renderer this is <cite>VPBUFFER_xxx</cite>.</td>
+</tr>
+<tr class="row-even"><td><em>MPBTYPE_USERSUBID</em></td>
+<td>int</td>
+<td>The user sub-ID for the layer. In the renderer this is used for blend channels for instance.</td>
+</tr>
+<tr class="row-odd"><td><em>MPBTYPE_FORCEBLEND</em></td>
+<td>int</td>
+<td>The special mode used to force blend layers.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Any</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The retrieved layer parameter data. Can be <strong>None</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MultipassBitmap.SetParameter">
+<code class="descclassname">MultipassBitmap.</code><code class="descname">SetParameter</code><span class="sig-paren">(</span><em>self</em>, <em>id</em>, <em>t_data</em><span class="sig-paren">)</span><a class="headerlink" href="#MultipassBitmap.SetParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a layer parameter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>int</em>) – <p>The layer parameter ID:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="3%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>MPBTYPE_SHOW</em></td>
+<td>bool</td>
+<td>Determines if the layer will be shown in the external render window. (The Cinema 4D renderer modifies this value itself.)</td>
+</tr>
+<tr class="row-even"><td><em>MPBTYPE_SAVE</em></td>
+<td>bool</td>
+<td>Determines if the layer is saved with the image or not if <em>SAVEBIT_USESELECTEDLAYERS</em> is used.</td>
+</tr>
+<tr class="row-odd"><td><em>MPBTYPE_PERCENT</em></td>
+<td>float</td>
+<td>The blend parameter, between <cite>0.0</cite> and <cite>1.0</cite>.</td>
+</tr>
+<tr class="row-even"><td><em>MPBTYPE_BLENDMODE</em></td>
+<td>int</td>
+<td>The blend mode. (<cite>LAYER_NORMAL</cite>, <cite>LAYER_DISSOLVE</cite> etc. from  from <cite>bplayer.h.</cite>)</td>
+</tr>
+<tr class="row-odd"><td><em>MPBTYPE_COLORMODE</em></td>
+<td>int</td>
+<td>The color mode: See <a class="reference internal" href="../../../../consts/COLORMODE.html"><span class="doc">COLORMODE</span></a>.</td>
+</tr>
+<tr class="row-even"><td><em>MPBTYPE_BITMAPTYPE</em></td>
+<td>int</td>
+<td>The bitmap type. Cannot be set with <a class="reference internal" href="#MultipassBitmap.SetParameter" title="MultipassBitmap.SetParameter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MultipassBitmap.SetParameter()</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><em>MPBTYPE_NAME</em></td>
+<td>str</td>
+<td>The layer name. Only a <a class="reference internal" href="../../../c4d.modules/bodypaint/PaintBitmap/PaintLayer/PaintLayerBmp/index.html#c4d.modules.bodypaint.PaintLayerBmp" title="c4d.modules.bodypaint.PaintLayerBmp"><code class="xref py py-class docutils literal notranslate"><span class="pre">PaintLayerBmp</span></code></a> or <a class="reference internal" href="../../../c4d.modules/bodypaint/PaintBitmap/PaintLayer/PaintLayerFolder/index.html#c4d.modules.bodypaint.PaintLayerFolder" title="c4d.modules.bodypaint.PaintLayerFolder"><code class="xref py py-class docutils literal notranslate"><span class="pre">PaintLayerFolder</span></code></a> can have a name.</td>
+</tr>
+<tr class="row-even"><td><em>MPBTYPE_DPI</em></td>
+<td>int</td>
+<td>The resolution in DPI. <strong>Private.</strong></td>
+</tr>
+<tr class="row-odd"><td><em>MPBTYPE_USERID</em></td>
+<td>int</td>
+<td>The user ID for the layer. In the renderer this is <cite>VPBUFFER_xxx</cite>.</td>
+</tr>
+<tr class="row-even"><td><em>MPBTYPE_USERSUBID</em></td>
+<td>int</td>
+<td>The user sub-ID for the layer. In the renderer this is used for blend channels for instance.</td>
+</tr>
+<tr class="row-odd"><td><em>MPBTYPE_FORCEBLEND</em></td>
+<td>int</td>
+<td>The special mode used to force blend layers.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>t_data</strong> (<em>any</em>) – The new parameter data.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">Any</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the layer parameter was successfully set, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+<p class="rubric">Static Methods Documentation</p>
+<p><dl class="staticmethod">
+<dt id="c4d.bitmaps.MultipassBitmap.AllocWrapper">
+<em class="property">static </em><code class="descclassname">c4d.bitmaps.MultipassBitmap.</code><code class="descname">AllocWrapper</code><span class="sig-paren">(</span><em>self</em>, <em>bmp</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.bitmaps.MultipassBitmap.AllocWrapper" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Allocates a multipass wrapper for bmp.</div>
+<div class="line">The returned multipass wrapper can be modified freely since the initial bmp is copied.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>bmp</strong> (<a class="reference internal" href="../index.html#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap"><em>c4d.bitmaps.BaseBitmap</em></a>) – The bitmap to wrap. The caller owns the pointed bitmap.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.bitmaps.MultipassBitmap" title="c4d.bitmaps.MultipassBitmap">MultipassBitmap</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The allocated MultipassBitmap, or None if the allocation failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../RESOURCEIMAGE.html" title="Icons list"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="c4d.bitmaps.BaseBitmap"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.bitmaps</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.bitmaps.BaseBitmap</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

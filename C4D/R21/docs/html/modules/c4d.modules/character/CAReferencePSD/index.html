@@ -1,0 +1,394 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.character.CAReferencePSD &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.modules.character.CAWeightMgr" href="../CAWeightMgr/index.html" />
+    <link rel="prev" title="c4d.modules.character.CAJointObject" href="../CAJointObject/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../CAWeightMgr/index.html" title="c4d.modules.character.CAWeightMgr"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../CAJointObject/index.html" title="c4d.modules.character.CAJointObject"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.modules.character</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-character-careferencepsd">
+<h1>c4d.modules.character.CAReferencePSD<a class="headerlink" href="#c4d-modules-character-careferencepsd" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.character.CAReferencePSD">
+<em class="property">class </em><code class="descclassname">c4d.modules.character.</code><code class="descname">CAReferencePSD</code><a class="headerlink" href="#c4d.modules.character.CAReferencePSD" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Allows to access the PSD referential data and functions.</div>
+<div class="line">Only used with a point pose in PSD Mode.</div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#CAReferencePSD.SetInterpolationMode" title="CAReferencePSD.SetInterpolationMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAReferencePSD.SetInterpolationMode(self,</span> <span class="pre">interpMode)</span></code></a></td>
+<td>Sets the auto weighting interpolation mode.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAReferencePSD.GetInterpolationMode" title="CAReferencePSD.GetInterpolationMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAReferencePSD.GetInterpolationMode(self)</span></code></a></td>
+<td>Returns the auto weighting interpolation mode.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAReferencePSD.ForceJointAsDriver" title="CAReferencePSD.ForceJointAsDriver"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAReferencePSD.ForceJointAsDriver(self,</span> <span class="pre">jointIndex,</span> <span class="pre">...)</span></code></a></td>
+<td>Forces the joint index to be a driver.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAReferencePSD.IsJointForcedAsDriver" title="CAReferencePSD.IsJointForcedAsDriver"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAReferencePSD.IsJointForcedAsDriver(self,</span> <span class="pre">jointIndex)</span></code></a></td>
+<td>Checks if the joint index is a user forced driver.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAReferencePSD.ClearAllForcedDrivers" title="CAReferencePSD.ClearAllForcedDrivers"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAReferencePSD.ClearAllForcedDrivers(self)</span></code></a></td>
+<td>Removes all user defined joint as driver and let the system manage it automatically.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAReferencePSD.RestoreReferencePose" title="CAReferencePSD.RestoreReferencePose"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAReferencePSD.RestoreReferencePose(self)</span></code></a></td>
+<td>Displays skeleton and user defined controller at the reference pose.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAReferencePSD.UpdateReferencePose" title="CAReferencePSD.UpdateReferencePose"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAReferencePSD.UpdateReferencePose(self)</span></code></a></td>
+<td>Updates the current skeleton state as the PSD reference pose.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAReferencePSD.ClearAllExternalControllers" title="CAReferencePSD.ClearAllExternalControllers"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAReferencePSD.ClearAllExternalControllers(self)</span></code></a></td>
+<td>Removes all external controllers assigned to the reference pose.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAReferencePSD.GetExternalControllerCount" title="CAReferencePSD.GetExternalControllerCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAReferencePSD.GetExternalControllerCount(self)</span></code></a></td>
+<td>Return the number of external controllers associated with the reference pose.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAReferencePSD.GetExternalController" title="CAReferencePSD.GetExternalController"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAReferencePSD.GetExternalController(self,</span> <span class="pre">controllerIndex)</span></code></a></td>
+<td>Returns the controller assigned to the given index.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAReferencePSD.GetExternalControllerMatrix" title="CAReferencePSD.GetExternalControllerMatrix"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAReferencePSD.GetExternalControllerMatrix(self,</span> <span class="pre">controllerIndex)</span></code></a></td>
+<td>Returns the matrix stored at the given index.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAReferencePSD.SetExternalControllerMatrix" title="CAReferencePSD.SetExternalControllerMatrix"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAReferencePSD.SetExternalControllerMatrix(self,</span> <span class="pre">controllerIndex,</span> <span class="pre">...)</span></code></a></td>
+<td>Adds or adjusts the given controller global matrix to be part of the reference pose.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAReferencePSD.RemoveExternalController" title="CAReferencePSD.RemoveExternalController"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAReferencePSD.RemoveExternalController(self,</span> <span class="pre">controllerIndex)</span></code></a></td>
+<td>Removes the external controller at the given index.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="CAReferencePSD.SetInterpolationMode">
+<code class="descclassname">CAReferencePSD.</code><code class="descname">SetInterpolationMode</code><span class="sig-paren">(</span><em>self</em>, <em>interpMode</em><span class="sig-paren">)</span><a class="headerlink" href="#CAReferencePSD.SetInterpolationMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the auto weighting interpolation mode.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>interpMode</strong> (<em>int</em>) – <p>The interpolation mode to set:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="46%" />
+<col width="54%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>CAMORPH_PSDINTERPOLATION_MODE_AXIS</em></td>
+<td>Per joint axis.</td>
+</tr>
+<tr class="row-even"><td><em>CAMORPH_PSDINTERPOLATION_MODE_JOINT</em></td>
+<td>Per joint interpolation (joint axis average).</td>
+</tr>
+<tr class="row-odd"><td><em>CAMORPH_PSDINTERPOLATION_MODE_GLOBAL</em></td>
+<td>Use one global value (joint average).</td>
+</tr>
+<tr class="row-even"><td><em>CAMORPH_PSDINTERPOLATION_MODE_DEFAULT</em></td>
+<td>Default.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAReferencePSD.GetInterpolationMode">
+<code class="descclassname">CAReferencePSD.</code><code class="descname">GetInterpolationMode</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAReferencePSD.GetInterpolationMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the auto weighting interpolation mode.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The interpolation mode:<table border="1" class="docutils">
+<colgroup>
+<col width="46%" />
+<col width="54%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>CAMORPH_PSDINTERPOLATION_MODE_AXIS</em></td>
+<td>Per joint axis.</td>
+</tr>
+<tr class="row-even"><td><em>CAMORPH_PSDINTERPOLATION_MODE_JOINT</em></td>
+<td>Per joint interpolation (joint axis average).</td>
+</tr>
+<tr class="row-odd"><td><em>CAMORPH_PSDINTERPOLATION_MODE_GLOBAL</em></td>
+<td>Use one global value (joint average).</td>
+</tr>
+<tr class="row-even"><td><em>CAMORPH_PSDINTERPOLATION_MODE_DEFAULT</em></td>
+<td>Default.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAReferencePSD.ForceJointAsDriver">
+<code class="descclassname">CAReferencePSD.</code><code class="descname">ForceJointAsDriver</code><span class="sig-paren">(</span><em>self</em>, <em>jointIndex</em>, <em>forceDriver</em><span class="sig-paren">)</span><a class="headerlink" href="#CAReferencePSD.ForceJointAsDriver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Forces the joint index to be a driver.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If any of the joints is marked as a forced driver, only those are considered in automatic weighting.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>jointIndex</strong> (<em>int</em>) – The weight tag joint index to use as driver.</li>
+<li><strong>forceDriver</strong> (<em>bool</em>) – <strong>True</strong> if the joint is used as a driver, otherwise <strong>False</strong>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAReferencePSD.IsJointForcedAsDriver">
+<code class="descclassname">CAReferencePSD.</code><code class="descname">IsJointForcedAsDriver</code><span class="sig-paren">(</span><em>self</em>, <em>jointIndex</em><span class="sig-paren">)</span><a class="headerlink" href="#CAReferencePSD.IsJointForcedAsDriver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the joint index is a user forced driver.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If any of the joints is marked as a forced driver, only those are considered in automatic weighting.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>jointIndex</strong> (<em>int</em>) – The weight tag joint index to use as driver.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the joint is forced as a driver, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAReferencePSD.ClearAllForcedDrivers">
+<code class="descclassname">CAReferencePSD.</code><code class="descname">ClearAllForcedDrivers</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAReferencePSD.ClearAllForcedDrivers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes all user defined joint as driver and let the system manage it automatically.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAReferencePSD.RestoreReferencePose">
+<code class="descclassname">CAReferencePSD.</code><code class="descname">RestoreReferencePose</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAReferencePSD.RestoreReferencePose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays skeleton and user defined controller at the reference pose.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAReferencePSD.UpdateReferencePose">
+<code class="descclassname">CAReferencePSD.</code><code class="descname">UpdateReferencePose</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAReferencePSD.UpdateReferencePose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the current skeleton state as the PSD reference pose.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAReferencePSD.ClearAllExternalControllers">
+<code class="descclassname">CAReferencePSD.</code><code class="descname">ClearAllExternalControllers</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAReferencePSD.ClearAllExternalControllers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes all external controllers assigned to the reference pose.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAReferencePSD.GetExternalControllerCount">
+<code class="descclassname">CAReferencePSD.</code><code class="descname">GetExternalControllerCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAReferencePSD.GetExternalControllerCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of external controllers associated with the reference pose.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The external controller count.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAReferencePSD.GetExternalController">
+<code class="descclassname">CAReferencePSD.</code><code class="descname">GetExternalController</code><span class="sig-paren">(</span><em>self</em>, <em>controllerIndex</em><span class="sig-paren">)</span><a class="headerlink" href="#CAReferencePSD.GetExternalController" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the controller assigned to the given index.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>controllerIndex</strong> (<em>int</em>) – The controller index: <cite>0</cite> &lt;= <em>controllerIndex</em> &lt; <a class="reference internal" href="#CAReferencePSD.GetExternalControllerCount" title="CAReferencePSD.GetExternalControllerCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetExternalControllerCount()</span></code></a>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject">c4d.BaseObject</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The external controller, or <strong>None</strong> if the function failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAReferencePSD.GetExternalControllerMatrix">
+<code class="descclassname">CAReferencePSD.</code><code class="descname">GetExternalControllerMatrix</code><span class="sig-paren">(</span><em>self</em>, <em>controllerIndex</em><span class="sig-paren">)</span><a class="headerlink" href="#CAReferencePSD.GetExternalControllerMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the matrix stored at the given index.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>controllerIndex</strong> (<em>int</em>) – The controller index: <cite>0</cite> &lt;= <em>controllerIndex</em> &lt; <a class="reference internal" href="#CAReferencePSD.GetExternalControllerCount" title="CAReferencePSD.GetExternalControllerCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetExternalControllerCount()</span></code></a>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix">c4d.Matrix</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The external controller global matrix, or a default <a class="reference internal" href="../../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Matrix()</span></code></a> if the function failed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAReferencePSD.SetExternalControllerMatrix">
+<code class="descclassname">CAReferencePSD.</code><code class="descname">SetExternalControllerMatrix</code><span class="sig-paren">(</span><em>self</em>, <em>controllerIndex</em>, <em>globalMatrix</em><span class="sig-paren">)</span><a class="headerlink" href="#CAReferencePSD.SetExternalControllerMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds or adjusts the given controller global matrix to be part of the reference pose.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>controllerIndex</strong> (<em>int</em>) – The controller index: <cite>0</cite> &lt;= <em>controllerIndex</em> &lt; <a class="reference internal" href="#CAReferencePSD.GetExternalControllerCount" title="CAReferencePSD.GetExternalControllerCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetExternalControllerCount()</span></code></a>.</li>
+<li><strong>globalMatrix</strong> (<a class="reference internal" href="../../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><em>c4d.Matrix</em></a>) – The global matrix used as a reference.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The index of the controller, <strong>NOTOK</strong>/<strong>-1</strong> if invalid.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAReferencePSD.RemoveExternalController">
+<code class="descclassname">CAReferencePSD.</code><code class="descname">RemoveExternalController</code><span class="sig-paren">(</span><em>self</em>, <em>controllerIndex</em><span class="sig-paren">)</span><a class="headerlink" href="#CAReferencePSD.RemoveExternalController" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the external controller at the given index.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>controllerIndex</strong> (<em>int</em>) – The controller index: <cite>0</cite> &lt;= <em>controllerIndex</em> &lt; <a class="reference internal" href="#CAReferencePSD.GetExternalControllerCount" title="CAReferencePSD.GetExternalControllerCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetExternalControllerCount()</span></code></a>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../CAWeightMgr/index.html" title="c4d.modules.character.CAWeightMgr"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../CAJointObject/index.html" title="c4d.modules.character.CAJointObject"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.modules.character</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

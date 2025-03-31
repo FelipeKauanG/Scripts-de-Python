@@ -1,0 +1,945 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>maxon.frameworks.volume.VolumeToolsInterface &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="maxon.frameworks.volume.GridAccessorRef" href="../reference/maxon.frameworks.volume.GridAccessorRef.html" />
+    <link rel="prev" title="maxon.frameworks.volume.VolumeInterface" href="maxon.frameworks.volume.VolumeInterface.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../reference/maxon.frameworks.volume.GridAccessorRef.html" title="maxon.frameworks.volume.GridAccessorRef"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="maxon.frameworks.volume.VolumeInterface.html" title="maxon.frameworks.volume.VolumeInterface"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../../maxon/frameworks.html" >MAXON API - Frameworks</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../../../maxon/frameworks/volume.html" accesskey="U">The Volume Framework</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="maxon-frameworks-volume-volumetoolsinterface">
+<h1>maxon.frameworks.volume.VolumeToolsInterface<a class="headerlink" href="#maxon-frameworks-volume-volumetoolsinterface" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-maxon.frameworks.volume.VolumeToolsInterface">
+<span id="description"></span><h2>Description<a class="headerlink" href="#module-maxon.frameworks.volume.VolumeToolsInterface" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="#module-maxon.frameworks.volume.VolumeToolsInterface" title="maxon.frameworks.volume.VolumeToolsInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeToolsInterface</span></code></a> provides methods to process volumes.</p>
+</div>
+<div class="section" id="inheritance-diagram">
+<h2>Inheritance diagram<a class="headerlink" href="#inheritance-diagram" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="methods-signature">
+<h2>Methods Signature<a class="headerlink" href="#methods-signature" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.ApplyFilterToVolume" title="maxon.frameworks.volume.VolumeToolsInterface.ApplyFilterToVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ApplyFilterToVolume</span></code></a>(volume,&nbsp;filterType,&nbsp;thread)</td>
+<td>Applies a filter operation to any volume.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.ApplySDFFilterToVolume" title="maxon.frameworks.volume.VolumeToolsInterface.ApplySDFFilterToVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ApplySDFFilterToVolume</span></code></a>(volume,&nbsp;filterType,&nbsp;…)</td>
+<td>Applies a filter operation to a SDF volume.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.BoolVolumes" title="maxon.frameworks.volume.VolumeToolsInterface.BoolVolumes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BoolVolumes</span></code></a>(voumeOne,&nbsp;volumeTwo,&nbsp;type)</td>
+<td>Bools two SDF volumes into one with a given bool type of <code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.BOOLTYPE</span></code>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.ConvertFogToSDF" title="maxon.frameworks.volume.VolumeToolsInterface.ConvertFogToSDF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConvertFogToSDF</span></code></a>(volume,&nbsp;iso,&nbsp;thread)</td>
+<td>Convert a fog Volume to a SDF volume.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.ConvertSDFToFog" title="maxon.frameworks.volume.VolumeToolsInterface.ConvertSDFToFog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConvertSDFToFog</span></code></a>(volume,&nbsp;cutoff)</td>
+<td>Convert a SDF Volume to a fog volume.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.ConvertVectorToFog" title="maxon.frameworks.volume.VolumeToolsInterface.ConvertVectorToFog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConvertVectorToFog</span></code></a>(volume,&nbsp;thread)</td>
+<td>Convert a vector volume to a fog volume.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.CreateCurlVolume" title="maxon.frameworks.volume.VolumeToolsInterface.CreateCurlVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateCurlVolume</span></code></a>(volume,&nbsp;thread)</td>
+<td>Creates a vector volume representing the curl of a vector volume.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.CreateGradientVolume" title="maxon.frameworks.volume.VolumeToolsInterface.CreateGradientVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateGradientVolume</span></code></a>(volume,&nbsp;thread)</td>
+<td>Creates a gradient volume from a numeric volume.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.CreateMeanCurvatureVolume" title="maxon.frameworks.volume.VolumeToolsInterface.CreateMeanCurvatureVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateMeanCurvatureVolume</span></code></a>(*args)</td>
+<td>NormalizeVectorVolume(volume, thread) Creates a curvature volume from a numeric volume.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.CreateNewFloat32Volume" title="maxon.frameworks.volume.VolumeToolsInterface.CreateNewFloat32Volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateNewFloat32Volume</span></code></a>(background)</td>
+<td>Creates a new float volume with default transform.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.CreateNewVector32Volume" title="maxon.frameworks.volume.VolumeToolsInterface.CreateNewVector32Volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateNewVector32Volume</span></code></a>(background)</td>
+<td>Creates a new float vector volume with default transform.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.CreatePlatonicVolume" title="maxon.frameworks.volume.VolumeToolsInterface.CreatePlatonicVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreatePlatonicVolume</span></code></a>(sides,&nbsp;size,&nbsp;position,&nbsp;…)</td>
+<td>Creates a SDF volume of a platonic shape.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.CreateSphereVolume" title="maxon.frameworks.volume.VolumeToolsInterface.CreateSphereVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateSphereVolume</span></code></a>(radius,&nbsp;position,&nbsp;…[,&nbsp;…])</td>
+<td>Creates a SDF volume of a spherical shape.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.GetGridNamesFromFile" title="maxon.frameworks.volume.VolumeToolsInterface.GetGridNamesFromFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetGridNamesFromFile</span></code></a>(filename)</td>
+<td>Read and return the gridnames from a .vdb file.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.GetMetaDataFromFile" title="maxon.frameworks.volume.VolumeToolsInterface.GetMetaDataFromFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetMetaDataFromFile</span></code></a>(filename)</td>
+<td>Read and return the metadata from a .vdb file.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.LoadAllGridsIntoVolumes" title="maxon.frameworks.volume.VolumeToolsInterface.LoadAllGridsIntoVolumes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LoadAllGridsIntoVolumes</span></code></a>(filename,&nbsp;scale,&nbsp;…)</td>
+<td>Loads all grids into a list of volumes from a .vdb file.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.LoadGridIntoVolume" title="maxon.frameworks.volume.VolumeToolsInterface.LoadGridIntoVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LoadGridIntoVolume</span></code></a>(filename,&nbsp;scale,&nbsp;…)</td>
+<td>Loads a grid into a volume from a .vdb file.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.LoadVDBFile" title="maxon.frameworks.volume.VolumeToolsInterface.LoadVDBFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LoadVDBFile</span></code></a>(filename,&nbsp;scale,&nbsp;gridNames,&nbsp;…)</td>
+<td>Loads volumes from a .vdb file.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.MeshToVolume" title="maxon.frameworks.volume.VolumeToolsInterface.MeshToVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MeshToVolume</span></code></a>(vertices,&nbsp;polygons,&nbsp;…[,&nbsp;…])</td>
+<td>Converts a polygon object to a SDF volume.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.MixVectorVolumes" title="maxon.frameworks.volume.VolumeToolsInterface.MixVectorVolumes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MixVectorVolumes</span></code></a>(volumeOne,&nbsp;volumeTwo,&nbsp;type)</td>
+<td>Mix two volumes into one with a given mix type of <code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.MIXVECTORTYPE</span></code>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.MixVolumes" title="maxon.frameworks.volume.VolumeToolsInterface.MixVolumes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MixVolumes</span></code></a>(volumeOne,&nbsp;volumeTwo,&nbsp;type)</td>
+<td>Mix two volumes into one with a given mix type of <code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.MIXTYPE</span></code>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.NormalizeVectorVolume" title="maxon.frameworks.volume.VolumeToolsInterface.NormalizeVectorVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NormalizeVectorVolume</span></code></a>(volume,&nbsp;thread)</td>
+<td>Creates a normalized vector volume from an input vector volume.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.PointsToVolume" title="maxon.frameworks.volume.VolumeToolsInterface.PointsToVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PointsToVolume</span></code></a>(pointObjects,&nbsp;gridSize,&nbsp;…)</td>
+<td><div class="line-block">
+<div class="line">Converts points in space to a SDF volume.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.ResampleVolume" title="maxon.frameworks.volume.VolumeToolsInterface.ResampleVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ResampleVolume</span></code></a>(volume,&nbsp;resampleTransform,&nbsp;…)</td>
+<td>Resample a volume into a new transformation matrix.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.RotateVectorVolume" title="maxon.frameworks.volume.VolumeToolsInterface.RotateVectorVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RotateVectorVolume</span></code></a>(volume,&nbsp;rotationAxis,&nbsp;…)</td>
+<td>Rotate the vectors of a vector volume by a specified angle around a rotation axis.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.SaveVDBFile" title="maxon.frameworks.volume.VolumeToolsInterface.SaveVDBFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SaveVDBFile</span></code></a>(filename,&nbsp;scale,&nbsp;volumes,&nbsp;metaData)</td>
+<td>Saves volumes to a .vdb file.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.VolumeToMesh" title="maxon.frameworks.volume.VolumeToolsInterface.VolumeToMesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VolumeToMesh</span></code></a>(volume,&nbsp;iso,&nbsp;adaptiveValue)</td>
+<td>Extracts a polygon object iso surface from a volume.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="methods-definition">
+<h2>Methods Definition<a class="headerlink" href="#methods-definition" title="Permalink to this headline">¶</a></h2>
+<dl class="staticmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.ApplyFilterToVolume">
+<em class="property">static </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">ApplyFilterToVolume</code><span class="sig-paren">(</span><em>volume</em>, <em>filterType</em>, <em>thread</em>, <em>maskVolume=None</em>, <em>maskField=None</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.ApplyFilterToVolume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies a filter operation to any volume.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>volume</strong> (<a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a>) – The volume that should be filtered.</li>
+<li><strong>filterType</strong> (<a class="reference internal" href="../datatype/maxon.frameworks.volume.FilterSettings.html#module-maxon.frameworks.volume.FilterSettings" title="maxon.frameworks.volume.FilterSettings"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.FilterSettings</span></code></a>) – Settings for the filter operation</li>
+<li><strong>thread</strong> (<a class="reference internal" href="../../../references/core/maxon.ThreadRef.html#module-maxon.ThreadRef" title="maxon.ThreadRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.ThreadRef</span></code></a>) – A thread reference that cancellation is tested against.</li>
+<li><strong>maskVolume</strong> (<a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a>) – An optional volume object to be used as mask.</li>
+<li><strong>maskField</strong> (<a class="reference internal" href="../datatype/maxon.frameworks.volume.FieldSampleData.html#module-maxon.frameworks.volume.FieldSampleData" title="maxon.frameworks.volume.FieldSampleData"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.FieldSampleData</span></code></a>) – An optional field data struct to be used as field mask.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A new filtered version of the input volume.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.ApplySDFFilterToVolume">
+<em class="property">static </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">ApplySDFFilterToVolume</code><span class="sig-paren">(</span><em>volume</em>, <em>filterType</em>, <em>thread</em>, <em>maskVolume=None</em>, <em>maskField=None</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.ApplySDFFilterToVolume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies a filter operation to a SDF volume.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This work only on SDF volumes.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>volume</strong> (<a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a>) – The volume that should be filtered.</li>
+<li><strong>filterType</strong> (<a class="reference internal" href="../datatype/maxon.frameworks.volume.SDFFilterSettings.html#module-maxon.frameworks.volume.SDFFilterSettings" title="maxon.frameworks.volume.SDFFilterSettings"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.SDFFilterSettings</span></code></a>) – Settings for the filter operation</li>
+<li><strong>thread</strong> (<a class="reference internal" href="../../../references/core/maxon.ThreadRef.html#module-maxon.ThreadRef" title="maxon.ThreadRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.ThreadRef</span></code></a>) – A thread reference that cancellation is tested against.</li>
+<li><strong>maskVolume</strong> (<a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a>) – An optional volume object to be used as mask.</li>
+<li><strong>maskField</strong> (<a class="reference internal" href="../datatype/maxon.frameworks.volume.FieldSampleData.html#module-maxon.frameworks.volume.FieldSampleData" title="maxon.frameworks.volume.FieldSampleData"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.FieldSampleData</span></code></a>) – An optional field data struct to be used as field mask.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A new filtered version of the input volume.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.BoolVolumes">
+<em class="property">static </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">BoolVolumes</code><span class="sig-paren">(</span><em>voumeOne</em>, <em>volumeTwo</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.BoolVolumes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bools two SDF volumes into one with a given bool type of <code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.BOOLTYPE</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This methods only works for SDF volume, for FOG volume,
+use <a class="reference internal" href="#maxon.frameworks.volume.VolumeToolsInterface.MixVolumes" title="maxon.frameworks.volume.VolumeToolsInterface.MixVolumes"><code class="xref py py-func docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeToolsInterface.MixVolumes()</span></code></a></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>voumeOne</strong> (<a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a>) – The first SDF volume for the boolean operation.</li>
+<li><strong>volumeTwo</strong> (<a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a>) – The second SDF volume for the boolean operation.</li>
+<li><strong>type</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.BOOLTYPE</span></code>.) – The bool type.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The booled volume.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.ConvertFogToSDF">
+<em class="property">static </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">ConvertFogToSDF</code><span class="sig-paren">(</span><em>volume</em>, <em>iso</em>, <em>thread</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.ConvertFogToSDF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a fog Volume to a SDF volume.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The resulting surface of the SDF volume is defined by the passed iso value.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>volume</strong> (<a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a>) – The fog volume that should be converted.</li>
+<li><strong>iso</strong> (<em>float</em>) – The iso value at which the surface should be created.</li>
+<li><strong>thread</strong> (<a class="reference internal" href="../../../references/core/maxon.ThreadRef.html#module-maxon.ThreadRef" title="maxon.ThreadRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.ThreadRef</span></code></a>) – A thread reference that cancellation is tested against.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A SDF volume.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.ConvertSDFToFog">
+<em class="property">static </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">ConvertSDFToFog</code><span class="sig-paren">(</span><em>volume</em>, <em>cutoff</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.ConvertSDFToFog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a SDF Volume to a fog volume.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The interior of the SDF object will be filled with data ranging from 0.0 to 1.0 with a falloff.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>volume</strong> (<a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a>) – The SDF volume that should be converted.</li>
+<li><strong>cutoff</strong> (<em>float</em>) – The distance for the falloff from 0.0 (SDF 0.0 value) to 1.0.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A fog volume.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.ConvertVectorToFog">
+<em class="property">static </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">ConvertVectorToFog</code><span class="sig-paren">(</span><em>volume</em>, <em>thread</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.ConvertVectorToFog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a vector volume to a fog volume.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R21.</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The resulting volume will have the length of the vectors stored at the original voxel position.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>volume</strong> (<a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a>) – The fog volume that should be converted.</li>
+<li><strong>thread</strong> (<a class="reference internal" href="../../../references/core/maxon.ThreadRef.html#module-maxon.ThreadRef" title="maxon.ThreadRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.ThreadRef</span></code></a>) – A thread reference that cancellation is tested against.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A fog volume.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.CreateCurlVolume">
+<em class="property">static </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">CreateCurlVolume</code><span class="sig-paren">(</span><em>volume</em>, <em>thread</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.CreateCurlVolume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a vector volume representing the curl of a vector volume.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R21.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>volume</strong> (<a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a>) – The vector volume the curl should be calculated from.</li>
+<li><strong>thread</strong> (<a class="reference internal" href="../../../references/core/maxon.ThreadRef.html#module-maxon.ThreadRef" title="maxon.ThreadRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.ThreadRef</span></code></a>) – A thread reference that cancellation is tested against.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The newly created curl volume.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.CreateGradientVolume">
+<em class="property">static </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">CreateGradientVolume</code><span class="sig-paren">(</span><em>volume</em>, <em>thread</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.CreateGradientVolume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a gradient volume from a numeric volume.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>volume</strong> (<a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a>) – The numeric volume.</li>
+<li><strong>thread</strong> (<a class="reference internal" href="../../../references/core/maxon.ThreadRef.html#module-maxon.ThreadRef" title="maxon.ThreadRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.ThreadRef</span></code></a>) – A thread reference that cancellation is tested against.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The newly created gradient volume.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.CreateMeanCurvatureVolume">
+<em class="property">static </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">CreateMeanCurvatureVolume</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.CreateMeanCurvatureVolume" title="Permalink to this definition">¶</a></dt>
+<dd><p>NormalizeVectorVolume(volume, thread)
+Creates a curvature volume from a numeric volume.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R21.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>volume</strong> (<a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a>) – The numeric volume.</li>
+<li><strong>thread</strong> (<a class="reference internal" href="../../../references/core/maxon.ThreadRef.html#module-maxon.ThreadRef" title="maxon.ThreadRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.ThreadRef</span></code></a>) – A thread reference that cancellation is tested against.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The newly created curvature volume.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.CreateNewFloat32Volume">
+<em class="property">static </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">CreateNewFloat32Volume</code><span class="sig-paren">(</span><em>background</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.CreateNewFloat32Volume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new float volume with default transform.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The gridtype will be <code class="xref py py-attr docutils literal notranslate"><span class="pre">c4d.GRIDCLASS_UNKNOWN</span></code>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>background</strong> (<em>float</em>) – The background value for the volume.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The newly created volume.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.CreateNewVector32Volume">
+<em class="property">static </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">CreateNewVector32Volume</code><span class="sig-paren">(</span><em>background</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.CreateNewVector32Volume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new float vector volume with default transform.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R21.</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The gridtype will be <code class="xref py py-attr docutils literal notranslate"><span class="pre">c4d.GRIDCLASS_UNKNOWN</span></code>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>background</strong> (<a class="reference internal" href="../../../datatypes/vec_col_mat/maxon.Vector32.html#module-maxon.Vector32" title="maxon.Vector32"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Vector32</span></code></a>) – The background vector value for the volume.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The newly created volume.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.CreatePlatonicVolume">
+<em class="property">classmethod </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">CreatePlatonicVolume</code><span class="sig-paren">(</span><em>sides</em>, <em>size</em>, <em>position</em>, <em>gridSize</em>, <em>bandWidth</em>, <em>thread</em>, <em>creationTransform=None</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.CreatePlatonicVolume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a SDF volume of a platonic shape.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If invalid Arguments are set the function returns an empty volume.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>sides</strong> (<em>int</em>) – <p>The number of sides of the platonic.</p>
+<p>Define the valid Arguments in the description of the parameter</p>
+</li>
+<li><strong>size</strong> (<em>float</em>) – The size of the created platonic.</li>
+<li><strong>position</strong> (Union[<a class="reference internal" href="../../../datatypes/vec_col_mat/maxon.Vector.html#module-maxon.Vector" title="maxon.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Vector</span></code></a>, <a class="reference internal" href="../../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>]) – The position of the platonic.</li>
+<li><strong>gridSize</strong> (<em>float</em>) – The desired gridsize of the created volume.</li>
+<li><strong>bandWidth</strong> (<em>int</em>) – <p>The amount of interior and exterior voxels that distance information is calculated for.</p>
+<p>Should be greater than 1.</p>
+</li>
+<li><strong>thread</strong> (<a class="reference internal" href="../../../references/core/maxon.ThreadRef.html#module-maxon.ThreadRef" title="maxon.ThreadRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.ThreadRef</span></code></a>) – A thread reference that cancellation is tested against.</li>
+<li><strong>creationTransform</strong> (<a class="reference internal" href="../../../datatypes/vec_col_mat/maxon.Matrix.html#module-maxon.Matrix" title="maxon.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Matrix</span></code></a>) – An optional override to the target grid matrix.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The created SDF volume representing the input platonic settings.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.CreateSphereVolume">
+<em class="property">static </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">CreateSphereVolume</code><span class="sig-paren">(</span><em>radius</em>, <em>position</em>, <em>gridSize</em>, <em>bandWidth</em>, <em>thread</em>, <em>creationTransform=None</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.CreateSphereVolume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a SDF volume of a spherical shape.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>radius</strong> – The radius of the created sphere.</li>
+<li><strong>radius</strong> – float</li>
+<li><strong>position</strong> – The position of the sphere.</li>
+<li><strong>position</strong> – Union[<a class="reference internal" href="../../../datatypes/vec_col_mat/maxon.Vector.html#module-maxon.Vector" title="maxon.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Vector</span></code></a>, <a class="reference internal" href="../../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>]</li>
+<li><strong>gridSize</strong> – The desired gridsize of the created volume.</li>
+<li><strong>gridSize</strong> – float</li>
+<li><strong>bandWidth</strong> – <p>The amount of interior and exterior voxels that distance information is calculated for.</p>
+<p>Should be greater than 1.</p>
+</li>
+<li><strong>bandWidth</strong> – int</li>
+<li><strong>thread</strong> (<a class="reference internal" href="../../../references/core/maxon.ThreadRef.html#module-maxon.ThreadRef" title="maxon.ThreadRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.ThreadRef</span></code></a>) – A thread reference that cancellation is tested against.</li>
+<li><strong>creationTransform</strong> (<a class="reference internal" href="../../../datatypes/vec_col_mat/maxon.Matrix.html#module-maxon.Matrix" title="maxon.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Matrix</span></code></a>) – An optional override to the target grid matrix.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The created SDF volume representing the input sphere settings.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.GetGridNamesFromFile">
+<em class="property">static </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">GetGridNamesFromFile</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.GetGridNamesFromFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read and return the gridnames from a .vdb file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> (<a class="reference internal" href="../../../references/core/maxon.Url.html#module-maxon.Url" title="maxon.Url"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Url</span></code></a>) – The url of the file.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A data dictionary with metadata stored under string keys.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../references/core/maxon.DataDictionary.html#module-maxon.DataDictionary" title="maxon.DataDictionary"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DataDictionary</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.GetMetaDataFromFile">
+<em class="property">static </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">GetMetaDataFromFile</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.GetMetaDataFromFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read and return the metadata from a .vdb file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> (<a class="reference internal" href="../../../references/core/maxon.Url.html#module-maxon.Url" title="maxon.Url"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Url</span></code></a>) – The url of the file.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A data dictionary with metadata stored under string keys.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../references/core/maxon.DataDictionary.html#module-maxon.DataDictionary" title="maxon.DataDictionary"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DataDictionary</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.LoadAllGridsIntoVolumes">
+<em class="property">static </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">LoadAllGridsIntoVolumes</code><span class="sig-paren">(</span><em>filename</em>, <em>scale</em>, <em>volume</em>, <em>metaData</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.LoadAllGridsIntoVolumes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads all grids into a list of volumes from a .vdb file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filename</strong> (<a class="reference internal" href="../../../references/core/maxon.Url.html#module-maxon.Url" title="maxon.Url"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Url</span></code></a>) – The url of the file to load from.</li>
+<li><strong>scale</strong> (<em>float</em>) – A scale factor for loading the grids.</li>
+<li><strong>volume</strong> (<a class="reference internal" href="../../../datatypes/collection/maxon.BaseArray.html#module-maxon.BaseArray" title="maxon.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.BaseArray</span></code></a> (<a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a>)) – The output list of loaded volumes.</li>
+<li><strong>metaData</strong> (<a class="reference internal" href="../../../references/core/maxon.DataDictionary.html#module-maxon.DataDictionary" title="maxon.DataDictionary"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DataDictionary</span></code></a>) – If passed, will be filled with the metadata from the file.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.LoadGridIntoVolume">
+<em class="property">static </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">LoadGridIntoVolume</code><span class="sig-paren">(</span><em>filename</em>, <em>scale</em>, <em>gridIndex</em>, <em>volume</em>, <em>metaData</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.LoadGridIntoVolume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads a grid into a volume from a .vdb file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filename</strong> (<a class="reference internal" href="../../../references/core/maxon.Url.html#module-maxon.Url" title="maxon.Url"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Url</span></code></a>) – The url of the file to load from.</li>
+<li><strong>scale</strong> (<em>float</em>) – A scale factor for loading the grids.</li>
+<li><strong>gridIndex</strong> (<em>int</em>) – The index of the grid in the .vdb file.</li>
+<li><strong>volume</strong> (<a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a>) – The volume reference to load the grid into.</li>
+<li><strong>metaData</strong> (<a class="reference internal" href="../../../references/core/maxon.DataDictionary.html#module-maxon.DataDictionary" title="maxon.DataDictionary"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DataDictionary</span></code></a>) – If passed, will be filled with the metadata from the file.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.LoadVDBFile">
+<em class="property">static </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">LoadVDBFile</code><span class="sig-paren">(</span><em>filename</em>, <em>scale</em>, <em>gridNames</em>, <em>gridIndices</em>, <em>metaData</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.LoadVDBFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads volumes from a .vdb file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>filename</strong> (<a class="reference internal" href="../../../references/core/maxon.Url.html#module-maxon.Url" title="maxon.Url"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Url</span></code></a>) – The url of the file to load from.</li>
+<li><strong>scale</strong> (<em>float</em>) – A scale factor for loading the grids.</li>
+<li><strong>gridNames</strong> (<a class="reference internal" href="../../../datatypes/collection/maxon.BaseArray.html#module-maxon.BaseArray" title="maxon.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.BaseArray</span></code></a> (<a class="reference internal" href="../../../references/core/maxon.String.html#module-maxon.String" title="maxon.String"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.String</span></code></a>)) – If a <a class="reference internal" href="../../../datatypes/collection/maxon.BaseArray.html#module-maxon.BaseArray" title="maxon.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.BaseArray</span></code></a> is passed, it will be filled with the grid names.</li>
+<li><strong>gridIndices</strong> (<a class="reference internal" href="../../../datatypes/collection/maxon.BaseArray.html#module-maxon.BaseArray" title="maxon.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.BaseArray</span></code></a> (<a class="reference internal" href="../../../datatypes/simple/maxon.Int.html#module-maxon.Int" title="maxon.Int"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Int</span></code></a>)) – Optional list of indices that should be loaded from the file.</li>
+<li><strong>metaData</strong> (<a class="reference internal" href="../../../references/core/maxon.DataDictionary.html#module-maxon.DataDictionary" title="maxon.DataDictionary"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DataDictionary</span></code></a>) – If passed, will be filled with the metadata from the file.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A list of volumes that were loaded from the .vdb file.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="../../../datatypes/collection/maxon.BaseArray.html#module-maxon.BaseArray" title="maxon.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.BaseArray</span></code></a> (<a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a>)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.MeshToVolume">
+<em class="property">classmethod </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">MeshToVolume</code><span class="sig-paren">(</span><em>vertices</em>, <em>polygons</em>, <em>polygonObjectMatrix</em>, <em>gridSize</em>, <em>bandWidthInterior</em>, <em>bandWidthExterior</em>, <em>thread</em>, <em>conversionSettings=maxon.POLYGONCONVERSIONFLAGS.NONE</em>, <em>creationTransform=None</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.MeshToVolume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts a polygon object to a SDF volume.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>vertices</strong> (<a class="reference internal" href="../../../datatypes/collection/maxon.BaseArray.html#module-maxon.BaseArray" title="maxon.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.BaseArray</span></code></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Vecor</span></code>)) – The vertex positions of the polygon object.</li>
+<li><strong>polygons</strong> (<a class="reference internal" href="../../../datatypes/collection/maxon.BaseArray.html#module-maxon.BaseArray" title="maxon.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.BaseArray</span></code></a> (<a class="reference internal" href="../datatype/maxon.frameworks.volume.VolumeConversionPolygon.html#module-maxon.frameworks.volume.VolumeConversionPolygon" title="maxon.frameworks.volume.VolumeConversionPolygon"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeConversionPolygon</span></code></a>)) – The polygon information.</li>
+<li><strong>polygonObjectMatrix</strong> (<a class="reference internal" href="../../../datatypes/vec_col_mat/maxon.Matrix.html#module-maxon.Matrix" title="maxon.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Matrix</span></code></a>) – The global position, scale and rotation matrix of the polygon object.</li>
+<li><strong>gridSize</strong> (<em>float</em>) – The desired gridsize of the created volume.</li>
+<li><strong>bandWidthInterior</strong> (<em>int</em>) – The amount of exterior voxels that distance information is calculated for.</li>
+<li><strong>bandWidthExterior</strong> (<em>int</em>) – The amount of interior voxels that distance information is calculated for.</li>
+<li><strong>thread</strong> (<a class="reference internal" href="../../../references/core/maxon.ThreadRef.html#module-maxon.ThreadRef" title="maxon.ThreadRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.ThreadRef</span></code></a>) – A thread reference that cancellation is tested against.</li>
+<li><strong>conversionSettings</strong> (<a class="reference internal" href="../enum/maxon.POLYGONCONVERSIONFLAGS.html#module-maxon.POLYGONCONVERSIONFLAGS" title="maxon.POLYGONCONVERSIONFLAGS"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.POLYGONCONVERSIONFLAGS</span></code></a>) – Optional settings for the conversion to Volume</li>
+<li><strong>creationTransform</strong> – <p>An optional override to the target grid matrix.</p>
+<p>If this is used the <cite>gridSize</cite> is ignored.</p>
+</li>
+<li><strong>creationTransform</strong> – <a class="reference internal" href="../../../datatypes/vec_col_mat/maxon.Matrix.html#module-maxon.Matrix" title="maxon.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Matrix</span></code></a></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The converted SDF volume representing the input polygon object.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.MixVectorVolumes">
+<em class="property">static </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">MixVectorVolumes</code><span class="sig-paren">(</span><em>volumeOne</em>, <em>volumeTwo</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.MixVectorVolumes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mix two volumes into one with a given mix type of <code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.MIXVECTORTYPE</span></code>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R21.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>volumeOne</strong> (<a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a>) – The first vector volume for the mix operation.</li>
+<li><strong>volumeTwo</strong> (<a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a>) – The second vector volume for the mix operation.</li>
+<li><strong>type</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.MIXVECTORTYPE</span></code>.) – The mix type.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The mixed vector volume.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.MixVolumes">
+<em class="property">static </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">MixVolumes</code><span class="sig-paren">(</span><em>volumeOne</em>, <em>volumeTwo</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.MixVolumes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mix two volumes into one with a given mix type of <code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.MIXTYPE</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>volumeOne</strong> (<a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a>) – The first volume for the mix operation.</li>
+<li><strong>volumeTwo</strong> (<a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a>) – The second volume for the mix operation.</li>
+<li><strong>type</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.MIXTYPE</span></code>.) – The mix type.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The mixed volume.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.NormalizeVectorVolume">
+<em class="property">static </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">NormalizeVectorVolume</code><span class="sig-paren">(</span><em>volume</em>, <em>thread</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.NormalizeVectorVolume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a normalized vector volume from an input vector volume.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R21.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>volume</strong> (<a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a>) – The vector volume that should be normalized.</li>
+<li><strong>thread</strong> (<a class="reference internal" href="../../../references/core/maxon.ThreadRef.html#module-maxon.ThreadRef" title="maxon.ThreadRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.ThreadRef</span></code></a>) – A thread reference that cancellation is tested against.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The newly created normalized vector volume.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.PointsToVolume">
+<em class="property">static </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">PointsToVolume</code><span class="sig-paren">(</span><em>pointObjects</em>, <em>gridSize</em>, <em>bandWidth</em>, <em>thread</em>, <em>creationTransform=None</em>, <em>velocityScale=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.PointsToVolume" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Converts points in space to a SDF volume.</div>
+<div class="line">This can be used to convert particles, vertices, spline sampling points or other points to a volume.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pointObjects</strong> – A list of Delegate/Object pairs that specify how to get point positions from the object.</li>
+<li><strong>gridSize</strong> (<em>float</em>) – The desired gridsize of the created volume.</li>
+<li><strong>bandWidth</strong> (<em>int</em>) – The amount of voxels around the creates spheres that distance information is calculated for.</li>
+<li><strong>thread</strong> (<a class="reference internal" href="../../../references/core/maxon.ThreadRef.html#module-maxon.ThreadRef" title="maxon.ThreadRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.ThreadRef</span></code></a>) – A thread reference that cancellation is tested against.</li>
+<li><strong>creationTransform</strong> (<a class="reference internal" href="../../../datatypes/vec_col_mat/maxon.Matrix.html#module-maxon.Matrix" title="maxon.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Matrix</span></code></a>) – <p>An optional override to the target grid matrix.</p>
+<p>If this is used the <cite>gridSize</cite> is ignored.</p>
+</li>
+<li><strong>velocityScale</strong> (<em>float</em>) – A velocity scale that the volumes will be extended to if they have a direction set.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The converted SDF volume representing the input polygon object.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.ResampleVolume">
+<em class="property">static </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">ResampleVolume</code><span class="sig-paren">(</span><em>volume</em>, <em>resampleTransform</em>, <em>interpolationType</em>, <em>thread</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.ResampleVolume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resample a volume into a new transformation matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>volume</strong> (<a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a>) – The volume that should be resampled.</li>
+<li><strong>resampleTransform</strong> (<a class="reference internal" href="../../../datatypes/vec_col_mat/maxon.Matrix.html#module-maxon.Matrix" title="maxon.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Matrix</span></code></a>) – The transformation matrix in which the volume should be resampled into.</li>
+<li><strong>interpolationType</strong> (<a class="reference internal" href="../enum/maxon.RESAMPLEINTERPOLATIONTYPE.html#module-maxon.RESAMPLEINTERPOLATIONTYPE" title="maxon.RESAMPLEINTERPOLATIONTYPE"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.RESAMPLEINTERPOLATIONTYPE</span></code></a>) – The resample interpolation type.</li>
+<li><strong>thread</strong> (<a class="reference internal" href="../../../references/core/maxon.ThreadRef.html#module-maxon.ThreadRef" title="maxon.ThreadRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.ThreadRef</span></code></a>) – A thread reference that cancellation is tested against.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The created resampled volume.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.RotateVectorVolume">
+<em class="property">static </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">RotateVectorVolume</code><span class="sig-paren">(</span><em>volume</em>, <em>rotationAxis</em>, <em>angle</em>, <em>thread</em>, <em>maskField=None</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.RotateVectorVolume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotate the vectors of a vector volume by a specified angle around a rotation axis.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R21.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>volume</strong> (<a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a>) – The vector volume to rotate.</li>
+<li><strong>rotationAxis</strong> (<a class="reference internal" href="../../../datatypes/vec_col_mat/maxon.Vector.html#module-maxon.Vector" title="maxon.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Vector</span></code></a>) – The rotation axis to rotate around.</li>
+<li><strong>angle</strong> (<em>float</em>) – The angle in radians to rotate.</li>
+<li><strong>thread</strong> (<a class="reference internal" href="../../../references/core/maxon.ThreadRef.html#module-maxon.ThreadRef" title="maxon.ThreadRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.ThreadRef</span></code></a>) – A thread reference that cancellation is tested against.</li>
+<li><strong>maskField</strong> (<a class="reference internal" href="../datatype/maxon.frameworks.volume.FieldSampleData.html#module-maxon.frameworks.volume.FieldSampleData" title="maxon.frameworks.volume.FieldSampleData"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.FieldSampleData</span></code></a>) – An optional field data struct to be used as field mask.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The newly created curvature volume.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.SaveVDBFile">
+<em class="property">static </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">SaveVDBFile</code><span class="sig-paren">(</span><em>filename</em>, <em>scale</em>, <em>volumes</em>, <em>metaData</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.SaveVDBFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves volumes to a .vdb file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filename</strong> (<a class="reference internal" href="../../../references/core/maxon.Url.html#module-maxon.Url" title="maxon.Url"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Url</span></code></a>) – The url of the file to save to.</li>
+<li><strong>scale</strong> (<em>float</em>) – A scale factor for saving the grids.</li>
+<li><strong>volumes</strong> (<a class="reference internal" href="../../../datatypes/collection/maxon.BaseArray.html#module-maxon.BaseArray" title="maxon.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.BaseArray</span></code></a> (<a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a>)) – A list of volumes that should be saved to the .vdb file.</li>
+<li><strong>metaData</strong> (<a class="reference internal" href="../../../references/core/maxon.DataDictionary.html#module-maxon.DataDictionary" title="maxon.DataDictionary"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DataDictionary</span></code></a>) – <p>Optional Metadata to write to the file.</p>
+<p>Have to be added under string keys to the data dictionary.</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="maxon.frameworks.volume.VolumeToolsInterface.VolumeToMesh">
+<em class="property">static </em><code class="descclassname">VolumeToolsInterface.</code><code class="descname">VolumeToMesh</code><span class="sig-paren">(</span><em>volume</em>, <em>iso</em>, <em>adaptiveValue</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.frameworks.volume.VolumeToolsInterface.VolumeToMesh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts a polygon object iso surface from a volume. This is done by a marching cube algorithm.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>volume</strong> (<a class="reference internal" href="../reference/maxon.frameworks.volume.VolumeRef.html#module-maxon.frameworks.volume.VolumeRef" title="maxon.frameworks.volume.VolumeRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.frameworks.volume.VolumeRef</span></code></a>) – The volume to extract a surface from.</li>
+<li><strong>iso</strong> (<em>float</em>) – The iso value at which a surface should be extracted.</li>
+<li><strong>adaptiveValue</strong> (<em>float</em>) – An adaptive value between 0.0 and 1.0 that reduces the polygon count based on curvature.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The extracted polygon object.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="../../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/PointObject/PolygonObject/index.html#c4d.PolygonObject" title="c4d.PolygonObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.PolygonObject</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">maxon.frameworks.volume.VolumeToolsInterface</a><ul>
+<li><a class="reference internal" href="#module-maxon.frameworks.volume.VolumeToolsInterface">Description</a></li>
+<li><a class="reference internal" href="#inheritance-diagram">Inheritance diagram</a></li>
+<li><a class="reference internal" href="#methods-signature">Methods Signature</a></li>
+<li><a class="reference internal" href="#methods-definition">Methods Definition</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../reference/maxon.frameworks.volume.GridAccessorRef.html" title="maxon.frameworks.volume.GridAccessorRef"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="maxon.frameworks.volume.VolumeInterface.html" title="maxon.frameworks.volume.VolumeInterface"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../../maxon/frameworks.html" >MAXON API - Frameworks</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../../../maxon/frameworks/volume.html" >The Volume Framework</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

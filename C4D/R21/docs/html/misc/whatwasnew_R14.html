@@ -1,0 +1,306 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>What was New in R14 &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="What was New in R13" href="whatwasnew_R13.html" />
+    <link rel="prev" title="What was New in R15" href="whatwasnew_R15.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="whatwasnew_R13.html" title="What was New in R13"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="whatwasnew_R15.html" title="What was New in R15"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="what-was-new-in-r14">
+<h1>What was New in R14<a class="headerlink" href="#what-was-new-in-r14" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="in-r14-041">
+<h2>In R14.041<a class="headerlink" href="#in-r14-041" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Fixes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../modules/c4d/index.html#c4d.GePluginMessage" title="c4d.GePluginMessage"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.GePluginMessage()</span></code></a> crash on passed argument</li>
+<li>Issue with <a class="reference internal" href="../modules/c4d/CustomDataType/SplineData/index.html#SplineData.MakeUserSpline" title="SplineData.MakeUserSpline"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SplineData.MakeUserSpline()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#BaseDraw.DrawPoints" title="BaseDraw.DrawPoints"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDraw.DrawPoints()</span></code></a> out of range exception</li>
+<li><a class="reference internal" href="../modules/c4d.modules/snap/index.html#c4d.modules.snap" title="c4d.modules.snap"><code class="xref py py-mod docutils literal notranslate"><span class="pre">c4d.modules.snap</span></code></a> module issues</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Miscellaneous:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Added <a class="reference external" href="https://github.com/PluginCafe/cinema4d_py_sdk_extended/tree/master/scripts/03_application_development/files_media/export_alembic_r14.py">script ExportAlembic.py</a> that shows how to effectively access and change the settings of an importer/exporter</li>
+<li>Updated <a class="reference external" href="https://github.com/PluginCafe/cinema4d_py_sdk_extended/tree/master/scripts/05_modules/snap">script Snapping.py</a> example for <a class="reference internal" href="../modules/c4d.modules/snap/index.html#c4d.modules.snap" title="c4d.modules.snap"><code class="xref py py-mod docutils literal notranslate"><span class="pre">c4d.modules.snap</span></code></a> module</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="in-r14-034">
+<h2>In R14.034<a class="headerlink" href="#in-r14-034" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Important addition: It is now possible to access Snap features with the Python API. A new module has been added: <a class="reference internal" href="../modules/c4d.modules/snap/index.html#c4d.modules.snap" title="c4d.modules.snap"><code class="xref py py-mod docutils literal notranslate"><span class="pre">c4d.modules.snap</span></code></a></p>
+</li>
+<li><p class="first">Fixes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="../modules/c4d/CustomDataType/MatAssignData/index.html#MatAssignData.InsertObject" title="MatAssignData.InsertObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MatAssignData.InsertObject()</span></code></a> can now be called (was raising a parameter error)</li>
+<li>Cinema 4D crashed at exit when overriding <a class="reference internal" href="../modules/c4d.gui/GeDialog/index.html#GeDialog.AskClose" title="GeDialog.AskClose"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeDialog.AskClose()</span></code></a> and <a class="reference internal" href="../modules/c4d.gui/GeDialog/index.html#GeDialog.Message" title="GeDialog.Message"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeDialog.Message()</span></code></a></li>
+<li>Assigning <a class="reference internal" href="../modules/c4d.modules/render/Ray/index.html#Ray.ior" title="Ray.ior"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Ray.ior</span></code></a> now actually set it (was assigning <a class="reference internal" href="../modules/c4d.modules/render/Ray/index.html#Ray.p" title="Ray.p"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Ray.p</span></code></a> instead)</li>
+<li><a class="reference internal" href="../modules/c4d.utils/index.html#c4d.utils.Truncate" title="c4d.utils.Truncate"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.utils.Truncate()</span></code></a> now returns a <cite>Real</cite> (was returning a <a class="reference internal" href="../modules/c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>)</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Miscellaneous:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Added missing documentation for <a class="reference internal" href="../modules/c4d.documents/BaseDocument/index.html#BaseDocument.ExecutePasses" title="BaseDocument.ExecutePasses"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.ExecutePasses()</span></code></a></li>
+<li>Added code snippet about <a class="reference internal" href="pluginstructure.html#enhancing-main-menu"><span class="std std-ref">Enhancing the Main Menu</span></a></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="in-r14-014">
+<h2>In R14.014<a class="headerlink" href="#in-r14-014" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="api-changes">
+<h3>API Changes<a class="headerlink" href="#api-changes" title="Permalink to this headline">¶</a></h3>
+<p>Here is a list of the new classes, methods and functions in the Python API:</p>
+<div class="section" id="new-classes">
+<h4>New Classes<a class="headerlink" href="#new-classes" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d/CustomDataType/PLAData/index.html#c4d.PLAData" title="c4d.PLAData"><code class="xref py py-class docutils literal notranslate"><span class="pre">PLAData</span></code></a></li>
+</ul>
+</div>
+<div class="section" id="new-methods">
+<h4>New Methods<a class="headerlink" href="#new-methods" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#BaseDraw.SetClipPlaneOffset" title="BaseDraw.SetClipPlaneOffset"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDraw.SetClipPlaneOffset()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#BaseDraw.DrawArc" title="BaseDraw.DrawArc"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDraw.DrawArc()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#BaseDraw.GetGridStep" title="BaseDraw.GetGridStep"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDraw.GetGridStep()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#BaseDraw.GetViewMatrix" title="BaseDraw.GetViewMatrix"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDraw.GetViewMatrix()</span></code></a></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#BaseObject.SetRotationOrder" title="BaseObject.SetRotationOrder"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetRotationOrder()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#BaseObject.GetRotationOrder" title="BaseObject.GetRotationOrder"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetRotationOrder()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#BaseObject.GetGUID" title="BaseObject.GetGUID"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetGUID()</span></code></a></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseView/index.html#BaseView.GetBaseMatrix" title="BaseView.GetBaseMatrix"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.GetBaseMatrix()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseView/index.html#BaseView.SetBaseMatrix" title="BaseView.SetBaseMatrix"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.SetBaseMatrix()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseView/index.html#BaseView.GetPlanarRotation" title="BaseView.GetPlanarRotation"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.GetPlanarRotation()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseView/index.html#BaseView.SetPlanarRotation" title="BaseView.SetPlanarRotation"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseView.SetPlanarRotation()</span></code></a></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/index.html#GeListNode.__getitem__" title="GeListNode.__getitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeListNode.__getitem__()</span></code></a> moved from <cite>BaseList2D.__getitem__</cite></li>
+<li><a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/index.html#GeListNode.__setitem__" title="GeListNode.__setitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeListNode.__setitem__()</span></code></a> moved from <cite>BaseList2D.__setitem__</cite></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d/CustomDataType/SplineData/index.html#SplineData.CopyTo" title="SplineData.CopyTo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SplineData.CopyTo()</span></code></a></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d/Vector/index.html#Vector.__getitem__" title="Vector.__getitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Vector.__getitem__()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d/Vector/index.html#Vector.__setitem__" title="Vector.__setitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Vector.__setitem__()</span></code></a></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d.bitmaps/BaseBitmap/MultipassBitmap/index.html#MultipassBitmap.GetLayers" title="MultipassBitmap.GetLayers"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MultipassBitmap.GetLayers()</span></code></a></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d.documents/BaseDocument/index.html#BaseDocument.FlushUndoBuffer" title="BaseDocument.FlushUndoBuffer"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.FlushUndoBuffer()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.documents/BaseDocument/index.html#BaseDocument.FindUndoPtr" title="BaseDocument.FindUndoPtr"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.FindUndoPtr()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.documents/BaseDocument/index.html#BaseDocument.IsAxisEnabled" title="BaseDocument.IsAxisEnabled"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.IsAxisEnabled()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.documents/BaseDocument/index.html#BaseDocument.SendInfo" title="BaseDocument.SendInfo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.SendInfo()</span></code></a></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d.gui/GeUserArea/index.html#GeUserArea.ActivateFading" title="GeUserArea.ActivateFading"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeUserArea.ActivateFading()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.gui/GeUserArea/index.html#GeUserArea.AdjustColor" title="GeUserArea.AdjustColor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeUserArea.AdjustColor()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.gui/GeUserArea/index.html#GeUserArea.DrawBezier" title="GeUserArea.DrawBezier"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeUserArea.DrawBezier()</span></code></a></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d.gui/BaseCustomGui/SplineCustomGui/index.html#SplineCustomGui.GetValue" title="SplineCustomGui.GetValue"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SplineCustomGui.GetValue()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.gui/BaseCustomGui/SplineCustomGui/index.html#SplineCustomGui.SetCustomColor" title="SplineCustomGui.SetCustomColor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SplineCustomGui.SetCustomColor()</span></code></a></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d.modules/mograph/MoData/index.html#MoData.GetGenerator" title="MoData.GetGenerator"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MoData.GetGenerator()</span></code></a></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d.plugins/BaseDrawHelp/index.html#BaseDrawHelp.IsActive" title="BaseDrawHelp.IsActive"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDrawHelp.IsActive()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.plugins/BaseDrawHelp/index.html#BaseDrawHelp.IsHighlight" title="BaseDrawHelp.IsHighlight"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDrawHelp.IsHighlight()</span></code></a></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d.plugins/BaseData/NodeData/ObjectData/index.html#ObjectData.DrawShadow" title="ObjectData.DrawShadow"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ObjectData.DrawShadow()</span></code></a></li>
+</ul>
+</div>
+<div class="section" id="new-functions">
+<h4>New Functions<a class="headerlink" href="#new-functions" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d.gui/index.html#c4d.gui.GetInterfaceIcon" title="c4d.gui.GetInterfaceIcon"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.gui.GetInterfaceIcon()</span></code></a></li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d.utils/index.html#c4d.utils.RGBToHSL" title="c4d.utils.RGBToHSL"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.utils.RGBToHSL()</span></code></a></li>
+<li><a class="reference internal" href="../modules/c4d.utils/index.html#c4d.utils.HSLtoRGB" title="c4d.utils.HSLtoRGB"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.utils.HSLtoRGB()</span></code></a></li>
+</ul>
+</div>
+<div class="section" id="new-parameters">
+<h4>New Parameters<a class="headerlink" href="#new-parameters" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><a class="reference internal" href="../modules/c4d.documents/BaseDocument/index.html#BaseDocument.AddUndo" title="BaseDocument.AddUndo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseDocument.AddUndo()</span></code></a>: Added optional parameter <cite>allowFromThread</cite></li>
+<li><a class="reference internal" href="../modules/c4d.gui/GeDialog/index.html#GeDialog.GroupBegin" title="GeDialog.GroupBegin"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeDialog.GroupBegin()</span></code></a>: Added optional parameters <cite>initw</cite> and <cite>inith</cite></li>
+<li><a class="reference internal" href="../modules/c4d.gui/GeDialog/index.html#GeDialog.AddColorField" title="GeDialog.AddColorField"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeDialog.AddColorField()</span></code></a>: Added optional parameter <cite>colorflags</cite></li>
+</ul>
+</div>
+<div class="section" id="new-constants">
+<h4>New Constants<a class="headerlink" href="#new-constants" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>New object types: <em>Oworkplane</em> renamed from <em>Oconplane</em>, <em>Oconnector</em> (<a class="reference internal" href="../types/objects.html"><span class="doc">Object Types</span></a>)</li>
+<li>New shader types: <em>Xrainsampler</em>, <em>Xnormalizer</em> and <em>Xterrainmask</em> (<a class="reference internal" href="../types/shaders.html"><span class="doc">Shader Types</span></a>)</li>
+<li>New tag types: <em>Tsculpt</em>, <em>Tmotioncam</em> and <em>Tmorphcam</em> (<a class="reference internal" href="../types/tags.html"><span class="doc">Tag Types</span></a>)</li>
+</ul>
+<p></p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>New enums and container IDs:</dt>
+<dd><ul class="first last">
+<li><em>Mworkplane</em> (<a class="reference internal" href="../consts/MEditorModes.html"><span class="doc">EditorModes</span></a>)</li>
+<li><em>NBIT_NO_DD</em> (<a class="reference internal" href="../consts/NBIT.html"><span class="doc">NBIT</span></a>)</li>
+<li><em>DRAWHANDLE_POINTSIZE</em> and <em>DRAWHANDLE_SELPOINTSIZE</em> (<a class="reference internal" href="../consts/DRAWHANDLE.html"><span class="doc">DRAWHANDLE</span></a>)</li>
+<li><em>HOTKEY_RESIZE_BRUSH</em> (<a class="reference internal" href="../consts/HOTKEY.html"><span class="doc">HOTKEY</span></a>)</li>
+<li><em>DISPLAYFILTER_POI</em> (<a class="reference internal" href="../consts/DISPLAYFILTER.html"><span class="doc">DISPLAYFILTER</span></a>)</li>
+<li><em>SHADERINFO_REFLECTIONS</em>, <em>SHADERINFO_DUDVREQUIRED</em> and <em>SHADERINFO_DYNAMICSUBSHADERS</em> (<a class="reference internal" href="../consts/SHADERINFO.html"><span class="doc">SHADERINFO</span></a>)</li>
+<li><em>EDITTEXT_HELPTEXT</em> (<a class="reference internal" href="../consts/EDITTEXT.html"><span class="doc">EDITTEXT</span></a>)</li>
+<li><em>PLUGINFLAG_COMMAND_ICONGADGET</em></li>
+<li><em>SPLINECONTROL_CUSTOMCOLOR_SET</em>, <em>SPLINECONTROL_CUSTOMCOLOR_COL</em>, <em>SPLINECONTROL_NO_FLOATING_WINDOW</em> and <em>SPLINECONTROL_NO_PRESETS</em> settings for <a class="reference internal" href="../modules/c4d.gui/BaseCustomGui/SplineCustomGui/index.html#c4d.gui.SplineCustomGui" title="c4d.gui.SplineCustomGui"><code class="xref py py-class docutils literal notranslate"><span class="pre">SplineCustomGui</span></code></a></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="documentation">
+<h3>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Added <a class="reference internal" href="../modules/c4d.plugins/BaseData/FalloffData/index.html#c4d.plugins.FalloffData" title="c4d.plugins.FalloffData"><code class="xref py py-class docutils literal notranslate"><span class="pre">FalloffData</span></code></a> example: <a class="reference external" href="https://github.com/PluginCafe/cinema4d_py_sdk_extended/tree/master/plugins/py-noise_falloff_r14/py-noise_falloff_r14.pyp">Py-NoiseFalloff</a></li>
+<li>Implemented <a class="reference internal" href="../modules/c4d.plugins/BaseData/NodeData/index.html#NodeData.GetDEnabling" title="NodeData.GetDEnabling"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NodeData.GetDEnabling()</span></code></a> in <a class="reference external" href="https://github.com/PluginCafe/cinema4d_py_sdk_extended/tree/master/plugins/py-double_circle_r19/py-double_circle_r19.pyp">Py-DoubleCircle</a> example</li>
+<li>Several typos fixed</li>
+<li>Fixed errors in the examples</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">What was New in R14</a><ul>
+<li><a class="reference internal" href="#in-r14-041">In R14.041</a></li>
+<li><a class="reference internal" href="#in-r14-034">In R14.034</a></li>
+<li><a class="reference internal" href="#in-r14-014">In R14.014</a><ul>
+<li><a class="reference internal" href="#api-changes">API Changes</a><ul>
+<li><a class="reference internal" href="#new-classes">New Classes</a></li>
+<li><a class="reference internal" href="#new-methods">New Methods</a></li>
+<li><a class="reference internal" href="#new-functions">New Functions</a></li>
+<li><a class="reference internal" href="#new-parameters">New Parameters</a></li>
+<li><a class="reference internal" href="#new-constants">New Constants</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#documentation">Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="whatwasnew_R13.html" title="What was New in R13"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="whatwasnew_R15.html" title="What was New in R15"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

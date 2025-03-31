@@ -1,0 +1,806 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.snap &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="c4d.modules.substance" href="../substance/index.html" />
+    <link rel="prev" title="c4d.modules.sculpting.SculptModifierInterface" href="../sculpting/SculptModifierInterface/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../substance/index.html" title="c4d.modules.substance"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../sculpting/SculptModifierInterface/index.html" title="c4d.modules.sculpting.SculptModifierInterface"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">c4d.modules</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-snap">
+<h1>c4d.modules.snap<a class="headerlink" href="#c4d-modules-snap" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.snap">
+<em class="property">class </em><code class="descclassname">c4d.modules.</code><code class="descname">snap</code><a class="headerlink" href="#c4d.modules.snap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>This is the snap module to access the snap settings, quantizing options, workplane etc.</p>
+<p>You can find various examples in the following <a class="reference external" href="https://github.com/PluginCafe/cinema4d_py_sdk_extended/tree/master/scripts/05_modules/snap">GitHub repository</a>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R14.034.</span></p>
+</div>
+</div>
+<p class="rubric">Functions Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.modules.snap.IsSnapEnabled" title="c4d.modules.snap.IsSnapEnabled"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.snap.IsSnapEnabled(doc,</span> <span class="pre">snapmode)</span></code></a></td>
+<td>Check if snap is enabled for the document <em>doc</em> or for a specific <em>snapmode</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.modules.snap.EnableSnap" title="c4d.modules.snap.EnableSnap"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.snap.EnableSnap(state,</span> <span class="pre">doc,</span> <span class="pre">snapmode)</span></code></a></td>
+<td>Set the snap enabled status for the document <em>doc</em> or a particular <em>snapmode</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.modules.snap.GetSnapSettings" title="c4d.modules.snap.GetSnapSettings"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.snap.GetSnapSettings(doc,</span> <span class="pre">snapmode)</span></code></a></td>
+<td>Get the snap settings for the document <em>doc</em> or a specific <em>snapmode</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.modules.snap.SetSnapSettings" title="c4d.modules.snap.SetSnapSettings"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.snap.SetSnapSettings(doc,</span> <span class="pre">bc,</span> <span class="pre">snapmode)</span></code></a></td>
+<td>Set the snap settings for the document <em>doc</em> or a specific <em>snapmode</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.modules.snap.IsQuantizeEnabled" title="c4d.modules.snap.IsQuantizeEnabled"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.snap.IsQuantizeEnabled(doc)</span></code></a></td>
+<td>Check if quantizing is enabled for the document <em>doc</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.modules.snap.GetQuantizeStep" title="c4d.modules.snap.GetQuantizeStep"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.snap.GetQuantizeStep(doc,</span> <span class="pre">bd,</span> <span class="pre">quantize_mode)</span></code></a></td>
+<td>Gets a quantize step value.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.modules.snap.SetQuantizeStep" title="c4d.modules.snap.SetQuantizeStep"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.snap.SetQuantizeStep(doc,</span> <span class="pre">bd,</span> <span class="pre">quantize_mode,</span> <span class="pre">val)</span></code></a></td>
+<td>Sets a quantize step value.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.modules.snap.GetWorkplaneObject" title="c4d.modules.snap.GetWorkplaneObject"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.snap.GetWorkplaneObject(doc)</span></code></a></td>
+<td>Retrieve the workplane object for document <em>doc</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.modules.snap.IsWorkplaneLock" title="c4d.modules.snap.IsWorkplaneLock"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.snap.IsWorkplaneLock(doc)</span></code></a></td>
+<td>Get the workplane locked status for document <em>doc</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#c4d.modules.snap.SetWorkplaneLock" title="c4d.modules.snap.SetWorkplaneLock"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.snap.SetWorkplaneLock(bd,</span> <span class="pre">locked)</span></code></a></td>
+<td>Set the workplane locked status.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.modules.snap.GetWorkplaneMatrix" title="c4d.modules.snap.GetWorkplaneMatrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">c4d.modules.snap.GetWorkplaneMatrix(doc,</span> <span class="pre">bd)</span></code></a></td>
+<td>Get the workplane matrix.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Functions Documentation</p>
+<p><dl class="function">
+<dt id="c4d.modules.snap.IsSnapEnabled">
+<code class="descclassname">c4d.modules.snap.</code><code class="descname">IsSnapEnabled</code><span class="sig-paren">(</span><em>doc</em>, <em>snapmode</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.modules.snap.IsSnapEnabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if snap is enabled for the document <em>doc</em> or for a specific <em>snapmode</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>doc</strong> (<a class="reference internal" href="../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document to test for.</li>
+<li><strong>snapmode</strong> (<em>int</em>) – <p>Optionnally set a snap mode instead of checking snap for the document. One of the following:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>SNAPMODE_POINT</em></td>
+<td>Snap to a vertex on a mesh.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_EDGE</em></td>
+<td>Snap to any point along an edge.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_POLYGON</em></td>
+<td>Snap to the surface of a polygon.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_SPLINE</em></td>
+<td>Snap to any point along a spline.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_AXIS</em></td>
+<td>Snap to the axis of an object.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_INTERSECTION</em></td>
+<td>Snap to the intersections of objects and guides.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_MIDPOINT</em></td>
+<td>Snap to midpoint. Allows sub-snapping.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_EDGEMID</em></td>
+<td>Snap to middle of an edge.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_POLYGONCENTER</em></td>
+<td>Snap to the center of individual polygons.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_SPLINEMID</em></td>
+<td>Snap to the middle of a spline segment.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_WORKPLANE</em></td>
+<td>Snap to the surface of the workplane.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_GRIDPOINT</em></td>
+<td>Snap to the intersection points of the grid on the workplane.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_GRIDLINE</em></td>
+<td>Snap to the grid lines on the workplane.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_GUIDEMID</em></td>
+<td>Snap to the mid point in between of static guides intersections.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_GUIDE</em></td>
+<td>Snap to guide obejcts.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_DYNAMICGUIDE</em></td>
+<td>Snap using dynamic or inferred guides.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_ORTHO</em></td>
+<td>Snap perpendicular to guides edges and splines.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if snap is enabled, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.modules.snap.EnableSnap">
+<code class="descclassname">c4d.modules.snap.</code><code class="descname">EnableSnap</code><span class="sig-paren">(</span><em>state</em>, <em>doc</em>, <em>snapmode</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.modules.snap.EnableSnap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the snap enabled status for the document <em>doc</em> or a particular <em>snapmode</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>state</strong> (<em>bool</em>) – The state to set: <strong>True</strong> to enable, <strong>False</strong> to disable.</li>
+<li><strong>doc</strong> (<a class="reference internal" href="../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document to set the snap mode state for.</li>
+<li><strong>snapmode</strong> (<em>int</em>) – <p>Optionnally set a snap mode instead of enabling snap for the document. One of the following:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>SNAPMODE_POINT</em></td>
+<td>Snap to a vertex on a mesh.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_EDGE</em></td>
+<td>Snap to any point along an edge.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_POLYGON</em></td>
+<td>Snap to the surface of a polygon.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_SPLINE</em></td>
+<td>Snap to any point along a spline.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_AXIS</em></td>
+<td>Snap to the axis of an object.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_INTERSECTION</em></td>
+<td>Snap to the intersections of objects and guides.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_MIDPOINT</em></td>
+<td>Snap to midpoint. Allows sub-snapping.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_EDGEMID</em></td>
+<td>Snap to middle of an edge.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_POLYGONCENTER</em></td>
+<td>Snap to the center of individual polygons.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_SPLINEMID</em></td>
+<td>Snap to the middle of a spline segment.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_WORKPLANE</em></td>
+<td>Snap to the surface of the workplane.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_GRIDPOINT</em></td>
+<td>Snap to the intersection points of the grid on the workplane.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_GRIDLINE</em></td>
+<td>Snap to the grid lines on the workplane.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_GUIDEMID</em></td>
+<td>Snap to the mid point in between of static guides intersections.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_GUIDE</em></td>
+<td>Snap to guide obejcts.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_DYNAMICGUIDE</em></td>
+<td>Snap using dynamic or inferred guides.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_ORTHO</em></td>
+<td>Snap perpendicular to guides edges and splines.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.modules.snap.GetSnapSettings">
+<code class="descclassname">c4d.modules.snap.</code><code class="descname">GetSnapSettings</code><span class="sig-paren">(</span><em>doc</em>, <em>snapmode</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.modules.snap.GetSnapSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the snap settings for the document <em>doc</em> or a specific <em>snapmode</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>doc</strong> (<a class="reference internal" href="../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document related snap settings to retrieve.</li>
+<li><strong>snapmode</strong> (<em>int</em>) – <p>Specify a snap mode to get or modify its specific settings instead of the global settings (pass <strong>NOTOK</strong>). One of the following:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>SNAPMODE_POINT</em></td>
+<td>Snap to a vertex on a mesh.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_EDGE</em></td>
+<td>Snap to any point along an edge.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_POLYGON</em></td>
+<td>Snap to the surface of a polygon.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_SPLINE</em></td>
+<td>Snap to any point along a spline.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_AXIS</em></td>
+<td>Snap to the axis of an object.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_INTERSECTION</em></td>
+<td>Snap to the intersections of objects and guides.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_MIDPOINT</em></td>
+<td>Snap to midpoint. Allows sub-snapping.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_EDGEMID</em></td>
+<td>Snap to middle of an edge.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_POLYGONCENTER</em></td>
+<td>Snap to the center of individual polygons.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_SPLINEMID</em></td>
+<td>Snap to the middle of a spline segment.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_WORKPLANE</em></td>
+<td>Snap to the surface of the workplane.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_GRIDPOINT</em></td>
+<td>Snap to the intersection points of the grid on the workplane.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_GRIDLINE</em></td>
+<td>Snap to the grid lines on the workplane.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_GUIDEMID</em></td>
+<td>Snap to the mid point in between of static guides intersections.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_GUIDE</em></td>
+<td>Snap to guide obejcts.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_DYNAMICGUIDE</em></td>
+<td>Snap using dynamic or inferred guides.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_ORTHO</em></td>
+<td>Snap perpendicular to guides edges and splines.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer">c4d.BaseContainer</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>A copy of the settings in a <a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseContainer</span></code></a>. The snap settings IDs are:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="37%" />
+<col width="36%" />
+<col width="27%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>SNAP_SETTINGS_ENABLED</em></td>
+<td>bool</td>
+<td>Enable snapping.</td>
+</tr>
+<tr class="row-even"><td><em>SNAP_SETTINGS_RADIUS</em></td>
+<td>float</td>
+<td>Snap radius.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAP_SETTINGS_TOOL</em></td>
+<td>bool</td>
+<td>Tool specific.</td>
+</tr>
+<tr class="row-even"><td><em>SNAP_SETTINGS_GUIDEANGLE</em></td>
+<td>float</td>
+<td>Guide angle.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAP_SETTINGS_MODE</em></td>
+<td>int</td>
+<td>Mode:</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><em>SNAP_SETTINGS_MODE_AUTO</em></td>
+<td>Auto snapping.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><em>SNAP_SETTINGS_MODE_2D</em></td>
+<td>2D snapping.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><em>SNAP_SETTINGS_MODE_3D</em></td>
+<td>3D snapping.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="51%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>QUANTIZE_ENABLED</em></td>
+<td>bool</td>
+<td>Enable quantizing.</td>
+</tr>
+<tr class="row-even"><td><em>QUANTIZE_MOVE</em></td>
+<td>float</td>
+<td>Movement.</td>
+</tr>
+<tr class="row-odd"><td><em>QUANTIZE_ROTATE</em></td>
+<td>float</td>
+<td>Rotation.</td>
+</tr>
+<tr class="row-even"><td><em>QUANTIZE_SCALE</em></td>
+<td>float</td>
+<td>Scaling.</td>
+</tr>
+<tr class="row-odd"><td><em>QUANTIZE_TEXTURE</em></td>
+<td>float</td>
+<td>Texture.</td>
+</tr>
+</tbody>
+</table>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.modules.snap.SetSnapSettings">
+<code class="descclassname">c4d.modules.snap.</code><code class="descname">SetSnapSettings</code><span class="sig-paren">(</span><em>doc</em>, <em>bc</em>, <em>snapmode</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.modules.snap.SetSnapSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the snap settings for the document <em>doc</em> or a specific <em>snapmode</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>doc</strong> (<a class="reference internal" href="../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document to set the snap settings for.</li>
+<li><strong>bc</strong> (<a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – <p>The <a class="reference internal" href="../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseContainer</span></code></a> with the settings for the document <em>doc</em> and/or <em>snapmode</em>. The snap settings IDs are:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="37%" />
+<col width="36%" />
+<col width="27%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>SNAP_SETTINGS_ENABLED</em></td>
+<td>bool</td>
+<td>Enable snapping.</td>
+</tr>
+<tr class="row-even"><td><em>SNAP_SETTINGS_RADIUS</em></td>
+<td>float</td>
+<td>Snap radius.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAP_SETTINGS_TOOL</em></td>
+<td>bool</td>
+<td>Tool specific.</td>
+</tr>
+<tr class="row-even"><td><em>SNAP_SETTINGS_GUIDEANGLE</em></td>
+<td>float</td>
+<td>Guide angle.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAP_SETTINGS_MODE</em></td>
+<td>int</td>
+<td>Mode:</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><em>SNAP_SETTINGS_MODE_AUTO</em></td>
+<td>Auto snapping.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><em>SNAP_SETTINGS_MODE_2D</em></td>
+<td>2D snapping.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><em>SNAP_SETTINGS_MODE_3D</em></td>
+<td>3D snapping.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="51%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>QUANTIZE_ENABLED</em></td>
+<td>bool</td>
+<td>Enable quantizing.</td>
+</tr>
+<tr class="row-even"><td><em>QUANTIZE_MOVE</em></td>
+<td>float</td>
+<td>Movement.</td>
+</tr>
+<tr class="row-odd"><td><em>QUANTIZE_ROTATE</em></td>
+<td>float</td>
+<td>Rotation.</td>
+</tr>
+<tr class="row-even"><td><em>QUANTIZE_SCALE</em></td>
+<td>float</td>
+<td>Scaling.</td>
+</tr>
+<tr class="row-odd"><td><em>QUANTIZE_TEXTURE</em></td>
+<td>float</td>
+<td>Texture.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>snapmode</strong> (<em>int</em>) – <p>Optionally specify the snap mode to set the settings for instead of the global settings. One of the following:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>SNAPMODE_POINT</em></td>
+<td>Snap to a vertex on a mesh.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_EDGE</em></td>
+<td>Snap to any point along an edge.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_POLYGON</em></td>
+<td>Snap to the surface of a polygon.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_SPLINE</em></td>
+<td>Snap to any point along a spline.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_AXIS</em></td>
+<td>Snap to the axis of an object.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_INTERSECTION</em></td>
+<td>Snap to the intersections of objects and guides.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_MIDPOINT</em></td>
+<td>Snap to midpoint. Allows sub-snapping.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_EDGEMID</em></td>
+<td>Snap to middle of an edge.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_POLYGONCENTER</em></td>
+<td>Snap to the center of individual polygons.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_SPLINEMID</em></td>
+<td>Snap to the middle of a spline segment.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_WORKPLANE</em></td>
+<td>Snap to the surface of the workplane.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_GRIDPOINT</em></td>
+<td>Snap to the intersection points of the grid on the workplane.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_GRIDLINE</em></td>
+<td>Snap to the grid lines on the workplane.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_GUIDEMID</em></td>
+<td>Snap to the mid point in between of static guides intersections.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_GUIDE</em></td>
+<td>Snap to guide obejcts.</td>
+</tr>
+<tr class="row-even"><td><em>SNAPMODE_DYNAMICGUIDE</em></td>
+<td>Snap using dynamic or inferred guides.</td>
+</tr>
+<tr class="row-odd"><td><em>SNAPMODE_ORTHO</em></td>
+<td>Snap perpendicular to guides edges and splines.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.modules.snap.IsQuantizeEnabled">
+<code class="descclassname">c4d.modules.snap.</code><code class="descname">IsQuantizeEnabled</code><span class="sig-paren">(</span><em>doc</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.modules.snap.IsQuantizeEnabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if quantizing is enabled for the document <em>doc</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>doc</strong> (<a class="reference internal" href="../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document to test for.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if quantizing is enabled, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.modules.snap.GetQuantizeStep">
+<code class="descclassname">c4d.modules.snap.</code><code class="descname">GetQuantizeStep</code><span class="sig-paren">(</span><em>doc</em>, <em>bd</em>, <em>quantize_mode</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.modules.snap.GetQuantizeStep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a quantize step value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>doc</strong> (<a class="reference internal" href="../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document.</li>
+<li><strong>bd</strong> (<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#c4d.BaseDraw" title="c4d.BaseDraw"><em>c4d.BaseDraw</em></a>) – Currently not used. Pass <strong>None</strong>.</li>
+<li><strong>quantize_mode</strong> (<em>int</em>) – <p>The mode to retrieve the value for:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="51%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>QUANTIZE_MOVE</em></td>
+<td>float</td>
+<td>Movement.</td>
+</tr>
+<tr class="row-even"><td><em>QUANTIZE_ROTATE</em></td>
+<td>float</td>
+<td>Rotation.</td>
+</tr>
+<tr class="row-odd"><td><em>QUANTIZE_SCALE</em></td>
+<td>float</td>
+<td>Scaling.</td>
+</tr>
+<tr class="row-even"><td><em>QUANTIZE_TEXTURE</em></td>
+<td>float</td>
+<td>Texture.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.modules.snap.SetQuantizeStep">
+<code class="descclassname">c4d.modules.snap.</code><code class="descname">SetQuantizeStep</code><span class="sig-paren">(</span><em>doc</em>, <em>bd</em>, <em>quantize_mode</em>, <em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.modules.snap.SetQuantizeStep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a quantize step value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>doc</strong> (<a class="reference internal" href="../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document.</li>
+<li><strong>bd</strong> (<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#c4d.BaseDraw" title="c4d.BaseDraw"><em>c4d.BaseDraw</em></a>) – Currently not used. Pass <strong>None</strong>.</li>
+<li><strong>quantize_mode</strong> (<em>int</em>) – <p>The mode to set the value for:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="51%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>QUANTIZE_MOVE</em></td>
+<td>float</td>
+<td>Movement.</td>
+</tr>
+<tr class="row-even"><td><em>QUANTIZE_ROTATE</em></td>
+<td>float</td>
+<td>Rotation.</td>
+</tr>
+<tr class="row-odd"><td><em>QUANTIZE_SCALE</em></td>
+<td>float</td>
+<td>Scaling.</td>
+</tr>
+<tr class="row-even"><td><em>QUANTIZE_TEXTURE</em></td>
+<td>float</td>
+<td>Texture.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>val</strong> (<em>float</em>) – The quantize step value to set.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.modules.snap.GetWorkplaneObject">
+<code class="descclassname">c4d.modules.snap.</code><code class="descname">GetWorkplaneObject</code><span class="sig-paren">(</span><em>doc</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.modules.snap.GetWorkplaneObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the workplane object for document <em>doc</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>doc</strong> (<a class="reference internal" href="../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject">c4d.BaseObject</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The workplane object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.modules.snap.IsWorkplaneLock">
+<code class="descclassname">c4d.modules.snap.</code><code class="descname">IsWorkplaneLock</code><span class="sig-paren">(</span><em>doc</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.modules.snap.IsWorkplaneLock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the workplane locked status for document <em>doc</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>doc</strong> (<a class="reference internal" href="../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the workplane is locked.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.modules.snap.SetWorkplaneLock">
+<code class="descclassname">c4d.modules.snap.</code><code class="descname">SetWorkplaneLock</code><span class="sig-paren">(</span><em>bd</em>, <em>locked</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.modules.snap.SetWorkplaneLock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the workplane locked status.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>bd</strong> (<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#c4d.BaseDraw" title="c4d.BaseDraw"><em>c4d.BaseDraw</em></a>) – The viewport to lock the workplane.</li>
+<li><strong>locked</strong> (<em>bool</em>) – <strong>True</strong> to lock the workplane.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c4d.modules.snap.GetWorkplaneMatrix">
+<code class="descclassname">c4d.modules.snap.</code><code class="descname">GetWorkplaneMatrix</code><span class="sig-paren">(</span><em>doc</em>, <em>bd</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.modules.snap.GetWorkplaneMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the workplane matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>doc</strong> (<a class="reference internal" href="../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document.</li>
+<li><strong>bd</strong> (<a class="reference internal" href="../../c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#c4d.BaseDraw" title="c4d.BaseDraw"><em>c4d.BaseDraw</em></a>) – The viewport you want to get the workplane’s matrix from. If <strong>None</strong> the locked matrix is returned independently from view.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix">c4d.Matrix</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The workplane matrix.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../substance/index.html" title="c4d.modules.substance"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../sculpting/SculptModifierInterface/index.html" title="c4d.modules.sculpting.SculptModifierInterface"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >c4d.modules</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

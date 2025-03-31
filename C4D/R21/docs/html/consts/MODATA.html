@@ -1,0 +1,189 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MODATA &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="MODE" href="MODE.html" />
+    <link rel="prev" title="MIXVECTORTYPE" href="MIXVECTORTYPE.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="MODE.html" title="MODE"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="MIXVECTORTYPE.html" title="MIXVECTORTYPE"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../types/index.html" accesskey="U">Types and Symbols List</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="modata">
+<h1>MODATA<a class="headerlink" href="#modata" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="17%" />
+<col width="68%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>MODATA_MATRIX</em></td>
+<td><a class="reference internal" href="../modules/c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a></td>
+<td>Matrix of the clone.</td>
+</tr>
+<tr class="row-even"><td><em>MODATA_COLOR</em></td>
+<td><a class="reference internal" href="../modules/c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a></td>
+<td>Color of the clone.</td>
+</tr>
+<tr class="row-odd"><td><em>MODATA_SIZE</em></td>
+<td><a class="reference internal" href="../modules/c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a></td>
+<td>Size of the clone.</td>
+</tr>
+<tr class="row-even"><td><em>MODATA_UVW</em></td>
+<td><a class="reference internal" href="../modules/c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a></td>
+<td>UV position of the clone.</td>
+</tr>
+<tr class="row-odd"><td><em>MODATA_FLAGS</em></td>
+<td>int</td>
+<td>Flags:</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><em>MOGENFLAG_CLONE_ON</em></td>
+<td>Particle is visible.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><em>MOGENFLAG_DISABLE</em></td>
+<td>Particle is permanently disabled.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><em>MOGENFLAG_BORN</em></td>
+<td>Particle is just generated (internal use only).</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><em>MOGENFLAG_MODATASET</em></td>
+<td>The <a class="reference internal" href="../modules/c4d.modules/mograph/MoData/index.html#c4d.modules.mograph.MoData" title="c4d.modules.mograph.MoData"><code class="xref py py-class docutils literal notranslate"><span class="pre">MoData</span></code></a> has been set and does not need the input of the transform panel.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><em>MOGENFLAG_COLORSET</em></td>
+<td>The <a class="reference internal" href="../modules/c4d.modules/mograph/MoData/index.html#c4d.modules.mograph.MoData" title="c4d.modules.mograph.MoData"><code class="xref py py-class docutils literal notranslate"><span class="pre">MoData</span></code></a> color has been set and does not need to be updated.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><em>MOGENFLAG_TIMESET</em></td>
+<td>The <a class="reference internal" href="../modules/c4d.modules/mograph/MoData/index.html#c4d.modules.mograph.MoData" title="c4d.modules.mograph.MoData"><code class="xref py py-class docutils literal notranslate"><span class="pre">MoData</span></code></a> time has been set and does not need to be updated.</td>
+</tr>
+<tr class="row-even"><td><em>MODATA_WEIGHT</em></td>
+<td>float</td>
+<td>Weight of the clone.</td>
+</tr>
+<tr class="row-odd"><td><em>MODATA_CLONE</em></td>
+<td>float</td>
+<td>Clone Offset (picks which child of the Cloner gets cloned or the blending between those children).</td>
+</tr>
+<tr class="row-even"><td><em>MODATA_TIME</em></td>
+<td>float</td>
+<td>Time offset of the clone.</td>
+</tr>
+<tr class="row-odd"><td><em>MODATA_LASTMAT</em></td>
+<td><a class="reference internal" href="../modules/c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a></td>
+<td>Previous frame particle matrix.</td>
+</tr>
+<tr class="row-even"><td><em>MODATA_STARTMAT</em></td>
+<td><a class="reference internal" href="../modules/c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a></td>
+<td>Matrix at the particle’s birth.</td>
+</tr>
+<tr class="row-odd"><td><em>MODATA_ALT_INDEX</em></td>
+<td>int</td>
+<td>Alternative index value that can be used for instance by the Step Effector when cloned over a spline with an offset.</td>
+</tr>
+<tr class="row-even"><td><em>MODATA_FALLOFF_WGT</em></td>
+<td>float</td>
+<td>Falloff weight.</td>
+</tr>
+<tr class="row-odd"><td><em>MODATA_SPLINE_SEGMENT</em></td>
+<td>int</td>
+<td>The segment index, mostly used with the MoSpline (currently unused).</td>
+</tr>
+<tr class="row-even"><td><em>MODATA_GROWTH</em></td>
+<td>float</td>
+<td>Offset of growth for the particle on the MoSpline (currently unused).</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="MODE.html" title="MODE"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="MIXVECTORTYPE.html" title="MIXVECTORTYPE"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../types/index.html" >Types and Symbols List</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

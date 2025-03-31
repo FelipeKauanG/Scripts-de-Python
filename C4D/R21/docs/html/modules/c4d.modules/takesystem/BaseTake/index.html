@@ -1,0 +1,642 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.takesystem.BaseTake &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.modules.takesystem.TakeData" href="../TakeData/index.html" />
+    <link rel="prev" title="c4d.modules.takesystem.BaseOverrideGroup" href="../BaseOverrideGroup/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../TakeData/index.html" title="c4d.modules.takesystem.TakeData"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../BaseOverrideGroup/index.html" title="c4d.modules.takesystem.BaseOverrideGroup"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.modules.takesystem</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-takesystem-basetake">
+<h1>c4d.modules.takesystem.BaseTake<a class="headerlink" href="#c4d-modules-takesystem-basetake" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.takesystem.BaseTake">
+<em class="property">class </em><code class="descclassname">c4d.modules.takesystem.</code><code class="descname">BaseTake</code><a class="headerlink" href="#c4d.modules.takesystem.BaseTake" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Represents a Take of the Take System.</div>
+<div class="line">It stores <a class="reference internal" href="../BaseOverride/index.html#c4d.modules.takesystem.BaseOverride" title="c4d.modules.takesystem.BaseOverride"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseOverride</span></code></a> objects that define how a specific entity is changed in a Take.</div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This type cannot be instantiated.</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R17.032.</span></p>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BaseTake.IsMain" title="BaseTake.IsMain"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseTake.IsMain(self)</span></code></a></td>
+<td>Checks if the Take is the Main Take.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseTake.SearchHierarchy" title="BaseTake.SearchHierarchy"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseTake.SearchHierarchy(self,</span> <span class="pre">op)</span></code></a></td>
+<td>Checks if the Take is a child of <em>op</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseTake.GetOverrides" title="BaseTake.GetOverrides"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseTake.GetOverrides(self)</span></code></a></td>
+<td>Retrieves the Override nodes owned by the Take.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseTake.GetOverrideGroups" title="BaseTake.GetOverrideGroups"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseTake.GetOverrideGroups(self)</span></code></a></td>
+<td>Retrieves the Override Groups nodes owned by the Take.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseTake.FindOrAddOverrideParam" title="BaseTake.FindOrAddOverrideParam"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseTake.FindOrAddOverrideParam(self,</span> <span class="pre">takeData,</span> <span class="pre">node,</span> <span class="pre">...)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Searches if parameter with <em>descID</em> is Overridden. If not adds a new Override with passed <em>overrideValue</em> for the Take.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseTake.OverrideNode" title="BaseTake.OverrideNode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseTake.OverrideNode(self,</span> <span class="pre">takeData,</span> <span class="pre">node,</span> <span class="pre">...)</span></code></a></td>
+<td>Overrides all parameters of passed <em>node</em> in the Take.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseTake.AutoTake" title="BaseTake.AutoTake"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseTake.AutoTake(self,</span> <span class="pre">takeData,</span> <span class="pre">node,</span> <span class="pre">undo)</span></code></a></td>
+<td>Compares nodes and automatically generates overrides for different parameters in the Take.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseTake.DeleteOverride" title="BaseTake.DeleteOverride"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseTake.DeleteOverride(self,</span> <span class="pre">takeData,</span> <span class="pre">node,</span> <span class="pre">...)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Deletes a single parameter Override for <em>node</em> with <em>descID</em>.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseTake.FindOverride" title="BaseTake.FindOverride"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseTake.FindOverride(self,</span> <span class="pre">takeData,</span> <span class="pre">node)</span></code></a></td>
+<td>Searches if <em>node</em> is overridden in the Take.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseTake.FindOverrideInHierarchy" title="BaseTake.FindOverrideInHierarchy"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseTake.FindOverrideInHierarchy(self,</span> <span class="pre">takeData,</span> <span class="pre">node,</span> <span class="pre">...)</span></code></a></td>
+<td>Searches if <em>node</em> parameter with <em>descID</em> is overridden in the Take or in a parent.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseTake.AddOverrideGroup" title="BaseTake.AddOverrideGroup"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseTake.AddOverrideGroup(self)</span></code></a></td>
+<td>Adds a new Override Group to the Take.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseTake.GetFirstOverrideGroup" title="BaseTake.GetFirstOverrideGroup"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseTake.GetFirstOverrideGroup(self)</span></code></a></td>
+<td>Gets the first Override Group in the Take.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseTake.DeleteOverrideGroup" title="BaseTake.DeleteOverrideGroup"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseTake.DeleteOverrideGroup(self,</span> <span class="pre">takeData,</span> <span class="pre">og)</span></code></a></td>
+<td>Deletes an Override Group from the Take.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseTake.GetCamera" title="BaseTake.GetCamera"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseTake.GetCamera(self,</span> <span class="pre">takeData)</span></code></a></td>
+<td>Gets the camera for the Take.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseTake.GetEffectiveCamera" title="BaseTake.GetEffectiveCamera"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseTake.GetEffectiveCamera(self,</span> <span class="pre">takeData)</span></code></a></td>
+<td>Gets the camera used by the Take even if it comes from a parent Take.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseTake.SetCamera" title="BaseTake.SetCamera"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseTake.SetCamera(self,</span> <span class="pre">takeData,</span> <span class="pre">camera)</span></code></a></td>
+<td>Sets the camera for the Take.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseTake.GetRenderData" title="BaseTake.GetRenderData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseTake.GetRenderData(self,</span> <span class="pre">takeData)</span></code></a></td>
+<td>Gets the render data for the Take.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseTake.GetEffectiveRenderData" title="BaseTake.GetEffectiveRenderData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseTake.GetEffectiveRenderData(self,</span> <span class="pre">takeData)</span></code></a></td>
+<td>Gets the render data used by the Take even if it comes from a parent Take.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseTake.SetRenderData" title="BaseTake.SetRenderData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseTake.SetRenderData(self,</span> <span class="pre">takeData,</span> <span class="pre">rData)</span></code></a></td>
+<td>Sets the RenderData for the Take.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseTake.IsChecked" title="BaseTake.IsChecked"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseTake.IsChecked(self)</span></code></a></td>
+<td>Gets the mark status of the Take used for rendering and export operations.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseTake.SetChecked" title="BaseTake.SetChecked"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseTake.SetChecked(self,</span> <span class="pre">status)</span></code></a></td>
+<td>Sets the mark status of the Take used for rendering and export operations.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseTake.Reset" title="BaseTake.Reset"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseTake.Reset(self)</span></code></a></td>
+<td>Resets all sub-structures and Overrides for the Take.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseList2D</span></code></a></li>
+</ul>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="BaseTake.IsMain">
+<code class="descclassname">BaseTake.</code><code class="descname">IsMain</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseTake.IsMain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the Take is the Main Take.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the Take is the Main Take, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseTake.SearchHierarchy">
+<code class="descclassname">BaseTake.</code><code class="descname">SearchHierarchy</code><span class="sig-paren">(</span><em>self</em>, <em>op</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseTake.SearchHierarchy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the Take is a child of <em>op</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>op</strong> (<a class="reference internal" href="#c4d.modules.takesystem.BaseTake" title="c4d.modules.takesystem.BaseTake"><em>c4d.modules.takesystem.BaseTake</em></a>) – The Take to search within his hierarchy.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the Take is child of <em>op</em>, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseTake.GetOverrides">
+<code class="descclassname">BaseTake.</code><code class="descname">GetOverrides</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseTake.GetOverrides" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the Override nodes owned by the Take.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list of <a class="reference internal" href="../BaseOverride/index.html#c4d.modules.takesystem.BaseOverride" title="c4d.modules.takesystem.BaseOverride"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseOverride</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The Override nodes.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseTake.GetOverrideGroups">
+<code class="descclassname">BaseTake.</code><code class="descname">GetOverrideGroups</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseTake.GetOverrideGroups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the Override Groups nodes owned by the Take.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list of <a class="reference internal" href="../BaseOverrideGroup/index.html#c4d.modules.takesystem.BaseOverrideGroup" title="c4d.modules.takesystem.BaseOverrideGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseOverrideGroup</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The Override Groups nodes.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseTake.FindOrAddOverrideParam">
+<code class="descclassname">BaseTake.</code><code class="descname">FindOrAddOverrideParam</code><span class="sig-paren">(</span><em>self</em>, <em>takeData</em>, <em>node</em>, <em>descID</em>, <em>overrideValue</em>, <em>backupValue=None</em>, <em>deleteAnim=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseTake.FindOrAddOverrideParam" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Searches if parameter with <em>descID</em> is Overridden. If not adds a new Override with passed <em>overrideValue</em> for the Take.</div>
+<div class="line">If the <a class="reference internal" href="../BaseOverride/index.html#c4d.modules.takesystem.BaseOverride" title="c4d.modules.takesystem.BaseOverride"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseOverride</span></code></a> node does not exist the function automatically allocates and inserts it, plus takes care to backup data properly in parent or Main Take.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">An undo step is added automatically if the call is added from the main (GUI) thread and global undo is allowed (see <a class="reference internal" href="../TakeData/index.html#TakeData.GetUndoState" title="TakeData.GetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.GetUndoState()</span></code></a>/<a class="reference internal" href="../TakeData/index.html#TakeData.SetUndoState" title="TakeData.SetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.SetUndoState()</span></code></a>).</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>takeData</strong> (<a class="reference internal" href="../TakeData/index.html#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><em>c4d.modules.takesystem.TakeData</em></a>) – The Take System context.</li>
+<li><strong>node</strong> (<a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><em>c4d.BaseList2D</em></a>) – The scene node to override.</li>
+<li><strong>descID</strong> (<a class="reference internal" href="../../../c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><em>c4d.DescID</em></a>) – The parameter to override.</li>
+<li><strong>overrideValue</strong> (<em>any</em>) – The initial value to set in the Overrides for the Take.</li>
+<li><strong>backupValue</strong> (<em>any</em>) – Optionally provide the backup value for the Main/parent Take. Mandatory to set this for parameters not from the GUI.</li>
+<li><strong>deleteAnim</strong> (<em>bool</em>) – If <strong>True</strong> and original parameter in the scene is animated the animation will be removed in the resulting Override.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../BaseOverride/index.html#c4d.modules.takesystem.BaseOverride" title="c4d.modules.takesystem.BaseOverride">c4d.modules.takesystem.BaseOverride</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The found or newly created Override node.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseTake.OverrideNode">
+<code class="descclassname">BaseTake.</code><code class="descname">OverrideNode</code><span class="sig-paren">(</span><em>self</em>, <em>takeData</em>, <em>node</em>, <em>deleteAnim</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseTake.OverrideNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overrides all parameters of passed <em>node</em> in the Take.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">An undo step is added automatically if the call is added from the main (GUI) thread and global undo is allowed (see <a class="reference internal" href="../TakeData/index.html#TakeData.GetUndoState" title="TakeData.GetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.GetUndoState()</span></code></a>/<a class="reference internal" href="../TakeData/index.html#TakeData.SetUndoState" title="TakeData.SetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.SetUndoState()</span></code></a>).</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>takeData</strong> (<a class="reference internal" href="../TakeData/index.html#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><em>c4d.modules.takesystem.TakeData</em></a>) – The Take System context.</li>
+<li><strong>node</strong> (<a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><em>c4d.BaseList2D</em></a>) – The scene node to override.</li>
+<li><strong>deleteAnim</strong> (<em>bool</em>) – If <strong>True</strong> and original parameter in the scene is animated the animation will be removed in the resulting Override.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../BaseOverride/index.html#c4d.modules.takesystem.BaseOverride" title="c4d.modules.takesystem.BaseOverride">c4d.modules.takesystem.BaseOverride</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The newly created Override node.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseTake.AutoTake">
+<code class="descclassname">BaseTake.</code><code class="descname">AutoTake</code><span class="sig-paren">(</span><em>self</em>, <em>takeData</em>, <em>node</em>, <em>undo</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseTake.AutoTake" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compares nodes and automatically generates overrides for different parameters in the Take.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>takeData</strong> (<a class="reference internal" href="../TakeData/index.html#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><em>c4d.modules.takesystem.TakeData</em></a>) – The Take System context.</li>
+<li><strong>node</strong> (<a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><em>c4d.BaseList2D</em></a>) – The scene node to override.</li>
+<li><strong>undo</strong> (<a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><em>c4d.BaseList2D</em></a>) – The node to compare with.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseTake.DeleteOverride">
+<code class="descclassname">BaseTake.</code><code class="descname">DeleteOverride</code><span class="sig-paren">(</span><em>self</em>, <em>takeData</em>, <em>node</em>, <em>descID</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseTake.DeleteOverride" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Deletes a single parameter Override for <em>node</em> with <em>descID</em>.</div>
+<div class="line">If the Override results empty (no more overridden parameters) then it will be deleted too.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>takeData</strong> (<a class="reference internal" href="../TakeData/index.html#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><em>c4d.modules.takesystem.TakeData</em></a>) – The Take System context.</li>
+<li><strong>node</strong> (<a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><em>c4d.BaseList2D</em></a>) – The scene node to delete the parameter for.</li>
+<li><strong>descID</strong> (<a class="reference internal" href="../../../c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><em>c4d.DescID</em></a>) – The parameter Override to be deleted.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseTake.FindOverride">
+<code class="descclassname">BaseTake.</code><code class="descname">FindOverride</code><span class="sig-paren">(</span><em>self</em>, <em>takeData</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseTake.FindOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p>Searches if <em>node</em> is overridden in the Take.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>takeData</strong> (<a class="reference internal" href="../TakeData/index.html#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><em>c4d.modules.takesystem.TakeData</em></a>) – The Take System context.</li>
+<li><strong>node</strong> (<a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><em>c4d.BaseList2D</em></a>) – The scene node to search the Override for.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../BaseOverride/index.html#c4d.modules.takesystem.BaseOverride" title="c4d.modules.takesystem.BaseOverride">c4d.modules.takesystem.BaseOverride</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Override if found, otherwise <strong>None</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseTake.FindOverrideInHierarchy">
+<code class="descclassname">BaseTake.</code><code class="descname">FindOverrideInHierarchy</code><span class="sig-paren">(</span><em>self</em>, <em>takeData</em>, <em>node</em>, <em>descID</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseTake.FindOverrideInHierarchy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Searches if <em>node</em> parameter with <em>descID</em> is overridden in the Take or in a parent.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>takeData</strong> (<a class="reference internal" href="../TakeData/index.html#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><em>c4d.modules.takesystem.TakeData</em></a>) – The Take System context.</li>
+<li><strong>node</strong> (<a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><em>c4d.BaseList2D</em></a>) – The node to search the Override for.</li>
+<li><strong>descID</strong> (<a class="reference internal" href="../../../c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><em>c4d.DescID</em></a>) – The parameter to search for.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">tuple(<a class="reference internal" href="../BaseOverride/index.html#c4d.modules.takesystem.BaseOverride" title="c4d.modules.takesystem.BaseOverride"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseOverride</span></code></a>, <a class="reference internal" href="#c4d.modules.takesystem.BaseTake" title="c4d.modules.takesystem.BaseTake"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTake</span></code></a>)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Override if found and the Take that owns it.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseTake.AddOverrideGroup">
+<code class="descclassname">BaseTake.</code><code class="descname">AddOverrideGroup</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseTake.AddOverrideGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a new Override Group to the Take.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">An undo step is added automatically if the call is added from the main (GUI) thread and global undo is allowed (see <a class="reference internal" href="../TakeData/index.html#TakeData.GetUndoState" title="TakeData.GetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.GetUndoState()</span></code></a>/<a class="reference internal" href="../TakeData/index.html#TakeData.SetUndoState" title="TakeData.SetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.SetUndoState()</span></code></a>).</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../BaseOverrideGroup/index.html#c4d.modules.takesystem.BaseOverrideGroup" title="c4d.modules.takesystem.BaseOverrideGroup">c4d.modules.takesystem.BaseOverrideGroup</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The added Override Group.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseTake.GetFirstOverrideGroup">
+<code class="descclassname">BaseTake.</code><code class="descname">GetFirstOverrideGroup</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseTake.GetFirstOverrideGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the first Override Group in the Take.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../BaseOverrideGroup/index.html#c4d.modules.takesystem.BaseOverrideGroup" title="c4d.modules.takesystem.BaseOverrideGroup">c4d.modules.takesystem.BaseOverrideGroup</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The first Override Group, or <strong>None</strong> if there is none.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseTake.DeleteOverrideGroup">
+<code class="descclassname">BaseTake.</code><code class="descname">DeleteOverrideGroup</code><span class="sig-paren">(</span><em>self</em>, <em>takeData</em>, <em>og</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseTake.DeleteOverrideGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an Override Group from the Take.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">An undo step is added automatically if the call is added from the main (GUI) thread and global undo is allowed (see <a class="reference internal" href="../TakeData/index.html#TakeData.GetUndoState" title="TakeData.GetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.GetUndoState()</span></code></a>/<a class="reference internal" href="../TakeData/index.html#TakeData.SetUndoState" title="TakeData.SetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.SetUndoState()</span></code></a>).</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>takeData</strong> (<a class="reference internal" href="../TakeData/index.html#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><em>c4d.modules.takesystem.TakeData</em></a>) – The Take System context.</li>
+<li><strong>og</strong> (<a class="reference internal" href="../BaseOverrideGroup/index.html#c4d.modules.takesystem.BaseOverrideGroup" title="c4d.modules.takesystem.BaseOverrideGroup"><em>c4d.modules.takesystem.BaseOverrideGroup</em></a>) – The Override Group to be deleted.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseTake.GetCamera">
+<code class="descclassname">BaseTake.</code><code class="descname">GetCamera</code><span class="sig-paren">(</span><em>self</em>, <em>takeData</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseTake.GetCamera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the camera for the Take.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Can return the default camera.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>takeData</strong> (<a class="reference internal" href="../TakeData/index.html#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><em>c4d.modules.takesystem.TakeData</em></a>) – The Take System context.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject">c4d.BaseObject</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The camera assigned to the Take, or <strong>None</strong> if the Take uses the camera from a parent Take.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseTake.GetEffectiveCamera">
+<code class="descclassname">BaseTake.</code><code class="descname">GetEffectiveCamera</code><span class="sig-paren">(</span><em>self</em>, <em>takeData</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseTake.GetEffectiveCamera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the camera used by the Take even if it comes from a parent Take.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Can return the default camera.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>takeData</strong> (<a class="reference internal" href="../TakeData/index.html#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><em>c4d.modules.takesystem.TakeData</em></a>) – The Take System context.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">tuple(<a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseObject</span></code></a>, <a class="reference internal" href="#c4d.modules.takesystem.BaseTake" title="c4d.modules.takesystem.BaseTake"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTake</span></code></a>)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The camera used by the Take and the Take it comes from.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseTake.SetCamera">
+<code class="descclassname">BaseTake.</code><code class="descname">SetCamera</code><span class="sig-paren">(</span><em>self</em>, <em>takeData</em>, <em>camera</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseTake.SetCamera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the camera for the Take.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Can be the default camera.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>takeData</strong> (<a class="reference internal" href="../TakeData/index.html#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><em>c4d.modules.takesystem.TakeData</em></a>) – The Take System context.</li>
+<li><strong>camera</strong> (<a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><em>c4d.BaseObject</em></a>) – The camera to set, or <strong>None</strong> to reset and use one from a parent Take.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseTake.GetRenderData">
+<code class="descclassname">BaseTake.</code><code class="descname">GetRenderData</code><span class="sig-paren">(</span><em>self</em>, <em>takeData</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseTake.GetRenderData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the render data for the Take.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>takeData</strong> (<a class="reference internal" href="../TakeData/index.html#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><em>c4d.modules.takesystem.TakeData</em></a>) – The Take System context.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d.documents/RenderData/index.html#c4d.documents.RenderData" title="c4d.documents.RenderData">c4d.documents.RenderData</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The RenderData assigned to the Take, or <strong>None</strong> if the Take uses the RenderData from a parent Take.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseTake.GetEffectiveRenderData">
+<code class="descclassname">BaseTake.</code><code class="descname">GetEffectiveRenderData</code><span class="sig-paren">(</span><em>self</em>, <em>takeData</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseTake.GetEffectiveRenderData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the render data used by the Take even if it comes from a parent Take.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>takeData</strong> (<a class="reference internal" href="../TakeData/index.html#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><em>c4d.modules.takesystem.TakeData</em></a>) – The Take System context.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">tuple(<a class="reference internal" href="../../../c4d.documents/RenderData/index.html#c4d.documents.RenderData" title="c4d.documents.RenderData"><code class="xref py py-class docutils literal notranslate"><span class="pre">RenderData</span></code></a>, <a class="reference internal" href="#c4d.modules.takesystem.BaseTake" title="c4d.modules.takesystem.BaseTake"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTake</span></code></a>)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The render data used by the Take and the Take it comes from.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseTake.SetRenderData">
+<code class="descclassname">BaseTake.</code><code class="descname">SetRenderData</code><span class="sig-paren">(</span><em>self</em>, <em>takeData</em>, <em>rData</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseTake.SetRenderData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the RenderData for the Take.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>takeData</strong> (<a class="reference internal" href="../TakeData/index.html#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><em>c4d.modules.takesystem.TakeData</em></a>) – The Take System context.</li>
+<li><strong>rData</strong> (<a class="reference internal" href="../../../c4d.documents/RenderData/index.html#c4d.documents.RenderData" title="c4d.documents.RenderData"><em>c4d.documents.RenderData</em></a>) – The render data to set, or <strong>None</strong> to reset and use one from a parent Take.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseTake.IsChecked">
+<code class="descclassname">BaseTake.</code><code class="descname">IsChecked</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseTake.IsChecked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the mark status of the Take used for rendering and export operations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">tuple(<a class="reference internal" href="../../../c4d.documents/RenderData/index.html#c4d.documents.RenderData" title="c4d.documents.RenderData"><code class="xref py py-class docutils literal notranslate"><span class="pre">RenderData</span></code></a>, <a class="reference internal" href="#c4d.modules.takesystem.BaseTake" title="c4d.modules.takesystem.BaseTake"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTake</span></code></a>)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the Take is marked, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseTake.SetChecked">
+<code class="descclassname">BaseTake.</code><code class="descname">SetChecked</code><span class="sig-paren">(</span><em>self</em>, <em>status</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseTake.SetChecked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the mark status of the Take used for rendering and export operations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>status</strong> (<em>bool</em>) – If <strong>True</strong> the Take is marked, otherwise the mark is removed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseTake.Reset">
+<code class="descclassname">BaseTake.</code><code class="descname">Reset</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseTake.Reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets all sub-structures and Overrides for the Take.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">All data not in the current state of the document are deleted.</p>
+</div>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../TakeData/index.html" title="c4d.modules.takesystem.TakeData"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../BaseOverrideGroup/index.html" title="c4d.modules.takesystem.BaseOverrideGroup"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.modules.takesystem</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

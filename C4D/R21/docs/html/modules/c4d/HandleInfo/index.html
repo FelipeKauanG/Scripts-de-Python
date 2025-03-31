@@ -1,0 +1,218 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.HandleInfo &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="c4d.CustomDataType" href="../CustomDataType/index.html" />
+    <link rel="prev" title="c4d.CPolygon" href="../CPolygon/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../CustomDataType/index.html" title="c4d.CustomDataType"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../CPolygon/index.html" title="c4d.CPolygon"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">c4d</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-handleinfo">
+<h1>c4d.HandleInfo<a class="headerlink" href="#c4d-handleinfo" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.HandleInfo">
+<em class="property">class </em><code class="descclassname">c4d.</code><code class="descname">HandleInfo</code><a class="headerlink" href="#c4d.HandleInfo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Attributes</p>
+<p><blockquote>
+<div><dl class="attribute">
+<dt id="HandleInfo.position">
+<code class="descclassname">HandleInfo.</code><code class="descname">position</code><a class="headerlink" href="#HandleInfo.position" title="Permalink to this definition">¶</a></dt>
+<dd><p>The current handle position.</p>
+<p><strong>Type:</strong> <a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="HandleInfo.direction">
+<code class="descclassname">HandleInfo.</code><code class="descname">direction</code><a class="headerlink" href="#HandleInfo.direction" title="Permalink to this definition">¶</a></dt>
+<dd><p>The normal used for the handle travel. For linear handle constraints it is the line on which a handle can travel. For planar and radial constraints it is the normal of the plane/disc. Otherwise it is not needed.</p>
+<p><strong>Type:</strong> <a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="HandleInfo.center">
+<code class="descclassname">HandleInfo.</code><code class="descname">center</code><a class="headerlink" href="#HandleInfo.center" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle constraint center, for radial and spherical handle constraints.</p>
+<p><strong>Type:</strong> <a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="HandleInfo.radius">
+<code class="descclassname">HandleInfo.</code><code class="descname">radius</code><a class="headerlink" href="#HandleInfo.radius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle constraint radius, for radial and spherical handle constraints.</p>
+<p><strong>Type:</strong> float</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="HandleInfo.type">
+<code class="descclassname">HandleInfo.</code><code class="descname">type</code><a class="headerlink" href="#HandleInfo.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle constraint type. One of these types:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>HANDLECONSTRAINTTYPE_INVALID</em></td>
+<td>Invalid handle constraint type, used to temporarily ignore handles (e.g. in the Camera Object with the Front/Back DOF handles).</td>
+</tr>
+<tr class="row-even"><td><em>HANDLECONSTRAINTTYPE_LINEAR</em></td>
+<td>Linear handle constraint.</td>
+</tr>
+<tr class="row-odd"><td><em>HANDLECONSTRAINTTYPE_PLANAR</em></td>
+<td>Planar handle constraint.</td>
+</tr>
+<tr class="row-even"><td><em>HANDLECONSTRAINTTYPE_FREE</em></td>
+<td>No constraint.</td>
+</tr>
+<tr class="row-odd"><td><em>HANDLECONSTRAINTTYPE_RADIAL</em></td>
+<td>Radial handle constraint.</td>
+</tr>
+<tr class="row-even"><td><em>HANDLECONSTRAINTTYPE_SPHERICAL</em></td>
+<td>Spherical handle constraint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div></blockquote>
+</p>
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#HandleInfo.__init__" title="HandleInfo.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HandleInfo.__init__(self)</span></code></a></td>
+<td>Constructor.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#HandleInfo.CalculateNewPosition" title="HandleInfo.CalculateNewPosition"><code class="xref py py-meth docutils literal notranslate"><span class="pre">HandleInfo.CalculateNewPosition(self,</span> <span class="pre">bd,</span> <span class="pre">mg,</span> <span class="pre">mouse_pos)</span></code></a></td>
+<td>Calculates a handle position for a given mouse position.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="HandleInfo.__init__">
+<code class="descclassname">HandleInfo.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#HandleInfo.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="HandleInfo.CalculateNewPosition">
+<code class="descclassname">HandleInfo.</code><code class="descname">CalculateNewPosition</code><span class="sig-paren">(</span><em>self</em>, <em>bd</em>, <em>mg</em>, <em>mouse_pos</em><span class="sig-paren">)</span><a class="headerlink" href="#HandleInfo.CalculateNewPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates a handle position for a given mouse position.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>bd</strong> (<a class="reference internal" href="../C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#c4d.BaseDraw" title="c4d.BaseDraw"><em>c4d.BaseDraw</em></a>) – The active viewport.</li>
+<li><strong>mg</strong> (<a class="reference internal" href="../Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><em>c4d.Matrix</em></a>) – The global matrix of the handle’s parent object.</li>
+<li><strong>mouse_pos</strong> (<a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The mouse coordinates for which to calculate the handle position.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The new handle position.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../CustomDataType/index.html" title="c4d.CustomDataType"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../CPolygon/index.html" title="c4d.CPolygon"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >c4d</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

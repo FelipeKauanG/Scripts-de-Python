@@ -1,0 +1,379 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Matrix Fundamentals &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Threading Information" href="../../application_development/threading.html" />
+    <link rel="prev" title="Time Management in Cinema 4D" href="basetime.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../application_development/threading.html" title="Threading Information"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="basetime.html" title="Time Management in Cinema 4D"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" accesskey="U">Manual List</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="matrix-fundamentals">
+<span id="matrix-fundamental"></span><h1>Matrix Fundamentals<a class="headerlink" href="#matrix-fundamentals" title="Permalink to this headline">¶</a></h1>
+<p>This page will guide you through some of the most important uses of matrices in 3D graphics.</p>
+<div class="section" id="fundamentals">
+<h2>Fundamentals<a class="headerlink" href="#fundamentals" title="Permalink to this headline">¶</a></h2>
+<p>A matrix is basically an array of number arranged in a rectangular pattern. The matrices used in Cinema 4D,
+represented by the class <a class="reference internal" href="../../../modules/c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a>, consist of three rows and four columns, i.e. they
+have the dimension 3x4. The first row is always “1, 0, 0, 0”, which means that there are 12 numbers that
+are used. These numbers are grouped into four vectors, one for the remaining numbers in each column. The
+four vectors are called <em>off</em>, v1, v2 and v3:</p>
+<img alt="../../../_images/matrix_matrix.gif" src="../../../_images/matrix_matrix.gif" />
+<p>Together these four vectors can be used to represent the coordinate system for a Cinema 4D object. A coordinate system consists of three axes, one for each coordinate (X, Y and Z). The system also has a base position, from which the three axes originate. This base position is stored in <em>off</em>, and the three axis vectors are stored in v1, v2 and v3.</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="37%" />
+<col width="63%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>off</em></td>
+<td>position</td>
+</tr>
+<tr class="row-even"><td><em>v1</em></td>
+<td>X-axis</td>
+</tr>
+<tr class="row-odd"><td><em>v2</em></td>
+<td>Y-axis</td>
+</tr>
+<tr class="row-even"><td><em>v3</em></td>
+<td>Z-axis</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>A matrix is enough to store all the three important properties of an object: position, rotation and scale. (The position is stored in the first vector, the rotation is given by the direction of the three axis vectors and the scale is given by their length.) Therefore each object has a matrix that you can get with <a class="reference internal" href="../../../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#BaseObject.GetMl" title="BaseObject.GetMl"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetMl()</span></code></a>.
+This surely seems like a convenient way to group position, rotation and scale. But <a class="reference internal" href="../../../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#BaseObject.SetRelRot" title="BaseObject.SetRelRot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetRelRot()</span></code></a> and <a class="reference internal" href="../../../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#BaseObject.SetRelScale" title="BaseObject.SetRelScale"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetRelScale()</span></code></a> work just fine already. Why do we need to use matrices?</p>
+<p>To compare two objects in different hierarchies, what we need is a way to get their global coordinates. This is where matrix multiplication comes in. Multiplying two matrices is not just a matter of multiplying the corresponding numbers; it is much more complicated than that. In fact, matrix multiplication is not even commutative: <em>a*b</em> is not the same as <em>b*a</em>. Fortunately you do not have to know how to multiply two matrices to do it.</p>
+<p>If matrix Mp is the parent’s matrix, and Mc is the child’s matrix, then the product Mp*Mc gives a matrix that represents the child’s position and rotation, but in the coordinate system of the parent. This means that getting a child’s global matrix is just a matter of multiplying it with each of its parents’ matrices.</p>
+<p>Fortunately you do not have to do this multiplication yourself. Each object has these predefined functions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GetMl</span><span class="p">()</span>      <span class="c1"># Returns the matrix in local coordinates</span>
+<span class="n">GetMg</span><span class="p">()</span>      <span class="c1"># Returns the matrix in global coordinates</span>
+<span class="n">GetUpMg</span><span class="p">()</span>    <span class="c1"># Returns the parent&#39;s matrix in global coordinates</span>
+</pre></div>
+</div>
+<p>For example, if you have an object named ‘MyObject’ that’s hidden deep within the object hierarchy, then the following code will print its global position:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">SearchObject</span><span class="p">(</span><span class="s2">&quot;MyObject&quot;</span><span class="p">)</span>
+<span class="n">mat</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">GetMg</span><span class="p">()</span>        <span class="c1"># the global matrix</span>
+<span class="n">globalPos</span> <span class="o">=</span> <span class="n">mat</span><span class="o">.</span><span class="n">off</span>      <span class="c1">#get the position from the matrix</span>
+<span class="nb">print</span> <span class="s2">&quot;Global pos= &quot;</span><span class="p">,</span> <span class="n">globalPos</span>
+</pre></div>
+</div>
+<p>Since matrix contains the global matrix, the position stored in <em>off</em> will be the global position. Easy!</p>
+<p>To calculate the distance between two objects in different hierarchies, just use their global positions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span> <span class="o">=</span> <span class="n">op1</span><span class="o">.</span><span class="n">GetMg</span><span class="p">()</span><span class="o">.</span><span class="n">off</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">op2</span><span class="o">.</span><span class="n">GetMg</span><span class="p">()</span><span class="o">.</span><span class="n">off</span>
+<span class="n">dist</span> <span class="o">=</span> <span class="p">(</span><span class="n">p2</span><span class="o">-</span><span class="n">p1</span><span class="p">)</span><span class="o">.</span><span class="n">GetLength</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>If you remember to always do your calculations in global world coordinates, then your users will never get any unforseen problems with hierarchies.</p>
+</div>
+<div class="section" id="going-backwards">
+<h2>Going Backwards<a class="headerlink" href="#going-backwards" title="Permalink to this headline">¶</a></h2>
+<p>What if you have a position in global coordinates and want to move an object to that position? Then you need a transformation back from global coordinates to the object’s local position coordinates. Mathematically this is done by multiplication by the global matrix’ inverse. If Mg is a matrix in global space and Mag is object a’s global matrix, then Mag-1*Mg equals the first matrix’ in a’s local coordinates.</p>
+<p>Fortunately you do not have to do this manually either, since these functions do it for you:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SetMl</span><span class="p">(</span><span class="n">ml</span><span class="p">)</span> <span class="c1"># Sets the object&#39;s local matrix</span>
+<span class="n">SetMg</span><span class="p">(</span><span class="n">mg</span><span class="p">)</span> <span class="c1"># Sets the object&#39;s global matrix</span>
+</pre></div>
+</div>
+<p>If you use <a class="reference internal" href="../../../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#BaseObject.SetMg" title="BaseObject.SetMg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetMg()</span></code></a>, Cinema 4D will automatically transform the matrix to the local coordinate system before setting it.</p>
+<p>For example if you wanted to write a hierarchy safe midpoint plugin you could do like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span> <span class="o">=</span> <span class="n">op1</span><span class="o">.</span><span class="n">GetMg</span><span class="p">()</span><span class="o">.</span><span class="n">off</span> <span class="c1"># The global position of the first object</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">op2</span><span class="o">.</span><span class="n">GetMg</span><span class="p">()</span><span class="o">.</span><span class="n">off</span> <span class="c1"># The global position of the second object</span>
+
+<span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">p1</span> <span class="o">+</span> <span class="n">p2</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span> <span class="c1"># The midpoint (in global coordinates still)</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">GetMg</span><span class="p">()</span> <span class="c1"># The global matrix of the object to place in between</span>
+<span class="n">m</span><span class="o">.</span><span class="n">off</span> <span class="o">=</span> <span class="n">mid</span> <span class="c1"># Set its position to the midpoint (global coordinates)</span>
+
+<span class="n">obj</span><span class="o">.</span><span class="n">SetMg</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="c1"># Sets the global matrix of op to m, placing it between op1 and op2</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rotation-and-scale">
+<h2>Rotation and Scale<a class="headerlink" href="#rotation-and-scale" title="Permalink to this headline">¶</a></h2>
+<p>OK, so the position was easy to get with <cite>Matrix.off</cite>. But what about the rotation and the scale. How do we get and set the global rotation and scale from a global matrix? The answer is that this is slightly more complicated, but that one can easily write functions that make it easy.</p>
+<p>Getting the scale is just a matter of measuring the length of each of the axis vectors:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">GetMg</span><span class="p">()</span>
+<span class="n">scale</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span> <span class="n">m</span><span class="o">.</span><span class="n">v1</span><span class="o">.</span><span class="n">GetNormalized</span><span class="p">(),</span>
+                    <span class="n">m</span><span class="o">.</span><span class="n">v2</span><span class="o">.</span><span class="n">GetNormalized</span><span class="p">(),</span>
+                    <span class="n">m</span><span class="o">.</span><span class="n">v3</span><span class="o">.</span><span class="n">GetNormalized</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Setting the scale is done by normalizing each vector and the multiplying it with the wanted scale:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">GetMg</span><span class="p">()</span>
+<span class="n">m</span><span class="o">.</span><span class="n">v1</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">v1</span> <span class="o">*</span> <span class="n">scale</span><span class="o">.</span><span class="n">x</span>
+<span class="n">m</span><span class="o">.</span><span class="n">v2</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">v2</span> <span class="o">*</span> <span class="n">scale</span><span class="o">.</span><span class="n">y</span>
+<span class="n">m</span><span class="o">.</span><span class="n">v3</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">v3</span> <span class="o">*</span> <span class="n">scale</span><span class="o">.</span><span class="n">z</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">SetMg</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To get the rotation from a matrix there is the member function <a class="reference internal" href="../../../modules/c4d.utils/index.html#c4d.utils.MatrixToHPB" title="c4d.utils.MatrixToHPB"><code class="xref py py-func docutils literal notranslate"><span class="pre">MatrixToHPB()</span></code></a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">GetMg</span><span class="p">()</span>
+<span class="n">rot</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">MatrixToHPB</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Setting the rotation is done with the member function <a class="reference internal" href="../../../modules/c4d.utils/index.html#c4d.utils.HPBToMatrix" title="c4d.utils.HPBToMatrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">HPBToMatrix()</span></code></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Please remember, Cinema 4D handles rotation in radians. The rotation must be in radians.</p>
+</div>
+<p>Unfortunately this function returns the position and scale, so those need to be stored away:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">GetMg</span><span class="p">()</span>
+<span class="n">pos</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">off</span>
+<span class="n">scale</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span> <span class="n">m</span><span class="o">.</span><span class="n">v1</span><span class="o">.</span><span class="n">GetLength</span><span class="p">(),</span>
+                    <span class="n">m</span><span class="o">.</span><span class="n">v2</span><span class="o">.</span><span class="n">GetLength</span><span class="p">(),</span>
+                    <span class="n">m</span><span class="o">.</span><span class="n">v3</span><span class="o">.</span><span class="n">GetLength</span><span class="p">())</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">HPBToMatrix</span><span class="p">(</span><span class="n">rot</span><span class="p">)</span>
+
+<span class="n">m</span><span class="o">.</span><span class="n">off</span> <span class="o">=</span> <span class="n">pos</span>
+<span class="n">m</span><span class="o">.</span><span class="n">v1</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">v1</span><span class="o">.</span><span class="n">GetNormalized</span><span class="p">()</span> <span class="o">*</span> <span class="n">scale</span><span class="o">.</span><span class="n">x</span>
+<span class="n">m</span><span class="o">.</span><span class="n">v2</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">v2</span><span class="o">.</span><span class="n">GetNormalized</span><span class="p">()</span> <span class="o">*</span> <span class="n">scale</span><span class="o">.</span><span class="n">y</span>
+<span class="n">m</span><span class="o">.</span><span class="n">v3</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">v3</span><span class="o">.</span><span class="n">GetNormalized</span><span class="p">()</span> <span class="o">*</span> <span class="n">scale</span><span class="o">.</span><span class="n">z</span>
+
+<span class="n">obj</span><span class="o">.</span><span class="n">SetMg</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Collecting everything we have learned so far we can write these six convenience functions for setting and getting global position, rotation and scale data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GetGlobalPosition</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="c1"># Returns the global position of obj</span>
+<span class="n">GetGlobalRotation</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="c1"># Returns the global rotation of obj</span>
+<span class="n">GetGlobalScale</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>    <span class="c1"># Returns the global scale of obj</span>
+
+<span class="n">SetGlobalPosition</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">pos</span><span class="p">)</span> <span class="c1"># Sets the global position of obj to pos</span>
+<span class="n">SetGlobalRotation</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">rot</span><span class="p">)</span> <span class="c1"># Sets the global rotation of obj to rot</span>
+<span class="n">SetGlobalScale</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>  <span class="c1"># Sets the global scale of obj to scale</span>
+
+<span class="k">def</span> <span class="nf">GetGlobalPosition</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">obj</span><span class="o">.</span><span class="n">GetMg</span><span class="p">()</span><span class="o">.</span><span class="n">off</span>
+
+<span class="k">def</span> <span class="nf">GetGlobalRotation</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">utils</span><span class="o">.</span><span class="n">MatrixToHPB</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">GetMg</span><span class="p">())</span>
+
+<span class="k">def</span> <span class="nf">GetGlobalScale</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">GetMg</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span>  <span class="n">m</span><span class="o">.</span><span class="n">v1</span><span class="o">.</span><span class="n">GetLength</span><span class="p">(),</span>
+                        <span class="n">m</span><span class="o">.</span><span class="n">v2</span><span class="o">.</span><span class="n">GetLength</span><span class="p">(),</span>
+                        <span class="n">m</span><span class="o">.</span><span class="n">v3</span><span class="o">.</span><span class="n">GetLength</span><span class="p">())</span>
+
+<span class="k">def</span> <span class="nf">SetGlobalPosition</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">GetMg</span><span class="p">()</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">off</span> <span class="o">=</span> <span class="n">pos</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">SetMg</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">SetGlobalRotation</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">rot</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Please remember, Cinema 4D handles rotation in radians.</span>
+
+<span class="sd">    Example for H=10, P=20, B=30:</span>
+
+<span class="sd">    import c4d</span>
+<span class="sd">    from c4d import utils</span>
+<span class="sd">    #...</span>
+<span class="sd">    hpb = c4d.Vector(utils.Rad(10), utils.Rad(20), utils.Rad(30))</span>
+<span class="sd">    SetGlobalRotation(obj, hpb) #object&#39;s rotation is 10, 20, 30</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">GetMg</span><span class="p">()</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">off</span>
+    <span class="n">scale</span> <span class="o">=</span> <span class="n">c4d</span><span class="o">.</span><span class="n">Vector</span><span class="p">(</span> <span class="n">m</span><span class="o">.</span><span class="n">v1</span><span class="o">.</span><span class="n">GetLength</span><span class="p">(),</span>
+                        <span class="n">m</span><span class="o">.</span><span class="n">v2</span><span class="o">.</span><span class="n">GetLength</span><span class="p">(),</span>
+                        <span class="n">m</span><span class="o">.</span><span class="n">v3</span><span class="o">.</span><span class="n">GetLength</span><span class="p">())</span>
+
+    <span class="n">m</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">HPBToMatrix</span><span class="p">(</span><span class="n">rot</span><span class="p">)</span>
+
+    <span class="n">m</span><span class="o">.</span><span class="n">off</span> <span class="o">=</span> <span class="n">pos</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">v1</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">v1</span><span class="o">.</span><span class="n">GetNormalized</span><span class="p">()</span> <span class="o">*</span> <span class="n">scale</span><span class="o">.</span><span class="n">x</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">v2</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">v2</span><span class="o">.</span><span class="n">GetNormalized</span><span class="p">()</span> <span class="o">*</span> <span class="n">scale</span><span class="o">.</span><span class="n">y</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">v3</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">v3</span><span class="o">.</span><span class="n">GetNormalized</span><span class="p">()</span> <span class="o">*</span> <span class="n">scale</span><span class="o">.</span><span class="n">z</span>
+
+    <span class="n">obj</span><span class="o">.</span><span class="n">SetMg</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">SetGlobalScale</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">scale</span><span class="p">):</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">GetMg</span><span class="p">()</span>
+
+    <span class="n">m</span><span class="o">.</span><span class="n">v1</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">v1</span><span class="o">.</span><span class="n">GetNormalized</span><span class="p">()</span> <span class="o">*</span> <span class="n">scale</span><span class="o">.</span><span class="n">x</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">v2</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">v2</span><span class="o">.</span><span class="n">GetNormalized</span><span class="p">()</span> <span class="o">*</span> <span class="n">scale</span><span class="o">.</span><span class="n">y</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">v3</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">v3</span><span class="o">.</span><span class="n">GetNormalized</span><span class="p">()</span> <span class="o">*</span> <span class="n">scale</span><span class="o">.</span><span class="n">z</span>
+
+    <span class="n">obj</span><span class="o">.</span><span class="n">SetMg</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="the-matrix-has-you">
+<span id="matrix-freeze-transform"></span><h3>The Matrix Has You<a class="headerlink" href="#the-matrix-has-you" title="Permalink to this headline">¶</a></h3>
+<p>Single precision matrix mathematics - A matrix is basically an array of number arranged in a
+rectangular pattern. The matrices used in Cinema 4D, represented by the class Matrix, consist
+of three rows and four columns, i.e. they have the dimension 3x4. The first row is
+always “1, 0, 0, 0”, which means that there are 12 numbers that are used. These numbers are
+grouped into four vectors, one for the remaining numbers in each column. The four vectors
+are called off, v1, v2 and v3, together these four vectors can be used to represent the coordinate
+system for a Cinema 4D object. A coordinate system consists of three axes, one for each coordinate
+(X, Y and Z). The system also has a base position, from which the three axes originate. This base
+position is stored in off, and the three axis vectors are stored in v1, v2 and v3 respectively.
+Also check out <a class="reference internal" href="#matrix-fundamental"><span class="std std-ref">Matrix Fundamentals</span></a>. So now we can follow the white rabbit - knock knock - neo.</p>
+<img alt="../../../_images/matrix_matrix.gif" src="../../../_images/matrix_matrix.gif" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Cinema 4D uses a left-handed coordinate system.</p>
+</div>
+<p>Here is a small example how to use the type Matrix</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">v_1</span>    <span class="o">=</span> <span class="n">Vector</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">v_2</span>    <span class="o">=</span> <span class="n">Vector</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">9.87</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">v_3</span>    <span class="o">=</span> <span class="n">Vector</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">off</span>    <span class="o">=</span> <span class="n">Vector</span><span class="p">()</span> <span class="c1">#Vector with components: 0</span>
+<span class="n">mat</span>    <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="n">off</span><span class="p">,</span> <span class="n">v_1</span><span class="p">,</span> <span class="n">v_2</span><span class="p">,</span> <span class="n">v_3</span><span class="p">)</span> <span class="c1">#create new instance of Matrix</span>
+<span class="nb">print</span> <span class="n">mat</span><span class="o">.</span><span class="n">v1</span><span class="o">.</span><span class="n">x</span> <span class="c1">#return 30</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="freeze-transformations">
+<span id="id1"></span><h3>Freeze Transformations<a class="headerlink" href="#freeze-transformations" title="Permalink to this headline">¶</a></h3>
+<p>With R12 you probably have noticed that <a class="reference internal" href="../../../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#c4d.BaseObject" title="c4d.BaseObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseObject</span></code></a> no longer has members like GetPos, but instead twice as many: <a class="reference internal" href="../../../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#BaseObject.GetRelPos" title="BaseObject.GetRelPos"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetRelPos()</span></code></a> and <a class="reference internal" href="../../../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#BaseObject.GetAbsPos" title="BaseObject.GetAbsPos"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetAbsPos()</span></code></a>.</p>
+<p>To understand what’s going on I’ll quickly introduce you to Freeze Transformations.</p>
+<p>For (character) animation it is important that you can define rest poses. Think e.g. of the typical CG human that has arms and legs stretched. Most objects carry all kinds of complicated position, scale and rotation information. Freeze Transformations allow you to “freeze” this information, but reset position/rotation to 0.0 and scale to 1.0. This is great as it allows you at any time to go back to the original - just reset all position and angle information to 0.0 - and your object has reached its rest state again. You could achieve the same by adding for every single object in your hierarchy a parent null object, but Freeze Transformations let you do this without the need to change the hieararchical structure. Technically however you can think of it as a “parent null object” without the actual body of a physical object.</p>
+<p>All parts of the application that deal with keyframing only access values without the freeze transformation part. This way you can conveniently animate (the rest pose is always 0.0 for position and rotation) and avoid rotation singularities. The correct routines for animation and keyframing are labeled “Rel”.</p>
+<p>Other parts of the application however (e.g. like a target expression) need to get the absolute local position of a target - the position that consists of frozen and regular matrix. For those
+purposes you need to use the routines that are labeled “Abs”.</p>
+<p>To clarify: as long as an object has no Freeze transformation assigned (which is always the default case when you create a new object) there is no difference between the Abs or Rel. So e.g. after creating an object it doesn’t matter which routine you choose. If you however want to read the position of an object (and that object uses freeze transformations) there is a difference.</p>
+<p><a class="reference internal" href="../../../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#BaseObject.GetMl" title="BaseObject.GetMl"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetMl()</span></code></a> / <a class="reference internal" href="../../../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#BaseObject.SetMl" title="BaseObject.SetMl"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetMl()</span></code></a> and <a class="reference internal" href="../../../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#BaseObject.GetMg" title="BaseObject.GetMg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.GetMg()</span></code></a> / <a class="reference internal" href="../../../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#BaseObject.SetMg" title="BaseObject.SetMg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.SetMg()</span></code></a> always include the frozen information, thus are “Abs” versions.</p>
+<p>After so much theory a practical example. Take a look at the cube and null object in the picture below. The null object has a position of (0/200/0) and rotation of (0°/45°/0°). The cube has a position of (0/100/0). You can see to the left its global position in space.</p>
+<img alt="../../../_images/matrix_freeze_transformation1.png" src="../../../_images/matrix_freeze_transformation1.png" />
+<p>Now let’s try to do the same with one single object:</p>
+<img alt="../../../_images/matrix_freeze_transformation2.png" src="../../../_images/matrix_freeze_transformation2.png" />
+<p>You can see that the Null object’s position / rotation have been transferred to the Cube’s frozen position and frozen rotation. The result is exactly the same as before, just without the need for an extra null object.</p>
+<p>Now if you call <strong>cube.GetAbsPos</strong> the return value will be (0/270.711/-70.711). When you call <strong>cube.GetRelPos</strong> however you’ll get (0/100/0) as a result. The coordinate manager offers exactly those two display modes: Object (Abs) and Object (Rel).</p>
+<p>As copying position, rotation and scale data from one object to another is much more complex than before there is a new routine <a class="reference internal" href="../../../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/index.html#BaseObject.CopyMatrixTo" title="BaseObject.CopyMatrixTo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseObject.CopyMatrixTo()</span></code></a> that copies all position, rotation and scale data (including the frozen states) over to another object.</p>
+<p>Let’s take a look at the mathematical background: In Cinema 4D the matrix multiplication order for two matrices A and B</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">C</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">A</span><span class="p">]</span> <span class="o">*</span> <span class="p">[</span><span class="n">B</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>is defined as the rule “A after B”… so the following two lines are equivalent</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">transformed_point</span> <span class="o">=</span> <span class="n">original_point</span> <span class="o">*</span> <span class="p">[</span><span class="n">C</span><span class="p">]</span>
+<span class="n">transformed_point</span> <span class="o">=</span> <span class="p">(</span><span class="n">original_point</span> <span class="o">*</span> <span class="p">[</span><span class="n">B</span><span class="p">])</span> <span class="o">*</span> <span class="p">[</span><span class="n">A</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>(the original point is first transformed by matrix [B] and then later by [A])</p>
+<p>An object’s global matrix is calculated this way</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Global</span> <span class="n">Matrix</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">Global</span> <span class="n">Matrix</span> <span class="n">of</span> <span class="n">Parent</span><span class="p">]</span> <span class="o">*</span> <span class="p">[</span><span class="n">Local</span> <span class="n">Matrix</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Global</span> <span class="n">Matrix</span><span class="p">]</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">GetUpMg</span><span class="p">()</span> <span class="o">*</span> <span class="n">op</span><span class="o">.</span><span class="n">GetMl</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>To calculate the local matrix of an object the formula is</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Local</span> <span class="n">Matrix</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">Frozen</span> <span class="n">Translation</span><span class="p">]</span> <span class="o">*</span> <span class="p">[</span><span class="n">Frozen</span> <span class="n">Rotation</span><span class="p">]</span> <span class="o">*</span> <span class="p">[</span><span class="n">Relative</span> <span class="n">Translation</span><span class="p">]</span> <span class="o">*</span> <span class="p">[</span><span class="n">Relative</span> <span class="n">Rotation</span><span class="p">]</span> <span class="o">*</span> <span class="p">[</span><span class="n">Frozen</span> <span class="n">Scale</span><span class="p">]</span> <span class="o">*</span> <span class="p">[</span><span class="n">Relative</span> <span class="n">Scale</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Local</span> <span class="n">Matrix</span><span class="p">]</span> <span class="o">=</span> <span class="n">MatrixMove</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">GetFrozenPos</span><span class="p">())</span> <span class="o">*</span> <span class="n">HPBToMatrix</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">GetFrozenRot</span><span class="p">())</span> <span class="o">*</span> <span class="n">MatrixMove</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">GetRelPos</span><span class="p">())</span> <span class="o">*</span> <span class="n">HPBToMatrix</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">GetRelRot</span><span class="p">())</span> <span class="o">*</span> <span class="n">MatrixScale</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">GetFrozenScale</span><span class="p">)</span> <span class="o">*</span> <span class="n">MatrixScale</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">GetRelScale</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>or equally</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Local</span> <span class="n">Matrix</span><span class="p">]</span> <span class="o">=</span> <span class="n">MatrixMove</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">GetAbsPos</span><span class="p">())</span> <span class="o">*</span> <span class="n">HPBToMatrix</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">GetAbsRot</span><span class="p">())</span> <span class="o">*</span> <span class="n">MatrixScale</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">GetAbsScale</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Please note that the both scales are applied at the very beginning, so the local matrix is not the same as [Frozen Matrix] * [Relative Matrix]. This is necessary in order to guarantee that your local matrix always stays a rectangular system; distorted sy</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Matrix Fundamentals</a><ul>
+<li><a class="reference internal" href="#fundamentals">Fundamentals</a></li>
+<li><a class="reference internal" href="#going-backwards">Going Backwards</a></li>
+<li><a class="reference internal" href="#rotation-and-scale">Rotation and Scale</a><ul>
+<li><a class="reference internal" href="#the-matrix-has-you">The Matrix Has You</a></li>
+<li><a class="reference internal" href="#freeze-transformations">Freeze Transformations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../application_development/threading.html" title="Threading Information"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="basetime.html" title="Time Management in Cinema 4D"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >Manual List</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

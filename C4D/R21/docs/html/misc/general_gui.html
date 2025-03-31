@@ -1,0 +1,187 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Introduction into the GUI of Cinema 4D &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Input Events" href="inputevents.html" />
+    <link rel="prev" title="Descriptions in Cinema 4D" href="descriptions.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="inputevents.html" title="Input Events"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="descriptions.html" title="Descriptions in Cinema 4D"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../manuals/index.html" accesskey="U">Manual List</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="introduction-into-the-gui-of-cinema-4d">
+<h1>Introduction into the GUI of Cinema 4D<a class="headerlink" href="#introduction-into-the-gui-of-cinema-4d" title="Permalink to this headline">¶</a></h1>
+<p>The layout of a Python dialog is specified in the <a class="reference internal" href="../modules/c4d.gui/GeDialog/index.html#GeDialog.CreateLayout" title="GeDialog.CreateLayout"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CreateLayout()</span></code></a> method. This method, which always should be overloaded in derived dialog classes, is called by Cinema 4D whenever the dialog is opened. There are two ways to specify the layout.</p>
+<div class="section" id="layout-files">
+<h2>Layout files<a class="headerlink" href="#layout-files" title="Permalink to this headline">¶</a></h2>
+<p>The recommended way is to use layout files, just as Cinema 4D does internally. Then the typical <a class="reference internal" href="../modules/c4d.gui/GeDialog/index.html#GeDialog.CreateLayout" title="GeDialog.CreateLayout"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CreateLayout()</span></code></a> becomes as easy as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">CreateLayout</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">LoadDialogResource</span><span class="p">(</span><span class="n">MY_DIALOG</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The key here is that <em>MY_DIALOG</em> corresponds to a <em>MY_DIALOG.res</em> file in the <em>res/dialogs</em> directory (see <cite>Directory Structure</cite> chapter in <a class="reference internal" href="pluginstructure.html"><span class="doc">Plugin Structure</span></a>). This file might look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DIALOG</span> <span class="n">MY_DIALOG</span>
+<span class="p">{</span>
+    <span class="n">NAME</span> <span class="n">DIALOG_TITLE</span><span class="p">;</span>
+    <span class="n">GROUP</span>
+    <span class="p">{</span>
+      <span class="n">COLUMNS</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="n">SPACE</span> <span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">;</span>
+      <span class="n">BORDERSIZE</span> <span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">;</span>
+      <span class="n">STATICTEXT</span> <span class="p">{</span> <span class="n">NAME</span> <span class="n">HELLO_WORLD</span><span class="p">;</span> <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Using a separate dialog resource like this has several advantages. Besides that it is easy to edit the dialog layout,
+it also facilitates international support greatly. The <em>NAME</em> fields above doesn’t specify their strings directly.
+Instead they point to the strings in the <em>MY_DIALOG.str</em> file in the <em>strings_en-US/dialogs</em> directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DIALOGSTRINGS</span> <span class="n">MY_DIALOG</span>
+<span class="p">{</span>
+    <span class="n">DIALOG_TITLE</span> <span class="s2">&quot;My Dialog&quot;</span><span class="p">;</span>
+    <span class="n">HELLO_WORLD</span> <span class="s2">&quot;Hello World!&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>If you would like to support German as well, just copy the <em>strings_en-US</em> directory to a new <em>strings_de-DE</em> directory, and change the above file to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DIALOGSTRINGS</span> <span class="n">MY_DIALOG</span>
+<span class="p">{</span>
+    <span class="n">DIALOG_TITLE</span> <span class="s2">&quot;Mein Dialog&quot;</span><span class="p">;</span>
+    <span class="n">HELLO_WORLD</span> <span class="s2">&quot;Hallo Welt!&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The string files are stored in Unicode UTF-8, which means that they handle almost every language there is. A good Windows editor for Unicode files is Unipad. However, as long as you are only going to make English resources any text editor will do.
+All the files with your identifier are automatically read after Cinema 4D loaded your plugins.</p>
+<div class="section" id="the-gedialog-class">
+<h3>The GeDialog class<a class="headerlink" href="#the-gedialog-class" title="Permalink to this headline">¶</a></h3>
+<p>If you for some reason do not want to use dialog resources for your dialog, all the resource commands for adding groups and dialog components are there as
+functions in the <a class="reference internal" href="../modules/c4d.gui/GeDialog/index.html#c4d.gui.GeDialog" title="c4d.gui.GeDialog"><code class="xref py py-class docutils literal notranslate"><span class="pre">GeDialog</span></code></a> class. So then the above dialog’s <a class="reference internal" href="../modules/c4d.gui/GeDialog/index.html#GeDialog.CreateLayout" title="GeDialog.CreateLayout"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CreateLayout()</span></code></a> function would look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">CreateLayout</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span><span class="s2">&quot;My Dialog&quot;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">GroupBegin</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">100010</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">rows</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">AddGroupSpace</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">AddGroupBorderSpace</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">AddStaticText</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">100011</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">GroupEnd</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Please note that you have now lost all the localization features, unless you manually code all strings using the <a class="reference internal" href="../modules/c4d.plugins/index.html#c4d.plugins.GeLoadString" title="c4d.plugins.GeLoadString"><code class="xref py py-func docutils literal notranslate"><span class="pre">GeLoadString()</span></code></a> function.</p>
+</div>
+<div class="section" id="menus">
+<h3>Menus<a class="headerlink" href="#menus" title="Permalink to this headline">¶</a></h3>
+<p>The only area where you are unfortunately limited to non-resource solutions is menus. These are also added in the <a class="reference internal" href="../modules/c4d.gui/GeDialog/index.html#GeDialog.CreateLayout" title="GeDialog.CreateLayout"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CreateLayout()</span></code></a> function, using functions in <a class="reference internal" href="../modules/c4d.gui/GeDialog/index.html#c4d.gui.GeDialog" title="c4d.gui.GeDialog"><code class="xref py py-class docutils literal notranslate"><span class="pre">GeDialog</span></code></a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">CreateLayout</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">MenuFlushAll</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">MenuSubBegin</span><span class="p">(</span><span class="s2">&quot;My Menu&quot;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">MenuAddString</span><span class="p">(</span><span class="n">MY_ITEM</span><span class="p">,</span> <span class="s2">&quot;My Item&quot;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">MenuSubEnd</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">MenuFinished</span><span class="p">()</span>
+    <span class="c1">#...</span>
+</pre></div>
+</div>
+<p>To be able to localize the above code, just replace the strings like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">MenuAddString</span><span class="p">(</span><span class="n">MY_ITEM</span><span class="p">,</span> <span class="n">plugins</span><span class="o">.</span><span class="n">GeLoadString</span><span class="p">(</span><span class="n">MY_ITEM_STRING</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Introduction into the GUI of Cinema 4D</a><ul>
+<li><a class="reference internal" href="#layout-files">Layout files</a><ul>
+<li><a class="reference internal" href="#the-gedialog-class">The GeDialog class</a></li>
+<li><a class="reference internal" href="#menus">Menus</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="inputevents.html" title="Input Events"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="descriptions.html" title="Descriptions in Cinema 4D"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../manuals/index.html" >Manual List</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

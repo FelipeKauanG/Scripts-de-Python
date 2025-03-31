@@ -1,0 +1,1271 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.net.NetRenderService &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.modules.net.RenderJob" href="../RenderJob/index.html" />
+    <link rel="prev" title="c4d.modules.net" href="../index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../RenderJob/index.html" title="c4d.modules.net.RenderJob"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="c4d.modules.net"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.modules.net</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-net-netrenderservice">
+<h1>c4d.modules.net.NetRenderService<a class="headerlink" href="#c4d-modules-net-netrenderservice" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.net.NetRenderService">
+<em class="property">class </em><code class="descclassname">c4d.modules.net.</code><code class="descname">NetRenderService</code><a class="headerlink" href="#c4d.modules.net.NetRenderService" title="Permalink to this definition">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This type cannot be instantiated.</p>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#NetRenderService.GetUuid" title="NetRenderService.GetUuid"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.GetUuid(self)</span></code></a></td>
+<td>Gets the UUID of the service.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#NetRenderService.Message" title="NetRenderService.Message"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.Message(self,</span> <span class="pre">userUuid,</span> <span class="pre">op,</span> <span class="pre">...)</span></code></a></td>
+<td>Sends a message to the render service.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#NetRenderService.ClearResults" title="NetRenderService.ClearResults"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.ClearResults(self,</span> <span class="pre">jobUuid)</span></code></a></td>
+<td>Clears the results.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#NetRenderService.RemoveResult" title="NetRenderService.RemoveResult"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.RemoveResult(self,</span> <span class="pre">jobUuid,</span> <span class="pre">...)</span></code></a></td>
+<td>Remove the result for the given job.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#NetRenderService.GetNetPreferences" title="NetRenderService.GetNetPreferences"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.GetNetPreferences(self)</span></code></a></td>
+<td>Retrieves the NET preferences.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#NetRenderService.CopyRenderTaskFrom" title="NetRenderService.CopyRenderTaskFrom"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.CopyRenderTaskFrom(self,</span> <span class="pre">jobUuid[,</span> <span class="pre">...])</span></code></a></td>
+<td>Copy the Render Task matching the jobUuid.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#NetRenderService.AddMachine" title="NetRenderService.AddMachine"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.AddMachine(self,</span> <span class="pre">address,</span> <span class="pre">...)</span></code></a></td>
+<td>Adds a machine.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#NetRenderService.GetAllMachineUuids" title="NetRenderService.GetAllMachineUuids"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.GetAllMachineUuids(self[,</span> <span class="pre">list,</span> <span class="pre">bits,</span> <span class="pre">...])</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Retrieves the UUIDs of all machines (with default parameters).</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#NetRenderService.GetMachinesList" title="NetRenderService.GetMachinesList"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.GetMachinesList(self[,</span> <span class="pre">logCount,</span> <span class="pre">...])</span></code></a></td>
+<td>Retrieves the information of all machines.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#NetRenderService.GetUserPool" title="NetRenderService.GetUserPool"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.GetUserPool(self)</span></code></a></td>
+<td>Gets the user pool.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#NetRenderService.GetJobsList" title="NetRenderService.GetJobsList"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.GetJobsList(self,</span> <span class="pre">triggerWatchDog,</span> <span class="pre">...)</span></code></a></td>
+<td>Retrieves the render jobs.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#NetRenderService.CreateRenderJob" title="NetRenderService.CreateRenderJob"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.CreateRenderJob(self,</span> <span class="pre">docName,</span> <span class="pre">jobUuid,</span> <span class="pre">...)</span></code></a></td>
+<td>Creates a render job.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#NetRenderService.StartRendering" title="NetRenderService.StartRendering"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.StartRendering(self,</span> <span class="pre">mode,</span> <span class="pre">doc,</span> <span class="pre">...)</span></code></a></td>
+<td>Starts a render job.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#NetRenderService.InitRendering" title="NetRenderService.InitRendering"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.InitRendering(self,</span> <span class="pre">doc,</span> <span class="pre">rdata,</span> <span class="pre">...)</span></code></a></td>
+<td>Initializes a render job.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#NetRenderService.InitAndStartRenderingFullAsync" title="NetRenderService.InitAndStartRenderingFullAsync"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.InitAndStartRenderingFullAsync(self,</span> <span class="pre">jobUuid)</span></code></a></td>
+<td>Starts a render job fully asynchronous.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#NetRenderService.StopRendering" title="NetRenderService.StopRendering"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.StopRendering(self,</span> <span class="pre">mode,</span> <span class="pre">jobUuid,</span> <span class="pre">result)</span></code></a></td>
+<td>Stops a render job.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#NetRenderService.DeleteRenderJob" title="NetRenderService.DeleteRenderJob"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.DeleteRenderJob(self,</span> <span class="pre">jobUuid,</span> <span class="pre">...)</span></code></a></td>
+<td>Deletes a render job.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#NetRenderService.InsertJobAfter" title="NetRenderService.InsertJobAfter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.InsertJobAfter(self,</span> <span class="pre">jobUuid1,</span> <span class="pre">jobUuid2)</span></code></a></td>
+<td>Inserts <em>jobUuid1</em> after <em>jobUuid2</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#NetRenderService.InsertJobBefore" title="NetRenderService.InsertJobBefore"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.InsertJobBefore(self,</span> <span class="pre">jobUuid1,</span> <span class="pre">jobUuid2)</span></code></a></td>
+<td>Inserts <em>jobUuid1</em> before <em>jobUuid2</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#NetRenderService.SetDefaultSceneName" title="NetRenderService.SetDefaultSceneName"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.SetDefaultSceneName(self,</span> <span class="pre">jobUuid,</span> <span class="pre">...)</span></code></a></td>
+<td>Sets the Default Scene Name.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#NetRenderService.GetRepository" title="NetRenderService.GetRepository"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.GetRepository(self)</span></code></a></td>
+<td>Retrieves the repository for the service.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#NetRenderService.AddLogToJob" title="NetRenderService.AddLogToJob"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.AddLogToJob(self,</span> <span class="pre">jobUuid,</span> <span class="pre">log,</span> <span class="pre">doLock)</span></code></a></td>
+<td>Add a string to the job log.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#NetRenderService.AddLogToMachine" title="NetRenderService.AddLogToMachine"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.AddLogToMachine(self,</span> <span class="pre">jobUuid,</span> <span class="pre">log,</span> <span class="pre">doLock)</span></code></a></td>
+<td>Adds a string to the machine log.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#NetRenderService.GetName" title="NetRenderService.GetName"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.GetName(self)</span></code></a></td>
+<td>Gets the name of the service.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#NetRenderService.NetConsoleOutput" title="NetRenderService.NetConsoleOutput"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NetRenderService.NetConsoleOutput(self,</span> <span class="pre">flags,</span> <span class="pre">value)</span></code></a></td>
+<td>Prints a string to the service.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="NetRenderService.GetUuid">
+<code class="descclassname">NetRenderService.</code><code class="descname">GetUuid</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#NetRenderService.GetUuid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the UUID of the service.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/release/2.7/library/uuid.html#uuid.UUID">UUID</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The UUID of the service.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="NetRenderService.Message">
+<code class="descclassname">NetRenderService.</code><code class="descname">Message</code><span class="sig-paren">(</span><em>self</em>, <em>userUuid</em>, <em>op</em>, <em>isPrivate</em>, <em>msg</em>, <em>result=None</em><span class="sig-paren">)</span><a class="headerlink" href="#NetRenderService.Message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends a message to the render service.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>userUuid</strong> – The user UUID.</li>
+<li><strong>op</strong> (<em>object</em>) – </li>
+<li><strong>isPrivate</strong> (<em>bool</em>) – </li>
+<li><strong>msg</strong> (<a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The message container.</li>
+<li><strong>result</strong> (<a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The optional result container.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="NetRenderService.ClearResults">
+<code class="descclassname">NetRenderService.</code><code class="descname">ClearResults</code><span class="sig-paren">(</span><em>self</em>, <em>jobUuid</em><span class="sig-paren">)</span><a class="headerlink" href="#NetRenderService.ClearResults" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears the results.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>jobUuid</strong> – The job UUID.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if results were cleared, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="NetRenderService.RemoveResult">
+<code class="descclassname">NetRenderService.</code><code class="descname">RemoveResult</code><span class="sig-paren">(</span><em>self</em>, <em>jobUuid</em>, <em>relResultPath</em><span class="sig-paren">)</span><a class="headerlink" href="#NetRenderService.RemoveResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the result for the given job.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>jobUuid</strong> – The job UUID.</li>
+<li><strong>relResultPath</strong> (<em>str</em>) – File Path of the result path?</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if results were removed, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="NetRenderService.GetNetPreferences">
+<code class="descclassname">NetRenderService.</code><code class="descname">GetNetPreferences</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#NetRenderService.GetNetPreferences" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the NET preferences.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer">c4d.BaseContainer</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The NET preferences container. For the container IDs, see preferences dialog and <cite>WPREF_NET</cite> in the C++ API header <cite>ge_prepass.h</cite>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="NetRenderService.CopyRenderTaskFrom">
+<code class="descclassname">NetRenderService.</code><code class="descname">CopyRenderTaskFrom</code><span class="sig-paren">(</span><em>self</em>, <em>jobUuid</em>, <em>resolveMachineUuids=False</em><span class="sig-paren">)</span><a class="headerlink" href="#NetRenderService.CopyRenderTaskFrom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy the Render Task matching the jobUuid.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>jobUuid</strong> – The job UUID.</li>
+<li><strong>resolveMachineUuids</strong> (<em>bool</em>) – Currently ignored.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">list(dict{“_frame”: long, “_state”: int, “_renderTime”: int, “_machines”: list[uuid]})</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">a list filled with dictionary representing each render task
+- _frame: The frame number.
+- _state: The render state.
+- _renderTime: The render time.
+- _machines: A list with all the machines assigned to the job.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="NetRenderService.AddMachine">
+<code class="descclassname">NetRenderService.</code><code class="descname">AddMachine</code><span class="sig-paren">(</span><em>self</em>, <em>address</em>, <em>securityToken</em>, <em>allowGui</em>, <em>uuidOfMachineToOverwrite</em><span class="sig-paren">)</span><a class="headerlink" href="#NetRenderService.AddMachine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a machine.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.038.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>address</strong> (<em>str</em>) – The machine address.</li>
+<li><strong>securityToken</strong> (<em>str</em>) – The security token.</li>
+<li><strong>allowGui</strong> (<em>bool</em>) – <strong>True</strong> to allow GUI, otherwise <strong>False</strong>.</li>
+<li><strong>uuidOfMachineToOverwrite</strong> – The UUID of the machine to overwrite.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the machine was added successfully, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="NetRenderService.GetAllMachineUuids">
+<code class="descclassname">NetRenderService.</code><code class="descname">GetAllMachineUuids</code><span class="sig-paren">(</span><em>self</em>, <em>list=MACHINELIST_ALL</em>, <em>bits=VERIFICATIONBIT_NONE</em>, <em>includeLocalMachine=True</em>, <em>includeBonjourMachines=True</em><span class="sig-paren">)</span><a class="headerlink" href="#NetRenderService.GetAllMachineUuids" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Retrieves the UUIDs of all machines (with default parameters).</div>
+<div class="line">Parameters can be changed to filter the machines.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>list</strong> (<em>int</em>) – <p>Machine list flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>MACHINELIST_ONLINE</em></td>
+<td>Online.</td>
+</tr>
+<tr class="row-even"><td><em>MACHINELIST_OFFLINE</em></td>
+<td>Offline.</td>
+</tr>
+<tr class="row-odd"><td><em>MACHINELIST_ALL</em></td>
+<td>All: <em>MACHINELIST_ONLINE</em> | <em>MACHINELIST_OFFLINE</em>.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>bits</strong> (<em>int</em>) – <p>Verification bits:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>VERIFICATIONBIT_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>VERIFICATIONBIT_ONLINE</em></td>
+<td>Online.</td>
+</tr>
+<tr class="row-odd"><td><em>VERIFICATIONBIT_VERIFIED</em></td>
+<td>Verified.</td>
+</tr>
+<tr class="row-even"><td><em>VERIFICATIONBIT_VERIFIEDME</em></td>
+<td>Certified client (set on client for server).</td>
+</tr>
+<tr class="row-odd"><td><em>VERIFICATIONBIT_SHARED</em></td>
+<td>Shared.</td>
+</tr>
+<tr class="row-even"><td><em>VERIFICATIONBIT_VERIFYING</em></td>
+<td>Verifying.</td>
+</tr>
+<tr class="row-odd"><td><em>VERIFICATIONBIT_FAILURE</em></td>
+<td>Unknown.</td>
+</tr>
+<tr class="row-even"><td><em>VERIFICATIONBIT_SECURITYTOKENCHANGED</em></td>
+<td>Security token changed.</td>
+</tr>
+<tr class="row-odd"><td><em>VERIFICATIONBIT_WRONGBUILDID</em></td>
+<td>Wrong build ID.</td>
+</tr>
+<tr class="row-even"><td><em>VERIFICATIONBIT_WRONGARCHITECTURE</em></td>
+<td>Wrong architecture.</td>
+</tr>
+<tr class="row-odd"><td><em>VERIFICATIONBIT_REMOTENOTREACHABLE</em></td>
+<td>Remote not reachable.</td>
+</tr>
+<tr class="row-even"><td><em>VERIFICATIONBIT_THISNOTREACHABLE</em></td>
+<td>This not reachable.</td>
+</tr>
+<tr class="row-odd"><td><em>VERIFICATIONBIT_WRONGSECURITYTOKEN</em></td>
+<td>Wrong security token.</td>
+</tr>
+<tr class="row-even"><td><em>VERIFICATIONBIT_DEMONOTACTIVATED</em></td>
+<td>Demo not activated.</td>
+</tr>
+<tr class="row-odd"><td><em>VERIFICATIONBIT_REMOVING</em></td>
+<td>Removing.</td>
+</tr>
+<tr class="row-even"><td><em>VERIFICATIONBIT_NORENDERSUPPORT</em></td>
+<td>No render support.</td>
+</tr>
+<tr class="row-odd"><td><em>VERIFICATIONBIT_INITIALIZING</em></td>
+<td>GUI flag only to show a please wait indicator on startup.</td>
+</tr>
+<tr class="row-even"><td><em>VERIFICATIONBIT_VERIFICATIONESTABLISHED</em></td>
+<td>Set soon after the persistent connection has been registered.
+Can be set without <em>VERIFICATIONBIT_VERIFIED</em> on first connect and host adds itself on the server.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>includeLocalMachine</strong> (<em>bool</em>) – Pass <strong>False</strong> to not include local machine. Default to <strong>True</strong>.</li>
+<li><strong>includeBonjourMachines</strong> (<em>bool</em>) – Pass <strong>False</strong> to not include Bonjour machines. Default to <strong>True</strong>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><p>list of <a class="reference external" href="https://docs.python.org/release/2.7/library/uuid.html#uuid.UUID">UUID</a></p>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The list of all machine UUIDs.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="NetRenderService.GetMachinesList">
+<code class="descclassname">NetRenderService.</code><code class="descname">GetMachinesList</code><span class="sig-paren">(</span><em>self</em>, <em>logCount=-1</em>, <em>getOnlyThisMachine=None</em><span class="sig-paren">)</span><a class="headerlink" href="#NetRenderService.GetMachinesList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the information of all machines.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>logCount</strong> (<em>int</em>) – <div class="versionadded">
+<p><span class="versionmodified">New in version R16.050: </span>The log count.</p>
+</div>
+</li>
+<li><strong>getOnlyThisMachine</strong> – Pass a machine UUID to get only the information for this machine.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">list of <a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseContainer</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The list of machines.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="NetRenderService.GetUserPool">
+<code class="descclassname">NetRenderService.</code><code class="descname">GetUserPool</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#NetRenderService.GetUserPool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the user pool.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../UserPool/index.html#c4d.modules.net.UserPool" title="c4d.modules.net.UserPool">c4d.modules.net.UserPool</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The user pool.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="NetRenderService.GetJobsList">
+<code class="descclassname">NetRenderService.</code><code class="descname">GetJobsList</code><span class="sig-paren">(</span><em>self</em>, <em>triggerWatchDog</em>, <em>rdata</em>, <em>assets</em>, <em>results</em>, <em>log</em>, <em>selectedJob=None</em>, <em>selectedJobOnly=False</em>, <em>user=None</em>, <em>settings=None</em><span class="sig-paren">)</span><a class="headerlink" href="#NetRenderService.GetJobsList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the render jobs.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>triggerWatchDog</strong> (<em>bool</em>) – </li>
+<li><strong>rdata</strong> (<em>int</em>) – <p>The render data select flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="68%" />
+<col width="32%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>DETAILSELECTOR_NONE</em></td>
+<td>None</td>
+</tr>
+<tr class="row-even"><td><em>DETAILSELECTOR_SELECTED</em></td>
+<td>Selected.</td>
+</tr>
+<tr class="row-odd"><td><em>DETAILSELECTOR_NONSELECTED</em></td>
+<td>Not selected.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>assets</strong> (<em>int</em>) – <p>The assets data select flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="68%" />
+<col width="32%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>DETAILSELECTOR_NONE</em></td>
+<td>None</td>
+</tr>
+<tr class="row-even"><td><em>DETAILSELECTOR_SELECTED</em></td>
+<td>Selected.</td>
+</tr>
+<tr class="row-odd"><td><em>DETAILSELECTOR_NONSELECTED</em></td>
+<td>Not selected.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>results</strong> (<em>int</em>) – <p>The results data select flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="68%" />
+<col width="32%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>DETAILSELECTOR_NONE</em></td>
+<td>None</td>
+</tr>
+<tr class="row-even"><td><em>DETAILSELECTOR_SELECTED</em></td>
+<td>Selected.</td>
+</tr>
+<tr class="row-odd"><td><em>DETAILSELECTOR_NONSELECTED</em></td>
+<td>Not selected.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>log</strong> (<em>int</em>) – <p>The log data select flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="68%" />
+<col width="32%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>DETAILSELECTOR_NONE</em></td>
+<td>None</td>
+</tr>
+<tr class="row-even"><td><em>DETAILSELECTOR_SELECTED</em></td>
+<td>Selected.</td>
+</tr>
+<tr class="row-odd"><td><em>DETAILSELECTOR_NONSELECTED</em></td>
+<td>Not selected.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>selectedJob</strong> – </li>
+<li><strong>selectedJobOnly</strong> (<em>bool</em>) – </li>
+<li><strong>user</strong> – The user UUID.</li>
+<li><strong>settings</strong> (<a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – <div class="versionadded">
+<p><span class="versionmodified">New in version R16.038: </span>The settings container.</p>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">list of <a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseContainer</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The render jobs.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="NetRenderService.CreateRenderJob">
+<code class="descclassname">NetRenderService.</code><code class="descname">CreateRenderJob</code><span class="sig-paren">(</span><em>self</em>, <em>docName</em>, <em>jobUuid</em>, <em>creator</em>, <em>username</em>, <em>bt=None</em>, <em>watchFolderName=&quot;&quot;</em><span class="sig-paren">)</span><a class="headerlink" href="#NetRenderService.CreateRenderJob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a render job.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>docName</strong> (<em>str</em>) – The document name.</li>
+<li><strong>jobUuid</strong> – The job UUID.</li>
+<li><strong>creator</strong> (<em>int</em>) – <p>The render job creator:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="63%" />
+<col width="38%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>RENDERJOBCREATOR_BATCHRENDER</em></td>
+<td>Batch render.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERJOBCREATOR_PICTUREVIEWER</em></td>
+<td>Picture Viewer.</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERJOBCREATOR_USER</em></td>
+<td>User.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERJOBCREATOR_WATCHDIRECTORY</em></td>
+<td>Watch directory.</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERJOBCREATOR_WATCHDIRECTORYSTARTUP</em></td>
+<td>Watch directory startup.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERJOBCREATOR_OTHER</em></td>
+<td>Other.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>username</strong> (<em>str</em>) – The user name.</li>
+<li><strong>bt</strong> (<a class="reference internal" href="../../../c4d.threading/BaseThread/index.html#c4d.threading.BaseThread" title="c4d.threading.BaseThread"><em>c4d.threading.BaseThread</em></a>) – The thread.</li>
+<li><strong>watchFolderName</strong> (<em>str</em>) – The name of the folder to watch.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>The result:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="66%" />
+<col width="34%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>CREATEJOBRESULT_OK</em></td>
+<td>Ok.</td>
+</tr>
+<tr class="row-even"><td><em>CREATEJOBRESULT_OUTOFMEMORY</em></td>
+<td>Out of memory.</td>
+</tr>
+<tr class="row-odd"><td><em>CREATEJOBRESULT_ASSETMISSING</em></td>
+<td>Asset missing.</td>
+</tr>
+<tr class="row-even"><td><em>CREATEJOBRESULT_SAVINGFAILED</em></td>
+<td>Saving failed.</td>
+</tr>
+<tr class="row-odd"><td><em>CREATEJOBRESULT_REPOSITORYERROR</em></td>
+<td>Repository error.</td>
+</tr>
+</tbody>
+</table>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="NetRenderService.StartRendering">
+<code class="descclassname">NetRenderService.</code><code class="descname">StartRendering</code><span class="sig-paren">(</span><em>self</em>, <em>mode</em>, <em>doc</em>, <em>jobUuid</em>, <em>bt</em><span class="sig-paren">)</span><a class="headerlink" href="#NetRenderService.StartRendering" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts a render job.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>mode</strong> (<em>int</em>) – <p>The thread mode:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="53%" />
+<col width="47%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>THREADMODE_DEPRECATED_SYNCHRONOUS</em></td>
+<td>Synchronous thread. Deprecated.</td>
+</tr>
+<tr class="row-even"><td><em>THREADMODE_ASYNC</em></td>
+<td>Asynchronous thread.</td>
+</tr>
+<tr class="row-odd"><td><em>THREADMODE_PRIVATE_OPENGL</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R18: </span>Private</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>doc</strong> (<a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document.</li>
+<li><strong>jobUuid</strong> – The job UUID.</li>
+<li><strong>bt</strong> (<a class="reference internal" href="../../../c4d.threading/BaseThread/index.html#c4d.threading.BaseThread" title="c4d.threading.BaseThread"><em>c4d.threading.BaseThread</em></a>) – The thread for the operation.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>The result:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>RENDERRESULT_OK</em></td>
+<td>Function was successful.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERRESULT_OUTOFMEMORY</em></td>
+<td>Not enough memory.</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERRESULT_ASSETMISSING</em></td>
+<td>Assets (textures etc.) are missing.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERRESULT_SAVINGFAILED</em></td>
+<td>Failed to save.</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERRESULT_USERBREAK</em></td>
+<td>User stopped the processing.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERRESULT_GICACHEMISSING</em></td>
+<td>GI cache is missing.</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERRESULT_NOMACHINE</em></td>
+<td>Machine was not found. Can only happen during Team Rendering.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERRESULT_PROJECTNOTFOUND</em></td>
+<td>Project was not found. Can only be returned by Cinema 4D during command line rendering.</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERRESULT_ERRORLOADINGPROJECT</em></td>
+<td>There was an error while loading the project. Can only be returned by Cinema 4D during command line rendering.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERRESULT_NOOUTPUTSPECIFIED</em></td>
+<td>Output was not specified. Can only be returned by Cinema 4D during command line rendering.</td>
+</tr>
+</tbody>
+</table>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="NetRenderService.InitRendering">
+<code class="descclassname">NetRenderService.</code><code class="descname">InitRendering</code><span class="sig-paren">(</span><em>self</em>, <em>doc</em>, <em>rdata</em>, <em>jobUuid</em>, <em>flags</em>, <em>machines</em><span class="sig-paren">)</span><a class="headerlink" href="#NetRenderService.InitRendering" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes a render job.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>doc</strong> (<a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document.</li>
+<li><strong>rdata</strong> (<a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The render data.</li>
+<li><strong>jobUuid</strong> (<em>uuid.Uuid</em>) – The job UUID.</li>
+<li><strong>flags</strong> (<em>int</em>) – <p>The NET render flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="38%" />
+<col width="62%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>NETRENDERFLAGS_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>NETRENDERFLAGS_OPEN_PICTUREVIEWER</em></td>
+<td>Open Picture Viewer.</td>
+</tr>
+<tr class="row-odd"><td><em>NETRENDERFLAGS_SHOWERRORS</em></td>
+<td>Show errors.</td>
+</tr>
+<tr class="row-even"><td><em>NETRENDERFLAGS_DELETEAFTERRENDERING</em></td>
+<td>Delete after rendering.</td>
+</tr>
+<tr class="row-odd"><td><em>NETRENDERFLAGS_NOPEERTOPEERASSETDISTRIBUTION</em></td>
+<td>No peer-to-peer asset distribution. Automatically set by local preferences.</td>
+</tr>
+<tr class="row-even"><td><em>NETRENDERFLAGS_NOREQUESTONDEMAND</em></td>
+<td>No request on demand. Automatically set by local preferences.</td>
+</tr>
+<tr class="row-odd"><td><em>NETRENDERFLAGS_EXCLUDECLIENTONRENDERINGERROR</em></td>
+<td>Exclude client on rendering error. Automatically set by local preferences.</td>
+</tr>
+<tr class="row-even"><td><em>NETRENDERFLAGS_SAVERESULTSINREPOSITORY</em></td>
+<td>Save results in repository.</td>
+</tr>
+<tr class="row-odd"><td><em>NETRENDERFLAGS_ASSEMBLEB3DFILESIMMEDIATLEY</em></td>
+<td>Assemble BodyPaint 3D files immediately.</td>
+</tr>
+<tr class="row-even"><td><em>NETRENDERFLAGS_NOWRITETEST</em></td>
+<td>No write test for BodyPaint 3D files.</td>
+</tr>
+<tr class="row-odd"><td><em>NETRENDERFLAGS_HANDLEWARNINGASERROR</em></td>
+<td>Handle warning as error.</td>
+</tr>
+<tr class="row-even"><td><em>NETRENDERFLAGS_KEEPB3DFILESAFTERASSEMBLING</em></td>
+<td>Keep the BodyPaint 3D files on assembling.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>machines</strong> (<a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – The machines container.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>The result:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>RENDERRESULT_OK</em></td>
+<td>Function was successful.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERRESULT_OUTOFMEMORY</em></td>
+<td>Not enough memory.</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERRESULT_ASSETMISSING</em></td>
+<td>Assets (textures etc.) are missing.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERRESULT_SAVINGFAILED</em></td>
+<td>Failed to save.</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERRESULT_USERBREAK</em></td>
+<td>User stopped the processing.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERRESULT_GICACHEMISSING</em></td>
+<td>GI cache is missing.</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERRESULT_NOMACHINE</em></td>
+<td>Machine was not found. Can only happen during Team Rendering.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERRESULT_PROJECTNOTFOUND</em></td>
+<td>Project was not found. Can only be returned by Cinema 4D during command line rendering.</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERRESULT_ERRORLOADINGPROJECT</em></td>
+<td>There was an error while loading the project. Can only be returned by Cinema 4D during command line rendering.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERRESULT_NOOUTPUTSPECIFIED</em></td>
+<td>Output was not specified. Can only be returned by Cinema 4D during command line rendering.</td>
+</tr>
+</tbody>
+</table>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="NetRenderService.InitAndStartRenderingFullAsync">
+<code class="descclassname">NetRenderService.</code><code class="descname">InitAndStartRenderingFullAsync</code><span class="sig-paren">(</span><em>self</em>, <em>jobUuid</em><span class="sig-paren">)</span><a class="headerlink" href="#NetRenderService.InitAndStartRenderingFullAsync" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts a render job fully asynchronous.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>jobUuid</strong> (<em>uuid.Uuid</em>) – The job UUID.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if rendering was started, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="NetRenderService.StopRendering">
+<code class="descclassname">NetRenderService.</code><code class="descname">StopRendering</code><span class="sig-paren">(</span><em>self</em>, <em>mode</em>, <em>jobUuid</em>, <em>result</em><span class="sig-paren">)</span><a class="headerlink" href="#NetRenderService.StopRendering" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops a render job.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>mode</strong> (<em>int</em>) – <p>The thread mode:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="53%" />
+<col width="47%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>THREADMODE_DEPRECATED_SYNCHRONOUS</em></td>
+<td>Synchronous thread. Deprecated.</td>
+</tr>
+<tr class="row-even"><td><em>THREADMODE_ASYNC</em></td>
+<td>Asynchronous thread.</td>
+</tr>
+<tr class="row-odd"><td><em>THREADMODE_PRIVATE_OPENGL</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R18: </span>Private</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>jobUuid</strong> – The job UUID.</li>
+<li><strong>result</strong> (<em>int</em>) – <p>The result:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>RENDERRESULT_OK</em></td>
+<td>Function was successful.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERRESULT_OUTOFMEMORY</em></td>
+<td>Not enough memory.</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERRESULT_ASSETMISSING</em></td>
+<td>Assets (textures etc.) are missing.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERRESULT_SAVINGFAILED</em></td>
+<td>Failed to save.</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERRESULT_USERBREAK</em></td>
+<td>User stopped the processing.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERRESULT_GICACHEMISSING</em></td>
+<td>GI cache is missing.</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERRESULT_NOMACHINE</em></td>
+<td>Machine was not found. Can only happen during Team Rendering.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERRESULT_PROJECTNOTFOUND</em></td>
+<td>Project was not found. Can only be returned by Cinema 4D during command line rendering.</td>
+</tr>
+<tr class="row-odd"><td><em>RENDERRESULT_ERRORLOADINGPROJECT</em></td>
+<td>There was an error while loading the project. Can only be returned by Cinema 4D during command line rendering.</td>
+</tr>
+<tr class="row-even"><td><em>RENDERRESULT_NOOUTPUTSPECIFIED</em></td>
+<td>Output was not specified. Can only be returned by Cinema 4D during command line rendering.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="NetRenderService.DeleteRenderJob">
+<code class="descclassname">NetRenderService.</code><code class="descname">DeleteRenderJob</code><span class="sig-paren">(</span><em>self</em>, <em>jobUuid</em>, <em>informClients</em><span class="sig-paren">)</span><a class="headerlink" href="#NetRenderService.DeleteRenderJob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a render job.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>jobUuid</strong> – The job UUID.</li>
+<li><strong>informClients</strong> (<em>bool</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the render job was deleted, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="NetRenderService.InsertJobAfter">
+<code class="descclassname">NetRenderService.</code><code class="descname">InsertJobAfter</code><span class="sig-paren">(</span><em>self</em>, <em>jobUuid1</em>, <em>jobUuid2</em><span class="sig-paren">)</span><a class="headerlink" href="#NetRenderService.InsertJobAfter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserts <em>jobUuid1</em> after <em>jobUuid2</em>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>jobUuid1</strong> – The job to insert after <em>jobUuid2</em>.</li>
+<li><strong>jobUuid2</strong> – The job to insert <em>jobUuid1</em> after.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if <em>jobUuid1</em> was inserted after <em>jobUuid2</em> otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="NetRenderService.InsertJobBefore">
+<code class="descclassname">NetRenderService.</code><code class="descname">InsertJobBefore</code><span class="sig-paren">(</span><em>self</em>, <em>jobUuid1</em>, <em>jobUuid2</em><span class="sig-paren">)</span><a class="headerlink" href="#NetRenderService.InsertJobBefore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserts <em>jobUuid1</em> before <em>jobUuid2</em>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>jobUuid1</strong> – The job to insert before <em>jobUuid2</em>.</li>
+<li><strong>jobUuid2</strong> – The job to insert <em>jobUuid1</em> before.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if <em>jobUuid1</em> was inserted before <em>jobUuid2</em> otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="NetRenderService.SetDefaultSceneName">
+<code class="descclassname">NetRenderService.</code><code class="descname">SetDefaultSceneName</code><span class="sig-paren">(</span><em>self</em>, <em>jobUuid</em>, <em>defaultSceneName</em><span class="sig-paren">)</span><a class="headerlink" href="#NetRenderService.SetDefaultSceneName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the Default Scene Name.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>jobUuid</strong> – The job UUID.</li>
+<li><strong>defaultSceneName</strong> (<em>str</em>) – The default scene name.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if successful, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="NetRenderService.GetRepository">
+<code class="descclassname">NetRenderService.</code><code class="descname">GetRepository</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#NetRenderService.GetRepository" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>Retrieves the repository for the service.</div></blockquote>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../Repository/index.html#c4d.modules.net.Repository" title="c4d.modules.net.Repository">c4d.modules.net.Repository</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The repository.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="NetRenderService.AddLogToJob">
+<code class="descclassname">NetRenderService.</code><code class="descname">AddLogToJob</code><span class="sig-paren">(</span><em>self</em>, <em>jobUuid</em>, <em>log</em>, <em>doLock</em>, <em>append=True</em><span class="sig-paren">)</span><a class="headerlink" href="#NetRenderService.AddLogToJob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a string to the job log.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>jobUuid</strong> – The job UUID.</li>
+<li><strong>log</strong> (<em>str</em>) – The string to add.</li>
+<li><strong>doLock</strong> (<em>bool</em>) – </li>
+<li><strong>append</strong> (<em>bool</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if successful, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="NetRenderService.AddLogToMachine">
+<code class="descclassname">NetRenderService.</code><code class="descname">AddLogToMachine</code><span class="sig-paren">(</span><em>self</em>, <em>jobUuid</em>, <em>log</em>, <em>doLock</em><span class="sig-paren">)</span><a class="headerlink" href="#NetRenderService.AddLogToMachine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a string to the machine log.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>machineUuid</strong> – The machine UUID.</li>
+<li><strong>log</strong> (<em>str</em>) – The string to add.</li>
+<li><strong>doLock</strong> (<em>bool</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if successful, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="NetRenderService.GetName">
+<code class="descclassname">NetRenderService.</code><code class="descname">GetName</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#NetRenderService.GetName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the name of the service.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The name of the service.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="NetRenderService.NetConsoleOutput">
+<code class="descclassname">NetRenderService.</code><code class="descname">NetConsoleOutput</code><span class="sig-paren">(</span><em>self</em>, <em>flags</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#NetRenderService.NetConsoleOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints a string to the service.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>flags</strong> (<em>int</em>) – <p>The console ouput flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="81%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>OUTPUT_DIAGNOSTIC</em></td>
+<td>Diagnostic output, shows up if a group of output is activated. This is the default.</td>
+</tr>
+<tr class="row-even"><td><em>OUTPUT_WARNING</em></td>
+<td>Warning output, shows up if a group of output is activated.</td>
+</tr>
+<tr class="row-odd"><td><em>OUTPUT_CRITICAL</em></td>
+<td>Critical output, shows up if a group of output is activated.</td>
+</tr>
+<tr class="row-even"><td><em>OUTPUT_NOLINEBREAK</em></td>
+<td>If set, no line break is added.</td>
+</tr>
+<tr class="row-odd"><td><em>OUTPUT_HEADER</em></td>
+<td>If set, header with line number and file name is added. C++ only.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>value</strong> (<em>str</em>) – The string to output.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../RenderJob/index.html" title="c4d.modules.net.RenderJob"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="c4d.modules.net"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.modules.net</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

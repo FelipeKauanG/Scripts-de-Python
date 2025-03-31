@@ -1,0 +1,328 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.mograph.FieldInput &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.modules.mograph.FieldLayer" href="../FieldLayer/index.html" />
+    <link rel="prev" title="c4d.modules.mograph.FieldInfo" href="../FieldInfo/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../FieldLayer/index.html" title="c4d.modules.mograph.FieldLayer"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../FieldInfo/index.html" title="c4d.modules.mograph.FieldInfo"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.modules.mograph</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-mograph-fieldinput">
+<h1>c4d.modules.mograph.FieldInput<a class="headerlink" href="#c4d-modules-mograph-fieldinput" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.mograph.FieldInput">
+<em class="property">class </em><code class="descclassname">c4d.modules.mograph.</code><code class="descname">FieldInput</code><a class="headerlink" href="#c4d.modules.mograph.FieldInput" title="Permalink to this definition">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified">New in version R20.</span></p>
+</div>
+</dd></dl>
+
+<p class="rubric">Attributes</p>
+<p><blockquote>
+<div><dl class="attribute">
+<dt id="FieldInput._blockCount">
+<code class="descclassname">FieldInput.</code><code class="descname">_blockCount</code><a class="headerlink" href="#FieldInput._blockCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>[Read-only]</p>
+<p>The number of elements to be processed. The count to use when iterating over elements in <a class="reference internal" href="../FieldObject/index.html#c4d.modules.mograph.FieldObject" title="c4d.modules.mograph.FieldObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldObject</span></code></a> and <a class="reference internal" href="../FieldLayer/index.html#c4d.modules.mograph.FieldLayer" title="c4d.modules.mograph.FieldLayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldLayer</span></code></a>.</p>
+<p><strong>Type:</strong> int</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="FieldInput._blockOffset">
+<code class="descclassname">FieldInput.</code><code class="descname">_blockOffset</code><a class="headerlink" href="#FieldInput._blockOffset" title="Permalink to this definition">¶</a></dt>
+<dd><p>[Read-only]</p>
+<p>The offset (starting point) of the elements if a portion of a larger array. Used for example to get the actual index in the list: <cite>actualIndex = index - points._blockOffset</cite>.</p>
+<p><strong>Type:</strong> int</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="FieldInput._fullArraySize">
+<code class="descclassname">FieldInput.</code><code class="descname">_fullArraySize</code><a class="headerlink" href="#FieldInput._fullArraySize" title="Permalink to this definition">¶</a></dt>
+<dd><p>[Read-only]</p>
+<p>The full size of the source data. May be larger than <a class="reference internal" href="#FieldInput._blockCount" title="FieldInput._blockCount"><code class="xref py py-attr docutils literal notranslate"><span class="pre">_blockCount</span></code></a> and also might be larger than the size of the allocated block within the <a class="reference internal" href="#c4d.modules.mograph.FieldInput" title="c4d.modules.mograph.FieldInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.mograph.FieldInput</span></code></a>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Do no use <a class="reference internal" href="#FieldInput._fullArraySize" title="FieldInput._fullArraySize"><code class="xref py py-attr docutils literal notranslate"><span class="pre">_fullArraySize</span></code></a> to browse the arrays.</p>
+</div>
+<p><strong>Type:</strong> int</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="FieldInput._transform">
+<code class="descclassname">FieldInput.</code><code class="descname">_transform</code><a class="headerlink" href="#FieldInput._transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>[Read-only]</p>
+<p>The transform matrix for the points in the input block. Use to bring the position and direction lists into world space or the local space of a <a class="reference internal" href="../FieldObject/index.html#c4d.modules.mograph.FieldObject" title="c4d.modules.mograph.FieldObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldObject</span></code></a>.</p>
+<p><strong>Type:</strong> <a class="reference internal" href="../../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Matrix</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="FieldInput._position">
+<code class="descclassname">FieldInput.</code><code class="descname">_position</code><a class="headerlink" href="#FieldInput._position" title="Permalink to this definition">¶</a></dt>
+<dd><p>[Read-only]</p>
+<p>The position values for the array of points. If it is a sub-block then element <cite>0</cite> is at <a class="reference internal" href="#FieldInput._blockOffset" title="FieldInput._blockOffset"><code class="xref py py-attr docutils literal notranslate"><span class="pre">_blockOffset</span></code></a> within the larger block.</p>
+<p><strong>Type:</strong> List[<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>]</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="FieldInput._direction">
+<code class="descclassname">FieldInput.</code><code class="descname">_direction</code><a class="headerlink" href="#FieldInput._direction" title="Permalink to this definition">¶</a></dt>
+<dd><p>[Read-only]</p>
+<p>The direction values for the array of points. If it is a sub-block then element <cite>0</cite> is at <a class="reference internal" href="#FieldInput._blockOffset" title="FieldInput._blockOffset"><code class="xref py py-attr docutils literal notranslate"><span class="pre">_blockOffset</span></code></a> within the larger block.</p>
+<p><strong>Type:</strong> List[<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>]</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="FieldInput._uvw">
+<code class="descclassname">FieldInput.</code><code class="descname">_uvw</code><a class="headerlink" href="#FieldInput._uvw" title="Permalink to this definition">¶</a></dt>
+<dd><p>[Read-only]</p>
+<p>The uvw values for the array of points. If it is a sub-block then element <cite>0</cite> is at <a class="reference internal" href="#FieldInput._blockOffset" title="FieldInput._blockOffset"><code class="xref py py-attr docutils literal notranslate"><span class="pre">_blockOffset</span></code></a> within the larger block.</p>
+<p><strong>Type:</strong> List[<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector</span></code></a>]</p>
+</dd></dl>
+
+</div></blockquote>
+</p>
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#FieldInput.__init__" title="FieldInput.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldInput.__init__(self,</span> <span class="pre">position,</span> <span class="pre">...[,</span> <span class="pre">...])</span></code></a></td>
+<td>Creates a <a class="reference internal" href="#c4d.modules.mograph.FieldInput" title="c4d.modules.mograph.FieldInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInput</span></code></a> instance.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#FieldInput.GetSubBlock" title="FieldInput.GetSubBlock"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldInput.GetSubBlock(self,</span> <span class="pre">offset,</span> <span class="pre">blockSize)</span></code></a></td>
+<td>Retrieves a <a class="reference internal" href="#c4d.modules.mograph.FieldInput" title="c4d.modules.mograph.FieldInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInput</span></code></a> for a subset of the original block.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#FieldInput.IsValid" title="FieldInput.IsValid"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldInput.IsValid(self)</span></code></a></td>
+<td>Checks if the <a class="reference internal" href="#c4d.modules.mograph.FieldInput" title="c4d.modules.mograph.FieldInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInput</span></code></a> allocations and sizes are valid.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#FieldInput.IsPopulated" title="FieldInput.IsPopulated"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldInput.IsPopulated(self)</span></code></a></td>
+<td>Checks if the <a class="reference internal" href="#c4d.modules.mograph.FieldInput" title="c4d.modules.mograph.FieldInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInput</span></code></a> is valid and non-empty.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#FieldInput.GetCount" title="FieldInput.GetCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldInput.GetCount(self)</span></code></a></td>
+<td>Returns the number of elements in the <a class="reference internal" href="#c4d.modules.mograph.FieldInput" title="c4d.modules.mograph.FieldInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInput</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#FieldInput.GetOffset" title="FieldInput.GetOffset"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldInput.GetOffset(self)</span></code></a></td>
+<td>Returns the offset of the first element in full arrays.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="FieldInput.__init__">
+<code class="descclassname">FieldInput.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>position</em>, <em>allocatedCount</em>, <em>transform=None</em>, <em>fullCount=NOTOK</em>, <em>direction=None</em>, <em>uvw=None</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldInput.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a <a class="reference internal" href="#c4d.modules.mograph.FieldInput" title="c4d.modules.mograph.FieldInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInput</span></code></a> instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>position</strong> (<em>List</em><em>[</em><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a><em>]</em>) – The position list to sample.</li>
+<li><strong>allocatedCount</strong> (<em>int</em>) – The length of the <em>position</em> list.</li>
+<li><strong>transform</strong> (<a class="reference internal" href="../../../c4d/Matrix/index.html#c4d.Matrix" title="c4d.Matrix"><em>c4d.Matrix</em></a>) – The transform matrix required to convert the position and direction inputs to global space.</li>
+<li><strong>fullCount</strong> (<em>int</em>) – The full position count if <em>allocatedCount</em> is too big to allocate <em>position</em> list. If not set <em>allocatedCount</em> is used instead.</li>
+<li><strong>direction</strong> (<em>List</em><em>[</em><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a><em>]</em>) – The direction list to sample.</li>
+<li><strong>uvw</strong> (<em>List</em><em>[</em><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a><em>]</em>) – The uvw list to sample.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="#c4d.modules.mograph.FieldInput" title="c4d.modules.mograph.FieldInput">c4d.modules.mograph.FieldInput</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The created <a class="reference internal" href="#c4d.modules.mograph.FieldInput" title="c4d.modules.mograph.FieldInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInput</span></code></a> instance.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldInput.GetSubBlock">
+<code class="descclassname">FieldInput.</code><code class="descname">GetSubBlock</code><span class="sig-paren">(</span><em>self</em>, <em>offset</em>, <em>blockSize</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldInput.GetSubBlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a <a class="reference internal" href="#c4d.modules.mograph.FieldInput" title="c4d.modules.mograph.FieldInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInput</span></code></a> for a subset of the original block.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Useful to pass smaller blocks to the field processing threads.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>offset</strong> (<em>int</em>) – The sub-block start offset.</li>
+<li><strong>blockSize</strong> (<em>int</em>) – The size of the desired sub-block. <cite>400</cite> is the recommended size.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="#c4d.modules.mograph.FieldInput" title="c4d.modules.mograph.FieldInput">c4d.modules.mograph.FieldInput</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The sub-block <a class="reference internal" href="#c4d.modules.mograph.FieldInput" title="c4d.modules.mograph.FieldInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInput</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldInput.IsValid">
+<code class="descclassname">FieldInput.</code><code class="descname">IsValid</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldInput.IsValid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the <a class="reference internal" href="#c4d.modules.mograph.FieldInput" title="c4d.modules.mograph.FieldInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInput</span></code></a> allocations and sizes are valid.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Default empty <a class="reference internal" href="#c4d.modules.mograph.FieldInput" title="c4d.modules.mograph.FieldInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInput</span></code></a> is considered valid.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the <a class="reference internal" href="#c4d.modules.mograph.FieldInput" title="c4d.modules.mograph.FieldInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInput</span></code></a> is valid, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldInput.IsPopulated">
+<code class="descclassname">FieldInput.</code><code class="descname">IsPopulated</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldInput.IsPopulated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the <a class="reference internal" href="#c4d.modules.mograph.FieldInput" title="c4d.modules.mograph.FieldInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInput</span></code></a> is valid and non-empty.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the <a class="reference internal" href="#c4d.modules.mograph.FieldInput" title="c4d.modules.mograph.FieldInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInput</span></code></a> is populated, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldInput.GetCount">
+<code class="descclassname">FieldInput.</code><code class="descname">GetCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldInput.GetCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of elements in the <a class="reference internal" href="#c4d.modules.mograph.FieldInput" title="c4d.modules.mograph.FieldInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInput</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The number of elements.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldInput.GetOffset">
+<code class="descclassname">FieldInput.</code><code class="descname">GetOffset</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldInput.GetOffset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the offset of the first element in full arrays.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The offset.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../FieldLayer/index.html" title="c4d.modules.mograph.FieldLayer"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../FieldInfo/index.html" title="c4d.modules.mograph.FieldInfo"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.modules.mograph</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

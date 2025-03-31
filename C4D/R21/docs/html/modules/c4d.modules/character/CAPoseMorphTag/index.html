@@ -1,0 +1,688 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.character.CAPoseMorphTag &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.modules.character.CAMorph" href="../CAMorph/index.html" />
+    <link rel="prev" title="c4d.modules.character.builder.Template" href="../builder/Template/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../CAMorph/index.html" title="c4d.modules.character.CAMorph"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../builder/Template/index.html" title="c4d.modules.character.builder.Template"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.modules.character</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-character-caposemorphtag">
+<h1>c4d.modules.character.CAPoseMorphTag<a class="headerlink" href="#c4d-modules-character-caposemorphtag" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.character.CAPoseMorphTag">
+<em class="property">class </em><code class="descclassname">c4d.modules.character.</code><code class="descname">CAPoseMorphTag</code><a class="headerlink" href="#c4d.modules.character.CAPoseMorphTag" title="Permalink to this definition">¶</a></dt>
+<dd><a class="reference internal image-reference" href="../../../../_images/character_association_pose.png"><img alt="../../../../_images/character_association_pose.png" src="../../../../_images/character_association_pose.png" style="width: 400px;" /></a>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#CAPoseMorphTag.__init__" title="CAPoseMorphTag.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.__init__(self)</span></code></a></td>
+<td>Create a new pose morph tag.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#CAPoseMorphTag.AddMorph" title="CAPoseMorphTag.AddMorph"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.AddMorph(self)</span></code></a></td>
+<td>Add a morph to the morph tag.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAPoseMorphTag.GetMorphBase" title="CAPoseMorphTag.GetMorphBase"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.GetMorphBase(self)</span></code></a></td>
+<td>Get the morph base of the morph tag.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAPoseMorphTag.GetMorphIndex" title="CAPoseMorphTag.GetMorphIndex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.GetMorphIndex(self,</span> <span class="pre">morph)</span></code></a></td>
+<td>Retrieves the index for the given <em>morph</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAPoseMorphTag.GetMorphCount" title="CAPoseMorphTag.GetMorphCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.GetMorphCount(self)</span></code></a></td>
+<td>Returns the Morph count.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAPoseMorphTag.GetMorphID" title="CAPoseMorphTag.GetMorphID"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.GetMorphID(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Return the morph ID.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAPoseMorphTag.GetMorph" title="CAPoseMorphTag.GetMorph"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.GetMorph(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Return the morph.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAPoseMorphTag.GetActiveMorph" title="CAPoseMorphTag.GetActiveMorph"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.GetActiveMorph(self)</span></code></a></td>
+<td>Retrieves the active morph (usually the one selected).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAPoseMorphTag.RemoveMorph" title="CAPoseMorphTag.RemoveMorph"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.RemoveMorph(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Remove a morph by <em>index</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAPoseMorphTag.GetActiveMorphIndex" title="CAPoseMorphTag.GetActiveMorphIndex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.GetActiveMorphIndex(self)</span></code></a></td>
+<td>Get the index of the current active morph.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAPoseMorphTag.SetActiveMorphIndex" title="CAPoseMorphTag.SetActiveMorphIndex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.SetActiveMorphIndex(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Set the active morph index.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAPoseMorphTag.GetMode" title="CAPoseMorphTag.GetMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.GetMode(self)</span></code></a></td>
+<td>Get the mode of the morph tag.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAPoseMorphTag.InitMorphs" title="CAPoseMorphTag.InitMorphs"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.InitMorphs(self)</span></code></a></td>
+<td>Initialize the morphs.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAPoseMorphTag.UpdateMorphs" title="CAPoseMorphTag.UpdateMorphs"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.UpdateMorphs(self)</span></code></a></td>
+<td>Update the morphs.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAPoseMorphTag.ExitEdit" title="CAPoseMorphTag.ExitEdit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.ExitEdit(self,</span> <span class="pre">doc,</span> <span class="pre">apply)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Must be called before doing anything to a morph tag.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAPoseMorphTag.GetPSDFeedbackColor" title="CAPoseMorphTag.GetPSDFeedbackColor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.GetPSDFeedbackColor(self)</span></code></a></td>
+<td>Retrieves the PSD color used for feedback.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAPoseMorphTag.SetPSDFeedbackColor" title="CAPoseMorphTag.SetPSDFeedbackColor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.SetPSDFeedbackColor(self,</span> <span class="pre">color)</span></code></a></td>
+<td>Sets the PSD color used for feedback.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAPoseMorphTag.GetPSDFeedbackColorEnabled" title="CAPoseMorphTag.GetPSDFeedbackColorEnabled"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.GetPSDFeedbackColorEnabled(self)</span></code></a></td>
+<td>Checks if PSD color feedback is enabled or disabled.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAPoseMorphTag.SetPSDFeedbackColorEnabled" title="CAPoseMorphTag.SetPSDFeedbackColorEnabled"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.SetPSDFeedbackColorEnabled(self,</span> <span class="pre">active)</span></code></a></td>
+<td>Sets the enable/disable state of the PSD color used for feedback.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAPoseMorphTag.GetPSDOrientThreshold" title="CAPoseMorphTag.GetPSDOrientThreshold"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.GetPSDOrientThreshold(self)</span></code></a></td>
+<td>Retrieves the PSD orient radian threshold used in automatic weighting.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAPoseMorphTag.SetPSDOrientThreshold" title="CAPoseMorphTag.SetPSDOrientThreshold"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.SetPSDOrientThreshold(self,</span> <span class="pre">radianThreshold)</span></code></a></td>
+<td>Sets the PSD orient radian threshold used in automatic weighting.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAPoseMorphTag.GetPSDTwistThreshold" title="CAPoseMorphTag.GetPSDTwistThreshold"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.GetPSDTwistThreshold(self)</span></code></a></td>
+<td>Retrieves the PSD twist radian threshold used in automatic weighting.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAPoseMorphTag.SetPSDTwistThreshold" title="CAPoseMorphTag.SetPSDTwistThreshold"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.SetPSDTwistThreshold(self,</span> <span class="pre">radianThreshold)</span></code></a></td>
+<td>Sets the PSD twist radian threshold used in automatic weighting.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAPoseMorphTag.GetPSDPositionThreshold" title="CAPoseMorphTag.GetPSDPositionThreshold"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.GetPSDPositionThreshold(self)</span></code></a></td>
+<td>Retrieves the PSD position distance threshold used in automatic weighting.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#CAPoseMorphTag.SetPSDPositionThreshold" title="CAPoseMorphTag.SetPSDPositionThreshold"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.SetPSDPositionThreshold(self,</span> <span class="pre">distanceThreshold)</span></code></a></td>
+<td>Sets the PSD position distance threshold used in automatic weighting.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#CAPoseMorphTag.GetMorphPSDID" title="CAPoseMorphTag.GetMorphPSDID"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CAPoseMorphTag.GetMorphPSDID(self,</span> <span class="pre">morphIndex,</span> <span class="pre">...)</span></code></a></td>
+<td>Retrieves the description ID for the morph slider at <em>morphIndex</em>.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseTag/index.html#c4d.BaseTag" title="c4d.BaseTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseTag</span></code></a></li>
+</ul>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="CAPoseMorphTag.__init__">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new pose morph tag.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.modules.character.CAPoseMorphTag" title="c4d.modules.character.CAPoseMorphTag">c4d.modules.character.CAPoseMorphTag</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The new pose morph tag.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAPoseMorphTag.AddMorph">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">AddMorph</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.AddMorph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a morph to the morph tag.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../CAMorph/index.html#c4d.modules.character.CAMorph" title="c4d.modules.character.CAMorph">c4d.modules.character.CAMorph</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The new morph.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAPoseMorphTag.GetMorphBase">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">GetMorphBase</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.GetMorphBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the morph base of the morph tag.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../CAMorph/index.html#c4d.modules.character.CAMorph" title="c4d.modules.character.CAMorph">c4d.modules.character.CAMorph</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The morph base.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAPoseMorphTag.GetMorphIndex">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">GetMorphIndex</code><span class="sig-paren">(</span><em>self</em>, <em>morph</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.GetMorphIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the index for the given <em>morph</em>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R17.053.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>morph</strong> (<a class="reference internal" href="../CAMorph/index.html#c4d.modules.character.CAMorph" title="c4d.modules.character.CAMorph"><em>c4d.modules.character.CAMorph</em></a>) – The morph to search for.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The index for <em>morph</em>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAPoseMorphTag.GetMorphCount">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">GetMorphCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.GetMorphCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the Morph count.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The morph count.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAPoseMorphTag.GetMorphID">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">GetMorphID</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.GetMorphID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the morph ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index of the morph.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If the morph <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#CAPoseMorphTag.GetMorphCount" title="CAPoseMorphTag.GetMorphCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetMorphCount()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/DescID/index.html#c4d.DescID" title="c4d.DescID">c4d.DescID</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The morph ID.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAPoseMorphTag.GetMorph">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">GetMorph</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.GetMorph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the morph.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index of the morph.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If the morph <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#CAPoseMorphTag.GetMorphCount" title="CAPoseMorphTag.GetMorphCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetMorphCount()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../CAMorph/index.html#c4d.modules.character.CAMorph" title="c4d.modules.character.CAMorph">c4d.modules.character.CAMorph</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The morph.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAPoseMorphTag.GetActiveMorph">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">GetActiveMorph</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.GetActiveMorph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the active morph (usually the one selected).</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R17.053.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../CAMorph/index.html#c4d.modules.character.CAMorph" title="c4d.modules.character.CAMorph">c4d.modules.character.CAMorph</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The active morph.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAPoseMorphTag.RemoveMorph">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">RemoveMorph</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.RemoveMorph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a morph by <em>index</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index of the morph.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If the morph <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#CAPoseMorphTag.GetMorphCount" title="CAPoseMorphTag.GetMorphCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetMorphCount()</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAPoseMorphTag.GetActiveMorphIndex">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">GetActiveMorphIndex</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.GetActiveMorphIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the index of the current active morph.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The index.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAPoseMorphTag.SetActiveMorphIndex">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">SetActiveMorphIndex</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.SetActiveMorphIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the active morph index.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R17.053.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The active morph index to set.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If the morph <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#CAPoseMorphTag.GetMorphCount" title="CAPoseMorphTag.GetMorphCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetMorphCount()</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAPoseMorphTag.GetMode">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">GetMode</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.GetMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the mode of the morph tag.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The mode.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAPoseMorphTag.InitMorphs">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">InitMorphs</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.InitMorphs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the morphs.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAPoseMorphTag.UpdateMorphs">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">UpdateMorphs</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.UpdateMorphs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the morphs.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAPoseMorphTag.ExitEdit">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">ExitEdit</code><span class="sig-paren">(</span><em>self</em>, <em>doc</em>, <em>apply</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.ExitEdit" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Must be called before doing anything to a morph tag.</div>
+<div class="line">If the user is in Edit mode and making changes to the morph, these are not applied until this function is called and, if not called, they are lost.</div>
+<div class="line">Set apply to <strong>True</strong> if any user changes should be stored. This is normally the case.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>doc</strong> (<a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document.</li>
+<li><strong>apply</strong> (<em>bool</em>) – Set to <strong>False</strong> if any user changes should be stored, otherwise set to <strong>True</strong>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if successful, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAPoseMorphTag.GetPSDFeedbackColor">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">GetPSDFeedbackColor</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.GetPSDFeedbackColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the PSD color used for feedback.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The PSD feedback color.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAPoseMorphTag.SetPSDFeedbackColor">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">SetPSDFeedbackColor</code><span class="sig-paren">(</span><em>self</em>, <em>color</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.SetPSDFeedbackColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the PSD color used for feedback.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>color</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The PSD feedback color to set.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAPoseMorphTag.GetPSDFeedbackColorEnabled">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">GetPSDFeedbackColorEnabled</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.GetPSDFeedbackColorEnabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if PSD color feedback is enabled or disabled.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if PSD color feedback is enabled, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAPoseMorphTag.SetPSDFeedbackColorEnabled">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">SetPSDFeedbackColorEnabled</code><span class="sig-paren">(</span><em>self</em>, <em>active</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.SetPSDFeedbackColorEnabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the enable/disable state of the PSD color used for feedback.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>active</strong> (<em>bool</em>) – <strong>True</strong> to enable PSD color feedback, otherwise <strong>False</strong>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAPoseMorphTag.GetPSDOrientThreshold">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">GetPSDOrientThreshold</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.GetPSDOrientThreshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the PSD orient radian threshold used in automatic weighting.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The PSD orient threshold (in radian).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAPoseMorphTag.SetPSDOrientThreshold">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">SetPSDOrientThreshold</code><span class="sig-paren">(</span><em>self</em>, <em>radianThreshold</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.SetPSDOrientThreshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the PSD orient radian threshold used in automatic weighting.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>radianThreshold</strong> (<em>float</em>) – The PSD orient threshold to set (in radian).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAPoseMorphTag.GetPSDTwistThreshold">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">GetPSDTwistThreshold</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.GetPSDTwistThreshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the PSD twist radian threshold used in automatic weighting.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The PSD twist threshold (in radian).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAPoseMorphTag.SetPSDTwistThreshold">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">SetPSDTwistThreshold</code><span class="sig-paren">(</span><em>self</em>, <em>radianThreshold</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.SetPSDTwistThreshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the PSD twist radian threshold used in automatic weighting.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>radianThreshold</strong> (<em>float</em>) – The PSD twist threshold to set (in radian).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAPoseMorphTag.GetPSDPositionThreshold">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">GetPSDPositionThreshold</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.GetPSDPositionThreshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the PSD position distance threshold used in automatic weighting.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The PSD position threshold (distance).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAPoseMorphTag.SetPSDPositionThreshold">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">SetPSDPositionThreshold</code><span class="sig-paren">(</span><em>self</em>, <em>distanceThreshold</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.SetPSDPositionThreshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the PSD position distance threshold used in automatic weighting.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>distanceThreshold</strong> (<em>float</em>) – The PSD position threshold to set (distance).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CAPoseMorphTag.GetMorphPSDID">
+<code class="descclassname">CAPoseMorphTag.</code><code class="descname">GetMorphPSDID</code><span class="sig-paren">(</span><em>self</em>, <em>morphIndex</em>, <em>psdAttributeID</em><span class="sig-paren">)</span><a class="headerlink" href="#CAPoseMorphTag.GetMorphPSDID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the description ID for the morph slider at <em>morphIndex</em>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R19.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>morphIndex</strong> (<em>int</em>) – The morph index: <cite>0</cite> &lt;= <em>morphIndex</em> &lt; <a class="reference internal" href="#CAPoseMorphTag.GetMorphCount" title="CAPoseMorphTag.GetMorphCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetMorphCount()</span></code></a>.</li>
+<li><strong>psdAttributeID</strong> (<em>int</em>) – The attribute ID defined in <cite>tcaposemorph.h</cite>: <strong>ID_CA_POSE_PSD_ORIENT_INTERP_WEIGHT</strong> &lt;= <em>psdAttributeID</em> &lt; <strong>ID_CA_POSE_PSD_AUTOWEIGHT_INTERP</strong>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><strong>IndexError</strong> – If <em>morphIndex</em> is out of range.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../../c4d/DescID/index.html#c4d.DescID" title="c4d.DescID">c4d.DescID</a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The description ID of the specified attribute.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../CAMorph/index.html" title="c4d.modules.character.CAMorph"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../builder/Template/index.html" title="c4d.modules.character.builder.Template"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.modules.character</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

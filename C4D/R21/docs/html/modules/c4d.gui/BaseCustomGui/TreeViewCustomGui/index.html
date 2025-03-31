@@ -1,0 +1,602 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.gui.TreeViewCustomGui &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.gui.GeUserArea" href="../../GeUserArea/index.html" />
+    <link rel="prev" title="c4d.gui.SplineCustomGui" href="../SplineCustomGui/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../GeUserArea/index.html" title="c4d.gui.GeUserArea"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../SplineCustomGui/index.html" title="c4d.gui.SplineCustomGui"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.gui</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.gui.BaseCustomGui</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-gui-treeviewcustomgui">
+<h1>c4d.gui.TreeViewCustomGui<a class="headerlink" href="#c4d-gui-treeviewcustomgui" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.gui.TreeViewCustomGui">
+<em class="property">class </em><code class="descclassname">c4d.gui.</code><code class="descname">TreeViewCustomGui</code><a class="headerlink" href="#c4d.gui.TreeViewCustomGui" title="Permalink to this definition">¶</a></dt>
+<dd><p>The tree view GUI (<em>CUSTOMGUI_TREEVIEW</em>) is a very versatile list view interface.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R13.029.</span></p>
+</div>
+<p>It looks like this:</p>
+<blockquote>
+<div><img alt="../../../../_images/treeviewcustomgui_treeview.png" class="align-left" src="../../../../_images/treeviewcustomgui_treeview.png" />
+</div></blockquote>
+<p>The settings are:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="53%" />
+<col width="9%" />
+<col width="38%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>TREEVIEW_BORDER</em></td>
+<td>int</td>
+<td>Border type:</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>BORDER_NONE</em></td>
+<td>No border.</td>
+</tr>
+<tr class="row-even"><td><em>BORDER_THIN_IN</em></td>
+<td>Thin border inward.</td>
+</tr>
+<tr class="row-odd"><td><em>BORDER_THIN_OUT</em></td>
+<td>Thin border outward.</td>
+</tr>
+<tr class="row-even"><td><em>BORDER_IN</em></td>
+<td>Normal border inward.</td>
+</tr>
+<tr class="row-odd"><td><em>BORDER_OUT</em></td>
+<td>Normal border outward.</td>
+</tr>
+<tr class="row-even"><td><em>BORDER_GROUP_IN</em></td>
+<td>Group border inside.</td>
+</tr>
+<tr class="row-odd"><td><em>BORDER_GROUP_OUT</em></td>
+<td>Group border outside.</td>
+</tr>
+<tr class="row-even"><td><em>BORDER_OUT2</em></td>
+<td>Outward border 2.</td>
+</tr>
+<tr class="row-odd"><td><em>BORDER_OUT3</em></td>
+<td>Outward border 3</td>
+</tr>
+<tr class="row-even"><td><em>BORDER_BLACK</em></td>
+<td>Thin black line.</td>
+</tr>
+<tr class="row-odd"><td><em>BORDER_ACTIVE_1</em></td>
+<td>Active border 1.</td>
+</tr>
+<tr class="row-even"><td><em>BORDER_ACTIVE_2</em></td>
+<td>Active border 2.</td>
+</tr>
+<tr class="row-odd"><td><em>BORDER_ACTIVE_3</em></td>
+<td>Active border 3.</td>
+</tr>
+<tr class="row-even"><td><em>BORDER_ACTIVE_4</em></td>
+<td>Active border 4.</td>
+</tr>
+<tr class="row-odd"><td><em>BORDER_GROUP_TOP</em></td>
+<td>Border along the top.</td>
+</tr>
+<tr class="row-even"><td><em>BORDER_ROUND</em></td>
+<td>Border with round corners.</td>
+</tr>
+<tr class="row-odd"><td><em>BORDER_SCHEME_EDIT</em></td>
+<td>Edit field border like the shortcut gadget for example.</td>
+</tr>
+<tr class="row-even"><td><em>BORDER_SCHEME_EDIT_NUMERIC</em></td>
+<td>Edit field border that is open to the right like the link field for example.</td>
+</tr>
+<tr class="row-odd"><td><em>BORDER_OUT3l</em></td>
+<td>Outward border 3, open to the left.</td>
+</tr>
+<tr class="row-even"><td><em>BORDER_OUT3r</em></td>
+<td>Outward border 3, open to the right.</td>
+</tr>
+<tr class="row-odd"><td><em>BORDER_THIN_INb</em></td>
+<td>Thin border inward, open to the botton.</td>
+</tr>
+<tr class="row-even"><td><em>BORDER_MASK</em></td>
+<td>Masks out border type.</td>
+</tr>
+<tr class="row-odd"><td><em>BORDER_TEXT_DOTTED</em></td>
+<td><div class="first last versionadded">
+<div class="line-block">
+<span class="versionmodified">New in version R21: </span><div class="line">Only used with <a class="reference internal" href="../../GeDialog/index.html#GeDialog.AddStaticText" title="GeDialog.AddStaticText"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GeDialog.AddStaticText()</span></code></a>.</div>
+<div class="line">Draws a dotted line at right of text, useful to visually connect the text with
+its parameter.</div>
+</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><em>BORDER_WITH_TITLE_MONO</em></td>
+<td>Display group title with monospaced font.</td>
+</tr>
+<tr class="row-odd"><td><em>BORDER_WITH_TITLE_BOLD</em></td>
+<td>Display group title with bold font.</td>
+</tr>
+<tr class="row-even"><td><em>BORDER_WITH_TITLE</em></td>
+<td>Display group title in the border.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="2%" />
+<col width="80%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>TREEVIEW_OUTSIDE_DROP</em></td>
+<td>bool</td>
+<td><strong>True</strong> if an object may be dropped under all the objects in the tree view.</td>
+</tr>
+<tr class="row-even"><td><em>TREEVIEW_HIDE_LINES</em></td>
+<td>bool</td>
+<td><strong>True</strong> if no lines should be drawn.</td>
+</tr>
+<tr class="row-odd"><td><em>TREEVIEW_CTRL_DRAG</em></td>
+<td>bool</td>
+<td><strong>True</strong> if item may be duplicated by Ctrl + Drag.</td>
+</tr>
+<tr class="row-even"><td><em>TREEVIEW_NO_MULTISELECT</em></td>
+<td>bool</td>
+<td><strong>True</strong> if no multiple selection is allowed.</td>
+</tr>
+<tr class="row-odd"><td><em>TREEVIEW_HAS_HEADER</em></td>
+<td>bool</td>
+<td><strong>True</strong> if the tree view may have a header line.</td>
+</tr>
+<tr class="row-even"><td><em>TREEVIEW_RESIZE_HEADER</em></td>
+<td>bool</td>
+<td><strong>True</strong> if the column width can be changed by the user.</td>
+</tr>
+<tr class="row-odd"><td><em>TREEVIEW_MOVE_COLUMN</em></td>
+<td>bool</td>
+<td><strong>True</strong> if the user can move the columns.</td>
+</tr>
+<tr class="row-even"><td><em>TREEVIEW_FIXED_LAYOUT</em></td>
+<td>bool</td>
+<td><strong>True</strong> if all lines have the same height.</td>
+</tr>
+<tr class="row-odd"><td><em>TREEVIEW_NOAUTOCOLUMNS</em></td>
+<td>bool</td>
+<td><strong>True</strong> if only the first line is asked for the columns width, resulting in a huge speedup.</td>
+</tr>
+<tr class="row-even"><td><em>TREEVIEW_NO_OPEN_CTRLCLK</em></td>
+<td>bool</td>
+<td><strong>True</strong> if it is not allowed to open the complete tree with Ctrl + Click.</td>
+</tr>
+<tr class="row-odd"><td><em>TREEVIEW_ALT_DRAG</em></td>
+<td>bool</td>
+<td><strong>True</strong> if Alt should be used instead of Ctrl for drag and drop; implies item may be duplicated by Alt + Drag.</td>
+</tr>
+<tr class="row-even"><td><em>TREEVIEW_NO_BACK_DELETE</em></td>
+<td>bool</td>
+<td>Disable “delete pressed” messages if backspace was hit.</td>
+</tr>
+<tr class="row-odd"><td><em>TREEVIEW_NO_DELETE</em></td>
+<td>bool</td>
+<td>Disable Delete Message Callback completely for backspace and delete.</td>
+</tr>
+<tr class="row-even"><td><em>TREEVIEW_ALTERNATE_BG</em></td>
+<td>bool</td>
+<td>Alternate background per line.</td>
+</tr>
+<tr class="row-odd"><td><em>TREEVIEW_CURSORKEYS</em></td>
+<td>bool</td>
+<td><strong>True</strong> if cursor keys should be processed. Note: The focus item has to be set to None if it is deleted and this flag is set.</td>
+</tr>
+<tr class="row-even"><td><em>TREEVIEW_NOENTERRENAME</em></td>
+<td>bool</td>
+<td>Suppresses the rename popup when the user presses enter.</td>
+</tr>
+<tr class="row-odd"><td><em>TREEVIEW_NO_VERTICALSCROLL</em></td>
+<td>bool</td>
+<td><strong>True</strong> to disable vertical scrolling and show the full list.</td>
+</tr>
+<tr class="row-even"><td><em>TREEVIEW_ADDROW</em></td>
+<td>bool</td>
+<td>Show an add new column row at the bottom of the list.</td>
+</tr>
+<tr class="row-odd"><td><em>TREEVIEW_RESIZABLE</em></td>
+<td>bool</td>
+<td>The treeview is resizable from the bottom edge.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewCustomGui.SetRoot" title="TreeViewCustomGui.SetRoot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetRoot(self,</span> <span class="pre">root,</span> <span class="pre">functions,</span> <span class="pre">...)</span></code></a></td>
+<td>Initializes the tree.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TreeViewCustomGui.SetLayout" title="TreeViewCustomGui.SetLayout"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetLayout(self,</span> <span class="pre">columns,</span> <span class="pre">data)</span></code></a></td>
+<td>Sets the layout for the tree view.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewCustomGui.Refresh" title="TreeViewCustomGui.Refresh"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.Refresh(self)</span></code></a></td>
+<td>Refreshes the tree view.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TreeViewCustomGui.SetHeaderText" title="TreeViewCustomGui.SetHeaderText"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetHeaderText(self,</span> <span class="pre">lColumnID,</span> <span class="pre">str)</span></code></a></td>
+<td>Set the header text for a column.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewCustomGui.MakeVisible" title="TreeViewCustomGui.MakeVisible"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.MakeVisible(self,</span> <span class="pre">pObj)</span></code></a></td>
+<td>Scrolls to <em>pObj</em> and expands the tree if necessary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TreeViewCustomGui.ShowObject" title="TreeViewCustomGui.ShowObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.ShowObject(self,</span> <span class="pre">pObj)</span></code></a></td>
+<td>Expands the tree to <em>pObj</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewCustomGui.GetVisibleScrollArea" title="TreeViewCustomGui.GetVisibleScrollArea"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.GetVisibleScrollArea(self)</span></code></a></td>
+<td>Queries the internal scroll group for its currently visible region.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TreeViewCustomGui.SetVisibleScrollArea" title="TreeViewCustomGui.SetVisibleScrollArea"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetVisibleScrollArea(self,</span> <span class="pre">x1,</span> <span class="pre">y1,</span> <span class="pre">x2,</span> <span class="pre">y2)</span></code></a></td>
+<td>Sets the internal scroll group currently visible region, a rectangle between (<em>x1</em>, <em>y1</em>) and (<em>x2</em>, <em>y2</em>).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewCustomGui.GetVisibleLineCount" title="TreeViewCustomGui.GetVisibleLineCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.GetVisibleLineCount(self)</span></code></a></td>
+<td>Gets the number of currently visible lines related to folded and unfolded items of the tree.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TreeViewCustomGui.SetFocusItem" title="TreeViewCustomGui.SetFocusItem"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.SetFocusItem(self,</span> <span class="pre">pItem)</span></code></a></td>
+<td>Sets the focus item.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TreeViewCustomGui.IsFocusItem" title="TreeViewCustomGui.IsFocusItem"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewCustomGui.IsFocusItem(self,</span> <span class="pre">pItem)</span></code></a></td>
+<td>Checks if <em>pItem</em> is the focus item.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../index.html#c4d.gui.BaseCustomGui" title="c4d.gui.BaseCustomGui"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.gui.BaseCustomGui</span></code></a></li>
+</ul>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="TreeViewCustomGui.SetRoot">
+<code class="descclassname">TreeViewCustomGui.</code><code class="descname">SetRoot</code><span class="sig-paren">(</span><em>self</em>, <em>root</em>, <em>functions</em>, <em>userdata</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewCustomGui.SetRoot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes the tree.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>root</strong> (<em>any</em>) – Root object.</li>
+<li><strong>functions</strong> (<a class="reference internal" href="../../TreeViewFunctions/index.html#c4d.gui.TreeViewFunctions" title="c4d.gui.TreeViewFunctions"><em>c4d.gui.TreeViewFunctions</em></a>) – Tree view functions.</li>
+<li><strong>userdata</strong> (<em>any</em>) – User data.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if successful, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewCustomGui.SetLayout">
+<code class="descclassname">TreeViewCustomGui.</code><code class="descname">SetLayout</code><span class="sig-paren">(</span><em>self</em>, <em>columns</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewCustomGui.SetLayout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the layout for the tree view.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>columns</strong> (<em>int</em>) – Number of columns.</li>
+<li><strong>data</strong> (<a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><em>c4d.BaseContainer</em></a>) – <p>Column data container, with one column type entry for each column:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="91%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>LV_TREE</em></td>
+<td>Tree or list.</td>
+</tr>
+<tr class="row-even"><td><em>LV_USERTREE</em></td>
+<td>User tree. If set, the tree view calls <a class="reference internal" href="../../TreeViewFunctions/index.html#TreeViewFunctions.DrawCell" title="TreeViewFunctions.DrawCell"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.DrawCell()</span></code></a> for the left cell of each line (otherwise it would display the object’s name in the cell).</td>
+</tr>
+<tr class="row-odd"><td><em>LV_USER</em></td>
+<td>Custom.</td>
+</tr>
+<tr class="row-even"><td><em>LV_CHECKBOX</em></td>
+<td>Checkbox. If set, the tree view calls <a class="reference internal" href="../../TreeViewFunctions/index.html#TreeViewFunctions.IsChecked" title="TreeViewFunctions.IsChecked"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.IsChecked()</span></code></a> and <a class="reference internal" href="../../TreeViewFunctions/index.html#TreeViewFunctions.SetCheck" title="TreeViewFunctions.SetCheck"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.SetCheck()</span></code></a> for each column and row.</td>
+</tr>
+<tr class="row-odd"><td><em>LV_CHECKBOXUSER</em></td>
+<td>Checkbox. If set, the tree view calls <a class="reference internal" href="../../TreeViewFunctions/index.html#TreeViewFunctions.IsChecked" title="TreeViewFunctions.IsChecked"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.IsChecked()</span></code></a> and <a class="reference internal" href="../../TreeViewFunctions/index.html#TreeViewFunctions.SetCheck" title="TreeViewFunctions.SetCheck"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.SetCheck()</span></code></a> for each column and row. User draw by <a class="reference internal" href="../../TreeViewFunctions/index.html#TreeViewFunctions.DrawCell" title="TreeViewFunctions.DrawCell"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeViewFunctions.DrawCell()</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>LV_SLIDER</em></td>
+<td>Slider. If set, the tree view calls TreeViewFunctions.GetFloatValue and TreeViewFunctions.SetFloatValue() for each column and row. <strong>NOT AVAILABLE IN PYTHON</strong>.</td>
+</tr>
+<tr class="row-odd"><td><em>LV_DROPDOWN</em></td>
+<td>Dropdown cycle box. If set, the tree view calls TreeViewFunctions.GetDropDownMenu() and TreeViewFunctions.SetDropDownMenu() for each column and row. <strong>NOT AVAILABLE IN PYTHON</strong>.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if successful, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewCustomGui.Refresh">
+<code class="descclassname">TreeViewCustomGui.</code><code class="descname">Refresh</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewCustomGui.Refresh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Refreshes the tree view.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewCustomGui.SetHeaderText">
+<code class="descclassname">TreeViewCustomGui.</code><code class="descname">SetHeaderText</code><span class="sig-paren">(</span><em>self</em>, <em>lColumnID</em>, <em>str</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewCustomGui.SetHeaderText" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the header text for a column.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>lColumnID</strong> (<em>int</em>) – Column index.</li>
+<li><strong>str</strong> (<em>str</em>) – Header text.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if successful, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewCustomGui.MakeVisible">
+<code class="descclassname">TreeViewCustomGui.</code><code class="descname">MakeVisible</code><span class="sig-paren">(</span><em>self</em>, <em>pObj</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewCustomGui.MakeVisible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scrolls to <em>pObj</em> and expands the tree if necessary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pObj</strong> (<em>any</em>) – The object to scroll to.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewCustomGui.ShowObject">
+<code class="descclassname">TreeViewCustomGui.</code><code class="descname">ShowObject</code><span class="sig-paren">(</span><em>self</em>, <em>pObj</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewCustomGui.ShowObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Expands the tree to <em>pObj</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pObj</strong> (<em>any</em>) – The object to expand to.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewCustomGui.GetVisibleScrollArea">
+<code class="descclassname">TreeViewCustomGui.</code><code class="descname">GetVisibleScrollArea</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewCustomGui.GetVisibleScrollArea" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queries the internal scroll group for its currently visible region.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R17.048.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">tuple(int,int,int,int)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The X and Y coordinates of the top/bottom left/right visible corner: tuple(x1,y1,x2,y2).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewCustomGui.SetVisibleScrollArea">
+<code class="descclassname">TreeViewCustomGui.</code><code class="descname">SetVisibleScrollArea</code><span class="sig-paren">(</span><em>self</em>, <em>x1</em>, <em>y1</em>, <em>x2</em>, <em>y2</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewCustomGui.SetVisibleScrollArea" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the internal scroll group currently visible region, a rectangle between (<em>x1</em>, <em>y1</em>) and (<em>x2</em>, <em>y2</em>).</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R18.020.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x1</strong> (<em>int</em>) – The left X value.</li>
+<li><strong>y1</strong> (<em>int</em>) – The top Y value.</li>
+<li><strong>x2</strong> (<em>int</em>) – The right X value.</li>
+<li><strong>y2</strong> (<em>int</em>) – The bottom Y value.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if successful, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewCustomGui.GetVisibleLineCount">
+<code class="descclassname">TreeViewCustomGui.</code><code class="descname">GetVisibleLineCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewCustomGui.GetVisibleLineCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the number of currently visible lines related to folded and unfolded items of the tree.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R17.048.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The number of visible lines.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewCustomGui.SetFocusItem">
+<code class="descclassname">TreeViewCustomGui.</code><code class="descname">SetFocusItem</code><span class="sig-paren">(</span><em>self</em>, <em>pItem</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewCustomGui.SetFocusItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the focus item.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pItem</strong> (<em>any</em>) – The new focus item.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TreeViewCustomGui.IsFocusItem">
+<code class="descclassname">TreeViewCustomGui.</code><code class="descname">IsFocusItem</code><span class="sig-paren">(</span><em>self</em>, <em>pItem</em><span class="sig-paren">)</span><a class="headerlink" href="#TreeViewCustomGui.IsFocusItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if <em>pItem</em> is the focus item.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pItem</strong> (<em>any</em>) – The item to check.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if <em>pItem</em> is the focus item, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../GeUserArea/index.html" title="c4d.gui.GeUserArea"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../SplineCustomGui/index.html" title="c4d.gui.SplineCustomGui"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.gui</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.gui.BaseCustomGui</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

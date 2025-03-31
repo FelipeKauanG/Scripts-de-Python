@@ -1,0 +1,313 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.mograph.FieldCallerStack &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.modules.mograph.FieldInfo" href="../FieldInfo/index.html" />
+    <link rel="prev" title="c4d.modules.mograph.MoData" href="../MoData/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../FieldInfo/index.html" title="c4d.modules.mograph.FieldInfo"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../MoData/index.html" title="c4d.modules.mograph.MoData"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.modules.mograph</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-mograph-fieldcallerstack">
+<h1>c4d.modules.mograph.FieldCallerStack<a class="headerlink" href="#c4d-modules-mograph-fieldcallerstack" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.mograph.FieldCallerStack">
+<em class="property">class </em><code class="descclassname">c4d.modules.mograph.</code><code class="descname">FieldCallerStack</code><a class="headerlink" href="#c4d.modules.mograph.FieldCallerStack" title="Permalink to this definition">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified">New in version R20.</span></p>
+</div>
+</dd></dl>
+
+<p class="rubric">Attributes</p>
+<p><blockquote>
+<div><dl class="attribute">
+<dt id="FieldCallerStack._value">
+<code class="descclassname">FieldCallerStack.</code><code class="descname">_value</code><a class="headerlink" href="#FieldCallerStack._value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Caller stack id.</p>
+<p><strong>Type:</strong> int</p>
+</dd></dl>
+
+</div></blockquote>
+</p>
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#FieldCallerStack.__init__" title="FieldCallerStack.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldCallerStack.__init__(self)</span></code></a></td>
+<td>Creates a <a class="reference internal" href="#c4d.modules.mograph.FieldCallerStack" title="c4d.modules.mograph.FieldCallerStack"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.mograph.FieldCallerStack</span></code></a> instance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#FieldCallerStack.__getitem__" title="FieldCallerStack.__getitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldCallerStack.__getitem__(self,</span> <span class="pre">key)</span></code></a></td>
+<td>Retrieves a caller from the stack by index.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#FieldCallerStack.CopyFrom" title="FieldCallerStack.CopyFrom"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldCallerStack.CopyFrom(self,</span> <span class="pre">src)</span></code></a></td>
+<td>Copies from the supplied <a class="reference internal" href="#c4d.modules.mograph.FieldCallerStack" title="c4d.modules.mograph.FieldCallerStack"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldCallerStack</span></code></a> <em>src</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#FieldCallerStack.RecalcValue" title="FieldCallerStack.RecalcValue"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldCallerStack.RecalcValue(self)</span></code></a></td>
+<td>Calculates the ID of the caller stack from scratch. Does not update stored ID value.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#FieldCallerStack.UpdateValue" title="FieldCallerStack.UpdateValue"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldCallerStack.UpdateValue(self)</span></code></a></td>
+<td>Recalculates the ID of the caller stack from scratch and updates the internal stack ID value.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#FieldCallerStack.Add" title="FieldCallerStack.Add"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldCallerStack.Add(self,</span> <span class="pre">caller)</span></code></a></td>
+<td>Adds a caller to the stack and updates the stack ID.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#FieldCallerStack.GetCount" title="FieldCallerStack.GetCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldCallerStack.GetCount(self)</span></code></a></td>
+<td>Returns the number of callers involved in the stack.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#FieldCallerStack.GetValue" title="FieldCallerStack.GetValue"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldCallerStack.GetValue(self)</span></code></a></td>
+<td>Returns the caller stack ID.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#FieldCallerStack.IsValid" title="FieldCallerStack.IsValid"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldCallerStack.IsValid(self)</span></code></a></td>
+<td>Checks if the caller stack is valid.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="FieldCallerStack.__init__">
+<code class="descclassname">FieldCallerStack.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldCallerStack.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a <a class="reference internal" href="#c4d.modules.mograph.FieldCallerStack" title="c4d.modules.mograph.FieldCallerStack"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.mograph.FieldCallerStack</span></code></a> instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.modules.mograph.FieldCallerStack" title="c4d.modules.mograph.FieldCallerStack">c4d.modules.mograph.FieldCallerStack</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The created <a class="reference internal" href="#c4d.modules.mograph.FieldCallerStack" title="c4d.modules.mograph.FieldCallerStack"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.mograph.FieldCallerStack</span></code></a> instance.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldCallerStack.__getitem__">
+<code class="descclassname">FieldCallerStack.</code><code class="descname">__getitem__</code><span class="sig-paren">(</span><em>self</em>, <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldCallerStack.__getitem__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a caller from the stack by index.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<em>int</em>) – The caller index.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If the index <em>key</em> is out of range : <em>0&lt;=key&lt;</em><a class="reference internal" href="#FieldCallerStack.GetCount" title="FieldCallerStack.GetCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetCount()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D">c4d.BaseList2D</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The caller.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldCallerStack.CopyFrom">
+<code class="descclassname">FieldCallerStack.</code><code class="descname">CopyFrom</code><span class="sig-paren">(</span><em>self</em>, <em>src</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldCallerStack.CopyFrom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies from the supplied <a class="reference internal" href="#c4d.modules.mograph.FieldCallerStack" title="c4d.modules.mograph.FieldCallerStack"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldCallerStack</span></code></a> <em>src</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>src</strong> (<a class="reference internal" href="#c4d.modules.mograph.FieldCallerStack" title="c4d.modules.mograph.FieldCallerStack"><em>c4d.modules.mograph.FieldCallerStack</em></a>) – The source.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldCallerStack.RecalcValue">
+<code class="descclassname">FieldCallerStack.</code><code class="descname">RecalcValue</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldCallerStack.RecalcValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the ID of the caller stack from scratch. Does not update stored ID value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The new caller stack ID.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldCallerStack.UpdateValue">
+<code class="descclassname">FieldCallerStack.</code><code class="descname">UpdateValue</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldCallerStack.UpdateValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recalculates the ID of the caller stack from scratch and updates the internal stack ID value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldCallerStack.Add">
+<code class="descclassname">FieldCallerStack.</code><code class="descname">Add</code><span class="sig-paren">(</span><em>self</em>, <em>caller</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldCallerStack.Add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a caller to the stack and updates the stack ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>caller</strong> (<a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><em>c4d.BaseList2D</em></a>) – The caller object to add to the stack.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldCallerStack.GetCount">
+<code class="descclassname">FieldCallerStack.</code><code class="descname">GetCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldCallerStack.GetCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of callers involved in the stack.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The number of callers.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldCallerStack.GetValue">
+<code class="descclassname">FieldCallerStack.</code><code class="descname">GetValue</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldCallerStack.GetValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the caller stack ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The caller stack ID.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldCallerStack.IsValid">
+<code class="descclassname">FieldCallerStack.</code><code class="descname">IsValid</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldCallerStack.IsValid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the caller stack is valid.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">An empty stack is valid.</div>
+<div class="line">A stack with broken links to callers is not valid.</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">A non empty stack with no stack ID value is not valid.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the caller stack is valid, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../FieldInfo/index.html" title="c4d.modules.mograph.FieldInfo"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../MoData/index.html" title="c4d.modules.mograph.MoData"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.modules.mograph</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

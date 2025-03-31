@@ -1,0 +1,444 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.sculpting.SculptLayerData &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.modules.sculpting.SculptObject" href="../SculptObject/index.html" />
+    <link rel="prev" title="c4d.modules.sculpting.SculptLayer" href="../SculptLayer/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../SculptObject/index.html" title="c4d.modules.sculpting.SculptObject"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../SculptLayer/index.html" title="c4d.modules.sculpting.SculptLayer"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.modules.sculpting</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-sculpting-sculptlayerdata">
+<h1>c4d.modules.sculpting.SculptLayerData<a class="headerlink" href="#c4d-modules-sculpting-sculptlayerdata" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.sculpting.SculptLayerData">
+<em class="property">class </em><code class="descclassname">c4d.modules.sculpting.</code><code class="descname">SculptLayerData</code><a class="headerlink" href="#c4d.modules.sculpting.SculptLayerData" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <a class="reference internal" href="#c4d.modules.sculpting.SculptLayerData" title="c4d.modules.sculpting.SculptLayerData"><code class="xref py py-class docutils literal notranslate"><span class="pre">SculptLayerData</span></code></a> node contains all the offset data and mask data for that layer at its subdivision level.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#SculptLayerData.GetSubdivisionLevel" title="SculptLayerData.GetSubdivisionLevel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptLayerData.GetSubdivisionLevel(self)</span></code></a></td>
+<td>Get the level that this layer contains data for.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SculptLayerData.GetPointCount" title="SculptLayerData.GetPointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptLayerData.GetPointCount(self)</span></code></a></td>
+<td>Get the number of points on the polygon object that this layer has.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SculptLayerData.GetOffset" title="SculptLayerData.GetOffset"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptLayerData.GetOffset(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Get the offset for the given point <em>index</em> on the layer.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SculptLayerData.SetOffset" title="SculptLayerData.SetOffset"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptLayerData.SetOffset(self,</span> <span class="pre">index,</span> <span class="pre">offset)</span></code></a></td>
+<td>Set the offset for the given point <em>index</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SculptLayerData.AddOffset" title="SculptLayerData.AddOffset"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptLayerData.AddOffset(self,</span> <span class="pre">index,</span> <span class="pre">offset)</span></code></a></td>
+<td>Add to the existing offset value at the given point <em>index</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SculptLayerData.GetMask" title="SculptLayerData.GetMask"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptLayerData.GetMask(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Get the value (between 0 and 1) of the mask at the given point <em>index</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SculptLayerData.SetMask" title="SculptLayerData.SetMask"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptLayerData.SetMask(self,</span> <span class="pre">index,</span> <span class="pre">mask)</span></code></a></td>
+<td>Set the mask at the given point. The value will be clamped between 0 and 1.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SculptLayerData.AddToMask" title="SculptLayerData.AddToMask"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptLayerData.AddToMask(self,</span> <span class="pre">index,</span> <span class="pre">mask)</span></code></a></td>
+<td>Adds the mask at the given point. The value will be clamped between 0 and 1.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SculptLayerData.HasMask" title="SculptLayerData.HasMask"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptLayerData.HasMask(self)</span></code></a></td>
+<td>Check if this Layer has a mask applied to it.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SculptLayerData.ClearMask" title="SculptLayerData.ClearMask"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptLayerData.ClearMask(self)</span></code></a></td>
+<td>Clear all the mask data for this layer.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SculptLayerData.ClearLayer" title="SculptLayerData.ClearLayer"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptLayerData.ClearLayer(self)</span></code></a></td>
+<td>Clear all the offsets for this layer.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SculptLayerData.InitializeAllPointData" title="SculptLayerData.InitializeAllPointData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptLayerData.InitializeAllPointData(self)</span></code></a></td>
+<td>Make sure all the data has been allocated to store all the point data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SculptLayerData.InitializeAllMaskData" title="SculptLayerData.InitializeAllMaskData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptLayerData.InitializeAllMaskData(self)</span></code></a></td>
+<td>Make sure all the data has been allocated to store all the mask data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#SculptLayerData.TouchPointForUndo" title="SculptLayerData.TouchPointForUndo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptLayerData.TouchPointForUndo(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Mark the point so that any modifications to it can be undone.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#SculptLayerData.TouchMaskForUndo" title="SculptLayerData.TouchMaskForUndo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptLayerData.TouchMaskForUndo(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Marks the masked point so that any modifications to the mask can be undone.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseList2D</span></code></a></li>
+</ul>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="SculptLayerData.GetSubdivisionLevel">
+<code class="descclassname">SculptLayerData.</code><code class="descname">GetSubdivisionLevel</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptLayerData.GetSubdivisionLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the level that this layer contains data for.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The subdivision level.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptLayerData.GetPointCount">
+<code class="descclassname">SculptLayerData.</code><code class="descname">GetPointCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptLayerData.GetPointCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of points on the polygon object that this layer has.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Number of points on the polygon object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptLayerData.GetOffset">
+<code class="descclassname">SculptLayerData.</code><code class="descname">GetOffset</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptLayerData.GetOffset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the offset for the given point <em>index</em> on the layer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – Index of the point on the polygon object.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If the point <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#SculptLayerData.GetPointCount" title="SculptLayerData.GetPointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPointCount()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The offset of the point.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptLayerData.SetOffset">
+<code class="descclassname">SculptLayerData.</code><code class="descname">SetOffset</code><span class="sig-paren">(</span><em>self</em>, <em>index</em>, <em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptLayerData.SetOffset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the offset for the given point <em>index</em>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">Be sure to call <a class="reference internal" href="../SculptObject/index.html#SculptObject.Update" title="SculptObject.Update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptObject.Update()</span></code></a> after all changes to the offets have been made.</div>
+<div class="line">This will update the <a class="reference internal" href="../SculptObject/index.html#c4d.modules.sculpting.SculptObject" title="c4d.modules.sculpting.SculptObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">SculptObject</span></code></a> display.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<em>int</em>) – Index of the point on the polygon object.</li>
+<li><strong>offset</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The full offset to set.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><strong>IndexError</strong> – If the point <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#SculptLayerData.GetPointCount" title="SculptLayerData.GetPointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPointCount()</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptLayerData.AddOffset">
+<code class="descclassname">SculptLayerData.</code><code class="descname">AddOffset</code><span class="sig-paren">(</span><em>self</em>, <em>index</em>, <em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptLayerData.AddOffset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add to the existing offset value at the given point <em>index</em>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">Be sure to call <a class="reference internal" href="../SculptObject/index.html#SculptObject.Update" title="SculptObject.Update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptObject.Update()</span></code></a> after all changes to the offsets have been made.</div>
+<div class="line">This will update the <a class="reference internal" href="../SculptObject/index.html#c4d.modules.sculpting.SculptObject" title="c4d.modules.sculpting.SculptObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">SculptObject</span></code></a> display.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<em>int</em>) – Index of the point on the polygon object.</li>
+<li><strong>offset</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The offset to add.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><strong>IndexError</strong> – If the point <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#SculptLayerData.GetPointCount" title="SculptLayerData.GetPointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPointCount()</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptLayerData.GetMask">
+<code class="descclassname">SculptLayerData.</code><code class="descname">GetMask</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptLayerData.GetMask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value (between 0 and 1) of the mask at the given point <em>index</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – Index of the point on the polygon object.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If the point <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#SculptLayerData.GetPointCount" title="SculptLayerData.GetPointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPointCount()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The mask value for the given point, or <strong>None</strong> if there was no mask value at that point.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptLayerData.SetMask">
+<code class="descclassname">SculptLayerData.</code><code class="descname">SetMask</code><span class="sig-paren">(</span><em>self</em>, <em>index</em>, <em>mask</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptLayerData.SetMask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the mask at the given point. The value will be clamped between 0 and 1.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<em>int</em>) – Index of the point on the polygon object.</li>
+<li><strong>mask</strong> (<em>float</em>) – The mask value to set.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><strong>IndexError</strong> – If the point <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#SculptLayerData.GetPointCount" title="SculptLayerData.GetPointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPointCount()</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptLayerData.AddToMask">
+<code class="descclassname">SculptLayerData.</code><code class="descname">AddToMask</code><span class="sig-paren">(</span><em>self</em>, <em>index</em>, <em>mask</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptLayerData.AddToMask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the mask at the given point. The value will be clamped between 0 and 1.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<em>int</em>) – Index of the point on the polygon object.</li>
+<li><strong>mask</strong> (<em>float</em>) – The amount to add to the existing mask.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><strong>IndexError</strong> – If the point <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#SculptLayerData.GetPointCount" title="SculptLayerData.GetPointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPointCount()</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptLayerData.HasMask">
+<code class="descclassname">SculptLayerData.</code><code class="descname">HasMask</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptLayerData.HasMask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if this Layer has a mask applied to it.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if if there is mask data, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptLayerData.ClearMask">
+<code class="descclassname">SculptLayerData.</code><code class="descname">ClearMask</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptLayerData.ClearMask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear all the mask data for this layer.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptLayerData.ClearLayer">
+<code class="descclassname">SculptLayerData.</code><code class="descname">ClearLayer</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptLayerData.ClearLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear all the offsets for this layer.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptLayerData.InitializeAllPointData">
+<code class="descclassname">SculptLayerData.</code><code class="descname">InitializeAllPointData</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptLayerData.InitializeAllPointData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make sure all the data has been allocated to store all the point data.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you are going to call <a class="reference internal" href="#SculptLayerData.SetOffset" title="SculptLayerData.SetOffset"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetOffset()</span></code></a> or <a class="reference internal" href="#SculptLayerData.AddOffset" title="SculptLayerData.AddOffset"><code class="xref py py-meth docutils literal notranslate"><span class="pre">AddOffset()</span></code></a> from multiple threads then the data needs to be initialized before these calls are made.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you are not using multiple threads the calls to <a class="reference internal" href="#SculptLayerData.SetOffset" title="SculptLayerData.SetOffset"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetOffset()</span></code></a> and <a class="reference internal" href="#SculptLayerData.AddOffset" title="SculptLayerData.AddOffset"><code class="xref py py-meth docutils literal notranslate"><span class="pre">AddOffset()</span></code></a> will only allocate data if required.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptLayerData.InitializeAllMaskData">
+<code class="descclassname">SculptLayerData.</code><code class="descname">InitializeAllMaskData</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptLayerData.InitializeAllMaskData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make sure all the data has been allocated to store all the mask data.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you are going to call <a class="reference internal" href="#SculptLayerData.SetMask" title="SculptLayerData.SetMask"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetMask()</span></code></a> or <a class="reference internal" href="#SculptLayerData.AddToMask" title="SculptLayerData.AddToMask"><code class="xref py py-meth docutils literal notranslate"><span class="pre">AddToMask()</span></code></a> from multiple threads then the data needs to be initialized before these calls are made.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you are not using multiple threads the calls to <a class="reference internal" href="#SculptLayerData.SetMask" title="SculptLayerData.SetMask"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetMask()</span></code></a> and <a class="reference internal" href="#SculptLayerData.AddToMask" title="SculptLayerData.AddToMask"><code class="xref py py-meth docutils literal notranslate"><span class="pre">AddToMask()</span></code></a> will only allocate data if required.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptLayerData.TouchPointForUndo">
+<code class="descclassname">SculptLayerData.</code><code class="descname">TouchPointForUndo</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptLayerData.TouchPointForUndo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mark the point so that any modifications to it can be undone.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Must be called after <a class="reference internal" href="../SculptObject/index.html#SculptObject.StartUndo" title="SculptObject.StartUndo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptObject.StartUndo()</span></code></a>.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This method cannot be called from multiple threads.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index of the point on the layer.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If the point <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#SculptLayerData.GetPointCount" title="SculptLayerData.GetPointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPointCount()</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SculptLayerData.TouchMaskForUndo">
+<code class="descclassname">SculptLayerData.</code><code class="descname">TouchMaskForUndo</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#SculptLayerData.TouchMaskForUndo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Marks the masked point so that any modifications to the mask can be undone.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Must be called after <a class="reference internal" href="../SculptObject/index.html#SculptObject.StartUndo" title="SculptObject.StartUndo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptObject.StartUndo()</span></code></a>.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This method cannot be called from multiple threads.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index of the point on the layer.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If the point <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#SculptLayerData.GetPointCount" title="SculptLayerData.GetPointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPointCount()</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../SculptObject/index.html" title="c4d.modules.sculpting.SculptObject"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../SculptLayer/index.html" title="c4d.modules.sculpting.SculptLayer"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.modules.sculpting</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

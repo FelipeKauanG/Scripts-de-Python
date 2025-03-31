@@ -1,0 +1,636 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.takesystem.TakeData &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.modules.thinkingparticles" href="../../thinkingparticles/index.html" />
+    <link rel="prev" title="c4d.modules.takesystem.BaseTake" href="../BaseTake/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../thinkingparticles/index.html" title="c4d.modules.thinkingparticles"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../BaseTake/index.html" title="c4d.modules.takesystem.BaseTake"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.modules.takesystem</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-takesystem-takedata">
+<h1>c4d.modules.takesystem.TakeData<a class="headerlink" href="#c4d-modules-takesystem-takedata" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.takesystem.TakeData">
+<em class="property">class </em><code class="descclassname">c4d.modules.takesystem.</code><code class="descname">TakeData</code><a class="headerlink" href="#c4d.modules.takesystem.TakeData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#TakeData.GetDocument" title="TakeData.GetDocument"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.GetDocument(self)</span></code></a></td>
+<td>Retrieves the document for the <a class="reference internal" href="#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><code class="xref py py-class docutils literal notranslate"><span class="pre">TakeData</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TakeData.GetMainTake" title="TakeData.GetMainTake"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.GetMainTake(self)</span></code></a></td>
+<td>Retrieves the Main Take.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TakeData.GetTakeMode" title="TakeData.GetTakeMode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.GetTakeMode(self)</span></code></a></td>
+<td>Retrieves the Take System global mode. Can be <strong>TAKE_MODE_MANUAL</strong> or <strong>TAKE_MODE_AUTO</strong>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TakeData.GetOverrideEnabling" title="TakeData.GetOverrideEnabling"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.GetOverrideEnabling(self)</span></code></a></td>
+<td>Retrieves the ability for the Take System to override a specific kind of node based on global switch.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TakeData.CheckOverrideEnabling" title="TakeData.CheckOverrideEnabling"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.CheckOverrideEnabling(self,</span> <span class="pre">mask)</span></code></a></td>
+<td>Checks for a specific <strong>OVERRIDEENABLING</strong>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TakeData.GetTakeSelection" title="TakeData.GetTakeSelection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.GetTakeSelection(self,</span> <span class="pre">children)</span></code></a></td>
+<td>Retrieves the selected Takes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TakeData.GetCurrentTake" title="TakeData.GetCurrentTake"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.GetCurrentTake(self)</span></code></a></td>
+<td>Retrieves the current Take.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TakeData.SetCurrentTake" title="TakeData.SetCurrentTake"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.SetCurrentTake(self,</span> <span class="pre">take)</span></code></a></td>
+<td>Sets the current Take.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TakeData.TakeToDocument" title="TakeData.TakeToDocument"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.TakeToDocument(self,</span> <span class="pre">take)</span></code></a></td>
+<td>Isolates a Take in a new document. The new document is allocated and filled by the function.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TakeData.SaveTakesWithAssets" title="TakeData.SaveTakesWithAssets"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.SaveTakesWithAssets(self,</span> <span class="pre">selected)</span></code></a></td>
+<td>Executes a “Save Project With Assets” for Takes in the document, each saved file representing a Take.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TakeData.AddTake" title="TakeData.AddTake"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.AddTake(self,</span> <span class="pre">name,</span> <span class="pre">parent,</span> <span class="pre">...)</span></code></a></td>
+<td>Creates and inserts a new Take.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TakeData.DeleteTake" title="TakeData.DeleteTake"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.DeleteTake(self,</span> <span class="pre">take)</span></code></a></td>
+<td>Deletes a Take and all connected overrides. If Take is the current the Main Take will be set as current.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TakeData.InsertTake" title="TakeData.InsertTake"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.InsertTake(self,</span> <span class="pre">takeToMove,</span> <span class="pre">...)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Moves a Take in the hierarchy in a safe way.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TakeData.FindOverrideCounterPart" title="TakeData.FindOverrideCounterPart"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.FindOverrideCounterPart(self,</span> <span class="pre">overrideNode,</span> <span class="pre">descID)</span></code></a></td>
+<td>Finds the backup node that fits with an Override (for example the backup node in the Main Take).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TakeData.GetUndoState" title="TakeData.GetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.GetUndoState(self)</span></code></a></td>
+<td>Gets the state of automatic Take undo.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TakeData.SetUndoState" title="TakeData.SetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.SetUndoState(self,</span> <span class="pre">state)</span></code></a></td>
+<td>Activates or deactivates the state of automatic Take undo.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TakeData.ResetSystem" title="TakeData.ResetSystem"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.ResetSystem(self)</span></code></a></td>
+<td>Resets completely the Take System. Usually not needed.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="TakeData.GetDocument">
+<code class="descclassname">TakeData.</code><code class="descname">GetDocument</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#TakeData.GetDocument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the document for the <a class="reference internal" href="#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><code class="xref py py-class docutils literal notranslate"><span class="pre">TakeData</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument">c4d.documents.BaseDocument</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The document, or <strong>None</strong> if the <a class="reference internal" href="#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><code class="xref py py-class docutils literal notranslate"><span class="pre">TakeData</span></code></a> is not initialized.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TakeData.GetMainTake">
+<code class="descclassname">TakeData.</code><code class="descname">GetMainTake</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#TakeData.GetMainTake" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the Main Take.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Main Take is always the first under the header.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../BaseTake/index.html#c4d.modules.takesystem.BaseTake" title="c4d.modules.takesystem.BaseTake">c4d.modules.takesystem.BaseTake</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The Main Take.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TakeData.GetTakeMode">
+<code class="descclassname">TakeData.</code><code class="descname">GetTakeMode</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#TakeData.GetTakeMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the Take System global mode. Can be <strong>TAKE_MODE_MANUAL</strong> or <strong>TAKE_MODE_AUTO</strong>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This mode affects how the user has to interact with GUI to override parameters.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The Take System mode:<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="81%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>TAKE_MODE_MANUAL</em></td>
+<td>Manual override: the user has to explicitly override every single parameter.</td>
+</tr>
+<tr class="row-even"><td><em>TAKE_MODE_AUTO</em></td>
+<td>Auto override: the system overrides any edited parameter (similar to Auto Key).</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TakeData.GetOverrideEnabling">
+<code class="descclassname">TakeData.</code><code class="descname">GetOverrideEnabling</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#TakeData.GetOverrideEnabling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the ability for the Take System to override a specific kind of node based on global switch.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The Take System override enabling:<table border="1" class="docutils">
+<colgroup>
+<col width="36%" />
+<col width="64%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>OVERRIDEENABLING_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>OVERRIDEENABLING_OBJECT</em></td>
+<td>Object override enabled.</td>
+</tr>
+<tr class="row-odd"><td><em>OVERRIDEENABLING_TAG</em></td>
+<td>Tag override enabled.</td>
+</tr>
+<tr class="row-even"><td><em>OVERRIDEENABLING_MATERIAL</em></td>
+<td>Material override enabled.</td>
+</tr>
+<tr class="row-odd"><td><em>OVERRIDEENABLING_SHADER</em></td>
+<td>Shader override enabled.</td>
+</tr>
+<tr class="row-even"><td><em>OVERRIDEENABLING_LAYER</em></td>
+<td>Layer override enabled.</td>
+</tr>
+<tr class="row-odd"><td><em>OVERRIDEENABLING_OTHER</em></td>
+<td>Other types override enabled.</td>
+</tr>
+<tr class="row-even"><td><em>OVERRIDEENABLING_GLOBAL</em></td>
+<td>Main switch types override enabled.</td>
+</tr>
+<tr class="row-odd"><td><em>OVERRIDEENABLING_ENABLING</em></td>
+<td>Object enabling and visibility override enabled.</td>
+</tr>
+<tr class="row-even"><td><em>OVERRIDEENABLING_TRANSFOM</em></td>
+<td>Transformation override enabled.</td>
+</tr>
+<tr class="row-odd"><td><em>OVERRIDEENABLING_CAMERA</em></td>
+<td>Active camera override enabled.</td>
+</tr>
+<tr class="row-even"><td><em>OVERRIDEENABLING_RS</em></td>
+<td>Active render settings override enabled.</td>
+</tr>
+<tr class="row-odd"><td><em>OVERRIDEENABLING_PARAM</em></td>
+<td>Generic parameter override enabled.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TakeData.CheckOverrideEnabling">
+<code class="descclassname">TakeData.</code><code class="descname">CheckOverrideEnabling</code><span class="sig-paren">(</span><em>self</em>, <em>mask</em><span class="sig-paren">)</span><a class="headerlink" href="#TakeData.CheckOverrideEnabling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks for a specific <strong>OVERRIDEENABLING</strong>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mask</strong> (<em>int</em>) – <p>The Take System override enabling mask:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="36%" />
+<col width="64%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>OVERRIDEENABLING_NONE</em></td>
+<td>None.</td>
+</tr>
+<tr class="row-even"><td><em>OVERRIDEENABLING_OBJECT</em></td>
+<td>Object override enabled.</td>
+</tr>
+<tr class="row-odd"><td><em>OVERRIDEENABLING_TAG</em></td>
+<td>Tag override enabled.</td>
+</tr>
+<tr class="row-even"><td><em>OVERRIDEENABLING_MATERIAL</em></td>
+<td>Material override enabled.</td>
+</tr>
+<tr class="row-odd"><td><em>OVERRIDEENABLING_SHADER</em></td>
+<td>Shader override enabled.</td>
+</tr>
+<tr class="row-even"><td><em>OVERRIDEENABLING_LAYER</em></td>
+<td>Layer override enabled.</td>
+</tr>
+<tr class="row-odd"><td><em>OVERRIDEENABLING_OTHER</em></td>
+<td>Other types override enabled.</td>
+</tr>
+<tr class="row-even"><td><em>OVERRIDEENABLING_GLOBAL</em></td>
+<td>Main switch types override enabled.</td>
+</tr>
+<tr class="row-odd"><td><em>OVERRIDEENABLING_ENABLING</em></td>
+<td>Object enabling and visibility override enabled.</td>
+</tr>
+<tr class="row-even"><td><em>OVERRIDEENABLING_TRANSFOM</em></td>
+<td>Transformation override enabled.</td>
+</tr>
+<tr class="row-odd"><td><em>OVERRIDEENABLING_CAMERA</em></td>
+<td>Active camera override enabled.</td>
+</tr>
+<tr class="row-even"><td><em>OVERRIDEENABLING_RS</em></td>
+<td>Active render settings override enabled.</td>
+</tr>
+<tr class="row-odd"><td><em>OVERRIDEENABLING_PARAM</em></td>
+<td>Generic parameter override enabled.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the OVERRIDEENABLING is set, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TakeData.GetTakeSelection">
+<code class="descclassname">TakeData.</code><code class="descname">GetTakeSelection</code><span class="sig-paren">(</span><em>self</em>, <em>children</em><span class="sig-paren">)</span><a class="headerlink" href="#TakeData.GetTakeSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the selected Takes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mask</strong> (<em>bool</em>) – If <strong>True</strong> also selected Take children are collected.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list of <a class="reference internal" href="../BaseTake/index.html#c4d.modules.takesystem.BaseTake" title="c4d.modules.takesystem.BaseTake"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseTake</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The selected Takes.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TakeData.GetCurrentTake">
+<code class="descclassname">TakeData.</code><code class="descname">GetCurrentTake</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#TakeData.GetCurrentTake" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the current Take.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../BaseTake/index.html#c4d.modules.takesystem.BaseTake" title="c4d.modules.takesystem.BaseTake">c4d.modules.takesystem.BaseTake</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The current Take.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TakeData.SetCurrentTake">
+<code class="descclassname">TakeData.</code><code class="descname">SetCurrentTake</code><span class="sig-paren">(</span><em>self</em>, <em>take</em><span class="sig-paren">)</span><a class="headerlink" href="#TakeData.SetCurrentTake" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the current Take.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">An undo step is added automatically if the call is added from the main (GUI) thread and global undo is allowed (see <a class="reference internal" href="#TakeData.GetUndoState" title="TakeData.GetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.GetUndoState()</span></code></a>/<a class="reference internal" href="#TakeData.SetUndoState" title="TakeData.SetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.SetUndoState()</span></code></a>).</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>take</strong> (<a class="reference internal" href="../BaseTake/index.html#c4d.modules.takesystem.BaseTake" title="c4d.modules.takesystem.BaseTake"><em>c4d.modules.takesystem.BaseTake</em></a>) – The Take to set.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TakeData.TakeToDocument">
+<code class="descclassname">TakeData.</code><code class="descname">TakeToDocument</code><span class="sig-paren">(</span><em>self</em>, <em>take</em><span class="sig-paren">)</span><a class="headerlink" href="#TakeData.TakeToDocument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Isolates a Take in a new document. The new document is allocated and filled by the function.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The caller has to insert the document if necessary.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>take</strong> (<a class="reference internal" href="../BaseTake/index.html#c4d.modules.takesystem.BaseTake" title="c4d.modules.takesystem.BaseTake"><em>c4d.modules.takesystem.BaseTake</em></a>) – The Take to isolate.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument">c4d.documents.BaseDocument</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The allocated document.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TakeData.SaveTakesWithAssets">
+<code class="descclassname">TakeData.</code><code class="descname">SaveTakesWithAssets</code><span class="sig-paren">(</span><em>self</em>, <em>selected</em><span class="sig-paren">)</span><a class="headerlink" href="#TakeData.SaveTakesWithAssets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Executes a “Save Project With Assets” for Takes in the document, each saved file representing a Take.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>selected</strong> (<em>bool</em>) – If <strong>True</strong> only selected Takes are exported, otherwise all.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if successful, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TakeData.AddTake">
+<code class="descclassname">TakeData.</code><code class="descname">AddTake</code><span class="sig-paren">(</span><em>self</em>, <em>name</em>, <em>parent</em>, <em>cloneFrom</em><span class="sig-paren">)</span><a class="headerlink" href="#TakeData.AddTake" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates and inserts a new Take.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">An undo step is added automatically if the call is added from the main (GUI) thread and global undo is allowed (see <a class="reference internal" href="#TakeData.GetUndoState" title="TakeData.GetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.GetUndoState()</span></code></a>/<a class="reference internal" href="#TakeData.SetUndoState" title="TakeData.SetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.SetUndoState()</span></code></a>).</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Selections have to be handled manually.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<em>str</em>) – The name of the Take to add. If an empty string is passed the default Take name will be used.</li>
+<li><strong>parent</strong> (<a class="reference internal" href="../BaseTake/index.html#c4d.modules.takesystem.BaseTake" title="c4d.modules.takesystem.BaseTake"><em>c4d.modules.takesystem.BaseTake</em></a>) – Optionally pass a parent Take, otherwise the new Take will be added at the end of the list under the Main Take.</li>
+<li><strong>cloneFrom</strong> (<a class="reference internal" href="../BaseTake/index.html#c4d.modules.takesystem.BaseTake" title="c4d.modules.takesystem.BaseTake"><em>c4d.modules.takesystem.BaseTake</em></a>) – Optionally pass a Take the new Take will be cloned from.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../BaseTake/index.html#c4d.modules.takesystem.BaseTake" title="c4d.modules.takesystem.BaseTake">c4d.modules.takesystem.BaseTake</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The added Take.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TakeData.DeleteTake">
+<code class="descclassname">TakeData.</code><code class="descname">DeleteTake</code><span class="sig-paren">(</span><em>self</em>, <em>take</em><span class="sig-paren">)</span><a class="headerlink" href="#TakeData.DeleteTake" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a Take and all connected overrides. If Take is the current the Main Take will be set as current.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">An undo step is added automatically if the call is added from the main (GUI) thread and global undo is allowed (see <a class="reference internal" href="#TakeData.GetUndoState" title="TakeData.GetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.GetUndoState()</span></code></a>/<a class="reference internal" href="#TakeData.SetUndoState" title="TakeData.SetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.SetUndoState()</span></code></a>).</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>take</strong> (<a class="reference internal" href="../BaseTake/index.html#c4d.modules.takesystem.BaseTake" title="c4d.modules.takesystem.BaseTake"><em>c4d.modules.takesystem.BaseTake</em></a>) – The Take to delete.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TakeData.InsertTake">
+<code class="descclassname">TakeData.</code><code class="descname">InsertTake</code><span class="sig-paren">(</span><em>self</em>, <em>takeToMove</em>, <em>destTake</em>, <em>insertMode</em><span class="sig-paren">)</span><a class="headerlink" href="#TakeData.InsertTake" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Moves a Take in the hierarchy in a safe way.</div>
+<div class="line">The Take system has several hierarchy dependencies.</div>
+<div class="line">If a Take is moved while it is current or while it is a child of the Current Take then this would need to manually take care of all data sorting and handling.</div>
+<div class="line">This function do all this work.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">An undo step is added automatically if the call is added from the main (GUI) thread and global undo is allowed (see <a class="reference internal" href="#TakeData.GetUndoState" title="TakeData.GetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.GetUndoState()</span></code></a>/<a class="reference internal" href="#TakeData.SetUndoState" title="TakeData.SetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.SetUndoState()</span></code></a>).</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>takeToMove</strong> (<a class="reference internal" href="../BaseTake/index.html#c4d.modules.takesystem.BaseTake" title="c4d.modules.takesystem.BaseTake"><em>c4d.modules.takesystem.BaseTake</em></a>) – The Take to move.</li>
+<li><strong>destTake</strong> (<a class="reference internal" href="../BaseTake/index.html#c4d.modules.takesystem.BaseTake" title="c4d.modules.takesystem.BaseTake"><em>c4d.modules.takesystem.BaseTake</em></a>) – The parent destination Take. If <strong>None</strong> the Main Take is used. In this case c4d.NOTOK can be used as the insert mode to add the take as the last child of the main take</li>
+<li><strong>insertMode</strong> (<em>int</em>) – <p>The insertion mode:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="49%" />
+<col width="51%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>INSERT_BEFORE</em></td>
+<td>Insert before.</td>
+</tr>
+<tr class="row-even"><td><em>INSERT_AFTER</em></td>
+<td>Insert after.</td>
+</tr>
+<tr class="row-odd"><td><em>INSERT_UNDER</em></td>
+<td>Insert under.</td>
+</tr>
+<tr class="row-even"><td><em>INSERT_REPLACE</em></td>
+<td>Replace the object.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TakeData.FindOverrideCounterPart">
+<code class="descclassname">TakeData.</code><code class="descname">FindOverrideCounterPart</code><span class="sig-paren">(</span><em>self</em>, <em>overrideNode</em>, <em>descID</em><span class="sig-paren">)</span><a class="headerlink" href="#TakeData.FindOverrideCounterPart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the backup node that fits with an Override (for example the backup node in the Main Take).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>overrideNode</strong> (<a class="reference internal" href="../BaseOverride/index.html#c4d.modules.takesystem.BaseOverride" title="c4d.modules.takesystem.BaseOverride"><em>c4d.modules.takesystem.BaseOverride</em></a>) – The original Override node.</li>
+<li><strong>descID</strong> (<a class="reference internal" href="../../../c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><em>c4d.DescID</em></a>) – The description ID to check.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">Tuple[c4d.modules.takesystem.BaseOverride&gt;, c4d.modules.takesystem.BaseTake&gt;]</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The counterpart node and the Take that owns it.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TakeData.GetUndoState">
+<code class="descclassname">TakeData.</code><code class="descname">GetUndoState</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#TakeData.GetUndoState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the state of automatic Take undo.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is useful to deactivate undo when working on document clones in several situation like import/export operations where undo is not important.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the automatic undo is active, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TakeData.SetUndoState">
+<code class="descclassname">TakeData.</code><code class="descname">SetUndoState</code><span class="sig-paren">(</span><em>self</em>, <em>state</em><span class="sig-paren">)</span><a class="headerlink" href="#TakeData.SetUndoState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Activates or deactivates the state of automatic Take undo.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is useful to deactivate undo when working on document clones in several situation like import/export operations where undo is not important.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>state</strong> (<em>bool</em>) – <strong>True</strong> if the automatic undo has to be used, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TakeData.ResetSystem">
+<code class="descclassname">TakeData.</code><code class="descname">ResetSystem</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#TakeData.ResetSystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets completely the Take System. Usually not needed.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">All data not in the current state of the document is deleted.</p>
+</div>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../thinkingparticles/index.html" title="c4d.modules.thinkingparticles"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../BaseTake/index.html" title="c4d.modules.takesystem.BaseTake"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.modules.takesystem</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

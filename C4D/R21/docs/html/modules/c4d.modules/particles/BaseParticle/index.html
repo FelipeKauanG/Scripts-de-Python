@@ -1,0 +1,126 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.particles.BaseParticle &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.modules.particles.Particle" href="../Particle/index.html" />
+    <link rel="prev" title="c4d.modules.particles" href="../index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../Particle/index.html" title="c4d.modules.particles.Particle"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="c4d.modules.particles"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.modules.particles</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-particles-baseparticle">
+<h1>c4d.modules.particles.BaseParticle<a class="headerlink" href="#c4d-modules-particles-baseparticle" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.particles.BaseParticle">
+<em class="property">class </em><code class="descclassname">c4d.modules.particles.</code><code class="descname">BaseParticle</code><a class="headerlink" href="#c4d.modules.particles.BaseParticle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used to change the particle path by the particle modifiers.</p>
+</dd></dl>
+
+<p class="rubric">Attributes</p>
+<p><blockquote>
+<div><dl class="attribute">
+<dt id="BaseParticle.v">
+<code class="descclassname">BaseParticle.</code><code class="descname">v</code><a class="headerlink" href="#BaseParticle.v" title="Permalink to this definition">¶</a></dt>
+<dd><p>The velocity sum of the modifications to the particle, the current velocity of the particle is found from <a class="reference internal" href="../Particle/index.html#c4d.modules.particles.Particle" title="c4d.modules.particles.Particle"><code class="xref py py-class docutils literal notranslate"><span class="pre">Particle</span></code></a>. The new velocity is found using this velocity sum and dividing by the sum <a class="reference internal" href="#BaseParticle.count" title="BaseParticle.count"><code class="xref py py-attr docutils literal notranslate"><span class="pre">count</span></code></a>.</p>
+<p><strong>Type:</strong> <a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="BaseParticle.count">
+<code class="descclassname">BaseParticle.</code><code class="descname">count</code><a class="headerlink" href="#BaseParticle.count" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the sum count of the velocities added to the velocity vector <a class="reference internal" href="#BaseParticle.v" title="BaseParticle.v"><code class="xref py py-attr docutils literal notranslate"><span class="pre">v</span></code></a>.</p>
+<p><strong>Type:</strong> int</p>
+</dd></dl>
+
+</div></blockquote>
+</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../Particle/index.html" title="c4d.modules.particles.Particle"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="c4d.modules.particles"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.modules.particles</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1242 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.sculpting.BrushDabData &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.modules.sculpting.SculptBrushParams" href="../SculptBrushParams/index.html" />
+    <link rel="prev" title="c4d.modules.sculpting.SculptTag" href="../SculptTag/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../SculptBrushParams/index.html" title="c4d.modules.sculpting.SculptBrushParams"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../SculptTag/index.html" title="c4d.modules.sculpting.SculptTag"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.modules.sculpting</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-sculpting-brushdabdata">
+<h1>c4d.modules.sculpting.BrushDabData<a class="headerlink" href="#c4d-modules-sculpting-brushdabdata" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.sculpting.BrushDabData">
+<em class="property">class </em><code class="descclassname">c4d.modules.sculpting.</code><code class="descname">BrushDabData</code><a class="headerlink" href="#c4d.modules.sculpting.BrushDabData" title="Permalink to this definition">¶</a></dt>
+<dd><p>The brush data for an individual dab.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BrushDabData.GetData" title="BrushDabData.GetData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetData(self)</span></code></a></td>
+<td>Gets the settings data for the tool.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BrushDabData.GetObject" title="BrushDabData.GetObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetObject(self)</span></code></a></td>
+<td>Gets the Sculpt Object that the dab is for.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BrushDabData.GetPointData" title="BrushDabData.GetPointData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetPointData(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Gets the point at <em>index</em> affected by the brush.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BrushDabData.GetPolyData" title="BrushDabData.GetPolyData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetPolyData(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Gets the polygon at <em>index</em> affected by the brush.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BrushDabData.GetPolygonObject" title="BrushDabData.GetPolygonObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetPolygonObject(self)</span></code></a></td>
+<td>Gets the Polygon Object for the Sculpt Object that is currently being displayed in the viewport.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BrushDabData.GetBaseObject" title="BrushDabData.GetBaseObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetBaseObject(self)</span></code></a></td>
+<td>Gets the original object that the Sculpt Tag is applied to.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BrushDabData.GetPointCount" title="BrushDabData.GetPointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetPointCount(self)</span></code></a></td>
+<td>Gets the number of points that are touched by the dab.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BrushDabData.GetPolyCount" title="BrushDabData.GetPolyCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetPolyCount(self)</span></code></a></td>
+<td>Gets the number of polygons that are touched by the dab.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BrushDabData.GetNeighbor" title="BrushDabData.GetNeighbor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetNeighbor(self)</span></code></a></td>
+<td>Gets the neighbor information for the Sculpt Object if it is currently at level <cite>0</cite>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BrushDabData.GetLayer" title="BrushDabData.GetLayer"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetLayer(self)</span></code></a></td>
+<td>Retrieves the currently selected Layer for a subdivided <a class="reference internal" href="../SculptObject/index.html#c4d.modules.sculpting.SculptObject" title="c4d.modules.sculpting.SculptObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">SculptObject</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BrushDabData.GetPoint" title="BrushDabData.GetPoint"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetPoint(self,</span> <span class="pre">index)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Retrieves the live point at <em>index</em> that is modified on the surface during a brush stroke.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BrushDabData.GetOriginalPoint" title="BrushDabData.GetOriginalPoint"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetOriginalPoint(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Retrieves a copy of the point at <em>index</em> in its state before the brush stroke started.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BrushDabData.GetNormal" title="BrushDabData.GetNormal"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetNormal(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Gets the normal at the current hitpoint for the dab.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BrushDabData.GetDrawDirectionNormal" title="BrushDabData.GetDrawDirectionNormal"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetDrawDirectionNormal(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">If the brush supports the Draw Direction, i.e. the user has set <a class="reference internal" href="../SculptBrushParams/index.html#SculptBrushParams.EnableDrawDirection" title="SculptBrushParams.EnableDrawDirection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushParams.EnableDrawDirection()</span></code></a> to <strong>True</strong>, then this returns the direction selected by the user.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BrushDabData.GetBrushStrength" title="BrushDabData.GetBrushStrength"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetBrushStrength(self)</span></code></a></td>
+<td>Gets the brush strength for the dab.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BrushDabData.GetBrushRadius" title="BrushDabData.GetBrushRadius"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetBrushRadius(self)</span></code></a></td>
+<td>Gets the brush radius for the dab. The size of the radius is in the Sculpt Object local space.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BrushDabData.GetMousePos3D" title="BrushDabData.GetMousePos3D"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetMousePos3D(self)</span></code></a></td>
+<td>If the brush mode is <em>SCULPTBRUSHMODE_GRAB</em> then this method can be used to get the location of the mouse pointer in world space in the scene.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BrushDabData.GetHitPoint" title="BrushDabData.GetHitPoint"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetHitPoint(self)</span></code></a></td>
+<td>Gets the point on the surface of the SculptObject where the dab is going to be placed. This is the center of the dab.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BrushDabData.GetLastHitPoint" title="BrushDabData.GetLastHitPoint"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetLastHitPoint(self)</span></code></a></td>
+<td>Gets the hit point for the previous dab during the stroke.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BrushDabData.GetHitPolygon" title="BrushDabData.GetHitPolygon"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetHitPolygon(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Gets the index of the polygon on the surface of the SculptObject where the dab is going to be placed.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BrushDabData.GetEyePoint" title="BrushDabData.GetEyePoint"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetEyePoint(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Gets the location of the mouse in local space above the model.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BrushDabData.IsMirroredDab" title="BrushDabData.IsMirroredDab"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.IsMirroredDab(self)</span></code></a></td>
+<td>Checks if this dab is for a mirrored brush stroke.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BrushDabData.GetBrushOverride" title="BrushDabData.GetBrushOverride"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetBrushOverride(self)</span></code></a></td>
+<td>Gets the override flags. This could be any combination of the <em>OVERRIDE</em> flags.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BrushDabData.GetBaseDraw" title="BrushDabData.GetBaseDraw"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetBaseDraw(self)</span></code></a></td>
+<td>Gets the <a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#c4d.BaseDraw" title="c4d.BaseDraw"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDraw</span></code></a> that the user is currently drawing in.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BrushDabData.GetAveragePointAndNormal" title="BrushDabData.GetAveragePointAndNormal"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetAveragePointAndNormal(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Gets the average point and normal.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BrushDabData.GetMirrorPoint" title="BrushDabData.GetMirrorPoint"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetMirrorPoint(self,</span> <span class="pre">point,</span> <span class="pre">isNormal)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Mirror the point (or Normal) from the objects space to the correct location for the current dab.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BrushDabData.ApplySmooth" title="BrushDabData.ApplySmooth"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.ApplySmooth(self)</span></code></a></td>
+<td>Applies an effect of the smooth brush to the current dab.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BrushDabData.GetVertexNormal" title="BrushDabData.GetVertexNormal"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetVertexNormal(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Gets the vertex normal at <em>index</em> for the Sculpt Object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BrushDabData.GetOriginalVertexNormal" title="BrushDabData.GetOriginalVertexNormal"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetOriginalVertexNormal(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Gets the state of a vertex normal before the user started a brush stroke.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BrushDabData.GetFaceNormal" title="BrushDabData.GetFaceNormal"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetFaceNormal(self,</span> <span class="pre">index)</span></code></a></td>
+<td>Gets the face normal at <em>index</em> for the SculptObject.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BrushDabData.GetAutoScaleValue" title="BrushDabData.GetAutoScaleValue"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetAutoScaleValue(self,</span> <span class="pre">noRadius)</span></code></a></td>
+<td>Returns a value which represents the scale of the Sculpt Object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BrushDabData.GetBrushFalloff" title="BrushDabData.GetBrushFalloff"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetBrushFalloff(self,</span> <span class="pre">index[,</span> <span class="pre">...])</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Returns the brush falloff for the point specified by the <em>index</em> value.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BrushDabData.GetBrushFalloffFromPos" title="BrushDabData.GetBrushFalloffFromPos"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetBrushFalloffFromPos(self,</span> <span class="pre">pos)</span></code></a></td>
+<td>Returns the falloff value, defined by the falloff curve, based on the distance from <em>pos</em> to the hitpoint for the dab.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BrushDabData.OffsetPoint" title="BrushDabData.OffsetPoint"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.OffsetPoint(self,</span> <span class="pre">index,</span> <span class="pre">offset[,</span> <span class="pre">...])</span></code></a></td>
+<td>Offsets the point on the layer by the given <em>offset</em> amount.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BrushDabData.IsPreviewDab" title="BrushDabData.IsPreviewDab"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.IsPreviewDab(self)</span></code></a></td>
+<td>Checks if this is a preview dab. Currently only DragDab and DragRect draw modes support preview brushes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BrushDabData.OffsetPreviewPoint" title="BrushDabData.OffsetPreviewPoint"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.OffsetPreviewPoint(self,</span> <span class="pre">index,</span> <span class="pre">offset)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">If <code class="xref py py-meth docutils literal notranslate"><span class="pre">IsPreviewDab()</span></code> returns <strong>True</strong> then you should apply your offset using this method.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BrushDabData.DirtyAllPoints" title="BrushDabData.DirtyAllPoints"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.DirtyAllPoints(self,</span> <span class="pre">flags)</span></code></a></td>
+<td>Dirty all the points for this dab according to the flags.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BrushDabData.IsPointModified" title="BrushDabData.IsPointModified"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.IsPointModified(self,</span> <span class="pre">index)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">When using symmetry another mirrored brush may change the point.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BrushDabData.GetStencilColor" title="BrushDabData.GetStencilColor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetStencilColor(self,</span> <span class="pre">point,</span> <span class="pre">mode)</span></code></a></td>
+<td>Retrieves the grey value, color and coordinates of the stencil for a point in the Sculpt Object local space.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BrushDabData.GetStampColor" title="BrushDabData.GetStampColor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetStampColor(self,</span> <span class="pre">point,</span> <span class="pre">distance,</span> <span class="pre">mode)</span></code></a></td>
+<td>Retrieves the grey value, color and coordinates of the stamp for a point in the Sculpt Object local space.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BrushDabData.GetStencil" title="BrushDabData.GetStencil"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetStencil(self)</span></code></a></td>
+<td>Retrieves the stencil bitmap used for this dab.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BrushDabData.GetStamp" title="BrushDabData.GetStamp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetStamp(self)</span></code></a></td>
+<td>Retreves the stamp bitmap used for this dab.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BrushDabData.GetStrokeInstanceID" title="BrushDabData.GetStrokeInstanceID"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.GetStrokeInstanceID(self)</span></code></a></td>
+<td>Gets the ID of the stroke instance that this dab is being drawn for.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BrushDabData.IsSculptObject" title="BrushDabData.IsSculptObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.IsSculptObject(self)</span></code></a></td>
+<td>Checks if the object being touched is a <a class="reference internal" href="../SculptObject/index.html#c4d.modules.sculpting.SculptObject" title="c4d.modules.sculpting.SculptObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">SculptObject</span></code></a> (i.e. has a <a class="reference internal" href="../SculptTag/index.html#c4d.modules.sculpting.SculptTag" title="c4d.modules.sculpting.SculptTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">SculptTag</span></code></a>).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BrushDabData.IsFillTool" title="BrushDabData.IsFillTool"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.IsFillTool(self)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Checks if the current draw mode is fill.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BrushDabData.IsBackface" title="BrushDabData.IsBackface"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BrushDabData.IsBackface(self)</span></code></a></td>
+<td>Returns <strong>True</strong> if the dab is being applied backfacing polygons.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="BrushDabData.GetData">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetData</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the settings data for the tool.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer">c4d.BaseContainer</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The data.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetObject">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetObject</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the Sculpt Object that the dab is for.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../SculptObject/index.html#c4d.modules.sculpting.SculptObject" title="c4d.modules.sculpting.SculptObject">c4d.modules.sculpting.SculptObject</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The sculpt object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetPointData">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetPointData</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetPointData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the point at <em>index</em> affected by the brush.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index of the point.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If the point <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#BrushDabData.GetPointCount" title="BrushDabData.GetPointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPointCount()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">dict{<strong>pointIndex</strong>: int, <strong>distance</strong>: float}</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The point data index and distance.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetPolyData">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetPolyData</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetPolyData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the polygon at <em>index</em> affected by the brush.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index of the polygon.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If the point <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#BrushDabData.GetPolyCount" title="BrushDabData.GetPolyCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPolyCount()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">dict{<strong>polyIndex</strong>: int, <strong>distance</strong>: float}</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The polygon data index.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetPolygonObject">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetPolygonObject</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetPolygonObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the Polygon Object for the Sculpt Object that is currently being displayed in the viewport.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/PointObject/PolygonObject/index.html#c4d.PolygonObject" title="c4d.PolygonObject">c4d.PolygonObject</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The Polygon Object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetBaseObject">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetBaseObject</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetBaseObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the original object that the Sculpt Tag is applied to.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In the case where this there is no Sculpt Tag on then this will return the same as the call to <a class="reference internal" href="#BrushDabData.GetPolygonObject" title="BrushDabData.GetPolygonObject"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPolygonObject()</span></code></a>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/PointObject/PolygonObject/index.html#c4d.PolygonObject" title="c4d.PolygonObject">c4d.PolygonObject</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The original object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetPointCount">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetPointCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetPointCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the number of points that are touched by the dab.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The number of points.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetPolyCount">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetPolyCount</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetPolyCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the number of polygons that are touched by the dab.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The number of polygons.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetNeighbor">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetNeighbor</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetNeighbor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the neighbor information for the Sculpt Object if it is currently at level <cite>0</cite>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the user is sculpting a regular unsubdivided Polygon Object then this will also return a neighbor information.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d.utils/Neighbor/index.html#c4d.utils.Neighbor" title="c4d.utils.Neighbor">c4d.utils.Neighbor</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The Neighbor information if Sculpt Object is at level <cite>0</cite> (or if the user is sculpting on a regular <a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/PointObject/PolygonObject/index.html#c4d.PolygonObject" title="c4d.PolygonObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PolygonObject</span></code></a>), otherwise <strong>None</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetLayer">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetLayer</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the currently selected Layer for a subdivided <a class="reference internal" href="../SculptObject/index.html#c4d.modules.sculpting.SculptObject" title="c4d.modules.sculpting.SculptObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">SculptObject</span></code></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the user is sculpting a regular <a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/PointObject/PolygonObject/index.html#c4d.PolygonObject" title="c4d.PolygonObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PolygonObject</span></code></a>) then this will return <strong>None</strong>.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../SculptLayer/index.html#c4d.modules.sculpting.SculptLayer" title="c4d.modules.sculpting.SculptLayer">c4d.modules.sculpting.SculptLayer</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The currently selected layer in the LayerManager if it is a subdivided <a class="reference internal" href="../SculptObject/index.html#c4d.modules.sculpting.SculptObject" title="c4d.modules.sculpting.SculptObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">SculptObject</span></code></a>, otherwise <strong>None</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetPoint">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetPoint</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetPoint" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Retrieves the live point at <em>index</em> that is modified on the surface during a brush stroke.</div>
+<div class="line">This point may already have been modified by previous brush dabs during the current brush stroke.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index of the point.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If the point <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#BrushDabData.GetPointCount" title="BrushDabData.GetPointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPointCount()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The point at <em>index</em> on the <a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/PointObject/PolygonObject/index.html#c4d.PolygonObject" title="c4d.PolygonObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PolygonObject</span></code></a> that is currently displayed in the viewport.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetOriginalPoint">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetOriginalPoint</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetOriginalPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a copy of the point at <em>index</em> in its state before the brush stroke started.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">You can use this point to compare where the surface was before the user started sculpting.</div>
+<div class="line">As an example this data is used by the grab tool to correctly offset the points based on their original location on the surface at the first mouse click.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index of the point.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If the point <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#BrushDabData.GetPointCount" title="BrushDabData.GetPointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPointCount()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The point at <em>index</em>  of the PolygonObject at the state it was in when the user first pressed the left mouse button down.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetNormal">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetNormal</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetNormal" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Gets the normal at the current hitpoint for the dab.</div>
+<div class="line">This is the average vertex normal of all the points that are affected by the dab.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The normal at the current hitpoint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetDrawDirectionNormal">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetDrawDirectionNormal</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetDrawDirectionNormal" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">If the brush supports the Draw Direction, i.e. the user has set <a class="reference internal" href="../SculptBrushParams/index.html#SculptBrushParams.EnableDrawDirection" title="SculptBrushParams.EnableDrawDirection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SculptBrushParams.EnableDrawDirection()</span></code></a> to <strong>True</strong>, then this returns the direction selected by the user.</div>
+<div class="line">Otherwise it just returns the same vector as <a class="reference internal" href="#BrushDabData.GetNormal" title="BrushDabData.GetNormal"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetNormal()</span></code></a>.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The Draw Direction normal.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetBrushStrength">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetBrushStrength</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetBrushStrength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the brush strength for the dab.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<div class="last line-block">
+<div class="line">This strength is not the same as the strength in the <a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseContainer</span></code></a> data.</div>
+<div class="line">This also takes into account many other variables including tablet pressure to create the value.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The strength of the brush.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetBrushRadius">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetBrushRadius</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetBrushRadius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the brush radius for the dab. The size of the radius is in the Sculpt Object local space.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<div class="last line-block">
+<div class="line">This is not the same as the brush size in the <a class="reference internal" href="../../../c4d/BaseContainer/index.html#c4d.BaseContainer" title="c4d.BaseContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseContainer</span></code></a> data.</div>
+<div class="line">This also takes into account other factors such as the distance from the camera and scale of the object and tablet values to determine the correct brush radius.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The radius of the brush.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetMousePos3D">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetMousePos3D</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetMousePos3D" title="Permalink to this definition">¶</a></dt>
+<dd><p>If the brush mode is <em>SCULPTBRUSHMODE_GRAB</em> then this method can be used to get the location of the mouse pointer in world space in the scene.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The position of the mouse in world space if the brush mode is <em>SCULPTBRUSHMODE_GRAB</em>, otherwise it returns <a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.Vector(0,0,0)</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetHitPoint">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetHitPoint</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetHitPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the point on the surface of the SculptObject where the dab is going to be placed. This is the center of the dab.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the mode is set to <em>SCULPTBRUSHMODE_GRAB</em> then this always returns the initial hit point that occurred when the user first pressed the left mouse button down.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The hitpoint on the surface.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetLastHitPoint">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetLastHitPoint</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetLastHitPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the hit point for the previous dab during the stroke.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The last hitpoint on the surface.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetHitPolygon">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetHitPolygon</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetHitPolygon" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Gets the index of the polygon on the surface of the SculptObject where the dab is going to be placed.</div>
+<div class="line">This is the center of the dab.</div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R17.032.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The index of the polygon on hit the surface.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetEyePoint">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetEyePoint</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetEyePoint" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Gets the location of the mouse in local space above the model.</div>
+<div class="line">This point is created by interpolating between previous and next real mouse hitpoint on the surface of the Sculpt Object.</div>
+<div class="line">It is then projected down onto the surface of the model to get the real hitpoint for this interpolated value.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The virtual mouse location in local space above the surface of the <a class="reference internal" href="../SculptObject/index.html#c4d.modules.sculpting.SculptObject" title="c4d.modules.sculpting.SculptObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">SculptObject</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.IsMirroredDab">
+<code class="descclassname">BrushDabData.</code><code class="descname">IsMirroredDab</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.IsMirroredDab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if this dab is for a mirrored brush stroke.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if it’s a mirrored dab or <strong>False</strong> if it’s the main brush stroke.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetBrushOverride">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetBrushOverride</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetBrushOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the override flags. This could be any combination of the <em>OVERRIDE</em> flags.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The overrides if there are any or <cite>0</cite> if there are none.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetBaseDraw">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetBaseDraw</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetBaseDraw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the <a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#c4d.BaseDraw" title="c4d.BaseDraw"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDraw</span></code></a> that the user is currently drawing in.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The <a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/BaseView/BaseDraw/index.html#c4d.BaseDraw" title="c4d.BaseDraw"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDraw</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetAveragePointAndNormal">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetAveragePointAndNormal</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetAveragePointAndNormal" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Gets the average point and normal.</div>
+<div class="line">Depending on what the Fixed Plane (<em>MDATA_SCULPTBRUSH_SETTINGS_FIXEDPLANE</em>) setting is for the brush this will return one of <cite>3</cite> things:</div>
+</div>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><em>MDATA_SCULPTBRUSH_SETTINGS_FIXEDPLANE_OFF</em></dt>
+<dd><ul class="first last">
+<li>averagePoint = The average location of all the points that are touched by the dab.</li>
+<li>normal = The normal at the hitpoint on the surface of the Sculpt Object.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><em>MDATA_SCULPTBRUSH_SETTINGS_FIXEDPLANE_MOUSEDOWN</em></dt>
+<dd><ul class="first last">
+<li>averagePoint = The average location of all the points under the dab area when the mouse was mouse button was first pressed.</li>
+<li>normal = The average normal of all the points under the dab area when the mouse was mouse button was first pressed.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><em>MDATA_SCULPTBRUSH_SETTINGS_FIXEDPLANE_WORKPLANE</em></dt>
+<dd><ul class="first last">
+<li>averagePoint = The point on the workplane that is above the hitpoint on the surface of the Sculpt Object.</li>
+<li>normal = The normal of the workplane.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">dict{<strong>averagePoint</strong>: <a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>, <strong>normal</strong>: <a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>}</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The average point and normal based on the Fixed Plane setting.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetMirrorPoint">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetMirrorPoint</code><span class="sig-paren">(</span><em>self</em>, <em>point</em>, <em>isNormal</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetMirrorPoint" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Mirror the point (or Normal) from the objects space to the correct location for the current dab.</div>
+<div class="line">This should only be used if you need to get the symmetrically mirrored point for a point that you specifically need.</div>
+<div class="line">In most cases this method would never be used because the brush system automatically handles symmetrical points for you.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>point</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The input point, or normal to mirror.</li>
+<li><strong>isNormal</strong> (<em>bool</em>) – Set to <strong>True</strong> if <em>point</em> is a normal, so that it will then only be rotated and will not be offset.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The mirrored point.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.ApplySmooth">
+<code class="descclassname">BrushDabData.</code><code class="descname">ApplySmooth</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.ApplySmooth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies an effect of the smooth brush to the current dab.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Call this after you have modified the dab to smooth it out if needed.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetVertexNormal">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetVertexNormal</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetVertexNormal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the vertex normal at <em>index</em> for the Sculpt Object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index of the vertex.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If the vertex <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#BrushDabData.GetPointCount" title="BrushDabData.GetPointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPointCount()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The vertex normal.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetOriginalVertexNormal">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetOriginalVertexNormal</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetOriginalVertexNormal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the state of a vertex normal before the user started a brush stroke.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R17.048.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index of the vertex.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The original vertex normal.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetFaceNormal">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetFaceNormal</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetFaceNormal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the face normal at <em>index</em> for the SculptObject.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R17.032.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index of the face.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector">c4d.Vector</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The face normal.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetAutoScaleValue">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetAutoScaleValue</code><span class="sig-paren">(</span><em>self</em>, <em>noRadius</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetAutoScaleValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a value which represents the scale of the Sculpt Object.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="last line-block">
+<div class="line">This can be used to convert a distance in object space with the value returned from <a class="reference internal" href="#BrushDabData.GetBrushRadius" title="BrushDabData.GetBrushRadius"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetBrushRadius()</span></code></a> to help adjust</div>
+<div class="line">the algorithm for your brush since the value returned from <a class="reference internal" href="#BrushDabData.GetBrushRadius" title="BrushDabData.GetBrushRadius"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetBrushRadius()</span></code></a> is also already adjusted using the same value.</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>noRadius</strong> (<em>bool</em>) – <strong>True</strong> means it will not take into account the radius of the object in its calculation and will only use the scale.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The scale value with which to adjust your local space vector or distance value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetBrushFalloff">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetBrushFalloff</code><span class="sig-paren">(</span><em>self</em>, <em>index</em>, <em>customDistance=-1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetBrushFalloff" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns the brush falloff for the point specified by the <em>index</em> value.</div>
+<div class="line">The falloff is already adjusted by using the values from the stamp and stencil so it can be used directly to adjust the strength of an offset that you wish to add to the layer.</div>
+<div class="line">Internally this method will use the distance that this point is from the hitpoint in its calculation. Pass in a value to <em>customDistance</em> to use a different distance.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<em>int</em>) – The point data index returned from <a class="reference internal" href="#BrushDabData.GetPointData" title="BrushDabData.GetPointData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPointData()</span></code></a>.</li>
+<li><strong>customDistance</strong> (<em>float</em>) – The custom distance to use instead of the points actual distance from the hitpoint.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">float</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The final falloff value that can be used to adjust the offset value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetBrushFalloffFromPos">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetBrushFalloffFromPos</code><span class="sig-paren">(</span><em>self</em>, <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetBrushFalloffFromPos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the falloff value, defined by the falloff curve, based on the distance from <em>pos</em> to the hitpoint for the dab.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pos</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – A point in 3D space to get the falloff for.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The falloff value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.OffsetPoint">
+<code class="descclassname">BrushDabData.</code><code class="descname">OffsetPoint</code><span class="sig-paren">(</span><em>self</em>, <em>index</em>, <em>offset</em>, <em>respectStrength=0</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.OffsetPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Offsets the point on the layer by the given <em>offset</em> amount.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method should be used if <a class="reference internal" href="#BrushDabData.IsPreviewDab" title="BrushDabData.IsPreviewDab"><code class="xref py py-meth docutils literal notranslate"><span class="pre">IsPreviewDab()</span></code></a> returns <strong>False</strong>, otherwise use <a class="reference internal" href="#BrushDabData.OffsetPreviewPoint" title="BrushDabData.OffsetPreviewPoint"><code class="xref py py-meth docutils literal notranslate"><span class="pre">OffsetPreviewPoint()</span></code></a> instead.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<em>int</em>) – The index of the point.</li>
+<li><strong>offset</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The vector to offset the point by.</li>
+<li><strong>respectStrength</strong> (<em>int</em>) – <div class="line-block">
+<div class="line">Let you use or ignore settings such as the layers mask or strength when offsetting the point. See <em>SCULPTOFFSETFLAGS</em>.</div>
+<div class="line">By setting the <em>SCULPTOFFSETFLAGS_IGNOREMASK</em> flag it will ignore whatever the mask checkbox state is for the layer.</div>
+<div class="line">Otherwise it uses this state to determine if it should use the mask.</div>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><strong>IndexError</strong> – If the point <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#BrushDabData.GetPointCount" title="BrushDabData.GetPointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPointCount()</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.IsPreviewDab">
+<code class="descclassname">BrushDabData.</code><code class="descname">IsPreviewDab</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.IsPreviewDab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if this is a preview dab. Currently only DragDab and DragRect draw modes support preview brushes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if it is a preview dab, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.OffsetPreviewPoint">
+<code class="descclassname">BrushDabData.</code><code class="descname">OffsetPreviewPoint</code><span class="sig-paren">(</span><em>self</em>, <em>index</em>, <em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.OffsetPreviewPoint" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">If <a class="reference internal" href="#BrushDabData.IsPreviewDab" title="BrushDabData.IsPreviewDab"><code class="xref py py-meth docutils literal notranslate"><span class="pre">IsPreviewDab()</span></code></a> returns <strong>True</strong> then you should apply your offset using this method.</div>
+<div class="line">If it returns <strong>False</strong> then you should use <a class="reference internal" href="#BrushDabData.OffsetPreviewPoint" title="BrushDabData.OffsetPreviewPoint"><code class="xref py py-meth docutils literal notranslate"><span class="pre">OffsetPreviewPoint()</span></code></a> instead.</div>
+<div class="line">This adds the offset to a temporary preview layer that is created when using the DragDab and DragRect draw modes.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<em>int</em>) – The index of the point.</li>
+<li><strong>offset</strong> (<a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><em>c4d.Vector</em></a>) – The vector to offset the point by.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><strong>IndexError</strong> – If the point <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#BrushDabData.GetPointCount" title="BrushDabData.GetPointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPointCount()</span></code></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.DirtyAllPoints">
+<code class="descclassname">BrushDabData.</code><code class="descname">DirtyAllPoints</code><span class="sig-paren">(</span><em>self</em>, <em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.DirtyAllPoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dirty all the points for this dab according to the flags.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>flags</strong> (<em>int</em>) – See <em>SCULPTBRUSHDATATYPE</em>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.IsPointModified">
+<code class="descclassname">BrushDabData.</code><code class="descname">IsPointModified</code><span class="sig-paren">(</span><em>self</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.IsPointModified" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">When using symmetry another mirrored brush may change the point.</div>
+<div class="line">You can use this to check if another brush stroke has changed a point and if so then you can do something different for this current stroke.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index of the point.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>IndexError</strong> – If the point <em>index</em> is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#BrushDabData.GetPointCount" title="BrushDabData.GetPointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPointCount()</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the point was modified, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetStencilColor">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetStencilColor</code><span class="sig-paren">(</span><em>self</em>, <em>point</em>, <em>mode</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetStencilColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the grey value, color and coordinates of the stencil for a point in the Sculpt Object local space.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>point</strong> (<em>int</em>) – The index of the point.</li>
+<li><strong>mode</strong> (<em>int</em>) – The mode used to sample the stencil texture. See <em>SAMPLEMODE</em>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><strong>IndexError</strong> – If the <em>point</em> index is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#BrushDabData.GetPointCount" title="BrushDabData.GetPointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPointCount()</span></code></a>.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">dict{<strong>grey</strong>: <a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>, <strong>color</strong>: <a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>, <strong>coords</strong>: <a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>}</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The grey value, color and coords of the stencil.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetStampColor">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetStampColor</code><span class="sig-paren">(</span><em>self</em>, <em>point</em>, <em>distance</em>, <em>mode</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetStampColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the grey value, color and coordinates of the stamp for a point in the Sculpt Object local space.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>point</strong> (<em>int</em>) – The index of the point.</li>
+<li><strong>distance</strong> (<em>float</em>) – <div class="line-block">
+<div class="line">Can be either the point data distance value (returned by :<a class="reference internal" href="#BrushDabData.GetPointData" title="BrushDabData.GetPointData"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPointData()</span></code></a>), the length of the vector (hitpoint - point) or a custom distance value.</div>
+<div class="line">This is used to get the correct falloff for the point.</div>
+</div>
+</li>
+<li><strong>mode</strong> (<em>int</em>) – The mode used to sample the stamp texture. See <em>SAMPLEMODE</em>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><strong>IndexError</strong> – If the <em>point</em> index is out of range : <em>0&lt;=index&lt;</em><a class="reference internal" href="#BrushDabData.GetPointCount" title="BrushDabData.GetPointCount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GetPointCount()</span></code></a>.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">dict{<strong>grey</strong>: <a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>, <strong>color</strong>: <a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>, <strong>coords</strong>: <a class="reference internal" href="../../../c4d/Vector/index.html#c4d.Vector" title="c4d.Vector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>}</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The grey value (adjusted by the stamps Gray Value), color and coordinates of the stamp.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetStencil">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetStencil</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetStencil" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the stencil bitmap used for this dab.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d.bitmaps/BaseBitmap/index.html#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap">c4d.bitmaps.BaseBitmap</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The bitmap for the stencil.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetStamp">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetStamp</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetStamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retreves the stamp bitmap used for this dab.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d.bitmaps/BaseBitmap/index.html#c4d.bitmaps.BaseBitmap" title="c4d.bitmaps.BaseBitmap">c4d.bitmaps.BaseBitmap</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The bitmap for the stamp.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.GetStrokeInstanceID">
+<code class="descclassname">BrushDabData.</code><code class="descname">GetStrokeInstanceID</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.GetStrokeInstanceID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the ID of the stroke instance that this dab is being drawn for.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The stroke instance ID.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.IsSculptObject">
+<code class="descclassname">BrushDabData.</code><code class="descname">IsSculptObject</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.IsSculptObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the object being touched is a <a class="reference internal" href="../SculptObject/index.html#c4d.modules.sculpting.SculptObject" title="c4d.modules.sculpting.SculptObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">SculptObject</span></code></a> (i.e. has a <a class="reference internal" href="../SculptTag/index.html#c4d.modules.sculpting.SculptTag" title="c4d.modules.sculpting.SculptTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">SculptTag</span></code></a>).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the object being touched is a <a class="reference internal" href="../SculptObject/index.html#c4d.modules.sculpting.SculptObject" title="c4d.modules.sculpting.SculptObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">SculptObject</span></code></a>, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.IsFillTool">
+<code class="descclassname">BrushDabData.</code><code class="descname">IsFillTool</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.IsFillTool" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Checks if the current draw mode is fill.</div>
+<div class="line">Basically checks if the dab <em>MDATA_SCULPTBRUSH_SETTINGS_DRAWMODE</em> setting is:</div>
+<div class="line"><em>MDATA_SCULPTBRUSH_SETTINGS_DRAWMODE_LASSO_FILL</em> or</div>
+<div class="line"><em>MDATA_SCULPTBRUSH_SETTINGS_DRAWMODE_POLY_FILL</em> or</div>
+<div class="line"><em>MDATA_SCULPTBRUSH_SETTINGS_DRAWMODE_RECTANGLE_FILL</em></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the current draw mode is fill, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BrushDabData.IsBackface">
+<code class="descclassname">BrushDabData.</code><code class="descname">IsBackface</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BrushDabData.IsBackface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <strong>True</strong> if the dab is being applied backfacing polygons.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R17.032.</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Backface polygons will only be sculpted on if the brush has its BackFaceSculpting option enabled and the Backface option is also checked by the user.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the dab is on backfacing polygons, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../SculptBrushParams/index.html" title="c4d.modules.sculpting.SculptBrushParams"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../SculptTag/index.html" title="c4d.modules.sculpting.SculptTag"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.modules.sculpting</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

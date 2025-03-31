@@ -1,0 +1,595 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>maxon.DataType &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="maxon.Ref" href="maxon.Ref.html" />
+    <link rel="prev" title="maxon.Data" href="maxon.Data.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="maxon.Ref.html" title="maxon.Ref"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="maxon.Data.html" title="maxon.Data"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../maxon/datatypes.html" accesskey="U">MAXON API - Data Types</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="maxon-datatype">
+<h1>maxon.DataType<a class="headerlink" href="#maxon-datatype" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-maxon.DataType">
+<span id="description"></span><h2>Description<a class="headerlink" href="#module-maxon.DataType" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="#module-maxon.DataType" title="maxon.DataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DataType</span></code></a> provides a set of functions which allow to operate on values of arbitrary
+types in a generic way.</div>
+<div class="line-block">
+<div class="line">Each type needs its own <a class="reference internal" href="#module-maxon.DataType" title="maxon.DataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DataType</span></code></a> with specific implementations of the access functions.</div>
+<div class="line">The <a class="reference internal" href="maxon.Data.html#module-maxon.Data" title="maxon.Data"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Data</span></code></a> class uses <a class="reference internal" href="#module-maxon.DataType" title="maxon.DataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DataType</span></code></a> to be able to store values of arbitrary type.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">There are primary data types and compound data types. A primary data type is registered at the DataTypes registry.
+A compound data type is for example:
+  - a pointer or reference type of another type,
+  - a block type of another type,
+  - a result type of another type,
+  - an array type of another type,
+  - a tuple data type composed of a set of member types.
+    Compound data types are typically created as instantiations of parametric types.</div>
+</div>
+</div>
+<div class="section" id="inheritance-diagram">
+<h2>Inheritance diagram<a class="headerlink" href="#inheritance-diagram" title="Permalink to this headline">¶</a></h2>
+<p class="rubric">Inheritance</p>
+</div>
+<div class="section" id="methods-signature">
+<h2>Methods Signature<a class="headerlink" href="#methods-signature" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.DataType.CheckValueKind" title="maxon.DataType.CheckValueKind"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CheckValueKind</span></code></a>(test)</td>
+<td>Tests the value kind of this data type for the given flags (by using the bitwise and).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.DataType.Create" title="maxon.DataType.Create"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Create</span></code></a>()</td>
+<td><div class="line-block">
+<div class="line">Creates a new instance of this type.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.DataType.Get" title="maxon.DataType.Get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Get</span></code></a>()</td>
+<td>Retrieves a <a class="reference internal" href="#module-maxon.DataType" title="maxon.DataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DataType</span></code></a> from its <a class="reference internal" href="../id/maxon.Id.html#module-maxon.Id" title="maxon.Id"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Id</span></code></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.DataType.GetAlignment" title="maxon.DataType.GetAlignment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetAlignment</span></code></a>()</td>
+<td>Returns the alignment of values of this data type.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.DataType.GetBaseArrayType" title="maxon.DataType.GetBaseArrayType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetBaseArrayType</span></code></a>()</td>
+<td>Retrieves the kind of BaseArray used.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.DataType.GetConstType" title="maxon.DataType.GetConstType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetConstType</span></code></a>()</td>
+<td>Retrieves the constant type of the current type.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.DataType.GetElementType" title="maxon.DataType.GetElementType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetElementType</span></code></a>()</td>
+<td>Returns the element type of this data type.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.DataType.GetId" title="maxon.DataType.GetId"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetId</span></code></a>()</td>
+<td><div class="line-block">
+<div class="line">Returns the identifier of this data type.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.DataType.GetNativeType" title="maxon.DataType.GetNativeType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetNativeType</span></code></a>()</td>
+<td>Returns the initial DataType.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.DataType.GetOpaqueType" title="maxon.DataType.GetOpaqueType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetOpaqueType</span></code></a>()</td>
+<td>Retrieves the hidden type of a DataType.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.DataType.GetPointerType" title="maxon.DataType.GetPointerType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetPointerType</span></code></a>()</td>
+<td>Retrieves the pointer type of the current type.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.DataType.GetSize" title="maxon.DataType.GetSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSize</span></code></a>()</td>
+<td>Returns the size of values of this data type.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.DataType.GetType" title="maxon.DataType.GetType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetType</span></code></a>()</td>
+<td>Returns the DataType of the current object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.DataType.GetTypeArguments" title="maxon.DataType.GetTypeArguments"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetTypeArguments</span></code></a>()</td>
+<td><div class="line-block">
+<div class="line">Returns the type arguments of this data type.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.DataType.GetUnderlyingType" title="maxon.DataType.GetUnderlyingType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetUnderlyingType</span></code></a>()</td>
+<td><div class="line-block">
+<div class="line">Returns the most atomic way for describing a parameter.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.DataType.GetUnqualifiedType" title="maxon.DataType.GetUnqualifiedType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetUnqualifiedType</span></code></a>()</td>
+<td><div class="line-block">
+<div class="line">Returns the description of a parameter.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.DataType.GetValueKind" title="maxon.DataType.GetValueKind"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetValueKind</span></code></a>()</td>
+<td>Returns the kind of values of this data type.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.DataType.Is" title="maxon.DataType.Is"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Is</span></code></a>(dt)</td>
+<td>Returns true if this type is the same as dt.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.DataType.IsGeneric" title="maxon.DataType.IsGeneric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsGeneric</span></code></a>()</td>
+<td>Checks if the DataType is a Generic one.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#maxon.DataType.ToString" title="maxon.DataType.ToString"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ToString</span></code></a>()</td>
+<td>Returns the String representation of the datatype.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#maxon.DataType.__init__" title="maxon.DataType.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(dt)</td>
+<td>x.__init__(…) initializes x; see help(type(x)) for signature</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="methods-definition">
+<h2>Methods Definition<a class="headerlink" href="#methods-definition" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="maxon.DataType.CheckValueKind">
+<code class="descclassname">DataType.</code><code class="descname">CheckValueKind</code><span class="sig-paren">(</span><em>test</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.DataType.CheckValueKind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the value kind of this data type for the given flags (by using the bitwise and).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>test</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.VALUEKIND</span></code>) – The flags to test.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the value kind of this data type has one of the given flags, <strong>False</strong> otherwise.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.DataType.Create">
+<code class="descclassname">DataType.</code><code class="descname">Create</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.DataType.Create" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Creates a new instance of this type.</div>
+<div class="line"><br /></div>
+<div class="line">If this type is a non-virtual interface, the new instance will be created by NewObj.</div>
+<div class="line">If this type is an array type TO BE DONE.</div>
+<div class="line">If this type is a virtual interface type, an error is returned because only
+classes can be instantiated, not interfaces.</div>
+<div class="line">Otherwise, the new instance will be initialized by the default constructor.
+For reference types, this means that the reference will point to nullptr.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">New instance of this data type. The caller owns the new instance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Any</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="maxon.DataType.Get">
+<em class="property">static </em><code class="descclassname">DataType.</code><code class="descname">Get</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.DataType.Get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a <a class="reference internal" href="#module-maxon.DataType" title="maxon.DataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DataType</span></code></a> from its <a class="reference internal" href="../id/maxon.Id.html#module-maxon.Id" title="maxon.Id"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Id</span></code></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>str</em>) – The id of the datatype to search for.</li>
+<li><strong>lookupPythonTypes</strong> (<em>bool</em>) – <strong>True</strong> to look also in the python built-in datatype.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The matched datatype.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><p class="first"><a class="reference internal" href="#module-maxon.DataType" title="maxon.DataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DataType</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last">TypeError: If the id is not a str.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.DataType.GetAlignment">
+<code class="descclassname">DataType.</code><code class="descname">GetAlignment</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.DataType.GetAlignment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the alignment of values of this data type. This might by an extended alignment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Alignment of values.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.DataType.GetBaseArrayType">
+<code class="descclassname">DataType.</code><code class="descname">GetBaseArrayType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.DataType.GetBaseArrayType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the kind of BaseArray used.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The DataType of the BaseArray.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#module-maxon.DataType" title="maxon.DataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DataType</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.DataType.GetConstType">
+<code class="descclassname">DataType.</code><code class="descname">GetConstType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.DataType.GetConstType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the constant type of the current type.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The constant DataType.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#module-maxon.DataType" title="maxon.DataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DataType</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.DataType.GetElementType">
+<code class="descclassname">DataType.</code><code class="descname">GetElementType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.DataType.GetElementType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the element type of this data type. The element type is used for some parametric
+types such as pointers or references,</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The DataType of the stored elements. Can be <strong>None</strong>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#module-maxon.DataType" title="maxon.DataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DataType</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.DataType.GetId">
+<code class="descclassname">DataType.</code><code class="descname">GetId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.DataType.GetId" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns the identifier of this data type.</div>
+<div class="line">Data type identifiers of primary types look like int32, pointer types are identified by a * suffix as in
+{float64*}, tuple types by a parenthesized list of its member types as in {(int32,float64*)}.</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Unique identifier of this type.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../id/maxon.Id.html#module-maxon.Id" title="maxon.Id"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.Id</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.DataType.GetNativeType">
+<code class="descclassname">DataType.</code><code class="descname">GetNativeType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.DataType.GetNativeType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the initial DataType.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The datatype.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#module-maxon.DataType" title="maxon.DataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DataType</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.DataType.GetOpaqueType">
+<code class="descclassname">DataType.</code><code class="descname">GetOpaqueType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.DataType.GetOpaqueType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the hidden type of a DataType.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The opaque DataType.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#module-maxon.DataType" title="maxon.DataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DataType</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.DataType.GetPointerType">
+<code class="descclassname">DataType.</code><code class="descname">GetPointerType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.DataType.GetPointerType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the pointer type of the current type.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The pointer DataType.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#module-maxon.DataType" title="maxon.DataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DataType</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.DataType.GetSize">
+<code class="descclassname">DataType.</code><code class="descname">GetSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.DataType.GetSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the size of values of this data type.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Size of values.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="maxon.DataType.GetType">
+<em class="property">classmethod </em><code class="descclassname">DataType.</code><code class="descname">GetType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.DataType.GetType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the DataType of the current object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The datatype.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#module-maxon.DataType" title="maxon.DataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DataType</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.DataType.GetTypeArguments">
+<code class="descclassname">DataType.</code><code class="descname">GetTypeArguments</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.DataType.GetTypeArguments" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns the type arguments of this data type.</div>
+<div class="line">Type arguments are set for some instantiations of parametric types.</div>
+<div class="line"><br /></div>
+<div class="line">For example, the 3-dimensional Vector is an instantiation of the parametric type Vec with the arguments
+(Float, 3).</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The type arguments of this type.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list(tuple(type, name))</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.DataType.GetUnderlyingType">
+<code class="descclassname">DataType.</code><code class="descname">GetUnderlyingType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.DataType.GetUnderlyingType" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns the most atomic way for describing a parameter.</div>
+<div class="line">e.g: for a ColorA it’s “(float64 r,float64 g,float64 b,float64 a)”</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The underlying DataType.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#module-maxon.DataType" title="maxon.DataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DataType</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.DataType.GetUnqualifiedType">
+<code class="descclassname">DataType.</code><code class="descname">GetUnqualifiedType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.DataType.GetUnqualifiedType" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns the description of a parameter.</div>
+<div class="line">e.g: for a ColorA it’s “net.maxon.parametrictype.col&lt;4,float64&gt;”</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The unqualified DataType.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#module-maxon.DataType" title="maxon.DataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DataType</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.DataType.GetValueKind">
+<code class="descclassname">DataType.</code><code class="descname">GetValueKind</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.DataType.GetValueKind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the kind of values of this data type. This is a coarse classification to distinguish between
+e.g. value types, pointers, references, arrays and tuples.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Kind of values.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.VALUEKIND</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.DataType.Is">
+<code class="descclassname">DataType.</code><code class="descname">Is</code><span class="sig-paren">(</span><em>dt</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.DataType.Is" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if this type is the same as dt.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dt</strong> (<a class="reference internal" href="#module-maxon.DataType" title="maxon.DataType"><code class="xref py py-class docutils literal notranslate"><span class="pre">maxon.DataType</span></code></a>) – Type to compare.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if this type is the same.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.DataType.IsGeneric">
+<code class="descclassname">DataType.</code><code class="descname">IsGeneric</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.DataType.IsGeneric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the DataType is a Generic one.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if it’s a Generic.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.DataType.ToString">
+<code class="descclassname">DataType.</code><code class="descname">ToString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maxon.DataType.ToString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the String representation of the datatype.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The string representation of the DataType.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maxon.DataType.__init__">
+<code class="descclassname">DataType.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>dt</em><span class="sig-paren">)</span><a class="headerlink" href="#maxon.DataType.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">maxon.DataType</a><ul>
+<li><a class="reference internal" href="#module-maxon.DataType">Description</a></li>
+<li><a class="reference internal" href="#inheritance-diagram">Inheritance diagram</a></li>
+<li><a class="reference internal" href="#methods-signature">Methods Signature</a></li>
+<li><a class="reference internal" href="#methods-definition">Methods Definition</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="maxon.Ref.html" title="maxon.Ref"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="maxon.Data.html" title="maxon.Data"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../maxon/datatypes.html" >MAXON API - Data Types</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

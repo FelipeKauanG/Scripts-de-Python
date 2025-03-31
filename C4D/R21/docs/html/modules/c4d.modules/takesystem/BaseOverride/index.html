@@ -1,0 +1,265 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.takesystem.BaseOverride &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.modules.takesystem.BaseOverrideGroup" href="../BaseOverrideGroup/index.html" />
+    <link rel="prev" title="c4d.modules.takesystem" href="../index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../BaseOverrideGroup/index.html" title="c4d.modules.takesystem.BaseOverrideGroup"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="c4d.modules.takesystem"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.modules.takesystem</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-takesystem-baseoverride">
+<h1>c4d.modules.takesystem.BaseOverride<a class="headerlink" href="#c4d-modules-takesystem-baseoverride" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.takesystem.BaseOverride">
+<em class="property">class </em><code class="descclassname">c4d.modules.takesystem.</code><code class="descname">BaseOverride</code><a class="headerlink" href="#c4d.modules.takesystem.BaseOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p>An Override holds the settings for a specific object in a Take.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This type cannot be instantiated.</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R17.032.</span></p>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BaseOverride.IsOverriddenParam" title="BaseOverride.IsOverriddenParam"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseOverride.IsOverriddenParam(self,</span> <span class="pre">descID)</span></code></a></td>
+<td>Checks if the parameter at <em>descID</em> is overridden.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseOverride.GetSceneNode" title="BaseOverride.GetSceneNode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseOverride.GetSceneNode(self)</span></code></a></td>
+<td>Retrieves the original scene node connected to the Override node.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseOverride.GetOwnerTake" title="BaseOverride.GetOwnerTake"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseOverride.GetOwnerTake(self,</span> <span class="pre">takeData)</span></code></a></td>
+<td>Gets the Take that owns the Override.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseOverride.IsInGroup" title="BaseOverride.IsInGroup"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseOverride.IsInGroup(self,</span> <span class="pre">takeData)</span></code></a></td>
+<td>Checks if the Override is also part of an Override Group, and if yes returns the group.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BaseOverride.GetAllOverrideDescID" title="BaseOverride.GetAllOverrideDescID"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseOverride.GetAllOverrideDescID(self)</span></code></a></td>
+<td>Retrieves the DescID of all parameters in the Override.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BaseOverride.UpdateSceneNode" title="BaseOverride.UpdateSceneNode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BaseOverride.UpdateSceneNode(self,</span> <span class="pre">takeData,</span> <span class="pre">descID)</span></code></a></td>
+<td><div class="first last line-block">
+<div class="line">Updates the scene node whenever data is directly changed on the base Override (for example with <a class="reference internal" href="../../../c4d/C4DAtom/index.html#C4DAtom.SetParameter" title="C4DAtom.SetParameter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">C4DAtom.SetParameter()</span></code></a>).</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Inheritance</p>
+<p class="rubric">Inheritance</p>
+<p>Parent Class:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.BaseList2D</span></code></a></li>
+</ul>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="BaseOverride.IsOverriddenParam">
+<code class="descclassname">BaseOverride.</code><code class="descname">IsOverriddenParam</code><span class="sig-paren">(</span><em>self</em>, <em>descID</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseOverride.IsOverriddenParam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the parameter at <em>descID</em> is overridden.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>descID</strong> (<a class="reference internal" href="../../../c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><em>c4d.DescID</em></a>) – The parameter to be checked.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if parameter is overridden, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseOverride.GetSceneNode">
+<code class="descclassname">BaseOverride.</code><code class="descname">GetSceneNode</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseOverride.GetSceneNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the original scene node connected to the Override node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D">c4d.BaseList2D</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The original scene node.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseOverride.GetOwnerTake">
+<code class="descclassname">BaseOverride.</code><code class="descname">GetOwnerTake</code><span class="sig-paren">(</span><em>self</em>, <em>takeData</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseOverride.GetOwnerTake" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the Take that owns the Override.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>takeData</strong> (<a class="reference internal" href="../TakeData/index.html#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><em>c4d.modules.takesystem.TakeData</em></a>) – The Take System context.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../BaseTake/index.html#c4d.modules.takesystem.BaseTake" title="c4d.modules.takesystem.BaseTake">c4d.modules.takesystem.BaseTake</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The Take for the Override.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseOverride.IsInGroup">
+<code class="descclassname">BaseOverride.</code><code class="descname">IsInGroup</code><span class="sig-paren">(</span><em>self</em>, <em>takeData</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseOverride.IsInGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the Override is also part of an Override Group, and if yes returns the group.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>takeData</strong> (<a class="reference internal" href="../TakeData/index.html#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><em>c4d.modules.takesystem.TakeData</em></a>) – The Take System context.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Tuple[bool, <a class="reference internal" href="../BaseOverrideGroup/index.html#c4d.modules.takesystem.BaseOverrideGroup" title="c4d.modules.takesystem.BaseOverrideGroup">c4d.modules.takesystem.BaseOverrideGroup</a>]</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the Override is part of an Override Group, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseOverride.GetAllOverrideDescID">
+<code class="descclassname">BaseOverride.</code><code class="descname">GetAllOverrideDescID</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseOverride.GetAllOverrideDescID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the DescID of all parameters in the Override.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Sub-descriptions are included if overridden.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">List[<a class="reference internal" href="../../../c4d/DescID/index.html#c4d.DescID" title="c4d.DescID">c4d.DescID</a>]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The DescID of all overridden parameters.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BaseOverride.UpdateSceneNode">
+<code class="descclassname">BaseOverride.</code><code class="descname">UpdateSceneNode</code><span class="sig-paren">(</span><em>self</em>, <em>takeData</em>, <em>descID</em><span class="sig-paren">)</span><a class="headerlink" href="#BaseOverride.UpdateSceneNode" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Updates the scene node whenever data is directly changed on the base Override (for example with <a class="reference internal" href="../../../c4d/C4DAtom/index.html#C4DAtom.SetParameter" title="C4DAtom.SetParameter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">C4DAtom.SetParameter()</span></code></a>).</div>
+<div class="line">This ensures the scene node is properly updated if the Override affects the current document state.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">An undo step is added automatically if the call is added from the main (GUI) thread and global undo is allowed (see <a class="reference internal" href="../TakeData/index.html#TakeData.GetUndoState" title="TakeData.GetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.GetUndoState()</span></code></a>/<a class="reference internal" href="../TakeData/index.html#TakeData.SetUndoState" title="TakeData.SetUndoState"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TakeData.SetUndoState()</span></code></a>).</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>takeData</strong> (<a class="reference internal" href="../TakeData/index.html#c4d.modules.takesystem.TakeData" title="c4d.modules.takesystem.TakeData"><em>c4d.modules.takesystem.TakeData</em></a>) – The Take System context.</li>
+<li><strong>descID</strong> (<a class="reference internal" href="../../../c4d/DescID/index.html#c4d.DescID" title="c4d.DescID"><em>c4d.DescID</em></a>) – The edited parameter.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../BaseOverrideGroup/index.html" title="c4d.modules.takesystem.BaseOverrideGroup"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="c4d.modules.takesystem"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.modules.takesystem</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

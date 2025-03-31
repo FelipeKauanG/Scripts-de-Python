@@ -1,0 +1,375 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.net.UserPool &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.modules.particles" href="../../particles/index.html" />
+    <link rel="prev" title="c4d.modules.net.Repository" href="../Repository/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../particles/index.html" title="c4d.modules.particles"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../Repository/index.html" title="c4d.modules.net.Repository"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.modules.net</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-net-userpool">
+<h1>c4d.modules.net.UserPool<a class="headerlink" href="#c4d-modules-net-userpool" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.net.UserPool">
+<em class="property">class </em><code class="descclassname">c4d.modules.net.</code><code class="descname">UserPool</code><a class="headerlink" href="#c4d.modules.net.UserPool" title="Permalink to this definition">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified">New in version R15.037.</span></p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This type cannot be instantiated.</p>
+</div>
+</dd></dl>
+
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#UserPool.AddUser" title="UserPool.AddUser"><code class="xref py py-meth docutils literal notranslate"><span class="pre">UserPool.AddUser(self,</span> <span class="pre">username,</span> <span class="pre">...)</span></code></a></td>
+<td>Adds a user.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#UserPool.DeleteUser" title="UserPool.DeleteUser"><code class="xref py py-meth docutils literal notranslate"><span class="pre">UserPool.DeleteUser(self,</span> <span class="pre">userUuid)</span></code></a></td>
+<td>Deletes a user.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#UserPool.CheckUserCredentials" title="UserPool.CheckUserCredentials"><code class="xref py py-meth docutils literal notranslate"><span class="pre">UserPool.CheckUserCredentials(self,</span> <span class="pre">username,</span> <span class="pre">password)</span></code></a></td>
+<td>Checks a user’s credentials.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#UserPool.EditUserInfo" title="UserPool.EditUserInfo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">UserPool.EditUserInfo(self,</span> <span class="pre">userUuid,</span> <span class="pre">description)</span></code></a></td>
+<td>Sets a user’s information.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#UserPool.EditUserPassword" title="UserPool.EditUserPassword"><code class="xref py py-meth docutils literal notranslate"><span class="pre">UserPool.EditUserPassword(self,</span> <span class="pre">userUuid,</span> <span class="pre">password)</span></code></a></td>
+<td>Sets a user’s password.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#UserPool.ChangeUserAccountType" title="UserPool.ChangeUserAccountType"><code class="xref py py-meth docutils literal notranslate"><span class="pre">UserPool.ChangeUserAccountType(self,</span> <span class="pre">userUuid,</span> <span class="pre">isAdmin)</span></code></a></td>
+<td>Changes a user’s account type.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#UserPool.ChangeLanguage" title="UserPool.ChangeLanguage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">UserPool.ChangeLanguage(self,</span> <span class="pre">userUuid,</span> <span class="pre">language)</span></code></a></td>
+<td>Sets the language for a user.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#UserPool.ChangePassword" title="UserPool.ChangePassword"><code class="xref py py-meth docutils literal notranslate"><span class="pre">UserPool.ChangePassword(self,</span> <span class="pre">userUuid,</span> <span class="pre">...)</span></code></a></td>
+<td>Changes a user’s password.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#UserPool.GetUsers" title="UserPool.GetUsers"><code class="xref py py-meth docutils literal notranslate"><span class="pre">UserPool.GetUsers(self)</span></code></a></td>
+<td>Retrieves the users information from the pool.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="UserPool.AddUser">
+<code class="descclassname">UserPool.</code><code class="descname">AddUser</code><span class="sig-paren">(</span><em>self</em>, <em>username</em>, <em>password</em>, <em>description</em>, <em>isAdmin</em><span class="sig-paren">)</span><a class="headerlink" href="#UserPool.AddUser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a user.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>username</strong> (<em>str</em>) – The user’s name.</li>
+<li><strong>password</strong> (<em>str</em>) – The user’s password.</li>
+<li><strong>description</strong> (<em>str</em>) – The user’s description.</li>
+<li><strong>isAdmin</strong> (<em>bool</em>) – Set to <strong>True</strong> if the user to add is administrator, <strong>False</strong> otherwise.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the user was successfully added, <strong>False</strong> otherwise.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="UserPool.DeleteUser">
+<code class="descclassname">UserPool.</code><code class="descname">DeleteUser</code><span class="sig-paren">(</span><em>self</em>, <em>userUuid</em><span class="sig-paren">)</span><a class="headerlink" href="#UserPool.DeleteUser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a user.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>userUuid</strong> (<a class="reference external" href="https://docs.python.org/release/2.7/library/uuid.html#uuid.UUID">UUID</a>) – <div class="versionadded">
+<p><span class="versionmodified">New in version R16.021: </span>The user UUID.</p>
+</div>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the user was successfully deleted, <strong>False</strong> otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="UserPool.CheckUserCredentials">
+<code class="descclassname">UserPool.</code><code class="descname">CheckUserCredentials</code><span class="sig-paren">(</span><em>self</em>, <em>username</em>, <em>password</em><span class="sig-paren">)</span><a class="headerlink" href="#UserPool.CheckUserCredentials" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks a user’s credentials.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>username</strong> (<em>str</em>) – The user name.</li>
+<li><strong>password</strong> (<em>str</em>) – The user password.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the user’s credentials were successfully checked, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="UserPool.EditUserInfo">
+<code class="descclassname">UserPool.</code><code class="descname">EditUserInfo</code><span class="sig-paren">(</span><em>self</em>, <em>userUuid</em>, <em>description</em><span class="sig-paren">)</span><a class="headerlink" href="#UserPool.EditUserInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a user’s information.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>userUuid</strong> – The user UUID.</li>
+<li><strong>description</strong> (<em>str</em>) – The new user description/information.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the user’s information was successfully set, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="UserPool.EditUserPassword">
+<code class="descclassname">UserPool.</code><code class="descname">EditUserPassword</code><span class="sig-paren">(</span><em>self</em>, <em>userUuid</em>, <em>password</em><span class="sig-paren">)</span><a class="headerlink" href="#UserPool.EditUserPassword" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a user’s password.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>userUuid</strong> – The user UUID.</li>
+<li><strong>password</strong> (<em>str</em>) – The new password.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the user’s password was successfully set, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="UserPool.ChangeUserAccountType">
+<code class="descclassname">UserPool.</code><code class="descname">ChangeUserAccountType</code><span class="sig-paren">(</span><em>self</em>, <em>userUuid</em>, <em>isAdmin</em><span class="sig-paren">)</span><a class="headerlink" href="#UserPool.ChangeUserAccountType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes a user’s account type.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>userUuid</strong> – The user UUID.</li>
+<li><strong>isAdmin</strong> (<em>bool</em>) – Set to <strong>True</strong> to change the user’s account type to administrator, <strong>False</strong> otherwise.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the user’s account type was successfully changed, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="UserPool.ChangeLanguage">
+<code class="descclassname">UserPool.</code><code class="descname">ChangeLanguage</code><span class="sig-paren">(</span><em>self</em>, <em>userUuid</em>, <em>language</em><span class="sig-paren">)</span><a class="headerlink" href="#UserPool.ChangeLanguage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the language for a user.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>userUuid</strong> – The user UUID.</li>
+<li><strong>language</strong> (<em>str</em>) – The new language.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the user’s password was successfully set, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="UserPool.ChangePassword">
+<code class="descclassname">UserPool.</code><code class="descname">ChangePassword</code><span class="sig-paren">(</span><em>self</em>, <em>userUuid</em>, <em>oldPassword</em>, <em>newPassword</em><span class="sig-paren">)</span><a class="headerlink" href="#UserPool.ChangePassword" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes a user’s password.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>userUuid</strong> – <div class="versionadded">
+<p><span class="versionmodified">New in version R16.021: </span>The user UUID.</p>
+</div>
+</li>
+<li><strong>oldPassword</strong> (<em>str</em>) – The old user’s password.</li>
+<li><strong>newPassword</strong> (<em>str</em>) – The new user’s password.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>True</strong> if the user’s password was successfully changed, otherwise <strong>False</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="UserPool.GetUsers">
+<code class="descclassname">UserPool.</code><code class="descname">GetUsers</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#UserPool.GetUsers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the users information from the pool.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version R16.021.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list of dict{<strong>username</strong>, str, <strong>description</strong>: str, <strong>uuid</strong>: <a class="reference external" href="https://docs.python.org/release/2.7/library/uuid.html#uuid.UUID">UUID</a>, , <strong>isadmin</strong>: bool, <strong>language</strong>: str}</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The users information.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../particles/index.html" title="c4d.modules.particles"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../Repository/index.html" title="c4d.modules.net.Repository"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.modules.net</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

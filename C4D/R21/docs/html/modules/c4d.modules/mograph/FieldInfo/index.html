@@ -1,0 +1,309 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>c4d.modules.mograph.FieldInfo &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="c4d.modules.mograph.FieldInput" href="../FieldInput/index.html" />
+    <link rel="prev" title="c4d.modules.mograph.FieldCallerStack" href="../FieldCallerStack/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../FieldInput/index.html" title="c4d.modules.mograph.FieldInput"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../FieldCallerStack/index.html" title="c4d.modules.mograph.FieldCallerStack"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">c4d.modules.mograph</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c4d-modules-mograph-fieldinfo">
+<h1>c4d.modules.mograph.FieldInfo<a class="headerlink" href="#c4d-modules-mograph-fieldinfo" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="c4d.modules.mograph.FieldInfo">
+<em class="property">class </em><code class="descclassname">c4d.modules.mograph.</code><code class="descname">FieldInfo</code><a class="headerlink" href="#c4d.modules.mograph.FieldInfo" title="Permalink to this definition">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified">New in version R20.</span></p>
+</div>
+</dd></dl>
+
+<p class="rubric">Attributes</p>
+<p><blockquote>
+<div><dl class="attribute">
+<dt id="FieldInfo._flags">
+<code class="descclassname">FieldInfo.</code><code class="descname">_flags</code><a class="headerlink" href="#FieldInfo._flags" title="Permalink to this definition">¶</a></dt>
+<dd><p>The channels that should be sampled.</p>
+<p><strong>Type:</strong> int</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="FieldInfo._threadIndex">
+<code class="descclassname">FieldInfo.</code><code class="descname">_threadIndex</code><a class="headerlink" href="#FieldInfo._threadIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>The current thread index.</p>
+<p><strong>Type:</strong> int</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="FieldInfo._totalThreadCount">
+<code class="descclassname">FieldInfo.</code><code class="descname">_totalThreadCount</code><a class="headerlink" href="#FieldInfo._totalThreadCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of threads active for the current execution.</p>
+<p><strong>Type:</strong> int</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="FieldInfo._callerThread">
+<code class="descclassname">FieldInfo.</code><code class="descname">_callerThread</code><a class="headerlink" href="#FieldInfo._callerThread" title="Permalink to this definition">¶</a></dt>
+<dd><p>The calling thread. Required.</p>
+<p><strong>Type:</strong> <a class="reference internal" href="../../../c4d.threading/BaseThread/index.html#c4d.threading.BaseThread" title="c4d.threading.BaseThread"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.threading.BaseThread</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="FieldInfo._doc">
+<code class="descclassname">FieldInfo.</code><code class="descname">_doc</code><a class="headerlink" href="#FieldInfo._doc" title="Permalink to this definition">¶</a></dt>
+<dd><p>The calling document. Required.</p>
+<p><strong>Type:</strong> <a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.documents.BaseDocument</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="FieldInfo._callerStack">
+<code class="descclassname">FieldInfo.</code><code class="descname">_callerStack</code><a class="headerlink" href="#FieldInfo._callerStack" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of objects for the calculation as well as an ID for the invocation chain. Required.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The caller stack ID is especially useful to hash data to a specific caller.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The ID uses the memory addresses of the callers so the value can change on undo/redo and on document load.</p>
+</div>
+<p><strong>Type:</strong> <a class="reference internal" href="../FieldCallerStack/index.html#c4d.modules.mograph.FieldCallerStack" title="c4d.modules.mograph.FieldCallerStack"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.mograph.FieldCallerStack</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="FieldInfo._inputData">
+<code class="descclassname">FieldInfo.</code><code class="descname">_inputData</code><a class="headerlink" href="#FieldInfo._inputData" title="Permalink to this definition">¶</a></dt>
+<dd><p>The input data to be sampled.</p>
+<p><strong>Type:</strong> <a class="reference internal" href="../FieldInput/index.html#c4d.modules.mograph.FieldInput" title="c4d.modules.mograph.FieldInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.mograph.FieldInput</span></code></a></p>
+</dd></dl>
+
+</div></blockquote>
+</p>
+</div>
+<p class="rubric">Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#FieldInfo.__init__" title="FieldInfo.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldInfo.__init__(self)</span></code></a></td>
+<td>Creates a <a class="reference internal" href="#c4d.modules.mograph.FieldInfo" title="c4d.modules.mograph.FieldInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInfo</span></code></a> instance.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#FieldInfo.IsValid" title="FieldInfo.IsValid"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldInfo.IsValid(self)</span></code></a></td>
+<td>Checks if the <a class="reference internal" href="#c4d.modules.mograph.FieldInfo" title="c4d.modules.mograph.FieldInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInfo</span></code></a> data is valid.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#FieldInfo.IsPopulated" title="FieldInfo.IsPopulated"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FieldInfo.IsPopulated(self)</span></code></a></td>
+<td>Checks if the <a class="reference internal" href="#c4d.modules.mograph.FieldInfo" title="c4d.modules.mograph.FieldInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInfo</span></code></a> data is valid and non-empty.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Static Methods Signatures</p>
+<p><table border="1" class="colwidths-auto docutils align-left">
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#c4d.modules.mograph.FieldInfo.Create" title="c4d.modules.mograph.FieldInfo.Create"><code class="xref py py-meth docutils literal notranslate"><span class="pre">c4d.modules.mograph.FieldInfo.Create(self,</span> <span class="pre">flags,</span> <span class="pre">thread,</span> <span class="pre">...)</span></code></a></td>
+<td>Creates a <a class="reference internal" href="#c4d.modules.mograph.FieldInfo" title="c4d.modules.mograph.FieldInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.mograph.FieldInfo</span></code></a> while relaying potential allocation errors.</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="rubric">Methods Documentation</p>
+<p><dl class="method">
+<dt id="FieldInfo.__init__">
+<code class="descclassname">FieldInfo.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldInfo.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a <a class="reference internal" href="#c4d.modules.mograph.FieldInfo" title="c4d.modules.mograph.FieldInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInfo</span></code></a> instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#c4d.modules.mograph.FieldInfo" title="c4d.modules.mograph.FieldInfo">c4d.modules.mograph.FieldInfo</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The created <a class="reference internal" href="#c4d.modules.mograph.FieldInfo" title="c4d.modules.mograph.FieldInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInfo</span></code></a> instance.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldInfo.IsValid">
+<code class="descclassname">FieldInfo.</code><code class="descname">IsValid</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldInfo.IsValid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the <a class="reference internal" href="#c4d.modules.mograph.FieldInfo" title="c4d.modules.mograph.FieldInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInfo</span></code></a> data is valid.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Default empty <a class="reference internal" href="#c4d.modules.mograph.FieldInfo" title="c4d.modules.mograph.FieldInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInfo</span></code></a> is considered valid.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the <a class="reference internal" href="#c4d.modules.mograph.FieldInfo" title="c4d.modules.mograph.FieldInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInfo</span></code></a> is valid, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="FieldInfo.IsPopulated">
+<code class="descclassname">FieldInfo.</code><code class="descname">IsPopulated</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#FieldInfo.IsPopulated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the <a class="reference internal" href="#c4d.modules.mograph.FieldInfo" title="c4d.modules.mograph.FieldInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInfo</span></code></a> data is valid and non-empty.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Required <a class="reference internal" href="#c4d.modules.mograph.FieldInfo" title="c4d.modules.mograph.FieldInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInfo</span></code></a> content should be set and ready for sampling.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>True</strong> if the <a class="reference internal" href="#c4d.modules.mograph.FieldInfo" title="c4d.modules.mograph.FieldInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInfo</span></code></a> is populated, otherwise <strong>False</strong>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+<p class="rubric">Static Methods Documentation</p>
+<p><dl class="staticmethod">
+<dt id="c4d.modules.mograph.FieldInfo.Create">
+<em class="property">static </em><code class="descclassname">c4d.modules.mograph.FieldInfo.</code><code class="descname">Create</code><span class="sig-paren">(</span><em>self</em>, <em>flags</em>, <em>thread</em>, <em>doc</em>, <em>currentThreadIndex</em>, <em>threadCount</em>, <em>inputs</em>, <em>callers</em><span class="sig-paren">)</span><a class="headerlink" href="#c4d.modules.mograph.FieldInfo.Create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a <a class="reference internal" href="#c4d.modules.mograph.FieldInfo" title="c4d.modules.mograph.FieldInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">c4d.modules.mograph.FieldInfo</span></code></a> while relaying potential allocation errors.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>flags</strong> (<em>int</em>) – <p>The channels to sample.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="47%" />
+<col width="53%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>FIELDSAMPLE_FLAG_VALUE</em></td>
+<td>Sample only the value.</td>
+</tr>
+<tr class="row-even"><td><em>FIELDSAMPLE_FLAG_DIRECTION</em></td>
+<td>Sample the velocity.</td>
+</tr>
+<tr class="row-odd"><td><em>FIELDSAMPLE_FLAG_COLOR</em></td>
+<td>Sample the color.</td>
+</tr>
+<tr class="row-even"><td><em>FIELDSAMPLE_FLAG_ROTATION</em></td>
+<td>Sample the rotational velocity.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>thread</strong> (<a class="reference internal" href="../../../c4d.threading/BaseThread/index.html#c4d.threading.BaseThread" title="c4d.threading.BaseThread"><em>c4d.threading.BaseThread</em></a>) – The caller thread.</li>
+<li><strong>doc</strong> (<a class="reference internal" href="../../../c4d.documents/BaseDocument/index.html#c4d.documents.BaseDocument" title="c4d.documents.BaseDocument"><em>c4d.documents.BaseDocument</em></a>) – The document to sample.</li>
+<li><strong>currentThreadIndex</strong> (<em>int</em>) – The thread index that will sample those points.</li>
+<li><strong>threadCount</strong> (<em>int</em>) – The total thread count.</li>
+<li><strong>inputs</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../FieldInput/index.html#c4d.modules.mograph.FieldInput" title="c4d.modules.mograph.FieldInput"><em>c4d.modules.mograph.FieldInput</em></a><em>]</em>) – The full point list.</li>
+<li><strong>callers</strong> (<em>Optional</em><em>[</em><em>list</em><em>(</em><a class="reference internal" href="../../../c4d/C4DAtom/GeListNode/BaseList2D/index.html#c4d.BaseList2D" title="c4d.BaseList2D"><em>c4d.BaseList2D</em></a><em>)</em><em>]</em>) – An initializer list to build the stack, first item is base of stack.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><cite>c4d.modules.mograph.FieldInfo</cite></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The created FieldInfo</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../FieldInput/index.html" title="c4d.modules.mograph.FieldInput"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../FieldCallerStack/index.html" title="c4d.modules.mograph.FieldCallerStack"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >c4d.modules</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >c4d.modules.mograph</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

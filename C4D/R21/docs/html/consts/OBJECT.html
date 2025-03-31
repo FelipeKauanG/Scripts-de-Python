@@ -1,0 +1,159 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>OBJECT &#8212; Cinema 4D SDK 21.207 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="OPENGL" href="OPENGL.html" />
+    <link rel="prev" title="NOCLIP" href="NOCLIP.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="OPENGL.html" title="OPENGL"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="NOCLIP.html" title="NOCLIP"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../types/index.html" accesskey="U">Types and Symbols List</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="object">
+<h1>OBJECT<a class="headerlink" href="#object" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="6%" />
+<col width="94%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>OBJECT_MODIFIER</em></td>
+<td>Modifier object. Deforms the surrounding object. (E.g. bend.)</td>
+</tr>
+<tr class="row-even"><td><em>OBJECT_HIERARCHYMODIFIER</em></td>
+<td>Hierarchical modifier. Deforms the surrounding objects together with other instances in a hierarchy chain. Only the top-most instance of the plugin in a chain is called. (E.g. bones.)</td>
+</tr>
+<tr class="row-odd"><td><em>OBJECT_GENERATOR</em></td>
+<td>Generator object. Produces a polygonal or spline representation on its own. (E.g. primitive cube.)</td>
+</tr>
+<tr class="row-even"><td><em>OBJECT_INPUT</em></td>
+<td>Used in combination with <em>OBJECT_GENERATOR</em>. Specifies that the generator builds a polygon or spline, using its sub-objects as input. (E.g. Sweep Subdivision Surface, Boolean.)</td>
+</tr>
+<tr class="row-odd"><td><em>OBJECT_PARTICLEMODIFIER</em></td>
+<td>Particle modifier.</td>
+</tr>
+<tr class="row-even"><td><em>OBJECT_ISSPLINE</em></td>
+<td>The object is a spline.</td>
+</tr>
+<tr class="row-odd"><td><em>OBJECT_USECACHECOLOR</em></td>
+<td>If this flag is specified, the generator object itself controls the objects’ colors (the ones that determine the wireframe/shaded color). Normally these are automatically overwritten by the generator objects settings. E.g. if the instance object is set to green, automatically all of its cache objects get the green color. By setting this flag an instance object could individually color objects.</td>
+</tr>
+<tr class="row-even"><td><em>OBJECT_CAMERADEPENDENT</em></td>
+<td>Camera dependent.</td>
+</tr>
+<tr class="row-odd"><td><em>OBJECT_POINTOBJECT</em></td>
+<td>Point Object.</td>
+</tr>
+<tr class="row-even"><td><em>OBJECT_POLYGONOBJECT</em></td>
+<td>Polygon object.</td>
+</tr>
+<tr class="row-odd"><td><em>OBJECT_NO_PLA</em></td>
+<td>Objects derived from <a class="reference internal" href="../modules/c4d/C4DAtom/GeListNode/BaseList2D/BaseObject/PointObject/index.html#c4d.PointObject" title="c4d.PointObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PointObject</span></code></a> will not use auto-keyframing (e.g. Joints can contain points and PLA auto-keyframing is not useful for them)</td>
+</tr>
+<tr class="row-even"><td><em>OBJECT_DONTFREECACHE</em></td>
+<td>Objects’ (generators) caches will not be be deleted - users must maintain caches themselves.</td>
+</tr>
+<tr class="row-odd"><td><em>OBJECT_CALL_ADDEXECUTION</em></td>
+<td>Must be set to call <a class="reference internal" href="../modules/c4d.plugins/BaseData/NodeData/ObjectData/index.html#ObjectData.Execute" title="ObjectData.Execute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ObjectData.Execute()</span></code></a> in the priority pipeline specified by <a class="reference internal" href="../modules/c4d.plugins/BaseData/NodeData/ObjectData/index.html#ObjectData.AddToExecution" title="ObjectData.AddToExecution"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ObjectData.AddToExecution()</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><em>OBJECT_NOCHILDEXPRESSIONS</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20: </span>Don’t execute expression tags on the children of the object.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><em>OBJECT_FIELDOBJECT</em></td>
+<td><div class="first last versionadded">
+<p><span class="versionmodified">New in version R20: </span>Field object. Can’t be created in Python.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick Search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%;text-align: center;">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="OPENGL.html" title="OPENGL"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="NOCLIP.html" title="NOCLIP"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cinema 4D SDK 21.207 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../types/index.html" >Types and Symbols List</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Maxon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>
