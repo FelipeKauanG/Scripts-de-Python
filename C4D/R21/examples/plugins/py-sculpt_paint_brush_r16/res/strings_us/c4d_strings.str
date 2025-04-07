@@ -1,8 +1,0 @@
-// C4D-StringResource
-// Identifier	Text
-
-STRINGTABLE
-{
-    IDS_PYTHON_BRUSH_PAINT		"Python Paint";
-    IDS_PYTHON_BRUSH_PAINT_HELP	"Paint a BodyPaint Layer";
-}
