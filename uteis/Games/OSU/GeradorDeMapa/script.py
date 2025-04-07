@@ -1,4 +1,4 @@
-import PySimpleGUI as sg
+import PySimpleGUIQt as sg
 import shutil
 import os
 import json
@@ -18,6 +18,12 @@ with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:
 pasta = "mapas_path"
 audio = "audio_path"
 
+fyletypes = [
+    ("Arquivos de áudio", "*.mp3"),
+    ("Arquivos de áudio", "*.ogg"),
+    ("Todos os arquivos", "*.*")
+]
+
 
 # Valor da chave
 valor_pasta = dados[pasta]
@@ -31,7 +37,7 @@ if valor_pasta == "":
 # tema da janela
 sg.theme("Darkblack1")
 
-quantidades = 1
+quantidades = 6
 
 # =========================================================================
 #
@@ -53,13 +59,13 @@ else:
 # Seleção de pasta
 layoutPasta = [
         [sg.Text(valor_pasta, visible=True, key="caminhoPasta", justification="center")],
-        [sg.FolderBrowse("Procurar pasta", key="pasta", initial_folder=desktop_path)], [sg.Button("Atualizar caminho da pasta", key="atualizarPasta")]
+        [sg.FolderBrowse("Procurar pasta", key="pasta", initial_folder=desktop_path, enable_events=True)], [sg.Button("Atualizar caminho da pasta", key="atualizarPasta")]
         ]
 
 # Layout para a seleção de audio
 layoutAudio = [
     [sg.Text(valor_audio, visible=True, key="caminhoAudio", justification="center")],
-    [sg.FileBrowse("Procurar audio", key="audio", initial_folder=desktop_path)], [sg.Button("Mostrar caminho do audio", key="atualizarAudio")]
+    [sg.FileBrowse("Procurar audio", key="audio", initial_folder=desktop_path, file_types=fyletypes, enable_events=True)], [sg.Button("Mostrar caminho do audio", key="atualizarAudio")]
 ]
 configMapas = [
         [sg.FilesBrowse("Biblioteca de sprites", key="sprites")],
@@ -70,7 +76,7 @@ configMapas = [
 
 
 configEditor = [
-    [sg.Text("Dificuldade"), sg.Combo(dificults)],
+    [sg.Text("Dificuldade"), sg.Combo(dificults, enable_events=True, key="EDITOR")],
     [sg.Text("Multiplicador de distância do snap"), sg.Input("3", key="distancesnap")],
     [sg.Text("Divisor do beat snap"), sg.Input("16")],
     [sg.Text("Tamanho da malha do editor"), sg.Input("4")],
@@ -78,7 +84,7 @@ configEditor = [
 
 ]
 configMetadata =[
-    [sg.Text("Dificuldade"), sg.Combo(dificults)],
+    [sg.Text("Dificuldade"), sg.Combo(dificults, enable_events=True, key="METADATA")],
     [sg.Text("Título"), sg.Input(key="tittle")],
     [sg.Text("Título unicode"), sg.Input(key="unicodeTittle"),],
     [sg.Text("Artista"), sg.Input(key="artist"),],
@@ -92,7 +98,7 @@ configMetadata =[
 
 configDificulty = [
     [sg.Frame("Dificuldades", [
-        [sg.Text("Dificuldade"), sg.Combo(dificults)],
+        [sg.Text("Dificuldade"), sg.Combo(dificults, enable_events=True, key="DIFICULDADE")],
         [sg.Text("HP"), sg.Input(key="hp")],
         [sg.Text("CS"), sg.Input(key="cs")],
         [sg.Text("OD"), sg.Input(key="od")],
@@ -110,7 +116,7 @@ configStoryboards = [
 ]
 
 configAvançado = [
-    [sg.Text("Dificuldade"), sg.Combo(dificults)],
+    [sg.Text("Dificuldade"), sg.Combo(dificults, enable_events=True, key="AVANCADO")],
     [sg.Text("Audio lead-in"), sg.Input("", key="audioleadin")],
     [sg.HorizontalSeparator()],
     [sg.Frame("Storyboards", configStoryboards)]
@@ -128,10 +134,45 @@ layout = [
 
 window = sg.Window("Configuração dos mapas", layout=layout)
 
-
+print("")
 while True:
     event, value = window.read()
     if event == "Cancelar" or event == sg.WIN_CLOSED:
         break
     if event == "Ok":
+        print("\033[35m" + "Gerando mapa..." + "\033[m")
         break
+    
+    if event == "METADATA":
+        print(f"Metadata: {value["METADATA"]}")
+
+    elif event == "DIFICULDADE":
+        print(f"Dificuldade: {value["DIFICULDADE"]}")
+
+    elif event == "EDITOR":
+        print(f"Editor: {value["EDITOR"]}")
+
+    elif event == "AVANCADO":
+        print(f"Avançado: {value["AVANCADO"]}")
+
+    elif event == "audio": #Atualizar o caminho do audio
+        print(f"Audio: {value["audio"][0]}")
+        window["caminhoAudio"].update(value["audio"][0])
+
+        with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:
+            dados = json.load(arquivo)
+            dados[audio] = value["audio"][0]
+
+        with open(caminho_arquivo, 'w', encoding='utf-8') as arquivo:
+            json.dump(dados, arquivo, indent=4, ensure_ascii=False)
+
+    elif event == "pasta": #Atualiza o caminho da pasta
+        print(f"Pasta: {value["pasta"]}")
+        window["caminhoPasta"].update(value["pasta"])
+
+        with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:
+            dados = json.load(arquivo)
+            dados[pasta] = value["pasta"]
+
+        with open(caminho_arquivo, 'w', encoding='utf-8') as arquivo:
+            json.dump(dados, arquivo, indent=4, ensure_ascii=False)

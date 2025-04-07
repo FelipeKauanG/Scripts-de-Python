@@ -1,32 +1,23 @@
-import tkinter as tk
-from tkinter import ttk
+import PySimpleGUIQt as sg
 
-def main():
-    # Criação da janela principal
-    root = tk.Tk()
-    root.title("Olá Mundo")
-    root.geometry("300x150")
-    
-    # Estilo moderno usando ttk
-    style = ttk.Style()
-    style.theme_use("clam")  # Define um tema moderno
-    
-    # Configuração de cores para o modo escuro
-    root.configure(bg="#2E2E2E")  # Fundo da janela principal
-    style.configure("TLabel", background="#2E2E2E", foreground="#FFFFFF", font=("Helvetica", 16))
-    style.configure("TButton", background="#444444", foreground="#FFFFFF")
-    style.map("TButton", background=[("active", "#555555")])  # Cor ao passar o mouse
-    
-    # Label para exibir "Olá, Mundo!"
-    label = ttk.Label(root, text="Olá, Mundo!")
-    label.pack(pady=20)
-    
-    # Botão para fechar a janela
-    button = ttk.Button(root, text="Fechar", command=root.destroy)
-    button.pack(pady=10)
-    
-    # Inicia o loop da interface gráfica
-    root.mainloop()
+# Layout da interface
+layout = [
+    [sg.Text("Selecione um arquivo:")],
+    [sg.Input(key="-FILE-"), sg.FilesBrowse(file_types=(("Arquivos de Texto", "*.txt"), ("Imagens PNG", "*.png"), ("Todos os Arquivos", "*.*")))],
+    [sg.Button("Confirmar"), sg.Button("Cancelar")]
+]
 
-if __name__ == "__main__":
-    main()
+# Criação da janela
+window = sg.Window("Selecionar Arquivo", layout)
+
+# Loop de eventos
+while True:
+    event, values = window.read()
+    if event == sg.WINDOW_CLOSED or event == "Cancelar":
+        break
+    elif event == "Confirmar":
+        arquivo_selecionado = values["-FILE-"]
+        sg.popup(f"Arquivo(s) selecionado(s): {arquivo_selecionado}")
+
+# Fechamento da janela
+window.close()
