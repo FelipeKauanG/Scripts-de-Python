@@ -2,7 +2,7 @@
 
 
 a = Analysis(
-    ['C:\\Users\\Shadic\\Documents\\GitHub\\Scripts-de-Python\\uteis\\Games\\OSU\\GeradorDeMapa\\script.py'],
+    ['uteis\\Games\\OSU\\GeradorDeMapa\\script.py'],
     pathex=[],
     binaries=[],
     datas=[],
@@ -35,4 +35,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon=['uteis\\Games\\OSU\\Icon.ico'],
 )
