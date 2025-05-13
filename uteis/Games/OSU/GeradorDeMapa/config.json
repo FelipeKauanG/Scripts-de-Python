@@ -1,56 +1,27 @@
 {
-    "mapas_path": "C:/Users/Shadic/Desktop/beatmap",
-    "audio_path": "",
-    "Quantidade": 2,
+    "mapas_path": "C:/Users/Shadic/Desktop/Beatmap",
+    "audio_path": "C:/Users/Shadic/Desktop",
+    "Quantidade": 3,
     "Audios": {
-        "Click": {
+        "Click1": {
             "Audio": "uteis/Games/OSU/GeradorDeMapa/sounds/1.ogg",
             "ativo": 0
+        },
+        "Digitar": {
+            "Audio": "uteis/Games/OSU/GeradorDeMapa/sounds/3.ogg",
+            "ativo": 0
+        },
+        "Erase": {
+            "Audio": "uteis/Games/OSU/GeradorDeMapa/sounds/combobreak.ogg",
+            "ativo": 0
+        },
+        "FailAplicar": {
+            "Audio": "uteis/Games/OSU/GeradorDeMapa/sounds/FailAplicar.ogg",
+            "ativo": 0
+        },
+        "AplicarPass": {
+            "Audio": "uteis/Games/OSU/GeradorDeMapa/sounds/sectionpass.ogg",
+            "ativo": 0
         }
-    },
-    "General": {
-        "AudioFilename": "caminho",
-        "AudioLeadIn": "valor",
-        "PreviewTime": "valor",
-        "Countdown": "valor",
-        "SampleSet": "valor",
-        "StackLeniency": "valor",
-        "Mode": "valor",
-        "LetterboxInBreaks": "valor",
-        "WidescreenStoryboard": "valor"
-    },
-    "Editor": {
-        "DistanceSpacing": "valor",
-        "BeatDivisor": "valor",
-        "GridSize": "valor",
-        "TimelineZoom": "valor"
-    },
-    "Metadata": {
-        "Title": "valor",
-        "TitleUnicode": "valor",
-        "Artist": "valor",
-        "ArtistUnicode": "valor",
-        "Creator": "valor",
-        "Version": "valor",
-        "Source": "valor",
-        "Tags": "valor",
-        "BeatmapID": "valor",
-        "BeatmapSetID": "valor"
-    },
-    "Difficulty": {
-        "HPDrainRate": "valor",
-        "CircleSize": "valor",
-        "OverallDifficulty": "valor",
-        "ApproachRate": "valor",
-        "SliderMultiplier": "valor",
-        "SliderTickRate": "valor"
-    },
-    "Events": {
-        "Background": "valor",
-        "BreakPeriod": "valor",
-        "BreakStart": "valor",
-        "BreakEnd": "valor",
-        "BreakTime": "valor",
-        "BreakLength": "valor"
     }
 }
