@@ -1,27 +1,5 @@
 {
-    "mapas_path": "C:/Users/Shadic/Desktop/Beatmap",
-    "audio_path": "C:/Users/Shadic/Desktop",
-    "Quantidade": 3,
-    "Audios": {
-        "Click1": {
-            "Audio": "uteis/Games/OSU/GeradorDeMapa/sounds/1.ogg",
-            "ativo": 0
-        },
-        "Digitar": {
-            "Audio": "uteis/Games/OSU/GeradorDeMapa/sounds/3.ogg",
-            "ativo": 0
-        },
-        "Erase": {
-            "Audio": "uteis/Games/OSU/GeradorDeMapa/sounds/combobreak.ogg",
-            "ativo": 0
-        },
-        "FailAplicar": {
-            "Audio": "uteis/Games/OSU/GeradorDeMapa/sounds/FailAplicar.ogg",
-            "ativo": 0
-        },
-        "AplicarPass": {
-            "Audio": "uteis/Games/OSU/GeradorDeMapa/sounds/sectionpass.ogg",
-            "ativo": 0
-        }
-    }
+    "mapas_path": "C:/Users/Shadic/Desktop/teste",
+    "audio_path": "C:/Users/Shadic/Desktop/Beatmap/audio.mp3",
+    "Quantidade": 3
 }

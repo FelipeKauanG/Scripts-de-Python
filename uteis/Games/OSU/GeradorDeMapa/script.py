@@ -2,9 +2,9 @@ import PySimpleGUIQt as sg
 import os
 import json
 import screeninfo
-import pygame
 import shutil
 from numpy import arange
+import zipfile
 
 
 screenHeight = int(str(str(screeninfo.get_monitors()[0]).split(",")[3]).split("=")[1])
@@ -20,8 +20,8 @@ desktop_path = os.path.join(os.path.join(user), 'Desktop')
 preto = "#111111"
 cinza = "#4f4f4f"
 branco = "#eeeeee"
-vermelho = "#ff4551"
-verde = "#80ff4a"
+vermelho = "#ff4555"
+verde = "#caff45"
 azul = "#3342B7"
 roxo = "#040823" #mediano
 roxo1 = "#090130" #escuro
@@ -32,6 +32,58 @@ marrom = "#1E1C1B" #Escuro
 fonte12 = "Calibri 12"
 fonte14 = "Calibri 14"
 fonte16 = "Calibri 16"
+
+osu_blank_genrl = {
+    "AudioFilename": "",
+    "AudioLeadIn": 0,
+    "PreviewTime":-1,
+    "Countdown": 0,
+    "SampleSet": "Normal",
+    "StackLeniency": 0.7,
+    "Mode": 0,
+    "LetterboxInBreaks": 0,
+    "WidescreenStoryboard": 0,
+}
+
+osu_blank_editor = {
+    "DistanceSpacing": 1.3,
+    "BeatDivisor": 4,
+    "GridSize": 16,
+    "TimelineZoom": 1
+}
+
+osu_blank_metadata = {
+    "Title": "",
+    "TitleUnicode": "",
+    "Artist": "",
+    "ArtistUnicode": "",
+    "Creator": "",
+    "Version": "",
+    "Source": "",
+    "Tags": "",
+    "BeatmapID": 0,
+    "BeatmapSetID": -1,
+}
+
+osu_blank_dificculty = {
+    "HPDrainRate": 5,
+    "CircleSize": 5,
+    "OverallDifficulty": 5,
+    "ApproachRate": 5,
+    "SliderMultiplier": 1.4,
+    "SliderTickRate": 1
+}
+
+osu_blank_events = (
+    "//Background and Video vents",
+    "//Break Periods",
+    "//Storyboard layer 0 (Background)",
+    "//Storyboard layer 1 (Fail)",
+    "//Storyboard layer 2 (Pass)",
+    "//Storyboard layer 3 (Foreground)",
+    "//Storyboard layer 4 (Overlay)",
+    "//Storyboard Sound Sample",
+)
 
 
 # APP
@@ -45,21 +97,15 @@ def Aplicativo():
     # Nome da chave
     pasta = "mapas_path"
     audio = "audio_path"
-    click_audio = "Audios"
 
     # Valor da chave
     valor_pasta = dados[pasta]
     valor_audio = dados[audio]
-    click1 = dados[click_audio]["Click1"]["Audio"]
-    Digitar = dados[click_audio]["Digitar"]["Audio"]
-    erase = dados[click_audio]["Erase"]["Audio"]
-    FailAplicar = dados[click_audio]["FailAplicar"]["Audio"]
-    passAplicar = dados[click_audio]["AplicarPass"]["Audio"]
 
     if valor_pasta == "" or type(valor_pasta) == "<class 'NoneType'>":
 
         valor_pasta = desktop_path
-        
+
         with open(caminhoArquivo, "w", encoding="UTF-8") as arquivo:
             dados["mapas_path"] = desktop_path
             print(f"Desktop path: {desktop_path}")
@@ -67,8 +113,8 @@ def Aplicativo():
 
     if type(valor_pasta) == "<class 'NoneType'>" or valor_audio == "":
 
-        valor_audio = desktop_path 
-        
+        valor_audio = desktop_path
+
         with open(caminhoArquivo, "w", encoding="UTF-8") as arquivo:
             dados["audio_path"] = desktop_path
             print(f"Desktop path: {desktop_path}")
@@ -84,37 +130,6 @@ def Aplicativo():
         ("Arquivos de imagem", "*.png;*.jpg")
         ]
 
-    def tocarSomclick1():
-        pygame.mixer.init()
-        pygame.mixer_music.set_volume(0.1)
-        pygame.mixer.music.load(click1)
-        pygame.mixer.music.play()
-    
-    def tocarSomDigitando():
-        pygame.mixer.init()
-        pygame.mixer_music.set_volume(0.1)
-        pygame.mixer.music.load(Digitar)
-        pygame.mixer.music.play()
-
-    def EraseSound():
-        pygame.mixer.init()
-        pygame.mixer_music.set_volume(0.1)
-        pygame.mixer.music.load(erase)
-        pygame.mixer.music.play()
-
-    def FailAplicarSound():
-        pygame.mixer.init()
-        pygame.mixer_music.set_volume(0.1)
-        pygame.mixer.music.load(FailAplicar)
-        pygame.mixer.music.play()
-
-    def Aplicarpass():
-        pygame.mixer.init()
-        pygame.mixer_music.set_volume(0.1)
-        pygame.mixer.music.load(passAplicar)
-        pygame.mixer.music.play()
-
-    
     with open(r"uteis/Games/OSU/GeradorDeMapa/config.json", mode="r",
     encoding="UTF-8") as arquivo:
         quantidades = json.load(arquivo)["Quantidade"]
@@ -124,7 +139,7 @@ def Aplicativo():
 
     dificults = ["Easy", "Normal", "Hard", "Insane", "Expert", "Expert+"]
     dificultsDefault = ["Easy", "Normal", "Hard", "Insane", "Expert", "Expert+"]
-    
+
 
     # Modifica a quantidade de dificuldades no array dificults
     def modfied(x=quantidades):
@@ -157,14 +172,13 @@ def Aplicativo():
             file_types=fyletypesSprites, font=fonte16, button_color=(branco, roxo3))],
             [sg.Frame("Seleção de pasta", layoutPasta, frame_color="#281259", background_color=roxo2, font=fonte16)],
             [sg.Frame("Seleção de audio", layoutAudio, frame_color="#281259", background_color=roxo2, font=fonte16)],
-            [sg.Text("Quantidade de mapas", background_color=roxo2, font=fonte16), sg.Button("?", enable_events=True, key="Qquantidade", font=fonte16,size=(4,1), button_color=(branco, cinza))],
             [sg.Spin(values=[str(i) for i in range(1, 101)],
             key="quantidadeDificuldades", enable_events=True,
             initial_value=str(quantidades), background_color=marrom,text_color="#ffffff", font=fonte16)]
             ]
 
     configMetadata =[
-        [sg.Text("Dificuldade", background_color=roxo2, font=fonte16), sg.Combo(dificults, enable_events=True, key="METADATA", background_color=marrom, text_color="#ffffff")],
+        [sg.Text("Dificuldade", background_color=roxo2, font=fonte16), sg.Combo(dificults, enable_events=True, key="METADATA", background_color=marrom, text_color="#ffffff", font=fonte12)],
         [sg.Text("Título", background_color=roxo2, font=fonte16), sg.Input(key="tittle", background_color=marrom, text_color="#ffffff", enable_events=True, font=fonte12)],
         [sg.Text("Título unicode", background_color=roxo2, font=fonte16), sg.Input(key="unicodeTittle", background_color=marrom, text_color="#ffffff", enable_events=True, font=fonte12)],
         [sg.Text("Artista", background_color=roxo2, font=fonte16), sg.Input(key="artist", background_color=marrom, text_color="#ffffff", enable_events=True)],
@@ -172,65 +186,18 @@ def Aplicativo():
         [sg.Text("Criador", background_color=roxo2, font=fonte16), sg.Input(key="creator", background_color=marrom, text_color="#ffffff", enable_events=True, font=fonte12)],
         [sg.Text("Fonte", background_color=roxo2, font=fonte16), sg.Input(key="source", background_color=marrom, text_color="#ffffff", enable_events=True, font=fonte12)],
         [sg.Text("Etiquetas", background_color=roxo2, font=fonte16), sg.Input(key="tags", background_color=marrom, text_color="#ffffff", enable_events=True, font=fonte12)],
-        [sg.Text("contagem (3,2,1)", background_color=roxo2, font=fonte16), sg.Checkbox("", key="countdown", background_color="", enable_events=True)],
-        
-
-        [sg.Button("Aplicar", size=(25, 1), button_color=(branco, azul), font="Calibri 12 bold", enable_events=True, key="ConfigMetadata"), sg.Button("Limpar", size=(25, 1), button_color=(branco, cinza), font="Calibri 12 bold", enable_events=True, key="ConfigMetadataLimpar")]
+        [sg.Text("contagem (3,2,1)", background_color=roxo2, font=fonte16), sg.Checkbox("", key="countdown", background_color="", enable_events=True)]
     ]
 
     valueDificulty = arange(10, 0, step=-1)
 
     configDificulty = [
-        [sg.Text("Dificuldade", background_color=roxo2, font=fonte16), sg.Combo(dificults, enable_events=True, key="DIFICULDADE", background_color=marrom, text_color="#ffffff")],
-        [sg.Text("HP", background_color=roxo2, font=fonte16), sg.Combo(values= (valueDificulty), key="hp", background_color=marrom, text_color="#ffffff", default_value=5)],
-        [sg.Text("CS", background_color=roxo2, font=fonte16), sg.Combo(values= (valueDificulty), key="cs", background_color=marrom, text_color="#ffffff", default_value=5)],
-        [sg.Text("OD", background_color=roxo2, font=fonte16), sg.Combo(values= (valueDificulty), key="od", background_color=marrom, text_color="#ffffff", default_value=5)],
-        [sg.Text("AR", background_color=roxo2, font=fonte16), sg.Combo(values= (valueDificulty), key="ar", background_color=marrom, text_color="#ffffff", default_value=5)],
-        [sg.Button("Aplicar", size=(25, 1), button_color=(branco, azul), font="Calibri 12 bold", enable_events=True, key="ConfigDificulty")]
-    ]
-    configEditor = [
-        [sg.Text("Dificuldade", background_color=roxo2, font=fonte16), sg.Combo(dificults, enable_events=True, key="EDITOR", background_color=marrom, text_color="#ffffff")],
-        [sg.Text("Multiplicador de distância do snap", background_color=roxo2, font=fonte16), sg.Input("3", key="distancesnap", background_color=marrom, text_color="#ffffff", font=fonte16)],
-        [sg.Text("Divisor do beat snap", background_color=roxo2, font=fonte16), sg.Input("16", background_color=marrom, text_color="#ffffff", font=fonte16)],
-        [sg.Text("Tamanho da malha do editor", background_color=roxo2, font=fonte16), sg.Input("4", background_color=marrom, text_color="#ffffff", font=fonte16)],
-        [sg.Text("Zoom da timeline", background_color=roxo2, font=fonte16), sg.Input("4", background_color=marrom, text_color="#ffffff", font=fonte16)],
-        [sg.Button("Aplicar", size=(25,1), button_color=(branco, azul), font="Calibri 12 bold", enable_events=True, key="AplicarEditor")]
-
-    ]
-
-
-    configStoryboards = [
-        [sg.Check("Storyboard background", key="bgstoryboard", background_color="", font=fonte16)],
-        [sg.Check("Storyboard Fail", key="failstoryboard", background_color="", font=fonte16)],
-        [sg.Check("Storyboard Pass", key="storyboardpass", background_color="", font=fonte16)],
-        [sg.Check("Storyboard Foreground", key="storyboardfore", background_color="", font=fonte16)],
-        [sg.Check("Storyboard Overlay", key="storyboardover", background_color="", font=fonte16)]
-    ]
-    configAvançado = [
-        [sg.Text("Dificuldade", background_color=roxo2, font=fonte16),
-        sg.Combo(dificults, enable_events=True, key="AVANCADO",
-        background_color=marrom, text_color="#ffffff")],
-
-        [sg.Text("Audio lead-in", background_color=roxo2, font="Calibri 16"),
-        sg.Spin(values=[str(i) for i in range(1, 100)], key="audioleadin",
-        initial_value=str(1), background_color=marrom, text_color="#ffffff",
-        font="Calibri 14")],
-
-        [sg.Frame("", configStoryboards, background_color=roxo2)],
-        [sg.Button("Aplicar", size=(25,1), button_color=(branco, azul), font="Calibri 12 bold", enable_events=True, key="AplicarAvancado")]
-    ]
-    customização = [
-        [sg.Check("Efeito sonoro de click", background_color=(roxo2), key="clickSound", font=fonte16)],
-
-        [sg.Check("Efeito sonoro de modificação", background_color=(roxo2), key="ClickDigit", font=fonte16)],
-
-        [sg.Check("Efeito sonoro de apagar", background_color=(roxo2), key="EraseSound", font=fonte16)],
-
-        [sg.Check("Efeito sonoro de erro ao Aplicar", background_color=(roxo2), key="FailSound", font=fonte16)],
-
-        [sg.Check("Efeito sonoro de Aplicar", background_color=(roxo2), key="AplicarSound", font=fonte16 )],
-
-    ]
+        [sg.Text("Dificuldade", background_color=roxo2, font=fonte16), sg.Combo(dificults, enable_events=True, key="DIFICULDADE", background_color=marrom, text_color="#ffffff", font=fonte12)],
+        [sg.Text("HP", background_color=roxo2, font=fonte16), sg.Combo(values= (valueDificulty), key="hp", background_color=marrom, text_color="#ffffff", default_value=5, font=fonte14)],
+        [sg.Text("CS", background_color=roxo2, font=fonte16), sg.Combo(values= (valueDificulty), key="cs", background_color=marrom, text_color="#ffffff", default_value=5, font=fonte14)],
+        [sg.Text("OD", background_color=roxo2, font=fonte16), sg.Combo(values= (valueDificulty), key="od", background_color=marrom, text_color="#ffffff", default_value=5, font=fonte14)],
+        [sg.Text("AR", background_color=roxo2, font=fonte16), sg.Combo(values= (valueDificulty), key="ar", background_color=marrom, text_color="#ffffff", default_value=5, font=fonte14)]
+    ],
     layout = [
         [sg.Text(f"Seja bem vindo {name_user}\n",
             background_color="", font="Calibri 20 italic", text_color="#8253e6",
@@ -242,14 +209,7 @@ def Aplicativo():
             [sg.Tab("Metadata", configMetadata, background_color=roxo1, key="Metadata")],
 
             [sg.Tab("Dificuldade", configDificulty, background_color=roxo1, key="Dificuldade")],
-
-            [sg.Tab("Editor", configEditor, background_color=roxo1, key="Editor")],
-
-            [sg.Tab("Avançado", configAvançado, background_color=roxo1, key="Avançado")], 
-            [sg.Tab("Personalizar", layout=customização, background_color=roxo1, key="custom")]
             ], enable_events=True, key="Tab")],
-
-
         [sg.Ok("Gerar mapas", size=(25,1), button_color=(preto, verde), font="Calibri 12 bold"), sg.Cancel("Cancelar", size=(25,1), button_color=(preto, vermelho), font="Calibri 12 bold")]
     ]
 
@@ -277,8 +237,11 @@ def Aplicativo():
     Fonte = ""
     Etiquetas = ""
     Contagem = False
-    Tipoclick1 = ""
-    
+    def apagarAnteriores():
+                for file in os.listdir(valor_pasta):
+                    if file.split(".")[1] == "osu":
+                        os.remove(f"{valor_pasta}\{file}")
+    apagarAnteriores()
     while True:
         event, value = window.read()
         if event == "Cancelar" or event == sg.WIN_CLOSED:
@@ -295,7 +258,7 @@ def Aplicativo():
             else:
                 print("\033[36mGerando mapa\033[m")
         elif event == "pasta": #Atualiza o caminho da pasta
-            caminho_pasta = value["pasta"]   
+            caminho_pasta = value["pasta"]
             if isinstance(caminho_pasta, str):
                 print(f"\033[32m{caminho_pasta, type(caminho_pasta)}\033[m")
                 valor_pasta = caminho_pasta
@@ -307,7 +270,6 @@ def Aplicativo():
                     json.dump(dados, arquivo, indent=4, ensure_ascii=False)
             else:
                 print(f"\033[31m{caminho_pasta, type(caminho_pasta)}\033[m")
-
         elif event == "audio": #Atualizar o caminho do audio
             caminho_audio = value["audio"][0]
             valor_audio = caminho_audio
@@ -330,9 +292,8 @@ def Aplicativo():
                     [sg.popup("Já existe esse audio na pasta")]
 
 
-                    
+
         elif event == "quantidadeDificuldades":
-            tocarSomclick1()
             try:
                 valorQuantidade = value["quantidadeDificuldades"]
                 valorQuantidade = int(valorQuantidade)
@@ -343,167 +304,69 @@ def Aplicativo():
                     dados["Quantidade"] = valorQuantidade
                     json.dump(dados, arquivo, indent=4, ensure_ascii=False)
                     modfied(valorQuantidade)
-                    window["EDITOR"].update(values=dificults)
                     window["METADATA"].update(values=dificults)
                     window["DIFICULDADE"].update(values=dificults)
-                    window["AVANCADO"].update(values=dificults)
             except ValueError:
                 if valorQuantidade == "":
                     continue
                 else:
                     [sg.popup("Por favor, digite apenas números inteiros")]
-        elif event == "Qquantidade":
-            [sg.popup("Essa lacuna representa a quantidade de mapas que você vai gerar.\nSó não vai exaGERAR em ?")]
 
         elif event == "METADATA":
-            tocarSomDigitando()
             dificuldadeMETADATA = value["METADATA"]
             print(dificuldadeMETADATA)
-        elif event == "tittle":
 
+        elif event == "tittle":
             Titulo = value["tittle"]
-            if value["tittle"] != "":
-                tocarSomDigitando()
+            osu_blank_metadata["Title"] = Titulo
             #print(f"Titulo: {Titulo}")
-        
+
         elif event == "unicodeTittle":
             TituloUnicode = value["unicodeTittle"]
-            if TituloUnicode != "":
-                tocarSomDigitando()
-            #print(f"Titulo Unicode: {TituloUnicode}")
-        
+
+            osu_blank_metadata["TitleUnicode"] = TituloUnicode
+
         elif event == "artist":
             Artista = value["artist"]
-            if Artista != "":
-                tocarSomDigitando()
-            #print(f"Artista: {Artista}")
-        
+            osu_blank_metadata["Artist"] = Artista
+
         elif event == "unicodeArtist":
             ArtistaUnicode = value["unicodeArtist"]
-            if ArtistaUnicode != "":
-                tocarSomDigitando()
-        
+            osu_blank_metadata["ArtistUnicode"] = ArtistaUnicode
+
         elif event == "creator":
             Criador = value["creator"]
-            if Criador != "":
-                tocarSomDigitando()
-            #print(f"Criador: {Criador}")
-        
+            osu_blank_metadata["Creator"] = Criador
+
         elif event == "source":
             Fonte = value["source"]
-            if Fonte != "":
-                tocarSomDigitando()
-            #print(f"Fonte: {Fonte}")
-        
+            osu_blank_metadata["Source"] = Fonte
+
         elif event == "tags":
             Etiquetas = value["tags"]
-            if Etiquetas != "":
-                tocarSomDigitando()
-            #print(f"Etiquetas: {Etiquetas}")
-        
+            osu_blank_metadata["Tags"] = Etiquetas
+
         elif event == "countdown":
             Contagem = value["countdown"]
             if Contagem == True:
                 print("Contagem ativada")
                 Contagem = True
+                osu_blank_genrl["CountDown"] = 1
             else:
                 print("Contagem desativada")
                 Contagem = False
-        
-        elif event == "ConfigMetadata": # aplicar()
-            
+                osu_blank_genrl["CountDown"] = 0
 
-           
-            Aplicarpass()
-            mapaPronto = {
-                "Dificuldade": f"{dificuldadeMETADATA}",
-                "General": {
-                    "AudioFilename": valor_audio,
-                    "AudioLeadIn": 0,
-                    "PreviewTime": 0,
-                    "Countdown": Contagem,
-                    "StackLeniency": 0.7,
-                    "Mode": 0,
-                    "LetterboxInBreaks": 0,
-                    "widescreenStoryboard": 0
-            },
-                "Editor": {
-                    "Bookmarks": [],
-                    "DistanceSpacing": 0,
-                    "BeatDivisor": 4,
-                    "GridSize": 4,
-                    "TimelineZoom": 1.4
-            },
-                "Metadata": {
-                    "Title": Titulo,
-                    "TitleUnicode": TituloUnicode,
-                    "Artist": Artista,
-                    "ArtistUnicode": ArtistaUnicode,
-                    "Creator": Criador,
-                    "Version": dificuldadeMETADATA,
-                    "Source": Fonte,
-                    "Tags": Etiquetas
-            },
-                "Difficulty": {
-                    "HPDrainRate": 5,
-                    "CircleSize": 5,
-                    "OverallDifficulty": 5,
-                    "ApproachRate": 5,
-                    "SliderMultiplier": 1.4,
-                    "SliderTickRate": 1
-            }
-            }
-            print(mapaPronto)
-            match Titulo:
-                case "":
-                    window["tittle"].update(background_color=vermelho)
-                case _:
-                    window["tittle"].update(background_color=marrom)
-                    
+        elif event == "clickSound":
+            if value["clickSound"] == False:
+                with open(caminhoArquivo, mode="w", encoding="UTF-8") as arquivo:
+                    dados["Audios"]["Click1"]["ativo"] = 0
+                    json.dump(dados, arquivo, ensure_ascii=False, indent=4)
 
-            match TituloUnicode:
-                case "":
-                    window["unicodeTittle"].update(background_color=vermelho)
-                case _:
-                    window["unicodeTittle"].update(background_color=marrom)
-
-            match Artista:
-                case "":
-                    window["artist"].update(background_color=vermelho)
-                case _:
-                    window["artist"].update(background_color=marrom)
-
-            match ArtistaUnicode:
-                case "":
-                    window["unicodeArtist"].update(background_color=vermelho)
-                case _:
-                    window["unicodeArtist"].update(background_color=marrom)
-
-            match Criador:
-                case "":
-                    window["creator"].update(background_color=vermelho)
-                case _:
-                    window["creator"].update(background_color=marrom)
-
-            match Fonte:
-                case "":
-                    window["source"].update(background_color=vermelho)
-                case _:
-                    window["source"].update(background_color=marrom)
-
-            match Etiquetas:
-                case "":
-                    window["tags"].update(background_color=vermelho)
-                case _:
-                    window["tags"].update(background_color=marrom)
-
-            
-            print((Titulo, TituloUnicode, Artista, ArtistaUnicode, Criador, Fonte, Etiquetas))
-
-            if Titulo == "" or TituloUnicode == "" or Artista == "" or ArtistaUnicode == "" or Criador == "" or Fonte == "" or Etiquetas == "":
-                [sg.popup("Preencha todos os campos por gentileza", background_color=roxo1, font=fonte12, button_color=(branco, cinza))]
-                FailAplicarSound()
-
+            else:
+                with open(caminhoArquivo, mode="w", encoding="UTF-8") as arquivo:
+                    dados["Audios"]["Click1"]["ativo"] = 1
+                    json.dump(dados, arquivo, ensure_ascii=False, indent=4)
 
         elif event == "ConfigMetadataLimpar":
             LimparMetadata = [sg.popup_ok_cancel("Você tem certeza que deseja limpar tudo ?", background_color=roxo1, font=fonte12, button_color=(branco, cinza))]
@@ -526,16 +389,96 @@ def Aplicativo():
                     window["creator"].update(value="", background_color=marrom)
                     window["source"].update(value="", background_color=marrom)
                     window["tags"].update(value="", background_color=marrom)
-                    
 
-                    
                     print((Titulo, TituloUnicode, Artista, ArtistaUnicode, Criador, Fonte, Etiquetas))
-                    
+
 
                 case "Cancel":
                     continue
-        elif event == "Tab":
-            tocarSomclick1()
+        elif event == "Gerar mapas":
+
+
+            def aplicarMetadata():
+                match Titulo:
+                    case "":
+                        window["tittle"].update(background_color=vermelho)
+                    case _:
+                        window["tittle"].update(background_color=marrom)
+
+
+                match TituloUnicode:
+                    case "":
+                        window["unicodeTittle"].update(background_color=vermelho)
+                    case _:
+                        window["unicodeTittle"].update(background_color=marrom)
+
+                match Artista:
+                    case "":
+                        window["artist"].update(background_color=vermelho)
+                    case _:
+                        window["artist"].update(background_color=marrom)
+
+                match ArtistaUnicode:
+                    case "":
+                        window["unicodeArtist"].update(background_color=vermelho)
+                    case _:
+                        window["unicodeArtist"].update(background_color=marrom)
+
+                match Criador:
+                    case "":
+                        window["creator"].update(background_color=vermelho)
+                    case _:
+                        window["creator"].update(background_color=marrom)
+
+                match Fonte:
+                    case "":
+                        window["source"].update(background_color=vermelho)
+                    case _:
+                        window["source"].update(background_color=marrom)
+
+                match Etiquetas:
+                    case "":
+                        window["tags"].update(background_color=vermelho)
+                    case _:
+                        window["tags"].update(background_color=marrom)
+
+
+                print((Titulo, TituloUnicode, Artista, ArtistaUnicode, Criador, Fonte, Etiquetas))
+
+                if Titulo == "" or TituloUnicode == "" or Artista == "" or ArtistaUnicode == "" or Criador == "" or Fonte == "" or Etiquetas == "":
+                    [sg.popup("Preencha todos os campos de Metadata", background_color=roxo1, font=fonte12, button_color=(branco, cinza))]
+                    window["Tab"].Widget.setCurrentIndex(1)
+            aplicarMetadata()
+            def gerarMapas():
+                for dificult in dificults:
+                    osu_blank_metadata["Version"] = dificult
+                    osu_blank_genrl["AudioFilename"] = valor_audio.split("/")[-1]
+                    texto = "osu file format v14\n\n[General]\n"
+
+                    for nome, chave in osu_blank_genrl.items():
+                        texto += (f"{nome}: {chave}\n")
+                    texto += "\n[Editor]\n"
+                    for nome, chave in osu_blank_editor.items():
+                        texto += f"{nome}: {chave}\n"
+
+                    texto += "\n[Metadata]\n"
+                    for nome, chave in osu_blank_metadata.items():
+                        texto+= f"{nome}: {chave}\n"
+                    texto+= "\n[Difficulty]\n"
+                    for nome, chave in osu_blank_dificculty.items():
+                        texto += f"{nome}: {chave}\n"
+
+                    texto += "\n[Events]\n"
+
+                    for nome in osu_blank_events:
+                        texto+= f"{nome}\n"
+
+                    texto += "\n[HitObjects]\n"
+
+                    with open(f"{valor_pasta}\[{dificult}].osu", mode="w", encoding="UTF-8") as arquivo:
+                        arquivo.writelines(texto)
+            gerarMapas()
+
         else:
             print(event)
     window.close()
